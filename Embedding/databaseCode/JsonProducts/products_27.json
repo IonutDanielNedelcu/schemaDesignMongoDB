@@ -1,0 +1,2727 @@
+[
+  {
+    "_id": "6931b85d5e07a7d8be04eb44",
+    "name": "Drawing Mannequin",
+    "sku": "ART-TOO-11317",
+    "price": 8.99,
+    "details": {
+      "description": "Wooden posable figure",
+      "specs": {
+        "height": "8 inch",
+        "material": "Wood",
+        "joints": "Articulated"
+      }
+    },
+    "stock": 70,
+    "category": {
+      "main": "Art",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Nexus Innovations",
+      "contactEmail": "contact@nexusinnov.com",
+      "supportPhone": "+1-888-121-2121"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Andrea Bailey",
+        "rating": 3,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2020-06-16T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb45",
+    "name": "Dog Poop Bags",
+    "sku": "PET-ACC-11318",
+    "price": 11.5,
+    "details": {
+      "description": "Biodegradable waste bags",
+      "specs": {
+        "count": "120",
+        "scent": "Lavender",
+        "leakproof": "Yes"
+      }
+    },
+    "stock": 250,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Hygiene"
+    },
+    "vendor": {
+      "companyName": "Horizon Dynamics",
+      "contactEmail": "support@horizondynamics.com",
+      "supportPhone": "+1-888-343-4343"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb46",
+    "name": "Car Phone Mount Magnet",
+    "sku": "AUT-ACC-11319",
+    "price": 10.99,
+    "details": {
+      "description": "Air vent magnetic holder",
+      "specs": {
+        "magnets": "4",
+        "rotation": "360",
+        "plate": "Included"
+      }
+    },
+    "stock": 160,
+    "category": {
+      "main": "Automotive",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Aurora Tech",
+      "contactEmail": "info@auroratech.io",
+      "supportPhone": "+1-888-565-6565"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Ethan Bailey",
+        "rating": 1,
+        "comment": "I'm very impressed with the performance of this product.",
+        "date": "2022-08-07T00:00:00"
+      },
+      {
+        "userDisplayName": "Patricia Brown",
+        "rating": 3,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2018-09-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Emma Phillips",
+        "rating": 2,
+        "comment": "Love it! It has become an essential part of my daily routine.",
+        "date": "2018-03-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Betty Anderson",
+        "rating": 3,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2025-10-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Arthur Chavez",
+        "rating": 2,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2018-10-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Jessica Thomas",
+        "rating": 2,
+        "comment": "The app that comes with it is surprisingly polished and useful.",
+        "date": "2021-08-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Benjamin Gomez",
+        "rating": 5,
+        "comment": "The product is a bit of a letdown. I expected more for the price.",
+        "date": "2022-08-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Amanda Ramirez",
+        "rating": 4,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2025-02-10T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb47",
+    "name": "Cat Laser Toy",
+    "sku": "PET-TOY-11320",
+    "price": 5.99,
+    "details": {
+      "description": "Interactive LED pointer",
+      "specs": {
+        "modes": "5 patterns",
+        "battery": "USB",
+        "case": "Stainless"
+      }
+    },
+    "stock": 140,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Toys"
+    },
+    "vendor": {
+      "companyName": "Silverline Goods",
+      "contactEmail": "sales@silverlinegoods.com",
+      "supportPhone": "+1-888-787-8787"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Johnny Johnson",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great investment.",
+        "date": "2019-07-11T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb48",
+    "name": "Microfiber Car Cloths",
+    "sku": "AUT-CLE-11321",
+    "price": 12.99,
+    "details": {
+      "description": "Auto detailing towels",
+      "specs": {
+        "pack": "6",
+        "gsm": "800",
+        "edge": "Silk"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Automotive",
+      "sub": "Cleaning"
+    },
+    "vendor": {
+      "companyName": "Phoenix United",
+      "contactEmail": "contact@phoenixunited.com",
+      "supportPhone": "+1-888-909-0909"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Aaron Cook",
+        "rating": 2,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2025-12-18T00:00:00"
+      },
+      {
+        "userDisplayName": "Aaron Cook",
+        "rating": 2,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2020-09-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Michael Thomas",
+        "rating": 3,
+        "comment": "Outstanding performance! It exceeded all my expectations.",
+        "date": "2024-01-07T00:00:00"
+      },
+      {
+        "userDisplayName": "Heather Morales",
+        "rating": 5,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2020-02-24T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb49",
+    "name": "Fabric Markers",
+    "sku": "ART-SUP-11322",
+    "price": 9.5,
+    "details": {
+      "description": "Permanent textile pens",
+      "specs": {
+        "colors": "10",
+        "tip": "Dual",
+        "washfast": "Yes"
+      }
+    },
+    "stock": 85,
+    "category": {
+      "main": "Art",
+      "sub": "Supplies"
+    },
+    "vendor": {
+      "companyName": "Summit Supply Co.",
+      "contactEmail": "support@summitsupply.co",
+      "supportPhone": "+1-888-112-3456"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Betty Moore",
+        "rating": 5,
+        "comment": "Incredible value. Feels much more expensive than it is.",
+        "date": "2022-09-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Joyce Edwards",
+        "rating": 3,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2024-02-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Alexander Carter",
+        "rating": 3,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2019-01-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb4a",
+    "name": "Pet Nail Clippers",
+    "sku": "PET-GRO-11323",
+    "price": 8.99,
+    "details": {
+      "description": "Safety guard trimmer",
+      "specs": {
+        "blade": "Stainless Steel",
+        "handle": "Anti-slip",
+        "file": "Hidden"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Grooming"
+    },
+    "vendor": {
+      "companyName": "Keystone Merchants",
+      "contactEmail": "info@keystonemerchants.com",
+      "supportPhone": "+1-888-223-4567"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Nancy Gonzales",
+        "rating": 3,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2020-04-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Frances Ward",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a unique one.",
+        "date": "2023-08-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Steven Sanchez",
+        "rating": 1,
+        "comment": "The product is very versatile and can be used for many things.",
+        "date": "2025-06-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Gary Baker",
+        "rating": 2,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2022-02-19T00:00:00"
+      },
+      {
+        "userDisplayName": "Ryan Robinson",
+        "rating": 2,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2025-01-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Jacqueline Howard",
+        "rating": 5,
+        "comment": "Excellent product, highly recommended! A true game changer.",
+        "date": "2019-05-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Raymond Roberts",
+        "rating": 5,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2021-12-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Deborah Robinson",
+        "rating": 3,
+        "comment": "The materials used feel cheap and flimsy. I expected more.",
+        "date": "2018-07-09T00:00:00"
+      },
+      {
+        "userDisplayName": "Adam Edwards",
+        "rating": 3,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2020-03-04T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb4b",
+    "name": "Tire Inflator Portable",
+    "sku": "AUT-ACC-11324",
+    "price": 39.99,
+    "details": {
+      "description": "Digital air compressor",
+      "specs": {
+        "max_psi": "150",
+        "shutoff": "Auto",
+        "light": "LED"
+      }
+    },
+    "stock": 50,
+    "category": {
+      "main": "Automotive",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Redwood & Oak",
+      "contactEmail": "sales@redwoodandoak.com",
+      "supportPhone": "+1-888-334-5678"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Juan Ross",
+        "rating": 5,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2025-02-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Danielle Patel",
+        "rating": 3,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2024-08-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Jacob Walker",
+        "rating": 2,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2022-12-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Joyce Stewart",
+        "rating": 2,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2024-09-14T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb4c",
+    "name": "Dog Seat Belt",
+    "sku": "PET-ACC-11325",
+    "price": 6.99,
+    "details": {
+      "description": "Car safety harness clip",
+      "specs": {
+        "material": "Nylon",
+        "buffer": "Elastic",
+        "clip": "Standard"
+      }
+    },
+    "stock": 130,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Travel"
+    },
+    "vendor": {
+      "companyName": "Northstar Provisions",
+      "contactEmail": "contact@northstarprovisions.com",
+      "supportPhone": "+1-888-445-6789"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Jordan Sanders",
+        "rating": 1,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2020-07-01T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb4d",
+    "name": "Headrest Hooks Car",
+    "sku": "AUT-ORG-11326",
+    "price": 5.99,
+    "details": {
+      "description": "Seat back hangers",
+      "specs": {
+        "pack": "4",
+        "load": "10kg",
+        "material": "ABS"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Automotive",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Tidal Wave Inc.",
+      "contactEmail": "support@tidalwaveinc.com",
+      "supportPhone": "+1-888-556-7890"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Lori Jones",
+        "rating": 2,
+        "comment": "I'm very satisfied with this product. It's been a great addition to my home.",
+        "date": "2022-04-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Marilyn Myers",
+        "rating": 5,
+        "comment": "I'm very impressed with the attention to detail.",
+        "date": "2022-10-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Timothy Robinson",
+        "rating": 5,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2019-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb4e",
+    "name": "Modelling Clay Set",
+    "sku": "ART-SUP-11327",
+    "price": 13.5,
+    "details": {
+      "description": "Polymer clay colors",
+      "specs": {
+        "blocks": "24",
+        "tools": "5",
+        "bake": "Oven"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Art",
+      "sub": "Sculpting"
+    },
+    "vendor": {
+      "companyName": "Ironclad Systems",
+      "contactEmail": "info@ironcladsys.com",
+      "supportPhone": "+1-888-667-8901"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Kathy Davis",
+        "rating": 4,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2020-09-22T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb4f",
+    "name": "Cat Tunnel Toy",
+    "sku": "PET-TOY-11328",
+    "price": 11.99,
+    "details": {
+      "description": "Collapsible play tube",
+      "specs": {
+        "ways": "3",
+        "material": "Polyester",
+        "toy": "Ball"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Toys"
+    },
+    "vendor": {
+      "companyName": "Crimson Arrow",
+      "contactEmail": "sales@crimsonarrow.com",
+      "supportPhone": "+1-888-778-9012"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Samuel Phillips",
+        "rating": 4,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2024-04-20T00:00:00"
+      },
+      {
+        "userDisplayName": "Julie Rogers",
+        "rating": 2,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it to others.",
+        "date": "2024-08-11T00:00:00"
+      },
+      {
+        "userDisplayName": "Lawrence Richardson",
+        "rating": 1,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2020-07-05T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb50",
+    "name": "Car Wash Mitt",
+    "sku": "AUT-CLE-11329",
+    "price": 5.5,
+    "details": {
+      "description": "Microfiber chenille glove",
+      "specs": {
+        "absorb": "High",
+        "scratch": "Free",
+        "cuff": "Elastic"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Automotive",
+      "sub": "Cleaning"
+    },
+    "vendor": {
+      "companyName": "Blue Jay Books",
+      "contactEmail": "orders@bluejaybooks.com",
+      "supportPhone": "+1-888-889-0123"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Tiffany Miller",
+        "rating": 2,
+        "comment": "It's not compatible with my other devices, which is a shame.",
+        "date": "2022-09-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Noah Brooks",
+        "rating": 3,
+        "comment": "There's a steep learning curve, but it's worth it in the end.",
+        "date": "2025-10-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Samantha Nelson",
+        "rating": 4,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2019-02-20T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb51",
+    "name": "Pet Cooling Mat",
+    "sku": "PET-ACC-11330",
+    "price": 19.99,
+    "details": {
+      "description": "Self-cooling gel pad",
+      "specs": {
+        "size": "50x40cm",
+        "gel": "Non-toxic",
+        "washable": "Yes"
+      }
+    },
+    "stock": 70,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Bedding"
+    },
+    "vendor": {
+      "companyName": "Golden Grain Foods",
+      "contactEmail": "support@goldengrain.com",
+      "supportPhone": "+1-888-990-1234"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Pamela Flores",
+        "rating": 5,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2022-10-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Jean Bennett",
+        "rating": 2,
+        "comment": "I've recommended this to all my friends and family.",
+        "date": "2023-10-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Benjamin Baker",
+        "rating": 2,
+        "comment": "Love it! It has become an essential part of my daily routine.",
+        "date": "2021-06-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Nicholas Scott",
+        "rating": 5,
+        "comment": "I wish I had bought this sooner. It's been a great help.",
+        "date": "2020-02-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Frances Ward",
+        "rating": 1,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2023-10-07T00:00:00"
+      },
+      {
+        "userDisplayName": "Nicholas Allen",
+        "rating": 1,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2018-06-19T00:00:00"
+      },
+      {
+        "userDisplayName": "Scott Hall",
+        "rating": 3,
+        "comment": "The product is a bit heavy, making it less portable.",
+        "date": "2018-02-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Jesse Hughes",
+        "rating": 3,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2025-04-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Daniel White",
+        "rating": 2,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2018-04-22T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb52",
+    "name": "Steering Wheel Cover",
+    "sku": "AUT-ACC-11331",
+    "price": 12.99,
+    "details": {
+      "description": "Leather grip cover",
+      "specs": {
+        "size": "15 inch",
+        "material": "Faux Leather",
+        "grip": "Breathable"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Automotive",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Emerald City Goods",
+      "contactEmail": "contact@emeraldcitygoods.com",
+      "supportPhone": "+1-888-001-2345"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Stephen Hall",
+        "rating": 5,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2020-01-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Tyler Phillips",
+        "rating": 4,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2024-12-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Lawrence Bennett",
+        "rating": 2,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2018-06-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Jose Cruz",
+        "rating": 5,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it to others.",
+        "date": "2021-02-11T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb53",
+    "name": "Tracing Paper Pad",
+    "sku": "ART-PAP-11332",
+    "price": 7.99,
+    "details": {
+      "description": "Translucent sketch paper",
+      "specs": {
+        "sheets": "50",
+        "size": "A4",
+        "weight": "60gsm"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Art",
+      "sub": "Paper"
+    },
+    "vendor": {
+      "companyName": "Black Diamond Gear",
+      "contactEmail": "info@blackdiamondgear.com",
+      "supportPhone": "+1-888-111-3456"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Joseph Hernandez",
+        "rating": 2,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2018-02-02T00:00:00"
+      },
+      {
+        "userDisplayName": "Carolyn Evans",
+        "rating": 2,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2019-11-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Jennifer Hernandez",
+        "rating": 5,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2025-02-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Raymond Parker",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2022-10-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Charles Gonzales",
+        "rating": 5,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2022-07-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Margaret Harris",
+        "rating": 4,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2022-11-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Shirley Green",
+        "rating": 4,
+        "comment": "It's not compatible with my other devices, which is a shame.",
+        "date": "2025-01-25T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb54",
+    "name": "Dog Chew Toy",
+    "sku": "PET-TOY-11333",
+    "price": 9.5,
+    "details": {
+      "description": "Durable rubber bone",
+      "specs": {
+        "material": "Natural Rubber",
+        "flavor": "Beef",
+        "size": "M"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Toys"
+    },
+    "vendor": {
+      "companyName": "White Wolf Wares",
+      "contactEmail": "sales@whitewolfwares.com",
+      "supportPhone": "+1-888-222-4567"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Cheryl Peterson",
+        "rating": 5,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2024-03-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Eugene Williams",
+        "rating": 3,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2018-02-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Daniel Anderson",
+        "rating": 3,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2019-03-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Margaret Thomas",
+        "rating": 3,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2019-02-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Katherine Mitchell",
+        "rating": 5,
+        "comment": "There's a steep learning curve, but it's worth it in the end.",
+        "date": "2020-11-19T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb55",
+    "name": "Car Trash Can",
+    "sku": "AUT-ORG-11334",
+    "price": 11.0,
+    "details": {
+      "description": "Leakproof garbage bag",
+      "specs": {
+        "capacity": "2 Gallon",
+        "mount": "Headrest",
+        "lid": "Rubber"
+      }
+    },
+    "stock": 85,
+    "category": {
+      "main": "Automotive",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Purple Finch Publishing",
+      "contactEmail": "contact@purplefinch.pub",
+      "supportPhone": "+1-888-333-5678"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Noah Brooks",
+        "rating": 1,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2025-12-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Edward Ramirez",
+        "rating": 2,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2023-09-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Jack Phillips",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2023-03-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Julie Price",
+        "rating": 4,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2020-04-19T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb56",
+    "name": "Palette Knife Set",
+    "sku": "ART-TOO-11335",
+    "price": 6.99,
+    "details": {
+      "description": "Painting spatula knives",
+      "specs": {
+        "count": "5",
+        "blade": "Stainless Steel",
+        "handle": "Wood"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Art",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Gray Fox Tech",
+      "contactEmail": "support@grayfoxtech.com",
+      "supportPhone": "+1-888-444-6789"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Sarah Taylor",
+        "rating": 1,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2025-04-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Evelyn Cook",
+        "rating": 2,
+        "comment": "The warranty process was a nightmare. Terrible customer service.",
+        "date": "2020-10-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Jordan Brooks",
+        "rating": 1,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2018-10-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Jordan Sanders",
+        "rating": 3,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2025-09-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Frank Cruz",
+        "rating": 4,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2020-09-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Roger Ortiz",
+        "rating": 5,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2020-03-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Tyler Phillips",
+        "rating": 2,
+        "comment": "The instructions were clear and easy to follow.",
+        "date": "2024-08-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Lisa Martin",
+        "rating": 4,
+        "comment": "A must-have for anyone serious about quality.",
+        "date": "2024-08-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Emily Lewis",
+        "rating": 1,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2023-04-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Ethan Bailey",
+        "rating": 1,
+        "comment": "I'm very impressed with the attention to detail.",
+        "date": "2021-04-24T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb57",
+    "name": "Pet Hair Remover Roller",
+    "sku": "PET-GRO-11336",
+    "price": 14.5,
+    "details": {
+      "description": "Reusable lint brush",
+      "specs": {
+        "self_cleaning": "Yes",
+        "battery": "No",
+        "surface": "Furniture"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Cleaning"
+    },
+    "vendor": {
+      "companyName": "Green Turtle Gaming",
+      "contactEmail": "info@greenturtlegaming.com",
+      "supportPhone": "+1-888-555-7890"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb58",
+    "name": "Car Jump Starter",
+    "sku": "AUT-ACC-11337",
+    "price": 69.99,
+    "details": {
+      "description": "Portable battery booster",
+      "specs": {
+        "peak": "1000A",
+        "capacity": "12000mAh",
+        "light": "SOS"
+      }
+    },
+    "stock": 35,
+    "category": {
+      "main": "Automotive",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Brown Bear Bistro",
+      "contactEmail": "contact@brownbearbistro.com",
+      "supportPhone": "+1-888-666-8901"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Lauren Morales",
+        "rating": 2,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2025-04-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Rose Gray",
+        "rating": 2,
+        "comment": "It's not compatible with my other devices, which is a shame.",
+        "date": "2021-02-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Roy Castillo",
+        "rating": 3,
+        "comment": "The product is a bit of a letdown. I expected better quality.",
+        "date": "2024-02-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Matthew Gonzales",
+        "rating": 5,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2020-12-04T00:00:00"
+      },
+      {
+        "userDisplayName": "Joseph Wilson",
+        "rating": 3,
+        "comment": "I'm very happy with my purchase. It's been a great investment.",
+        "date": "2022-03-09T00:00:00"
+      },
+      {
+        "userDisplayName": "Ruth Edwards",
+        "rating": 2,
+        "comment": "A must-have for anyone serious about quality.",
+        "date": "2024-08-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Noah James",
+        "rating": 5,
+        "comment": "Poor quality, returning it immediately. Avoid this product.",
+        "date": "2019-04-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Louis Jones",
+        "rating": 1,
+        "comment": "I'm very impressed with the performance of this product.",
+        "date": "2022-03-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb59",
+    "name": "Dog Paw Cleaner",
+    "sku": "PET-GRO-11338",
+    "price": 10.99,
+    "details": {
+      "description": "Silicone foot washer",
+      "specs": {
+        "size": "Medium",
+        "bristles": "Soft",
+        "cup": "Portable"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Grooming"
+    },
+    "vendor": {
+      "companyName": "Orange Octopus Optics",
+      "contactEmail": "sales@orangeoctopus.com",
+      "supportPhone": "+1-888-777-9012"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Tiffany Ross",
+        "rating": 2,
+        "comment": "The product is a bit of a novelty, but it's a unique one.",
+        "date": "2021-05-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Michelle Harris",
+        "rating": 2,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2025-06-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Raymond Evans",
+        "rating": 4,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2025-01-04T00:00:00"
+      },
+      {
+        "userDisplayName": "Heather Reyes",
+        "rating": 5,
+        "comment": "I've recommended this to all my friends and family.",
+        "date": "2021-04-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Aaron Collins",
+        "rating": 1,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2023-10-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Logan Johnson",
+        "rating": 4,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2024-06-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Joseph Taylor",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2024-03-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Peter Morgan",
+        "rating": 2,
+        "comment": "I would recommend this to a friend without hesitation.",
+        "date": "2018-08-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Ronald Wright",
+        "rating": 3,
+        "comment": "The feature set is impressive for this price point.",
+        "date": "2018-10-26T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb5a",
+    "name": "License Plate Frame",
+    "sku": "AUT-ACC-11339",
+    "price": 12.5,
+    "details": {
+      "description": "Silicone plate holder",
+      "specs": {
+        "pack": "2",
+        "rattle": "Proof",
+        "weather": "Resistant"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Automotive",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Yellow Jacket Sports",
+      "contactEmail": "info@yellowjacketsports.com",
+      "supportPhone": "+1-888-888-0123"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Steven Lewis",
+        "rating": 4,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2021-12-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Sandra Thompson",
+        "rating": 4,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2025-04-01T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb5b",
+    "name": "Cutting Mat A3",
+    "sku": "ART-SUP-11340",
+    "price": 15.99,
+    "details": {
+      "description": "Self-healing craft mat",
+      "specs": {
+        "size": "A3",
+        "grid": "Metric/Inch",
+        "layers": "5"
+      }
+    },
+    "stock": 75,
+    "category": {
+      "main": "Art",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Violet Vixen Vogue",
+      "contactEmail": "support@violetvixenvogue.com",
+      "supportPhone": "+1-888-999-1234"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Ashley Moore",
+        "rating": 4,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2022-07-18T00:00:00"
+      },
+      {
+        "userDisplayName": "Kyle Stewart",
+        "rating": 3,
+        "comment": "The materials used feel cheap and flimsy. I expected more.",
+        "date": "2025-10-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Mark Lee",
+        "rating": 3,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2022-10-18T00:00:00"
+      },
+      {
+        "userDisplayName": "Andrea Cox",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2020-12-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Lawrence Kim",
+        "rating": 4,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2024-02-11T00:00:00"
+      },
+      {
+        "userDisplayName": "Patricia Gonzales",
+        "rating": 3,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2020-06-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Kathleen Scott",
+        "rating": 3,
+        "comment": "Outstanding performance! It exceeded all my expectations.",
+        "date": "2020-10-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Danielle Smith",
+        "rating": 5,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2022-08-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Donald Harris",
+        "rating": 3,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2024-12-13T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb5c",
+    "name": "Cat Litter Mat",
+    "sku": "PET-ACC-11341",
+    "price": 13.99,
+    "details": {
+      "description": "Double layer trap mat",
+      "specs": {
+        "structure": "Honeycomb",
+        "waterproof": "Bottom",
+        "clean": "Easy"
+      }
+    },
+    "stock": 85,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Hygiene"
+    },
+    "vendor": {
+      "companyName": "Ivory Elephant Imports",
+      "contactEmail": "contact@ivoryelephant.com",
+      "supportPhone": "+1-888-101-2345"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Jack Stewart",
+        "rating": 5,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2021-03-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Cynthia Green",
+        "rating": 4,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2018-01-02T00:00:00"
+      },
+      {
+        "userDisplayName": "Beverly Alvarez",
+        "rating": 4,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2025-10-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Karen Lee",
+        "rating": 1,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2021-01-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb5d",
+    "name": "OBD2 Scanner",
+    "sku": "AUT-DIA-11342",
+    "price": 22.99,
+    "details": {
+      "description": "Car diagnostic tool",
+      "specs": {
+        "codes": "Read/Clear",
+        "screen": "LCD",
+        "protocol": "OBDII"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Automotive",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Scarlet Sparrow Styles",
+      "contactEmail": "sales@scarletsparrow.com",
+      "supportPhone": "+1-888-212-3456"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Tina Johnson",
+        "rating": 3,
+        "comment": "The customer reviews were spot on. This is a great product.",
+        "date": "2018-02-19T00:00:00"
+      },
+      {
+        "userDisplayName": "Austin Howard",
+        "rating": 5,
+        "comment": "The product has a weird smell that won't go away.",
+        "date": "2021-07-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Joshua Martin",
+        "rating": 1,
+        "comment": "The design is sleek and modern. Looks great on my desk.",
+        "date": "2021-09-18T00:00:00"
+      },
+      {
+        "userDisplayName": "Madison Mendoza",
+        "rating": 1,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2018-07-20T00:00:00"
+      },
+      {
+        "userDisplayName": "Christian Gutierrez",
+        "rating": 3,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2023-07-05T00:00:00"
+      },
+      {
+        "userDisplayName": "John Johnson",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2018-07-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Elizabeth Thomas",
+        "rating": 4,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2022-03-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Ralph Smith",
+        "rating": 2,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2020-12-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Laura King",
+        "rating": 3,
+        "comment": "Average quality, nothing special to write home about.",
+        "date": "2020-10-09T00:00:00"
+      },
+      {
+        "userDisplayName": "Frances Ramos",
+        "rating": 3,
+        "comment": "There's a steep learning curve, but it's worth it in the end.",
+        "date": "2020-05-20T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb5e",
+    "name": "Pet Carrier Bag",
+    "sku": "PET-TRA-11343",
+    "price": 29.99,
+    "details": {
+      "description": "Airline approved tote",
+      "specs": {
+        "fit": "Small pets",
+        "mesh": "Breathable",
+        "pad": "Fleece"
+      }
+    },
+    "stock": 50,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Travel"
+    },
+    "vendor": {
+      "companyName": "Azure Turtle Toys",
+      "contactEmail": "info@azureturtle.com",
+      "supportPhone": "+1-888-323-4567"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Jesse Watson",
+        "rating": 3,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2021-12-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Danielle Ross",
+        "rating": 2,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2020-12-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Tina Johnson",
+        "rating": 5,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2024-07-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Frances Reed",
+        "rating": 5,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2025-09-20T00:00:00"
+      },
+      {
+        "userDisplayName": "Judith Bailey",
+        "rating": 1,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2018-07-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Douglas Cooper",
+        "rating": 1,
+        "comment": "I've recommended this to all my friends and family.",
+        "date": "2024-10-02T00:00:00"
+      },
+      {
+        "userDisplayName": "Anthony Taylor",
+        "rating": 4,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2024-05-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Aaron Cook",
+        "rating": 4,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2021-01-03T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb5f",
+    "name": "Car Sun Visor Organizer",
+    "sku": "AUT-ORG-11344",
+    "price": 8.99,
+    "details": {
+      "description": "Visor storage pouch",
+      "specs": {
+        "pockets": "Cards/Glasses",
+        "material": "PU Leather",
+        "strap": "Elastic"
+      }
+    },
+    "stock": 130,
+    "category": {
+      "main": "Automotive",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Cerulean Swan Solutions",
+      "contactEmail": "support@ceruleanswan.com",
+      "supportPhone": "+1-888-434-5678"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Patrick Turner",
+        "rating": 1,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2024-10-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Melissa Wright",
+        "rating": 2,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2023-09-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Beverly Ruiz",
+        "rating": 4,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2023-03-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Philip Smith",
+        "rating": 5,
+        "comment": "I had high hopes, but it didn't live up to the hype.",
+        "date": "2023-06-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Dorothy Thompson",
+        "rating": 4,
+        "comment": "I'm very impressed with the design of this product.",
+        "date": "2020-01-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Jordan James",
+        "rating": 4,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2020-01-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Ethan Rogers",
+        "rating": 1,
+        "comment": "The product is very versatile and can be used for many things.",
+        "date": "2020-05-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Stephen Scott",
+        "rating": 3,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2019-02-01T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb60",
+    "name": "Pottery Tool Set",
+    "sku": "ART-TOO-11345",
+    "price": 11.99,
+    "details": {
+      "description": "Clay sculpting tools",
+      "specs": {
+        "count": "8",
+        "material": "Wood/Steel",
+        "case": "No"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Art",
+      "sub": "Sculpting"
+    },
+    "vendor": {
+      "companyName": "Saffron Stallion Sports",
+      "contactEmail": "contact@saffronstallion.com",
+      "supportPhone": "+1-888-545-6789"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Joseph Hernandez",
+        "rating": 4,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2024-09-09T00:00:00"
+      },
+      {
+        "userDisplayName": "Jeffrey Green",
+        "rating": 1,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2021-10-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Daniel White",
+        "rating": 2,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2018-03-10T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb61",
+    "name": "Dog Training Clicker",
+    "sku": "PET-TRA-11346",
+    "price": 3.5,
+    "details": {
+      "description": "Behavior aid clicker",
+      "specs": {
+        "pack": "2",
+        "button": "Big",
+        "strap": "Wrist"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Training"
+    },
+    "vendor": {
+      "companyName": "Veridian Valley Ventures",
+      "contactEmail": "info@veridianvalley.com",
+      "supportPhone": "+1-888-656-7890"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Brian Thompson",
+        "rating": 2,
+        "comment": "I wish I had bought this sooner. It's been a great help.",
+        "date": "2021-02-18T00:00:00"
+      },
+      {
+        "userDisplayName": "Raymond Roberts",
+        "rating": 5,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2022-04-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Alan Mendoza",
+        "rating": 4,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2019-04-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Melissa Young",
+        "rating": 3,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2019-07-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Bruce James",
+        "rating": 1,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2025-11-07T00:00:00"
+      },
+      {
+        "userDisplayName": "Wayne Williams",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2021-03-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Gary Nguyen",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great investment.",
+        "date": "2019-12-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Jonathan Baker",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2024-04-01T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb62",
+    "name": "Tire Tread Depth Gauge",
+    "sku": "AUT-DIA-11347",
+    "price": 4.99,
+    "details": {
+      "description": "Digital tread checker",
+      "specs": {
+        "screen": "LCD",
+        "units": "mm/inch",
+        "range": "0-25mm"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Automotive",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Magenta Moose Media",
+      "contactEmail": "sales@magentamoose.com",
+      "supportPhone": "+1-888-767-8901"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Nicholas Hill",
+        "rating": 1,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2025-09-07T00:00:00"
+      },
+      {
+        "userDisplayName": "Scott Hill",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2025-07-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Timothy Clark",
+        "rating": 5,
+        "comment": "Love it! It has become an essential part of my daily routine.",
+        "date": "2024-07-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Donna White",
+        "rating": 2,
+        "comment": "The design is sleek and modern. Looks great on my desk.",
+        "date": "2018-04-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Joseph Wilson",
+        "rating": 3,
+        "comment": "Poor quality, returning it immediately. Avoid this product.",
+        "date": "2025-03-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Frances Brooks",
+        "rating": 2,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2024-07-09T00:00:00"
+      },
+      {
+        "userDisplayName": "Susan Rodriguez",
+        "rating": 1,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2023-06-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Elijah Brown",
+        "rating": 3,
+        "comment": "The software is a bit buggy, hoping for an update soon.",
+        "date": "2019-10-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Rebecca Nguyen",
+        "rating": 5,
+        "comment": "I would recommend this to a friend without hesitation.",
+        "date": "2024-01-26T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb63",
+    "name": "Calligraphy Ink Black",
+    "sku": "ART-SUP-11348",
+    "price": 6.99,
+    "details": {
+      "description": "Dip pen ink bottle",
+      "specs": {
+        "volume": "30ml",
+        "type": "India Ink",
+        "waterproof": "Yes"
+      }
+    },
+    "stock": 75,
+    "category": {
+      "main": "Art",
+      "sub": "Supplies"
+    },
+    "vendor": {
+      "companyName": "Teal Tiger Tech",
+      "contactEmail": "contact@tealtiger.tech",
+      "supportPhone": "+1-888-878-9012"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Harold Kim",
+        "rating": 5,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2024-09-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Gloria Richardson",
+        "rating": 5,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2021-07-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Sophia Garcia",
+        "rating": 4,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2020-05-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Diane Stewart",
+        "rating": 5,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2025-01-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Anthony Sanchez",
+        "rating": 3,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2024-01-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Nathan Rogers",
+        "rating": 1,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2020-05-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Lisa Thompson",
+        "rating": 5,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2024-12-25T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb64",
+    "name": "Hamster Water Bottle",
+    "sku": "PET-ACC-11349",
+    "price": 5.5,
+    "details": {
+      "description": "No-drip rodent feeder",
+      "specs": {
+        "capacity": "125ml",
+        "mount": "Wire cage",
+        "spout": "Steel"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Feeding"
+    },
+    "vendor": {
+      "companyName": "Lavender Lion Linens",
+      "contactEmail": "support@lavenderlion.com",
+      "supportPhone": "+1-888-989-0123"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Gary Nguyen",
+        "rating": 1,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2025-05-07T00:00:00"
+      },
+      {
+        "userDisplayName": "Carolyn Parker",
+        "rating": 5,
+        "comment": "There's a steep learning curve, but it's worth it in the end.",
+        "date": "2024-12-09T00:00:00"
+      },
+      {
+        "userDisplayName": "Grace Hughes",
+        "rating": 1,
+        "comment": "The feature set is impressive for this price point.",
+        "date": "2019-03-04T00:00:00"
+      },
+      {
+        "userDisplayName": "Robert Lopez",
+        "rating": 5,
+        "comment": "The materials used feel cheap and flimsy. I expected more.",
+        "date": "2018-06-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Jonathan Mitchell",
+        "rating": 1,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2022-11-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Kathy Foster",
+        "rating": 5,
+        "comment": "The materials used feel cheap and flimsy. I expected more.",
+        "date": "2018-02-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Scott Hall",
+        "rating": 5,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2024-01-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Andrew Perez",
+        "rating": 2,
+        "comment": "The setup was a breeze, up and running in minutes.",
+        "date": "2022-07-11T00:00:00"
+      },
+      {
+        "userDisplayName": "Heather Turner",
+        "rating": 1,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2020-05-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Benjamin Turner",
+        "rating": 2,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2023-05-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb65",
+    "name": "Car Scratch Remover",
+    "sku": "AUT-CLE-11350",
+    "price": 11.99,
+    "details": {
+      "description": "Paint swirl repair kit",
+      "specs": {
+        "volume": "100ml",
+        "sponge": "Included",
+        "safe": "Clear coat"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Automotive",
+      "sub": "Cleaning"
+    },
+    "vendor": {
+      "companyName": "Crimson Cobra Creations",
+      "contactEmail": "info@crimsoncobra.com",
+      "supportPhone": "+1-888-090-1234"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Kathleen Scott",
+        "rating": 1,
+        "comment": "The product is very versatile and can be used for many things.",
+        "date": "2021-03-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Noah Brooks",
+        "rating": 1,
+        "comment": "Excellent product, highly recommended! A true game changer.",
+        "date": "2024-04-01T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb66",
+    "name": "Bird Feeder Hanging",
+    "sku": "PET-ACC-11351",
+    "price": 14.5,
+    "details": {
+      "description": "Tube wild bird feeder",
+      "specs": {
+        "ports": "4",
+        "material": "Plastic/Metal",
+        "fill": "Easy"
+      }
+    },
+    "stock": 65,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Outdoors"
+    },
+    "vendor": {
+      "companyName": "Onyx Otter Outfitters",
+      "contactEmail": "sales@onyxotter.com",
+      "supportPhone": "+1-888-101-1234"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Sharon Scott",
+        "rating": 4,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2022-03-21T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb67",
+    "name": "Foam Cannon Gun",
+    "sku": "AUT-CLE-11352",
+    "price": 22.0,
+    "details": {
+      "description": "Car wash foam lance",
+      "specs": {
+        "connector": "1/4 inch",
+        "bottle": "1L",
+        "nozzle": "Adjustable"
+      }
+    },
+    "stock": 50,
+    "category": {
+      "main": "Automotive",
+      "sub": "Cleaning"
+    },
+    "vendor": {
+      "companyName": "Jade Jaguar Jewelers",
+      "contactEmail": "contact@jadejaguar.com",
+      "supportPhone": "+1-888-212-2345"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Adam Gutierrez",
+        "rating": 5,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2018-06-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Jeremy Cooper",
+        "rating": 2,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2020-08-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Dennis Evans",
+        "rating": 1,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2022-05-23T00:00:00"
+      },
+      {
+        "userDisplayName": "George White",
+        "rating": 2,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2020-05-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Ralph Patel",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2019-11-02T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb68",
+    "name": "Artist Apron Canvas",
+    "sku": "ART-ACC-11353",
+    "price": 16.99,
+    "details": {
+      "description": "Heavy duty painting smock",
+      "specs": {
+        "material": "Cotton Canvas",
+        "pockets": "Multiple",
+        "strap": "Cross back"
+      }
+    },
+    "stock": 70,
+    "category": {
+      "main": "Art",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Topaz Toucan Travel",
+      "contactEmail": "support@topaztoucan.com",
+      "supportPhone": "+1-888-323-3456"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Randy Smith",
+        "rating": 5,
+        "comment": "I'm very impressed with the performance of this product.",
+        "date": "2019-01-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb69",
+    "name": "Cat Window Perch",
+    "sku": "PET-FUR-11354",
+    "price": 21.99,
+    "details": {
+      "description": "Hammock window seat",
+      "specs": {
+        "mount": "Suction cups",
+        "load": "15kg",
+        "cover": "Washable"
+      }
+    },
+    "stock": 45,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Furniture"
+    },
+    "vendor": {
+      "companyName": "Ruby Rooster Restaurant",
+      "contactEmail": "info@rubyrooster.com",
+      "supportPhone": "+1-888-434-4567"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb6a",
+    "name": "Key Fob Cover",
+    "sku": "AUT-ACC-11355",
+    "price": 7.99,
+    "details": {
+      "description": "Remote key protector",
+      "specs": {
+        "material": "TPU",
+        "fit": "Universal",
+        "color": "Carbon fiber"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Automotive",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Sapphire Shark Supplies",
+      "contactEmail": "sales@sapphireshark.com",
+      "supportPhone": "+1-888-545-5678"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Tiffany Smith",
+        "rating": 5,
+        "comment": "The product is a bit of a letdown. I expected more for the price.",
+        "date": "2024-01-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Karen Anderson",
+        "rating": 5,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2022-02-09T00:00:00"
+      },
+      {
+        "userDisplayName": "Albert Alvarez",
+        "rating": 5,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2020-02-04T00:00:00"
+      },
+      {
+        "userDisplayName": "Laura Torres",
+        "rating": 4,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2020-11-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Christine Hall",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great addition to my collection.",
+        "date": "2023-01-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Stephen Carter",
+        "rating": 2,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2019-10-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Betty Moore",
+        "rating": 3,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2025-09-18T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb6b",
+    "name": "Masking Tape Art",
+    "sku": "ART-SUP-11356",
+    "price": 3.99,
+    "details": {
+      "description": "Low tack painter tape",
+      "specs": {
+        "width": "18mm",
+        "length": "50m",
+        "residue": "Free"
+      }
+    },
+    "stock": 180,
+    "category": {
+      "main": "Art",
+      "sub": "Supplies"
+    },
+    "vendor": {
+      "companyName": "Garnet Griffin Gear",
+      "contactEmail": "contact@garnetgriffin.com",
+      "supportPhone": "+1-888-656-6789"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Samuel Carter",
+        "rating": 1,
+        "comment": "Best purchase I've made this year. Absolutely fantastic!",
+        "date": "2018-12-04T00:00:00"
+      },
+      {
+        "userDisplayName": "Logan Foster",
+        "rating": 3,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2025-01-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Rachel Turner",
+        "rating": 1,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2022-09-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Jeffrey Wright",
+        "rating": 1,
+        "comment": "This is a revolutionary product. Can't imagine my life without it.",
+        "date": "2025-03-11T00:00:00"
+      },
+      {
+        "userDisplayName": "Janice Ward",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but it's a unique one.",
+        "date": "2018-02-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Kathryn Bennett",
+        "rating": 4,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2022-07-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Heather Morales",
+        "rating": 5,
+        "comment": "The app that comes with it is surprisingly polished and useful.",
+        "date": "2022-02-04T00:00:00"
+      },
+      {
+        "userDisplayName": "Rebecca Lewis",
+        "rating": 4,
+        "comment": "Average quality, nothing special to write home about.",
+        "date": "2024-08-18T00:00:00"
+      },
+      {
+        "userDisplayName": "Barbara Taylor",
+        "rating": 3,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2021-11-17T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb6c",
+    "name": "Dog ID Tag",
+    "sku": "PET-ACC-11357",
+    "price": 4.5,
+    "details": {
+      "description": "Stainless steel name tag",
+      "specs": {
+        "shape": "Bone",
+        "engrave": "Ready",
+        "ring": "Split"
+      }
+    },
+    "stock": 220,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Amethyst Antelope Apparel",
+      "contactEmail": "support@amethystantelope.com",
+      "supportPhone": "+1-888-767-7890"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Thomas Rodriguez",
+        "rating": 3,
+        "comment": "The product is very versatile and can be used for many things.",
+        "date": "2019-02-20T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb6d",
+    "name": "Car Headrest Pillow",
+    "sku": "AUT-ACC-11358",
+    "price": 15.5,
+    "details": {
+      "description": "Neck support cushion",
+      "specs": {
+        "fill": "Memory Foam",
+        "cover": "Breathable Mesh",
+        "strap": "Elastic"
+      }
+    },
+    "stock": 85,
+    "category": {
+      "main": "Automotive",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Aquamarine Alligator Art",
+      "contactEmail": "info@aquamarinealligator.com",
+      "supportPhone": "+1-888-878-8901"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Jordan Sanders",
+        "rating": 4,
+        "comment": "The product is very versatile and can be used for many things.",
+        "date": "2022-03-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Victoria Morris",
+        "rating": 4,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2024-03-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Matthew Thomas",
+        "rating": 2,
+        "comment": "This is a revolutionary product. Can't imagine my life without it.",
+        "date": "2023-06-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Jane Patel",
+        "rating": 2,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2025-08-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Bobby Jimenez",
+        "rating": 4,
+        "comment": "There's a steep learning curve, but it's worth it in the end.",
+        "date": "2021-12-09T00:00:00"
+      },
+      {
+        "userDisplayName": "Jean Richardson",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2019-05-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Willie Patel",
+        "rating": 4,
+        "comment": "I'm very satisfied with this product. It's been a great addition to my home.",
+        "date": "2018-06-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Megan Cooper",
+        "rating": 2,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2018-07-23T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb6e",
+    "name": "Charcoal Stick Set",
+    "sku": "ART-SUP-11359",
+    "price": 5.99,
+    "details": {
+      "description": "Compressed charcoal",
+      "specs": {
+        "pack": "6",
+        "hardness": "Mixed",
+        "shape": "Square"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Art",
+      "sub": "Supplies"
+    },
+    "vendor": {
+      "companyName": "Diamond Dolphin Designs",
+      "contactEmail": "sales@diamonddolphin.com",
+      "supportPhone": "+1-888-989-9012"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Kelly Murphy",
+        "rating": 5,
+        "comment": "Incredible value. Feels much more expensive than it is.",
+        "date": "2018-08-05T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb6f",
+    "name": "Pet Hair Remover Brush",
+    "sku": "PET-CLE-11360",
+    "price": 9.99,
+    "details": {
+      "description": "Double sided fur wand",
+      "specs": {
+        "base": "Self cleaning",
+        "size": "Standard",
+        "travel": "Mini included"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Cleaning"
+    },
+    "vendor": {
+      "companyName": "Pearl Peacock Products",
+      "contactEmail": "contact@pearlpeacock.com",
+      "supportPhone": "+1-888-090-0123"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Joseph Wilson",
+        "rating": 2,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2024-04-25T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb70",
+    "name": "Windshield Repair Kit",
+    "sku": "AUT-REP-11361",
+    "price": 10.99,
+    "details": {
+      "description": "Chip crack DIY fix",
+      "specs": {
+        "resin": "Advanced",
+        "curing": "Sunlight",
+        "applicator": "Included"
+      }
+    },
+    "stock": 70,
+    "category": {
+      "main": "Automotive",
+      "sub": "Repair"
+    },
+    "vendor": {
+      "companyName": "Peridot Panther Publishing",
+      "contactEmail": "support@peridotpanther.com",
+      "supportPhone": "+1-888-101-1122"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Thomas Rodriguez",
+        "rating": 3,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2025-10-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Paul Robinson",
+        "rating": 2,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2024-09-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Donald Ramirez",
+        "rating": 5,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2021-08-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb71",
+    "name": "Pencil Extender",
+    "sku": "ART-TOO-11362",
+    "price": 2.99,
+    "details": {
+      "description": "Holder for short pencils",
+      "specs": {
+        "material": "Metal/Wood",
+        "fit": "Standard/7mm",
+        "pack": "2"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Art",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Spinel Sparrow Sports",
+      "contactEmail": "info@spinelsparrow.com",
+      "supportPhone": "+1-888-212-2233"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Noah Watson",
+        "rating": 1,
+        "comment": "The app that comes with it is surprisingly polished and useful.",
+        "date": "2023-01-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Jean Chavez",
+        "rating": 3,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2025-04-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Heather Morales",
+        "rating": 1,
+        "comment": "The product is very versatile and can be used for many things.",
+        "date": "2022-12-21T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb72",
+    "name": "Cat Grass Kit",
+    "sku": "PET-HEA-11363",
+    "price": 6.5,
+    "details": {
+      "description": "Grow your own wheatgrass",
+      "specs": {
+        "seeds": "Organic",
+        "container": "Planter",
+        "soil": "Disk"
+      }
+    },
+    "stock": 95,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Health"
+    },
+    "vendor": {
+      "companyName": "Tourmaline Tiger Toys",
+      "contactEmail": "sales@tourmalinetiger.com",
+      "supportPhone": "+1-888-323-3344"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Tina Davis",
+        "rating": 4,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2024-01-20T00:00:00"
+      },
+      {
+        "userDisplayName": "Daniel White",
+        "rating": 1,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2025-12-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Christian Ramos",
+        "rating": 3,
+        "comment": "The setup was a breeze, up and running in minutes.",
+        "date": "2019-03-04T00:00:00"
+      },
+      {
+        "userDisplayName": "Johnny Jones",
+        "rating": 5,
+        "comment": "I'm very happy with my purchase. It's been a great addition to my collection.",
+        "date": "2019-11-18T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb73",
+    "name": "Car Cup Coaster",
+    "sku": "AUT-INT-11364",
+    "price": 3.99,
+    "details": {
+      "description": "Silicone holder insert",
+      "specs": {
+        "pack": "2",
+        "dia": "7cm",
+        "logo": "None"
+      }
+    },
+    "stock": 180,
+    "category": {
+      "main": "Automotive",
+      "sub": "Interior"
+    },
+    "vendor": {
+      "companyName": "Zircon Zebra Zenith",
+      "contactEmail": "contact@zirconzebra.com",
+      "supportPhone": "+1-888-434-4455"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Jordan James",
+        "rating": 2,
+        "comment": "I wish I had bought this sooner. It's been a great help.",
+        "date": "2021-07-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Philip Gonzales",
+        "rating": 2,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2021-10-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Kevin Harris",
+        "rating": 3,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2023-10-02T00:00:00"
+      },
+      {
+        "userDisplayName": "Brian Wright",
+        "rating": 4,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2018-10-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Joyce Edwards",
+        "rating": 2,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2021-04-20T00:00:00"
+      },
+      {
+        "userDisplayName": "Larry Roberts",
+        "rating": 4,
+        "comment": "I'm very impressed with the performance of this product.",
+        "date": "2019-06-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Roger Peterson",
+        "rating": 4,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2025-10-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Jordan Mendoza",
+        "rating": 2,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2021-10-11T00:00:00"
+      },
+      {
+        "userDisplayName": "Edward Ramirez",
+        "rating": 1,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2019-07-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Ethan Bailey",
+        "rating": 4,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2024-01-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb74",
+    "name": "Blending Stumps",
+    "sku": "ART-TOO-11365",
+    "price": 4.5,
+    "details": {
+      "description": "Paper tortillons",
+      "specs": {
+        "pack": "6",
+        "sizes": "Mixed",
+        "clean": "Sandpaper"
+      }
+    },
+    "stock": 130,
+    "category": {
+      "main": "Art",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Amber Ape Adventures",
+      "contactEmail": "support@amberape.com",
+      "supportPhone": "+1-888-545-5566"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Roy Johnson",
+        "rating": 2,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2021-08-11T00:00:00"
+      },
+      {
+        "userDisplayName": "Kyle Reed",
+        "rating": 3,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2019-12-21T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85d5e07a7d8be04eb75",
+    "name": "Dog Bandana",
+    "sku": "PET-CLO-11366",
+    "price": 5.99,
+    "details": {
+      "description": "Plaid pet scarf",
+      "specs": {
+        "material": "Cotton",
+        "size": "M",
+        "washable": "Yes"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Clothing"
+    },
+    "vendor": {
+      "companyName": "Amber Ape Adventures",
+      "contactEmail": "support@amberape.com",
+      "supportPhone": "+1-888-545-5566"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Sarah Hernandez",
+        "rating": 3,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2021-03-19T00:00:00"
+      },
+      {
+        "userDisplayName": "Betty Lee",
+        "rating": 3,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2025-07-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Gerald Ramos",
+        "rating": 5,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2019-04-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Bruce James",
+        "rating": 2,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2023-04-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Marilyn Hughes",
+        "rating": 2,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2025-04-04T00:00:00"
+      }
+    ]
+  }
+]

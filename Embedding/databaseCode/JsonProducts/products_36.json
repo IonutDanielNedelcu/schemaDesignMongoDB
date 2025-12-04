@@ -1,0 +1,2532 @@
+[
+  {
+    "_id": "6931b8b32f8aba1457bac8a5",
+    "name": "Wall Mount TV Bracket",
+    "sku": "ELE-ACC-12100",
+    "price": 24.0,
+    "details": {
+      "description": "Tilt and swivel mount",
+      "specs": {
+        "vesa": "400x400",
+        "screens": "32-55 inch",
+        "load": "35kg"
+      }
+    },
+    "stock": 45,
+    "category": {
+      "main": "Electronics",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Nexus Innovations",
+      "contactEmail": "contact@nexusinnov.com",
+      "supportPhone": "+1-888-121-2121"
+    },
+    "reviews": [
+      {
+        "username": "Juan Patel",
+        "rating": 3,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2019-07-28T00:00:00"
+      },
+      {
+        "username": "Roy Castillo",
+        "rating": 2,
+        "comment": "Excellent product, highly recommended! A true game changer.",
+        "date": "2025-12-21T00:00:00"
+      },
+      {
+        "username": "Tyler Phillips",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great investment.",
+        "date": "2018-06-17T00:00:00"
+      },
+      {
+        "username": "Kelly Murphy",
+        "rating": 5,
+        "comment": "I wish I had bought this sooner. It's been a great help.",
+        "date": "2025-06-18T00:00:00"
+      },
+      {
+        "username": "Jerry Reyes",
+        "rating": 2,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2023-12-20T00:00:00"
+      },
+      {
+        "username": "Diana Long",
+        "rating": 2,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2025-10-24T00:00:00"
+      },
+      {
+        "username": "Ethan Rogers",
+        "rating": 3,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2023-09-04T00:00:00"
+      },
+      {
+        "username": "Julie Mendoza",
+        "rating": 2,
+        "comment": "The setup was a breeze, up and running in minutes.",
+        "date": "2018-01-01T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8a6",
+    "name": "Smart Watch Strap",
+    "sku": "WEA-ACC-12101",
+    "price": 8.99,
+    "details": {
+      "description": "Silicone replacement band",
+      "specs": {
+        "width": "20mm",
+        "clasp": "Buckle",
+        "colors": "Black/Blue"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Wearables",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Horizon Dynamics",
+      "contactEmail": "support@horizondynamics.com",
+      "supportPhone": "+1-888-343-4343"
+    },
+    "reviews": [
+      {
+        "username": "Nathan Morgan",
+        "rating": 1,
+        "comment": "The materials used feel cheap and flimsy. I expected more.",
+        "date": "2022-05-14T00:00:00"
+      },
+      {
+        "username": "Melissa Sanchez",
+        "rating": 5,
+        "comment": "The instructions were clear and easy to follow.",
+        "date": "2021-03-07T00:00:00"
+      },
+      {
+        "username": "Michael Thomas",
+        "rating": 4,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2021-08-02T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8a7",
+    "name": "Portable Hard Drive Case",
+    "sku": "COM-ACC-12102",
+    "price": 9.5,
+    "details": {
+      "description": "Shockproof HDD pouch",
+      "specs": {
+        "size": "2.5 inch",
+        "material": "EVA",
+        "pocket": "Cable mesh"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Computers",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Aurora Tech",
+      "contactEmail": "info@auroratech.io",
+      "supportPhone": "+1-888-565-6565"
+    },
+    "reviews": [
+      {
+        "username": "Randy Brown",
+        "rating": 1,
+        "comment": "The product is a bit of a letdown. I expected more for the price.",
+        "date": "2019-02-09T00:00:00"
+      },
+      {
+        "username": "Julie Sanders",
+        "rating": 3,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2018-01-10T00:00:00"
+      },
+      {
+        "username": "Angela Scott",
+        "rating": 3,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2023-11-24T00:00:00"
+      },
+      {
+        "username": "Kathryn Kim",
+        "rating": 1,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2024-04-09T00:00:00"
+      },
+      {
+        "username": "Helen Campbell",
+        "rating": 5,
+        "comment": "The instructions were clear and easy to follow.",
+        "date": "2018-10-21T00:00:00"
+      },
+      {
+        "username": "Juan Ruiz",
+        "rating": 3,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2024-10-21T00:00:00"
+      },
+      {
+        "username": "Bruce Long",
+        "rating": 2,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2018-01-10T00:00:00"
+      },
+      {
+        "username": "Justin Nguyen",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2024-12-17T00:00:00"
+      },
+      {
+        "username": "Richard Gonzales",
+        "rating": 4,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2018-02-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8a8",
+    "name": "Wireless Charging Pad",
+    "sku": "MOB-ACC-12103",
+    "price": 18.0,
+    "details": {
+      "description": "Qi fast charger",
+      "specs": {
+        "output": "15W",
+        "connector": "USB-C",
+        "indicator": "LED"
+      }
+    },
+    "stock": 70,
+    "category": {
+      "main": "Mobile",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Silverline Goods",
+      "contactEmail": "sales@silverlinegoods.com",
+      "supportPhone": "+1-888-787-8787"
+    },
+    "reviews": [
+      {
+        "username": "Timothy Robinson",
+        "rating": 3,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2025-02-03T00:00:00"
+      },
+      {
+        "username": "Aaron Parker",
+        "rating": 2,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2020-03-20T00:00:00"
+      },
+      {
+        "username": "Tyler Diaz",
+        "rating": 2,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2019-08-20T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8a9",
+    "name": "Car Air Purifier",
+    "sku": "AUT-ACC-12104",
+    "price": 35.0,
+    "details": {
+      "description": "Ionic air cleaner",
+      "specs": {
+        "power": "12V",
+        "filter": "HEPA",
+        "noise": "<30dB"
+      }
+    },
+    "stock": 25,
+    "category": {
+      "main": "Automotive",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Phoenix United",
+      "contactEmail": "contact@phoenixunited.com",
+      "supportPhone": "+1-888-909-0909"
+    },
+    "reviews": [
+      {
+        "username": "Eugene Long",
+        "rating": 3,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2024-09-04T00:00:00"
+      },
+      {
+        "username": "Judith Howard",
+        "rating": 5,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2018-12-02T00:00:00"
+      },
+      {
+        "username": "Henry Ortiz",
+        "rating": 4,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2020-02-13T00:00:00"
+      },
+      {
+        "username": "Jason King",
+        "rating": 1,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2019-04-22T00:00:00"
+      },
+      {
+        "username": "Bryan Ruiz",
+        "rating": 5,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2022-04-01T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8aa",
+    "name": "Paint Brushes Set",
+    "sku": "ART-PAI-12105",
+    "price": 11.5,
+    "details": {
+      "description": "Artist brush kit",
+      "specs": {
+        "count": "10 pcs",
+        "hair": "Nylon",
+        "shapes": "Round/Flat"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Arts",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Summit Supply Co.",
+      "contactEmail": "support@summitsupply.co",
+      "supportPhone": "+1-888-112-3456"
+    },
+    "reviews": [
+      {
+        "username": "Amber Long",
+        "rating": 2,
+        "comment": "This was an impulse buy, and I have zero regrets.",
+        "date": "2021-10-18T00:00:00"
+      },
+      {
+        "username": "Cynthia Young",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a unique one.",
+        "date": "2020-05-18T00:00:00"
+      },
+      {
+        "username": "Patrick Turner",
+        "rating": 3,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2024-12-02T00:00:00"
+      },
+      {
+        "username": "Victoria Morris",
+        "rating": 2,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2023-08-05T00:00:00"
+      },
+      {
+        "username": "Jennifer Wilson",
+        "rating": 5,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2022-08-19T00:00:00"
+      },
+      {
+        "username": "Betty Anderson",
+        "rating": 3,
+        "comment": "The product has a weird smell that won't go away.",
+        "date": "2022-03-20T00:00:00"
+      },
+      {
+        "username": "George Allen",
+        "rating": 3,
+        "comment": "I'm not sure I would buy this again, but it's been okay.",
+        "date": "2018-03-12T00:00:00"
+      },
+      {
+        "username": "Billy Hughes",
+        "rating": 5,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2024-08-16T00:00:00"
+      },
+      {
+        "username": "Denise Price",
+        "rating": 5,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2019-05-27T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8ab",
+    "name": "Sketchbook A4",
+    "sku": "ART-PAP-12106",
+    "price": 9.0,
+    "details": {
+      "description": "Hardcover drawing paper",
+      "specs": {
+        "sheets": "100",
+        "gsm": "120",
+        "binding": "Spiral"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Arts",
+      "sub": "Paper"
+    },
+    "vendor": {
+      "companyName": "Keystone Merchants",
+      "contactEmail": "info@keystonemerchants.com",
+      "supportPhone": "+1-888-223-4567"
+    },
+    "reviews": [
+      {
+        "username": "Frank Turner",
+        "rating": 2,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2022-03-22T00:00:00"
+      },
+      {
+        "username": "Arthur Chavez",
+        "rating": 5,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2025-06-03T00:00:00"
+      },
+      {
+        "username": "Rose Castillo",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2025-07-19T00:00:00"
+      },
+      {
+        "username": "Tiffany Smith",
+        "rating": 2,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2023-11-03T00:00:00"
+      },
+      {
+        "username": "Ralph Patel",
+        "rating": 2,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2020-11-04T00:00:00"
+      },
+      {
+        "username": "Jonathan Mitchell",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2020-04-12T00:00:00"
+      },
+      {
+        "username": "Tina Hernandez",
+        "rating": 3,
+        "comment": "The software is a bit buggy, hoping for an update soon.",
+        "date": "2025-07-12T00:00:00"
+      },
+      {
+        "username": "Samantha Nelson",
+        "rating": 4,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2024-07-19T00:00:00"
+      },
+      {
+        "username": "Ann Cox",
+        "rating": 3,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2024-09-23T00:00:00"
+      },
+      {
+        "username": "Jason Ramirez",
+        "rating": 2,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2021-05-27T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8ac",
+    "name": "Electric Kettle Glass",
+    "sku": "KIT-APP-12107",
+    "price": 28.0,
+    "details": {
+      "description": "LED illuminated boiler",
+      "specs": {
+        "capacity": "1.7L",
+        "power": "2200W",
+        "auto_off": "Yes"
+      }
+    },
+    "stock": 40,
+    "category": {
+      "main": "Kitchen",
+      "sub": "Appliances"
+    },
+    "vendor": {
+      "companyName": "Redwood & Oak",
+      "contactEmail": "sales@redwoodandoak.com",
+      "supportPhone": "+1-888-334-5678"
+    },
+    "reviews": [
+      {
+        "username": "Emily Thompson",
+        "rating": 1,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2024-01-28T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8ad",
+    "name": "Sandwich Maker",
+    "sku": "KIT-APP-12108",
+    "price": 22.5,
+    "details": {
+      "description": "Non-stick toast press",
+      "specs": {
+        "plates": "Triangular",
+        "handle": "Cool touch",
+        "lights": "Ready"
+      }
+    },
+    "stock": 35,
+    "category": {
+      "main": "Kitchen",
+      "sub": "Appliances"
+    },
+    "vendor": {
+      "companyName": "Northstar Provisions",
+      "contactEmail": "contact@northstarprovisions.com",
+      "supportPhone": "+1-888-445-6789"
+    },
+    "reviews": [
+      {
+        "username": "Amanda King",
+        "rating": 3,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2023-02-26T00:00:00"
+      },
+      {
+        "username": "Nicole Baker",
+        "rating": 4,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2020-12-28T00:00:00"
+      },
+      {
+        "username": "Cynthia Nguyen",
+        "rating": 5,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2019-08-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8ae",
+    "name": "Bath Mat Non-Slip",
+    "sku": "HOM-BAT-12109",
+    "price": 14.0,
+    "details": {
+      "description": "Absorbent memory foam rug",
+      "specs": {
+        "size": "50x80cm",
+        "color": "Grey",
+        "washable": "Machine"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Home",
+      "sub": "Bathroom"
+    },
+    "vendor": {
+      "companyName": "Tidal Wave Inc.",
+      "contactEmail": "support@tidalwaveinc.com",
+      "supportPhone": "+1-888-556-7890"
+    },
+    "reviews": [
+      {
+        "username": "Emily Sanchez",
+        "rating": 1,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2021-04-13T00:00:00"
+      },
+      {
+        "username": "Douglas Murphy",
+        "rating": 4,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2020-02-26T00:00:00"
+      },
+      {
+        "username": "Daniel Anderson",
+        "rating": 3,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2021-04-21T00:00:00"
+      },
+      {
+        "username": "Tyler Murphy",
+        "rating": 2,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2021-01-21T00:00:00"
+      },
+      {
+        "username": "Gary Nguyen",
+        "rating": 3,
+        "comment": "I would recommend this to a friend without hesitation.",
+        "date": "2018-04-13T00:00:00"
+      },
+      {
+        "username": "Marilyn Hughes",
+        "rating": 4,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2025-05-18T00:00:00"
+      },
+      {
+        "username": "Shirley Green",
+        "rating": 4,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2019-08-08T00:00:00"
+      },
+      {
+        "username": "Heather Cruz",
+        "rating": 3,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2018-11-24T00:00:00"
+      },
+      {
+        "username": "Joe Brooks",
+        "rating": 5,
+        "comment": "Best purchase I've made this year. Absolutely fantastic!",
+        "date": "2024-07-10T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8af",
+    "name": "Shower Head High Pressure",
+    "sku": "HOM-BAT-12110",
+    "price": 16.5,
+    "details": {
+      "description": "Water saving nozzle",
+      "specs": {
+        "modes": "3",
+        "filter": "Ionic beads",
+        "thread": "Standard"
+      }
+    },
+    "stock": 65,
+    "category": {
+      "main": "Home",
+      "sub": "Bathroom"
+    },
+    "vendor": {
+      "companyName": "Ironclad Systems",
+      "contactEmail": "info@ironcladsys.com",
+      "supportPhone": "+1-888-667-8901"
+    },
+    "reviews": [
+      {
+        "username": "William Wilson",
+        "rating": 2,
+        "comment": "I'm very impressed with the performance of this product.",
+        "date": "2025-10-20T00:00:00"
+      },
+      {
+        "username": "Deborah Allen",
+        "rating": 5,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2023-05-12T00:00:00"
+      },
+      {
+        "username": "Vincent Johnson",
+        "rating": 1,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2022-07-03T00:00:00"
+      },
+      {
+        "username": "Elijah Ross",
+        "rating": 4,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2018-11-27T00:00:00"
+      },
+      {
+        "username": "Brenda Carter",
+        "rating": 5,
+        "comment": "The customer reviews were spot on. This is a great product.",
+        "date": "2019-08-12T00:00:00"
+      },
+      {
+        "username": "Walter Kelly",
+        "rating": 2,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2024-08-22T00:00:00"
+      },
+      {
+        "username": "Julie James",
+        "rating": 4,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2025-07-01T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8b0",
+    "name": "Garden Shears Pruning",
+    "sku": "GAR-TOO-12111",
+    "price": 12.0,
+    "details": {
+      "description": "Bypass secateurs",
+      "specs": {
+        "blade": "Carbon steel",
+        "cut": "20mm",
+        "lock": "Safety"
+      }
+    },
+    "stock": 75,
+    "category": {
+      "main": "Garden",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Crimson Arrow",
+      "contactEmail": "sales@crimsonarrow.com",
+      "supportPhone": "+1-888-778-9012"
+    },
+    "reviews": [
+      {
+        "username": "Amber Jimenez",
+        "rating": 5,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2024-08-18T00:00:00"
+      },
+      {
+        "username": "Carol Clark",
+        "rating": 1,
+        "comment": "Five stars! Does the job flawlessly.",
+        "date": "2020-11-23T00:00:00"
+      },
+      {
+        "username": "Margaret Jackson",
+        "rating": 1,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2025-03-01T00:00:00"
+      },
+      {
+        "username": "Roger Ortiz",
+        "rating": 5,
+        "comment": "The customer reviews were spot on. This is a great product.",
+        "date": "2021-12-19T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8b1",
+    "name": "Plant Pots Ceramic",
+    "sku": "GAR-POT-12112",
+    "price": 19.99,
+    "details": {
+      "description": "Set of 3 small pots",
+      "specs": {
+        "sizes": "S/M/L",
+        "drainage": "Hole",
+        "finish": "Glazed"
+      }
+    },
+    "stock": 30,
+    "category": {
+      "main": "Garden",
+      "sub": "Decor"
+    },
+    "vendor": {
+      "companyName": "Blue Jay Books",
+      "contactEmail": "orders@bluejaybooks.com",
+      "supportPhone": "+1-888-889-0123"
+    },
+    "reviews": [
+      {
+        "username": "Martha Kelly",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2022-10-28T00:00:00"
+      },
+      {
+        "username": "Dennis Morris",
+        "rating": 5,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2025-02-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8b2",
+    "name": "Running Waist Belt",
+    "sku": "SPO-RUN-12113",
+    "price": 9.99,
+    "details": {
+      "description": "Phone holder pouch",
+      "specs": {
+        "pockets": "2 zippered",
+        "strap": "Adjustable",
+        "reflective": "Strip"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Sports",
+      "sub": "Running"
+    },
+    "vendor": {
+      "companyName": "Golden Grain Foods",
+      "contactEmail": "support@goldengrain.com",
+      "supportPhone": "+1-888-990-1234"
+    },
+    "reviews": [
+      {
+        "username": "Laura Flores",
+        "rating": 5,
+        "comment": "The price is a bit high, but you get what you pay for.",
+        "date": "2024-10-18T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8b3",
+    "name": "Swim Goggles Anti-Fog",
+    "sku": "SPO-SWI-12114",
+    "price": 13.5,
+    "details": {
+      "description": "UV protection glasses",
+      "specs": {
+        "lens": "Polycarbonate",
+        "seal": "Silicone",
+        "nose_bridge": "Interchangeable"
+      }
+    },
+    "stock": 55,
+    "category": {
+      "main": "Sports",
+      "sub": "Swimming"
+    },
+    "vendor": {
+      "companyName": "Emerald City Goods",
+      "contactEmail": "contact@emeraldcitygoods.com",
+      "supportPhone": "+1-888-001-2345"
+    },
+    "reviews": [
+      {
+        "username": "Douglas Murphy",
+        "rating": 3,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2021-05-27T00:00:00"
+      },
+      {
+        "username": "James Brown",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great investment.",
+        "date": "2023-04-07T00:00:00"
+      },
+      {
+        "username": "Marilyn Foster",
+        "rating": 3,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2024-01-11T00:00:00"
+      },
+      {
+        "username": "Jennifer Jones",
+        "rating": 4,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2023-01-14T00:00:00"
+      },
+      {
+        "username": "Katherine Gomez",
+        "rating": 3,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2021-07-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8b4",
+    "name": "Baby Food Processor",
+    "sku": "BAB-FEE-12115",
+    "price": 65.0,
+    "details": {
+      "description": "Steamer and blender",
+      "specs": {
+        "functions": "4-in-1",
+        "cup": "600ml",
+        "bpa": "Free"
+      }
+    },
+    "stock": 20,
+    "category": {
+      "main": "Baby",
+      "sub": "Feeding"
+    },
+    "vendor": {
+      "companyName": "Black Diamond Gear",
+      "contactEmail": "info@blackdiamondgear.com",
+      "supportPhone": "+1-888-111-3456"
+    },
+    "reviews": [
+      {
+        "username": "Olivia Williams",
+        "rating": 2,
+        "comment": "Best purchase I've made this year. Absolutely fantastic!",
+        "date": "2023-06-26T00:00:00"
+      },
+      {
+        "username": "Zachary Morris",
+        "rating": 2,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2018-04-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8b5",
+    "name": "Silicone Bibs Set",
+    "sku": "BAB-FEE-12116",
+    "price": 10.5,
+    "details": {
+      "description": "Waterproof feeding bibs",
+      "specs": {
+        "count": "2 pcs",
+        "pocket": "Catch-all",
+        "cleaning": "Dishwasher safe"
+      }
+    },
+    "stock": 95,
+    "category": {
+      "main": "Baby",
+      "sub": "Feeding"
+    },
+    "vendor": {
+      "companyName": "White Wolf Wares",
+      "contactEmail": "sales@whitewolfwares.com",
+      "supportPhone": "+1-888-222-4567"
+    },
+    "reviews": [
+      {
+        "username": "Deborah Robinson",
+        "rating": 1,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2019-04-10T00:00:00"
+      },
+      {
+        "username": "Sarah Wilson",
+        "rating": 2,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2019-02-21T00:00:00"
+      },
+      {
+        "username": "Crystal Miller",
+        "rating": 1,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2021-02-07T00:00:00"
+      },
+      {
+        "username": "Donna Clark",
+        "rating": 2,
+        "comment": "I would recommend this to a friend without hesitation.",
+        "date": "2019-10-04T00:00:00"
+      },
+      {
+        "username": "Joe Mendoza",
+        "rating": 3,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2025-10-04T00:00:00"
+      },
+      {
+        "username": "Kimberly Harris",
+        "rating": 1,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2025-06-08T00:00:00"
+      },
+      {
+        "username": "Richard Miller",
+        "rating": 5,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2023-11-11T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8b6",
+    "name": "Cat Litter Scoop",
+    "sku": "PET-CAT-12117",
+    "price": 5.99,
+    "details": {
+      "description": "Metal sifter shovel",
+      "specs": {
+        "material": "Aluminum alloy",
+        "handle": "Rubber",
+        "holes": "5mm"
+      }
+    },
+    "stock": 130,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Cats"
+    },
+    "vendor": {
+      "companyName": "Purple Finch Publishing",
+      "contactEmail": "contact@purplefinch.pub",
+      "supportPhone": "+1-888-333-5678"
+    },
+    "reviews": [
+      {
+        "username": "Maria Evans",
+        "rating": 3,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2021-01-06T00:00:00"
+      },
+      {
+        "username": "Patrick Gomez",
+        "rating": 1,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2023-11-10T00:00:00"
+      },
+      {
+        "username": "Donald Harris",
+        "rating": 2,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2025-09-05T00:00:00"
+      },
+      {
+        "username": "Paul Robinson",
+        "rating": 3,
+        "comment": "This was an impulse buy, and I have zero regrets.",
+        "date": "2023-06-26T00:00:00"
+      },
+      {
+        "username": "Logan Johnson",
+        "rating": 5,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2018-09-10T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8b7",
+    "name": "Dog Chew Toy",
+    "sku": "PET-DOG-12118",
+    "price": 8.5,
+    "details": {
+      "description": "Durable rubber bone",
+      "specs": {
+        "size": "Medium",
+        "texture": "Teeth cleaning",
+        "flavor": "Beef"
+      }
+    },
+    "stock": 85,
+    "category": {
+      "main": "Pet Supplies",
+      "sub": "Dogs"
+    },
+    "vendor": {
+      "companyName": "Gray Fox Tech",
+      "contactEmail": "support@grayfoxtech.com",
+      "supportPhone": "+1-888-444-6789"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8b8",
+    "name": "Drone Propellers",
+    "sku": "ELE-DRO-12119",
+    "price": 15.0,
+    "details": {
+      "description": "Replacement blades kit",
+      "specs": {
+        "count": "8 pcs",
+        "material": "Carbon fiber",
+        "fit": "Mavic series"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Electronics",
+      "sub": "Drones"
+    },
+    "vendor": {
+      "companyName": "Green Turtle Gaming",
+      "contactEmail": "info@greenturtlegaming.com",
+      "supportPhone": "+1-888-555-7890"
+    },
+    "reviews": [
+      {
+        "username": "Cheryl Kim",
+        "rating": 1,
+        "comment": "A must-have for anyone serious about quality.",
+        "date": "2022-05-12T00:00:00"
+      },
+      {
+        "username": "Albert Chavez",
+        "rating": 3,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2022-01-08T00:00:00"
+      },
+      {
+        "username": "Victoria Collins",
+        "rating": 1,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2019-05-04T00:00:00"
+      },
+      {
+        "username": "Gloria Richardson",
+        "rating": 5,
+        "comment": "The design is sleek and modern. Looks great on my desk.",
+        "date": "2024-10-17T00:00:00"
+      },
+      {
+        "username": "Brandon Campbell",
+        "rating": 5,
+        "comment": "I'm very impressed with the attention to detail.",
+        "date": "2022-11-13T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8b9",
+    "name": "Gimbal Stabilizer",
+    "sku": "PHO-VID-12120",
+    "price": 89.0,
+    "details": {
+      "description": "3-axis phone gimbal",
+      "specs": {
+        "battery": "12h",
+        "modes": "Follow/Lock",
+        "app": "Included"
+      }
+    },
+    "stock": 15,
+    "category": {
+      "main": "Photography",
+      "sub": "Video"
+    },
+    "vendor": {
+      "companyName": "Brown Bear Bistro",
+      "contactEmail": "contact@brownbearbistro.com",
+      "supportPhone": "+1-888-666-8901"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8ba",
+    "name": "Makeup Brush Set",
+    "sku": "BEA-TOO-12121",
+    "price": 18.5,
+    "details": {
+      "description": "Professional cosmetic brushes",
+      "specs": {
+        "pieces": "12",
+        "bristles": "Synthetic soft",
+        "pouch": "Roll-up"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Beauty",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Orange Octopus Optics",
+      "contactEmail": "sales@orangeoctopus.com",
+      "supportPhone": "+1-888-777-9012"
+    },
+    "reviews": [
+      {
+        "username": "Paul Lee",
+        "rating": 1,
+        "comment": "I've recommended this to all my friends and family.",
+        "date": "2022-03-03T00:00:00"
+      },
+      {
+        "username": "Cheryl Kelly",
+        "rating": 2,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2018-12-09T00:00:00"
+      },
+      {
+        "username": "Christina Ortiz",
+        "rating": 5,
+        "comment": "The warranty process was a nightmare. Terrible customer service.",
+        "date": "2021-02-20T00:00:00"
+      },
+      {
+        "username": "Ethan Morgan",
+        "rating": 5,
+        "comment": "I'm very impressed with the design of this product.",
+        "date": "2019-03-19T00:00:00"
+      },
+      {
+        "username": "Mary Garcia",
+        "rating": 3,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2022-01-10T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8bb",
+    "name": "Facial Cleansing Brush",
+    "sku": "BEA-SKI-12122",
+    "price": 24.0,
+    "details": {
+      "description": "Electric sonic scrubber",
+      "specs": {
+        "speeds": "2",
+        "heads": "3 types",
+        "waterproof": "IPX6"
+      }
+    },
+    "stock": 45,
+    "category": {
+      "main": "Beauty",
+      "sub": "Skin"
+    },
+    "vendor": {
+      "companyName": "Yellow Jacket Sports",
+      "contactEmail": "info@yellowjacketsports.com",
+      "supportPhone": "+1-888-888-0123"
+    },
+    "reviews": [
+      {
+        "username": "Carolyn Parker",
+        "rating": 2,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2021-12-19T00:00:00"
+      },
+      {
+        "username": "Megan Ramos",
+        "rating": 4,
+        "comment": "This was an impulse buy, and I have zero regrets.",
+        "date": "2018-06-21T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8bc",
+    "name": "Resistance Bands Set",
+    "sku": "SPO-FIT-12123",
+    "price": 14.5,
+    "details": {
+      "description": "Elastic workout loops",
+      "specs": {
+        "levels": "5 strengths",
+        "material": "Latex",
+        "bag": "Mesh"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Sports",
+      "sub": "Fitness"
+    },
+    "vendor": {
+      "companyName": "Violet Vixen Vogue",
+      "contactEmail": "support@violetvixenvogue.com",
+      "supportPhone": "+1-888-999-1234"
+    },
+    "reviews": [
+      {
+        "username": "Andrea Bailey",
+        "rating": 3,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2025-12-17T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8bd",
+    "name": "Ski Goggles",
+    "sku": "SPO-WIN-12124",
+    "price": 29.99,
+    "details": {
+      "description": "Snowboard eye protection",
+      "specs": {
+        "lens": "Dual layer",
+        "uv": "400",
+        "frame": "TPU"
+      }
+    },
+    "stock": 35,
+    "category": {
+      "main": "Sports",
+      "sub": "Winter"
+    },
+    "vendor": {
+      "companyName": "Ivory Elephant Imports",
+      "contactEmail": "contact@ivoryelephant.com",
+      "supportPhone": "+1-888-101-2345"
+    },
+    "reviews": [
+      {
+        "username": "Roy Castillo",
+        "rating": 2,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2022-07-16T00:00:00"
+      },
+      {
+        "username": "Larry Flores",
+        "rating": 3,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2019-01-25T00:00:00"
+      },
+      {
+        "username": "Rose Hughes",
+        "rating": 1,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2018-12-24T00:00:00"
+      },
+      {
+        "username": "Wayne Sanders",
+        "rating": 4,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2019-10-06T00:00:00"
+      },
+      {
+        "username": "Alice Gray",
+        "rating": 5,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2024-12-28T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8be",
+    "name": "Car Sun Shade",
+    "sku": "AUT-ACC-12125",
+    "price": 7.0,
+    "details": {
+      "description": "Windshield sun reflector",
+      "specs": {
+        "size": "150x70cm",
+        "material": "Silver coat",
+        "foldable": "Yes"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Automotive",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Scarlet Sparrow Styles",
+      "contactEmail": "sales@scarletsparrow.com",
+      "supportPhone": "+1-888-212-3456"
+    },
+    "reviews": [
+      {
+        "username": "Gary Nguyen",
+        "rating": 1,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2021-08-23T00:00:00"
+      },
+      {
+        "username": "Willie Ross",
+        "rating": 1,
+        "comment": "The price is a bit high, but you get what you pay for.",
+        "date": "2021-07-21T00:00:00"
+      },
+      {
+        "username": "Christopher Wilson",
+        "rating": 5,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2020-01-06T00:00:00"
+      },
+      {
+        "username": "Linda Garcia",
+        "rating": 2,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2021-10-24T00:00:00"
+      },
+      {
+        "username": "Logan Johnson",
+        "rating": 1,
+        "comment": "Love it! It has become an essential part of my daily routine.",
+        "date": "2020-08-27T00:00:00"
+      },
+      {
+        "username": "Alexander Edwards",
+        "rating": 3,
+        "comment": "The feature set is impressive for this price point.",
+        "date": "2018-02-02T00:00:00"
+      },
+      {
+        "username": "Logan Johnson",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2022-11-28T00:00:00"
+      },
+      {
+        "username": "Louis Johnson",
+        "rating": 2,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2023-05-19T00:00:00"
+      },
+      {
+        "username": "Jason Walker",
+        "rating": 2,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2018-10-18T00:00:00"
+      },
+      {
+        "username": "Pamela Campbell",
+        "rating": 1,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2022-07-18T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8bf",
+    "name": "License Plate Frame",
+    "sku": "AUT-EXT-12126",
+    "price": 12.5,
+    "details": {
+      "description": "Carbon fiber look holder",
+      "specs": {
+        "pack": "2 pcs",
+        "material": "Plastic",
+        "screws": "Included"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Automotive",
+      "sub": "Exterior"
+    },
+    "vendor": {
+      "companyName": "Azure Turtle Toys",
+      "contactEmail": "info@azureturtle.com",
+      "supportPhone": "+1-888-323-4567"
+    },
+    "reviews": [
+      {
+        "username": "Hannah Ramos",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great addition to my collection.",
+        "date": "2023-02-18T00:00:00"
+      },
+      {
+        "username": "Sharon Allen",
+        "rating": 5,
+        "comment": "The materials used feel cheap and flimsy. I expected more.",
+        "date": "2019-08-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8c0",
+    "name": "Cordless Screwdriver",
+    "sku": "TOO-POW-12127",
+    "price": 25.0,
+    "details": {
+      "description": "Rechargeable mini driver",
+      "specs": {
+        "voltage": "3.6V",
+        "bits": "10 pcs",
+        "light": "LED work"
+      }
+    },
+    "stock": 50,
+    "category": {
+      "main": "Tools",
+      "sub": "Power Tools"
+    },
+    "vendor": {
+      "companyName": "Cerulean Swan Solutions",
+      "contactEmail": "support@ceruleanswan.com",
+      "supportPhone": "+1-888-434-5678"
+    },
+    "reviews": [
+      {
+        "username": "Sarah Taylor",
+        "rating": 5,
+        "comment": "Excellent product, highly recommended! A true game changer.",
+        "date": "2019-03-04T00:00:00"
+      },
+      {
+        "username": "Tammy Williams",
+        "rating": 2,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2020-11-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8c1",
+    "name": "Pliers Set 3pc",
+    "sku": "TOO-HAN-12128",
+    "price": 19.99,
+    "details": {
+      "description": "Combination/Nose/Cutters",
+      "specs": {
+        "material": "Cr-V Steel",
+        "grip": "Rubberized",
+        "size": "6/8 inch"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Tools",
+      "sub": "Hand Tools"
+    },
+    "vendor": {
+      "companyName": "Saffron Stallion Sports",
+      "contactEmail": "contact@saffronstallion.com",
+      "supportPhone": "+1-888-545-6789"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8c2",
+    "name": "USB Flash Drive 64GB",
+    "sku": "COM-STO-12129",
+    "price": 8.0,
+    "details": {
+      "description": "Metal pen drive USB 3.0",
+      "specs": {
+        "speed": "Read 100MB/s",
+        "casing": "Waterproof",
+        "keyring": "Hole"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Computers",
+      "sub": "Storage"
+    },
+    "vendor": {
+      "companyName": "Veridian Valley Ventures",
+      "contactEmail": "info@veridianvalley.com",
+      "supportPhone": "+1-888-656-7890"
+    },
+    "reviews": [
+      {
+        "username": "Frances Brooks",
+        "rating": 1,
+        "comment": "The software is a bit buggy, hoping for an update soon.",
+        "date": "2023-10-08T00:00:00"
+      },
+      {
+        "username": "Adam Edwards",
+        "rating": 5,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2019-08-08T00:00:00"
+      },
+      {
+        "username": "Maria Evans",
+        "rating": 5,
+        "comment": "The warranty process was a nightmare. Terrible customer service.",
+        "date": "2022-02-21T00:00:00"
+      },
+      {
+        "username": "Jordan Price",
+        "rating": 5,
+        "comment": "The product has a weird smell that won't go away.",
+        "date": "2018-11-15T00:00:00"
+      },
+      {
+        "username": "Kathy Foster",
+        "rating": 5,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2020-11-24T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8c3",
+    "name": "Laptop Privacy Screen",
+    "sku": "COM-ACC-12130",
+    "price": 21.0,
+    "details": {
+      "description": "Anti-spy filter film",
+      "specs": {
+        "size": "15.6 inch",
+        "angle": "60 deg",
+        "finish": "Matte"
+      }
+    },
+    "stock": 30,
+    "category": {
+      "main": "Computers",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Magenta Moose Media",
+      "contactEmail": "sales@magentamoose.com",
+      "supportPhone": "+1-888-767-8901"
+    },
+    "reviews": [
+      {
+        "username": "Billy Gray",
+        "rating": 2,
+        "comment": "Poor quality, returning it immediately. Avoid this product.",
+        "date": "2023-02-26T00:00:00"
+      },
+      {
+        "username": "Anna Green",
+        "rating": 5,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2018-04-21T00:00:00"
+      },
+      {
+        "username": "Sophia Rodriguez",
+        "rating": 3,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2020-06-13T00:00:00"
+      },
+      {
+        "username": "Jeffrey Young",
+        "rating": 1,
+        "comment": "A must-have for anyone serious about quality.",
+        "date": "2025-02-26T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8c4",
+    "name": "Men Casual Shirt",
+    "sku": "FAS-CLO-12131",
+    "price": 26.0,
+    "details": {
+      "description": "Long sleeve cotton top",
+      "specs": {
+        "fit": "Regular",
+        "pattern": "Plaid",
+        "collar": "Button-down"
+      }
+    },
+    "stock": 75,
+    "category": {
+      "main": "Fashion",
+      "sub": "Clothing"
+    },
+    "vendor": {
+      "companyName": "Teal Tiger Tech",
+      "contactEmail": "contact@tealtiger.tech",
+      "supportPhone": "+1-888-878-9012"
+    },
+    "reviews": [
+      {
+        "username": "William Davis",
+        "rating": 5,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2022-10-23T00:00:00"
+      },
+      {
+        "username": "Ruth Stewart",
+        "rating": 3,
+        "comment": "This is a revolutionary product. Can't imagine my life without it.",
+        "date": "2025-08-07T00:00:00"
+      },
+      {
+        "username": "Kathleen Hill",
+        "rating": 5,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2020-04-08T00:00:00"
+      },
+      {
+        "username": "Emily Thompson",
+        "rating": 4,
+        "comment": "The app that comes with it is surprisingly polished and useful.",
+        "date": "2019-12-09T00:00:00"
+      },
+      {
+        "username": "Frances Ward",
+        "rating": 2,
+        "comment": "The software is a bit buggy, hoping for an update soon.",
+        "date": "2023-07-12T00:00:00"
+      },
+      {
+        "username": "Angela Hall",
+        "rating": 3,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2024-03-12T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8c5",
+    "name": "Leather Belt Men",
+    "sku": "FAS-ACC-12132",
+    "price": 15.0,
+    "details": {
+      "description": "Classic dress belt",
+      "specs": {
+        "material": "Cowhide",
+        "buckle": "Zinc Alloy",
+        "width": "3.5cm"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Fashion",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Lavender Lion Linens",
+      "contactEmail": "support@lavenderlion.com",
+      "supportPhone": "+1-888-989-0123"
+    },
+    "reviews": [
+      {
+        "username": "Jeremy Murphy",
+        "rating": 3,
+        "comment": "The setup was a breeze, up and running in minutes.",
+        "date": "2018-04-10T00:00:00"
+      },
+      {
+        "username": "Carl Chavez",
+        "rating": 1,
+        "comment": "The price is a bit high, but you get what you pay for.",
+        "date": "2024-10-14T00:00:00"
+      },
+      {
+        "username": "Christine Hall",
+        "rating": 2,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2023-11-02T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8c6",
+    "name": "Women Tote Bag",
+    "sku": "FAS-BAG-12133",
+    "price": 32.5,
+    "details": {
+      "description": "Large shoulder handbag",
+      "specs": {
+        "material": "PU Leather",
+        "closure": "Zipper",
+        "pockets": "Internal"
+      }
+    },
+    "stock": 55,
+    "category": {
+      "main": "Fashion",
+      "sub": "Bags"
+    },
+    "vendor": {
+      "companyName": "Crimson Cobra Creations",
+      "contactEmail": "info@crimsoncobra.com",
+      "supportPhone": "+1-888-090-1234"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8c7",
+    "name": "Digital Photo Frame",
+    "sku": "PHO-DIS-12134",
+    "price": 55.0,
+    "details": {
+      "description": "LCD picture display",
+      "specs": {
+        "size": "10 inch",
+        "resolution": "1024x600",
+        "input": "SD/USB"
+      }
+    },
+    "stock": 20,
+    "category": {
+      "main": "Photography",
+      "sub": "Display"
+    },
+    "vendor": {
+      "companyName": "Onyx Otter Outfitters",
+      "contactEmail": "sales@onyxotter.com",
+      "supportPhone": "+1-888-101-1234"
+    },
+    "reviews": [
+      {
+        "username": "Larry Campbell",
+        "rating": 1,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2021-01-06T00:00:00"
+      },
+      {
+        "username": "Jonathan Mitchell",
+        "rating": 4,
+        "comment": "The design is sleek and modern. Looks great on my desk.",
+        "date": "2018-02-03T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8c8",
+    "name": "Guitar Stand",
+    "sku": "MUS-ACC-12135",
+    "price": 14.0,
+    "details": {
+      "description": "A-frame foldable holder",
+      "specs": {
+        "arms": "Foam padded",
+        "feet": "Rubber",
+        "fit": "Universal"
+      }
+    },
+    "stock": 70,
+    "category": {
+      "main": "Music",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Jade Jaguar Jewelers",
+      "contactEmail": "contact@jadejaguar.com",
+      "supportPhone": "+1-888-212-2345"
+    },
+    "reviews": [
+      {
+        "username": "Diane Edwards",
+        "rating": 4,
+        "comment": "This is a revolutionary product. Can't imagine my life without it.",
+        "date": "2018-04-20T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8c9",
+    "name": "Violin Shoulder Rest",
+    "sku": "MUS-ACC-12136",
+    "price": 9.5,
+    "details": {
+      "description": "Adjustable comfort pad",
+      "specs": {
+        "size": "4/4",
+        "material": "Plastic/Foam",
+        "legs": "Collapsible"
+      }
+    },
+    "stock": 40,
+    "category": {
+      "main": "Music",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Topaz Toucan Travel",
+      "contactEmail": "support@topaztoucan.com",
+      "supportPhone": "+1-888-323-3456"
+    },
+    "reviews": [
+      {
+        "username": "Michelle Perez",
+        "rating": 3,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2021-02-28T00:00:00"
+      },
+      {
+        "username": "Catherine Carter",
+        "rating": 4,
+        "comment": "Outstanding performance! It exceeded all my expectations.",
+        "date": "2022-03-23T00:00:00"
+      },
+      {
+        "username": "Lawrence Chavez",
+        "rating": 1,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2024-07-19T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8ca",
+    "name": "Chess Set Wooden",
+    "sku": "TOY-GAM-12137",
+    "price": 28.0,
+    "details": {
+      "description": "Magnetic folding board",
+      "specs": {
+        "size": "30x30cm",
+        "wood": "Walnut/Maple",
+        "storage": "Inside"
+      }
+    },
+    "stock": 50,
+    "category": {
+      "main": "Toys",
+      "sub": "Games"
+    },
+    "vendor": {
+      "companyName": "Ruby Rooster Restaurant",
+      "contactEmail": "info@rubyrooster.com",
+      "supportPhone": "+1-888-434-4567"
+    },
+    "reviews": [
+      {
+        "username": "Austin Gray",
+        "rating": 5,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2024-01-09T00:00:00"
+      },
+      {
+        "username": "Jessica Jackson",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great addition to my collection.",
+        "date": "2019-12-09T00:00:00"
+      },
+      {
+        "username": "Lawrence Kim",
+        "rating": 1,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2021-05-03T00:00:00"
+      },
+      {
+        "username": "Shirley Baker",
+        "rating": 1,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2018-12-12T00:00:00"
+      },
+      {
+        "username": "Juan Ross",
+        "rating": 4,
+        "comment": "The product is a bit of a letdown. I expected better quality.",
+        "date": "2020-07-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8cb",
+    "name": "RC Car Off-Road",
+    "sku": "TOY-RC-12138",
+    "price": 45.0,
+    "details": {
+      "description": "Remote control monster truck",
+      "specs": {
+        "scale": "1:18",
+        "speed": "20km/h",
+        "battery": "Rechargeable"
+      }
+    },
+    "stock": 25,
+    "category": {
+      "main": "Toys",
+      "sub": "RC"
+    },
+    "vendor": {
+      "companyName": "Sapphire Shark Supplies",
+      "contactEmail": "sales@sapphireshark.com",
+      "supportPhone": "+1-888-545-5678"
+    },
+    "reviews": [
+      {
+        "username": "Emma Hall",
+        "rating": 2,
+        "comment": "Average quality, nothing special to write home about.",
+        "date": "2022-01-20T00:00:00"
+      },
+      {
+        "username": "Frances Ward",
+        "rating": 1,
+        "comment": "Five stars! Does the job flawlessly.",
+        "date": "2018-07-07T00:00:00"
+      },
+      {
+        "username": "Donald Ramirez",
+        "rating": 2,
+        "comment": "The instructions were clear and easy to follow.",
+        "date": "2018-01-09T00:00:00"
+      },
+      {
+        "username": "Joe Mendoza",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great investment.",
+        "date": "2021-05-25T00:00:00"
+      },
+      {
+        "username": "Douglas Cooper",
+        "rating": 1,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2025-05-03T00:00:00"
+      },
+      {
+        "username": "Sean Ramos",
+        "rating": 5,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2024-11-24T00:00:00"
+      },
+      {
+        "username": "Zachary Cook",
+        "rating": 4,
+        "comment": "Best purchase I've made this year. Absolutely fantastic!",
+        "date": "2025-11-13T00:00:00"
+      },
+      {
+        "username": "Rachel Cruz",
+        "rating": 1,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2023-11-17T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8cc",
+    "name": "Curtains Blackout",
+    "sku": "HOM-TEX-12139",
+    "price": 35.0,
+    "details": {
+      "description": "Thermal insulated drapes",
+      "specs": {
+        "size": "140x240cm",
+        "panels": "2",
+        "color": "Navy Blue"
+      }
+    },
+    "stock": 40,
+    "category": {
+      "main": "Home",
+      "sub": "Textiles"
+    },
+    "vendor": {
+      "companyName": "Garnet Griffin Gear",
+      "contactEmail": "contact@garnetgriffin.com",
+      "supportPhone": "+1-888-656-6789"
+    },
+    "reviews": [
+      {
+        "username": "Linda Rodriguez",
+        "rating": 4,
+        "comment": "Five stars! Does the job flawlessly.",
+        "date": "2021-02-27T00:00:00"
+      },
+      {
+        "username": "Philip Gonzales",
+        "rating": 3,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2019-12-21T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8cd",
+    "name": "Door Mat Welcome",
+    "sku": "HOM-DEC-12140",
+    "price": 11.0,
+    "details": {
+      "description": "Coir entrance rug",
+      "specs": {
+        "size": "40x60cm",
+        "backing": "PVC anti-slip",
+        "text": "Printed"
+      }
+    },
+    "stock": 85,
+    "category": {
+      "main": "Home",
+      "sub": "Decor"
+    },
+    "vendor": {
+      "companyName": "Amethyst Antelope Apparel",
+      "contactEmail": "support@amethystantelope.com",
+      "supportPhone": "+1-888-767-7890"
+    },
+    "reviews": [
+      {
+        "username": "Kathryn Kim",
+        "rating": 2,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2021-12-04T00:00:00"
+      },
+      {
+        "username": "Maria Parker",
+        "rating": 2,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2019-02-21T00:00:00"
+      },
+      {
+        "username": "Pamela Campbell",
+        "rating": 3,
+        "comment": "The app that comes with it is surprisingly polished and useful.",
+        "date": "2023-08-08T00:00:00"
+      },
+      {
+        "username": "David Garcia",
+        "rating": 1,
+        "comment": "I bought this as a gift and they absolutely loved it!",
+        "date": "2019-06-14T00:00:00"
+      },
+      {
+        "username": "Keith Howard",
+        "rating": 1,
+        "comment": "The product has a weird smell that won't go away.",
+        "date": "2024-06-25T00:00:00"
+      },
+      {
+        "username": "Rose Castillo",
+        "rating": 4,
+        "comment": "Excellent product, highly recommended! A true game changer.",
+        "date": "2019-06-04T00:00:00"
+      },
+      {
+        "username": "Arthur Richardson",
+        "rating": 4,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2022-11-04T00:00:00"
+      },
+      {
+        "username": "Nicholas Hall",
+        "rating": 5,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2019-07-02T00:00:00"
+      },
+      {
+        "username": "Michael Thomas",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2022-01-28T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8ce",
+    "name": "Camping Tent 2-Person",
+    "sku": "SPO-CAM-12141",
+    "price": 55.0,
+    "details": {
+      "description": "Dome tent waterproof",
+      "specs": {
+        "layers": "Double",
+        "poles": "Fiberglass",
+        "weight": "2.5kg"
+      }
+    },
+    "stock": 20,
+    "category": {
+      "main": "Sports",
+      "sub": "Camping"
+    },
+    "vendor": {
+      "companyName": "Aquamarine Alligator Art",
+      "contactEmail": "info@aquamarinealligator.com",
+      "supportPhone": "+1-888-878-8901"
+    },
+    "reviews": [
+      {
+        "username": "Jonathan Mitchell",
+        "rating": 1,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2019-05-09T00:00:00"
+      },
+      {
+        "username": "Gabriel Gray",
+        "rating": 4,
+        "comment": "The product is a bit of a letdown. I expected better quality.",
+        "date": "2019-10-08T00:00:00"
+      },
+      {
+        "username": "Sean James",
+        "rating": 2,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2021-12-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8cf",
+    "name": "Hammock Nylon",
+    "sku": "SPO-CAM-12142",
+    "price": 16.0,
+    "details": {
+      "description": "Portable camping bed",
+      "specs": {
+        "load": "200kg",
+        "material": "Parachute",
+        "straps": "Tree included"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Sports",
+      "sub": "Camping"
+    },
+    "vendor": {
+      "companyName": "Diamond Dolphin Designs",
+      "contactEmail": "sales@diamonddolphin.com",
+      "supportPhone": "+1-888-989-9012"
+    },
+    "reviews": [
+      {
+        "username": "Carl Chavez",
+        "rating": 3,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2025-09-28T00:00:00"
+      },
+      {
+        "username": "Amy Flores",
+        "rating": 2,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2024-11-14T00:00:00"
+      },
+      {
+        "username": "Kathryn Richardson",
+        "rating": 1,
+        "comment": "I'm very impressed with the attention to detail.",
+        "date": "2019-12-22T00:00:00"
+      },
+      {
+        "username": "Johnny Johnson",
+        "rating": 4,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2020-08-18T00:00:00"
+      },
+      {
+        "username": "Gerald Ward",
+        "rating": 1,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2022-10-26T00:00:00"
+      },
+      {
+        "username": "Patricia Miller",
+        "rating": 5,
+        "comment": "The warranty process was a nightmare. Terrible customer service.",
+        "date": "2021-03-28T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8d0",
+    "name": "Bicycle Pump Mini",
+    "sku": "SPO-CYC-12143",
+    "price": 10.0,
+    "details": {
+      "description": "Frame mount air pump",
+      "specs": {
+        "valves": "Presta/Schrader",
+        "pressure": "100 PSI",
+        "body": "Alloy"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Sports",
+      "sub": "Cycling"
+    },
+    "vendor": {
+      "companyName": "Pearl Peacock Products",
+      "contactEmail": "contact@pearlpeacock.com",
+      "supportPhone": "+1-888-090-0123"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8d1",
+    "name": "Fishing Rod Telescopic",
+    "sku": "SPO-FIS-12144",
+    "price": 22.0,
+    "details": {
+      "description": "Carbon fiber pole",
+      "specs": {
+        "length": "2.4m",
+        "sections": "6",
+        "action": "Fast"
+      }
+    },
+    "stock": 35,
+    "category": {
+      "main": "Sports",
+      "sub": "Fishing"
+    },
+    "vendor": {
+      "companyName": "Peridot Panther Publishing",
+      "contactEmail": "support@peridotpanther.com",
+      "supportPhone": "+1-888-101-1122"
+    },
+    "reviews": [
+      {
+        "username": "William Davis",
+        "rating": 5,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2024-11-28T00:00:00"
+      },
+      {
+        "username": "Jason Walker",
+        "rating": 4,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2022-09-06T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8d2",
+    "name": "Fishing Reel Spinning",
+    "sku": "SPO-FIS-12145",
+    "price": 18.5,
+    "details": {
+      "description": "Smooth drag reel",
+      "specs": {
+        "ratio": "5.2:1",
+        "bearings": "12+1",
+        "spool": "Metal"
+      }
+    },
+    "stock": 40,
+    "category": {
+      "main": "Sports",
+      "sub": "Fishing"
+    },
+    "vendor": {
+      "companyName": "Spinel Sparrow Sports",
+      "contactEmail": "info@spinelsparrow.com",
+      "supportPhone": "+1-888-212-2233"
+    },
+    "reviews": [
+      {
+        "username": "Michael Thomas",
+        "rating": 3,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2023-10-06T00:00:00"
+      },
+      {
+        "username": "Adam Diaz",
+        "rating": 4,
+        "comment": "I wish I had bought this sooner. It's been a great help.",
+        "date": "2023-03-01T00:00:00"
+      },
+      {
+        "username": "Brian Wright",
+        "rating": 1,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2021-01-05T00:00:00"
+      },
+      {
+        "username": "Alan Mendoza",
+        "rating": 2,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2018-09-11T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8d3",
+    "name": "Safety Goggles",
+    "sku": "TOO-SAF-12146",
+    "price": 5.5,
+    "details": {
+      "description": "Eye protection glasses",
+      "specs": {
+        "standard": "ANSI Z87.1",
+        "lens": "Clear anti-scratch",
+        "fit": "Over glasses"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Tools",
+      "sub": "Safety"
+    },
+    "vendor": {
+      "companyName": "Tourmaline Tiger Toys",
+      "contactEmail": "sales@tourmalinetiger.com",
+      "supportPhone": "+1-888-323-3344"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8d4",
+    "name": "Work Gloves Leather",
+    "sku": "TOO-SAF-12147",
+    "price": 9.0,
+    "details": {
+      "description": "Heavy duty palm protection",
+      "specs": {
+        "material": "Pigskin/Cotton",
+        "cuff": "Safety",
+        "size": "L/XL"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Tools",
+      "sub": "Safety"
+    },
+    "vendor": {
+      "companyName": "Zircon Zebra Zenith",
+      "contactEmail": "contact@zirconzebra.com",
+      "supportPhone": "+1-888-434-4455"
+    },
+    "reviews": [
+      {
+        "username": "Diane Murphy",
+        "rating": 2,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2019-01-28T00:00:00"
+      },
+      {
+        "username": "Randy Patel",
+        "rating": 1,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2025-01-03T00:00:00"
+      },
+      {
+        "username": "Kathryn Kim",
+        "rating": 3,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2024-08-06T00:00:00"
+      },
+      {
+        "username": "Joshua Sanchez",
+        "rating": 1,
+        "comment": "I bought this as a gift and they absolutely loved it!",
+        "date": "2018-11-23T00:00:00"
+      },
+      {
+        "username": "Kathy Jones",
+        "rating": 5,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2025-12-13T00:00:00"
+      },
+      {
+        "username": "Jessica Martinez",
+        "rating": 4,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2023-03-14T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8d5",
+    "name": "Coffee Grinder Electric",
+    "sku": "KIT-APP-12148",
+    "price": 20.0,
+    "details": {
+      "description": "Blade bean miller",
+      "specs": {
+        "capacity": "50g",
+        "blades": "Stainless",
+        "lid": "Transparent"
+      }
+    },
+    "stock": 55,
+    "category": {
+      "main": "Kitchen",
+      "sub": "Appliances"
+    },
+    "vendor": {
+      "companyName": "Amber Ape Adventures",
+      "contactEmail": "support@amberape.com",
+      "supportPhone": "+1-888-545-5566"
+    },
+    "reviews": [
+      {
+        "username": "Scott Hall",
+        "rating": 5,
+        "comment": "The product is a bit heavy, making it less portable.",
+        "date": "2020-12-06T00:00:00"
+      },
+      {
+        "username": "Joe Price",
+        "rating": 2,
+        "comment": "Excellent product, highly recommended! A true game changer.",
+        "date": "2024-11-06T00:00:00"
+      },
+      {
+        "username": "Frank Gomez",
+        "rating": 5,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2018-06-07T00:00:00"
+      },
+      {
+        "username": "Joyce Stewart",
+        "rating": 2,
+        "comment": "The customer reviews were spot on. This is a great product.",
+        "date": "2025-08-24T00:00:00"
+      },
+      {
+        "username": "William Davis",
+        "rating": 1,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2018-12-17T00:00:00"
+      },
+      {
+        "username": "Cynthia Young",
+        "rating": 1,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2025-01-14T00:00:00"
+      },
+      {
+        "username": "Stephen Hall",
+        "rating": 3,
+        "comment": "I wish I had bought this sooner. It's been a great help.",
+        "date": "2023-10-07T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b32f8aba1457bac8d6",
+    "name": "Milk Frother Handheld",
+    "sku": "KIT-TOO-12149",
+    "price": 7.5,
+    "details": {
+      "description": "Battery foam maker",
+      "specs": {
+        "motor": "19000rpm",
+        "whisk": "Steel",
+        "battery": "2xAA"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Kitchen",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Amber Ape Adventures",
+      "contactEmail": "support@amberape.com",
+      "supportPhone": "+1-888-545-5566"
+    },
+    "reviews": [
+      {
+        "username": "Jean Bennett",
+        "rating": 2,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2023-05-21T00:00:00"
+      },
+      {
+        "username": "Doris Chavez",
+        "rating": 2,
+        "comment": "The warranty process was a nightmare. Terrible customer service.",
+        "date": "2022-12-24T00:00:00"
+      },
+      {
+        "username": "Mary Garcia",
+        "rating": 5,
+        "comment": "Poor quality, returning it immediately. Avoid this product.",
+        "date": "2018-01-10T00:00:00"
+      },
+      {
+        "username": "Christopher Taylor",
+        "rating": 3,
+        "comment": "The instructions were clear and easy to follow.",
+        "date": "2025-09-18T00:00:00"
+      },
+      {
+        "username": "Johnny Johnson",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2023-02-28T00:00:00"
+      }
+    ]
+  }
+]

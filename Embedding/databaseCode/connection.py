@@ -12,7 +12,7 @@ def connectToMongoDB(dbName="eCommerceProjectEmbedding"):
             raise ValueError("MONGO_CONNECTION_STRING not set")
         
         mongoClient = MongoClient(mongoUri, serverSelectionTimeoutMS=5000)
-        mongoClient.admin.command('ping')
+        # mongoClient.admin.command('ping')
         print("Connection successful")
         
         database = mongoClient[dbName]
@@ -42,19 +42,20 @@ def closeConnection(mongoClient):
         print("Connection closed")
 
 
+def testConnection():
+    print('Trying to connect to database')
+    mongoClient, db = connectToMongoDB()
 
+    if mongoClient is not None and db is not None:
+        collections = db.list_collection_names()
+        if collections:
+            print(f"\nDatabase collections: {collections}")
+        else:
+            print("\nEmpty database. No collections found")
 
-
-print('Trying to connect to database')
-mongoClient, db = connectToMongoDB()
-
-if mongoClient is not None and db is not None:
-    collections = db.list_collection_names()
-    if collections:
-        print(f"\nDatabase collections: {collections}")
+        closeConnection(mongoClient)
     else:
-        print("\nEmpty database. No collections found")
-    
-    closeConnection(mongoClient)
-else:
-    print("\nConnection failed")
+        print("\nConnection failed")
+
+
+testConnection()

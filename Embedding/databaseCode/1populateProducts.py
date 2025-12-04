@@ -1,11 +1,10 @@
-from connection import connectToMongoDB, closeConnection
+from connection import connectToMongoDB, closeConnection, testConnection
 from bson import ObjectId, Decimal128
 from datetime import datetime
 import random
 
-# mongoClient, db = connectToMongoDB()
-
-# productsCollection = db['products']
+mongoClient, db = connectToMongoDB()
+productsCollection = db['products']
 
 vendors = [
     {"companyName": "Innovatech Solutions", "contactEmail": "sales@innovatech.com", "supportPhone": "+1-888-123-4567"},
@@ -30126,9 +30125,10 @@ products = [
 
 # 1650 in fisierul asta
 
-# result = productsCollection.insert_many(products)
-# print(f"✓ {len(result.inserted_ids)} unique products added successfully")
+result = productsCollection.insert_many(products)
+print(f"✓ {len(result.inserted_ids)} unique products added successfully")
 
-# closeConnection(mongoClient)
+closeConnection(mongoClient)
 
-print(len(products))
+#
+# print(len(products))

@@ -1,0 +1,6691 @@
+[
+  {
+    "_id": "6931c7d84be1a13d8b478517",
+    "orderDate": "2023-05-19T03:36:21",
+    "total": 2627.75,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f258a0",
+      "username": "Tyler Diaz",
+      "email": "tylerdiaz@icloud.com",
+      "addresses": [
+        {
+          "street": "3 O'Brien viaduct",
+          "city": "Garytown",
+          "county": "West Yorkshire",
+          "zipcode": "JE48 1YG",
+          "country": "United Kingdom",
+          "fullAddress": "514 Suzanne ramp, New Dorothyton, N0K 1JE"
+        },
+        {
+          "street": "Studio 08t\nMarion street",
+          "city": "Seanmouth",
+          "county": "Devon",
+          "zipcode": "HR47 1HG",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 9, Richardson motorway, Lake Hughborough, M2 0XA"
+        },
+        {
+          "street": "9 Ross manors",
+          "city": "Port Danny",
+          "county": "Radnorshire",
+          "zipcode": "G4J 6QG",
+          "country": "United Kingdom",
+          "fullAddress": "73 Taylor lodge, West Kyle, B36 3LQ"
+        },
+        {
+          "street": "Studio 7\nPreston crossing",
+          "city": "Katieville",
+          "county": "West Yorkshire",
+          "zipcode": "M0J 5HW",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 25, Moss squares, Martinfort, PE54 8GP"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Laptop Lock Cable",
+          "sku": "ELE-ACC-10260",
+          "price": 19.99,
+          "quantity": 15
+        },
+        {
+          "productName": "Toddler Sippy Cups",
+          "sku": "BAB-FEE-13209",
+          "price": 8.0,
+          "quantity": 24
+        },
+        {
+          "productName": "Drawer Divider Tray",
+          "sku": "OFF-ORG-14101",
+          "price": 5.5,
+          "quantity": 38
+        },
+        {
+          "productName": "Smart Scale Body Fat",
+          "sku": "HOM-HEA-16137",
+          "price": 29.99,
+          "quantity": 27
+        },
+        {
+          "productName": "Shoe Horn Plastic",
+          "sku": "FAS-ACC-14678",
+          "price": 2.0,
+          "quantity": 18
+        },
+        {
+          "productName": "Picture Frame 4x6",
+          "sku": "HOM-DEC-13010",
+          "price": 4.0,
+          "quantity": 35
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 08t\nMarion street",
+        "city": "Seanmouth",
+        "county": "Devon",
+        "zipcode": "HR47 1HG",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 9, Richardson motorway, Lake Hughborough, M2 0XA"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "KG215196627RX"
+    },
+    "items": [
+      {
+        "productName": "Car Phone Mount Magnet",
+        "sku": "AUT-ACC-11319",
+        "unitPrice": 10.99,
+        "quantity": 45,
+        "vendor": {
+          "companyName": "Aurora Tech",
+          "contactEmail": "info@auroratech.io",
+          "supportPhone": "+1-888-565-6565"
+        }
+      },
+      {
+        "productName": "SD Card Reader USB",
+        "sku": "COM-ACC-12395",
+        "unitPrice": 7.5,
+        "quantity": 23,
+        "vendor": {
+          "companyName": "Momentum Active",
+          "contactEmail": "contact@momentumactive.com",
+          "supportPhone": "+1-888-777-8888"
+        }
+      },
+      {
+        "productName": "Acrylic Paint Set",
+        "sku": "ART-PAI-13626",
+        "unitPrice": 14.0,
+        "quantity": 24,
+        "vendor": {
+          "companyName": "Apex Gadgetry",
+          "contactEmail": "support@apexgadgetry.com",
+          "supportPhone": "+1-888-234-5678"
+        }
+      },
+      {
+        "productName": "Hand Grip Strengthener",
+        "sku": "SPT-FIT-10309",
+        "unitPrice": 9.95,
+        "quantity": 52,
+        "vendor": {
+          "companyName": "The Story Weaver",
+          "contactEmail": "support@storyweaver.pub",
+          "supportPhone": "+1-888-012-3456"
+        }
+      },
+      {
+        "productName": "Cable Clips Adhesive",
+        "sku": "ELE-ORG-14015",
+        "unitPrice": 3.5,
+        "quantity": 54,
+        "vendor": {
+          "companyName": "StyleSphere",
+          "contactEmail": "contact@stylesphere.co",
+          "supportPhone": "+1-888-667-7889"
+        }
+      },
+      {
+        "productName": "Plant Pots Ceramic",
+        "sku": "GAR-POT-12112",
+        "unitPrice": 19.99,
+        "quantity": 5,
+        "vendor": {
+          "companyName": "Blue Jay Books",
+          "contactEmail": "orders@bluejaybooks.com",
+          "supportPhone": "+1-888-889-0123"
+        }
+      },
+      {
+        "productName": "Wooden Clothes Pegs",
+        "sku": "HOM-LAU-13778",
+        "unitPrice": 3.0,
+        "quantity": 72,
+        "vendor": {
+          "companyName": "Stellar Goods",
+          "contactEmail": "contact@stellargoods.net",
+          "supportPhone": "+1-888-456-7890"
+        }
+      },
+      {
+        "productName": "GaN Fast Charger",
+        "sku": "ELE-ACC-14735",
+        "unitPrice": 30.0,
+        "quantity": 2,
+        "vendor": {
+          "companyName": "Jade Jaguar Jewelers",
+          "contactEmail": "contact@jadejaguar.com",
+          "supportPhone": "+1-888-212-2345"
+        }
+      },
+      {
+        "productName": "Safety Pins Assorted",
+        "sku": "HOM-CRA-13015",
+        "unitPrice": 2.5,
+        "quantity": 37,
+        "vendor": {
+          "companyName": "Amethyst Antelope Apparel",
+          "contactEmail": "support@amethystantelope.com",
+          "supportPhone": "+1-888-767-7890"
+        }
+      },
+      {
+        "productName": "Portable Power Bank",
+        "sku": "ELE-ACC-16020",
+        "unitPrice": 29.99,
+        "quantity": 15,
+        "vendor": {
+          "companyName": "Ember Kitchen",
+          "contactEmail": "sales@emberkitchen.io",
+          "supportPhone": "+1-888-678-9012"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d84be1a13d8b478518",
+    "orderDate": "2024-11-16T23:18:51",
+    "total": 1954.87,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f2585c",
+      "username": "Judy Bennett",
+      "email": "judybennett@outlook.com",
+      "addresses": [
+        {
+          "street": "Studio 72w\nWinter lane",
+          "city": "Port Mauriceberg",
+          "county": "Cheshire",
+          "zipcode": "GY56 4UA",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 05, Fleming harbor, Huntmouth, PH51 2FB"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "HDMI Cable 2m",
+          "sku": "ELE-CAB-13140",
+          "price": 6.0,
+          "quantity": 7
+        },
+        {
+          "productName": "Bike Helmet Light",
+          "sku": "SPT-CYC-10901",
+          "price": 19.5,
+          "quantity": 1
+        },
+        {
+          "productName": "Pill Box Daily",
+          "sku": "HOM-WEL-11053",
+          "price": 2.99,
+          "quantity": 22
+        },
+        {
+          "productName": "Kitchen Timer Wind-up",
+          "sku": "KIT-GAD-13935",
+          "price": 4.0,
+          "quantity": 8
+        },
+        {
+          "productName": "Whistle 3-in-1",
+          "sku": "SPO-SUR-13599",
+          "price": 3.5,
+          "quantity": 32
+        },
+        {
+          "productName": "Women's Skinny Jeans",
+          "sku": "FAS-CLO-16056",
+          "price": 45.99,
+          "quantity": 49
+        },
+        {
+          "productName": "Sound Machine White Noise",
+          "sku": "HOM-WEL-10117",
+          "price": 34.0,
+          "quantity": 2
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 72w\nWinter lane",
+        "city": "Port Mauriceberg",
+        "county": "Cheshire",
+        "zipcode": "GY56 4UA",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 05, Fleming harbor, Huntmouth, PH51 2FB"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "ZA754321230XK"
+    },
+    "items": [
+      {
+        "productName": "Ice Skates Guards",
+        "sku": "SPO-WIN-14697",
+        "unitPrice": 6.0,
+        "quantity": 28,
+        "vendor": {
+          "companyName": "Atelier Apparel",
+          "contactEmail": "cs@atelierapparel.com",
+          "supportPhone": "+1-888-212-3232"
+        }
+      },
+      {
+        "productName": "Men's Casual Belt",
+        "sku": "FAS-ACC-10087",
+        "unitPrice": 24.5,
+        "quantity": 38,
+        "vendor": {
+          "companyName": "Digital Horizon",
+          "contactEmail": "contact@digitalhorizon.tech",
+          "supportPhone": "+1-888-334-4556"
+        }
+      },
+      {
+        "productName": "Scrub Sponge 2pk",
+        "sku": "KIT-CLN-14386",
+        "unitPrice": 1.5,
+        "quantity": 97,
+        "vendor": {
+          "companyName": "Urban Vogue Outfitters",
+          "contactEmail": "info@urbanvogue.com",
+          "supportPhone": "+1-888-223-3445"
+        }
+      },
+      {
+        "productName": "Flashlight LED Mini",
+        "sku": "HOM-IMP-11154",
+        "unitPrice": 7.5,
+        "quantity": 20,
+        "vendor": {
+          "companyName": "Digital Horizon",
+          "contactEmail": "contact@digitalhorizon.tech",
+          "supportPhone": "+1-888-334-4556"
+        }
+      },
+      {
+        "productName": "Microfiber Cloths Pack",
+        "sku": "AUT-CLN-12060",
+        "unitPrice": 8.99,
+        "quantity": 57,
+        "vendor": {
+          "companyName": "Jade Jaguar Jewelers",
+          "contactEmail": "contact@jadejaguar.com",
+          "supportPhone": "+1-888-212-2345"
+        }
+      },
+      {
+        "productName": "Laundry Mesh Bag Set",
+        "sku": "HOM-BAT-11007",
+        "unitPrice": 7.99,
+        "quantity": 6,
+        "vendor": {
+          "companyName": "StyleSphere",
+          "contactEmail": "contact@stylesphere.co",
+          "supportPhone": "+1-888-667-7889"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d84be1a13d8b478519",
+    "orderDate": "2024-02-06T11:27:57",
+    "total": 3656.06,
+    "status": "Processing",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25aa5",
+      "username": "Cheryl Kim",
+      "email": "cherylkim@yahoo.com",
+      "addresses": [
+        {
+          "street": "3 Abbie mall",
+          "city": "North Sophieburgh",
+          "county": "Somerset",
+          "zipcode": "N0 3BS",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 8, Green lock, East Alicebury, M6 5JR"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Sponge Caddy Hanging",
+          "sku": "HOM-KIT-11288",
+          "price": 5.99,
+          "quantity": 27
+        },
+        {
+          "productName": "Wall Anchors Plastic",
+          "sku": "HOM-IMP-10880",
+          "price": 3.99,
+          "quantity": 66
+        },
+        {
+          "productName": "Cupcake Cases",
+          "sku": "HOM-KIT-11276",
+          "price": 3.99,
+          "quantity": 33
+        },
+        {
+          "productName": "Egg Separator",
+          "sku": "HOM-KIT-10785",
+          "price": 3.5,
+          "quantity": 48
+        },
+        {
+          "productName": "File Organizer Mesh",
+          "sku": "OFF-ORG-13638",
+          "price": 13.0,
+          "quantity": 6
+        },
+        {
+          "productName": "Glass Food Containers",
+          "sku": "HOM-KIT-16011",
+          "price": 29.99,
+          "quantity": 35
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "3 Abbie mall",
+        "city": "North Sophieburgh",
+        "county": "Somerset",
+        "zipcode": "N0 3BS",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 8, Green lock, East Alicebury, M6 5JR"
+      },
+      "method": "FedEx",
+      "trackingCode": "RM547235687WH"
+    },
+    "items": [
+      {
+        "productName": "Bone ID Tag",
+        "sku": "PET-ACC-14899",
+        "unitPrice": 3.0,
+        "quantity": 66,
+        "vendor": {
+          "companyName": "Amber Ape Adventures",
+          "contactEmail": "support@amberape.com",
+          "supportPhone": "+1-888-545-5566"
+        }
+      },
+      {
+        "productName": "Fleece Throw Blanket",
+        "sku": "HOM-BED-10308",
+        "unitPrice": 15.99,
+        "quantity": 49,
+        "vendor": {
+          "companyName": "Bibliophile's Corner",
+          "contactEmail": "orders@bibliophilescorner.com",
+          "supportPhone": "+1-888-901-2345"
+        }
+      },
+      {
+        "productName": "Women's Leather Bag",
+        "sku": "FAS-ACC-10109",
+        "unitPrice": 110.0,
+        "quantity": 12,
+        "vendor": {
+          "companyName": "Tidal Wave Inc.",
+          "contactEmail": "support@tidalwaveinc.com",
+          "supportPhone": "+1-888-556-7890"
+        }
+      },
+      {
+        "productName": "Mouse Skates DIY",
+        "sku": "ELE-GAM-11278",
+        "unitPrice": 6.5,
+        "quantity": 29,
+        "vendor": {
+          "companyName": "Topaz Toucan Travel",
+          "contactEmail": "support@topaztoucan.com",
+          "supportPhone": "+1-888-323-3456"
+        }
+      },
+      {
+        "productName": "Zip Lock Bags Small",
+        "sku": "KIT-STO-12995",
+        "unitPrice": 2.5,
+        "quantity": 25,
+        "vendor": {
+          "companyName": "Brown Bear Bistro",
+          "contactEmail": "contact@brownbearbistro.com",
+          "supportPhone": "+1-888-666-8901"
+        }
+      },
+      {
+        "productName": "Whistle Wrist Band",
+        "sku": "SPT-ACC-11054",
+        "unitPrice": 3.5,
+        "quantity": 24,
+        "vendor": {
+          "companyName": "Ruby Rooster Restaurant",
+          "contactEmail": "info@rubyrooster.com",
+          "supportPhone": "+1-888-434-4567"
+        }
+      },
+      {
+        "productName": "PC Gaming Speakers",
+        "sku": "ELE-AUD-16152",
+        "unitPrice": 35.0,
+        "quantity": 7,
+        "vendor": {
+          "companyName": "Crimson Cobra Creations",
+          "contactEmail": "info@crimsoncobra.com",
+          "supportPhone": "+1-888-090-1234"
+        }
+      },
+      {
+        "productName": "Sports Ball Pump",
+        "sku": "SPO-ACC-15379",
+        "unitPrice": 5.0,
+        "quantity": 38,
+        "vendor": {
+          "companyName": "Phoenix United",
+          "contactEmail": "contact@phoenixunited.com",
+          "supportPhone": "+1-888-909-0909"
+        }
+      },
+      {
+        "productName": "Case Fan RGB",
+        "sku": "ELE-PC-10182",
+        "unitPrice": 12.99,
+        "quantity": 45,
+        "vendor": {
+          "companyName": "Redwood & Oak",
+          "contactEmail": "sales@redwoodandoak.com",
+          "supportPhone": "+1-888-334-5678"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d84be1a13d8b47851a",
+    "orderDate": "2025-06-07T16:01:38",
+    "total": 521.96,
+    "status": "Processing",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f2587f",
+      "username": "Paul Lee",
+      "email": "paullee@gmail.com",
+      "addresses": [
+        {
+          "street": "Studio 38M\nStephanie course",
+          "city": "Smithshire",
+          "county": "Moray",
+          "zipcode": "AL55 0DJ",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 5, Emily alley, East Maria, MK9 2EN"
+        },
+        {
+          "street": "3 Hughes coves",
+          "city": "Port Brendaville",
+          "county": "Worcestershire",
+          "zipcode": "S2U 7UB",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 41, Jayne run, Schofieldbury, SS9Y 9ET"
+        },
+        {
+          "street": "65 Victoria harbor",
+          "city": "Lake Grace",
+          "county": "Worcestershire",
+          "zipcode": "S8 1WJ",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 22G, Allen shores, Joshberg, BS9 2FQ"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Locking Pliers",
+          "sku": "TOO-HAN-12303",
+          "price": 14.5,
+          "quantity": 10
+        },
+        {
+          "productName": "Tablet Stand",
+          "sku": "MOB-ACC-14017",
+          "price": 8.0,
+          "quantity": 34
+        },
+        {
+          "productName": "Shoelaces Flat",
+          "sku": "FAS-ACC-10412",
+          "price": 3.99,
+          "quantity": 21
+        },
+        {
+          "productName": "Pet Nail Clippers",
+          "sku": "PET-GRO-14897",
+          "price": 5.5,
+          "quantity": 32
+        },
+        {
+          "productName": "Bag Sealer Clip",
+          "sku": "HOM-KIT-10466",
+          "price": 5.99,
+          "quantity": 32
+        },
+        {
+          "productName": "Boxing Gum Shield",
+          "sku": "SPO-PRO-13439",
+          "price": 5.0,
+          "quantity": 48
+        },
+        {
+          "productName": "Herb Scissors",
+          "sku": "KIT-TOO-14803",
+          "price": 8.0,
+          "quantity": 29
+        },
+        {
+          "productName": "Egg Slicer Wire",
+          "sku": "KIT-TOO-13816",
+          "price": 4.0,
+          "quantity": 19
+        },
+        {
+          "productName": "Velcro Cable Straps",
+          "sku": "ELE-ORG-13024",
+          "price": 4.5,
+          "quantity": 21
+        },
+        {
+          "productName": "HDMI Adapter 90deg",
+          "sku": "ELE-ACC-12550",
+          "price": 4.0,
+          "quantity": 11
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 38M\nStephanie course",
+        "city": "Smithshire",
+        "county": "Moray",
+        "zipcode": "AL55 0DJ",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 5, Emily alley, East Maria, MK9 2EN"
+      },
+      "method": "UPS Standard",
+      "trackingCode": "AC191467168SO"
+    },
+    "items": [
+      {
+        "productName": "Blind Spot Mirrors",
+        "sku": "AUT-ACC-11316",
+        "unitPrice": 6.99,
+        "quantity": 54,
+        "vendor": {
+          "companyName": "The Culinary Edge",
+          "contactEmail": "help@culinaryedge.co",
+          "supportPhone": "+1-888-656-7676"
+        }
+      },
+      {
+        "productName": "Washi Tape Set",
+        "sku": "HOM-CRA-14784",
+        "unitPrice": 4.5,
+        "quantity": 22,
+        "vendor": {
+          "companyName": "Tidal Wave Inc.",
+          "contactEmail": "support@tidalwaveinc.com",
+          "supportPhone": "+1-888-556-7890"
+        }
+      },
+      {
+        "productName": "Travel Lock Key",
+        "sku": "TRA-SEC-14985",
+        "unitPrice": 3.5,
+        "quantity": 13,
+        "vendor": {
+          "companyName": "Chic Threads Apparel",
+          "contactEmail": "sales@chicthreads.com",
+          "supportPhone": "+1-888-112-2334"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d84be1a13d8b47851b",
+    "orderDate": "2023-10-05T18:31:14",
+    "total": 1448.0,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25837",
+      "username": "Catherine Carter",
+      "email": "catherinecarter@hotmail.com",
+      "addresses": [
+        {
+          "street": "00 Anderson trace",
+          "city": "West Edwardchester",
+          "county": "Montgomeryshire",
+          "zipcode": "N8 2YF",
+          "country": "United Kingdom",
+          "fullAddress": "2 Nicole ways, Port Lauramouth, DG4 0GX"
+        },
+        {
+          "street": "74 Ruth route",
+          "city": "Lake Nicholas",
+          "county": "Surrey",
+          "zipcode": "S0W 0JA",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 51l, Stephen junctions, East Julie, LA3N 5LE"
+        },
+        {
+          "street": "Studio 3\nTerry crest",
+          "city": "Jasonshire",
+          "county": "City of Edinburgh",
+          "zipcode": "B8W 3GJ",
+          "country": "United Kingdom",
+          "fullAddress": "65 Kaur street, Lewisburgh, L6 2NR"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "HDMI Cable 4K",
+          "sku": "ELE-ACC-16075",
+          "price": 8.99,
+          "quantity": 102
+        },
+        {
+          "productName": "Closet Light Motion",
+          "sku": "HOM-LIG-13379",
+          "price": 9.0,
+          "quantity": 30
+        },
+        {
+          "productName": "Corkscrew Waiter",
+          "sku": "HOM-KIT-11137",
+          "price": 5.99,
+          "quantity": 55
+        },
+        {
+          "productName": "Box of Nails 2in",
+          "sku": "TOO-FAS-12301",
+          "price": 4.0,
+          "quantity": 48
+        },
+        {
+          "productName": "Area Rug Geometric",
+          "sku": "HOM-DEC-16026",
+          "price": 59.0,
+          "quantity": 13
+        },
+        {
+          "productName": "Carabiner 4cm",
+          "sku": "SPO-OUT-13092",
+          "price": 1.0,
+          "quantity": 35
+        },
+        {
+          "productName": "Blue Painters Tape",
+          "sku": "TOO-PAI-14429",
+          "price": 4.5,
+          "quantity": 62
+        },
+        {
+          "productName": "Sink Stopper Basin",
+          "sku": "HOM-BAT-11040",
+          "price": 3.5,
+          "quantity": 7
+        },
+        {
+          "productName": "Cat Litter Scoop",
+          "sku": "PET-CAT-12117",
+          "price": 5.99,
+          "quantity": 36
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "00 Anderson trace",
+        "city": "West Edwardchester",
+        "county": "Montgomeryshire",
+        "zipcode": "N8 2YF",
+        "country": "United Kingdom",
+        "fullAddress": "2 Nicole ways, Port Lauramouth, DG4 0GX"
+      },
+      "method": "FedEx",
+      "trackingCode": "KU125798142SE"
+    },
+    "items": [
+      {
+        "productName": "Camping Spork",
+        "sku": "SPO-CAM-12968",
+        "unitPrice": 3.0,
+        "quantity": 37,
+        "vendor": {
+          "companyName": "TerraFirm Gear",
+          "contactEmail": "info@terrafirm.gear",
+          "supportPhone": "+1-888-333-4444"
+        }
+      },
+      {
+        "productName": "Cupcake Liners Paper",
+        "sku": "KIT-BAK-13078",
+        "unitPrice": 1.5,
+        "quantity": 55,
+        "vendor": {
+          "companyName": "Saffron Stallion Sports",
+          "contactEmail": "contact@saffronstallion.com",
+          "supportPhone": "+1-888-545-6789"
+        }
+      },
+      {
+        "productName": "Lunch Box Bento",
+        "sku": "KIT-STO-12080",
+        "unitPrice": 15.0,
+        "quantity": 29,
+        "vendor": {
+          "companyName": "Ember Kitchen",
+          "contactEmail": "sales@emberkitchen.io",
+          "supportPhone": "+1-888-678-9012"
+        }
+      },
+      {
+        "productName": "Jump Rope Speed",
+        "sku": "SPO-FIT-12430",
+        "unitPrice": 8.5,
+        "quantity": 58,
+        "vendor": {
+          "companyName": "Magenta Moose Media",
+          "contactEmail": "sales@magentamoose.com",
+          "supportPhone": "+1-888-767-8901"
+        }
+      },
+      {
+        "productName": "Steering Wheel Lock",
+        "sku": "AUT-SEC-16063",
+        "unitPrice": 22.5,
+        "quantity": 4,
+        "vendor": {
+          "companyName": "Phoenix United",
+          "contactEmail": "contact@phoenixunited.com",
+          "supportPhone": "+1-888-909-0909"
+        }
+      },
+      {
+        "productName": "USB A to Micro B",
+        "sku": "ELE-ACC-10605",
+        "unitPrice": 5.5,
+        "quantity": 37,
+        "vendor": {
+          "companyName": "Ember Kitchen",
+          "contactEmail": "sales@emberkitchen.io",
+          "supportPhone": "+1-888-678-9012"
+        }
+      },
+      {
+        "productName": "Key Tags with Ring",
+        "sku": "OFF-ACC-13008",
+        "unitPrice": 3.0,
+        "quantity": 11,
+        "vendor": {
+          "companyName": "Crimson Cobra Creations",
+          "contactEmail": "info@crimsoncobra.com",
+          "supportPhone": "+1-888-090-1234"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d84be1a13d8b47851c",
+    "orderDate": "2024-11-12T23:33:08",
+    "total": 2020.02,
+    "status": "Shipped",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25a59",
+      "username": "Wayne Jimenez",
+      "email": "waynejimenez@gmail.com",
+      "addresses": [
+        {
+          "street": "3 Ross hill",
+          "city": "Lake Abdul",
+          "county": "City of Edinburgh",
+          "zipcode": "B4U 0NT",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 47n, Armstrong centers, New Mark, HR70 9WB"
+        },
+        {
+          "street": "049 Alan lake",
+          "city": "Jonesland",
+          "county": "Lancashire",
+          "zipcode": "M85 2PJ",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 87, Stewart garden, New Susan, NR3 7XY"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "USB LED Light",
+          "sku": "ELE-GAD-11048",
+          "price": 1.99,
+          "quantity": 52
+        },
+        {
+          "productName": "Swimming Cap Silicone",
+          "sku": "SPO-SWI-12254",
+          "price": 5.0,
+          "quantity": 13
+        },
+        {
+          "productName": "Hiking Boots Waterproof",
+          "sku": "SPT-OUT-16034",
+          "price": 89.99,
+          "quantity": 16
+        },
+        {
+          "productName": "Gym Gloves Women",
+          "sku": "SPT-FIT-10531",
+          "price": 12.99,
+          "quantity": 3
+        },
+        {
+          "productName": "Correction Tape",
+          "sku": "OFF-SUP-14203",
+          "price": 4.0,
+          "quantity": 34
+        },
+        {
+          "productName": "Baking Cups Paper",
+          "sku": "HOM-KIT-11080",
+          "price": 3.5,
+          "quantity": 17
+        },
+        {
+          "productName": "Measuring Spoon Set",
+          "sku": "KIT-BAK-12886",
+          "price": 3.5,
+          "quantity": 61
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "3 Ross hill",
+        "city": "Lake Abdul",
+        "county": "City of Edinburgh",
+        "zipcode": "B4U 0NT",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 47n, Armstrong centers, New Mark, HR70 9WB"
+      },
+      "method": "FedEx",
+      "trackingCode": "WU207404992NH"
+    },
+    "items": [
+      {
+        "productName": "Glass Nail File",
+        "sku": "BEA-NAI-15130",
+        "unitPrice": 3.0,
+        "quantity": 19,
+        "vendor": {
+          "companyName": "Ember Kitchen",
+          "contactEmail": "sales@emberkitchen.io",
+          "supportPhone": "+1-888-678-9012"
+        }
+      },
+      {
+        "productName": "Bolt Cutter 12in",
+        "sku": "TOO-CUT-12821",
+        "unitPrice": 15.0,
+        "quantity": 2,
+        "vendor": {
+          "companyName": "The Scholar's Press",
+          "contactEmail": "publishing@scholarspress.com",
+          "supportPhone": "+1-888-999-0000"
+        }
+      },
+      {
+        "productName": "Duvet Cover Set King",
+        "sku": "HOM-BED-16060",
+        "unitPrice": 42.0,
+        "quantity": 22,
+        "vendor": {
+          "companyName": "AquaLuxe Kitchenware",
+          "contactEmail": "sales@aqualuxe.kitchen",
+          "supportPhone": "+1-888-555-6666"
+        }
+      },
+      {
+        "productName": "Whistle Brass",
+        "sku": "SPT-ACC-10615",
+        "unitPrice": 5.99,
+        "quantity": 40,
+        "vendor": {
+          "companyName": "StyleSphere",
+          "contactEmail": "contact@stylesphere.co",
+          "supportPhone": "+1-888-667-7889"
+        }
+      },
+      {
+        "productName": "Power Bank 5000mAh",
+        "sku": "ELE-ACC-10752",
+        "unitPrice": 14.99,
+        "quantity": 35,
+        "vendor": {
+          "companyName": "Jade Jaguar Jewelers",
+          "contactEmail": "contact@jadejaguar.com",
+          "supportPhone": "+1-888-212-2345"
+        }
+      },
+      {
+        "productName": "USB A to C Cable",
+        "sku": "ELE-ACC-10538",
+        "unitPrice": 5.5,
+        "quantity": 18,
+        "vendor": {
+          "companyName": "Pinnacle Performance",
+          "contactEmail": "info@pinnacleperf.com",
+          "supportPhone": "+1-888-445-5667"
+        }
+      },
+      {
+        "productName": "Car Seat Hook",
+        "sku": "AUT-ORG-11451",
+        "unitPrice": 3.99,
+        "quantity": 23,
+        "vendor": {
+          "companyName": "The Story Weaver",
+          "contactEmail": "support@storyweaver.pub",
+          "supportPhone": "+1-888-012-3456"
+        }
+      },
+      {
+        "productName": "Travel Soap Sheets",
+        "sku": "TRA-ACC-15344",
+        "unitPrice": 3.0,
+        "quantity": 18,
+        "vendor": {
+          "companyName": "Peridot Panther Publishing",
+          "contactEmail": "support@peridotpanther.com",
+          "supportPhone": "+1-888-101-1122"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d84be1a13d8b47851d",
+    "orderDate": "2025-01-20T16:13:52",
+    "total": 892.77,
+    "status": "Pending",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25b38",
+      "username": "Ian Holmes",
+      "email": "ianholmes@gmail.com",
+      "addresses": [
+        {
+          "street": "Flat 1\nJanet lights",
+          "city": "South Annetown",
+          "county": "Aberdeenshire",
+          "zipcode": "BT6E 1NY",
+          "country": "United Kingdom",
+          "fullAddress": "4 Georgia curve, West Raymondfurt, W9 7PQ"
+        },
+        {
+          "street": "Studio 40\nMarshall island",
+          "city": "Brownside",
+          "county": "Carmarthenshire",
+          "zipcode": "G2K 2FZ",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 6, Cheryl villages, Wellsfort, BL2X 6YY"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Rechargeable AAA",
+          "sku": "ELE-BAT-13457",
+          "price": 12.0,
+          "quantity": 26
+        },
+        {
+          "productName": "Tire Valve Caps",
+          "sku": "AUT-ACC-12797",
+          "price": 2.0,
+          "quantity": 122
+        },
+        {
+          "productName": "Wine Glasses Set",
+          "sku": "HOM-KIT-10142",
+          "price": 35.0,
+          "quantity": 2
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Flat 1\nJanet lights",
+        "city": "South Annetown",
+        "county": "Aberdeenshire",
+        "zipcode": "BT6E 1NY",
+        "country": "United Kingdom",
+        "fullAddress": "4 Georgia curve, West Raymondfurt, W9 7PQ"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "LK369618677CC"
+    },
+    "items": [
+      {
+        "productName": "Dog Treat Bag",
+        "sku": "PET-TRA-11495",
+        "unitPrice": 6.99,
+        "quantity": 23,
+        "vendor": {
+          "companyName": "Saffron Stallion Sports",
+          "contactEmail": "contact@saffronstallion.com",
+          "supportPhone": "+1-888-545-6789"
+        }
+      },
+      {
+        "productName": "Game Dice 6-Sided",
+        "sku": "TOY-GAM-13739",
+        "unitPrice": 1.5,
+        "quantity": 88,
+        "vendor": {
+          "companyName": "Ivory Elephant Imports",
+          "contactEmail": "contact@ivoryelephant.com",
+          "supportPhone": "+1-888-101-2345"
+        }
+      },
+      {
+        "productName": "Ball Pump Needle",
+        "sku": "SPT-ACC-10995",
+        "unitPrice": 1.5,
+        "quantity": 170,
+        "vendor": {
+          "companyName": "Stellar Goods",
+          "contactEmail": "contact@stellargoods.net",
+          "supportPhone": "+1-888-456-7890"
+        }
+      },
+      {
+        "productName": "Dog Waste Bags",
+        "sku": "PET-CLN-13184",
+        "unitPrice": 3.0,
+        "quantity": 66,
+        "vendor": {
+          "companyName": "The Story Weaver",
+          "contactEmail": "support@storyweaver.pub",
+          "supportPhone": "+1-888-012-3456"
+        }
+      },
+      {
+        "productName": "Paint Brush 1in",
+        "sku": "TOO-PAI-14420",
+        "unitPrice": 1.5,
+        "quantity": 98,
+        "vendor": {
+          "companyName": "Brown Bear Bistro",
+          "contactEmail": "contact@brownbearbistro.com",
+          "supportPhone": "+1-888-666-8901"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d84be1a13d8b47851e",
+    "orderDate": "2025-01-08T17:59:04",
+    "total": 354.29,
+    "status": "Shipped",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25b74",
+      "username": "Wyatt Crawford",
+      "email": "wyattcrawford@outlook.com",
+      "addresses": [
+        {
+          "street": "853 Ahmed harbors",
+          "city": "Smithton",
+          "county": "Warwickshire",
+          "zipcode": "LE7 4WE",
+          "country": "United Kingdom",
+          "fullAddress": "32 Ruth views, Lake Lewisland, L2T 2HL"
+        },
+        {
+          "street": "Flat 7\nEdwards springs",
+          "city": "Daviesbury",
+          "county": "Devon",
+          "zipcode": "MK1X 6HL",
+          "country": "United Kingdom",
+          "fullAddress": "64 Clark island, Thompsonberg, SS0 6SA"
+        },
+        {
+          "street": "Studio 61\nThomas port",
+          "city": "West Maria",
+          "county": "Antrim",
+          "zipcode": "E7 0TT",
+          "country": "United Kingdom",
+          "fullAddress": "1 Gerard passage, Lake Joanna, W7E 8RU"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Clipboard A4",
+          "sku": "OFF-ACC-14334",
+          "price": 4.5,
+          "quantity": 33
+        },
+        {
+          "productName": "3.5mm Extension Cable",
+          "sku": "ELE-AUD-10532",
+          "price": 5.99,
+          "quantity": 58
+        },
+        {
+          "productName": "Chess Timer Clock",
+          "sku": "TOY-GAM-12653",
+          "price": 15.0,
+          "quantity": 12
+        },
+        {
+          "productName": "Power Strip 4-Outlet",
+          "sku": "ELE-ACC-11120",
+          "price": 12.99,
+          "quantity": 29
+        },
+        {
+          "productName": "Ethernet Cable 10m",
+          "sku": "NET-CAB-13141",
+          "price": 8.0,
+          "quantity": 28
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 61\nThomas port",
+        "city": "West Maria",
+        "county": "Antrim",
+        "zipcode": "E7 0TT",
+        "country": "United Kingdom",
+        "fullAddress": "1 Gerard passage, Lake Joanna, W7E 8RU"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "ZE195514300AI"
+    },
+    "items": [
+      {
+        "productName": "Microfiber Detail Cloth",
+        "sku": "AUT-CLE-11481",
+        "unitPrice": 4.99,
+        "quantity": 71,
+        "vendor": {
+          "companyName": "Emerald City Goods",
+          "contactEmail": "contact@emeraldcitygoods.com",
+          "supportPhone": "+1-888-001-2345"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d94be1a13d8b47851f",
+    "orderDate": "2019-07-07T13:11:48",
+    "total": 704.0,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25a39",
+      "username": "Zachary Ortiz",
+      "email": "zacharyortiz@outlook.com",
+      "addresses": [
+        {
+          "street": "Flat 86n\nFry roads",
+          "city": "South Emmaville",
+          "county": "South Yorkshire",
+          "zipcode": "DH27 0WX",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 9, Lydia road, Lake Cliffordburgh, S3S 2LB"
+        },
+        {
+          "street": "68 Anthony center",
+          "city": "Leonburgh",
+          "county": "Durham",
+          "zipcode": "N1 4AW",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 40, Hall view, Lake Samantha, L6S 4LJ"
+        },
+        {
+          "street": "Studio 73o\nHolloway gardens",
+          "city": "Heatherview",
+          "county": "Angus",
+          "zipcode": "PO9M 5ES",
+          "country": "United Kingdom",
+          "fullAddress": "975 Potter tunnel, Port Marcus, NP3Y 0ZF"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Cable Clips Wall",
+          "sku": "ELE-ACC-10993",
+          "price": 3.99,
+          "quantity": 15
+        },
+        {
+          "productName": "Herb Mill Grinder",
+          "sku": "KIT-TOO-14900",
+          "price": 8.0,
+          "quantity": 31
+        },
+        {
+          "productName": "Memory Foam Mat",
+          "sku": "HOM-BAT-13413",
+          "price": 14.5,
+          "quantity": 10
+        },
+        {
+          "productName": "Fan Mount Screws",
+          "sku": "ELE-PC-11070",
+          "price": 2.99,
+          "quantity": 8
+        },
+        {
+          "productName": "Blending Sponges",
+          "sku": "BEA-ACC-14171",
+          "price": 3.0,
+          "quantity": 17
+        },
+        {
+          "productName": "Mouse Glides Feet",
+          "sku": "ELE-GAM-10477",
+          "price": 6.99,
+          "quantity": 12
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 73o\nHolloway gardens",
+        "city": "Heatherview",
+        "county": "Angus",
+        "zipcode": "PO9M 5ES",
+        "country": "United Kingdom",
+        "fullAddress": "975 Potter tunnel, Port Marcus, NP3Y 0ZF"
+      },
+      "method": "DHL Express",
+      "trackingCode": "AQ816280354EP"
+    },
+    "items": [
+      {
+        "productName": "Luggage Cup Holder",
+        "sku": "TRA-ACC-15342",
+        "unitPrice": 10.0,
+        "quantity": 5,
+        "vendor": {
+          "companyName": "Diamond Dolphin Designs",
+          "contactEmail": "sales@diamonddolphin.com",
+          "supportPhone": "+1-888-989-9012"
+        }
+      },
+      {
+        "productName": "Safety Glasses Tinted",
+        "sku": "TOO-SAF-12900",
+        "unitPrice": 6.0,
+        "quantity": 58,
+        "vendor": {
+          "companyName": "Nexus Innovations",
+          "contactEmail": "contact@nexusinnov.com",
+          "supportPhone": "+1-888-121-2121"
+        }
+      },
+      {
+        "productName": "Shower Phone Holder",
+        "sku": "HOM-BAT-13336",
+        "unitPrice": 9.0,
+        "quantity": 34,
+        "vendor": {
+          "companyName": "Urban Vogue Outfitters",
+          "contactEmail": "info@urbanvogue.com",
+          "supportPhone": "+1-888-223-3445"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d94be1a13d8b478520",
+    "orderDate": "2025-01-29T19:58:18",
+    "total": 2268.71,
+    "status": "Delivered",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25998",
+      "username": "Louis Jones",
+      "email": "louisjones@yahoo.com",
+      "addresses": [
+        {
+          "street": "7 Jemma lakes",
+          "city": "Port Natashahaven",
+          "county": "Perth and Kinross",
+          "zipcode": "W6G 9NU",
+          "country": "United Kingdom",
+          "fullAddress": "52 Russell crossroad, Lake Zoemouth, NP7 1FJ"
+        },
+        {
+          "street": "Studio 36\nRita avenue",
+          "city": "North Louise",
+          "county": "Down",
+          "zipcode": "S7S 7AJ",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 86, Williams curve, Byrnehaven, M91 8RF"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Key Tags Plastic",
+          "sku": "HOM-ORG-10680",
+          "price": 2.99,
+          "quantity": 102
+        },
+        {
+          "productName": "Brass Letter Opener",
+          "sku": "OFF-ACC-13434",
+          "price": 7.0,
+          "quantity": 4
+        },
+        {
+          "productName": "Leather Winter Gloves",
+          "sku": "FAS-ACC-16051",
+          "price": 35.0,
+          "quantity": 5
+        },
+        {
+          "productName": "VGA Cable 1.8m",
+          "sku": "ELE-ACC-10343",
+          "price": 8.5,
+          "quantity": 11
+        },
+        {
+          "productName": "Sweatband Wrist Pair",
+          "sku": "SPT-CLO-10863",
+          "price": 5.5,
+          "quantity": 55
+        },
+        {
+          "productName": "Butter Dish",
+          "sku": "HOM-KIT-10714",
+          "price": 12.0,
+          "quantity": 7
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 36\nRita avenue",
+        "city": "North Louise",
+        "county": "Down",
+        "zipcode": "S7S 7AJ",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 86, Williams curve, Byrnehaven, M91 8RF"
+      },
+      "method": "FedEx",
+      "trackingCode": "CF591696208MY"
+    },
+    "items": [
+      {
+        "productName": "Suitcase Cover M",
+        "sku": "TRA-BAG-12085",
+        "unitPrice": 11.5,
+        "quantity": 26,
+        "vendor": {
+          "companyName": "Chic Threads Apparel",
+          "contactEmail": "sales@chicthreads.com",
+          "supportPhone": "+1-888-112-2334"
+        }
+      },
+      {
+        "productName": "Hamster Chew Sticks",
+        "sku": "PET-SMA-12688",
+        "unitPrice": 3.5,
+        "quantity": 27,
+        "vendor": {
+          "companyName": "Golden Grain Foods",
+          "contactEmail": "support@goldengrain.com",
+          "supportPhone": "+1-888-990-1234"
+        }
+      },
+      {
+        "productName": "Staple Remover Claw",
+        "sku": "OFF-SUP-13105",
+        "unitPrice": 1.5,
+        "quantity": 136,
+        "vendor": {
+          "companyName": "Ember Kitchen",
+          "contactEmail": "sales@emberkitchen.io",
+          "supportPhone": "+1-888-678-9012"
+        }
+      },
+      {
+        "productName": "Dog Leash 1.2m",
+        "sku": "PET-DOG-12352",
+        "unitPrice": 9.0,
+        "quantity": 42,
+        "vendor": {
+          "companyName": "Cerulean Swan Solutions",
+          "contactEmail": "support@ceruleanswan.com",
+          "supportPhone": "+1-888-434-5678"
+        }
+      },
+      {
+        "productName": "Fish Tank Thermometer",
+        "sku": "PET-FIS-11384",
+        "unitPrice": 2.5,
+        "quantity": 18,
+        "vendor": {
+          "companyName": "Celestial Tech",
+          "contactEmail": "support@celestial.tech",
+          "supportPhone": "+1-888-111-2222"
+        }
+      },
+      {
+        "productName": "Laptop Sleeve 13 inch",
+        "sku": "ELE-ACC-10822",
+        "unitPrice": 15.99,
+        "quantity": 29,
+        "vendor": {
+          "companyName": "Magenta Moose Media",
+          "contactEmail": "sales@magentamoose.com",
+          "supportPhone": "+1-888-767-8901"
+        }
+      },
+      {
+        "productName": "Bike Wheel Lights",
+        "sku": "SPT-CYC-11057",
+        "unitPrice": 8.5,
+        "quantity": 32,
+        "vendor": {
+          "companyName": "Amethyst Antelope Apparel",
+          "contactEmail": "support@amethystantelope.com",
+          "supportPhone": "+1-888-767-7890"
+        }
+      },
+      {
+        "productName": "Men Leather Wallet",
+        "sku": "FAS-ACC-12051",
+        "unitPrice": 25.0,
+        "quantity": 15,
+        "vendor": {
+          "companyName": "Azure Turtle Toys",
+          "contactEmail": "info@azureturtle.com",
+          "supportPhone": "+1-888-323-4567"
+        }
+      },
+      {
+        "productName": "Eraser Stick",
+        "sku": "OFF-ACC-12715",
+        "unitPrice": 2.5,
+        "quantity": 55,
+        "vendor": {
+          "companyName": "Amethyst Antelope Apparel",
+          "contactEmail": "support@amethystantelope.com",
+          "supportPhone": "+1-888-767-7890"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d94be1a13d8b478521",
+    "orderDate": "2019-03-20T10:45:09",
+    "total": 12.0,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f258a3",
+      "username": "Adam Edwards",
+      "email": "adamedwards@icloud.com",
+      "addresses": [
+        {
+          "street": "Studio 6\nMelissa rapids",
+          "city": "South Ann",
+          "county": "Gloucestershire",
+          "zipcode": "L3 2TA",
+          "country": "United Kingdom",
+          "fullAddress": "06 Lord dale, West Davidburgh, G5 5WN"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Reusable Zip Ties",
+          "sku": "ELE-ORG-13454",
+          "price": 6.0,
+          "quantity": 16
+        },
+        {
+          "productName": "Tongs Stainless Steel",
+          "sku": "HOM-KIT-10381",
+          "price": 8.99,
+          "quantity": 4
+        },
+        {
+          "productName": "Camping Lantern LED",
+          "sku": "SPT-OUT-10111",
+          "price": 19.95,
+          "quantity": 11
+        },
+        {
+          "productName": "Ping Pong Paddle Case",
+          "sku": "SPT-TEN-10932",
+          "price": 8.99,
+          "quantity": 2
+        },
+        {
+          "productName": "Volleyball Soft",
+          "sku": "SPT-TEA-10830",
+          "price": 24.99,
+          "quantity": 2
+        },
+        {
+          "productName": "Roller Frame 9in",
+          "sku": "TOO-PAI-14423",
+          "price": 5.0,
+          "quantity": 12
+        },
+        {
+          "productName": "Jump Rope Basic",
+          "sku": "SPT-FIT-10604",
+          "price": 5.99,
+          "quantity": 54
+        },
+        {
+          "productName": "Ukulele Soprano",
+          "sku": "MUS-INS-12047",
+          "price": 35.0,
+          "quantity": 5
+        },
+        {
+          "productName": "Resistance Loop Bands",
+          "sku": "SPO-FIT-14820",
+          "price": 10.0,
+          "quantity": 39
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 6\nMelissa rapids",
+        "city": "South Ann",
+        "county": "Gloucestershire",
+        "zipcode": "L3 2TA",
+        "country": "United Kingdom",
+        "fullAddress": "06 Lord dale, West Davidburgh, G5 5WN"
+      },
+      "method": "FedEx",
+      "trackingCode": "FA499103310EE"
+    },
+    "items": [
+      {
+        "productName": "Hat Clip Hanger",
+        "sku": "FAS-ORG-14994",
+        "unitPrice": 4.0,
+        "quantity": 3,
+        "vendor": {
+          "companyName": "AquaLuxe Kitchenware",
+          "contactEmail": "sales@aqualuxe.kitchen",
+          "supportPhone": "+1-888-555-6666"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d94be1a13d8b478522",
+    "orderDate": "2022-04-10T18:42:36",
+    "total": 2954.7,
+    "status": "Delivered",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25898",
+      "username": "Gregory Campbell",
+      "email": "gregorycampbell@outlook.com",
+      "addresses": [
+        {
+          "street": "Studio 85N\nHughes courts",
+          "city": "East Ianview",
+          "county": "Renfrewshire",
+          "zipcode": "PA30 1AJ",
+          "country": "United Kingdom",
+          "fullAddress": "250 Vanessa cove, New Glen, GY46 1YB"
+        },
+        {
+          "street": "382 Natalie estates",
+          "city": "South Rickyfurt",
+          "county": "Angus",
+          "zipcode": "SK7 9LT",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 5, Joe crescent, Vanessatown, W6 1AP"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Stroller Mosquito Net",
+          "sku": "BAB-GEA-13203",
+          "price": 6.0,
+          "quantity": 32
+        },
+        {
+          "productName": "Watercolor Set 12",
+          "sku": "ART-PAI-13951",
+          "price": 4.5,
+          "quantity": 47
+        },
+        {
+          "productName": "Curtain Track Rollers",
+          "sku": "HOM-DEC-10868",
+          "price": 4.99,
+          "quantity": 29
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "382 Natalie estates",
+        "city": "South Rickyfurt",
+        "county": "Angus",
+        "zipcode": "SK7 9LT",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 5, Joe crescent, Vanessatown, W6 1AP"
+      },
+      "method": "UPS Standard",
+      "trackingCode": "HZ310230490RC"
+    },
+    "items": [
+      {
+        "productName": "Door Hook Over",
+        "sku": "HOM-ORG-10469",
+        "unitPrice": 8.5,
+        "quantity": 28,
+        "vendor": {
+          "companyName": "AquaLuxe Kitchenware",
+          "contactEmail": "sales@aqualuxe.kitchen",
+          "supportPhone": "+1-888-555-6666"
+        }
+      },
+      {
+        "productName": "Paracord Bracelet",
+        "sku": "SPT-OUT-10724",
+        "unitPrice": 4.99,
+        "quantity": 21,
+        "vendor": {
+          "companyName": "Redwood & Oak",
+          "contactEmail": "sales@redwoodandoak.com",
+          "supportPhone": "+1-888-334-5678"
+        }
+      },
+      {
+        "productName": "Car Pet Seat Cover",
+        "sku": "AUT-ACC-16052",
+        "unitPrice": 28.99,
+        "quantity": 48,
+        "vendor": {
+          "companyName": "Stellar Goods",
+          "contactEmail": "contact@stellargoods.net",
+          "supportPhone": "+1-888-456-7890"
+        }
+      },
+      {
+        "productName": "Wall Bottle Opener",
+        "sku": "KIT-TOO-13259",
+        "unitPrice": 5.5,
+        "quantity": 17,
+        "vendor": {
+          "companyName": "The Story Weaver",
+          "contactEmail": "support@storyweaver.pub",
+          "supportPhone": "+1-888-012-3456"
+        }
+      },
+      {
+        "productName": "Fridge Magnets",
+        "sku": "HOM-DEC-15036",
+        "unitPrice": 3.0,
+        "quantity": 11,
+        "vendor": {
+          "companyName": "Topaz Toucan Travel",
+          "contactEmail": "support@topaztoucan.com",
+          "supportPhone": "+1-888-323-3456"
+        }
+      },
+      {
+        "productName": "Portable SSD 2TB",
+        "sku": "ELE-STO-10300",
+        "unitPrice": 129.99,
+        "quantity": 5,
+        "vendor": {
+          "companyName": "Innovatech Solutions",
+          "contactEmail": "sales@innovatech.com",
+          "supportPhone": "+1-888-123-4567"
+        }
+      },
+      {
+        "productName": "Bottle Opener Waiter",
+        "sku": "KIT-TOO-14351",
+        "unitPrice": 4.0,
+        "quantity": 51,
+        "vendor": {
+          "companyName": "Azure Turtle Toys",
+          "contactEmail": "info@azureturtle.com",
+          "supportPhone": "+1-888-323-4567"
+        }
+      },
+      {
+        "productName": "Permanent Markers Black",
+        "sku": "HOM-OFF-11195",
+        "unitPrice": 6.99,
+        "quantity": 6,
+        "vendor": {
+          "companyName": "Saffron Stallion Sports",
+          "contactEmail": "contact@saffronstallion.com",
+          "supportPhone": "+1-888-545-6789"
+        }
+      },
+      {
+        "productName": "Massage Ball Spiky",
+        "sku": "SPO-FIT-12872",
+        "unitPrice": 4.5,
+        "quantity": 44,
+        "vendor": {
+          "companyName": "Zircon Zebra Zenith",
+          "contactEmail": "contact@zirconzebra.com",
+          "supportPhone": "+1-888-434-4455"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d94be1a13d8b478523",
+    "orderDate": "2021-03-03T11:05:53",
+    "total": 364.0,
+    "status": "Delivered",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f2594a",
+      "username": "Joshua Sanchez",
+      "email": "joshuasanchez@yahoo.com",
+      "addresses": [
+        {
+          "street": "89 Clarke centers",
+          "city": "North Shaun",
+          "county": "Dumfries and Galloway",
+          "zipcode": "M3B 5UP",
+          "country": "United Kingdom",
+          "fullAddress": "872 Jack crest, Port Stephanie, DY2 6PP"
+        },
+        {
+          "street": "Studio 26x\nSmith junction",
+          "city": "Williamsside",
+          "county": "Flintshire",
+          "zipcode": "W0G 6RH",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 31u, Walters courts, Lake Kayleigh, E3C 1AW"
+        },
+        {
+          "street": "Studio 3\nDeclan streets",
+          "city": "Timothychester",
+          "county": "Worcestershire",
+          "zipcode": "PE5P 3BT",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 65o, Lorraine key, Leighside, M8 2XZ"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Extension Cord 5m",
+          "sku": "ELE-POW-14443",
+          "price": 8.0,
+          "quantity": 12
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "89 Clarke centers",
+        "city": "North Shaun",
+        "county": "Dumfries and Galloway",
+        "zipcode": "M3B 5UP",
+        "country": "United Kingdom",
+        "fullAddress": "872 Jack crest, Port Stephanie, DY2 6PP"
+      },
+      "method": "UPS Standard",
+      "trackingCode": "RD940366057YK"
+    },
+    "items": [
+      {
+        "productName": "Bath Sponge Mesh",
+        "sku": "BEA-BAT-13814",
+        "unitPrice": 1.5,
+        "quantity": 140,
+        "vendor": {
+          "companyName": "Emerald City Goods",
+          "contactEmail": "contact@emeraldcitygoods.com",
+          "supportPhone": "+1-888-001-2345"
+        }
+      },
+      {
+        "productName": "Whetstone Sharpener",
+        "sku": "HOM-KIT-10367",
+        "unitPrice": 22.0,
+        "quantity": 7,
+        "vendor": {
+          "companyName": "Diamond Dolphin Designs",
+          "contactEmail": "sales@diamonddolphin.com",
+          "supportPhone": "+1-888-989-9012"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d94be1a13d8b478524",
+    "orderDate": "2024-08-06T11:28:49",
+    "total": 2351.84,
+    "status": "Processing",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25b34",
+      "username": "Seth Gentry",
+      "email": "sethgentry@outlook.com",
+      "addresses": [
+        {
+          "street": "826 Thomas oval",
+          "city": "Smithmouth",
+          "county": "Dorset",
+          "zipcode": "W6 0DG",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 78, Ashley harbors, South Jonathan, TW3W 9QJ"
+        },
+        {
+          "street": "976 Victor land",
+          "city": "East Fiona",
+          "county": "Glasgow City",
+          "zipcode": "B4B 1NU",
+          "country": "United Kingdom",
+          "fullAddress": "2 Coates circles, Karlstad, PH80 0JD"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Memory Foam Neck Pillow",
+          "sku": "TRA-ACC-14533",
+          "price": 15.0,
+          "quantity": 12
+        },
+        {
+          "productName": "Power Bank 5000mAh",
+          "sku": "ELE-ACC-10752",
+          "price": 14.99,
+          "quantity": 13
+        },
+        {
+          "productName": "Coffee Scoop Clip",
+          "sku": "HOM-KIT-11005",
+          "price": 5.5,
+          "quantity": 46
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "826 Thomas oval",
+        "city": "Smithmouth",
+        "county": "Dorset",
+        "zipcode": "W6 0DG",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 78, Ashley harbors, South Jonathan, TW3W 9QJ"
+      },
+      "method": "UPS Standard",
+      "trackingCode": "OA159546886LX"
+    },
+    "items": [
+      {
+        "productName": "Fragile Stickers",
+        "sku": "OFF-SHI-12525",
+        "unitPrice": 4.5,
+        "quantity": 31,
+        "vendor": {
+          "companyName": "Innovatech Solutions",
+          "contactEmail": "sales@innovatech.com",
+          "supportPhone": "+1-888-123-4567"
+        }
+      },
+      {
+        "productName": "Birthday Candles",
+        "sku": "HOM-PAR-13080",
+        "unitPrice": 1.0,
+        "quantity": 135,
+        "vendor": {
+          "companyName": "Magenta Moose Media",
+          "contactEmail": "sales@magentamoose.com",
+          "supportPhone": "+1-888-767-8901"
+        }
+      },
+      {
+        "productName": "Kettlebell 8kg",
+        "sku": "SPT-FIT-16024",
+        "unitPrice": 34.99,
+        "quantity": 12,
+        "vendor": {
+          "companyName": "Crimson Cobra Creations",
+          "contactEmail": "info@crimsoncobra.com",
+          "supportPhone": "+1-888-090-1234"
+        }
+      },
+      {
+        "productName": "Cupcake Cases Paper",
+        "sku": "HOM-KIT-10638",
+        "unitPrice": 2.99,
+        "quantity": 112,
+        "vendor": {
+          "companyName": "Golden Grain Foods",
+          "contactEmail": "support@goldengrain.com",
+          "supportPhone": "+1-888-990-1234"
+        }
+      },
+      {
+        "productName": "Reflective Paracord",
+        "sku": "SPO-CAM-13446",
+        "unitPrice": 8.0,
+        "quantity": 24,
+        "vendor": {
+          "companyName": "Orange Octopus Optics",
+          "contactEmail": "sales@orangeoctopus.com",
+          "supportPhone": "+1-888-777-9012"
+        }
+      },
+      {
+        "productName": "Rubber Bands Size 32",
+        "sku": "OFF-SUP-15002",
+        "unitPrice": 3.0,
+        "quantity": 69,
+        "vendor": {
+          "companyName": "Aurora Tech",
+          "contactEmail": "info@auroratech.io",
+          "supportPhone": "+1-888-565-6565"
+        }
+      },
+      {
+        "productName": "Scented Candles Gift Set",
+        "sku": "HOM-DEC-16046",
+        "unitPrice": 21.99,
+        "quantity": 42,
+        "vendor": {
+          "companyName": "Fusion Homewares",
+          "contactEmail": "support@fusionhome.com",
+          "supportPhone": "+1-888-567-8901"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d94be1a13d8b478525",
+    "orderDate": "2019-10-22T03:14:44",
+    "total": 237.8,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f2582d",
+      "username": "Anna Nguyen",
+      "email": "annanguyen@yahoo.com",
+      "addresses": [
+        {
+          "street": "207 Wright unions",
+          "city": "Dominicview",
+          "county": "Derbyshire",
+          "zipcode": "IV19 8EG",
+          "country": "United Kingdom",
+          "fullAddress": "3 Amanda mills, Port Geoffreyview, SE8 8JZ"
+        },
+        {
+          "street": "5 Bradley shoals",
+          "city": "Paigeview",
+          "county": "Clackmannanshire",
+          "zipcode": "YO9R 9DL",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 84A, Harvey union, Barrystad, DN9 9EL"
+        },
+        {
+          "street": "0 Emma walk",
+          "city": "Lake Stuart",
+          "county": "Hampshire",
+          "zipcode": "ME0 7AE",
+          "country": "United Kingdom",
+          "fullAddress": "39 Wright club, Jamesshire, W65 7LL"
+        },
+        {
+          "street": "Studio 0\nJade fall",
+          "city": "Colesmouth",
+          "county": "South Lanarkshire",
+          "zipcode": "SS0 6XT",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 02e, Diane falls, Shaunfurt, W6 9JF"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Seat Back Protector",
+          "sku": "AUT-INT-12884",
+          "price": 8.0,
+          "quantity": 18
+        },
+        {
+          "productName": "Anti-Vibration Pads",
+          "sku": "HOM-APP-10761",
+          "price": 9.99,
+          "quantity": 4
+        },
+        {
+          "productName": "Corn Cob Stripper",
+          "sku": "KIT-TOO-14503",
+          "price": 7.0,
+          "quantity": 1
+        },
+        {
+          "productName": "Emergency Blanket",
+          "sku": "SPO-SUR-13296",
+          "price": 2.0,
+          "quantity": 103
+        },
+        {
+          "productName": "Sewing Kit Portable",
+          "sku": "HOM-CRA-12181",
+          "price": 7.5,
+          "quantity": 3
+        },
+        {
+          "productName": "Jar Gripper Pad",
+          "sku": "HOM-KIT-10555",
+          "price": 3.5,
+          "quantity": 32
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 0\nJade fall",
+        "city": "Colesmouth",
+        "county": "South Lanarkshire",
+        "zipcode": "SS0 6XT",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 02e, Diane falls, Shaunfurt, W6 9JF"
+      },
+      "method": "FedEx",
+      "trackingCode": "SN644644583DJ"
+    },
+    "items": [
+      {
+        "productName": "Multi-Tool Pliers",
+        "sku": "TOO-HAN-13603",
+        "unitPrice": 22.5,
+        "quantity": 4,
+        "vendor": {
+          "companyName": "Saffron Stallion Sports",
+          "contactEmail": "contact@saffronstallion.com",
+          "supportPhone": "+1-888-545-6789"
+        }
+      },
+      {
+        "productName": "SIM Eject Pin",
+        "sku": "ELE-ACC-10661",
+        "unitPrice": 0.99,
+        "quantity": 20,
+        "vendor": {
+          "companyName": "Topaz Toucan Travel",
+          "contactEmail": "support@topaztoucan.com",
+          "supportPhone": "+1-888-323-3456"
+        }
+      },
+      {
+        "productName": "Golf Divot Tool",
+        "sku": "SPO-GOL-13739",
+        "unitPrice": 4.0,
+        "quantity": 32,
+        "vendor": {
+          "companyName": "Emerald City Goods",
+          "contactEmail": "contact@emeraldcitygoods.com",
+          "supportPhone": "+1-888-001-2345"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d94be1a13d8b478526",
+    "orderDate": "2020-08-18T07:02:47",
+    "total": 430.05,
+    "status": "Pending",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f257eb",
+      "username": "Terry Bailey",
+      "email": "terrybailey@outlook.com",
+      "addresses": [
+        {
+          "street": "Studio 45w\nTeresa ville",
+          "city": "Iainport",
+          "county": "South Ayrshire",
+          "zipcode": "LE7 3HL",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 07J, Guy lights, New Katyburgh, L0H 8AU"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Pedometer Clip",
+          "sku": "SPT-ACC-10373",
+          "price": 8.99,
+          "quantity": 21
+        },
+        {
+          "productName": "Kitchen Towels Cotton",
+          "sku": "HOM-KIT-11128",
+          "price": 15.99,
+          "quantity": 19
+        },
+        {
+          "productName": "Pet Lick Mat",
+          "sku": "PET-FEE-13515",
+          "price": 6.0,
+          "quantity": 38
+        },
+        {
+          "productName": "Letter Opener",
+          "sku": "HOM-OFF-11185",
+          "price": 3.99,
+          "quantity": 43
+        },
+        {
+          "productName": "Coasters Felt",
+          "sku": "HOM-DEC-10856",
+          "price": 5.99,
+          "quantity": 55
+        },
+        {
+          "productName": "Wall Anchors Plastic",
+          "sku": "HOM-IMP-10880",
+          "price": 3.99,
+          "quantity": 3
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 45w\nTeresa ville",
+        "city": "Iainport",
+        "county": "South Ayrshire",
+        "zipcode": "LE7 3HL",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 07J, Guy lights, New Katyburgh, L0H 8AU"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "TN586061970WP"
+    },
+    "items": [
+      {
+        "productName": "Egg Timer Sand",
+        "sku": "KIT-GAD-14952",
+        "unitPrice": 3.0,
+        "quantity": 29,
+        "vendor": {
+          "companyName": "Cerulean Swan Solutions",
+          "contactEmail": "support@ceruleanswan.com",
+          "supportPhone": "+1-888-434-5678"
+        }
+      },
+      {
+        "productName": "Highlighter Set",
+        "sku": "OFF-WRI-14027",
+        "unitPrice": 3.5,
+        "quantity": 21,
+        "vendor": {
+          "companyName": "Aurora Tech",
+          "contactEmail": "info@auroratech.io",
+          "supportPhone": "+1-888-565-6565"
+        }
+      },
+      {
+        "productName": "Barbell Spring Clip",
+        "sku": "SPT-FIT-11069",
+        "unitPrice": 5.99,
+        "quantity": 45,
+        "vendor": {
+          "companyName": "Quantum Devices",
+          "contactEmail": "info@quantumdev.com",
+          "supportPhone": "+1-888-345-6789"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d94be1a13d8b478527",
+    "orderDate": "2021-04-27T14:28:23",
+    "total": 180.0,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25a11",
+      "username": "Paul Clark",
+      "email": "paulclark@outlook.com",
+      "addresses": [
+        {
+          "street": "1 Kelly glens",
+          "city": "Harrisonburgh",
+          "county": "Aberdeenshire",
+          "zipcode": "LN80 4AE",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 3, Vaughan roads, North Tracey, CO1B 3JJ"
+        },
+        {
+          "street": "13 Elliott port",
+          "city": "Simontown",
+          "county": "Northamptonshire",
+          "zipcode": "YO6V 4GP",
+          "country": "United Kingdom",
+          "fullAddress": "237 Williams port, Lake Jordanchester, S3S 4GB"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Fishing Lure Spoon",
+          "sku": "SPO-FIS-12651",
+          "price": 4.0,
+          "quantity": 16
+        },
+        {
+          "productName": "Table Tennis Set",
+          "sku": "SPT-RAC-16044",
+          "price": 29.99,
+          "quantity": 6
+        },
+        {
+          "productName": "Stuffed Animal Bear",
+          "sku": "TY-PLU-10162",
+          "price": 15.99,
+          "quantity": 51
+        },
+        {
+          "productName": "AA Batteries 4pk",
+          "sku": "ELE-BAT-14340",
+          "price": 3.0,
+          "quantity": 75
+        },
+        {
+          "productName": "Pill Box Daily",
+          "sku": "HEA-ACC-12943",
+          "price": 2.0,
+          "quantity": 57
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "13 Elliott port",
+        "city": "Simontown",
+        "county": "Northamptonshire",
+        "zipcode": "YO6V 4GP",
+        "country": "United Kingdom",
+        "fullAddress": "237 Williams port, Lake Jordanchester, S3S 4GB"
+      },
+      "method": "DHL Express",
+      "trackingCode": "ZP855911211ZC"
+    },
+    "items": [
+      {
+        "productName": "Resistance Loop Bands",
+        "sku": "SPO-FIT-13659",
+        "unitPrice": 9.0,
+        "quantity": 20,
+        "vendor": {
+          "companyName": "Tidal Wave Inc.",
+          "contactEmail": "support@tidalwaveinc.com",
+          "supportPhone": "+1-888-556-7890"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d94be1a13d8b478528",
+    "orderDate": "2020-12-17T20:47:50",
+    "total": 605.27,
+    "status": "Delivered",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25966",
+      "username": "Jack Diaz",
+      "email": "jackdiaz@hotmail.com",
+      "addresses": [
+        {
+          "street": "Studio 24\nNorman skyway",
+          "city": "West Ashleyview",
+          "county": "Gloucestershire",
+          "zipcode": "EX1 1LA",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 99, Carter road, Parkerton, N73 3QB"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Knee Pads Gel",
+          "sku": "TOO-PRO-12817",
+          "price": 16.5,
+          "quantity": 24
+        },
+        {
+          "productName": "USB LED Light Stick",
+          "sku": "ELE-LIG-14913",
+          "price": 1.5,
+          "quantity": 56
+        },
+        {
+          "productName": "Lithium 9V Block",
+          "sku": "ELE-BAT-13458",
+          "price": 8.5,
+          "quantity": 17
+        },
+        {
+          "productName": "Yoga Mat Strap",
+          "sku": "SPO-YOG-13850",
+          "price": 2.5,
+          "quantity": 44
+        },
+        {
+          "productName": "Pet Water Fountain",
+          "sku": "PET-ACC-11315",
+          "price": 34.99,
+          "quantity": 7
+        },
+        {
+          "productName": "Cord Clips Adhesive",
+          "sku": "ELE-ORG-14131",
+          "price": 3.0,
+          "quantity": 58
+        },
+        {
+          "productName": "Car Cup Holder Expander",
+          "sku": "AUT-INT-11400",
+          "price": 18.99,
+          "quantity": 7
+        },
+        {
+          "productName": "Cordless Drill 18V",
+          "sku": "TOO-POW-12082",
+          "price": 65.0,
+          "quantity": 10
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 24\nNorman skyway",
+        "city": "West Ashleyview",
+        "county": "Gloucestershire",
+        "zipcode": "EX1 1LA",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 99, Carter road, Parkerton, N73 3QB"
+      },
+      "method": "FedEx",
+      "trackingCode": "DF836003224PF"
+    },
+    "items": [
+      {
+        "productName": "Furniture Pads Felt",
+        "sku": "HOM-IMP-11150",
+        "unitPrice": 5.99,
+        "quantity": 23,
+        "vendor": {
+          "companyName": "Bibliophile's Corner",
+          "contactEmail": "orders@bibliophilescorner.com",
+          "supportPhone": "+1-888-901-2345"
+        }
+      },
+      {
+        "productName": "Wall Bottle Opener",
+        "sku": "KIT-TOO-13259",
+        "unitPrice": 5.5,
+        "quantity": 35,
+        "vendor": {
+          "companyName": "The Story Weaver",
+          "contactEmail": "support@storyweaver.pub",
+          "supportPhone": "+1-888-012-3456"
+        }
+      },
+      {
+        "productName": "Silicone Anti-Vibration",
+        "sku": "ELE-PC-11266",
+        "unitPrice": 3.5,
+        "quantity": 28,
+        "vendor": {
+          "companyName": "Ivory Elephant Imports",
+          "contactEmail": "contact@ivoryelephant.com",
+          "supportPhone": "+1-888-101-2345"
+        }
+      },
+      {
+        "productName": "Staples 24/6 Box",
+        "sku": "OFF-SUP-15004",
+        "unitPrice": 1.5,
+        "quantity": 118,
+        "vendor": {
+          "companyName": "Phoenix United",
+          "contactEmail": "contact@phoenixunited.com",
+          "supportPhone": "+1-888-909-0909"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7d94be1a13d8b478529",
+    "orderDate": "2022-03-07T18:27:17",
+    "total": 1056.28,
+    "status": "Pending",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f258ba",
+      "username": "Jesse Watson",
+      "email": "jessewatson@hotmail.com",
+      "addresses": [
+        {
+          "street": "Flat 6\nMiah mountain",
+          "city": "East Hilary",
+          "county": "East Lothian",
+          "zipcode": "CA68 2HE",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 5, Abdul flats, O'Brienstad, ML89 0XG"
+        },
+        {
+          "street": "Studio 35\nKimberley hollow",
+          "city": "East Sam",
+          "county": "Lancashire",
+          "zipcode": "L8 6RT",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 29, Evans roads, Jaynemouth, LD3 8FY"
+        },
+        {
+          "street": "3 Victoria valleys",
+          "city": "Kirbyview",
+          "county": "Cornwall",
+          "zipcode": "S1A 3RX",
+          "country": "United Kingdom",
+          "fullAddress": "0 Maureen skyway, Lake Kelly, L61 6BF"
+        },
+        {
+          "street": "Flat 34\nTaylor island",
+          "city": "Lake Georgia",
+          "county": "Warwickshire",
+          "zipcode": "AB02 8BP",
+          "country": "United Kingdom",
+          "fullAddress": "0 Sheila cape, Fieldborough, L3 4SS"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Screw Extractor Kit",
+          "sku": "TOO-ACC-13549",
+          "price": 5.0,
+          "quantity": 40
+        },
+        {
+          "productName": "Fish Food Flakes",
+          "sku": "PET-FIS-14168",
+          "price": 3.5,
+          "quantity": 19
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Flat 6\nMiah mountain",
+        "city": "East Hilary",
+        "county": "East Lothian",
+        "zipcode": "CA68 2HE",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 5, Abdul flats, O'Brienstad, ML89 0XG"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "JL131380317RY"
+    },
+    "items": [
+      {
+        "productName": "Vegetable Brush",
+        "sku": "HOM-KIT-11225",
+        "unitPrice": 3.5,
+        "quantity": 25,
+        "vendor": {
+          "companyName": "Bibliophile's Corner",
+          "contactEmail": "orders@bibliophilescorner.com",
+          "supportPhone": "+1-888-901-2345"
+        }
+      },
+      {
+        "productName": "Shoelaces Flat",
+        "sku": "FAS-ACC-14986",
+        "unitPrice": 1.5,
+        "quantity": 71,
+        "vendor": {
+          "companyName": "Urban Vogue Outfitters",
+          "contactEmail": "info@urbanvogue.com",
+          "supportPhone": "+1-888-223-3445"
+        }
+      },
+      {
+        "productName": "Badminton Grip Tape",
+        "sku": "SPT-BAD-10470",
+        "unitPrice": 4.99,
+        "quantity": 22,
+        "vendor": {
+          "companyName": "Momentum Active",
+          "contactEmail": "contact@momentumactive.com",
+          "supportPhone": "+1-888-777-8888"
+        }
+      },
+      {
+        "productName": "Ballpoint Pens Blue",
+        "sku": "OFF-WRI-12381",
+        "unitPrice": 3.5,
+        "quantity": 35,
+        "vendor": {
+          "companyName": "Velocity Sports Gear",
+          "contactEmail": "info@velocitysports.com",
+          "supportPhone": "+1-888-789-0123"
+        }
+      },
+      {
+        "productName": "Leaf Rake Fan",
+        "sku": "GAR-TOO-12325",
+        "unitPrice": 12.5,
+        "quantity": 26,
+        "vendor": {
+          "companyName": "Nexus Innovations",
+          "contactEmail": "contact@nexusinnov.com",
+          "supportPhone": "+1-888-121-2121"
+        }
+      },
+      {
+        "productName": "Sandpaper 120 Grit",
+        "sku": "TOO-ACC-13773",
+        "unitPrice": 0.8,
+        "quantity": 75,
+        "vendor": {
+          "companyName": "Amber Ape Adventures",
+          "contactEmail": "support@amberape.com",
+          "supportPhone": "+1-888-545-5566"
+        }
+      },
+      {
+        "productName": "Makeup Sponge Set",
+        "sku": "BEA-ACC-14559",
+        "unitPrice": 7.0,
+        "quantity": 35,
+        "vendor": {
+          "companyName": "Tidal Wave Inc.",
+          "contactEmail": "support@tidalwaveinc.com",
+          "supportPhone": "+1-888-556-7890"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7da4be1a13d8b47852a",
+    "orderDate": "2023-05-07T03:41:16",
+    "total": 798.36,
+    "status": "Shipped",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f258f1",
+      "username": "Kathleen Scott",
+      "email": "kathleenscott@hotmail.com",
+      "addresses": [
+        {
+          "street": "Flat 64\nKelly dale",
+          "city": "Ryanmouth",
+          "county": "West Berkshire",
+          "zipcode": "E17 4XL",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 86n, Gregory square, Cliffordborough, UB1Y 7ED"
+        },
+        {
+          "street": "639 Malcolm gardens",
+          "city": "Loweburgh",
+          "county": "Renfrewshire",
+          "zipcode": "E6 4US",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 9, Miller island, South Ben, HR54 7JT"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Push Pins Clear",
+          "sku": "OFF-SUP-13898",
+          "price": 2.0,
+          "quantity": 8
+        },
+        {
+          "productName": "Dental Floss Picks",
+          "sku": "HEA-HYG-13397",
+          "price": 3.0,
+          "quantity": 56
+        },
+        {
+          "productName": "Wall Clock Modern",
+          "sku": "HOM-DEC-10811",
+          "price": 22.99,
+          "quantity": 5
+        },
+        {
+          "productName": "Tablecloth Linen",
+          "sku": "HOM-DEC-10177",
+          "price": 28.99,
+          "quantity": 5
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "639 Malcolm gardens",
+        "city": "Loweburgh",
+        "county": "Renfrewshire",
+        "zipcode": "E6 4US",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 9, Miller island, South Ben, HR54 7JT"
+      },
+      "method": "DHL Express",
+      "trackingCode": "MA931277642KT"
+    },
+    "items": [
+      {
+        "productName": "Hot Glue Gun",
+        "sku": "TOO-CRA-12099",
+        "unitPrice": 10.5,
+        "quantity": 35,
+        "vendor": {
+          "companyName": "The Culinary Edge",
+          "contactEmail": "help@culinaryedge.co",
+          "supportPhone": "+1-888-656-7676"
+        }
+      },
+      {
+        "productName": "Dog Leash 1.2m",
+        "sku": "PET-DOG-13058",
+        "unitPrice": 5.5,
+        "quantity": 30,
+        "vendor": {
+          "companyName": "Northstar Provisions",
+          "contactEmail": "contact@northstarprovisions.com",
+          "supportPhone": "+1-888-445-6789"
+        }
+      },
+      {
+        "productName": "Folding Camp Stool",
+        "sku": "SPO-CAM-14686",
+        "unitPrice": 10.0,
+        "quantity": 14,
+        "vendor": {
+          "companyName": "Urban Vogue Outfitters",
+          "contactEmail": "info@urbanvogue.com",
+          "supportPhone": "+1-888-223-3445"
+        }
+      },
+      {
+        "productName": "Drawing Mannequin",
+        "sku": "ART-TOO-11317",
+        "unitPrice": 8.99,
+        "quantity": 14,
+        "vendor": {
+          "companyName": "Nexus Innovations",
+          "contactEmail": "contact@nexusinnov.com",
+          "supportPhone": "+1-888-121-2121"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7da4be1a13d8b47852b",
+    "orderDate": "2023-02-07T19:50:34",
+    "total": 1724.45,
+    "status": "Delivered",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f259ff",
+      "username": "Sophia Rodriguez",
+      "email": "sophiarodriguez@gmail.com",
+      "addresses": [
+        {
+          "street": "0 Eileen crescent",
+          "city": "Port Rosieburgh",
+          "county": "Cheshire",
+          "zipcode": "M5 5QP",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 85, Walker summit, Bentleyfurt, MK66 4SQ"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Dog Whistle Silent",
+          "sku": "PET-TRA-13731",
+          "price": 3.0,
+          "quantity": 37
+        },
+        {
+          "productName": "Power Bank 5000mAh",
+          "sku": "ELE-ACC-10752",
+          "price": 14.99,
+          "quantity": 46
+        },
+        {
+          "productName": "Car Window Shade",
+          "sku": "AUT-ACC-11436",
+          "price": 9.99,
+          "quantity": 64
+        },
+        {
+          "productName": "Closet Shelf Divider",
+          "sku": "HOM-ORG-13531",
+          "price": 9.0,
+          "quantity": 14
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "0 Eileen crescent",
+        "city": "Port Rosieburgh",
+        "county": "Cheshire",
+        "zipcode": "M5 5QP",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 85, Walker summit, Bentleyfurt, MK66 4SQ"
+      },
+      "method": "FedEx",
+      "trackingCode": "QO568566252XA"
+    },
+    "items": [
+      {
+        "productName": "TV Soundbar",
+        "sku": "ELE-AUD-16097",
+        "unitPrice": 79.99,
+        "quantity": 7,
+        "vendor": {
+          "companyName": "Zenith Athletics",
+          "contactEmail": "contact@zenithathletics.com",
+          "supportPhone": "+1-888-890-1234"
+        }
+      },
+      {
+        "productName": "Audio Y Splitter",
+        "sku": "ELE-AUD-11067",
+        "unitPrice": 4.99,
+        "quantity": 34,
+        "vendor": {
+          "companyName": "Innovatech Solutions",
+          "contactEmail": "sales@innovatech.com",
+          "supportPhone": "+1-888-123-4567"
+        }
+      },
+      {
+        "productName": "HDMI Cable 3m",
+        "sku": "ELE-CAB-15013",
+        "unitPrice": 6.5,
+        "quantity": 25,
+        "vendor": {
+          "companyName": "Golden Grain Foods",
+          "contactEmail": "support@goldengrain.com",
+          "supportPhone": "+1-888-990-1234"
+        }
+      },
+      {
+        "productName": "Cable Sleeve White",
+        "sku": "ELE-ACC-11055",
+        "unitPrice": 6.99,
+        "quantity": 9,
+        "vendor": {
+          "companyName": "Sapphire Shark Supplies",
+          "contactEmail": "sales@sapphireshark.com",
+          "supportPhone": "+1-888-545-5678"
+        }
+      },
+      {
+        "productName": "Puffer Jacket Men",
+        "sku": "FAS-CLO-10122",
+        "unitPrice": 69.95,
+        "quantity": 11,
+        "vendor": {
+          "companyName": "Yellow Jacket Sports",
+          "contactEmail": "info@yellowjacketsports.com",
+          "supportPhone": "+1-888-888-0123"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7da4be1a13d8b47852c",
+    "orderDate": "2025-01-26T06:32:12",
+    "total": 280.0,
+    "status": "Pending",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25a88",
+      "username": "Anna Mitchell",
+      "email": "annamitchell@icloud.com",
+      "addresses": [
+        {
+          "street": "Flat 1\nJohnston points",
+          "city": "East Damien",
+          "county": "Cambridgeshire",
+          "zipcode": "W16 3YG",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 31O, Andrew roads, North Leonardburgh, CH9Y 1JY"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Dust Masks Disposable",
+          "sku": "TOO-SAF-13046",
+          "price": 4.0,
+          "quantity": 3
+        },
+        {
+          "productName": "Bath Sponge Loofah",
+          "sku": "BEA-BAT-12224",
+          "price": 3.5,
+          "quantity": 4
+        },
+        {
+          "productName": "Bento Lunch Box",
+          "sku": "KIT-STO-13266",
+          "price": 12.0,
+          "quantity": 27
+        },
+        {
+          "productName": "Controller Grip Cover",
+          "sku": "ACC-GAM-13357",
+          "price": 8.0,
+          "quantity": 14
+        },
+        {
+          "productName": "Oven Mitts Pair",
+          "sku": "HOM-KIT-11139",
+          "price": 13.99,
+          "quantity": 1
+        },
+        {
+          "productName": "Microfiber Wax Pads",
+          "sku": "AUT-DET-14786",
+          "price": 3.0,
+          "quantity": 29
+        },
+        {
+          "productName": "Slushie Maker Cup",
+          "sku": "KIT-GAD-13332",
+          "price": 14.0,
+          "quantity": 30
+        },
+        {
+          "productName": "Women's Ankle Boots",
+          "sku": "FAS-SHO-16042",
+          "price": 55.99,
+          "quantity": 4
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Flat 1\nJohnston points",
+        "city": "East Damien",
+        "county": "Cambridgeshire",
+        "zipcode": "W16 3YG",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 31O, Andrew roads, North Leonardburgh, CH9Y 1JY"
+      },
+      "method": "UPS Standard",
+      "trackingCode": "VI027819769TX"
+    },
+    "items": [
+      {
+        "productName": "Precision Driver Set",
+        "sku": "TOO-HAN-13924",
+        "unitPrice": 8.0,
+        "quantity": 35,
+        "vendor": {
+          "companyName": "Amber Ape Adventures",
+          "contactEmail": "support@amberape.com",
+          "supportPhone": "+1-888-545-5566"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7da4be1a13d8b47852d",
+    "orderDate": "2020-06-11T01:17:40",
+    "total": 84.0,
+    "status": "Pending",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f259dd",
+      "username": "Andrea Howard",
+      "email": "andreahoward@gmail.com",
+      "addresses": [
+        {
+          "street": "71 Grace shore",
+          "city": "Wheelerhaven",
+          "county": "Moray",
+          "zipcode": "EN63 4ZF",
+          "country": "United Kingdom",
+          "fullAddress": "048 Charlene loaf, New Charliehaven, TF18 5JN"
+        },
+        {
+          "street": "Flat 3\nMichelle parks",
+          "city": "North Margaretbury",
+          "county": "Stirling",
+          "zipcode": "EN8H 0WD",
+          "country": "United Kingdom",
+          "fullAddress": "82 Porter road, Smithmouth, W6D 3UT"
+        },
+        {
+          "street": "Studio 84I\nVanessa run",
+          "city": "East Beverley",
+          "county": "Caernarvonshire",
+          "zipcode": "E8 2JS",
+          "country": "United Kingdom",
+          "fullAddress": "6 Harper ramp, Lake Paulhaven, N9J 1ZH"
+        },
+        {
+          "street": "8 Wells loaf",
+          "city": "Stuarttown",
+          "county": "Inverclyde",
+          "zipcode": "W9 3QH",
+          "country": "United Kingdom",
+          "fullAddress": "164 Waters rue, South Lindsey, S4 6EB"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Tire Valve Tool",
+          "sku": "AUT-TOO-11493",
+          "price": 3.99,
+          "quantity": 17
+        },
+        {
+          "productName": "Car Wash Bucket",
+          "sku": "AUT-CLN-12424",
+          "price": 8.0,
+          "quantity": 14
+        },
+        {
+          "productName": "Smart Watch Strap Silicone",
+          "sku": "ELE-WEA-10802",
+          "price": 9.99,
+          "quantity": 47
+        },
+        {
+          "productName": "File Folder Labels",
+          "sku": "OFF-SUP-12705",
+          "price": 3.0,
+          "quantity": 80
+        },
+        {
+          "productName": "Staple Remover Tool",
+          "sku": "HOM-OFF-11204",
+          "price": 2.5,
+          "quantity": 98
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 84I\nVanessa run",
+        "city": "East Beverley",
+        "county": "Caernarvonshire",
+        "zipcode": "E8 2JS",
+        "country": "United Kingdom",
+        "fullAddress": "6 Harper ramp, Lake Paulhaven, N9J 1ZH"
+      },
+      "method": "FedEx",
+      "trackingCode": "MA635764597OY"
+    },
+    "items": [
+      {
+        "productName": "Acrylic Paint Tube",
+        "sku": "ART-PAI-13952",
+        "unitPrice": 2.0,
+        "quantity": 42,
+        "vendor": {
+          "companyName": "Aurora Tech",
+          "contactEmail": "info@auroratech.io",
+          "supportPhone": "+1-888-565-6565"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7da4be1a13d8b47852e",
+    "orderDate": "2021-10-04T18:15:44",
+    "total": 963.5,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25ad7",
+      "username": "Mark Clark",
+      "email": "markclark@hotmail.com",
+      "addresses": [
+        {
+          "street": "4 Phillips shore",
+          "city": "Amberton",
+          "county": "Buckinghamshire",
+          "zipcode": "NP2A 4LH",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 10, Molly cliff, Lynchmouth, LS6 4BU"
+        },
+        {
+          "street": "1 Powell hollow",
+          "city": "Lake Ruthbury",
+          "county": "Antrim",
+          "zipcode": "L6 3AF",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 82v, Robinson hills, Graemeburgh, AL8R 0QY"
+        },
+        {
+          "street": "Studio 96r\nButler tunnel",
+          "city": "Blackberg",
+          "county": "Eilean Siar",
+          "zipcode": "G94 1ZT",
+          "country": "United Kingdom",
+          "fullAddress": "19 Brooks circles, Traceyside, NE4 7UF"
+        },
+        {
+          "street": "Studio 20j\nHussain mountain",
+          "city": "West Charlotte",
+          "county": "Greater London",
+          "zipcode": "W4T 7SL",
+          "country": "United Kingdom",
+          "fullAddress": "34 Francis islands, South Russellville, S0K 7UP"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Felt Bedside Pocket",
+          "sku": "HOM-ORG-14772",
+          "price": 7.0,
+          "quantity": 47
+        },
+        {
+          "productName": "LED Dog Collar",
+          "sku": "PET-ACC-14767",
+          "price": 6.0,
+          "quantity": 26
+        },
+        {
+          "productName": "Binder Clips Assorted",
+          "sku": "OFF-SUP-12704",
+          "price": 4.5,
+          "quantity": 4
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 20j\nHussain mountain",
+        "city": "West Charlotte",
+        "county": "Greater London",
+        "zipcode": "W4T 7SL",
+        "country": "United Kingdom",
+        "fullAddress": "34 Francis islands, South Russellville, S0K 7UP"
+      },
+      "method": "DHL Express",
+      "trackingCode": "XM384496769TT"
+    },
+    "items": [
+      {
+        "productName": "Silicone Spatula",
+        "sku": "KIT-TOO-14868",
+        "unitPrice": 3.5,
+        "quantity": 25,
+        "vendor": {
+          "companyName": "Gray Fox Tech",
+          "contactEmail": "support@grayfoxtech.com",
+          "supportPhone": "+1-888-444-6789"
+        }
+      },
+      {
+        "productName": "Glue Stick Washable",
+        "sku": "OFF-ADH-12385",
+        "unitPrice": 2.5,
+        "quantity": 87,
+        "vendor": {
+          "companyName": "Chic Threads Apparel",
+          "contactEmail": "sales@chicthreads.com",
+          "supportPhone": "+1-888-112-2334"
+        }
+      },
+      {
+        "productName": "Mini Spirit Level",
+        "sku": "TOO-MEA-15237",
+        "unitPrice": 2.5,
+        "quantity": 46,
+        "vendor": {
+          "companyName": "Blue Jay Books",
+          "contactEmail": "orders@bluejaybooks.com",
+          "supportPhone": "+1-888-889-0123"
+        }
+      },
+      {
+        "productName": "File Set 3pc",
+        "sku": "TOO-HAN-12591",
+        "unitPrice": 10.5,
+        "quantity": 4,
+        "vendor": {
+          "companyName": "Aquamarine Alligator Art",
+          "contactEmail": "info@aquamarinealligator.com",
+          "supportPhone": "+1-888-878-8901"
+        }
+      },
+      {
+        "productName": "Scalp Massager Brush",
+        "sku": "BEA-HAI-15321",
+        "unitPrice": 4.5,
+        "quantity": 67,
+        "vendor": {
+          "companyName": "Orange Octopus Optics",
+          "contactEmail": "sales@orangeoctopus.com",
+          "supportPhone": "+1-888-777-9012"
+        }
+      },
+      {
+        "productName": "Teething Mitt",
+        "sku": "BAB-TOY-12680",
+        "unitPrice": 5.0,
+        "quantity": 40,
+        "vendor": {
+          "companyName": "Summit Supply Co.",
+          "contactEmail": "support@summitsupply.co",
+          "supportPhone": "+1-888-112-3456"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7da4be1a13d8b47852f",
+    "orderDate": "2024-03-01T19:05:56",
+    "total": 1104.09,
+    "status": "Delivered",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f258bc",
+      "username": "Bryan Chavez",
+      "email": "bryanchavez@gmail.com",
+      "addresses": [
+        {
+          "street": "Flat 47\nBerry run",
+          "city": "Port Gillian",
+          "county": "West Midlands",
+          "zipcode": "LE4W 4GX",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 42n, Clarke island, Lake Luke, WC2 6LR"
+        },
+        {
+          "street": "639 Khan knolls",
+          "city": "Watsonside",
+          "county": "Leicestershire",
+          "zipcode": "N4 2DH",
+          "country": "United Kingdom",
+          "fullAddress": "145 Amber bridge, Debraborough, W6F 6DD"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Sandpaper Sponge",
+          "sku": "TOO-ACC-12595",
+          "price": 2.5,
+          "quantity": 32
+        },
+        {
+          "productName": "Pet Hair Roller",
+          "sku": "PET-CLN-12847",
+          "price": 4.0,
+          "quantity": 60
+        },
+        {
+          "productName": "Face Mask Brush",
+          "sku": "BEA-SKI-12929",
+          "price": 3.0,
+          "quantity": 40
+        },
+        {
+          "productName": "Throw Pillow Cover",
+          "sku": "HOM-DEC-10829",
+          "price": 10.5,
+          "quantity": 22
+        },
+        {
+          "productName": "Sketching Pencils Set",
+          "sku": "ART-SUP-10206",
+          "price": 14.5,
+          "quantity": 34
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Flat 47\nBerry run",
+        "city": "Port Gillian",
+        "county": "West Midlands",
+        "zipcode": "LE4W 4GX",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 42n, Clarke island, Lake Luke, WC2 6LR"
+      },
+      "method": "DHL Express",
+      "trackingCode": "IN986793916GS"
+    },
+    "items": [
+      {
+        "productName": "Snuffle Mat Mini",
+        "sku": "PET-TOY-13981",
+        "unitPrice": 10.0,
+        "quantity": 34,
+        "vendor": {
+          "companyName": "Teal Tiger Tech",
+          "contactEmail": "contact@tealtiger.tech",
+          "supportPhone": "+1-888-878-9012"
+        }
+      },
+      {
+        "productName": "Ping Pong Net Clip",
+        "sku": "SPT-TEN-10792",
+        "unitPrice": 9.99,
+        "quantity": 2,
+        "vendor": {
+          "companyName": "Nexus Innovations",
+          "contactEmail": "contact@nexusinnov.com",
+          "supportPhone": "+1-888-121-2121"
+        }
+      },
+      {
+        "productName": "Screen Wipes",
+        "sku": "ELE-CLN-15233",
+        "unitPrice": 3.5,
+        "quantity": 1,
+        "vendor": {
+          "companyName": "Northstar Provisions",
+          "contactEmail": "contact@northstarprovisions.com",
+          "supportPhone": "+1-888-445-6789"
+        }
+      },
+      {
+        "productName": "Digital Caliper 150mm",
+        "sku": "HOM-IMP-11000",
+        "unitPrice": 18.99,
+        "quantity": 39,
+        "vendor": {
+          "companyName": "Bibliophile's Corner",
+          "contactEmail": "orders@bibliophilescorner.com",
+          "supportPhone": "+1-888-901-2345"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7da4be1a13d8b478530",
+    "orderDate": "2022-09-08T09:04:41",
+    "total": 1561.17,
+    "status": "Pending",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25a8a",
+      "username": "Pamela Roberts",
+      "email": "pamelaroberts@hotmail.com",
+      "addresses": [
+        {
+          "street": "975 Kevin circles",
+          "city": "Thomasview",
+          "county": "Greater London",
+          "zipcode": "WF3 6HT",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 58s, Ann mill, Port Dorothyhaven, N2 7PW"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Desk Tape Dispenser",
+          "sku": "HOM-OFF-11105",
+          "price": 5.99,
+          "quantity": 41
+        },
+        {
+          "productName": "Camping Sleeping Bag",
+          "sku": "SPT-OUT-16009",
+          "price": 39.99,
+          "quantity": 3
+        },
+        {
+          "productName": "Ball Pump Adapter",
+          "sku": "SPT-ACC-10878",
+          "price": 1.99,
+          "quantity": 39
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "975 Kevin circles",
+        "city": "Thomasview",
+        "county": "Greater London",
+        "zipcode": "WF3 6HT",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 58s, Ann mill, Port Dorothyhaven, N2 7PW"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "UN390740257WP"
+    },
+    "items": [
+      {
+        "productName": "Bathtub Mat Rubber",
+        "sku": "HOM-BAT-12828",
+        "unitPrice": 10.0,
+        "quantity": 13,
+        "vendor": {
+          "companyName": "Silverline Goods",
+          "contactEmail": "sales@silverlinegoods.com",
+          "supportPhone": "+1-888-787-8787"
+        }
+      },
+      {
+        "productName": "Passport Wallet RFID",
+        "sku": "TRA-SEC-13328",
+        "unitPrice": 9.0,
+        "quantity": 41,
+        "vendor": {
+          "companyName": "Stellar Goods",
+          "contactEmail": "contact@stellargoods.net",
+          "supportPhone": "+1-888-456-7890"
+        }
+      },
+      {
+        "productName": "Car Phone Mount Vent",
+        "sku": "MOB-ACC-13364",
+        "unitPrice": 8.0,
+        "quantity": 37,
+        "vendor": {
+          "companyName": "Emerald City Goods",
+          "contactEmail": "contact@emeraldcitygoods.com",
+          "supportPhone": "+1-888-001-2345"
+        }
+      },
+      {
+        "productName": "Shower Curtain Rings Metal",
+        "sku": "HOM-BAT-10552",
+        "unitPrice": 8.99,
+        "quantity": 33,
+        "vendor": {
+          "companyName": "Aurora Tech",
+          "contactEmail": "info@auroratech.io",
+          "supportPhone": "+1-888-565-6565"
+        }
+      },
+      {
+        "productName": "Synthetic Paint Brushes",
+        "sku": "ART-TOO-12727",
+        "unitPrice": 8.5,
+        "quantity": 43,
+        "vendor": {
+          "companyName": "Quantum Devices",
+          "contactEmail": "info@quantumdev.com",
+          "supportPhone": "+1-888-345-6789"
+        }
+      },
+      {
+        "productName": "Magnifying Glass",
+        "sku": "OFF-ACC-13899",
+        "unitPrice": 4.0,
+        "quantity": 26,
+        "vendor": {
+          "companyName": "Ivory Elephant Imports",
+          "contactEmail": "contact@ivoryelephant.com",
+          "supportPhone": "+1-888-101-2345"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7da4be1a13d8b478531",
+    "orderDate": "2024-09-05T17:29:37",
+    "total": 605.5,
+    "status": "Processing",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25ac3",
+      "username": "Tiffany Miller",
+      "email": "tiffanymiller@yahoo.com",
+      "addresses": [
+        {
+          "street": "Studio 52\nDouglas wells",
+          "city": "Fionaton",
+          "county": "Renfrewshire",
+          "zipcode": "SY9N 0NR",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 53e, Harper streets, Lake Natalie, YO8M 0LT"
+        },
+        {
+          "street": "57 Rachael mountains",
+          "city": "Tuckerfort",
+          "county": "Derry and Londonderry",
+          "zipcode": "SA3X 4TP",
+          "country": "United Kingdom",
+          "fullAddress": "8 Sian station, Katherinestad, IM1B 3HL"
+        },
+        {
+          "street": "Studio 09p\nLewis roads",
+          "city": "South Alexandertown",
+          "county": "Leicestershire",
+          "zipcode": "BB6M 0EE",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 77, Joel groves, Port Gerald, G56 0YQ"
+        },
+        {
+          "street": "70 Reynolds burg",
+          "city": "Armstrongfurt",
+          "county": "Down",
+          "zipcode": "JE9 0XX",
+          "country": "United Kingdom",
+          "fullAddress": "2 Jeremy ferry, Abigailhaven, BS2 1AN"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Cotton Pad Holder",
+          "sku": "HOM-ORG-13278",
+          "price": 7.0,
+          "quantity": 37
+        },
+        {
+          "productName": "Glass Nail File",
+          "sku": "BEA-NAI-13726",
+          "price": 4.0,
+          "quantity": 23
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "57 Rachael mountains",
+        "city": "Tuckerfort",
+        "county": "Derry and Londonderry",
+        "zipcode": "SA3X 4TP",
+        "country": "United Kingdom",
+        "fullAddress": "8 Sian station, Katherinestad, IM1B 3HL"
+      },
+      "method": "UPS Standard",
+      "trackingCode": "QR915307061SY"
+    },
+    "items": [
+      {
+        "productName": "Push Pins Clear",
+        "sku": "OFF-SUP-13898",
+        "unitPrice": 2.0,
+        "quantity": 10,
+        "vendor": {
+          "companyName": "Violet Vixen Vogue",
+          "contactEmail": "support@violetvixenvogue.com",
+          "supportPhone": "+1-888-999-1234"
+        }
+      },
+      {
+        "productName": "Potpourri Bag",
+        "sku": "HOM-DEC-13012",
+        "unitPrice": 5.5,
+        "quantity": 18,
+        "vendor": {
+          "companyName": "Ruby Rooster Restaurant",
+          "contactEmail": "info@rubyrooster.com",
+          "supportPhone": "+1-888-434-4567"
+        }
+      },
+      {
+        "productName": "Tennis Vibration Dampener",
+        "sku": "SPT-TEN-10612",
+        "unitPrice": 3.5,
+        "quantity": 9,
+        "vendor": {
+          "companyName": "Digital Horizon",
+          "contactEmail": "contact@digitalhorizon.tech",
+          "supportPhone": "+1-888-334-4556"
+        }
+      },
+      {
+        "productName": "Ethernet Cable 5m",
+        "sku": "NET-CAB-14013",
+        "unitPrice": 4.5,
+        "quantity": 17,
+        "vendor": {
+          "companyName": "Pinnacle Performance",
+          "contactEmail": "info@pinnacleperf.com",
+          "supportPhone": "+1-888-445-5667"
+        }
+      },
+      {
+        "productName": "Rubber Drain Plug",
+        "sku": "KIT-ACC-14390",
+        "unitPrice": 1.0,
+        "quantity": 20,
+        "vendor": {
+          "companyName": "StyleSphere",
+          "contactEmail": "contact@stylesphere.co",
+          "supportPhone": "+1-888-667-7889"
+        }
+      },
+      {
+        "productName": "Fridge Bins Clear",
+        "sku": "KIT-ORG-14617",
+        "unitPrice": 9.5,
+        "quantity": 37,
+        "vendor": {
+          "companyName": "Celestial Tech",
+          "contactEmail": "support@celestial.tech",
+          "supportPhone": "+1-888-111-2222"
+        }
+      },
+      {
+        "productName": "Pet Flea Comb",
+        "sku": "PET-GRO-12685",
+        "unitPrice": 3.5,
+        "quantity": 2,
+        "vendor": {
+          "companyName": "Ironclad Systems",
+          "contactEmail": "info@ironcladsys.com",
+          "supportPhone": "+1-888-667-8901"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7da4be1a13d8b478532",
+    "orderDate": "2021-12-23T19:21:58",
+    "total": 649.35,
+    "status": "Pending",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25a30",
+      "username": "Dennis Collins",
+      "email": "denniscollins@icloud.com",
+      "addresses": [
+        {
+          "street": "Flat 45a\nMorgan square",
+          "city": "Marshallmouth",
+          "county": "Anglesey",
+          "zipcode": "E9W 5ZY",
+          "country": "United Kingdom",
+          "fullAddress": "4 Christine rapid, Abdulshire, KW38 6DH"
+        },
+        {
+          "street": "2 Richard circles",
+          "city": "Allanshire",
+          "county": "Cardiganshire",
+          "zipcode": "IV2 9UT",
+          "country": "United Kingdom",
+          "fullAddress": "41 Alex field, Aaronview, E1 1GE"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Motherboard Screws",
+          "sku": "ELE-PC-11061",
+          "price": 2.99,
+          "quantity": 28
+        },
+        {
+          "productName": "Tennis Ball Training",
+          "sku": "SPO-TEN-13737",
+          "price": 1.5,
+          "quantity": 27
+        },
+        {
+          "productName": "Cat Litter Scoop Mini",
+          "sku": "PET-CAT-12960",
+          "price": 2.0,
+          "quantity": 34
+        },
+        {
+          "productName": "Travel Door Alarm",
+          "sku": "TRA-SEC-14596",
+          "price": 8.0,
+          "quantity": 21
+        },
+        {
+          "productName": "Audio Splitter Cable",
+          "sku": "ELE-AUD-13946",
+          "price": 2.0,
+          "quantity": 23
+        },
+        {
+          "productName": "Solder Wire Roll",
+          "sku": "TOO-ELE-12562",
+          "price": 9.0,
+          "quantity": 41
+        },
+        {
+          "productName": "Push Pins Clear",
+          "sku": "OFF-SUP-14483",
+          "price": 1.5,
+          "quantity": 11
+        },
+        {
+          "productName": "Sheet Protectors",
+          "sku": "OFF-ORG-12369",
+          "price": 5.5,
+          "quantity": 40
+        },
+        {
+          "productName": "Silicone Pot Holder",
+          "sku": "KIT-ACC-13256",
+          "price": 4.5,
+          "quantity": 52
+        },
+        {
+          "productName": "Napkin Holder",
+          "sku": "KIT-ORG-14393",
+          "price": 4.0,
+          "quantity": 40
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "2 Richard circles",
+        "city": "Allanshire",
+        "county": "Cardiganshire",
+        "zipcode": "IV2 9UT",
+        "country": "United Kingdom",
+        "fullAddress": "41 Alex field, Aaronview, E1 1GE"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "AL994572043SQ"
+    },
+    "items": [
+      {
+        "productName": "Phone Stand Adjustable",
+        "sku": "ELE-ACC-11218",
+        "unitPrice": 9.99,
+        "quantity": 65,
+        "vendor": {
+          "companyName": "Apex Gadgetry",
+          "contactEmail": "support@apexgadgetry.com",
+          "supportPhone": "+1-888-234-5678"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7da4be1a13d8b478533",
+    "orderDate": "2025-04-21T12:19:13",
+    "total": 1370.51,
+    "status": "Processing",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25a17",
+      "username": "George Allen",
+      "email": "georgeallen@icloud.com",
+      "addresses": [
+        {
+          "street": "Flat 94\nMaria camp",
+          "city": "Abbieton",
+          "county": "Eilean Siar",
+          "zipcode": "E9 9LS",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 00a, Reed field, South Trevorton, E97 8SQ"
+        },
+        {
+          "street": "Flat 95\nDorothy fields",
+          "city": "East Angela",
+          "county": "Clackmannanshire",
+          "zipcode": "WV1 3AR",
+          "country": "United Kingdom",
+          "fullAddress": "88 Hughes lane, New Sheilatown, WS35 2YW"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Herb Scissors 5-Blade",
+          "sku": "KIT-TOO-13388",
+          "price": 8.5,
+          "quantity": 19
+        },
+        {
+          "productName": "Tennis Grip Tape",
+          "sku": "SPT-TEN-10866",
+          "price": 4.5,
+          "quantity": 73
+        },
+        {
+          "productName": "Volleyball Knee Pads",
+          "sku": "SPT-TEA-10348",
+          "price": 18.99,
+          "quantity": 24
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Flat 95\nDorothy fields",
+        "city": "East Angela",
+        "county": "Clackmannanshire",
+        "zipcode": "WV1 3AR",
+        "country": "United Kingdom",
+        "fullAddress": "88 Hughes lane, New Sheilatown, WS35 2YW"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "IM648490768CU"
+    },
+    "items": [
+      {
+        "productName": "Cabinet Safety Locks",
+        "sku": "BAB-SAF-14758",
+        "unitPrice": 3.5,
+        "quantity": 55,
+        "vendor": {
+          "companyName": "Bibliophile's Corner",
+          "contactEmail": "orders@bibliophilescorner.com",
+          "supportPhone": "+1-888-901-2345"
+        }
+      },
+      {
+        "productName": "Adhesive Cable Clips",
+        "sku": "ELE-ORG-15126",
+        "unitPrice": 3.0,
+        "quantity": 61,
+        "vendor": {
+          "companyName": "Apex Gadgetry",
+          "contactEmail": "support@apexgadgetry.com",
+          "supportPhone": "+1-888-234-5678"
+        }
+      },
+      {
+        "productName": "Cat Collar Reflective",
+        "sku": "PET-ACC-11423",
+        "unitPrice": 4.99,
+        "quantity": 54,
+        "vendor": {
+          "companyName": "Teal Tiger Tech",
+          "contactEmail": "contact@tealtiger.tech",
+          "supportPhone": "+1-888-878-9012"
+        }
+      },
+      {
+        "productName": "Glow Sticks Pack",
+        "sku": "TOY-PAR-12662",
+        "unitPrice": 8.0,
+        "quantity": 57,
+        "vendor": {
+          "companyName": "Digital Horizon",
+          "contactEmail": "contact@digitalhorizon.tech",
+          "supportPhone": "+1-888-334-4556"
+        }
+      },
+      {
+        "productName": "Silk Necktie",
+        "sku": "FAS-ACC-16027",
+        "unitPrice": 29.95,
+        "quantity": 9,
+        "vendor": {
+          "companyName": "The Scholar's Press",
+          "contactEmail": "publishing@scholarspress.com",
+          "supportPhone": "+1-888-999-0000"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7db4be1a13d8b478534",
+    "orderDate": "2019-05-11T23:01:23",
+    "total": 2101.03,
+    "status": "Delivered",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f258db",
+      "username": "Sarah Wilson",
+      "email": "sarahwilson@hotmail.com",
+      "addresses": [
+        {
+          "street": "Studio 28i\nSmith mountain",
+          "city": "West Derekburgh",
+          "county": "Cleveland",
+          "zipcode": "BA3 2HS",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 0, Rogers dam, Bradleyport, W2S 4TN"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Digital Caliper 150mm",
+          "sku": "HOM-IMP-11000",
+          "price": 18.99,
+          "quantity": 24
+        },
+        {
+          "productName": "Tabletop Easel",
+          "sku": "ART-DIS-12729",
+          "price": 18.0,
+          "quantity": 9
+        },
+        {
+          "productName": "Ball Inflator Nozzle",
+          "sku": "SPT-ACC-11246",
+          "price": 1.5,
+          "quantity": 21
+        },
+        {
+          "productName": "Sunglasses Aviator",
+          "sku": "FAS-EYE-12052",
+          "price": 15.5,
+          "quantity": 21
+        },
+        {
+          "productName": "Webcam 4K",
+          "sku": "ELE-PC-10313",
+          "price": 129.0,
+          "quantity": 8
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 28i\nSmith mountain",
+        "city": "West Derekburgh",
+        "county": "Cleveland",
+        "zipcode": "BA3 2HS",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 0, Rogers dam, Bradleyport, W2S 4TN"
+      },
+      "method": "DHL Express",
+      "trackingCode": "QY001268657HS"
+    },
+    "items": [
+      {
+        "productName": "Cable Ties Velcro",
+        "sku": "ELE-ACC-10337",
+        "unitPrice": 6.99,
+        "quantity": 92,
+        "vendor": {
+          "companyName": "Blue Jay Books",
+          "contactEmail": "orders@bluejaybooks.com",
+          "supportPhone": "+1-888-889-0123"
+        }
+      },
+      {
+        "productName": "Earphone Foam Pads",
+        "sku": "ELE-AUD-10578",
+        "unitPrice": 2.5,
+        "quantity": 66,
+        "vendor": {
+          "companyName": "Saffron Stallion Sports",
+          "contactEmail": "contact@saffronstallion.com",
+          "supportPhone": "+1-888-545-6789"
+        }
+      },
+      {
+        "productName": "Cookware Set 10-Piece",
+        "sku": "HOM-KIT-10119",
+        "unitPrice": 129.99,
+        "quantity": 5,
+        "vendor": {
+          "companyName": "Green Turtle Gaming",
+          "contactEmail": "info@greenturtlegaming.com",
+          "supportPhone": "+1-888-555-7890"
+        }
+      },
+      {
+        "productName": "Wireless Charging Pad",
+        "sku": "MOB-ACC-12103",
+        "unitPrice": 18.0,
+        "quantity": 8,
+        "vendor": {
+          "companyName": "Silverline Goods",
+          "contactEmail": "sales@silverlinegoods.com",
+          "supportPhone": "+1-888-787-8787"
+        }
+      },
+      {
+        "productName": "Baking Cups Paper",
+        "sku": "HOM-KIT-11080",
+        "unitPrice": 3.5,
+        "quantity": 64,
+        "vendor": {
+          "companyName": "Pinnacle Performance",
+          "contactEmail": "info@pinnacleperf.com",
+          "supportPhone": "+1-888-445-5667"
+        }
+      },
+      {
+        "productName": "Permanent Markers Black",
+        "sku": "OFF-WRI-12379",
+        "unitPrice": 5.0,
+        "quantity": 55,
+        "vendor": {
+          "companyName": "Fusion Homewares",
+          "contactEmail": "support@fusionhome.com",
+          "supportPhone": "+1-888-567-8901"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7db4be1a13d8b478535",
+    "orderDate": "2024-08-24T09:23:46",
+    "total": 2514.0,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25a4d",
+      "username": "Joe Mendoza",
+      "email": "joemendoza@gmail.com",
+      "addresses": [
+        {
+          "street": "5 Cunningham falls",
+          "city": "Stevensonchester",
+          "county": "Renfrewshire",
+          "zipcode": "TW7 2SB",
+          "country": "United Kingdom",
+          "fullAddress": "09 Smith meadow, South Marie, W54 3UD"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Screen Wipes Tub",
+          "sku": "ELE-CLN-13944",
+          "price": 3.5,
+          "quantity": 7
+        },
+        {
+          "productName": "Car Headrest Hooks",
+          "sku": "AUT-ORG-13315",
+          "price": 5.0,
+          "quantity": 20
+        },
+        {
+          "productName": "HDMI Cable 2m",
+          "sku": "ELE-CAB-13140",
+          "price": 6.0,
+          "quantity": 9
+        },
+        {
+          "productName": "Drop Cloth Plastic",
+          "sku": "HOM-DEC-12418",
+          "price": 3.5,
+          "quantity": 80
+        },
+        {
+          "productName": "Paracord Keychain",
+          "sku": "SPO-SUR-13295",
+          "price": 4.5,
+          "quantity": 8
+        },
+        {
+          "productName": "Bag Clips Assorted",
+          "sku": "KIT-STO-12887",
+          "price": 4.0,
+          "quantity": 39
+        },
+        {
+          "productName": "Glass Food Containers",
+          "sku": "HOM-KIT-10049",
+          "price": 39.5,
+          "quantity": 14
+        },
+        {
+          "productName": "Spin Mop and Bucket",
+          "sku": "HOM-CLN-16098",
+          "price": 32.99,
+          "quantity": 41
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "5 Cunningham falls",
+        "city": "Stevensonchester",
+        "county": "Renfrewshire",
+        "zipcode": "TW7 2SB",
+        "country": "United Kingdom",
+        "fullAddress": "09 Smith meadow, South Marie, W54 3UD"
+      },
+      "method": "DHL Express",
+      "trackingCode": "UJ530047605MQ"
+    },
+    "items": [
+      {
+        "productName": "Dog Collar Reflective",
+        "sku": "PET-DOG-13230",
+        "unitPrice": 6.0,
+        "quantity": 25,
+        "vendor": {
+          "companyName": "Magenta Moose Media",
+          "contactEmail": "sales@magentamoose.com",
+          "supportPhone": "+1-888-767-8901"
+        }
+      },
+      {
+        "productName": "Portable Monitor 15in",
+        "sku": "ELE-DIS-15334",
+        "unitPrice": 120.0,
+        "quantity": 6,
+        "vendor": {
+          "companyName": "Onyx Otter Outfitters",
+          "contactEmail": "sales@onyxotter.com",
+          "supportPhone": "+1-888-101-1234"
+        }
+      },
+      {
+        "productName": "Wrist Sweatband",
+        "sku": "SPO-CLO-13962",
+        "unitPrice": 2.0,
+        "quantity": 52,
+        "vendor": {
+          "companyName": "Blue Jay Books",
+          "contactEmail": "orders@bluejaybooks.com",
+          "supportPhone": "+1-888-889-0123"
+        }
+      },
+      {
+        "productName": "Bamboo Cutting Board",
+        "sku": "HOM-KIT-10314",
+        "unitPrice": 22.0,
+        "quantity": 37,
+        "vendor": {
+          "companyName": "Evergreen Books",
+          "contactEmail": "support@evergreenbooks.com",
+          "supportPhone": "+1-888-556-6778"
+        }
+      },
+      {
+        "productName": "Chain Lube Dry",
+        "sku": "SPO-CYC-14651",
+        "unitPrice": 7.0,
+        "quantity": 44,
+        "vendor": {
+          "companyName": "Azure Turtle Toys",
+          "contactEmail": "info@azureturtle.com",
+          "supportPhone": "+1-888-323-4567"
+        }
+      },
+      {
+        "productName": "Soft Measuring Tape",
+        "sku": "HOM-CRA-12734",
+        "unitPrice": 2.0,
+        "quantity": 83,
+        "vendor": {
+          "companyName": "AquaLuxe Kitchenware",
+          "contactEmail": "sales@aqualuxe.kitchen",
+          "supportPhone": "+1-888-555-6666"
+        }
+      },
+      {
+        "productName": "Warning Triangle",
+        "sku": "AUT-EME-12794",
+        "unitPrice": 6.0,
+        "quantity": 42,
+        "vendor": {
+          "companyName": "Peridot Panther Publishing",
+          "contactEmail": "support@peridotpanther.com",
+          "supportPhone": "+1-888-101-1122"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7db4be1a13d8b478536",
+    "orderDate": "2019-11-21T19:00:10",
+    "total": 793.84,
+    "status": "Processing",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25b39",
+      "username": "Cole Rice",
+      "email": "colerice@hotmail.com",
+      "addresses": [
+        {
+          "street": "Flat 97\nMurphy fall",
+          "city": "Arnoldstad",
+          "county": "Inverclyde",
+          "zipcode": "B1 4PS",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 75U, Marcus vista, East Junestad, TW9 1QQ"
+        },
+        {
+          "street": "Studio 0\nKathleen burg",
+          "city": "Lake Phillipshire",
+          "county": "West Sussex",
+          "zipcode": "E4A 1GA",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 5, Price spur, North Clivebury, SS16 5UX"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Silicone Catch-All Bib",
+          "sku": "BAB-FEE-13475",
+          "price": 7.0,
+          "quantity": 27
+        },
+        {
+          "productName": "Cabinet Door Bumpers",
+          "sku": "HOM-IMP-10934",
+          "price": 3.99,
+          "quantity": 24
+        },
+        {
+          "productName": "Laundry Hamper Mesh",
+          "sku": "HOM-BAT-10826",
+          "price": 7.99,
+          "quantity": 12
+        },
+        {
+          "productName": "Wooden Cutting Board",
+          "sku": "HOM-KIT-10044",
+          "price": 34.99,
+          "quantity": 7
+        },
+        {
+          "productName": "Phone Stand Desk",
+          "sku": "ELE-ACC-10380",
+          "price": 12.5,
+          "quantity": 45
+        },
+        {
+          "productName": "Ear Muffs Safety",
+          "sku": "TOO-PRO-12583",
+          "price": 11.5,
+          "quantity": 11
+        },
+        {
+          "productName": "Pet Collar Bell",
+          "sku": "PET-ACC-14235",
+          "price": 2.0,
+          "quantity": 52
+        },
+        {
+          "productName": "Pizza Cutter Wheel",
+          "sku": "KIT-TOO-13386",
+          "price": 5.5,
+          "quantity": 6
+        },
+        {
+          "productName": "Volleyball Soft Touch",
+          "sku": "SPT-TEA-10171",
+          "price": 22.0,
+          "quantity": 3
+        },
+        {
+          "productName": "Door Hinge 3in",
+          "sku": "HOM-HAR-14404",
+          "price": 3.5,
+          "quantity": 1
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 0\nKathleen burg",
+        "city": "Lake Phillipshire",
+        "county": "West Sussex",
+        "zipcode": "E4A 1GA",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 5, Price spur, North Clivebury, SS16 5UX"
+      },
+      "method": "FedEx",
+      "trackingCode": "JK179921015GW"
+    },
+    "items": [
+      {
+        "productName": "Mini Binder Clips",
+        "sku": "OFF-SUP-13421",
+        "unitPrice": 2.5,
+        "quantity": 33,
+        "vendor": {
+          "companyName": "The Scholar's Press",
+          "contactEmail": "publishing@scholarspress.com",
+          "supportPhone": "+1-888-999-0000"
+        }
+      },
+      {
+        "productName": "Sink Strainer Mesh",
+        "sku": "HOM-KIT-10448",
+        "unitPrice": 3.99,
+        "quantity": 66,
+        "vendor": {
+          "companyName": "Amber Ape Adventures",
+          "contactEmail": "support@amberape.com",
+          "supportPhone": "+1-888-545-5566"
+        }
+      },
+      {
+        "productName": "Tension Curtain Rod",
+        "sku": "HOM-DEC-13705",
+        "unitPrice": 9.5,
+        "quantity": 34,
+        "vendor": {
+          "companyName": "Ember Kitchen",
+          "contactEmail": "sales@emberkitchen.io",
+          "supportPhone": "+1-888-678-9012"
+        }
+      },
+      {
+        "productName": "Paper Clips Jumbo",
+        "sku": "OFF-SUP-12250",
+        "unitPrice": 2.5,
+        "quantity": 50,
+        "vendor": {
+          "companyName": "Nexus Innovations",
+          "contactEmail": "contact@nexusinnov.com",
+          "supportPhone": "+1-888-121-2121"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7db4be1a13d8b478537",
+    "orderDate": "2023-07-13T07:08:48",
+    "total": 293.51,
+    "status": "Shipped",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25a00",
+      "username": "James Martinez",
+      "email": "jamesmartinez@icloud.com",
+      "addresses": [
+        {
+          "street": "39 Louis circles",
+          "city": "Port Eleanor",
+          "county": "Stirling",
+          "zipcode": "M2G 3YZ",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 18n, Josephine road, West Kellyside, NP53 0DE"
+        },
+        {
+          "street": "Flat 4\nYoung cape",
+          "city": "New Sallyland",
+          "county": "Norfolk",
+          "zipcode": "NN65 3DG",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 58O, Geoffrey forges, Lake Jadebury, OL9M 5YY"
+        },
+        {
+          "street": "Studio 70M\nBradley land",
+          "city": "Claytonside",
+          "county": "Merseyside",
+          "zipcode": "M24 5FN",
+          "country": "United Kingdom",
+          "fullAddress": "4 Reynolds summit, Barkermouth, L4 5YG"
+        },
+        {
+          "street": "3 Raymond center",
+          "city": "North Terrystad",
+          "county": "Northamptonshire",
+          "zipcode": "S85 9FB",
+          "country": "United Kingdom",
+          "fullAddress": "645 Smith trail, Tobyborough, L2J 3TH"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Shoe Horn Metal",
+          "sku": "FAS-ACC-12271",
+          "price": 5.5,
+          "quantity": 10
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "3 Raymond center",
+        "city": "North Terrystad",
+        "county": "Northamptonshire",
+        "zipcode": "S85 9FB",
+        "country": "United Kingdom",
+        "fullAddress": "645 Smith trail, Tobyborough, L2J 3TH"
+      },
+      "method": "DHL Express",
+      "trackingCode": "FY216386320ZR"
+    },
+    "items": [
+      {
+        "productName": "Dog Bandana",
+        "sku": "PET-CLO-11366",
+        "unitPrice": 5.99,
+        "quantity": 49,
+        "vendor": {
+          "companyName": "Amber Ape Adventures",
+          "contactEmail": "support@amberape.com",
+          "supportPhone": "+1-888-545-5566"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7db4be1a13d8b478538",
+    "orderDate": "2020-07-12T11:38:40",
+    "total": 198.0,
+    "status": "Delivered",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f258db",
+      "username": "Sarah Wilson",
+      "email": "sarahwilson@hotmail.com",
+      "addresses": [
+        {
+          "street": "Studio 28i\nSmith mountain",
+          "city": "West Derekburgh",
+          "county": "Cleveland",
+          "zipcode": "BA3 2HS",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 0, Rogers dam, Bradleyport, W2S 4TN"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Digital Caliper 150mm",
+          "sku": "HOM-IMP-11000",
+          "price": 18.99,
+          "quantity": 24
+        },
+        {
+          "productName": "Tabletop Easel",
+          "sku": "ART-DIS-12729",
+          "price": 18.0,
+          "quantity": 9
+        },
+        {
+          "productName": "Ball Inflator Nozzle",
+          "sku": "SPT-ACC-11246",
+          "price": 1.5,
+          "quantity": 21
+        },
+        {
+          "productName": "Sunglasses Aviator",
+          "sku": "FAS-EYE-12052",
+          "price": 15.5,
+          "quantity": 21
+        },
+        {
+          "productName": "Webcam 4K",
+          "sku": "ELE-PC-10313",
+          "price": 129.0,
+          "quantity": 8
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 28i\nSmith mountain",
+        "city": "West Derekburgh",
+        "county": "Cleveland",
+        "zipcode": "BA3 2HS",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 0, Rogers dam, Bradleyport, W2S 4TN"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "KR060821396RP"
+    },
+    "items": [
+      {
+        "productName": "Wood Drill Bits",
+        "sku": "TOO-ACC-12778",
+        "unitPrice": 9.0,
+        "quantity": 22,
+        "vendor": {
+          "companyName": "Saffron Stallion Sports",
+          "contactEmail": "contact@saffronstallion.com",
+          "supportPhone": "+1-888-545-6789"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7db4be1a13d8b478539",
+    "orderDate": "2024-10-08T04:02:54",
+    "total": 149.5,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f259f4",
+      "username": "Danielle Ross",
+      "email": "danielleross@yahoo.com",
+      "addresses": [
+        {
+          "street": "Studio 15e\nCaroline shoal",
+          "city": "South Kieranside",
+          "county": "Derry and Londonderry",
+          "zipcode": "RH55 5ZX",
+          "country": "United Kingdom",
+          "fullAddress": "58 Jennifer gateway, Racheltown, S0F 4XQ"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Swimming Goggles",
+          "sku": "SPO-SWI-13643",
+          "price": 9.5,
+          "quantity": 33
+        },
+        {
+          "productName": "Metal Thimble",
+          "sku": "HOM-CRA-12732",
+          "price": 1.5,
+          "quantity": 57
+        },
+        {
+          "productName": "Dog Muzzle Nylon",
+          "sku": "PET-DOG-13243",
+          "price": 5.5,
+          "quantity": 1
+        },
+        {
+          "productName": "USB C Dust Plug",
+          "sku": "ELE-ACC-10511",
+          "price": 3.5,
+          "quantity": 68
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 15e\nCaroline shoal",
+        "city": "South Kieranside",
+        "county": "Derry and Londonderry",
+        "zipcode": "RH55 5ZX",
+        "country": "United Kingdom",
+        "fullAddress": "58 Jennifer gateway, Racheltown, S0F 4XQ"
+      },
+      "method": "FedEx",
+      "trackingCode": "AW624411608LM"
+    },
+    "items": [
+      {
+        "productName": "Paint Brushes Set",
+        "sku": "ART-PAI-12105",
+        "unitPrice": 11.5,
+        "quantity": 13,
+        "vendor": {
+          "companyName": "Summit Supply Co.",
+          "contactEmail": "support@summitsupply.co",
+          "supportPhone": "+1-888-112-3456"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7db4be1a13d8b47853a",
+    "orderDate": "2022-11-21T08:06:09",
+    "total": 766.5,
+    "status": "Processing",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f258c9",
+      "username": "Roy Myers",
+      "email": "roymyers@outlook.com",
+      "addresses": [
+        {
+          "street": "3 Dominic trail",
+          "city": "North Paula",
+          "county": "South Yorkshire",
+          "zipcode": "EN3 6NU",
+          "country": "United Kingdom",
+          "fullAddress": "1 Chapman track, Greenside, IP6V 2UW"
+        },
+        {
+          "street": "8 Morgan hills",
+          "city": "Liamtown",
+          "county": "East Lothian",
+          "zipcode": "G34 6PX",
+          "country": "United Kingdom",
+          "fullAddress": "7 Caroline brook, South Gordon, S1D 2WE"
+        },
+        {
+          "street": "Studio 3\nFerguson port",
+          "city": "Mauriceside",
+          "county": "Angus",
+          "zipcode": "N8H 1QN",
+          "country": "United Kingdom",
+          "fullAddress": "683 Jones key, Port Sarahbury, W1 7QW"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Titanium Scissors",
+          "sku": "OFF-CUT-12708",
+          "price": 9.5,
+          "quantity": 12
+        },
+        {
+          "productName": "Portable Pill Organizer",
+          "sku": "TRA-ACC-14535",
+          "price": 6.0,
+          "quantity": 48
+        },
+        {
+          "productName": "Shoe Laces Elastic",
+          "sku": "FAS-ACC-11180",
+          "price": 6.99,
+          "quantity": 74
+        },
+        {
+          "productName": "Treat Launcher",
+          "sku": "PET-TOY-13982",
+          "price": 7.0,
+          "quantity": 15
+        },
+        {
+          "productName": "File Set 3pc",
+          "sku": "TOO-HAN-12591",
+          "price": 10.5,
+          "quantity": 5
+        },
+        {
+          "productName": "Bamboo Soap Tray",
+          "sku": "HOM-BAT-13411",
+          "price": 5.0,
+          "quantity": 8
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "8 Morgan hills",
+        "city": "Liamtown",
+        "county": "East Lothian",
+        "zipcode": "G34 6PX",
+        "country": "United Kingdom",
+        "fullAddress": "7 Caroline brook, South Gordon, S1D 2WE"
+      },
+      "method": "FedEx",
+      "trackingCode": "OZ318202133KK"
+    },
+    "items": [
+      {
+        "productName": "AI Pet Robot",
+        "sku": "PET-TOY-14520",
+        "unitPrice": 150.0,
+        "quantity": 1,
+        "vendor": {
+          "companyName": "Spinel Sparrow Sports",
+          "contactEmail": "info@spinelsparrow.com",
+          "supportPhone": "+1-888-212-2233"
+        }
+      },
+      {
+        "productName": "Desk Cable Drops",
+        "sku": "ELE-ORG-15207",
+        "unitPrice": 4.5,
+        "quantity": 14,
+        "vendor": {
+          "companyName": "Zenith Athletics",
+          "contactEmail": "contact@zenithathletics.com",
+          "supportPhone": "+1-888-890-1234"
+        }
+      },
+      {
+        "productName": "Art Gum Eraser Cube",
+        "sku": "ART-SUP-11482",
+        "unitPrice": 1.5,
+        "quantity": 63,
+        "vendor": {
+          "companyName": "Black Diamond Gear",
+          "contactEmail": "info@blackdiamondgear.com",
+          "supportPhone": "+1-888-111-3456"
+        }
+      },
+      {
+        "productName": "Carabiner Micro",
+        "sku": "SPT-OUT-11093",
+        "unitPrice": 2.5,
+        "quantity": 58,
+        "vendor": {
+          "companyName": "Horizon Dynamics",
+          "contactEmail": "support@horizondynamics.com",
+          "supportPhone": "+1-888-343-4343"
+        }
+      },
+      {
+        "productName": "Binder Clips Small",
+        "sku": "OFF-SUP-14321",
+        "unitPrice": 2.0,
+        "quantity": 85,
+        "vendor": {
+          "companyName": "The Scholar's Press",
+          "contactEmail": "publishing@scholarspress.com",
+          "supportPhone": "+1-888-999-0000"
+        }
+      },
+      {
+        "productName": "Tactical Flashlight",
+        "sku": "SPO-OUT-12202",
+        "unitPrice": 18.0,
+        "quantity": 8,
+        "vendor": {
+          "companyName": "Cerulean Swan Solutions",
+          "contactEmail": "support@ceruleanswan.com",
+          "supportPhone": "+1-888-434-5678"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7db4be1a13d8b47853b",
+    "orderDate": "2021-10-18T09:29:41",
+    "total": 1320.85,
+    "status": "Shipped",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f257ac",
+      "username": "Joseph Davis",
+      "email": "josephdavis@outlook.com",
+      "addresses": [
+        {
+          "street": "Flat 79L\nRoss mountains",
+          "city": "Port Chelsea",
+          "county": "Cleveland",
+          "zipcode": "B96 3BT",
+          "country": "United Kingdom",
+          "fullAddress": "3 Kerry lights, East Glenntown, CH39 3TU"
+        },
+        {
+          "street": "34 Murray viaduct",
+          "city": "Lake Mohammed",
+          "county": "City of Edinburgh",
+          "zipcode": "BD9 1FU",
+          "country": "United Kingdom",
+          "fullAddress": "995 Clarke haven, East Ashley, L4F 6US"
+        },
+        {
+          "street": "414 Leah ramp",
+          "city": "East Yvonneside",
+          "county": "Breconshire",
+          "zipcode": "M8 9XL",
+          "country": "United Kingdom",
+          "fullAddress": "3 Barbara throughway, East Christineton, GU3V 4BE"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Balloon Whisk",
+          "sku": "KIT-TOO-14867",
+          "price": 4.0,
+          "quantity": 3
+        },
+        {
+          "productName": "Pastry Cutter Wheel",
+          "sku": "HOM-KIT-10776",
+          "price": 5.99,
+          "quantity": 20
+        },
+        {
+          "productName": "Garlic Press",
+          "sku": "KIT-TOO-14129",
+          "price": 7.5,
+          "quantity": 12
+        },
+        {
+          "productName": "Caulk Tool 3-in-1",
+          "sku": "TOO-CON-13702",
+          "price": 6.0,
+          "quantity": 7
+        },
+        {
+          "productName": "Bed Sheet Fasteners",
+          "sku": "HOM-BED-13528",
+          "price": 6.0,
+          "quantity": 19
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "34 Murray viaduct",
+        "city": "Lake Mohammed",
+        "county": "City of Edinburgh",
+        "zipcode": "BD9 1FU",
+        "country": "United Kingdom",
+        "fullAddress": "995 Clarke haven, East Ashley, L4F 6US"
+      },
+      "method": "UPS Standard",
+      "trackingCode": "FF186808544PO"
+    },
+    "items": [
+      {
+        "productName": "Key Cap Covers",
+        "sku": "HOM-ORG-11297",
+        "unitPrice": 1.99,
+        "quantity": 100,
+        "vendor": {
+          "companyName": "Ember Kitchen",
+          "contactEmail": "sales@emberkitchen.io",
+          "supportPhone": "+1-888-678-9012"
+        }
+      },
+      {
+        "productName": "Cable Sleeve Zipper",
+        "sku": "ELE-ORG-13142",
+        "unitPrice": 7.0,
+        "quantity": 14,
+        "vendor": {
+          "companyName": "Purple Finch Publishing",
+          "contactEmail": "contact@purplefinch.pub",
+          "supportPhone": "+1-888-333-5678"
+        }
+      },
+      {
+        "productName": "Crochet Starter Kit",
+        "sku": "HOM-CRA-14562",
+        "unitPrice": 18.0,
+        "quantity": 16,
+        "vendor": {
+          "companyName": "Blue Jay Books",
+          "contactEmail": "orders@bluejaybooks.com",
+          "supportPhone": "+1-888-889-0123"
+        }
+      },
+      {
+        "productName": "Swivel Socket Covers",
+        "sku": "BAB-SAF-13468",
+        "unitPrice": 4.5,
+        "quantity": 1,
+        "vendor": {
+          "companyName": "Pearl Peacock Products",
+          "contactEmail": "contact@pearlpeacock.com",
+          "supportPhone": "+1-888-090-0123"
+        }
+      },
+      {
+        "productName": "Paper Clip",
+        "sku": "OFF-SUP-14281",
+        "unitPrice": 0.02,
+        "quantity": 2005,
+        "vendor": {
+          "companyName": "Teal Tiger Tech",
+          "contactEmail": "contact@tealtiger.tech",
+          "supportPhone": "+1-888-878-9012"
+        }
+      },
+      {
+        "productName": "Blind Spot Mirror",
+        "sku": "AUT-ACC-11463",
+        "unitPrice": 5.5,
+        "quantity": 44,
+        "vendor": {
+          "companyName": "The Scholar's Press",
+          "contactEmail": "publishing@scholarspress.com",
+          "supportPhone": "+1-888-999-0000"
+        }
+      },
+      {
+        "productName": "SATA III Cable",
+        "sku": "ELE-PC-10353",
+        "unitPrice": 5.99,
+        "quantity": 75,
+        "vendor": {
+          "companyName": "Saffron Stallion Sports",
+          "contactEmail": "contact@saffronstallion.com",
+          "supportPhone": "+1-888-545-6789"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7db4be1a13d8b47853c",
+    "orderDate": "2024-02-21T13:06:17",
+    "total": 1337.71,
+    "status": "Delivered",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f2595d",
+      "username": "Scott Hall",
+      "email": "scotthall@icloud.com",
+      "addresses": [
+        {
+          "street": "Studio 05O\nBaxter causeway",
+          "city": "Jennifermouth",
+          "county": "Derry and Londonderry",
+          "zipcode": "W21 9AE",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 56, Smith avenue, Louischester, G6E 5SH"
+        },
+        {
+          "street": "36 Richards overpass",
+          "city": "Kathrynstad",
+          "county": "West Berkshire",
+          "zipcode": "S7G 2XX",
+          "country": "United Kingdom",
+          "fullAddress": "6 Brookes skyway, South Jeffrey, HG6 3BN"
+        },
+        {
+          "street": "608 Davey flat",
+          "city": "Margaretbury",
+          "county": "Armagh",
+          "zipcode": "B6K 7AN",
+          "country": "United Kingdom",
+          "fullAddress": "6 Jack parks, Wattschester, SS8 1AL"
+        },
+        {
+          "street": "42 Scott cliff",
+          "city": "Lake Abdulton",
+          "county": "Staffordshire",
+          "zipcode": "CM2 2JQ",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 0, Julia orchard, New Ellieville, PE9 6DN"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Zip Ties 200mm",
+          "sku": "ELE-ACC-10622",
+          "price": 3.5,
+          "quantity": 49
+        },
+        {
+          "productName": "Drywall Screw Bit",
+          "sku": "TOO-ACC-14603",
+          "price": 4.5,
+          "quantity": 10
+        },
+        {
+          "productName": "Combination Lock",
+          "sku": "HOM-SEC-14401",
+          "price": 6.0,
+          "quantity": 33
+        },
+        {
+          "productName": "Power Strip 6-Outlet",
+          "sku": "ELE-POW-14003",
+          "price": 14.0,
+          "quantity": 20
+        },
+        {
+          "productName": "Bathtub Mat Rubber",
+          "sku": "HOM-BAT-12828",
+          "price": 10.0,
+          "quantity": 5
+        },
+        {
+          "productName": "Cookbook: Italian Classics",
+          "sku": "BKS-CKB-10019",
+          "price": 32.0,
+          "quantity": 18
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "608 Davey flat",
+        "city": "Margaretbury",
+        "county": "Armagh",
+        "zipcode": "B6K 7AN",
+        "country": "United Kingdom",
+        "fullAddress": "6 Jack parks, Wattschester, SS8 1AL"
+      },
+      "method": "DHL Express",
+      "trackingCode": "EB768907349QA"
+    },
+    "items": [
+      {
+        "productName": "Ping Pong Balls 6pk",
+        "sku": "SPO-TEN-13965",
+        "unitPrice": 2.5,
+        "quantity": 2,
+        "vendor": {
+          "companyName": "Black Diamond Gear",
+          "contactEmail": "info@blackdiamondgear.com",
+          "supportPhone": "+1-888-111-3456"
+        }
+      },
+      {
+        "productName": "Sink Strainer Mesh",
+        "sku": "KIT-ACC-14391",
+        "unitPrice": 1.5,
+        "quantity": 80,
+        "vendor": {
+          "companyName": "Gourmet Gadgets",
+          "contactEmail": "sales@gourmetgadgets.com",
+          "supportPhone": "+1-888-778-8990"
+        }
+      },
+      {
+        "productName": "Car Emergency Hammer",
+        "sku": "AUT-EME-16125",
+        "unitPrice": 8.99,
+        "quantity": 40,
+        "vendor": {
+          "companyName": "The Scholar's Press",
+          "contactEmail": "publishing@scholarspress.com",
+          "supportPhone": "+1-888-999-0000"
+        }
+      },
+      {
+        "productName": "Adjustable Wrench 6in",
+        "sku": "TOO-HAN-12769",
+        "unitPrice": 9.0,
+        "quantity": 5,
+        "vendor": {
+          "companyName": "Green Turtle Gaming",
+          "contactEmail": "info@greenturtlegaming.com",
+          "supportPhone": "+1-888-555-7890"
+        }
+      },
+      {
+        "productName": "Chef Knife 8 inch",
+        "sku": "KIT-KNI-12054",
+        "unitPrice": 32.0,
+        "quantity": 1,
+        "vendor": {
+          "companyName": "Veridian Valley Ventures",
+          "contactEmail": "info@veridianvalley.com",
+          "supportPhone": "+1-888-656-7890"
+        }
+      },
+      {
+        "productName": "S-Hook Metal",
+        "sku": "HOM-ORG-15165",
+        "unitPrice": 2.5,
+        "quantity": 35,
+        "vendor": {
+          "companyName": "Black Diamond Gear",
+          "contactEmail": "info@blackdiamondgear.com",
+          "supportPhone": "+1-888-111-3456"
+        }
+      },
+      {
+        "productName": "Battery Case AA",
+        "sku": "ELE-GAD-10416",
+        "unitPrice": 3.99,
+        "quantity": 89,
+        "vendor": {
+          "companyName": "White Wolf Wares",
+          "contactEmail": "sales@whitewolfwares.com",
+          "supportPhone": "+1-888-222-4567"
+        }
+      },
+      {
+        "productName": "Rubber Band",
+        "sku": "OFF-SUP-14283",
+        "unitPrice": 0.05,
+        "quantity": 430,
+        "vendor": {
+          "companyName": "Crimson Cobra Creations",
+          "contactEmail": "info@crimsoncobra.com",
+          "supportPhone": "+1-888-090-1234"
+        }
+      },
+      {
+        "productName": "Plant Stand Wood",
+        "sku": "HOM-DEC-10133",
+        "unitPrice": 24.0,
+        "quantity": 13,
+        "vendor": {
+          "companyName": "Crimson Cobra Creations",
+          "contactEmail": "info@crimsoncobra.com",
+          "supportPhone": "+1-888-090-1234"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7db4be1a13d8b47853d",
+    "orderDate": "2024-06-24T17:49:38",
+    "total": 1040.83,
+    "status": "Shipped",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f257c7",
+      "username": "Jonathan Wright",
+      "email": "jonathanwright@hotmail.com",
+      "addresses": [
+        {
+          "street": "1 Parsons cliff",
+          "city": "West Carol",
+          "county": "South Yorkshire",
+          "zipcode": "IM26 6RW",
+          "country": "United Kingdom",
+          "fullAddress": "0 Cheryl skyway, Pricestad, DE2 0TP"
+        },
+        {
+          "street": "Flat 41\nJoan tunnel",
+          "city": "Naomimouth",
+          "county": "Perth and Kinross",
+          "zipcode": "G02 0XW",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 39l, Taylor cliff, Jaynemouth, CT4P 8EN"
+        },
+        {
+          "street": "72 Gillian plains",
+          "city": "Edwardburgh",
+          "county": "Breconshire",
+          "zipcode": "BL5 6QS",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 24, Justin river, Johnstonburgh, LU74 4GX"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Pill Cutter Splitter",
+          "sku": "HOM-WEL-10937",
+          "price": 4.99,
+          "quantity": 55
+        },
+        {
+          "productName": "Webcam Slide Cover",
+          "sku": "ELE-ACC-11079",
+          "price": 2.0,
+          "quantity": 79
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "1 Parsons cliff",
+        "city": "West Carol",
+        "county": "South Yorkshire",
+        "zipcode": "IM26 6RW",
+        "country": "United Kingdom",
+        "fullAddress": "0 Cheryl skyway, Pricestad, DE2 0TP"
+      },
+      "method": "DHL Express",
+      "trackingCode": "LU188025371KI"
+    },
+    "items": [
+      {
+        "productName": "Ski Pass Holder",
+        "sku": "SPT-WIN-11277",
+        "unitPrice": 5.99,
+        "quantity": 11,
+        "vendor": {
+          "companyName": "Jade Jaguar Jewelers",
+          "contactEmail": "contact@jadejaguar.com",
+          "supportPhone": "+1-888-212-2345"
+        }
+      },
+      {
+        "productName": "Boot Shaper Inserts",
+        "sku": "FAS-ACC-15346",
+        "unitPrice": 5.5,
+        "quantity": 34,
+        "vendor": {
+          "companyName": "Tourmaline Tiger Toys",
+          "contactEmail": "sales@tourmalinetiger.com",
+          "supportPhone": "+1-888-323-3344"
+        }
+      },
+      {
+        "productName": "Bottle Opener Waiter",
+        "sku": "KIT-TOO-14351",
+        "unitPrice": 4.0,
+        "quantity": 32,
+        "vendor": {
+          "companyName": "Azure Turtle Toys",
+          "contactEmail": "info@azureturtle.com",
+          "supportPhone": "+1-888-323-4567"
+        }
+      },
+      {
+        "productName": "Baby Wipes Pocket",
+        "sku": "BAB-HYG-13198",
+        "unitPrice": 1.5,
+        "quantity": 94,
+        "vendor": {
+          "companyName": "Zenith Sports Dynamics",
+          "contactEmail": "relations@zenithdynamics.sport",
+          "supportPhone": "+1-888-434-5454"
+        }
+      },
+      {
+        "productName": "Grout Float",
+        "sku": "TOO-CON-12598",
+        "unitPrice": 9.0,
+        "quantity": 20,
+        "vendor": {
+          "companyName": "Amber Ape Adventures",
+          "contactEmail": "support@amberape.com",
+          "supportPhone": "+1-888-545-5566"
+        }
+      },
+      {
+        "productName": "Volleyball Knee Pads",
+        "sku": "SPT-TEA-10348",
+        "unitPrice": 18.99,
+        "quantity": 6,
+        "vendor": {
+          "companyName": "Violet Vixen Vogue",
+          "contactEmail": "support@violetvixenvogue.com",
+          "supportPhone": "+1-888-999-1234"
+        }
+      },
+      {
+        "productName": "Passport Cover PVC",
+        "sku": "TRA-SEC-13875",
+        "unitPrice": 1.5,
+        "quantity": 150,
+        "vendor": {
+          "companyName": "Nexus Innovations",
+          "contactEmail": "contact@nexusinnov.com",
+          "supportPhone": "+1-888-121-2121"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7db4be1a13d8b47853e",
+    "orderDate": "2019-10-28T06:54:40",
+    "total": 1553.5,
+    "status": "Shipped",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f2591b",
+      "username": "Teresa Ward",
+      "email": "teresaward@outlook.com",
+      "addresses": [
+        {
+          "street": "Flat 22\nFoster common",
+          "city": "Rossville",
+          "county": "Aberdeen City",
+          "zipcode": "B94 7ZE",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 9, Green turnpike, North Anthonyland, B0 6YU"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Bath Pillow",
+          "sku": "HOM-BAT-10186",
+          "price": 22.0,
+          "quantity": 8
+        },
+        {
+          "productName": "Cat Muzzle Breathable",
+          "sku": "PET-GRO-13519",
+          "price": 7.5,
+          "quantity": 20
+        },
+        {
+          "productName": "Drop Cloth Plastic",
+          "sku": "HOM-DEC-12418",
+          "price": 3.5,
+          "quantity": 64
+        },
+        {
+          "productName": "Small Pet Bottle",
+          "sku": "PET-SMA-13181",
+          "price": 4.0,
+          "quantity": 1
+        },
+        {
+          "productName": "Golf Tees Wood",
+          "sku": "SPO-GOL-14188",
+          "price": 2.5,
+          "quantity": 30
+        },
+        {
+          "productName": "Utility Knife Heavy",
+          "sku": "TOO-CUT-12772",
+          "price": 7.0,
+          "quantity": 44
+        },
+        {
+          "productName": "Rubber Thimbles",
+          "sku": "OFF-ACC-13103",
+          "price": 2.5,
+          "quantity": 7
+        },
+        {
+          "productName": "Pill Organizer Weekly",
+          "sku": "HOM-WEL-10738",
+          "price": 4.5,
+          "quantity": 36
+        },
+        {
+          "productName": "Tool Belt Leather",
+          "sku": "TOO-STO-12818",
+          "price": 28.0,
+          "quantity": 3
+        },
+        {
+          "productName": "Bolt Cutter 12in",
+          "sku": "TOO-CUT-12821",
+          "price": 15.0,
+          "quantity": 13
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Flat 22\nFoster common",
+        "city": "Rossville",
+        "county": "Aberdeen City",
+        "zipcode": "B94 7ZE",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 9, Green turnpike, North Anthonyland, B0 6YU"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "ZH477874279ZR"
+    },
+    "items": [
+      {
+        "productName": "Whistle Lanyard",
+        "sku": "SPT-ACC-10443",
+        "unitPrice": 2.5,
+        "quantity": 48,
+        "vendor": {
+          "companyName": "Pearl Peacock Products",
+          "contactEmail": "contact@pearlpeacock.com",
+          "supportPhone": "+1-888-090-0123"
+        }
+      },
+      {
+        "productName": "Pet Nail Clipper",
+        "sku": "PET-GRO-14166",
+        "unitPrice": 6.0,
+        "quantity": 30,
+        "vendor": {
+          "companyName": "Gourmet Gadgets",
+          "contactEmail": "sales@gourmetgadgets.com",
+          "supportPhone": "+1-888-778-8990"
+        }
+      },
+      {
+        "productName": "Shower Head High Pressure",
+        "sku": "HOM-BAT-12110",
+        "unitPrice": 16.5,
+        "quantity": 28,
+        "vendor": {
+          "companyName": "Ironclad Systems",
+          "contactEmail": "info@ironcladsys.com",
+          "supportPhone": "+1-888-667-8901"
+        }
+      },
+      {
+        "productName": "Cable Clips White",
+        "sku": "ELE-ORG-14442",
+        "unitPrice": 2.5,
+        "quantity": 50,
+        "vendor": {
+          "companyName": "Diamond Dolphin Designs",
+          "contactEmail": "sales@diamonddolphin.com",
+          "supportPhone": "+1-888-989-9012"
+        }
+      },
+      {
+        "productName": "Vegetable Steamer Basket",
+        "sku": "HOM-KIT-10496",
+        "unitPrice": 11.5,
+        "quantity": 15,
+        "vendor": {
+          "companyName": "Orange Octopus Optics",
+          "contactEmail": "sales@orangeoctopus.com",
+          "supportPhone": "+1-888-777-9012"
+        }
+      },
+      {
+        "productName": "Plant Pot Saucer",
+        "sku": "GAR-POT-13052",
+        "unitPrice": 1.5,
+        "quantity": 97,
+        "vendor": {
+          "companyName": "Aurora Tech",
+          "contactEmail": "info@auroratech.io",
+          "supportPhone": "+1-888-565-6565"
+        }
+      },
+      {
+        "productName": "Paper Clips Color",
+        "sku": "OFF-SUP-14481",
+        "unitPrice": 1.2,
+        "quantity": 5,
+        "vendor": {
+          "companyName": "Keystone Merchants",
+          "contactEmail": "info@keystonemerchants.com",
+          "supportPhone": "+1-888-223-4567"
+        }
+      },
+      {
+        "productName": "Seam Ripper",
+        "sku": "HOM-CRA-14663",
+        "unitPrice": 1.5,
+        "quantity": 65,
+        "vendor": {
+          "companyName": "Sapphire Shark Supplies",
+          "contactEmail": "sales@sapphireshark.com",
+          "supportPhone": "+1-888-545-5678"
+        }
+      },
+      {
+        "productName": "Furniture Felt Pads",
+        "sku": "HOM-ACC-14806",
+        "unitPrice": 3.5,
+        "quantity": 70,
+        "vendor": {
+          "companyName": "Teal Tiger Tech",
+          "contactEmail": "contact@tealtiger.tech",
+          "supportPhone": "+1-888-878-9012"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7dc4be1a13d8b47853f",
+    "orderDate": "2025-09-24T22:43:55",
+    "total": 583.84,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25b65",
+      "username": "Liam Wallace",
+      "email": "liamwallace@gmail.com",
+      "addresses": [
+        {
+          "street": "16 Kimberley fork",
+          "city": "New Sheila",
+          "county": "Flintshire",
+          "zipcode": "OX1R 0FL",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 30r, Robert lock, East Damianbury, CA3A 2BB"
+        },
+        {
+          "street": "76 Glenn roads",
+          "city": "Wilkinschester",
+          "county": "Greater London",
+          "zipcode": "W8D 9AW",
+          "country": "United Kingdom",
+          "fullAddress": "78 Geoffrey rapid, East Amyfort, M0H 9RP"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Legal Pad Yellow",
+          "sku": "OFF-PAP-12361",
+          "price": 3.0,
+          "quantity": 31
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "76 Glenn roads",
+        "city": "Wilkinschester",
+        "county": "Greater London",
+        "zipcode": "W8D 9AW",
+        "country": "United Kingdom",
+        "fullAddress": "78 Geoffrey rapid, East Amyfort, M0H 9RP"
+      },
+      "method": "DHL Express",
+      "trackingCode": "LP710332387UO"
+    },
+    "items": [
+      {
+        "productName": "Pet Bowl Stainless",
+        "sku": "PET-FEE-13061",
+        "unitPrice": 4.0,
+        "quantity": 34,
+        "vendor": {
+          "companyName": "Crimson Arrow",
+          "contactEmail": "sales@crimsonarrow.com",
+          "supportPhone": "+1-888-778-9012"
+        }
+      },
+      {
+        "productName": "Cable Management Box",
+        "sku": "ELE-ACC-10272",
+        "unitPrice": 18.99,
+        "quantity": 16,
+        "vendor": {
+          "companyName": "Yellow Jacket Sports",
+          "contactEmail": "info@yellowjacketsports.com",
+          "supportPhone": "+1-888-888-0123"
+        }
+      },
+      {
+        "productName": "Shipping Labels 4x6",
+        "sku": "OFF-SHI-12523",
+        "unitPrice": 12.0,
+        "quantity": 12,
+        "vendor": {
+          "companyName": "Amber Ape Adventures",
+          "contactEmail": "support@amberape.com",
+          "supportPhone": "+1-888-545-5566"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7dc4be1a13d8b478540",
+    "orderDate": "2024-02-18T16:56:13",
+    "total": 1459.4,
+    "status": "Pending",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f257ba",
+      "username": "Kevin Perez",
+      "email": "kevinperez@yahoo.com",
+      "addresses": [
+        {
+          "street": "230 Mohammed greens",
+          "city": "Stephenport",
+          "county": "Greater Manchester",
+          "zipcode": "B8B 3WD",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 0, Carr vista, New Stevenmouth, CO8 5BW"
+        },
+        {
+          "street": "Studio 9\nBell rest",
+          "city": "Waltonborough",
+          "county": "Lancashire",
+          "zipcode": "E2 6JW",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 13, Irene canyon, West Mauriceview, S1E 2RS"
+        },
+        {
+          "street": "Flat 4\nFord cove",
+          "city": "Lyndaborough",
+          "county": "Merseyside",
+          "zipcode": "B8 9ZU",
+          "country": "United Kingdom",
+          "fullAddress": "8 Day squares, Franklinton, ML5R 5JN"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Digital Multimeter",
+          "sku": "AUT-TOO-16130",
+          "price": 22.99,
+          "quantity": 6
+        },
+        {
+          "productName": "Mouse Glides Feet",
+          "sku": "ELE-GAM-10477",
+          "price": 6.99,
+          "quantity": 33
+        },
+        {
+          "productName": "Bird Toy Ladder",
+          "sku": "PET-TOY-11419",
+          "price": 6.99,
+          "quantity": 18
+        },
+        {
+          "productName": "Washi Tape Gold",
+          "sku": "HOM-CRA-12735",
+          "price": 4.0,
+          "quantity": 39
+        },
+        {
+          "productName": "Desk Lamp LED",
+          "sku": "HOM-LIG-11213",
+          "price": 28.99,
+          "quantity": 22
+        },
+        {
+          "productName": "Reflective Paracord",
+          "sku": "SPO-CAM-13446",
+          "price": 8.0,
+          "quantity": 11
+        },
+        {
+          "productName": "Leaf Rake Fan",
+          "sku": "GAR-TOO-12325",
+          "price": 12.5,
+          "quantity": 14
+        },
+        {
+          "productName": "Roller Cover Smooth",
+          "sku": "TOO-PAI-14424",
+          "price": 3.0,
+          "quantity": 32
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Studio 9\nBell rest",
+        "city": "Waltonborough",
+        "county": "Lancashire",
+        "zipcode": "E2 6JW",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 13, Irene canyon, West Mauriceview, S1E 2RS"
+      },
+      "method": "DHL Express",
+      "trackingCode": "TF950931541AJ"
+    },
+    "items": [
+      {
+        "productName": "Surge Protector 8-Outlet",
+        "sku": "ELE-ACC-10138",
+        "unitPrice": 22.99,
+        "quantity": 10,
+        "vendor": {
+          "companyName": "Sapphire Shark Supplies",
+          "contactEmail": "sales@sapphireshark.com",
+          "supportPhone": "+1-888-545-5678"
+        }
+      },
+      {
+        "productName": "Refrigerator Liners",
+        "sku": "KIT-ORG-15358",
+        "unitPrice": 5.5,
+        "quantity": 51,
+        "vendor": {
+          "companyName": "Bibliophile's Corner",
+          "contactEmail": "orders@bibliophilescorner.com",
+          "supportPhone": "+1-888-901-2345"
+        }
+      },
+      {
+        "productName": "Dog Seat Belt",
+        "sku": "PET-ACC-15226",
+        "unitPrice": 5.0,
+        "quantity": 49,
+        "vendor": {
+          "companyName": "Horizon Dynamics",
+          "contactEmail": "support@horizondynamics.com",
+          "supportPhone": "+1-888-343-4343"
+        }
+      },
+      {
+        "productName": "Dry Bag 5L",
+        "sku": "SPO-OUT-14693",
+        "unitPrice": 11.0,
+        "quantity": 10,
+        "vendor": {
+          "companyName": "TerraFirm Gear",
+          "contactEmail": "info@terrafirm.gear",
+          "supportPhone": "+1-888-333-4444"
+        }
+      },
+      {
+        "productName": "Thumbtacks Brass",
+        "sku": "OFF-SUP-14484",
+        "unitPrice": 1.0,
+        "quantity": 114,
+        "vendor": {
+          "companyName": "Tidal Wave Inc.",
+          "contactEmail": "support@tidalwaveinc.com",
+          "supportPhone": "+1-888-556-7890"
+        }
+      },
+      {
+        "productName": "Foam Earplugs 10-Pair",
+        "sku": "SPT-ACC-10546",
+        "unitPrice": 4.5,
+        "quantity": 32,
+        "vendor": {
+          "companyName": "The Scholar's Press",
+          "contactEmail": "publishing@scholarspress.com",
+          "supportPhone": "+1-888-999-0000"
+        }
+      },
+      {
+        "productName": "Cord Organizer Bag",
+        "sku": "TRA-ORG-13366",
+        "unitPrice": 9.0,
+        "quantity": 36,
+        "vendor": {
+          "companyName": "White Wolf Wares",
+          "contactEmail": "sales@whitewolfwares.com",
+          "supportPhone": "+1-888-222-4567"
+        }
+      },
+      {
+        "productName": "Masking Tape Wide",
+        "sku": "TOO-PAI-13127",
+        "unitPrice": 3.0,
+        "quantity": 4,
+        "vendor": {
+          "companyName": "Aurora Tech",
+          "contactEmail": "info@auroratech.io",
+          "supportPhone": "+1-888-565-6565"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7dc4be1a13d8b478541",
+    "orderDate": "2022-09-19T16:02:46",
+    "total": 1171.65,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f258d2",
+      "username": "Johnny Jones",
+      "email": "johnnyjones@outlook.com",
+      "addresses": [
+        {
+          "street": "Studio 25r\nRobert village",
+          "city": "Blakeberg",
+          "county": "North Ayrshire",
+          "zipcode": "L04 3WD",
+          "country": "United Kingdom",
+          "fullAddress": "1 Rosemary manor, Northland, N27 0NZ"
+        },
+        {
+          "street": "8 Guy trace",
+          "city": "Port Gracetown",
+          "county": "Moray",
+          "zipcode": "IM1 7XX",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 6, Gray cliff, Melanieborough, E78 9BW"
+        },
+        {
+          "street": "200 Hughes park",
+          "city": "Gordonburgh",
+          "county": "Greater Manchester",
+          "zipcode": "S47 8WS",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 0, Damian expressway, Mariastad, E4 2JY"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Watercolor Pencils",
+          "sku": "ART-PAI-13490",
+          "price": 8.5,
+          "quantity": 15
+        },
+        {
+          "productName": "Scarf Hanger Circle",
+          "sku": "FAS-ORG-14938",
+          "price": 2.5,
+          "quantity": 27
+        },
+        {
+          "productName": "Cordless Drill 18V",
+          "sku": "TOO-POW-12082",
+          "price": 65.0,
+          "quantity": 11
+        },
+        {
+          "productName": "Cork Board Tiles",
+          "sku": "HOM-DEC-12507",
+          "price": 9.5,
+          "quantity": 32
+        },
+        {
+          "productName": "Phone Ring Holder",
+          "sku": "MOB-ACC-14636",
+          "price": 2.5,
+          "quantity": 73
+        },
+        {
+          "productName": "Garden Hoe",
+          "sku": "GAR-TOO-12327",
+          "price": 14.0,
+          "quantity": 19
+        },
+        {
+          "productName": "Coaxial Stripper",
+          "sku": "ELE-TOO-13465",
+          "price": 9.0,
+          "quantity": 4
+        },
+        {
+          "productName": "Makeup Sponge Wedge",
+          "sku": "BEA-ACC-13884",
+          "price": 2.0,
+          "quantity": 51
+        },
+        {
+          "productName": "Tennis Ball Single",
+          "sku": "SPO-TEN-12937",
+          "price": 1.5,
+          "quantity": 69
+        },
+        {
+          "productName": "Webcam Ring Light",
+          "sku": "ELE-ACC-10918",
+          "price": 18.5,
+          "quantity": 38
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "8 Guy trace",
+        "city": "Port Gracetown",
+        "county": "Moray",
+        "zipcode": "IM1 7XX",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 6, Gray cliff, Melanieborough, E78 9BW"
+      },
+      "method": "DHL Express",
+      "trackingCode": "ZQ956232344ZZ"
+    },
+    "items": [
+      {
+        "productName": "Thread Spool Black",
+        "sku": "HOM-CRA-14661",
+        "unitPrice": 1.2,
+        "quantity": 27,
+        "vendor": {
+          "companyName": "Topaz Toucan Travel",
+          "contactEmail": "support@topaztoucan.com",
+          "supportPhone": "+1-888-323-3456"
+        }
+      },
+      {
+        "productName": "Pocket Square",
+        "sku": "FAS-ACC-14997",
+        "unitPrice": 3.5,
+        "quantity": 4,
+        "vendor": {
+          "companyName": "Atelier Apparel",
+          "contactEmail": "cs@atelierapparel.com",
+          "supportPhone": "+1-888-212-3232"
+        }
+      },
+      {
+        "productName": "Watercolor Paint Set",
+        "sku": "ART-SUP-10114",
+        "unitPrice": 22.99,
+        "quantity": 25,
+        "vendor": {
+          "companyName": "Emerald City Goods",
+          "contactEmail": "contact@emeraldcitygoods.com",
+          "supportPhone": "+1-888-001-2345"
+        }
+      },
+      {
+        "productName": "Lightning Cable 1m",
+        "sku": "ELE-CAB-13138",
+        "unitPrice": 4.0,
+        "quantity": 27,
+        "vendor": {
+          "companyName": "Golden Grain Foods",
+          "contactEmail": "support@goldengrain.com",
+          "supportPhone": "+1-888-990-1234"
+        }
+      },
+      {
+        "productName": "Suction Cup Hooks",
+        "sku": "HOM-ORG-14463",
+        "unitPrice": 3.0,
+        "quantity": 40,
+        "vendor": {
+          "companyName": "Pinnacle Performance",
+          "contactEmail": "info@pinnacleperf.com",
+          "supportPhone": "+1-888-445-5667"
+        }
+      },
+      {
+        "productName": "Micro USB Cable 2m",
+        "sku": "ELE-ACC-10395",
+        "unitPrice": 6.5,
+        "quantity": 41,
+        "vendor": {
+          "companyName": "Momentum Active",
+          "contactEmail": "contact@momentumactive.com",
+          "supportPhone": "+1-888-777-8888"
+        }
+      },
+      {
+        "productName": "Teething Necklace",
+        "sku": "BAB-ACC-13214",
+        "unitPrice": 8.0,
+        "quantity": 7,
+        "vendor": {
+          "companyName": "Emerald City Goods",
+          "contactEmail": "contact@emeraldcitygoods.com",
+          "supportPhone": "+1-888-001-2345"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7dc4be1a13d8b478542",
+    "orderDate": "2022-08-01T12:45:44",
+    "total": 970.5,
+    "status": "Shipped",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f2594d",
+      "username": "Brian Lewis",
+      "email": "brianlewis@outlook.com",
+      "addresses": [
+        {
+          "street": "13 Lawrence cape",
+          "city": "Bentleyhaven",
+          "county": "Merseyside",
+          "zipcode": "W25 3UE",
+          "country": "United Kingdom",
+          "fullAddress": "394 Hollie ford, Ellisstad, B4H 4EE"
+        },
+        {
+          "street": "Studio 60e\nEmily shoal",
+          "city": "Ahmedfort",
+          "county": "Tyrone",
+          "zipcode": "L44 3ZG",
+          "country": "United Kingdom",
+          "fullAddress": "8 Craig rapid, Robertsview, WN6 5UX"
+        },
+        {
+          "street": "57 Harvey pine",
+          "city": "Port Diana",
+          "county": "Clackmannanshire",
+          "zipcode": "DN53 3HX",
+          "country": "United Kingdom",
+          "fullAddress": "3 Patel mission, Osborneborough, B50 7GX"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Glitter Tube",
+          "sku": "HOM-CRA-14267",
+          "price": 1.0,
+          "quantity": 20
+        },
+        {
+          "productName": "First Aid Pouch",
+          "sku": "HEA-FIR-14764",
+          "price": 8.0,
+          "quantity": 36
+        },
+        {
+          "productName": "Wrist Rest Gel",
+          "sku": "COM-ACC-14008",
+          "price": 7.0,
+          "quantity": 15
+        },
+        {
+          "productName": "Running Belt",
+          "sku": "SPO-ACC-14889",
+          "price": 8.5,
+          "quantity": 4
+        },
+        {
+          "productName": "Clipboard A5",
+          "sku": "OFF-ACC-12915",
+          "price": 3.5,
+          "quantity": 17
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "13 Lawrence cape",
+        "city": "Bentleyhaven",
+        "county": "Merseyside",
+        "zipcode": "W25 3UE",
+        "country": "United Kingdom",
+        "fullAddress": "394 Hollie ford, Ellisstad, B4H 4EE"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "PP731095335LU"
+    },
+    "items": [
+      {
+        "productName": "Rug Gripper Tape",
+        "sku": "HOM-ACC-14907",
+        "unitPrice": 4.0,
+        "quantity": 53,
+        "vendor": {
+          "companyName": "Zenith Athletics",
+          "contactEmail": "contact@zenithathletics.com",
+          "supportPhone": "+1-888-890-1234"
+        }
+      },
+      {
+        "productName": "HDMI Cable 5m",
+        "sku": "ELE-ACC-11208",
+        "unitPrice": 12.5,
+        "quantity": 18,
+        "vendor": {
+          "companyName": "Aquamarine Alligator Art",
+          "contactEmail": "info@aquamarinealligator.com",
+          "supportPhone": "+1-888-878-8901"
+        }
+      },
+      {
+        "productName": "Tea Light Holder Glass",
+        "sku": "HOM-DEC-10734",
+        "unitPrice": 3.99,
+        "quantity": 21,
+        "vendor": {
+          "companyName": "Cerulean Swan Solutions",
+          "contactEmail": "support@ceruleanswan.com",
+          "supportPhone": "+1-888-434-5678"
+        }
+      },
+      {
+        "productName": "Catnip Wall Ball",
+        "sku": "PET-CAT-14765",
+        "unitPrice": 3.0,
+        "quantity": 72,
+        "vendor": {
+          "companyName": "StyleSphere",
+          "contactEmail": "contact@stylesphere.co",
+          "supportPhone": "+1-888-667-7889"
+        }
+      },
+      {
+        "productName": "Webcam Cover Slide",
+        "sku": "ELE-ACC-10231",
+        "unitPrice": 5.99,
+        "quantity": 29,
+        "vendor": {
+          "companyName": "Velocity Sports Gear",
+          "contactEmail": "info@velocitysports.com",
+          "supportPhone": "+1-888-789-0123"
+        }
+      },
+      {
+        "productName": "Pet Bowl Plastic",
+        "sku": "PET-FEE-14160",
+        "unitPrice": 2.0,
+        "quantity": 30,
+        "vendor": {
+          "companyName": "Chic Threads Apparel",
+          "contactEmail": "sales@chicthreads.com",
+          "supportPhone": "+1-888-112-2334"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7dc4be1a13d8b478543",
+    "orderDate": "2021-07-08T23:35:25",
+    "total": 1159.5,
+    "status": "Shipped",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f2585a",
+      "username": "Rose Wood",
+      "email": "rosewood@hotmail.com",
+      "addresses": [
+        {
+          "street": "062 Smith place",
+          "city": "Port Derek",
+          "county": "West Sussex",
+          "zipcode": "BH7P 6DS",
+          "country": "United Kingdom",
+          "fullAddress": "644 Leon village, South Gavin, UB42 3GJ"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Scrub Sponge Green",
+          "sku": "HOM-CLE-11273",
+          "price": 2.5,
+          "quantity": 44
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "062 Smith place",
+        "city": "Port Derek",
+        "county": "West Sussex",
+        "zipcode": "BH7P 6DS",
+        "country": "United Kingdom",
+        "fullAddress": "644 Leon village, South Gavin, UB42 3GJ"
+      },
+      "method": "FedEx",
+      "trackingCode": "KI065327523CX"
+    },
+    "items": [
+      {
+        "productName": "Wall Clock Modern",
+        "sku": "HOM-DEC-14000",
+        "unitPrice": 12.5,
+        "quantity": 36,
+        "vendor": {
+          "companyName": "Innovatech Solutions",
+          "contactEmail": "sales@innovatech.com",
+          "supportPhone": "+1-888-123-4567"
+        }
+      },
+      {
+        "productName": "Passport Cover PVC",
+        "sku": "TRA-SEC-13875",
+        "unitPrice": 1.5,
+        "quantity": 6,
+        "vendor": {
+          "companyName": "Nexus Innovations",
+          "contactEmail": "contact@nexusinnov.com",
+          "supportPhone": "+1-888-121-2121"
+        }
+      },
+      {
+        "productName": "Screen Cleaning Spray",
+        "sku": "ELE-CLN-14018",
+        "unitPrice": 5.0,
+        "quantity": 43,
+        "vendor": {
+          "companyName": "TerraFirm Gear",
+          "contactEmail": "info@terrafirm.gear",
+          "supportPhone": "+1-888-333-4444"
+        }
+      },
+      {
+        "productName": "Earphone Case",
+        "sku": "ELE-AUD-10435",
+        "unitPrice": 4.99,
+        "quantity": 37,
+        "vendor": {
+          "companyName": "Jade Jaguar Jewelers",
+          "contactEmail": "contact@jadejaguar.com",
+          "supportPhone": "+1-888-212-2345"
+        }
+      },
+      {
+        "productName": "Bath Mat Chenille",
+        "sku": "HOM-BAT-10086",
+        "unitPrice": 16.99,
+        "quantity": 13,
+        "vendor": {
+          "companyName": "Urban Vogue Outfitters",
+          "contactEmail": "info@urbanvogue.com",
+          "supportPhone": "+1-888-223-3445"
+        }
+      },
+      {
+        "productName": "Desktop Stapler",
+        "sku": "OFF-TOO-15105",
+        "unitPrice": 4.0,
+        "quantity": 20,
+        "vendor": {
+          "companyName": "Magenta Moose Media",
+          "contactEmail": "sales@magentamoose.com",
+          "supportPhone": "+1-888-767-8901"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7dc4be1a13d8b478544",
+    "orderDate": "2021-04-18T11:05:49",
+    "total": 1515.15,
+    "status": "Processing",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25aee",
+      "username": "Justin Gomez",
+      "email": "justingomez@yahoo.com",
+      "addresses": [
+        {
+          "street": "26 Reynolds glens",
+          "city": "South Connor",
+          "county": "North Lanarkshire",
+          "zipcode": "DA4A 7HY",
+          "country": "United Kingdom",
+          "fullAddress": "01 Rachael club, Maureenshire, W9H 1PA"
+        },
+        {
+          "street": "6 Lauren course",
+          "city": "Sianburgh",
+          "county": "Cumbria",
+          "zipcode": "IM46 0EE",
+          "country": "United Kingdom",
+          "fullAddress": "474 Angela mews, Martinport, YO73 5BD"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Herb Scissors 5-Blade",
+          "sku": "KIT-TOO-13388",
+          "price": 8.5,
+          "quantity": 26
+        },
+        {
+          "productName": "USB Hub 4-Port",
+          "sku": "ELE-ACC-14816",
+          "price": 8.5,
+          "quantity": 7
+        },
+        {
+          "productName": "Tire Valve Stem Caps",
+          "sku": "AUT-ACC-11391",
+          "price": 2.99,
+          "quantity": 117
+        },
+        {
+          "productName": "Webcam Cover Slider",
+          "sku": "ELE-ACC-10984",
+          "price": 2.5,
+          "quantity": 11
+        },
+        {
+          "productName": "Running Shorts Women",
+          "sku": "SPT-CLO-10703",
+          "price": 22.0,
+          "quantity": 19
+        },
+        {
+          "productName": "Snap-Off Knife",
+          "sku": "TOO-CUT-13773",
+          "price": 2.0,
+          "quantity": 101
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "6 Lauren course",
+        "city": "Sianburgh",
+        "county": "Cumbria",
+        "zipcode": "IM46 0EE",
+        "country": "United Kingdom",
+        "fullAddress": "474 Angela mews, Martinport, YO73 5BD"
+      },
+      "method": "DHL Express",
+      "trackingCode": "XW091628896GE"
+    },
+    "items": [
+      {
+        "productName": "Shoe Insoles Foam",
+        "sku": "FAS-ACC-14675",
+        "unitPrice": 3.0,
+        "quantity": 51,
+        "vendor": {
+          "companyName": "Innovatech Solutions",
+          "contactEmail": "sales@innovatech.com",
+          "supportPhone": "+1-888-123-4567"
+        }
+      },
+      {
+        "productName": "Fishing Rod Combo",
+        "sku": "SPT-OUT-16019",
+        "unitPrice": 55.0,
+        "quantity": 1,
+        "vendor": {
+          "companyName": "Golden Grain Foods",
+          "contactEmail": "support@goldengrain.com",
+          "supportPhone": "+1-888-990-1234"
+        }
+      },
+      {
+        "productName": "Tape Dispenser",
+        "sku": "OFF-ACC-14038",
+        "unitPrice": 4.0,
+        "quantity": 18,
+        "vendor": {
+          "companyName": "Golden Grain Foods",
+          "contactEmail": "support@goldengrain.com",
+          "supportPhone": "+1-888-990-1234"
+        }
+      },
+      {
+        "productName": "Smart Scale Body Fat",
+        "sku": "HOM-WEL-10193",
+        "unitPrice": 29.99,
+        "quantity": 12,
+        "vendor": {
+          "companyName": "Gray Fox Tech",
+          "contactEmail": "support@grayfoxtech.com",
+          "supportPhone": "+1-888-444-6789"
+        }
+      },
+      {
+        "productName": "Sewing Kit Pocket",
+        "sku": "FAS-ACC-14988",
+        "unitPrice": 2.5,
+        "quantity": 19,
+        "vendor": {
+          "companyName": "Pinnacle Performance",
+          "contactEmail": "info@pinnacleperf.com",
+          "supportPhone": "+1-888-445-5667"
+        }
+      },
+      {
+        "productName": "Hair Straightener",
+        "sku": "HOM-HEA-16142",
+        "unitPrice": 35.99,
+        "quantity": 23,
+        "vendor": {
+          "companyName": "Diamond Dolphin Designs",
+          "contactEmail": "sales@diamonddolphin.com",
+          "supportPhone": "+1-888-989-9012"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7dc4be1a13d8b478545",
+    "orderDate": "2020-04-25T14:43:28",
+    "total": 1150.23,
+    "status": "Delivered",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25b46",
+      "username": "Sebastian Hawkins",
+      "email": "sebastianhawkins@outlook.com",
+      "addresses": [
+        {
+          "street": "495 Davies mews",
+          "city": "West Richard",
+          "county": "Fife",
+          "zipcode": "S56 0UL",
+          "country": "United Kingdom",
+          "fullAddress": "1 Clarke trafficway, Charlesville, N7S 9PY"
+        },
+        {
+          "street": "Flat 61\nBrenda station",
+          "city": "West Dylan",
+          "county": "East Renfrewshire",
+          "zipcode": "NW6A 0SE",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 53, Marie harbor, Lake Stewarttown, WS3 5NX"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Stainless Steel Pizza Cutter",
+          "sku": "HOM-KIT-16158",
+          "price": 9.5,
+          "quantity": 51
+        },
+        {
+          "productName": "Tape Measure 8m",
+          "sku": "TOO-MEA-14840",
+          "price": 9.0,
+          "quantity": 27
+        },
+        {
+          "productName": "Seedling Tray 12",
+          "sku": "GAR-PRO-13178",
+          "price": 2.0,
+          "quantity": 69
+        },
+        {
+          "productName": "Microfiber Towel XL",
+          "sku": "AUT-CLN-14856",
+          "price": 8.0,
+          "quantity": 38
+        },
+        {
+          "productName": "Dimmer Switch",
+          "sku": "HOM-ELE-12347",
+          "price": 16.0,
+          "quantity": 28
+        },
+        {
+          "productName": "Tea Strainer",
+          "sku": "HOM-KIT-10460",
+          "price": 5.99,
+          "quantity": 26
+        },
+        {
+          "productName": "Eraser Pen Stick",
+          "sku": "OFF-ACC-14305",
+          "price": 2.0,
+          "quantity": 4
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "495 Davies mews",
+        "city": "West Richard",
+        "county": "Fife",
+        "zipcode": "S56 0UL",
+        "country": "United Kingdom",
+        "fullAddress": "1 Clarke trafficway, Charlesville, N7S 9PY"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "PG742061239DD"
+    },
+    "items": [
+      {
+        "productName": "Electrical Tape Black",
+        "sku": "ELE-ACC-14440",
+        "unitPrice": 1.0,
+        "quantity": 79,
+        "vendor": {
+          "companyName": "Amethyst Antelope Apparel",
+          "contactEmail": "support@amethystantelope.com",
+          "supportPhone": "+1-888-767-7890"
+        }
+      },
+      {
+        "productName": "Window Squeegee",
+        "sku": "HOM-CLN-12321",
+        "unitPrice": 8.0,
+        "quantity": 15,
+        "vendor": {
+          "companyName": "The Scholar's Press",
+          "contactEmail": "publishing@scholarspress.com",
+          "supportPhone": "+1-888-999-0000"
+        }
+      },
+      {
+        "productName": "Speed Jump Rope",
+        "sku": "SPO-FIT-14821",
+        "unitPrice": 6.0,
+        "quantity": 6,
+        "vendor": {
+          "companyName": "Tourmaline Tiger Toys",
+          "contactEmail": "sales@tourmalinetiger.com",
+          "supportPhone": "+1-888-323-3344"
+        }
+      },
+      {
+        "productName": "Manicure Set",
+        "sku": "PER-CAR-11172",
+        "unitPrice": 12.99,
+        "quantity": 22,
+        "vendor": {
+          "companyName": "Summit Supply Co.",
+          "contactEmail": "support@summitsupply.co",
+          "supportPhone": "+1-888-112-3456"
+        }
+      },
+      {
+        "productName": "Swimming Nose Clip",
+        "sku": "SPT-SWI-10280",
+        "unitPrice": 5.99,
+        "quantity": 55,
+        "vendor": {
+          "companyName": "Magenta Moose Media",
+          "contactEmail": "sales@magentamoose.com",
+          "supportPhone": "+1-888-767-8901"
+        }
+      },
+      {
+        "productName": "Sunset Projection Lamp",
+        "sku": "HOM-DEC-14540",
+        "unitPrice": 20.0,
+        "quantity": 1,
+        "vendor": {
+          "companyName": "StyleSphere",
+          "contactEmail": "contact@stylesphere.co",
+          "supportPhone": "+1-888-667-7889"
+        }
+      },
+      {
+        "productName": "Non-Stick Frying Pan",
+        "sku": "HOM-KIT-16115",
+        "unitPrice": 28.0,
+        "quantity": 10,
+        "vendor": {
+          "companyName": "Jade Jaguar Jewelers",
+          "contactEmail": "contact@jadejaguar.com",
+          "supportPhone": "+1-888-212-2345"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7dc4be1a13d8b478546",
+    "orderDate": "2023-03-26T22:38:06",
+    "total": 625.6,
+    "status": "Delivered",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f25923",
+      "username": "Rose Gray",
+      "email": "rosegray@hotmail.com",
+      "addresses": [
+        {
+          "street": "Studio 50\nJosh plaza",
+          "city": "Woodfort",
+          "county": "Stirling",
+          "zipcode": "S2E 9BU",
+          "country": "United Kingdom",
+          "fullAddress": "37 Chelsea squares, Lake Callumberg, L8 4TR"
+        },
+        {
+          "street": "Flat 1\nReid parkway",
+          "city": "Kayleighshire",
+          "county": "Midlothian",
+          "zipcode": "M0 6UB",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 64j, Emily overpass, Burnston, SM9 0QY"
+        },
+        {
+          "street": "39 Lesley stream",
+          "city": "Hancockside",
+          "county": "Anglesey",
+          "zipcode": "G69 6TT",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 85, Alexandra oval, Davisstad, WN50 0YJ"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Microfiber Applicator",
+          "sku": "AUT-DET-12877",
+          "price": 2.5,
+          "quantity": 52
+        },
+        {
+          "productName": "Steel Wool Balls",
+          "sku": "KIT-CLN-14456",
+          "price": 2.5,
+          "quantity": 14
+        },
+        {
+          "productName": "Rubiks Cube Speed",
+          "sku": "TOY-PUZ-12187",
+          "price": 9.0,
+          "quantity": 25
+        },
+        {
+          "productName": "Pill Organizer Weekly",
+          "sku": "HOM-WEL-10738",
+          "price": 4.5,
+          "quantity": 53
+        },
+        {
+          "productName": "Pizza Cutter Wheel",
+          "sku": "HOM-KIT-11136",
+          "price": 7.5,
+          "quantity": 6
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "Flat 1\nReid parkway",
+        "city": "Kayleighshire",
+        "county": "Midlothian",
+        "zipcode": "M0 6UB",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 64j, Emily overpass, Burnston, SM9 0QY"
+      },
+      "method": "FedEx",
+      "trackingCode": "GG273379682JY"
+    },
+    "items": [
+      {
+        "productName": "Cat Litter Mat",
+        "sku": "PET-ACC-11341",
+        "unitPrice": 13.99,
+        "quantity": 40,
+        "vendor": {
+          "companyName": "Ivory Elephant Imports",
+          "contactEmail": "contact@ivoryelephant.com",
+          "supportPhone": "+1-888-101-2345"
+        }
+      },
+      {
+        "productName": "Bike Reflector Set",
+        "sku": "SPT-CYC-10618",
+        "unitPrice": 5.5,
+        "quantity": 12,
+        "vendor": {
+          "companyName": "TerraFirm Gear",
+          "contactEmail": "info@terrafirm.gear",
+          "supportPhone": "+1-888-333-4444"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7dc4be1a13d8b478547",
+    "orderDate": "2022-12-21T11:36:12",
+    "total": 648.5,
+    "status": "Cancelled",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f2583a",
+      "username": "Ruth Phillips",
+      "email": "ruthphillips@icloud.com",
+      "addresses": [
+        {
+          "street": "2 Carter curve",
+          "city": "Dannychester",
+          "county": "Highland",
+          "zipcode": "W16 3GA",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 8, Swift walks, South Frankview, CM69 5FE"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Key Cap Identifier",
+          "sku": "HOM-ORG-11068",
+          "price": 1.5,
+          "quantity": 30
+        },
+        {
+          "productName": "Velcro Cable Ties",
+          "sku": "ELE-ACC-10520",
+          "price": 4.99,
+          "quantity": 18
+        },
+        {
+          "productName": "Ear Plugs Corded",
+          "sku": "TOO-SAF-14449",
+          "price": 1.5,
+          "quantity": 51
+        },
+        {
+          "productName": "Floodlight Security Camera",
+          "sku": "HOM-SEC-10153",
+          "price": 199.99,
+          "quantity": 5
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "2 Carter curve",
+        "city": "Dannychester",
+        "county": "Highland",
+        "zipcode": "W16 3GA",
+        "country": "United Kingdom",
+        "fullAddress": "Studio 8, Swift walks, South Frankview, CM69 5FE"
+      },
+      "method": "UPS Standard",
+      "trackingCode": "GD911167482GW"
+    },
+    "items": [
+      {
+        "productName": "Nail Buffer Block",
+        "sku": "BEA-NAI-14919",
+        "unitPrice": 1.5,
+        "quantity": 3,
+        "vendor": {
+          "companyName": "AquaLuxe Kitchenware",
+          "contactEmail": "sales@aqualuxe.kitchen",
+          "supportPhone": "+1-888-555-6666"
+        }
+      },
+      {
+        "productName": "Dough Scraper",
+        "sku": "HOM-KIT-10576",
+        "unitPrice": 4.5,
+        "quantity": 47,
+        "vendor": {
+          "companyName": "Azure Turtle Toys",
+          "contactEmail": "info@azureturtle.com",
+          "supportPhone": "+1-888-323-4567"
+        }
+      },
+      {
+        "productName": "Fish Net Aquarium",
+        "sku": "PET-FIS-14926",
+        "unitPrice": 2.0,
+        "quantity": 6,
+        "vendor": {
+          "companyName": "Horizon Dynamics",
+          "contactEmail": "support@horizondynamics.com",
+          "supportPhone": "+1-888-343-4343"
+        }
+      },
+      {
+        "productName": "Cold Pressed Dog Food",
+        "sku": "PET-FEE-14529",
+        "unitPrice": 30.0,
+        "quantity": 6,
+        "vendor": {
+          "companyName": "Fusion Homewares",
+          "contactEmail": "support@fusionhome.com",
+          "supportPhone": "+1-888-567-8901"
+        }
+      },
+      {
+        "productName": "Key Tag Label",
+        "sku": "HOM-ORG-13696",
+        "unitPrice": 1.5,
+        "quantity": 60,
+        "vendor": {
+          "companyName": "Tourmaline Tiger Toys",
+          "contactEmail": "sales@tourmalinetiger.com",
+          "supportPhone": "+1-888-323-3344"
+        }
+      },
+      {
+        "productName": "Elastic Cord White",
+        "sku": "HOM-CRA-13016",
+        "unitPrice": 4.0,
+        "quantity": 27,
+        "vendor": {
+          "companyName": "Aquamarine Alligator Art",
+          "contactEmail": "info@aquamarinealligator.com",
+          "supportPhone": "+1-888-878-8901"
+        }
+      },
+      {
+        "productName": "Golf Tees Wood",
+        "sku": "SPO-GOL-14188",
+        "unitPrice": 2.5,
+        "quantity": 17,
+        "vendor": {
+          "companyName": "Golden Grain Foods",
+          "contactEmail": "support@goldengrain.com",
+          "supportPhone": "+1-888-990-1234"
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6931c7dc4be1a13d8b478548",
+    "orderDate": "2024-01-23T09:11:34",
+    "total": 472.5,
+    "status": "Shipped",
+    "customerSnapshot": {
+      "_id": "6931bda3ce6fab9819f258ee",
+      "username": "Sharon Allen",
+      "email": "sharonallen@hotmail.com",
+      "addresses": [
+        {
+          "street": "537 Moore hollow",
+          "city": "Catherinetown",
+          "county": "Falkirk",
+          "zipcode": "W2H 5WU",
+          "country": "United Kingdom",
+          "fullAddress": "Studio 12, Bethany fields, Damianville, N7S 4TY"
+        },
+        {
+          "street": "8 Joyce tunnel",
+          "city": "Port Harry",
+          "county": "Lancashire",
+          "zipcode": "CB57 0DS",
+          "country": "United Kingdom",
+          "fullAddress": "Flat 72D, Smith village, Port Abigailbury, KA1R 7EF"
+        }
+      ],
+      "shoppingCart": [
+        {
+          "productName": "Sandwich Cutter Shapes",
+          "sku": "KIT-TOO-13267",
+          "price": 6.0,
+          "quantity": 38
+        },
+        {
+          "productName": "Sandpaper Sheet",
+          "sku": "TOO-ACC-13679",
+          "price": 0.5,
+          "quantity": 172
+        }
+      ]
+    },
+    "shippingDetails": {
+      "address": {
+        "street": "8 Joyce tunnel",
+        "city": "Port Harry",
+        "county": "Lancashire",
+        "zipcode": "CB57 0DS",
+        "country": "United Kingdom",
+        "fullAddress": "Flat 72D, Smith village, Port Abigailbury, KA1R 7EF"
+      },
+      "method": "USPS Priority",
+      "trackingCode": "DK751065840RL"
+    },
+    "items": [
+      {
+        "productName": "Cycling Water Bottle",
+        "sku": "SPT-CYC-10271",
+        "unitPrice": 10.5,
+        "quantity": 45,
+        "vendor": {
+          "companyName": "Orange Octopus Optics",
+          "contactEmail": "sales@orangeoctopus.com",
+          "supportPhone": "+1-888-777-9012"
+        }
+      }
+    ]
+  }
+]

@@ -3,9 +3,8 @@ from bson import ObjectId, Decimal128
 from datetime import datetime
 import random
 
-# mongoClient, db = connectToMongoDB()
-
-# productsCollection = db['products']
+mongoClient, db = connectToMongoDB()
+productsCollection = db['products']
 
 vendors = [
     {"companyName": "Innovatech Solutions", "contactEmail": "sales@innovatech.com", "supportPhone": "+1-888-123-4567"},
@@ -84,7 +83,7 @@ vendors = [
     {"companyName": "Amber Ape Adventures", "contactEmail": "support@amberape.com", "supportPhone": "+1-888-545-5566"}
 ]
 
-userNames = [
+usernames = [
     "James Smith", "John Johnson", "Robert Williams", "Michael Brown", "William Jones", "David Garcia", "Richard Miller", "Joseph Davis", "Thomas Rodriguez", "Charles Martinez",
     "Christopher Hernandez", "Daniel Lopez", "Matthew Gonzales", "Anthony Wilson", "Mark Anderson", "Donald Thomas", "Steven Taylor", "Paul Moore", "Andrew Jackson", "Joshua Martin",
     "Kenneth Lee", "Kevin Perez", "Brian Thompson", "George White", "Edward Harris", "Ronald Sanchez", "Timothy Clark", "Jason Ramirez", "Jeffrey Lewis", "Ryan Robinson",
@@ -176,7 +175,6 @@ userNames = [
     "Jordan Sanders", "Albert Patel", "Dylan Myers", "Bruce Long", "Willie Ross", "Gabriel Foster", "Alan Jimenez", "Juan Smith", "Logan Johnson", "Wayne Williams",
     "Ralph Brown", "Roy Jones", "Eugene Garcia", "Randy Miller", "Vincent Davis", "Russell Rodriguez", "Elijah Martinez", "Louis Hernandez", "Bobby Lopez", "Philip Gonzales", "Johnny Wilson"
 ]
-
 
 comments = [
     "Excellent product, highly recommended! A true game changer.",
@@ -285,7 +283,7 @@ def createReviews(minReviews, maxReviews):
         month = random.randint(1, 12)
         day = random.randint(1, 28) # To avoid month length issues
         reviews.append({
-            "userDisplayName": random.choice(userNames),
+            "username": random.choice(usernames),
             "rating": random.randint(1, 5),
             "comment": random.choice(comments),
             "date": datetime(year, month, day)
@@ -37146,12 +37144,12 @@ products = [
 }
 ]
 
-# 1650 in fisierul asta
+# 3350 in fisierul asta
 
-# result = productsCollection.insert_many(products)
-# print(f"✓ {len(result.inserted_ids)} unique products added successfully")
+result = productsCollection.insert_many(products)
+print(f"✓ {len(result.inserted_ids)} unique products added successfully")
 
-# closeConnection(mongoClient)
-
-print(len(products))
+closeConnection(mongoClient)
+#
+# print(len(products))
 

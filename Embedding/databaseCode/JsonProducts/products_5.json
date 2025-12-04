@@ -1,0 +1,2775 @@
+[
+  {
+    "_id": "6931b85c5e07a7d8be04e6f8",
+    "name": "Camping Stove Portable",
+    "sku": "SPT-OUT-10200",
+    "price": 24.99,
+    "details": {
+      "description": "Gas camping stove",
+      "specs": {
+        "fuel": "Butane/Propane",
+        "ignition": "Piezo",
+        "case": "Included"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Sports",
+      "sub": "Outdoor"
+    },
+    "vendor": {
+      "companyName": "Scarlet Sparrow Styles",
+      "contactEmail": "sales@scarletsparrow.com",
+      "supportPhone": "+1-888-212-3456"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Maria Morris",
+        "rating": 4,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2021-04-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Walter Morris",
+        "rating": 5,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2022-05-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Ryan Robinson",
+        "rating": 3,
+        "comment": "The price is a bit high, but you get what you pay for.",
+        "date": "2020-02-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Ralph Ross",
+        "rating": 3,
+        "comment": "The setup was a breeze, up and running in minutes.",
+        "date": "2021-12-05T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e6f9",
+    "name": "Gaming Keyboard TKL",
+    "sku": "ELE-GAM-10201",
+    "price": 69.5,
+    "details": {
+      "description": "Tenkeyless mechanical keyboard",
+      "specs": {
+        "switches": "Red Linear",
+        "rgb": "Per-key",
+        "cable": "Detachable"
+      }
+    },
+    "stock": 45,
+    "category": {
+      "main": "Electronics",
+      "sub": "Gaming"
+    },
+    "vendor": {
+      "companyName": "Azure Turtle Toys",
+      "contactEmail": "info@azureturtle.com",
+      "supportPhone": "+1-888-323-4567"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Virginia Cook",
+        "rating": 4,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2023-09-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Michael Miller",
+        "rating": 4,
+        "comment": "I had high hopes, but it didn't live up to the hype.",
+        "date": "2025-04-07T00:00:00"
+      },
+      {
+        "userDisplayName": "Jack Diaz",
+        "rating": 1,
+        "comment": "I had high hopes, but it didn't live up to the hype.",
+        "date": "2019-11-04T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e6fa",
+    "name": "Area Rug Geometric",
+    "sku": "HOM-DEC-10202",
+    "price": 85.0,
+    "details": {
+      "description": "Modern living room rug",
+      "specs": {
+        "size": "160x230cm",
+        "material": "Polypropylene",
+        "pattern": "Geometric"
+      }
+    },
+    "stock": 30,
+    "category": {
+      "main": "Home",
+      "sub": "Decor"
+    },
+    "vendor": {
+      "companyName": "Cerulean Swan Solutions",
+      "contactEmail": "support@ceruleanswan.com",
+      "supportPhone": "+1-888-434-5678"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Joseph Hernandez",
+        "rating": 5,
+        "comment": "I had high hopes, but it didn't live up to the hype.",
+        "date": "2023-02-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Julie Sanders",
+        "rating": 5,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2019-03-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Joseph Wilson",
+        "rating": 5,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2022-12-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Jane Patel",
+        "rating": 1,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2022-06-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Juan Alvarez",
+        "rating": 3,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2023-03-11T00:00:00"
+      },
+      {
+        "userDisplayName": "Carolyn Parker",
+        "rating": 5,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2025-11-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Beverly Ruiz",
+        "rating": 1,
+        "comment": "I'm very impressed with the performance of this product.",
+        "date": "2024-07-02T00:00:00"
+      },
+      {
+        "userDisplayName": "Philip Gonzales",
+        "rating": 3,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2024-04-19T00:00:00"
+      },
+      {
+        "userDisplayName": "Rachel Mitchell",
+        "rating": 3,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2021-04-25T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e6fb",
+    "name": "Running Vest High-Vis",
+    "sku": "SPT-CLO-10203",
+    "price": 19.99,
+    "details": {
+      "description": "Reflective running vest",
+      "specs": {
+        "size": "One Size",
+        "color": "Neon Yellow",
+        "pockets": "Phone"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Sports",
+      "sub": "Clothing"
+    },
+    "vendor": {
+      "companyName": "Saffron Stallion Sports",
+      "contactEmail": "contact@saffronstallion.com",
+      "supportPhone": "+1-888-545-6789"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Amanda Walker",
+        "rating": 2,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2023-03-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Walter Ortiz",
+        "rating": 4,
+        "comment": "I wish I had bought this sooner. It's been a great help.",
+        "date": "2023-06-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Angela Hall",
+        "rating": 1,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2025-03-11T00:00:00"
+      },
+      {
+        "userDisplayName": "Noah Bailey",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2023-03-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Daniel Lee",
+        "rating": 4,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2020-09-09T00:00:00"
+      },
+      {
+        "userDisplayName": "James Gonzales",
+        "rating": 2,
+        "comment": "The product has a weird smell that won't go away.",
+        "date": "2025-05-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Julie James",
+        "rating": 2,
+        "comment": "The product has a weird smell that won't go away.",
+        "date": "2024-01-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Bryan Bennett",
+        "rating": 4,
+        "comment": "The product is a bit of a novelty, but it's a unique one.",
+        "date": "2022-07-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Ralph Smith",
+        "rating": 5,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2019-08-23T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e6fc",
+    "name": "Smart Speaker Mini",
+    "sku": "ELE-AUD-10204",
+    "price": 39.99,
+    "details": {
+      "description": "Voice controlled assistant",
+      "specs": {
+        "mic": "Far-field",
+        "connectivity": "WiFi/BT",
+        "color": "Charcoal"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Electronics",
+      "sub": "Audio"
+    },
+    "vendor": {
+      "companyName": "Veridian Valley Ventures",
+      "contactEmail": "info@veridianvalley.com",
+      "supportPhone": "+1-888-656-7890"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e6fd",
+    "name": "Weighted Blanket 15lb",
+    "sku": "HOM-BED-10205",
+    "price": 59.0,
+    "details": {
+      "description": "Calming weighted blanket",
+      "specs": {
+        "weight": "15lb",
+        "size": "Queen",
+        "fill": "Glass beads"
+      }
+    },
+    "stock": 40,
+    "category": {
+      "main": "Home",
+      "sub": "Bedding"
+    },
+    "vendor": {
+      "companyName": "Magenta Moose Media",
+      "contactEmail": "sales@magentamoose.com",
+      "supportPhone": "+1-888-767-8901"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Anna Green",
+        "rating": 3,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2025-10-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Debra Campbell",
+        "rating": 4,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2020-11-19T00:00:00"
+      },
+      {
+        "userDisplayName": "Andrew Harris",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but it's a unique one.",
+        "date": "2023-05-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Bobby Lopez",
+        "rating": 5,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2022-07-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Nathan Rogers",
+        "rating": 3,
+        "comment": "The price is a bit high, but you get what you pay for.",
+        "date": "2024-04-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Arthur Bennett",
+        "rating": 1,
+        "comment": "Average quality, nothing special to write home about.",
+        "date": "2019-05-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Heather Cruz",
+        "rating": 2,
+        "comment": "Incredible value. Feels much more expensive than it is.",
+        "date": "2020-03-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Joe Price",
+        "rating": 4,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2018-03-02T00:00:00"
+      },
+      {
+        "userDisplayName": "Olivia Long",
+        "rating": 1,
+        "comment": "The customer reviews were spot on. This is a great product.",
+        "date": "2020-03-05T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e6fe",
+    "name": "Sketching Pencils Set",
+    "sku": "ART-SUP-10206",
+    "price": 14.5,
+    "details": {
+      "description": "Professional drawing pencils",
+      "specs": {
+        "range": "6B-4H",
+        "count": "12",
+        "tin": "Included"
+      }
+    },
+    "stock": 75,
+    "category": {
+      "main": "Art",
+      "sub": "Supplies"
+    },
+    "vendor": {
+      "companyName": "Teal Tiger Tech",
+      "contactEmail": "contact@tealtiger.tech",
+      "supportPhone": "+1-888-878-9012"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Justin Green",
+        "rating": 2,
+        "comment": "The app that comes with it is surprisingly polished and useful.",
+        "date": "2022-08-20T00:00:00"
+      },
+      {
+        "userDisplayName": "Jeffrey Green",
+        "rating": 3,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2022-05-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Eugene Jimenez",
+        "rating": 5,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2024-12-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Jack Phillips",
+        "rating": 5,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2019-02-01T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e6ff",
+    "name": "Swim Cap Silicone",
+    "sku": "SPT-SWI-10207",
+    "price": 8.99,
+    "details": {
+      "description": "Waterproof swim cap",
+      "specs": {
+        "material": "Silicone",
+        "size": "Adult",
+        "color": "Silver"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Sports",
+      "sub": "Swimming"
+    },
+    "vendor": {
+      "companyName": "Lavender Lion Linens",
+      "contactEmail": "support@lavenderlion.com",
+      "supportPhone": "+1-888-989-0123"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Christian Cooper",
+        "rating": 5,
+        "comment": "The product is a bit of a letdown. I expected more for the price.",
+        "date": "2023-09-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Lisa Martin",
+        "rating": 3,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2022-12-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Vincent Davis",
+        "rating": 5,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2018-11-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Edward Torres",
+        "rating": 3,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2021-03-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Jesse Hughes",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2022-08-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Judy Patel",
+        "rating": 2,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2025-09-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Ryan Allen",
+        "rating": 2,
+        "comment": "The product is a bit heavy, making it less portable.",
+        "date": "2024-04-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Nathan Morgan",
+        "rating": 3,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2024-02-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Cynthia Wright",
+        "rating": 1,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2023-01-07T00:00:00"
+      },
+      {
+        "userDisplayName": "Jerry Turner",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2022-05-19T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e700",
+    "name": "Power Strip Tower",
+    "sku": "ELE-ACC-10208",
+    "price": 32.99,
+    "details": {
+      "description": "Vertical surge protector",
+      "specs": {
+        "outlets": "10",
+        "usb": "4",
+        "cord": "3m"
+      }
+    },
+    "stock": 50,
+    "category": {
+      "main": "Electronics",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Crimson Cobra Creations",
+      "contactEmail": "info@crimsoncobra.com",
+      "supportPhone": "+1-888-090-1234"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Mary Lopez",
+        "rating": 4,
+        "comment": "The app that comes with it is surprisingly polished and useful.",
+        "date": "2024-06-04T00:00:00"
+      },
+      {
+        "userDisplayName": "Judith Bailey",
+        "rating": 1,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2023-11-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Mark Moore",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2023-02-21T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e701",
+    "name": "Makeup Brush Set",
+    "sku": "PER-BEA-10209",
+    "price": 24.0,
+    "details": {
+      "description": "Synthetic brush collection",
+      "specs": {
+        "count": "10",
+        "bristles": "Synthetic",
+        "case": "Roll-up"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Personal Care",
+      "sub": "Beauty"
+    },
+    "vendor": {
+      "companyName": "Onyx Otter Outfitters",
+      "contactEmail": "sales@onyxotter.com",
+      "supportPhone": "+1-888-101-1234"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Eugene Garcia",
+        "rating": 2,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2018-11-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Evelyn Kelly",
+        "rating": 2,
+        "comment": "The design is sleek and modern. Looks great on my desk.",
+        "date": "2021-03-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Carolyn Parker",
+        "rating": 2,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2025-08-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Mark Clark",
+        "rating": 3,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2024-03-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Judith Howard",
+        "rating": 5,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2021-06-02T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e702",
+    "name": "Wireless Doorbell Kit",
+    "sku": "HOM-IMP-10210",
+    "price": 19.99,
+    "details": {
+      "description": "Battery operated doorbell",
+      "specs": {
+        "range": "1000ft",
+        "chimes": "50+",
+        "waterproof": "IP55"
+      }
+    },
+    "stock": 65,
+    "category": {
+      "main": "Home",
+      "sub": "Improvement"
+    },
+    "vendor": {
+      "companyName": "Jade Jaguar Jewelers",
+      "contactEmail": "contact@jadejaguar.com",
+      "supportPhone": "+1-888-212-2345"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Edward Harris",
+        "rating": 2,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2022-03-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Olivia Rogers",
+        "rating": 1,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2025-04-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Judith Morgan",
+        "rating": 3,
+        "comment": "The customer reviews were spot on. This is a great product.",
+        "date": "2025-12-08T00:00:00"
+      },
+      {
+        "userDisplayName": "David Rodriguez",
+        "rating": 2,
+        "comment": "This was an impulse buy, and I have zero regrets.",
+        "date": "2022-01-18T00:00:00"
+      },
+      {
+        "userDisplayName": "Joan Murphy",
+        "rating": 1,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2019-08-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Nathan Cruz",
+        "rating": 2,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2023-08-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Steven Sanchez",
+        "rating": 5,
+        "comment": "I'm very impressed with the performance of this product.",
+        "date": "2024-03-11T00:00:00"
+      },
+      {
+        "userDisplayName": "Carl Peterson",
+        "rating": 4,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2018-09-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Melissa Wright",
+        "rating": 2,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2022-11-05T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e703",
+    "name": "Resistance Tubes Set",
+    "sku": "SPT-FIT-10211",
+    "price": 22.5,
+    "details": {
+      "description": "Exercise tubes with handles",
+      "specs": {
+        "count": "5",
+        "anchor": "Door",
+        "material": "Latex"
+      }
+    },
+    "stock": 95,
+    "category": {
+      "main": "Sports",
+      "sub": "Fitness"
+    },
+    "vendor": {
+      "companyName": "Topaz Toucan Travel",
+      "contactEmail": "support@topaztoucan.com",
+      "supportPhone": "+1-888-323-3456"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Rachel Turner",
+        "rating": 5,
+        "comment": "I bought this as a gift and they absolutely loved it!",
+        "date": "2025-02-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Terry Watson",
+        "rating": 1,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2024-02-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Lisa Thompson",
+        "rating": 3,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2021-05-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Albert Patel",
+        "rating": 3,
+        "comment": "I'm very impressed with the performance of this product.",
+        "date": "2025-01-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Sandra Taylor",
+        "rating": 3,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2022-01-14T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e704",
+    "name": "Selfie Stick Tripod",
+    "sku": "ELE-ACC-10212",
+    "price": 16.99,
+    "details": {
+      "description": "Bluetooth selfie stick",
+      "specs": {
+        "remote": "Detachable",
+        "extendable": "70cm",
+        "light": "Fill light"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Electronics",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Ruby Rooster Restaurant",
+      "contactEmail": "info@rubyrooster.com",
+      "supportPhone": "+1-888-434-4567"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Dennis Parker",
+        "rating": 2,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2024-10-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Anna Mitchell",
+        "rating": 3,
+        "comment": "I wish I had bought this sooner. It's been a great help.",
+        "date": "2022-09-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Robert Garcia",
+        "rating": 1,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2023-10-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Lisa Martin",
+        "rating": 1,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2021-02-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Christopher Thompson",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great addition to my collection.",
+        "date": "2019-11-19T00:00:00"
+      },
+      {
+        "userDisplayName": "Kathryn Kim",
+        "rating": 2,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2022-08-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e705",
+    "name": "Moka Pot 3-Cup",
+    "sku": "HOM-KIT-10213",
+    "price": 28.0,
+    "details": {
+      "description": "Stovetop espresso maker",
+      "specs": {
+        "capacity": "3 Cup",
+        "material": "Aluminum",
+        "color": "Silver"
+      }
+    },
+    "stock": 55,
+    "category": {
+      "main": "Home",
+      "sub": "Kitchen"
+    },
+    "vendor": {
+      "companyName": "Sapphire Shark Supplies",
+      "contactEmail": "sales@sapphireshark.com",
+      "supportPhone": "+1-888-545-5678"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Shirley Green",
+        "rating": 4,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2018-03-19T00:00:00"
+      },
+      {
+        "userDisplayName": "James Brown",
+        "rating": 1,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2018-03-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Catherine Edwards",
+        "rating": 5,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2020-02-20T00:00:00"
+      },
+      {
+        "userDisplayName": "Dennis Morris",
+        "rating": 4,
+        "comment": "This was an impulse buy, and I have zero regrets.",
+        "date": "2020-08-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Sara Wood",
+        "rating": 4,
+        "comment": "Five stars! Does the job flawlessly.",
+        "date": "2021-04-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Mark Lee",
+        "rating": 5,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2022-06-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Paul Robinson",
+        "rating": 3,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2022-04-27T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e706",
+    "name": "Men's Cargo Shorts",
+    "sku": "FAS-CLO-10214",
+    "price": 34.95,
+    "details": {
+      "description": "Cotton cargo shorts",
+      "specs": {
+        "size": "34",
+        "color": "Khaki",
+        "pockets": "6"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Fashion",
+      "sub": "Clothing"
+    },
+    "vendor": {
+      "companyName": "Garnet Griffin Gear",
+      "contactEmail": "contact@garnetgriffin.com",
+      "supportPhone": "+1-888-656-6789"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Sara Cox",
+        "rating": 4,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2025-10-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Peter Bailey",
+        "rating": 5,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2024-05-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Grace Hughes",
+        "rating": 3,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2021-03-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Robert Garcia",
+        "rating": 2,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2020-02-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Heather Cruz",
+        "rating": 3,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2018-05-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Paul Moore",
+        "rating": 5,
+        "comment": "The instructions were clear and easy to follow.",
+        "date": "2022-10-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Elijah Smith",
+        "rating": 2,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2022-06-25T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e707",
+    "name": "External DVD Drive",
+    "sku": "ELE-PC-10215",
+    "price": 24.99,
+    "details": {
+      "description": "USB CD/DVD burner",
+      "specs": {
+        "interface": "USB 3.0",
+        "type": "Slim",
+        "plug_play": "Yes"
+      }
+    },
+    "stock": 40,
+    "category": {
+      "main": "Electronics",
+      "sub": "Peripherals"
+    },
+    "vendor": {
+      "companyName": "Amethyst Antelope Apparel",
+      "contactEmail": "support@amethystantelope.com",
+      "supportPhone": "+1-888-767-7890"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Terry Wood",
+        "rating": 3,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2019-03-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Sarah Hernandez",
+        "rating": 4,
+        "comment": "This was an impulse buy, and I have zero regrets.",
+        "date": "2018-07-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Russell Garcia",
+        "rating": 3,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2021-03-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Victoria Ortiz",
+        "rating": 2,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2023-09-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Charles Perez",
+        "rating": 1,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2024-12-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Jesse Cox",
+        "rating": 5,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2018-08-26T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e708",
+    "name": "Wall Shelf Floating",
+    "sku": "HOM-DEC-10216",
+    "price": 19.5,
+    "details": {
+      "description": "Set of 2 floating shelves",
+      "specs": {
+        "length": "40cm",
+        "material": "MDF",
+        "finish": "White"
+      }
+    },
+    "stock": 70,
+    "category": {
+      "main": "Home",
+      "sub": "Decor"
+    },
+    "vendor": {
+      "companyName": "Aquamarine Alligator Art",
+      "contactEmail": "info@aquamarinealligator.com",
+      "supportPhone": "+1-888-878-8901"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e709",
+    "name": "Boxing Gloves 12oz",
+    "sku": "SPT-BOX-10217",
+    "price": 39.99,
+    "details": {
+      "description": "Training boxing gloves",
+      "specs": {
+        "weight": "12oz",
+        "material": "Synthetic Leather",
+        "closure": "Velcro"
+      }
+    },
+    "stock": 50,
+    "category": {
+      "main": "Sports",
+      "sub": "Boxing"
+    },
+    "vendor": {
+      "companyName": "Diamond Dolphin Designs",
+      "contactEmail": "sales@diamonddolphin.com",
+      "supportPhone": "+1-888-989-9012"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Mark Lee",
+        "rating": 4,
+        "comment": "I bought this as a gift and they absolutely loved it!",
+        "date": "2018-04-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Willie Alvarez",
+        "rating": 2,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2022-12-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Judy Patel",
+        "rating": 1,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2024-02-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Barbara Wilson",
+        "rating": 2,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2024-03-11T00:00:00"
+      },
+      {
+        "userDisplayName": "George Scott",
+        "rating": 1,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2018-05-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Andrea Cox",
+        "rating": 2,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2025-09-20T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e70a",
+    "name": "Wireless Presenter",
+    "sku": "ELE-ACC-10218",
+    "price": 15.99,
+    "details": {
+      "description": "Laser pointer remote",
+      "specs": {
+        "range": "30m",
+        "laser": "Red",
+        "battery": "AAA"
+      }
+    },
+    "stock": 85,
+    "category": {
+      "main": "Electronics",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Pearl Peacock Products",
+      "contactEmail": "contact@pearlpeacock.com",
+      "supportPhone": "+1-888-090-0123"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Daniel Lopez",
+        "rating": 3,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2019-06-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Rose Castillo",
+        "rating": 5,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2020-07-19T00:00:00"
+      },
+      {
+        "userDisplayName": "Zachary Cook",
+        "rating": 1,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2018-03-11T00:00:00"
+      },
+      {
+        "userDisplayName": "Christina Ortiz",
+        "rating": 1,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2021-08-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Janet Gomez",
+        "rating": 3,
+        "comment": "A must-have for anyone serious about quality.",
+        "date": "2019-07-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Adam Stewart",
+        "rating": 1,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2019-11-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Sandra Taylor",
+        "rating": 4,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2024-09-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Daniel Lopez",
+        "rating": 4,
+        "comment": "Incredible value. Feels much more expensive than it is.",
+        "date": "2025-02-23T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e70b",
+    "name": "Laundry Bag Mesh",
+    "sku": "HOM-BAT-10219",
+    "price": 8.5,
+    "details": {
+      "description": "Set of 3 wash bags",
+      "specs": {
+        "sizes": "S/M/L",
+        "zipper": "Protected",
+        "use": "Delicates"
+      }
+    },
+    "stock": 130,
+    "category": {
+      "main": "Home",
+      "sub": "Laundry"
+    },
+    "vendor": {
+      "companyName": "Peridot Panther Publishing",
+      "contactEmail": "support@peridotpanther.com",
+      "supportPhone": "+1-888-101-1122"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Noah Ward",
+        "rating": 1,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2020-07-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Randy Patel",
+        "rating": 3,
+        "comment": "I've recommended this to all my friends and family.",
+        "date": "2020-09-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Jack Phillips",
+        "rating": 3,
+        "comment": "The instructions were clear and easy to follow.",
+        "date": "2023-06-12T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e70c",
+    "name": "Football Cleats",
+    "sku": "SPT-TEA-10220",
+    "price": 65.0,
+    "details": {
+      "description": "Soccer firm ground boots",
+      "specs": {
+        "size": "42 EU",
+        "studs": "Molded",
+        "upper": "Synthetic"
+      }
+    },
+    "stock": 35,
+    "category": {
+      "main": "Sports",
+      "sub": "Soccer"
+    },
+    "vendor": {
+      "companyName": "Spinel Sparrow Sports",
+      "contactEmail": "info@spinelsparrow.com",
+      "supportPhone": "+1-888-212-2233"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Jonathan Baker",
+        "rating": 5,
+        "comment": "The warranty process was a nightmare. Terrible customer service.",
+        "date": "2023-08-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Susan Rodriguez",
+        "rating": 2,
+        "comment": "The product is a bit of a letdown. I expected more for the price.",
+        "date": "2019-12-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Ann Howard",
+        "rating": 4,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2019-05-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Ronald Lewis",
+        "rating": 5,
+        "comment": "The design is sleek and modern. Looks great on my desk.",
+        "date": "2022-04-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Noah Howard",
+        "rating": 5,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2021-03-09T00:00:00"
+      },
+      {
+        "userDisplayName": "Juan Ross",
+        "rating": 5,
+        "comment": "The product is very versatile and can be used for many things.",
+        "date": "2019-11-23T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e70d",
+    "name": "Microphone Arm Boom",
+    "sku": "ELE-AUD-10221",
+    "price": 29.99,
+    "details": {
+      "description": "Adjustable mic stand",
+      "specs": {
+        "mount": "Desk Clamp",
+        "reach": "70cm",
+        "thread": "Standard"
+      }
+    },
+    "stock": 45,
+    "category": {
+      "main": "Electronics",
+      "sub": "Audio"
+    },
+    "vendor": {
+      "companyName": "Tourmaline Tiger Toys",
+      "contactEmail": "sales@tourmalinetiger.com",
+      "supportPhone": "+1-888-323-3344"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Kyle Gutierrez",
+        "rating": 3,
+        "comment": "I would recommend this to a friend without hesitation.",
+        "date": "2023-03-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Lauren Morales",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2020-01-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Harold Kim",
+        "rating": 5,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2018-04-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Victoria Collins",
+        "rating": 2,
+        "comment": "Excellent product, highly recommended! A true game changer.",
+        "date": "2022-09-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Diane Stewart",
+        "rating": 5,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2021-05-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Amanda Walker",
+        "rating": 1,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2025-03-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Betty Moore",
+        "rating": 3,
+        "comment": "Love it! It has become an essential part of my daily routine.",
+        "date": "2020-05-25T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e70e",
+    "name": "Knife Sharpener",
+    "sku": "HOM-KIT-10222",
+    "price": 12.99,
+    "details": {
+      "description": "3-stage manual sharpener",
+      "specs": {
+        "stages": "Coarse/Fine/Ceramic",
+        "base": "Non-slip",
+        "handle": "Grip"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Home",
+      "sub": "Kitchen"
+    },
+    "vendor": {
+      "companyName": "Zircon Zebra Zenith",
+      "contactEmail": "contact@zirconzebra.com",
+      "supportPhone": "+1-888-434-4455"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Janet Reyes",
+        "rating": 3,
+        "comment": "I had high hopes, but it didn't live up to the hype.",
+        "date": "2024-08-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Albert Bennett",
+        "rating": 2,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2024-02-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Willie Alvarez",
+        "rating": 4,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2024-12-05T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e70f",
+    "name": "Women's Yoga Pants",
+    "sku": "SPT-CLO-10223",
+    "price": 28.5,
+    "details": {
+      "description": "High waisted leggings",
+      "specs": {
+        "size": "M",
+        "color": "Black",
+        "pocket": "Hidden"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Sports",
+      "sub": "Clothing"
+    },
+    "vendor": {
+      "companyName": "Amber Ape Adventures",
+      "contactEmail": "support@amberape.com",
+      "supportPhone": "+1-888-545-5566"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Nancy Gonzales",
+        "rating": 2,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2019-07-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Noah Morgan",
+        "rating": 5,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2018-07-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Jack Phillips",
+        "rating": 2,
+        "comment": "This is a revolutionary product. Can't imagine my life without it.",
+        "date": "2021-02-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Sophia Rodriguez",
+        "rating": 4,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2020-07-02T00:00:00"
+      },
+      {
+        "userDisplayName": "Kathryn Chavez",
+        "rating": 4,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2021-08-18T00:00:00"
+      },
+      {
+        "userDisplayName": "Sharon Hill",
+        "rating": 1,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2021-06-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Emily Martin",
+        "rating": 2,
+        "comment": "I would recommend this to a friend without hesitation.",
+        "date": "2021-01-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Russell Williams",
+        "rating": 4,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2024-05-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Roger Richardson",
+        "rating": 5,
+        "comment": "There's a steep learning curve, but it's worth it in the end.",
+        "date": "2022-01-07T00:00:00"
+      },
+      {
+        "userDisplayName": "Angela Hill",
+        "rating": 2,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2024-04-05T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e710",
+    "name": "USB C Hub Ethernet",
+    "sku": "ELE-ACC-10224",
+    "price": 34.99,
+    "details": {
+      "description": "Hub with Gigabit Ethernet",
+      "specs": {
+        "ports": "RJ45, 3xUSB 3.0",
+        "material": "Aluminum",
+        "driver": "Plug & Play"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Electronics",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Amber Ape Adventures",
+      "contactEmail": "support@amberape.com",
+      "supportPhone": "+1-888-545-5566"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Stephen Carter",
+        "rating": 2,
+        "comment": "The feature set is impressive for this price point.",
+        "date": "2020-10-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Betty Anderson",
+        "rating": 3,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2019-04-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Bryan Alvarez",
+        "rating": 2,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2018-01-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Jason Torres",
+        "rating": 1,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2022-04-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Kimberly Harris",
+        "rating": 2,
+        "comment": "I'm not sure I would buy this again, but it's been okay.",
+        "date": "2018-01-07T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e711",
+    "name": "Travel Mug Insulated",
+    "sku": "HOM-KIT-10225",
+    "price": 18.0,
+    "details": {
+      "description": "Vacuum insulated tumbler",
+      "specs": {
+        "capacity": "500ml",
+        "insulation": "12h Hot",
+        "lid": "Leak-proof"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Home",
+      "sub": "Kitchen"
+    },
+    "vendor": {
+      "companyName": "Innovatech Solutions",
+      "contactEmail": "sales@innovatech.com",
+      "supportPhone": "+1-888-123-4567"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Ronald Sanchez",
+        "rating": 5,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2023-11-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Sean Ramos",
+        "rating": 3,
+        "comment": "The instructions were clear and easy to follow.",
+        "date": "2024-12-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Vincent Myers",
+        "rating": 5,
+        "comment": "The app that comes with it is surprisingly polished and useful.",
+        "date": "2022-05-20T00:00:00"
+      },
+      {
+        "userDisplayName": "Russell Jimenez",
+        "rating": 2,
+        "comment": "I'm very satisfied with this product. It's been a great addition to my home.",
+        "date": "2018-06-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Alan Jimenez",
+        "rating": 4,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2020-08-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Philip Miller",
+        "rating": 3,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2024-04-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Thomas Rodriguez",
+        "rating": 3,
+        "comment": "I bought this as a gift and they absolutely loved it!",
+        "date": "2022-10-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Richard Jackson",
+        "rating": 2,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2020-02-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e712",
+    "name": "Skateboard Complete",
+    "sku": "SPT-EXT-10226",
+    "price": 49.95,
+    "details": {
+      "description": "Standard street skateboard",
+      "specs": {
+        "deck": "31 inch Maple",
+        "trucks": "Aluminum",
+        "wheels": "52mm"
+      }
+    },
+    "stock": 40,
+    "category": {
+      "main": "Sports",
+      "sub": "Skateboarding"
+    },
+    "vendor": {
+      "companyName": "Apex Gadgetry",
+      "contactEmail": "support@apexgadgetry.com",
+      "supportPhone": "+1-888-234-5678"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Ashley Clark",
+        "rating": 2,
+        "comment": "I wish I had bought this sooner. It's been a great help.",
+        "date": "2019-05-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Terry Bailey",
+        "rating": 3,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2025-09-23T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e713",
+    "name": "Bluetooth Tracker Tag",
+    "sku": "ELE-GAD-10227",
+    "price": 24.99,
+    "details": {
+      "description": "Item finder for keys",
+      "specs": {
+        "range": "60m",
+        "battery": "Replaceable",
+        "water_resist": "IP67"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Electronics",
+      "sub": "Gadgets"
+    },
+    "vendor": {
+      "companyName": "Quantum Devices",
+      "contactEmail": "info@quantumdev.com",
+      "supportPhone": "+1-888-345-6789"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Jane Patel",
+        "rating": 2,
+        "comment": "The product is a bit of a letdown. I expected more for the price.",
+        "date": "2023-10-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Raymond Roberts",
+        "rating": 1,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2021-05-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Larry Flores",
+        "rating": 2,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2023-03-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Christopher Thompson",
+        "rating": 2,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2019-09-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Robert Williams",
+        "rating": 3,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2019-07-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Jeffrey Wright",
+        "rating": 3,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2023-04-07T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e714",
+    "name": "Desk Fan USB",
+    "sku": "HOM-APP-10228",
+    "price": 14.99,
+    "details": {
+      "description": "Small personal desk fan",
+      "specs": {
+        "power": "USB",
+        "speeds": "3",
+        "tilt": "360"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Home",
+      "sub": "Appliances"
+    },
+    "vendor": {
+      "companyName": "Stellar Goods",
+      "contactEmail": "contact@stellargoods.net",
+      "supportPhone": "+1-888-456-7890"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Frank Gomez",
+        "rating": 4,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it to others.",
+        "date": "2018-01-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Sandra Taylor",
+        "rating": 1,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2023-12-12T00:00:00"
+      },
+      {
+        "userDisplayName": "Patrick Cruz",
+        "rating": 5,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2020-07-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Jerry Gomez",
+        "rating": 3,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2023-07-02T00:00:00"
+      },
+      {
+        "userDisplayName": "Alice Gray",
+        "rating": 3,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2023-03-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Janet Cruz",
+        "rating": 3,
+        "comment": "I'm very impressed with the performance of this product.",
+        "date": "2018-06-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Raymond Parker",
+        "rating": 3,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2024-03-22T00:00:00"
+      },
+      {
+        "userDisplayName": "Lawrence Chavez",
+        "rating": 2,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2019-07-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Katherine Baker",
+        "rating": 2,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2024-02-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Sean James",
+        "rating": 5,
+        "comment": "The product is a bit heavy, making it less portable.",
+        "date": "2021-10-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e715",
+    "name": "Basketball Pump",
+    "sku": "SPT-ACC-10229",
+    "price": 9.99,
+    "details": {
+      "description": "Dual action ball pump",
+      "specs": {
+        "needle": "Included",
+        "action": "Push/Pull",
+        "size": "Compact"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Sports",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Fusion Homewares",
+      "contactEmail": "support@fusionhome.com",
+      "supportPhone": "+1-888-567-8901"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e716",
+    "name": "Screwdriver Set Precision",
+    "sku": "HOM-IMP-10230",
+    "price": 19.5,
+    "details": {
+      "description": "Mini screwdriver kit",
+      "specs": {
+        "bits": "24",
+        "magnetic": "Yes",
+        "case": "Aluminum"
+      }
+    },
+    "stock": 70,
+    "category": {
+      "main": "Home",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Ember Kitchen",
+      "contactEmail": "sales@emberkitchen.io",
+      "supportPhone": "+1-888-678-9012"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Patrick Gomez",
+        "rating": 2,
+        "comment": "I would recommend this to a friend without hesitation.",
+        "date": "2025-02-13T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e717",
+    "name": "Webcam Cover Slide",
+    "sku": "ELE-ACC-10231",
+    "price": 5.99,
+    "details": {
+      "description": "Privacy camera cover",
+      "specs": {
+        "pack": "3",
+        "thickness": "0.7mm",
+        "adhesive": "Strong"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Electronics",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Velocity Sports Gear",
+      "contactEmail": "info@velocitysports.com",
+      "supportPhone": "+1-888-789-0123"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Peter Morales",
+        "rating": 2,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2021-04-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Gabriel Gray",
+        "rating": 5,
+        "comment": "Best purchase I've made this year. Absolutely fantastic!",
+        "date": "2021-03-14T00:00:00"
+      },
+      {
+        "userDisplayName": "Elijah Smith",
+        "rating": 3,
+        "comment": "The price is a bit high, but you get what you pay for.",
+        "date": "2023-03-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Tina Hernandez",
+        "rating": 3,
+        "comment": "The product is a bit of a letdown. I expected more for the price.",
+        "date": "2022-12-03T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e718",
+    "name": "Tea Infuser Mesh",
+    "sku": "HOM-KIT-10232",
+    "price": 7.5,
+    "details": {
+      "description": "Stainless steel tea ball",
+      "specs": {
+        "material": "Stainless Steel",
+        "chain": "Hook",
+        "dishwasher": "Safe"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Home",
+      "sub": "Kitchen"
+    },
+    "vendor": {
+      "companyName": "Zenith Athletics",
+      "contactEmail": "contact@zenithathletics.com",
+      "supportPhone": "+1-888-890-1234"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Andrea Cox",
+        "rating": 4,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2018-08-02T00:00:00"
+      },
+      {
+        "userDisplayName": "Justin Baker",
+        "rating": 2,
+        "comment": "The setup was a breeze, up and running in minutes.",
+        "date": "2021-06-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Arthur Kim",
+        "rating": 4,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2024-12-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Sharon Robinson",
+        "rating": 3,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2023-05-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Janet Reyes",
+        "rating": 4,
+        "comment": "I bought this as a gift and they absolutely loved it!",
+        "date": "2019-07-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Julie Rogers",
+        "rating": 1,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2025-08-27T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e719",
+    "name": "Gym Bag Duffel",
+    "sku": "SPT-ACC-10233",
+    "price": 34.99,
+    "details": {
+      "description": "Sports duffel bag",
+      "specs": {
+        "capacity": "40L",
+        "compartment": "Shoe",
+        "shoulder_strap": "Padded"
+      }
+    },
+    "stock": 55,
+    "category": {
+      "main": "Sports",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Bibliophile's Corner",
+      "contactEmail": "orders@bibliophilescorner.com",
+      "supportPhone": "+1-888-901-2345"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e71a",
+    "name": "Capture Card 1080p",
+    "sku": "ELE-GAM-10234",
+    "price": 49.0,
+    "details": {
+      "description": "Video capture for streaming",
+      "specs": {
+        "input": "4K",
+        "output": "1080p60",
+        "interface": "USB 3.0"
+      }
+    },
+    "stock": 30,
+    "category": {
+      "main": "Electronics",
+      "sub": "Gaming"
+    },
+    "vendor": {
+      "companyName": "The Story Weaver",
+      "contactEmail": "support@storyweaver.pub",
+      "supportPhone": "+1-888-012-3456"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Ronald Sanchez",
+        "rating": 3,
+        "comment": "The customer reviews were spot on. This is a great product.",
+        "date": "2023-08-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Crystal Brown",
+        "rating": 5,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2021-02-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Margaret Perez",
+        "rating": 3,
+        "comment": "The software is a bit buggy, hoping for an update soon.",
+        "date": "2021-08-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Lisa Taylor",
+        "rating": 2,
+        "comment": "The product is a bit of a letdown. I expected more for the price.",
+        "date": "2024-02-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e71b",
+    "name": "Wine Opener Electric",
+    "sku": "HOM-KIT-10235",
+    "price": 29.95,
+    "details": {
+      "description": "Automatic corkscrew",
+      "specs": {
+        "battery": "Rechargeable",
+        "includes": "Foil Cutter",
+        "light": "Blue LED"
+      }
+    },
+    "stock": 45,
+    "category": {
+      "main": "Home",
+      "sub": "Kitchen"
+    },
+    "vendor": {
+      "companyName": "Chic Threads Apparel",
+      "contactEmail": "sales@chicthreads.com",
+      "supportPhone": "+1-888-112-2334"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e71c",
+    "name": "Smart Band Fitness",
+    "sku": "ELE-WEA-10236",
+    "price": 39.99,
+    "details": {
+      "description": "Activity tracker band",
+      "specs": {
+        "battery": "14 Days",
+        "screen": "OLED",
+        "waterproof": "5ATM"
+      }
+    },
+    "stock": 65,
+    "category": {
+      "main": "Electronics",
+      "sub": "Wearables"
+    },
+    "vendor": {
+      "companyName": "Urban Vogue Outfitters",
+      "contactEmail": "info@urbanvogue.com",
+      "supportPhone": "+1-888-223-3445"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Albert Alvarez",
+        "rating": 4,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2019-09-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Tammy Rodriguez",
+        "rating": 4,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2025-12-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Jeffrey Nguyen",
+        "rating": 5,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2020-07-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Matthew Harris",
+        "rating": 3,
+        "comment": "This was an impulse buy, and I have zero regrets.",
+        "date": "2023-08-12T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e71d",
+    "name": "Calligraphy Pen Set",
+    "sku": "ART-SUP-10237",
+    "price": 19.99,
+    "details": {
+      "description": "Beginner calligraphy kit",
+      "specs": {
+        "nibs": "4",
+        "ink": "Black Cartridges",
+        "book": "Instruction"
+      }
+    },
+    "stock": 50,
+    "category": {
+      "main": "Art",
+      "sub": "Supplies"
+    },
+    "vendor": {
+      "companyName": "Digital Horizon",
+      "contactEmail": "contact@digitalhorizon.tech",
+      "supportPhone": "+1-888-334-4556"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Madison James",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2020-09-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Marilyn Foster",
+        "rating": 2,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2019-06-06T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e71e",
+    "name": "Bike Lock Cable",
+    "sku": "SPT-CYC-10238",
+    "price": 14.5,
+    "details": {
+      "description": "Combination bike lock",
+      "specs": {
+        "length": "1.2m",
+        "digits": "4",
+        "mount": "Included"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Sports",
+      "sub": "Cycling"
+    },
+    "vendor": {
+      "companyName": "Pinnacle Performance",
+      "contactEmail": "info@pinnacleperf.com",
+      "supportPhone": "+1-888-445-5667"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Philip Miller",
+        "rating": 2,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2021-01-03T00:00:00"
+      },
+      {
+        "userDisplayName": "John Davis",
+        "rating": 1,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2022-02-19T00:00:00"
+      },
+      {
+        "userDisplayName": "Joan Cooper",
+        "rating": 2,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2018-03-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Stephen Carter",
+        "rating": 4,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2020-12-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Nancy Jackson",
+        "rating": 5,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2021-10-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Margaret Perez",
+        "rating": 2,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2021-02-01T00:00:00"
+      },
+      {
+        "userDisplayName": "Bryan Alvarez",
+        "rating": 1,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2019-02-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Barbara Taylor",
+        "rating": 5,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2018-10-28T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e71f",
+    "name": "PC Soundbar USB",
+    "sku": "ELE-AUD-10239",
+    "price": 24.99,
+    "details": {
+      "description": "Under-monitor speaker",
+      "specs": {
+        "power": "6W",
+        "connection": "USB/3.5mm",
+        "knob": "Volume"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Electronics",
+      "sub": "Audio"
+    },
+    "vendor": {
+      "companyName": "Evergreen Books",
+      "contactEmail": "support@evergreenbooks.com",
+      "supportPhone": "+1-888-556-6778"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Evelyn Ortiz",
+        "rating": 5,
+        "comment": "The product is very versatile and can be used for many things.",
+        "date": "2021-01-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Shirley Wright",
+        "rating": 4,
+        "comment": "The product is a bit of a letdown. I expected better quality.",
+        "date": "2025-09-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Rachel Turner",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2025-06-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Pamela Nelson",
+        "rating": 2,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2020-06-16T00:00:00"
+      },
+      {
+        "userDisplayName": "Bryan Ruiz",
+        "rating": 5,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2018-07-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Angela Hall",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2025-01-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Nancy Thomas",
+        "rating": 2,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2018-08-18T00:00:00"
+      },
+      {
+        "userDisplayName": "Cheryl Ortiz",
+        "rating": 5,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2025-09-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Adam Murphy",
+        "rating": 3,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2024-12-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Aaron Evans",
+        "rating": 5,
+        "comment": "The product is a bit heavy, making it less portable.",
+        "date": "2021-04-25T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e720",
+    "name": "Coasters Set Stone",
+    "sku": "HOM-DEC-10240",
+    "price": 16.0,
+    "details": {
+      "description": "Absorbent drink coasters",
+      "specs": {
+        "count": "6",
+        "material": "Ceramic Stone",
+        "back": "Cork"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Home",
+      "sub": "Decor"
+    },
+    "vendor": {
+      "companyName": "StyleSphere",
+      "contactEmail": "contact@stylesphere.co",
+      "supportPhone": "+1-888-667-7889"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Keith Morgan",
+        "rating": 1,
+        "comment": "I bought this as a gift and they absolutely loved it!",
+        "date": "2019-09-28T00:00:00"
+      },
+      {
+        "userDisplayName": "Ashley Moore",
+        "rating": 5,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2018-07-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Jerry Turner",
+        "rating": 5,
+        "comment": "Outstanding performance! It exceeded all my expectations.",
+        "date": "2022-09-12T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e721",
+    "name": "Camping Hammock",
+    "sku": "SPT-OUT-10241",
+    "price": 29.99,
+    "details": {
+      "description": "Double parachute hammock",
+      "specs": {
+        "material": "Nylon",
+        "capacity": "200kg",
+        "straps": "Included"
+      }
+    },
+    "stock": 45,
+    "category": {
+      "main": "Sports",
+      "sub": "Outdoor"
+    },
+    "vendor": {
+      "companyName": "Gourmet Gadgets",
+      "contactEmail": "sales@gourmetgadgets.com",
+      "supportPhone": "+1-888-778-8990"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Louis Johnson",
+        "rating": 4,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2023-08-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Joan Cooper",
+        "rating": 3,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2022-04-21T00:00:00"
+      },
+      {
+        "userDisplayName": "Eric Flores",
+        "rating": 4,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2019-07-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Gerald Reed",
+        "rating": 4,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2022-11-04T00:00:00"
+      },
+      {
+        "userDisplayName": "Scott Phillips",
+        "rating": 4,
+        "comment": "I would recommend this to a friend without hesitation.",
+        "date": "2022-02-13T00:00:00"
+      },
+      {
+        "userDisplayName": "Justin Green",
+        "rating": 2,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2023-11-26T00:00:00"
+      },
+      {
+        "userDisplayName": "Zachary Collins",
+        "rating": 4,
+        "comment": "The product is a bit heavy, making it less portable.",
+        "date": "2019-03-12T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e722",
+    "name": "USB Fan Flexible",
+    "sku": "ELE-GAD-10242",
+    "price": 8.99,
+    "details": {
+      "description": "Bendable mini fan",
+      "specs": {
+        "power": "USB",
+        "blades": "Soft",
+        "color": "White"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Electronics",
+      "sub": "Gadgets"
+    },
+    "vendor": {
+      "companyName": "Celestial Tech",
+      "contactEmail": "support@celestial.tech",
+      "supportPhone": "+1-888-111-2222"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Pamela Roberts",
+        "rating": 4,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2021-08-19T00:00:00"
+      },
+      {
+        "userDisplayName": "Kathleen Hill",
+        "rating": 4,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2021-09-11T00:00:00"
+      },
+      {
+        "userDisplayName": "Christian Reed",
+        "rating": 4,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2018-05-20T00:00:00"
+      },
+      {
+        "userDisplayName": "Martha Kelly",
+        "rating": 3,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2020-12-17T00:00:00"
+      },
+      {
+        "userDisplayName": "Charles Gonzales",
+        "rating": 1,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2025-03-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Andrea Morgan",
+        "rating": 2,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2021-12-20T00:00:00"
+      },
+      {
+        "userDisplayName": "Joshua Martin",
+        "rating": 1,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2018-02-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Kenneth Robinson",
+        "rating": 4,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2018-11-06T00:00:00"
+      },
+      {
+        "userDisplayName": "Doris Bennett",
+        "rating": 1,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2020-03-25T00:00:00"
+      },
+      {
+        "userDisplayName": "Adam Gutierrez",
+        "rating": 4,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2024-10-19T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e723",
+    "name": "Oven Mitts Silicone",
+    "sku": "HOM-KIT-10243",
+    "price": 18.5,
+    "details": {
+      "description": "Heat resistant gloves",
+      "specs": {
+        "material": "Silicone/Cotton",
+        "temp": "230C",
+        "grip": "Non-slip"
+      }
+    },
+    "stock": 75,
+    "category": {
+      "main": "Home",
+      "sub": "Kitchen"
+    },
+    "vendor": {
+      "companyName": "TerraFirm Gear",
+      "contactEmail": "info@terrafirm.gear",
+      "supportPhone": "+1-888-333-4444"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Douglas Edwards",
+        "rating": 4,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2021-03-15T00:00:00"
+      },
+      {
+        "userDisplayName": "Gloria Kim",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great addition to my collection.",
+        "date": "2025-05-23T00:00:00"
+      },
+      {
+        "userDisplayName": "Billy Watson",
+        "rating": 3,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2023-05-03T00:00:00"
+      },
+      {
+        "userDisplayName": "Lori Foster",
+        "rating": 2,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2020-01-27T00:00:00"
+      },
+      {
+        "userDisplayName": "Jean Chavez",
+        "rating": 3,
+        "comment": "The product is a bit of a novelty, but it's a unique one.",
+        "date": "2022-03-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Timothy Allen",
+        "rating": 3,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2019-11-08T00:00:00"
+      },
+      {
+        "userDisplayName": "Grace Hughes",
+        "rating": 1,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2025-04-24T00:00:00"
+      },
+      {
+        "userDisplayName": "Willie Ross",
+        "rating": 3,
+        "comment": "The feature set is impressive for this price point.",
+        "date": "2025-06-24T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e724",
+    "name": "Badminton Shuttlecocks",
+    "sku": "SPT-BAD-10244",
+    "price": 12.0,
+    "details": {
+      "description": "Feather shuttlecocks tube",
+      "specs": {
+        "count": "12",
+        "speed": "77",
+        "material": "Duck Feather"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Sports",
+      "sub": "Badminton"
+    },
+    "vendor": {
+      "companyName": "AquaLuxe Kitchenware",
+      "contactEmail": "sales@aqualuxe.kitchen",
+      "supportPhone": "+1-888-555-6666"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e725",
+    "name": "Thermal Paste 4g",
+    "sku": "ELE-PC-10245",
+    "price": 9.5,
+    "details": {
+      "description": "High performance compound",
+      "specs": {
+        "weight": "4g",
+        "conductivity": "8.5 W/mK",
+        "applicator": "Spatula"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Electronics",
+      "sub": "Components"
+    },
+    "vendor": {
+      "companyName": "Momentum Active",
+      "contactEmail": "contact@momentumactive.com",
+      "supportPhone": "+1-888-777-8888"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Jesse Cox",
+        "rating": 4,
+        "comment": "Average quality, nothing special to write home about.",
+        "date": "2023-12-07T00:00:00"
+      },
+      {
+        "userDisplayName": "Lawrence Ruiz",
+        "rating": 2,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2019-05-07T00:00:00"
+      },
+      {
+        "userDisplayName": "Edward Walker",
+        "rating": 1,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2020-03-09T00:00:00"
+      },
+      {
+        "userDisplayName": "Michael Gonzales",
+        "rating": 1,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2018-01-10T00:00:00"
+      },
+      {
+        "userDisplayName": "Sarah Taylor",
+        "rating": 1,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2021-07-05T00:00:00"
+      },
+      {
+        "userDisplayName": "Jordan Sanders",
+        "rating": 3,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2023-01-26T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e726",
+    "name": "Towel Rack Freestanding",
+    "sku": "HOM-BAT-10246",
+    "price": 35.0,
+    "details": {
+      "description": "3-tier towel stand",
+      "specs": {
+        "material": "Chrome",
+        "height": "85cm",
+        "assembly": "Required"
+      }
+    },
+    "stock": 30,
+    "category": {
+      "main": "Home",
+      "sub": "Bath"
+    },
+    "vendor": {
+      "companyName": "The Scholar's Press",
+      "contactEmail": "publishing@scholarspress.com",
+      "supportPhone": "+1-888-999-0000"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e727",
+    "name": "Men's Beanie Slouchy",
+    "sku": "FAS-ACC-10247",
+    "price": 15.99,
+    "details": {
+      "description": "Knit oversized beanie",
+      "specs": {
+        "material": "Acrylic",
+        "style": "Slouchy",
+        "color": "Grey"
+      }
+    },
+    "stock": 85,
+    "category": {
+      "main": "Fashion",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Atelier Apparel",
+      "contactEmail": "cs@atelierapparel.com",
+      "supportPhone": "+1-888-212-3232"
+    },
+    "reviews": [
+      {
+        "userDisplayName": "Kathleen Hill",
+        "rating": 5,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2023-12-19T00:00:00"
+      },
+      {
+        "userDisplayName": "Philip Smith",
+        "rating": 3,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2023-09-02T00:00:00"
+      },
+      {
+        "userDisplayName": "Carl Kelly",
+        "rating": 4,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2022-05-18T00:00:00"
+      },
+      {
+        "userDisplayName": "Samuel Diaz",
+        "rating": 1,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2021-08-24T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e728",
+    "name": "Gaming Mouse Pad XL",
+    "sku": "ELE-GAM-10248",
+    "price": 22.0,
+    "details": {
+      "description": "RGB soft mouse mat",
+      "specs": {
+        "size": "800x300mm",
+        "lighting": "10 modes",
+        "base": "Rubber"
+      }
+    },
+    "stock": 55,
+    "category": {
+      "main": "Electronics",
+      "sub": "Gaming"
+    },
+    "vendor": {
+      "companyName": "Zenith Sports Dynamics",
+      "contactEmail": "relations@zenithdynamics.sport",
+      "supportPhone": "+1-888-434-5454"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b85c5e07a7d8be04e729",
+    "name": "Gardening Gloves",
+    "sku": "HOM-GAR-10249",
+    "price": 9.99,
+    "details": {
+      "description": "Leather palm gloves",
+      "specs": {
+        "size": "L",
+        "material": "Leather/Spandex",
+        "cuff": "Velcro"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Home",
+      "sub": "Garden"
+    },
+    "vendor": {
+      "companyName": "The Culinary Edge",
+      "contactEmail": "help@culinaryedge.co",
+      "supportPhone": "+1-888-656-7676"
+    },
+    "reviews": []
+  }
+]

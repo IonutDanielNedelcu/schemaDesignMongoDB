@@ -1,0 +1,2566 @@
+[
+  {
+    "_id": "6931b8b42f8aba1457bacbf7",
+    "name": "Sticky Tack Blue",
+    "sku": "OFF-ADH-13000",
+    "price": 2.5,
+    "details": {
+      "description": "Reusable adhesive putty",
+      "specs": {
+        "weight": "50g",
+        "color": "Blue",
+        "removable": "Yes"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Office",
+      "sub": "Adhesives"
+    },
+    "vendor": {
+      "companyName": "Scarlet Sparrow Styles",
+      "contactEmail": "sales@scarletsparrow.com",
+      "supportPhone": "+1-888-212-3456"
+    },
+    "reviews": [
+      {
+        "username": "Andrew Ramirez",
+        "rating": 3,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2019-06-15T00:00:00"
+      },
+      {
+        "username": "Gabriel Hughes",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2023-03-21T00:00:00"
+      },
+      {
+        "username": "Katherine Mitchell",
+        "rating": 2,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2021-07-13T00:00:00"
+      },
+      {
+        "username": "Linda Rodriguez",
+        "rating": 1,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2022-11-03T00:00:00"
+      },
+      {
+        "username": "Jane Brown",
+        "rating": 1,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2020-11-28T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacbf8",
+    "name": "Heavy Duty Staples",
+    "sku": "OFF-SUP-13001",
+    "price": 3.5,
+    "details": {
+      "description": "Power stapler refill",
+      "specs": {
+        "size": "23/8",
+        "count": "1000",
+        "leg_length": "8mm"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Office",
+      "sub": "Supplies"
+    },
+    "vendor": {
+      "companyName": "Azure Turtle Toys",
+      "contactEmail": "info@azureturtle.com",
+      "supportPhone": "+1-888-323-4567"
+    },
+    "reviews": [
+      {
+        "username": "David Garcia",
+        "rating": 5,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2022-01-05T00:00:00"
+      },
+      {
+        "username": "Steven Taylor",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2019-09-21T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacbf9",
+    "name": "Pencil Lead 0.9mm",
+    "sku": "OFF-WRI-13002",
+    "price": 1.5,
+    "details": {
+      "description": "Thick lead refills",
+      "specs": {
+        "grade": "HB",
+        "count": "30 pcs",
+        "tube": "Plastic"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Office",
+      "sub": "Writing"
+    },
+    "vendor": {
+      "companyName": "Cerulean Swan Solutions",
+      "contactEmail": "support@ceruleanswan.com",
+      "supportPhone": "+1-888-434-5678"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacbfa",
+    "name": "Desk Drawer Tray",
+    "sku": "OFF-ORG-13003",
+    "price": 6.0,
+    "details": {
+      "description": "Plastic desk divider",
+      "specs": {
+        "compartments": "4",
+        "color": "Black",
+        "profile": "Low"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Office",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Saffron Stallion Sports",
+      "contactEmail": "contact@saffronstallion.com",
+      "supportPhone": "+1-888-545-6789"
+    },
+    "reviews": [
+      {
+        "username": "Matthew Perez",
+        "rating": 1,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2022-02-28T00:00:00"
+      },
+      {
+        "username": "Stephanie Ramirez",
+        "rating": 4,
+        "comment": "The price is a bit high, but you get what you pay for.",
+        "date": "2020-02-13T00:00:00"
+      },
+      {
+        "username": "Jason Flores",
+        "rating": 3,
+        "comment": "A must-have for anyone serious about quality.",
+        "date": "2020-04-25T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacbfb",
+    "name": "File Fasteners",
+    "sku": "OFF-ORG-13004",
+    "price": 4.5,
+    "details": {
+      "description": "Metal paper prongs",
+      "specs": {
+        "count": "50 sets",
+        "capacity": "2 inch",
+        "material": "Steel"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Office",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Veridian Valley Ventures",
+      "contactEmail": "info@veridianvalley.com",
+      "supportPhone": "+1-888-656-7890"
+    },
+    "reviews": [
+      {
+        "username": "Noah Cox",
+        "rating": 2,
+        "comment": "Love it! It has become an essential part of my daily routine.",
+        "date": "2024-08-26T00:00:00"
+      },
+      {
+        "username": "Alexander Diaz",
+        "rating": 4,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2022-10-24T00:00:00"
+      },
+      {
+        "username": "Matthew Gonzales",
+        "rating": 2,
+        "comment": "The customer reviews were spot on. This is a great product.",
+        "date": "2024-06-13T00:00:00"
+      },
+      {
+        "username": "Danielle Smith",
+        "rating": 2,
+        "comment": "This is a revolutionary product. Can't imagine my life without it.",
+        "date": "2019-02-05T00:00:00"
+      },
+      {
+        "username": "Richard Jackson",
+        "rating": 4,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2022-12-25T00:00:00"
+      },
+      {
+        "username": "James Smith",
+        "rating": 4,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2024-09-01T00:00:00"
+      },
+      {
+        "username": "Stephen Scott",
+        "rating": 5,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2024-09-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacbfc",
+    "name": "Report Covers Clear",
+    "sku": "OFF-ORG-13005",
+    "price": 7.0,
+    "details": {
+      "description": "Slide bar binders",
+      "specs": {
+        "count": "10 pack",
+        "cover": "Transparent",
+        "spine": "Black"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Office",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Magenta Moose Media",
+      "contactEmail": "sales@magentamoose.com",
+      "supportPhone": "+1-888-767-8901"
+    },
+    "reviews": [
+      {
+        "username": "Wayne Jimenez",
+        "rating": 1,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2023-12-21T00:00:00"
+      },
+      {
+        "username": "Sean Reed",
+        "rating": 4,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2018-12-27T00:00:00"
+      },
+      {
+        "username": "Samuel Diaz",
+        "rating": 1,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2023-05-19T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacbfd",
+    "name": "Carbon Paper Sheets",
+    "sku": "OFF-PAP-13006",
+    "price": 5.5,
+    "details": {
+      "description": "Transfer copy paper",
+      "specs": {
+        "count": "20 sheets",
+        "size": "A4",
+        "color": "Blue"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Office",
+      "sub": "Paper"
+    },
+    "vendor": {
+      "companyName": "Teal Tiger Tech",
+      "contactEmail": "contact@tealtiger.tech",
+      "supportPhone": "+1-888-878-9012"
+    },
+    "reviews": [
+      {
+        "username": "Ann Watson",
+        "rating": 1,
+        "comment": "The materials used feel cheap and flimsy. I expected more.",
+        "date": "2024-04-21T00:00:00"
+      },
+      {
+        "username": "Jordan Brooks",
+        "rating": 4,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2019-10-13T00:00:00"
+      },
+      {
+        "username": "Lauren Morales",
+        "rating": 4,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2019-08-04T00:00:00"
+      },
+      {
+        "username": "Zachary Peterson",
+        "rating": 1,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2023-03-13T00:00:00"
+      },
+      {
+        "username": "Kenneth Robinson",
+        "rating": 3,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2024-12-13T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacbfe",
+    "name": "Self-Inking Stamp",
+    "sku": "OFF-ACC-13007",
+    "price": 9.0,
+    "details": {
+      "description": "Office text stamper",
+      "specs": {
+        "text": "PAID",
+        "ink": "Red",
+        "refillable": "Yes"
+      }
+    },
+    "stock": 75,
+    "category": {
+      "main": "Office",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Lavender Lion Linens",
+      "contactEmail": "support@lavenderlion.com",
+      "supportPhone": "+1-888-989-0123"
+    },
+    "reviews": [
+      {
+        "username": "Frank Turner",
+        "rating": 1,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2022-04-10T00:00:00"
+      },
+      {
+        "username": "John Hernandez",
+        "rating": 1,
+        "comment": "I'm very impressed with the attention to detail.",
+        "date": "2019-05-02T00:00:00"
+      },
+      {
+        "username": "Nathan Cruz",
+        "rating": 3,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2025-06-22T00:00:00"
+      },
+      {
+        "username": "Joe Mendoza",
+        "rating": 3,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2024-06-02T00:00:00"
+      },
+      {
+        "username": "Walter Kelly",
+        "rating": 1,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2025-09-17T00:00:00"
+      },
+      {
+        "username": "Austin Wood",
+        "rating": 5,
+        "comment": "The product is very versatile and can be used for many things.",
+        "date": "2021-03-22T00:00:00"
+      },
+      {
+        "username": "Donald Thomas",
+        "rating": 1,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2023-10-07T00:00:00"
+      },
+      {
+        "username": "Charles Gonzales",
+        "rating": 4,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2019-04-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacbff",
+    "name": "Key Tags with Ring",
+    "sku": "OFF-ACC-13008",
+    "price": 3.0,
+    "details": {
+      "description": "Label window fobs",
+      "specs": {
+        "count": "20 pcs",
+        "colors": "Assorted",
+        "ring": "Split"
+      }
+    },
+    "stock": 140,
+    "category": {
+      "main": "Office",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Crimson Cobra Creations",
+      "contactEmail": "info@crimsoncobra.com",
+      "supportPhone": "+1-888-090-1234"
+    },
+    "reviews": [
+      {
+        "username": "Joshua Martin",
+        "rating": 5,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2022-05-01T00:00:00"
+      },
+      {
+        "username": "Samantha Evans",
+        "rating": 5,
+        "comment": "I'm very impressed with the attention to detail.",
+        "date": "2020-07-01T00:00:00"
+      },
+      {
+        "username": "Amy Nelson",
+        "rating": 2,
+        "comment": "The price is a bit high, but you get what you pay for.",
+        "date": "2022-08-10T00:00:00"
+      },
+      {
+        "username": "Albert Bennett",
+        "rating": 1,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2022-04-16T00:00:00"
+      },
+      {
+        "username": "Sharon Robinson",
+        "rating": 4,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2019-08-18T00:00:00"
+      },
+      {
+        "username": "Andrea Cox",
+        "rating": 5,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2018-09-17T00:00:00"
+      },
+      {
+        "username": "Sophia Rodriguez",
+        "rating": 1,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2020-09-18T00:00:00"
+      },
+      {
+        "username": "Johnny Johnson",
+        "rating": 1,
+        "comment": "Love it! It has become an essential part of my daily routine.",
+        "date": "2020-07-17T00:00:00"
+      },
+      {
+        "username": "Maria Collins",
+        "rating": 3,
+        "comment": "The product has a weird smell that won't go away.",
+        "date": "2019-09-19T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc00",
+    "name": "Wall Mount Tape",
+    "sku": "HOM-ADH-13009",
+    "price": 5.0,
+    "details": {
+      "description": "Double sided foam squares",
+      "specs": {
+        "count": "60 pcs",
+        "hold": "Lightweight",
+        "removable": "No"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Home",
+      "sub": "Adhesives"
+    },
+    "vendor": {
+      "companyName": "Onyx Otter Outfitters",
+      "contactEmail": "sales@onyxotter.com",
+      "supportPhone": "+1-888-101-1234"
+    },
+    "reviews": [
+      {
+        "username": "Henry Ortiz",
+        "rating": 1,
+        "comment": "The software is a bit buggy, hoping for an update soon.",
+        "date": "2020-08-13T00:00:00"
+      },
+      {
+        "username": "Adam Stewart",
+        "rating": 1,
+        "comment": "The price is a bit high, but you get what you pay for.",
+        "date": "2023-03-10T00:00:00"
+      },
+      {
+        "username": "Kathleen Scott",
+        "rating": 4,
+        "comment": "The product has a weird smell that won't go away.",
+        "date": "2025-04-02T00:00:00"
+      },
+      {
+        "username": "Anthony Thompson",
+        "rating": 3,
+        "comment": "The customer reviews were spot on. This is a great product.",
+        "date": "2025-06-05T00:00:00"
+      },
+      {
+        "username": "Wayne Jimenez",
+        "rating": 5,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2025-12-01T00:00:00"
+      },
+      {
+        "username": "Noah Morgan",
+        "rating": 1,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2025-01-22T00:00:00"
+      },
+      {
+        "username": "Ronald Sanchez",
+        "rating": 3,
+        "comment": "Outstanding performance! It exceeded all my expectations.",
+        "date": "2022-07-03T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc01",
+    "name": "Picture Frame 4x6",
+    "sku": "HOM-DEC-13010",
+    "price": 4.0,
+    "details": {
+      "description": "Simple photo frame",
+      "specs": {
+        "material": "Plastic",
+        "glass": "Acrylic",
+        "color": "Black"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Home",
+      "sub": "Decor"
+    },
+    "vendor": {
+      "companyName": "Jade Jaguar Jewelers",
+      "contactEmail": "contact@jadejaguar.com",
+      "supportPhone": "+1-888-212-2345"
+    },
+    "reviews": [
+      {
+        "username": "Tammy Jimenez",
+        "rating": 1,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it to others.",
+        "date": "2023-09-18T00:00:00"
+      },
+      {
+        "username": "Ann Cox",
+        "rating": 4,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2021-10-10T00:00:00"
+      },
+      {
+        "username": "Jonathan Green",
+        "rating": 5,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2022-09-05T00:00:00"
+      },
+      {
+        "username": "Philip Brown",
+        "rating": 1,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2018-04-02T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc02",
+    "name": "Votive Candles",
+    "sku": "HOM-DEC-13011",
+    "price": 6.0,
+    "details": {
+      "description": "Small prayer candles",
+      "specs": {
+        "count": "6 pack",
+        "scent": "Vanilla",
+        "burn": "10h"
+      }
+    },
+    "stock": 85,
+    "category": {
+      "main": "Home",
+      "sub": "Decor"
+    },
+    "vendor": {
+      "companyName": "Topaz Toucan Travel",
+      "contactEmail": "support@topaztoucan.com",
+      "supportPhone": "+1-888-323-3456"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc03",
+    "name": "Potpourri Bag",
+    "sku": "HOM-DEC-13012",
+    "price": 5.5,
+    "details": {
+      "description": "Dried flower scent",
+      "specs": {
+        "weight": "100g",
+        "aroma": "Ocean Breeze",
+        "decorative": "Yes"
+      }
+    },
+    "stock": 70,
+    "category": {
+      "main": "Home",
+      "sub": "Decor"
+    },
+    "vendor": {
+      "companyName": "Ruby Rooster Restaurant",
+      "contactEmail": "info@rubyrooster.com",
+      "supportPhone": "+1-888-434-4567"
+    },
+    "reviews": [
+      {
+        "username": "Katherine Gomez",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2025-10-16T00:00:00"
+      },
+      {
+        "username": "Madison Mendoza",
+        "rating": 4,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2023-04-18T00:00:00"
+      },
+      {
+        "username": "Vincent Davis",
+        "rating": 1,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2024-01-14T00:00:00"
+      },
+      {
+        "username": "Jacob King",
+        "rating": 4,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2024-06-27T00:00:00"
+      },
+      {
+        "username": "Elizabeth Martinez",
+        "rating": 2,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2021-10-15T00:00:00"
+      },
+      {
+        "username": "George Scott",
+        "rating": 4,
+        "comment": "Poor quality, returning it immediately. Avoid this product.",
+        "date": "2024-09-11T00:00:00"
+      },
+      {
+        "username": "Sara Watson",
+        "rating": 3,
+        "comment": "I'm very impressed with the attention to detail.",
+        "date": "2024-06-26T00:00:00"
+      },
+      {
+        "username": "Bruce Long",
+        "rating": 4,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2025-04-20T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc04",
+    "name": "Measuring Tape Fabric",
+    "sku": "HOM-CRA-13013",
+    "price": 2.0,
+    "details": {
+      "description": "Retractable sewing ruler",
+      "specs": {
+        "length": "1.5m",
+        "case": "Round button",
+        "units": "cm/in"
+      }
+    },
+    "stock": 160,
+    "category": {
+      "main": "Home",
+      "sub": "Crafts"
+    },
+    "vendor": {
+      "companyName": "Sapphire Shark Supplies",
+      "contactEmail": "sales@sapphireshark.com",
+      "supportPhone": "+1-888-545-5678"
+    },
+    "reviews": [
+      {
+        "username": "Cheryl Kelly",
+        "rating": 4,
+        "comment": "I'm very impressed with the attention to detail.",
+        "date": "2023-01-04T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc05",
+    "name": "Seamstress Chalk",
+    "sku": "HOM-CRA-13014",
+    "price": 3.0,
+    "details": {
+      "description": "Tailor marking square",
+      "specs": {
+        "count": "4 pcs",
+        "colors": "White/Blue",
+        "washable": "Yes"
+      }
+    },
+    "stock": 95,
+    "category": {
+      "main": "Home",
+      "sub": "Crafts"
+    },
+    "vendor": {
+      "companyName": "Garnet Griffin Gear",
+      "contactEmail": "contact@garnetgriffin.com",
+      "supportPhone": "+1-888-656-6789"
+    },
+    "reviews": [
+      {
+        "username": "Ronald Young",
+        "rating": 2,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2020-02-12T00:00:00"
+      },
+      {
+        "username": "Gabriel Foster",
+        "rating": 4,
+        "comment": "Poor quality, returning it immediately. Avoid this product.",
+        "date": "2021-07-22T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc06",
+    "name": "Safety Pins Assorted",
+    "sku": "HOM-CRA-13015",
+    "price": 2.5,
+    "details": {
+      "description": "Steel safety clasps",
+      "specs": {
+        "count": "100 box",
+        "sizes": "0-3",
+        "finish": "Nickel"
+      }
+    },
+    "stock": 250,
+    "category": {
+      "main": "Home",
+      "sub": "Crafts"
+    },
+    "vendor": {
+      "companyName": "Amethyst Antelope Apparel",
+      "contactEmail": "support@amethystantelope.com",
+      "supportPhone": "+1-888-767-7890"
+    },
+    "reviews": [
+      {
+        "username": "Eric King",
+        "rating": 1,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2022-01-13T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc07",
+    "name": "Elastic Cord White",
+    "sku": "HOM-CRA-13016",
+    "price": 4.0,
+    "details": {
+      "description": "Round beading thread",
+      "specs": {
+        "diameter": "1mm",
+        "length": "20m",
+        "stretch": "High"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Home",
+      "sub": "Crafts"
+    },
+    "vendor": {
+      "companyName": "Aquamarine Alligator Art",
+      "contactEmail": "info@aquamarinealligator.com",
+      "supportPhone": "+1-888-878-8901"
+    },
+    "reviews": [
+      {
+        "username": "Tiffany Ross",
+        "rating": 4,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2018-01-07T00:00:00"
+      },
+      {
+        "username": "Randy Ross",
+        "rating": 3,
+        "comment": "Poor quality, returning it immediately. Avoid this product.",
+        "date": "2022-08-15T00:00:00"
+      },
+      {
+        "username": "Amber Jimenez",
+        "rating": 4,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it to others.",
+        "date": "2021-08-15T00:00:00"
+      },
+      {
+        "username": "Martha Kim",
+        "rating": 5,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2021-02-18T00:00:00"
+      },
+      {
+        "username": "Wayne Sanders",
+        "rating": 1,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2021-10-07T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc08",
+    "name": "Craft Glue Gun Mini",
+    "sku": "HOM-CRA-13017",
+    "price": 8.5,
+    "details": {
+      "description": "Hot melt applicator",
+      "specs": {
+        "power": "20W",
+        "stick_size": "7mm",
+        "stand": "Wire"
+      }
+    },
+    "stock": 65,
+    "category": {
+      "main": "Home",
+      "sub": "Crafts"
+    },
+    "vendor": {
+      "companyName": "Diamond Dolphin Designs",
+      "contactEmail": "sales@diamonddolphin.com",
+      "supportPhone": "+1-888-989-9012"
+    },
+    "reviews": [
+      {
+        "username": "Tammy Williams",
+        "rating": 2,
+        "comment": "I had high hopes, but it didn't live up to the hype.",
+        "date": "2020-10-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc09",
+    "name": "Felt Pads Furniture",
+    "sku": "HOM-ACC-13018",
+    "price": 3.5,
+    "details": {
+      "description": "Floor protector dots",
+      "specs": {
+        "count": "48 pcs",
+        "shape": "Round 2cm",
+        "color": "Brown"
+      }
+    },
+    "stock": 180,
+    "category": {
+      "main": "Home",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Pearl Peacock Products",
+      "contactEmail": "contact@pearlpeacock.com",
+      "supportPhone": "+1-888-090-0123"
+    },
+    "reviews": [
+      {
+        "username": "Joshua Thompson",
+        "rating": 3,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2022-03-25T00:00:00"
+      },
+      {
+        "username": "Kelly Murphy",
+        "rating": 4,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2022-08-09T00:00:00"
+      },
+      {
+        "username": "Eric King",
+        "rating": 5,
+        "comment": "The design is sleek and modern. Looks great on my desk.",
+        "date": "2022-05-11T00:00:00"
+      },
+      {
+        "username": "Albert Patel",
+        "rating": 3,
+        "comment": "Outstanding performance! It exceeded all my expectations.",
+        "date": "2018-07-08T00:00:00"
+      },
+      {
+        "username": "Juan Smith",
+        "rating": 5,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2025-03-16T00:00:00"
+      },
+      {
+        "username": "Alice Gray",
+        "rating": 2,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2020-12-22T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc0a",
+    "name": "S-Hooks Stainless",
+    "sku": "HOM-ORG-13019",
+    "price": 5.0,
+    "details": {
+      "description": "Kitchen rod hangers",
+      "specs": {
+        "count": "10 pack",
+        "length": "9cm",
+        "end": "Ball tip"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Home",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Peridot Panther Publishing",
+      "contactEmail": "support@peridotpanther.com",
+      "supportPhone": "+1-888-101-1122"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc0b",
+    "name": "Suction Cup Hooks",
+    "sku": "HOM-ORG-13020",
+    "price": 4.0,
+    "details": {
+      "description": "Clear glass hangers",
+      "specs": {
+        "count": "6 pcs",
+        "load": "1kg",
+        "surface": "Smooth only"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Home",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Spinel Sparrow Sports",
+      "contactEmail": "info@spinelsparrow.com",
+      "supportPhone": "+1-888-212-2233"
+    },
+    "reviews": [
+      {
+        "username": "Albert Ruiz",
+        "rating": 4,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2018-10-16T00:00:00"
+      },
+      {
+        "username": "Mark Lee",
+        "rating": 4,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2024-07-15T00:00:00"
+      },
+      {
+        "username": "Bryan Alvarez",
+        "rating": 1,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2018-07-27T00:00:00"
+      },
+      {
+        "username": "Judy Bennett",
+        "rating": 3,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2023-04-19T00:00:00"
+      },
+      {
+        "username": "Elijah Martinez",
+        "rating": 5,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2021-08-10T00:00:00"
+      },
+      {
+        "username": "Jose Turner",
+        "rating": 2,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2022-04-27T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc0c",
+    "name": "Extension Cord 2m",
+    "sku": "ELE-POW-13021",
+    "price": 5.0,
+    "details": {
+      "description": "Basic power lead",
+      "specs": {
+        "sockets": "1",
+        "length": "2m",
+        "color": "Black"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Electronics",
+      "sub": "Power"
+    },
+    "vendor": {
+      "companyName": "Tourmaline Tiger Toys",
+      "contactEmail": "sales@tourmalinetiger.com",
+      "supportPhone": "+1-888-323-3344"
+    },
+    "reviews": [
+      {
+        "username": "Roger Richardson",
+        "rating": 2,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2022-12-09T00:00:00"
+      },
+      {
+        "username": "Henry Morris",
+        "rating": 5,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2021-08-21T00:00:00"
+      },
+      {
+        "username": "Alice Wood",
+        "rating": 4,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2022-10-23T00:00:00"
+      },
+      {
+        "username": "Bobby Williams",
+        "rating": 4,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2018-12-28T00:00:00"
+      },
+      {
+        "username": "Barbara Davis",
+        "rating": 1,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2018-06-13T00:00:00"
+      },
+      {
+        "username": "Christina Peterson",
+        "rating": 5,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2025-04-11T00:00:00"
+      },
+      {
+        "username": "Gregory Evans",
+        "rating": 5,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2023-07-22T00:00:00"
+      },
+      {
+        "username": "Sara Wood",
+        "rating": 1,
+        "comment": "A must-have for anyone serious about quality.",
+        "date": "2024-11-08T00:00:00"
+      },
+      {
+        "username": "Cheryl Kim",
+        "rating": 2,
+        "comment": "It's not compatible with my other devices, which is a shame.",
+        "date": "2024-08-13T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc0d",
+    "name": "Cable Management Clips",
+    "sku": "ELE-ORG-13022",
+    "price": 3.5,
+    "details": {
+      "description": "Adhesive wire drops",
+      "specs": {
+        "count": "10 pcs",
+        "slots": "Single",
+        "material": "Silicone"
+      }
+    },
+    "stock": 130,
+    "category": {
+      "main": "Electronics",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Zircon Zebra Zenith",
+      "contactEmail": "contact@zirconzebra.com",
+      "supportPhone": "+1-888-434-4455"
+    },
+    "reviews": [
+      {
+        "username": "Martha Kelly",
+        "rating": 4,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2018-11-07T00:00:00"
+      },
+      {
+        "username": "Janice James",
+        "rating": 5,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2025-11-28T00:00:00"
+      },
+      {
+        "username": "William Hernandez",
+        "rating": 3,
+        "comment": "I'm very happy with my purchase. It's been a great investment.",
+        "date": "2024-04-28T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc0e",
+    "name": "Zip Ties Black",
+    "sku": "ELE-ORG-13023",
+    "price": 2.5,
+    "details": {
+      "description": "Nylon cable ties",
+      "specs": {
+        "length": "150mm",
+        "count": "100 pack",
+        "uv_resist": "Yes"
+      }
+    },
+    "stock": 300,
+    "category": {
+      "main": "Electronics",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Amber Ape Adventures",
+      "contactEmail": "support@amberape.com",
+      "supportPhone": "+1-888-545-5566"
+    },
+    "reviews": [
+      {
+        "username": "Lawrence Chavez",
+        "rating": 1,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2025-12-17T00:00:00"
+      },
+      {
+        "username": "Judith Howard",
+        "rating": 3,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2025-07-21T00:00:00"
+      },
+      {
+        "username": "Samuel Carter",
+        "rating": 5,
+        "comment": "I bought this as a gift and they absolutely loved it!",
+        "date": "2025-07-28T00:00:00"
+      },
+      {
+        "username": "Madison Mendoza",
+        "rating": 4,
+        "comment": "The product is a bit of a novelty, but it's a unique one.",
+        "date": "2018-11-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc0f",
+    "name": "Velcro Cable Straps",
+    "sku": "ELE-ORG-13024",
+    "price": 4.5,
+    "details": {
+      "description": "Reusable cord ties",
+      "specs": {
+        "count": "20 pcs",
+        "color": "Multi",
+        "length": "15cm"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Electronics",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Amber Ape Adventures",
+      "contactEmail": "support@amberape.com",
+      "supportPhone": "+1-888-545-5566"
+    },
+    "reviews": [
+      {
+        "username": "Vincent Jones",
+        "rating": 4,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2024-04-13T00:00:00"
+      },
+      {
+        "username": "Tammy Williams",
+        "rating": 3,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2019-06-20T00:00:00"
+      },
+      {
+        "username": "Amy Nelson",
+        "rating": 2,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2020-02-06T00:00:00"
+      },
+      {
+        "username": "Adam Gutierrez",
+        "rating": 2,
+        "comment": "The feature set is impressive for this price point.",
+        "date": "2020-05-28T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc10",
+    "name": "Battery Tester",
+    "sku": "ELE-TOO-13025",
+    "price": 6.0,
+    "details": {
+      "description": "Universal cell checker",
+      "specs": {
+        "types": "AA/AAA/9V/C/D",
+        "display": "Needle analog"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Electronics",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Innovatech Solutions",
+      "contactEmail": "sales@innovatech.com",
+      "supportPhone": "+1-888-123-4567"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc11",
+    "name": "USB A to C Cable",
+    "sku": "ELE-CAB-13026",
+    "price": 3.5,
+    "details": {
+      "description": "Charging data cord",
+      "specs": {
+        "length": "1m",
+        "jacket": "White PVC",
+        "speed": "2.0"
+      }
+    },
+    "stock": 250,
+    "category": {
+      "main": "Electronics",
+      "sub": "Cables"
+    },
+    "vendor": {
+      "companyName": "Apex Gadgetry",
+      "contactEmail": "support@apexgadgetry.com",
+      "supportPhone": "+1-888-234-5678"
+    },
+    "reviews": [
+      {
+        "username": "Jennifer Hernandez",
+        "rating": 2,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2022-12-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc12",
+    "name": "Audio Cable Aux",
+    "sku": "ELE-CAB-13027",
+    "price": 3.0,
+    "details": {
+      "description": "3.5mm stereo jack",
+      "specs": {
+        "length": "1.2m",
+        "male_male": "Yes",
+        "color": "Black"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Electronics",
+      "sub": "Cables"
+    },
+    "vendor": {
+      "companyName": "Quantum Devices",
+      "contactEmail": "info@quantumdev.com",
+      "supportPhone": "+1-888-345-6789"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc13",
+    "name": "RCA Video Cable",
+    "sku": "ELE-CAB-13028",
+    "price": 4.0,
+    "details": {
+      "description": "Composite AV cord",
+      "specs": {
+        "plugs": "3x RCA (RYW)",
+        "length": "1.5m"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Electronics",
+      "sub": "Cables"
+    },
+    "vendor": {
+      "companyName": "Stellar Goods",
+      "contactEmail": "contact@stellargoods.net",
+      "supportPhone": "+1-888-456-7890"
+    },
+    "reviews": [
+      {
+        "username": "Ruth Phillips",
+        "rating": 4,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2021-02-13T00:00:00"
+      },
+      {
+        "username": "Teresa Ward",
+        "rating": 4,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2024-07-20T00:00:00"
+      },
+      {
+        "username": "Michael Thomas",
+        "rating": 5,
+        "comment": "The product is a bit heavy, making it less portable.",
+        "date": "2024-05-26T00:00:00"
+      },
+      {
+        "username": "Lawrence Richardson",
+        "rating": 4,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2021-12-11T00:00:00"
+      },
+      {
+        "username": "Rachel Mitchell",
+        "rating": 3,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2021-11-03T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc14",
+    "name": "Telephone Cable RJ11",
+    "sku": "ELE-CAB-13029",
+    "price": 2.5,
+    "details": {
+      "description": "Landline modem cord",
+      "specs": {
+        "length": "3m",
+        "connectors": "6P4C",
+        "color": "White"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Electronics",
+      "sub": "Cables"
+    },
+    "vendor": {
+      "companyName": "Fusion Homewares",
+      "contactEmail": "support@fusionhome.com",
+      "supportPhone": "+1-888-567-8901"
+    },
+    "reviews": [
+      {
+        "username": "Ralph Brown",
+        "rating": 5,
+        "comment": "The instructions were clear and easy to follow.",
+        "date": "2025-01-13T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc15",
+    "name": "Night Light LED",
+    "sku": "HOM-LIG-13030",
+    "price": 3.5,
+    "details": {
+      "description": "Plug-in sensor lamp",
+      "specs": {
+        "sensor": "Dusk to dawn",
+        "color": "Warm white",
+        "watts": "0.5W"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Home",
+      "sub": "Lighting"
+    },
+    "vendor": {
+      "companyName": "Ember Kitchen",
+      "contactEmail": "sales@emberkitchen.io",
+      "supportPhone": "+1-888-678-9012"
+    },
+    "reviews": [
+      {
+        "username": "Bruce James",
+        "rating": 1,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2024-08-14T00:00:00"
+      },
+      {
+        "username": "Beverly Alvarez",
+        "rating": 4,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2022-10-06T00:00:00"
+      },
+      {
+        "username": "Kathy Davis",
+        "rating": 5,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2020-12-22T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc16",
+    "name": "Keyhole Light",
+    "sku": "HOM-LIG-13031",
+    "price": 5.0,
+    "details": {
+      "description": "Motion sensor door light",
+      "specs": {
+        "leds": "4",
+        "mount": "Adhesive/Screw",
+        "battery": "1xAA"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Home",
+      "sub": "Lighting"
+    },
+    "vendor": {
+      "companyName": "Velocity Sports Gear",
+      "contactEmail": "info@velocitysports.com",
+      "supportPhone": "+1-888-789-0123"
+    },
+    "reviews": [
+      {
+        "username": "Alan Jimenez",
+        "rating": 1,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2023-12-13T00:00:00"
+      },
+      {
+        "username": "Madison James",
+        "rating": 1,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2020-01-06T00:00:00"
+      },
+      {
+        "username": "Dylan Hughes",
+        "rating": 3,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2023-06-15T00:00:00"
+      },
+      {
+        "username": "Gregory Roberts",
+        "rating": 5,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2018-10-10T00:00:00"
+      },
+      {
+        "username": "Brandon Evans",
+        "rating": 3,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2018-08-18T00:00:00"
+      },
+      {
+        "username": "Zachary Ortiz",
+        "rating": 3,
+        "comment": "The feature set is impressive for this price point.",
+        "date": "2022-10-01T00:00:00"
+      },
+      {
+        "username": "Danielle Alvarez",
+        "rating": 1,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2023-06-28T00:00:00"
+      },
+      {
+        "username": "Olivia Garcia",
+        "rating": 1,
+        "comment": "Love it! It has become an essential part of my daily routine.",
+        "date": "2021-06-05T00:00:00"
+      },
+      {
+        "username": "Dylan Wood",
+        "rating": 5,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2020-08-05T00:00:00"
+      },
+      {
+        "username": "Steven Thompson",
+        "rating": 4,
+        "comment": "I'm very satisfied with this product. It's been a great addition to my home.",
+        "date": "2018-07-21T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc17",
+    "name": "Flashlight Keyring",
+    "sku": "TOO-LIG-13032",
+    "price": 2.0,
+    "details": {
+      "description": "Mini pocket torch",
+      "specs": {
+        "body": "Aluminum",
+        "battery": "Button cell",
+        "led": "White"
+      }
+    },
+    "stock": 300,
+    "category": {
+      "main": "Tools",
+      "sub": "Lighting"
+    },
+    "vendor": {
+      "companyName": "Zenith Athletics",
+      "contactEmail": "contact@zenithathletics.com",
+      "supportPhone": "+1-888-890-1234"
+    },
+    "reviews": [
+      {
+        "username": "Janet Turner",
+        "rating": 3,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2023-06-22T00:00:00"
+      },
+      {
+        "username": "Gabriel Myers",
+        "rating": 5,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2018-03-09T00:00:00"
+      },
+      {
+        "username": "Thomas Moore",
+        "rating": 1,
+        "comment": "The app that comes with it is surprisingly polished and useful.",
+        "date": "2024-05-02T00:00:00"
+      },
+      {
+        "username": "Andrea Howard",
+        "rating": 1,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2021-01-14T00:00:00"
+      },
+      {
+        "username": "James Brown",
+        "rating": 5,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2023-01-26T00:00:00"
+      },
+      {
+        "username": "Deborah Scott",
+        "rating": 5,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2025-07-08T00:00:00"
+      },
+      {
+        "username": "Megan Gutierrez",
+        "rating": 3,
+        "comment": "I'm very impressed with the performance of this product.",
+        "date": "2019-10-17T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc18",
+    "name": "Bike Spoke Lights",
+    "sku": "SPO-CYC-13033",
+    "price": 6.0,
+    "details": {
+      "description": "Wheel safety LEDs",
+      "specs": {
+        "pack": "2 pcs",
+        "mode": "Flash/Solid",
+        "install": "Snap-on"
+      }
+    },
+    "stock": 85,
+    "category": {
+      "main": "Sports",
+      "sub": "Cycling"
+    },
+    "vendor": {
+      "companyName": "Bibliophile's Corner",
+      "contactEmail": "orders@bibliophilescorner.com",
+      "supportPhone": "+1-888-901-2345"
+    },
+    "reviews": [
+      {
+        "username": "Linda Anderson",
+        "rating": 2,
+        "comment": "The software is a bit buggy, hoping for an update soon.",
+        "date": "2024-08-05T00:00:00"
+      },
+      {
+        "username": "Betty Moore",
+        "rating": 2,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2021-01-28T00:00:00"
+      },
+      {
+        "username": "Brenda Hill",
+        "rating": 2,
+        "comment": "The product has a weird smell that won't go away.",
+        "date": "2025-03-09T00:00:00"
+      },
+      {
+        "username": "Elijah Brown",
+        "rating": 3,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2020-03-01T00:00:00"
+      },
+      {
+        "username": "Tyler Phillips",
+        "rating": 3,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2020-09-27T00:00:00"
+      },
+      {
+        "username": "Carolyn Roberts",
+        "rating": 5,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2018-01-15T00:00:00"
+      },
+      {
+        "username": "Vincent Johnson",
+        "rating": 4,
+        "comment": "The feature set is impressive for this price point.",
+        "date": "2018-10-19T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc19",
+    "name": "Camping Headlamp",
+    "sku": "SPO-CAM-13034",
+    "price": 8.0,
+    "details": {
+      "description": "Strap headlight",
+      "specs": {
+        "lumens": "100",
+        "modes": "3",
+        "battery": "3xAAA"
+      }
+    },
+    "stock": 70,
+    "category": {
+      "main": "Sports",
+      "sub": "Camping"
+    },
+    "vendor": {
+      "companyName": "The Story Weaver",
+      "contactEmail": "support@storyweaver.pub",
+      "supportPhone": "+1-888-012-3456"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc1a",
+    "name": "Carabiner Keyring",
+    "sku": "SPO-ACC-13035",
+    "price": 1.5,
+    "details": {
+      "description": "D-shape aluminum clip",
+      "specs": {
+        "length": "6cm",
+        "color": "Random",
+        "use": "Non-climbing"
+      }
+    },
+    "stock": 400,
+    "category": {
+      "main": "Sports",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Chic Threads Apparel",
+      "contactEmail": "sales@chicthreads.com",
+      "supportPhone": "+1-888-112-2334"
+    },
+    "reviews": [
+      {
+        "username": "Henry Morris",
+        "rating": 1,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2019-07-08T00:00:00"
+      },
+      {
+        "username": "Lawrence Ruiz",
+        "rating": 3,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2024-09-05T00:00:00"
+      },
+      {
+        "username": "Sara Cox",
+        "rating": 2,
+        "comment": "I'm not sure I would buy this again, but it's been okay.",
+        "date": "2019-10-21T00:00:00"
+      },
+      {
+        "username": "Jesse Watson",
+        "rating": 1,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2024-03-27T00:00:00"
+      },
+      {
+        "username": "James Smith",
+        "rating": 5,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2020-11-16T00:00:00"
+      },
+      {
+        "username": "Johnny Hernandez",
+        "rating": 4,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2025-11-28T00:00:00"
+      },
+      {
+        "username": "Juan Ruiz",
+        "rating": 4,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2025-08-14T00:00:00"
+      },
+      {
+        "username": "Albert Patel",
+        "rating": 1,
+        "comment": "The setup was a breeze, up and running in minutes.",
+        "date": "2022-02-09T00:00:00"
+      },
+      {
+        "username": "Sean Ward",
+        "rating": 4,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2021-04-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc1b",
+    "name": "Paracord 10m",
+    "sku": "SPO-CAM-13036",
+    "price": 4.5,
+    "details": {
+      "description": "Survival rope 550",
+      "specs": {
+        "cores": "7 strands",
+        "length": "10 meters",
+        "color": "Green"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Sports",
+      "sub": "Camping"
+    },
+    "vendor": {
+      "companyName": "Urban Vogue Outfitters",
+      "contactEmail": "info@urbanvogue.com",
+      "supportPhone": "+1-888-223-3445"
+    },
+    "reviews": [
+      {
+        "username": "Noah Ward",
+        "rating": 4,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2023-01-02T00:00:00"
+      },
+      {
+        "username": "Kyle Reed",
+        "rating": 5,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2023-05-03T00:00:00"
+      },
+      {
+        "username": "Catherine Diaz",
+        "rating": 3,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2020-12-12T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc1c",
+    "name": "Whistle Safety Orange",
+    "sku": "SPO-ACC-13037",
+    "price": 1.0,
+    "details": {
+      "description": "Emergency plastic whistle",
+      "specs": {
+        "color": "Orange",
+        "lanyard": "No",
+        "sound": "Loud"
+      }
+    },
+    "stock": 350,
+    "category": {
+      "main": "Sports",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Digital Horizon",
+      "contactEmail": "contact@digitalhorizon.tech",
+      "supportPhone": "+1-888-334-4556"
+    },
+    "reviews": [
+      {
+        "username": "Ethan Howard",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2018-03-21T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc1d",
+    "name": "Tent Pegs Steel",
+    "sku": "SPO-CAM-13038",
+    "price": 5.0,
+    "details": {
+      "description": "Ground stakes pack",
+      "specs": {
+        "count": "10 pcs",
+        "length": "18cm",
+        "shape": "Hook"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Sports",
+      "sub": "Camping"
+    },
+    "vendor": {
+      "companyName": "Pinnacle Performance",
+      "contactEmail": "info@pinnacleperf.com",
+      "supportPhone": "+1-888-445-5667"
+    },
+    "reviews": [
+      {
+        "username": "Eric Torres",
+        "rating": 3,
+        "comment": "Outstanding performance! It exceeded all my expectations.",
+        "date": "2025-10-12T00:00:00"
+      },
+      {
+        "username": "Jacqueline Cox",
+        "rating": 5,
+        "comment": "I'm very happy with my purchase. It's been a great addition to my collection.",
+        "date": "2022-08-06T00:00:00"
+      },
+      {
+        "username": "Kelly Cooper",
+        "rating": 5,
+        "comment": "I would recommend this to a friend without hesitation.",
+        "date": "2020-08-18T00:00:00"
+      },
+      {
+        "username": "Vincent Foster",
+        "rating": 4,
+        "comment": "I've recommended this to all my friends and family.",
+        "date": "2019-12-08T00:00:00"
+      },
+      {
+        "username": "Timothy Clark",
+        "rating": 1,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2022-10-07T00:00:00"
+      },
+      {
+        "username": "Patrick Gomez",
+        "rating": 2,
+        "comment": "I'm very impressed with the design of this product.",
+        "date": "2021-09-02T00:00:00"
+      },
+      {
+        "username": "Debra Evans",
+        "rating": 2,
+        "comment": "A must-have for anyone serious about quality.",
+        "date": "2021-06-13T00:00:00"
+      },
+      {
+        "username": "Beverly Ross",
+        "rating": 2,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2022-01-25T00:00:00"
+      },
+      {
+        "username": "Elijah Smith",
+        "rating": 2,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2024-11-18T00:00:00"
+      },
+      {
+        "username": "Benjamin Turner",
+        "rating": 4,
+        "comment": "The customer reviews were spot on. This is a great product.",
+        "date": "2023-06-12T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc1e",
+    "name": "Compass Map Reading",
+    "sku": "SPO-OUT-13039",
+    "price": 6.0,
+    "details": {
+      "description": "Baseplate compass",
+      "specs": {
+        "scales": "Ruler",
+        "lanyard": "Yes",
+        "housing": "Liquid filled"
+      }
+    },
+    "stock": 75,
+    "category": {
+      "main": "Sports",
+      "sub": "Outdoor"
+    },
+    "vendor": {
+      "companyName": "Evergreen Books",
+      "contactEmail": "support@evergreenbooks.com",
+      "supportPhone": "+1-888-556-6778"
+    },
+    "reviews": [
+      {
+        "username": "Stephen Hall",
+        "rating": 5,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2020-03-26T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc1f",
+    "name": "Screwdriver Bit PH2",
+    "sku": "TOO-ACC-13040",
+    "price": 3.5,
+    "details": {
+      "description": "Impact driver bits",
+      "specs": {
+        "count": "5 pack",
+        "length": "50mm",
+        "tip": "Phillips 2"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Tools",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "StyleSphere",
+      "contactEmail": "contact@stylesphere.co",
+      "supportPhone": "+1-888-667-7889"
+    },
+    "reviews": [
+      {
+        "username": "Stephanie King",
+        "rating": 5,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2022-08-24T00:00:00"
+      },
+      {
+        "username": "Crystal Miller",
+        "rating": 5,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2018-12-28T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc20",
+    "name": "Utility Knife Blades",
+    "sku": "TOO-CUT-13041",
+    "price": 2.5,
+    "details": {
+      "description": "Replacement blades",
+      "specs": {
+        "type": "Snap-off 18mm",
+        "count": "10 tube",
+        "steel": "Carbon"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Tools",
+      "sub": "Cutting"
+    },
+    "vendor": {
+      "companyName": "Gourmet Gadgets",
+      "contactEmail": "sales@gourmetgadgets.com",
+      "supportPhone": "+1-888-778-8990"
+    },
+    "reviews": [
+      {
+        "username": "Kevin Perez",
+        "rating": 1,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2019-08-26T00:00:00"
+      },
+      {
+        "username": "Madison Mendoza",
+        "rating": 2,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2018-06-21T00:00:00"
+      },
+      {
+        "username": "Rachel Turner",
+        "rating": 2,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2023-08-18T00:00:00"
+      },
+      {
+        "username": "Nathan Rogers",
+        "rating": 2,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2019-11-21T00:00:00"
+      },
+      {
+        "username": "Brian Young",
+        "rating": 1,
+        "comment": "The product is a bit of a letdown. I expected more for the price.",
+        "date": "2018-03-18T00:00:00"
+      },
+      {
+        "username": "George Clark",
+        "rating": 1,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2024-09-24T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc21",
+    "name": "Electrical Tape Red",
+    "sku": "TOO-ELE-13042",
+    "price": 1.0,
+    "details": {
+      "description": "Insulating tape roll",
+      "specs": {
+        "color": "Red",
+        "width": "18mm",
+        "length": "10m"
+      }
+    },
+    "stock": 180,
+    "category": {
+      "main": "Tools",
+      "sub": "Electrical"
+    },
+    "vendor": {
+      "companyName": "Celestial Tech",
+      "contactEmail": "support@celestial.tech",
+      "supportPhone": "+1-888-111-2222"
+    },
+    "reviews": [
+      {
+        "username": "Nathan Morgan",
+        "rating": 4,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2018-06-23T00:00:00"
+      },
+      {
+        "username": "Johnny Davis",
+        "rating": 2,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2025-02-02T00:00:00"
+      },
+      {
+        "username": "Mark Lee",
+        "rating": 1,
+        "comment": "It's not compatible with my other devices, which is a shame.",
+        "date": "2018-07-14T00:00:00"
+      },
+      {
+        "username": "Jessica Thomas",
+        "rating": 2,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2019-03-23T00:00:00"
+      },
+      {
+        "username": "Jack Edwards",
+        "rating": 5,
+        "comment": "The price is a bit high, but you get what you pay for.",
+        "date": "2021-04-22T00:00:00"
+      },
+      {
+        "username": "Adam Gutierrez",
+        "rating": 4,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2019-06-19T00:00:00"
+      },
+      {
+        "username": "Ashley Moore",
+        "rating": 5,
+        "comment": "Best purchase I've made this year. Absolutely fantastic!",
+        "date": "2025-02-25T00:00:00"
+      },
+      {
+        "username": "Ryan Allen",
+        "rating": 3,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2025-08-03T00:00:00"
+      },
+      {
+        "username": "Benjamin Mitchell",
+        "rating": 3,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2024-06-27T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc22",
+    "name": "Mini Level 2-Way",
+    "sku": "TOO-MEA-13043",
+    "price": 3.0,
+    "details": {
+      "description": "T-shape spirit level",
+      "specs": {
+        "vials": "2",
+        "mount": "Screw holes",
+        "use": "RV/Trailer"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Tools",
+      "sub": "Measuring"
+    },
+    "vendor": {
+      "companyName": "TerraFirm Gear",
+      "contactEmail": "info@terrafirm.gear",
+      "supportPhone": "+1-888-333-4444"
+    },
+    "reviews": [
+      {
+        "username": "Betty White",
+        "rating": 5,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2019-04-28T00:00:00"
+      },
+      {
+        "username": "Samuel Adams",
+        "rating": 4,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2022-04-17T00:00:00"
+      },
+      {
+        "username": "Joseph Taylor",
+        "rating": 4,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2025-05-24T00:00:00"
+      },
+      {
+        "username": "Aaron Cook",
+        "rating": 4,
+        "comment": "I'm very impressed with the attention to detail.",
+        "date": "2020-04-12T00:00:00"
+      },
+      {
+        "username": "Lori Jones",
+        "rating": 2,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2021-03-27T00:00:00"
+      },
+      {
+        "username": "Jessica Thomas",
+        "rating": 3,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2020-07-04T00:00:00"
+      },
+      {
+        "username": "Jean Chavez",
+        "rating": 5,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2022-11-26T00:00:00"
+      },
+      {
+        "username": "Kenneth Clark",
+        "rating": 2,
+        "comment": "The product has a weird smell that won't go away.",
+        "date": "2022-12-17T00:00:00"
+      },
+      {
+        "username": "Christine Carter",
+        "rating": 1,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2019-08-28T00:00:00"
+      },
+      {
+        "username": "Jesse Watson",
+        "rating": 2,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2020-04-14T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc23",
+    "name": "Safety Glasses Clear",
+    "sku": "TOO-SAF-13044",
+    "price": 2.5,
+    "details": {
+      "description": "Eye protection goggles",
+      "specs": {
+        "lens": "Polycarbonate",
+        "fit": "Over specs",
+        "vents": "Side"
+      }
+    },
+    "stock": 250,
+    "category": {
+      "main": "Tools",
+      "sub": "Safety"
+    },
+    "vendor": {
+      "companyName": "AquaLuxe Kitchenware",
+      "contactEmail": "sales@aqualuxe.kitchen",
+      "supportPhone": "+1-888-555-6666"
+    },
+    "reviews": [
+      {
+        "username": "Kathy Foster",
+        "rating": 1,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2019-07-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc24",
+    "name": "Disposable Gloves Nitrile",
+    "sku": "TOO-SAF-13045",
+    "price": 8.0,
+    "details": {
+      "description": "Blue work gloves",
+      "specs": {
+        "count": "50 box",
+        "powder": "Free",
+        "size": "L"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Tools",
+      "sub": "Safety"
+    },
+    "vendor": {
+      "companyName": "Momentum Active",
+      "contactEmail": "contact@momentumactive.com",
+      "supportPhone": "+1-888-777-8888"
+    },
+    "reviews": [
+      {
+        "username": "Terry Wood",
+        "rating": 2,
+        "comment": "The design is sleek and modern. Looks great on my desk.",
+        "date": "2021-11-26T00:00:00"
+      },
+      {
+        "username": "Raymond Collins",
+        "rating": 1,
+        "comment": "I'm very satisfied with this product. It's been a great addition to my home.",
+        "date": "2025-03-01T00:00:00"
+      },
+      {
+        "username": "Jason Flores",
+        "rating": 4,
+        "comment": "A must-have for anyone serious about quality.",
+        "date": "2018-03-04T00:00:00"
+      },
+      {
+        "username": "Samuel Diaz",
+        "rating": 1,
+        "comment": "The setup was a breeze, up and running in minutes.",
+        "date": "2023-12-17T00:00:00"
+      },
+      {
+        "username": "Maria Parker",
+        "rating": 5,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2023-07-06T00:00:00"
+      },
+      {
+        "username": "Ruth Phillips",
+        "rating": 2,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2019-07-28T00:00:00"
+      },
+      {
+        "username": "Victoria Collins",
+        "rating": 2,
+        "comment": "Excellent product, highly recommended! A true game changer.",
+        "date": "2022-08-13T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc25",
+    "name": "Dust Masks Disposable",
+    "sku": "TOO-SAF-13046",
+    "price": 4.0,
+    "details": {
+      "description": "Paper face mask",
+      "specs": {
+        "count": "10 pack",
+        "rating": "FFP1",
+        "clip": "Nose metal"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Tools",
+      "sub": "Safety"
+    },
+    "vendor": {
+      "companyName": "The Scholar's Press",
+      "contactEmail": "publishing@scholarspress.com",
+      "supportPhone": "+1-888-999-0000"
+    },
+    "reviews": [
+      {
+        "username": "Kathryn Kim",
+        "rating": 5,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2018-05-24T00:00:00"
+      },
+      {
+        "username": "Julie Cruz",
+        "rating": 1,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2024-09-28T00:00:00"
+      },
+      {
+        "username": "Stephanie Walker",
+        "rating": 3,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2024-11-03T00:00:00"
+      },
+      {
+        "username": "Robert Garcia",
+        "rating": 3,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2022-01-13T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc26",
+    "name": "Paint Brush 2 Inch",
+    "sku": "TOO-PAI-13047",
+    "price": 2.0,
+    "details": {
+      "description": "Flat wall brush",
+      "specs": {
+        "width": "50mm",
+        "bristle": "Synthetic",
+        "handle": "Plastic"
+      }
+    },
+    "stock": 180,
+    "category": {
+      "main": "Tools",
+      "sub": "Painting"
+    },
+    "vendor": {
+      "companyName": "Atelier Apparel",
+      "contactEmail": "cs@atelierapparel.com",
+      "supportPhone": "+1-888-212-3232"
+    },
+    "reviews": [
+      {
+        "username": "Douglas Cooper",
+        "rating": 5,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2020-06-14T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc27",
+    "name": "Paint Roller Refill",
+    "sku": "TOO-PAI-13048",
+    "price": 2.5,
+    "details": {
+      "description": "Sleeve replacement",
+      "specs": {
+        "size": "9 inch",
+        "nap": "Medium",
+        "fabric": "Polyester"
+      }
+    },
+    "stock": 140,
+    "category": {
+      "main": "Tools",
+      "sub": "Painting"
+    },
+    "vendor": {
+      "companyName": "Zenith Sports Dynamics",
+      "contactEmail": "relations@zenithdynamics.sport",
+      "supportPhone": "+1-888-434-5454"
+    },
+    "reviews": [
+      {
+        "username": "Nancy Gonzales",
+        "rating": 5,
+        "comment": "Excellent product, highly recommended! A true game changer.",
+        "date": "2020-02-16T00:00:00"
+      },
+      {
+        "username": "Joseph Martin",
+        "rating": 5,
+        "comment": "I bought this as a gift and they absolutely loved it!",
+        "date": "2018-09-18T00:00:00"
+      },
+      {
+        "username": "Doris Ruiz",
+        "rating": 2,
+        "comment": "Poor quality, returning it immediately. Avoid this product.",
+        "date": "2024-06-01T00:00:00"
+      },
+      {
+        "username": "Gary Green",
+        "rating": 4,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2022-06-27T00:00:00"
+      },
+      {
+        "username": "Madison Mendoza",
+        "rating": 2,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2019-03-20T00:00:00"
+      },
+      {
+        "username": "Steven Thompson",
+        "rating": 1,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2018-05-14T00:00:00"
+      },
+      {
+        "username": "Jose Cruz",
+        "rating": 5,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2018-12-07T00:00:00"
+      },
+      {
+        "username": "Amy Flores",
+        "rating": 2,
+        "comment": "I've recommended this to all my friends and family.",
+        "date": "2020-06-01T00:00:00"
+      },
+      {
+        "username": "James Miller",
+        "rating": 5,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2022-02-13T00:00:00"
+      },
+      {
+        "username": "Brian Sanchez",
+        "rating": 5,
+        "comment": "There's a steep learning curve, but it's worth it in the end.",
+        "date": "2023-04-23T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacc28",
+    "name": "Masking Tape 24mm",
+    "sku": "TOO-PAI-13049",
+    "price": 1.5,
+    "details": {
+      "description": "General purpose tape",
+      "specs": {
+        "width": "1 inch",
+        "length": "50m",
+        "removal": "Easy"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Tools",
+      "sub": "Painting"
+    },
+    "vendor": {
+      "companyName": "The Culinary Edge",
+      "contactEmail": "help@culinaryedge.co",
+      "supportPhone": "+1-888-656-7676"
+    },
+    "reviews": [
+      {
+        "username": "Susan Rodriguez",
+        "rating": 3,
+        "comment": "I'm not sure I would buy this again, but it's been okay.",
+        "date": "2025-09-05T00:00:00"
+      }
+    ]
+  }
+]
