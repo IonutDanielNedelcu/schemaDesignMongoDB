@@ -1,0 +1,16 @@
+{
+  "_id": "ObjectId",
+  "name": "String",
+  "sku": "String",
+  "price": "Number",
+  "stock": "Number",
+  "vendorId": "ObjectId",
+  "mainCategoryId": "ObjectId",
+  "subCategoryId": "ObjectId",
+  "details": {
+    "description": "String",
+    "specs": {
+      "note": "in specs you just copy specs from my database products"
+    }
+  }
+}

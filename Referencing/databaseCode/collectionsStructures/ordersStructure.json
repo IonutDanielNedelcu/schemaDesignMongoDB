@@ -1,0 +1,12 @@
+{
+  "_id": "ObjectId",
+  "orderDate": "Date",
+  "total": "Number",
+  "status": "String",
+  "userId": "ObjectId",
+  "shippingAddressId": "ObjectId",
+  "shippingDetails": {
+    "method": "String",
+    "trackingCode": "String"
+  }
+}

@@ -1,0 +1,43 @@
+Note: be careful at duplicates. This problem is solvable by using sets instead of lists/arrays
+    when dealing with data that can have duplicates (e.g. categories, vendors, etc)
+
+2. Transforming old documents into new documents 
+(Embedding => Referencing):
+
+    a. User Document
+        - root document (_id, username, email fields) => users new collection
+        - addresses (addresses array) => addresses new collection 
+            (each embedded address becomes a separate document referenced by userId)
+        - shoppingCart (partial products array) => shoppingCartItems new collection
+            (each item in the cart becomes a separate M:M many-to-many link document;
+            productId must be looked up based on sku because it's not stored in the User Document)
+
+    b. Product Document
+        - root document => products new collection (_id, name, sku, price, stock, 
+            details (embeded), vendorId, mainCategoryId, subCategoryId)
+        - category (object) => categories new collection (2 documents)
+            (category.main and category.sub become two separate documents in categories. mainCategoryId 
+            and subCategoryId in the product will reference these.)
+        - vendor (object) => vendors new collection
+        - reviews (array) => reviews new collection
+
+    c. Order Document
+        - root document => orders new collection (_id, orderDate, total, status, userId (reference), 
+            shippingAddressId (reference), shippingDetails (embeded))
+        - items (array) => orderItems new collection
+            (Each order item becomes a separate document in the M:M junction 
+            collection (orderItems), storing necessary historical snapshots (price, vendor ID).)
+
+
+3. Order of processing for new collections:
+
+    a. users Collection -> No Dependencies
+    b. vendors -> No Dependencies
+    c. categories -> No Dependencies (Self-referencing for parentCategoryId is
+        handled internally)
+    d. products -> Dependencies: Vendors, Categories
+    e. addresses -> Dependencies: Users
+    f. reviews -> Dependencies: Users, Products
+    g. shoppingCartItems -> Dependencies: Users, Products
+    h. orders -> Dependencies: Users, Addresses
+    i. orderItems -> Dependencies: Orders, Products, Vendors
