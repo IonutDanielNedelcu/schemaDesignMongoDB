@@ -1,5 +1,7 @@
 {
   "_id": "ObjectId",
   "username": "String",
-  "email": "String"
+  "email": "String",
+  "addresses": "Array(ObjectId)",
+  "shoppingCart": "Array(ObjectId)"
 }
