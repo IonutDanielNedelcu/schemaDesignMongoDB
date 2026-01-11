@@ -28,7 +28,6 @@ Note: be careful at duplicates. This problem is solvable by using sets instead o
             (Each order item becomes a separate document in the M:M junction 
             collection (orderItems), storing necessary historical snapshots (price, vendor ID).)
 
-
 3. Order of processing for new collections:
 
     a. users Collection -> No Dependencies

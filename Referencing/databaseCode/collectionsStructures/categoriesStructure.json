@@ -1,5 +1,5 @@
 {
   "_id": "ObjectId",
   "name": "String",
-  "parentCategoryId": "ObjectId sau null" 
+  "parentCategoryId": "ObjectId sau null. If null, it's a main category, else secondary" 
 }
