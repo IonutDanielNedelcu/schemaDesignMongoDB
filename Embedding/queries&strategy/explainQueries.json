@@ -1,0 +1,3301 @@
+[
+  {
+    "queryNo": 1,
+    "collection": "products",
+    "mode": "noIndexes",
+    "indexHint": "none",
+    "query": {
+      "sku": "ELE-ACC-12550"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.products",
+        "parsedQuery": {
+          "sku": {
+            "$eq": "ELE-ACC-12550"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "05509EF5",
+        "planCacheShapeHash": "05509EF5",
+        "planCacheKey": "44038E51",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "sku": {
+              "$eq": "ELE-ACC-12550"
+            }
+          },
+          "direction": "forward"
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 3,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 5000,
+        "executionStages": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "sku": {
+              "$eq": "ELE-ACC-12550"
+            }
+          },
+          "nReturned": 1,
+          "executionTimeMillisEstimate": 4,
+          "works": 5001,
+          "advanced": 1,
+          "needTime": 4999,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "direction": "forward",
+          "docsExamined": 5000
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "E931B887DE39F4F18855915C604ED18AC19DC80C6F13749BC5A924C88892E8F4",
+      "command": {
+        "find": "products",
+        "filter": {
+          "sku": "ELE-ACC-12550"
+        },
+        "hint": {
+          "$natural": 1
+        },
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150957,
+            "i": 80
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "bgkf5ASubBUZMWX3EX28FiVrU+A=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150957,
+          "i": 80
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 2,
+    "collection": "products",
+    "mode": "noIndexes",
+    "indexHint": "none",
+    "query": {
+      "category.main": "Electronics",
+      "category.sub": "Laptops"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.products",
+        "parsedQuery": {
+          "$and": [
+            {
+              "category.main": {
+                "$eq": "Electronics"
+              }
+            },
+            {
+              "category.sub": {
+                "$eq": "Laptops"
+              }
+            }
+          ]
+        },
+        "indexFilterSet": false,
+        "queryHash": "4E0A4261",
+        "planCacheShapeHash": "4E0A4261",
+        "planCacheKey": "2A7064D5",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "$and": [
+              {
+                "category.main": {
+                  "$eq": "Electronics"
+                }
+              },
+              {
+                "category.sub": {
+                  "$eq": "Laptops"
+                }
+              }
+            ]
+          },
+          "direction": "forward"
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 0,
+        "executionTimeMillis": 3,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 5000,
+        "executionStages": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "$and": [
+              {
+                "category.main": {
+                  "$eq": "Electronics"
+                }
+              },
+              {
+                "category.sub": {
+                  "$eq": "Laptops"
+                }
+              }
+            ]
+          },
+          "nReturned": 0,
+          "executionTimeMillisEstimate": 4,
+          "works": 5001,
+          "advanced": 0,
+          "needTime": 5000,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "direction": "forward",
+          "docsExamined": 5000
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "D2C101BB6451F655BE36970B697088492F6148F481FEB460D190AFAFC1DA8F77",
+      "command": {
+        "find": "products",
+        "filter": {
+          "category.main": "Electronics",
+          "category.sub": "Laptops"
+        },
+        "hint": {
+          "$natural": 1
+        },
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150957,
+            "i": 84
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "bgkf5ASubBUZMWX3EX28FiVrU+A=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150957,
+          "i": 84
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 3,
+    "collection": "products",
+    "mode": "noIndexes",
+    "indexHint": "none",
+    "query": {
+      "$or": [
+        {
+          "name": {
+            "$regex": "gaming|laptop",
+            "$options": "i"
+          }
+        },
+        {
+          "details.description": {
+            "$regex": "gaming|laptop",
+            "$options": "i"
+          }
+        }
+      ]
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.products",
+        "parsedQuery": {
+          "$or": [
+            {
+              "details.description": {
+                "$regex": "gaming|laptop",
+                "$options": "i"
+              }
+            },
+            {
+              "name": {
+                "$regex": "gaming|laptop",
+                "$options": "i"
+              }
+            }
+          ]
+        },
+        "indexFilterSet": false,
+        "queryHash": "B5201BA6",
+        "planCacheShapeHash": "B5201BA6",
+        "planCacheKey": "A9321056",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "$or": [
+              {
+                "details.description": {
+                  "$regex": "gaming|laptop",
+                  "$options": "i"
+                }
+              },
+              {
+                "name": {
+                  "$regex": "gaming|laptop",
+                  "$options": "i"
+                }
+              }
+            ]
+          },
+          "direction": "forward"
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 50,
+        "executionTimeMillis": 7,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 5000,
+        "executionStages": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "$or": [
+              {
+                "details.description": {
+                  "$regex": "gaming|laptop",
+                  "$options": "i"
+                }
+              },
+              {
+                "name": {
+                  "$regex": "gaming|laptop",
+                  "$options": "i"
+                }
+              }
+            ]
+          },
+          "nReturned": 50,
+          "executionTimeMillisEstimate": 7,
+          "works": 5001,
+          "advanced": 50,
+          "needTime": 4950,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "direction": "forward",
+          "docsExamined": 5000
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "EDC78546931A61EBC76891AA99C51D0690E0BAF8F49300944C7F4A2477BAE9E5",
+      "command": {
+        "find": "products",
+        "filter": {
+          "$or": [
+            {
+              "name": {
+                "$regex": "gaming|laptop",
+                "$options": "i"
+              }
+            },
+            {
+              "details.description": {
+                "$regex": "gaming|laptop",
+                "$options": "i"
+              }
+            }
+          ]
+        },
+        "hint": {
+          "$natural": 1
+        },
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150957,
+            "i": 86
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "bgkf5ASubBUZMWX3EX28FiVrU+A=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150957,
+          "i": 86
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 4,
+    "collection": "users",
+    "mode": "noIndexes",
+    "indexHint": "none",
+    "query": {
+      "email": "dennisparker@gmail.com"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.users",
+        "parsedQuery": {
+          "email": {
+            "$eq": "dennisparker@gmail.com"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "ED28E3D2",
+        "planCacheShapeHash": "ED28E3D2",
+        "planCacheKey": "30FCCA9A",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "email": {
+              "$eq": "dennisparker@gmail.com"
+            }
+          },
+          "direction": "forward"
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 1000,
+        "executionStages": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "email": {
+              "$eq": "dennisparker@gmail.com"
+            }
+          },
+          "nReturned": 1,
+          "executionTimeMillisEstimate": 0,
+          "works": 1001,
+          "advanced": 1,
+          "needTime": 999,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "direction": "forward",
+          "docsExamined": 1000
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "730A4C97BD3615F00CB1DD75D26A1BB061033EDA4F1575BFB9FBA844656E3799",
+      "command": {
+        "find": "users",
+        "filter": {
+          "email": "dennisparker@gmail.com"
+        },
+        "hint": {
+          "$natural": 1
+        },
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150957,
+            "i": 101
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "bgkf5ASubBUZMWX3EX28FiVrU+A=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150957,
+          "i": 101
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 5,
+    "collection": "users",
+    "mode": "noIndexes",
+    "indexHint": "none",
+    "query": {
+      "addresses.zipcode": "N9F 2WT"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.users",
+        "parsedQuery": {
+          "addresses.zipcode": {
+            "$eq": "N9F 2WT"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "A62A91B0",
+        "planCacheShapeHash": "A62A91B0",
+        "planCacheKey": "38177ED0",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "addresses.zipcode": {
+              "$eq": "N9F 2WT"
+            }
+          },
+          "direction": "forward"
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 1,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 1000,
+        "executionStages": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "addresses.zipcode": {
+              "$eq": "N9F 2WT"
+            }
+          },
+          "nReturned": 1,
+          "executionTimeMillisEstimate": 2,
+          "works": 1001,
+          "advanced": 1,
+          "needTime": 999,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "direction": "forward",
+          "docsExamined": 1000
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "78F89262A8116C75BCFCE2BB006DF7709BC319FECF3EB76D88B35A1093565338",
+      "command": {
+        "find": "users",
+        "filter": {
+          "addresses.zipcode": "N9F 2WT"
+        },
+        "hint": {
+          "$natural": 1
+        },
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150957,
+            "i": 120
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "bgkf5ASubBUZMWX3EX28FiVrU+A=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150957,
+          "i": 120
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 6,
+    "collection": "orders",
+    "mode": "noIndexes",
+    "indexHint": "none",
+    "query": {
+      "orderDate": {
+        "$gte": {
+          "$date": "2021-01-01T00:00:00Z"
+        },
+        "$lte": {
+          "$date": "2021-12-31T00:00:00Z"
+        }
+      }
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.orders",
+        "parsedQuery": {
+          "$and": [
+            {
+              "orderDate": {
+                "$lte": {
+                  "$date": "2021-12-31T00:00:00Z"
+                }
+              }
+            },
+            {
+              "orderDate": {
+                "$gte": {
+                  "$date": "2021-01-01T00:00:00Z"
+                }
+              }
+            }
+          ]
+        },
+        "indexFilterSet": false,
+        "queryHash": "C8E26732",
+        "planCacheShapeHash": "C8E26732",
+        "planCacheKey": "6B68A17A",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "SORT",
+          "sortPattern": {
+            "orderDate": -1
+          },
+          "memLimit": 33554432,
+          "type": "simple",
+          "inputStage": {
+            "stage": "COLLSCAN",
+            "filter": {
+              "$and": [
+                {
+                  "orderDate": {
+                    "$lte": {
+                      "$date": "2021-12-31T00:00:00Z"
+                    }
+                  }
+                },
+                {
+                  "orderDate": {
+                    "$gte": {
+                      "$date": "2021-01-01T00:00:00Z"
+                    }
+                  }
+                }
+              ]
+            },
+            "direction": "forward"
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1449,
+        "executionTimeMillis": 10,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 10000,
+        "executionStages": {
+          "isCached": false,
+          "stage": "SORT",
+          "nReturned": 1449,
+          "executionTimeMillisEstimate": 8,
+          "works": 11451,
+          "advanced": 1449,
+          "needTime": 10001,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "sortPattern": {
+            "orderDate": -1
+          },
+          "memLimit": 33554432,
+          "type": "simple",
+          "totalDataSizeSorted": 4217057,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "inputStage": {
+            "stage": "COLLSCAN",
+            "filter": {
+              "$and": [
+                {
+                  "orderDate": {
+                    "$lte": {
+                      "$date": "2021-12-31T00:00:00Z"
+                    }
+                  }
+                },
+                {
+                  "orderDate": {
+                    "$gte": {
+                      "$date": "2021-01-01T00:00:00Z"
+                    }
+                  }
+                }
+              ]
+            },
+            "nReturned": 1449,
+            "executionTimeMillisEstimate": 7,
+            "works": 10001,
+            "advanced": 1449,
+            "needTime": 8551,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 10000
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "2DD5AD4EAA821845470D92D3818E98C00D8F460011A373F6EA62B724349E8ED5",
+      "command": {
+        "find": "orders",
+        "filter": {
+          "orderDate": {
+            "$gte": {
+              "$date": "2021-01-01T00:00:00Z"
+            },
+            "$lte": {
+              "$date": "2021-12-31T00:00:00Z"
+            }
+          }
+        },
+        "sort": {
+          "orderDate": -1
+        },
+        "hint": {
+          "$natural": 1
+        },
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150958,
+            "i": 5
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jGHuGY76eST274s7QEzvMNcZnDk=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150958,
+          "i": 5
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 7,
+    "collection": "orders",
+    "mode": "noIndexes",
+    "indexHint": "none",
+    "query": {
+      "status": "Pending"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.orders",
+        "parsedQuery": {
+          "status": {
+            "$eq": "Pending"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "5D6543D9",
+        "planCacheShapeHash": "5D6543D9",
+        "planCacheKey": "405CB45D",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "status": {
+              "$eq": "Pending"
+            }
+          },
+          "direction": "forward"
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1955,
+        "executionTimeMillis": 6,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 10000,
+        "executionStages": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "status": {
+              "$eq": "Pending"
+            }
+          },
+          "nReturned": 1955,
+          "executionTimeMillisEstimate": 7,
+          "works": 10001,
+          "advanced": 1955,
+          "needTime": 8045,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "direction": "forward",
+          "docsExamined": 10000
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "7CF62025D2AD246F6EEA07461A5213A082D138714B77ED943DA31235698325BD",
+      "command": {
+        "find": "orders",
+        "filter": {
+          "status": "Pending"
+        },
+        "hint": {
+          "$natural": 1
+        },
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150958,
+            "i": 27
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jGHuGY76eST274s7QEzvMNcZnDk=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150958,
+          "i": 27
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 8,
+    "collection": "orders",
+    "mode": "noIndexes",
+    "indexHint": "none",
+    "query": {
+      "customerSnapshot.email": "sebastianhawkins@outlook.com"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.orders",
+        "parsedQuery": {
+          "customerSnapshot.email": {
+            "$eq": "sebastianhawkins@outlook.com"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "31E2E18A",
+        "planCacheShapeHash": "31E2E18A",
+        "planCacheKey": "3C69A962",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "SORT",
+          "sortPattern": {
+            "orderDate": -1
+          },
+          "memLimit": 33554432,
+          "type": "simple",
+          "inputStage": {
+            "stage": "COLLSCAN",
+            "filter": {
+              "customerSnapshot.email": {
+                "$eq": "sebastianhawkins@outlook.com"
+              }
+            },
+            "direction": "forward"
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 21,
+        "executionTimeMillis": 7,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 10000,
+        "executionStages": {
+          "isCached": false,
+          "stage": "SORT",
+          "nReturned": 21,
+          "executionTimeMillisEstimate": 7,
+          "works": 10023,
+          "advanced": 21,
+          "needTime": 10001,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "sortPattern": {
+            "orderDate": -1
+          },
+          "memLimit": 33554432,
+          "type": "simple",
+          "totalDataSizeSorted": 63115,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "inputStage": {
+            "stage": "COLLSCAN",
+            "filter": {
+              "customerSnapshot.email": {
+                "$eq": "sebastianhawkins@outlook.com"
+              }
+            },
+            "nReturned": 21,
+            "executionTimeMillisEstimate": 7,
+            "works": 10001,
+            "advanced": 21,
+            "needTime": 9979,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 10000
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "3B2011F379F8AE6AFCA8902E8A85CEEF6E43C06756ABAF1DB24BEE72051C1828",
+      "command": {
+        "find": "orders",
+        "filter": {
+          "customerSnapshot.email": "sebastianhawkins@outlook.com"
+        },
+        "sort": {
+          "orderDate": -1
+        },
+        "hint": {
+          "$natural": 1
+        },
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150958,
+            "i": 29
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jGHuGY76eST274s7QEzvMNcZnDk=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150958,
+          "i": 29
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 9,
+    "collection": "orders",
+    "mode": "noIndexes",
+    "indexHint": "none",
+    "query": {
+      "items.sku": "OFF-ACC-12497"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.orders",
+        "parsedQuery": {
+          "items.sku": {
+            "$eq": "OFF-ACC-12497"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "566AFF1D",
+        "planCacheShapeHash": "566AFF1D",
+        "planCacheKey": "29286A49",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "items.sku": {
+              "$eq": "OFF-ACC-12497"
+            }
+          },
+          "direction": "forward"
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 12,
+        "executionTimeMillis": 20,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 10000,
+        "executionStages": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "items.sku": {
+              "$eq": "OFF-ACC-12497"
+            }
+          },
+          "nReturned": 12,
+          "executionTimeMillisEstimate": 21,
+          "works": 10001,
+          "advanced": 12,
+          "needTime": 9988,
+          "needYield": 0,
+          "saveState": 1,
+          "restoreState": 1,
+          "isEOF": 1,
+          "direction": "forward",
+          "docsExamined": 10000
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "42A813B002FD1B78787FF377E298B5BD2A1243DE4AEF3C5896722D165F9E641D",
+      "command": {
+        "find": "orders",
+        "filter": {
+          "items.sku": "OFF-ACC-12497"
+        },
+        "hint": {
+          "$natural": 1
+        },
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150958,
+            "i": 31
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jGHuGY76eST274s7QEzvMNcZnDk=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150958,
+          "i": 31
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 10,
+    "collection": "orders",
+    "mode": "noIndexes",
+    "indexHint": "none",
+    "query": {
+      "status": "Pending"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.orders",
+        "parsedQuery": {
+          "status": {
+            "$eq": "Pending"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "5D6543D9",
+        "planCacheShapeHash": "5D6543D9",
+        "planCacheKey": "405CB45D",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "status": {
+              "$eq": "Pending"
+            }
+          },
+          "direction": "forward"
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1955,
+        "executionTimeMillis": 7,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 10000,
+        "executionStages": {
+          "isCached": false,
+          "stage": "COLLSCAN",
+          "filter": {
+            "status": {
+              "$eq": "Pending"
+            }
+          },
+          "nReturned": 1955,
+          "executionTimeMillisEstimate": 7,
+          "works": 10001,
+          "advanced": 1955,
+          "needTime": 8045,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "direction": "forward",
+          "docsExamined": 10000
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "7CF62025D2AD246F6EEA07461A5213A082D138714B77ED943DA31235698325BD",
+      "command": {
+        "find": "orders",
+        "filter": {
+          "status": "Pending"
+        },
+        "hint": {
+          "$natural": 1
+        },
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150958,
+            "i": 40
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jGHuGY76eST274s7QEzvMNcZnDk=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150958,
+          "i": 40
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 1,
+    "collection": "products",
+    "mode": "withIndexes",
+    "indexHint": "productsSkuUnique",
+    "query": {
+      "sku": "ELE-ACC-12550"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.products",
+        "parsedQuery": {
+          "sku": {
+            "$eq": "ELE-ACC-12550"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "05509EF5",
+        "planCacheShapeHash": "05509EF5",
+        "planCacheKey": "BF8E5727",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "FETCH",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "keyPattern": {
+              "sku": 1
+            },
+            "indexName": "productsSkuUnique",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "sku": []
+            },
+            "isUnique": true,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "sku": [
+                "[\"ELE-ACC-12550\", \"ELE-ACC-12550\"]"
+              ]
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 1,
+        "totalDocsExamined": 1,
+        "executionStages": {
+          "isCached": false,
+          "stage": "FETCH",
+          "nReturned": 1,
+          "executionTimeMillisEstimate": 0,
+          "works": 2,
+          "advanced": 1,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "docsExamined": 1,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 1,
+            "executionTimeMillisEstimate": 0,
+            "works": 2,
+            "advanced": 1,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "keyPattern": {
+              "sku": 1
+            },
+            "indexName": "productsSkuUnique",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "sku": []
+            },
+            "isUnique": true,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "sku": [
+                "[\"ELE-ACC-12550\", \"ELE-ACC-12550\"]"
+              ]
+            },
+            "keysExamined": 1,
+            "seeks": 1,
+            "dupsTested": 0,
+            "dupsDropped": 0
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "E931B887DE39F4F18855915C604ED18AC19DC80C6F13749BC5A924C88892E8F4",
+      "command": {
+        "find": "products",
+        "filter": {
+          "sku": "ELE-ACC-12550"
+        },
+        "hint": "productsSkuUnique",
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150960,
+            "i": 7
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jLkG3yl4KyRby40rdQAlbDEQai0=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150960,
+          "i": 7
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 2,
+    "collection": "products",
+    "mode": "withIndexes",
+    "indexHint": "productsCategoryCompound",
+    "query": {
+      "category.main": "Electronics",
+      "category.sub": "Laptops"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.products",
+        "parsedQuery": {
+          "$and": [
+            {
+              "category.main": {
+                "$eq": "Electronics"
+              }
+            },
+            {
+              "category.sub": {
+                "$eq": "Laptops"
+              }
+            }
+          ]
+        },
+        "indexFilterSet": false,
+        "queryHash": "4E0A4261",
+        "planCacheShapeHash": "4E0A4261",
+        "planCacheKey": "3D93B96D",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "FETCH",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "keyPattern": {
+              "category.main": 1,
+              "category.sub": 1
+            },
+            "indexName": "productsCategoryCompound",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "category.main": [],
+              "category.sub": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "category.main": [
+                "[\"Electronics\", \"Electronics\"]"
+              ],
+              "category.sub": [
+                "[\"Laptops\", \"Laptops\"]"
+              ]
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 0,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 0,
+        "executionStages": {
+          "isCached": false,
+          "stage": "FETCH",
+          "nReturned": 0,
+          "executionTimeMillisEstimate": 0,
+          "works": 1,
+          "advanced": 0,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "docsExamined": 0,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 0,
+            "executionTimeMillisEstimate": 0,
+            "works": 1,
+            "advanced": 0,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "keyPattern": {
+              "category.main": 1,
+              "category.sub": 1
+            },
+            "indexName": "productsCategoryCompound",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "category.main": [],
+              "category.sub": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "category.main": [
+                "[\"Electronics\", \"Electronics\"]"
+              ],
+              "category.sub": [
+                "[\"Laptops\", \"Laptops\"]"
+              ]
+            },
+            "keysExamined": 0,
+            "seeks": 1,
+            "dupsTested": 0,
+            "dupsDropped": 0
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "D2C101BB6451F655BE36970B697088492F6148F481FEB460D190AFAFC1DA8F77",
+      "command": {
+        "find": "products",
+        "filter": {
+          "category.main": "Electronics",
+          "category.sub": "Laptops"
+        },
+        "hint": "productsCategoryCompound",
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150960,
+            "i": 16
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jLkG3yl4KyRby40rdQAlbDEQai0=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150960,
+          "i": 16
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 3,
+    "collection": "products",
+    "mode": "withIndexes",
+    "indexHint": "productsText",
+    "query": {
+      "$text": {
+        "$search": "gaming laptop"
+      }
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.products",
+        "parsedQuery": {
+          "$text": {
+            "$search": "gaming laptop",
+            "$language": "english",
+            "$caseSensitive": false,
+            "$diacriticSensitive": false
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "977639C2",
+        "planCacheShapeHash": "977639C2",
+        "planCacheKey": "51ED1990",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "PROJECTION_DEFAULT",
+          "transformBy": {
+            "score": {
+              "$meta": "textScore"
+            }
+          },
+          "inputStage": {
+            "stage": "SORT",
+            "sortPattern": {
+              "$computed0": {
+                "$meta": "textScore"
+              }
+            },
+            "memLimit": 33554432,
+            "type": "default",
+            "inputStage": {
+              "stage": "TEXT_MATCH",
+              "indexPrefix": {},
+              "indexName": "productsText",
+              "parsedTextQuery": {
+                "terms": [
+                  "game",
+                  "laptop"
+                ],
+                "negatedTerms": [],
+                "phrases": [],
+                "negatedPhrases": []
+              },
+              "textIndexVersion": 3,
+              "inputStage": {
+                "stage": "TEXT_OR",
+                "inputStages": [
+                  {
+                    "stage": "IXSCAN",
+                    "keyPattern": {
+                      "_fts": "text",
+                      "_ftsx": 1
+                    },
+                    "indexName": "productsText",
+                    "isMultiKey": true,
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "backward",
+                    "indexBounds": {}
+                  },
+                  {
+                    "stage": "IXSCAN",
+                    "keyPattern": {
+                      "_fts": "text",
+                      "_ftsx": 1
+                    },
+                    "indexName": "productsText",
+                    "isMultiKey": true,
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "backward",
+                    "indexBounds": {}
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 57,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 57,
+        "totalDocsExamined": 57,
+        "executionStages": {
+          "isCached": false,
+          "stage": "PROJECTION_DEFAULT",
+          "nReturned": 57,
+          "executionTimeMillisEstimate": 0,
+          "works": 176,
+          "advanced": 57,
+          "needTime": 118,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "transformBy": {
+            "score": {
+              "$meta": "textScore"
+            }
+          },
+          "inputStage": {
+            "stage": "SORT",
+            "nReturned": 57,
+            "executionTimeMillisEstimate": 0,
+            "works": 176,
+            "advanced": 57,
+            "needTime": 118,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "sortPattern": {
+              "$computed0": {
+                "$meta": "textScore"
+              }
+            },
+            "memLimit": 33554432,
+            "type": "default",
+            "totalDataSizeSorted": 73475,
+            "usedDisk": false,
+            "spills": 0,
+            "spilledDataStorageSize": 0,
+            "inputStage": {
+              "stage": "TEXT_MATCH",
+              "nReturned": 57,
+              "executionTimeMillisEstimate": 0,
+              "works": 118,
+              "advanced": 57,
+              "needTime": 60,
+              "needYield": 0,
+              "saveState": 0,
+              "restoreState": 0,
+              "isEOF": 1,
+              "indexPrefix": {},
+              "indexName": "productsText",
+              "parsedTextQuery": {
+                "terms": [
+                  "game",
+                  "laptop"
+                ],
+                "negatedTerms": [],
+                "phrases": [],
+                "negatedPhrases": []
+              },
+              "textIndexVersion": 3,
+              "docsRejected": 0,
+              "inputStage": {
+                "stage": "TEXT_OR",
+                "nReturned": 57,
+                "executionTimeMillisEstimate": 0,
+                "works": 118,
+                "advanced": 57,
+                "needTime": 60,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 1,
+                "docsExamined": 57,
+                "inputStages": [
+                  {
+                    "stage": "IXSCAN",
+                    "nReturned": 28,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 29,
+                    "advanced": 28,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 0,
+                    "restoreState": 0,
+                    "isEOF": 1,
+                    "keyPattern": {
+                      "_fts": "text",
+                      "_ftsx": 1
+                    },
+                    "indexName": "productsText",
+                    "isMultiKey": true,
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "backward",
+                    "indexBounds": {},
+                    "keysExamined": 28,
+                    "seeks": 1,
+                    "dupsTested": 28,
+                    "dupsDropped": 0
+                  },
+                  {
+                    "stage": "IXSCAN",
+                    "nReturned": 29,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 30,
+                    "advanced": 29,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 0,
+                    "restoreState": 0,
+                    "isEOF": 1,
+                    "keyPattern": {
+                      "_fts": "text",
+                      "_ftsx": 1
+                    },
+                    "indexName": "productsText",
+                    "isMultiKey": true,
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "backward",
+                    "indexBounds": {},
+                    "keysExamined": 29,
+                    "seeks": 1,
+                    "dupsTested": 29,
+                    "dupsDropped": 0
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "5BAC0ED440890F795BC2849A696C1EB831A73FDE4763E30D87AAAB8DE8FD068D",
+      "command": {
+        "find": "products",
+        "filter": {
+          "$text": {
+            "$search": "gaming laptop"
+          }
+        },
+        "sort": {
+          "score": {
+            "$meta": "textScore"
+          }
+        },
+        "projection": {
+          "score": {
+            "$meta": "textScore"
+          }
+        },
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150960,
+            "i": 44
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jLkG3yl4KyRby40rdQAlbDEQai0=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150960,
+          "i": 44
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 4,
+    "collection": "users",
+    "mode": "withIndexes",
+    "indexHint": "usersEmailUnique",
+    "query": {
+      "email": "dennisparker@gmail.com"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.users",
+        "parsedQuery": {
+          "email": {
+            "$eq": "dennisparker@gmail.com"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "ED28E3D2",
+        "planCacheShapeHash": "ED28E3D2",
+        "planCacheKey": "655A4C57",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "FETCH",
+          "filter": {
+            "email": {
+              "$eq": "dennisparker@gmail.com"
+            }
+          },
+          "inputStage": {
+            "stage": "IXSCAN",
+            "keyPattern": {
+              "email": 1
+            },
+            "indexName": "usersEmailUnique",
+            "collation": {
+              "locale": "en",
+              "caseLevel": false,
+              "caseFirst": "off",
+              "strength": 2,
+              "numericOrdering": false,
+              "alternate": "non-ignorable",
+              "maxVariable": "punct",
+              "normalization": false,
+              "backwards": false,
+              "version": "57.1"
+            },
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "email": []
+            },
+            "isUnique": true,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "email": [
+                "[MinKey, MaxKey]"
+              ]
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 1,
+        "totalKeysExamined": 1000,
+        "totalDocsExamined": 1000,
+        "executionStages": {
+          "isCached": false,
+          "stage": "FETCH",
+          "filter": {
+            "email": {
+              "$eq": "dennisparker@gmail.com"
+            }
+          },
+          "nReturned": 1,
+          "executionTimeMillisEstimate": 2,
+          "works": 1001,
+          "advanced": 1,
+          "needTime": 999,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "docsExamined": 1000,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 1000,
+            "executionTimeMillisEstimate": 1,
+            "works": 1001,
+            "advanced": 1000,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "keyPattern": {
+              "email": 1
+            },
+            "indexName": "usersEmailUnique",
+            "collation": {
+              "locale": "en",
+              "caseLevel": false,
+              "caseFirst": "off",
+              "strength": 2,
+              "numericOrdering": false,
+              "alternate": "non-ignorable",
+              "maxVariable": "punct",
+              "normalization": false,
+              "backwards": false,
+              "version": "57.1"
+            },
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "email": []
+            },
+            "isUnique": true,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "email": [
+                "[MinKey, MaxKey]"
+              ]
+            },
+            "keysExamined": 1000,
+            "seeks": 1,
+            "dupsTested": 0,
+            "dupsDropped": 0
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "730A4C97BD3615F00CB1DD75D26A1BB061033EDA4F1575BFB9FBA844656E3799",
+      "command": {
+        "find": "users",
+        "filter": {
+          "email": "dennisparker@gmail.com"
+        },
+        "hint": "usersEmailUnique",
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150960,
+            "i": 68
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jLkG3yl4KyRby40rdQAlbDEQai0=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150960,
+          "i": 67
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 5,
+    "collection": "users",
+    "mode": "withIndexes",
+    "indexHint": "usersAddressesZipcode",
+    "query": {
+      "addresses.zipcode": "N9F 2WT"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.users",
+        "parsedQuery": {
+          "addresses.zipcode": {
+            "$eq": "N9F 2WT"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "A62A91B0",
+        "planCacheShapeHash": "A62A91B0",
+        "planCacheKey": "902B812D",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "FETCH",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "keyPattern": {
+              "addresses.zipcode": 1
+            },
+            "indexName": "usersAddressesZipcode",
+            "isMultiKey": true,
+            "multiKeyPaths": {
+              "addresses.zipcode": [
+                "addresses"
+              ]
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "addresses.zipcode": [
+                "[\"N9F 2WT\", \"N9F 2WT\"]"
+              ]
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 1,
+        "totalDocsExamined": 1,
+        "executionStages": {
+          "isCached": false,
+          "stage": "FETCH",
+          "nReturned": 1,
+          "executionTimeMillisEstimate": 0,
+          "works": 2,
+          "advanced": 1,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "docsExamined": 1,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 1,
+            "executionTimeMillisEstimate": 0,
+            "works": 2,
+            "advanced": 1,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "keyPattern": {
+              "addresses.zipcode": 1
+            },
+            "indexName": "usersAddressesZipcode",
+            "isMultiKey": true,
+            "multiKeyPaths": {
+              "addresses.zipcode": [
+                "addresses"
+              ]
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "addresses.zipcode": [
+                "[\"N9F 2WT\", \"N9F 2WT\"]"
+              ]
+            },
+            "keysExamined": 1,
+            "seeks": 1,
+            "dupsTested": 1,
+            "dupsDropped": 0
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "78F89262A8116C75BCFCE2BB006DF7709BC319FECF3EB76D88B35A1093565338",
+      "command": {
+        "find": "users",
+        "filter": {
+          "addresses.zipcode": "N9F 2WT"
+        },
+        "hint": "usersAddressesZipcode",
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150960,
+            "i": 90
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jLkG3yl4KyRby40rdQAlbDEQai0=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150960,
+          "i": 90
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 6,
+    "collection": "orders",
+    "mode": "withIndexes",
+    "indexHint": "ordersOrderDateIdx",
+    "query": {
+      "orderDate": {
+        "$gte": {
+          "$date": "2021-01-01T00:00:00Z"
+        },
+        "$lte": {
+          "$date": "2021-12-31T00:00:00Z"
+        }
+      }
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.orders",
+        "parsedQuery": {
+          "$and": [
+            {
+              "orderDate": {
+                "$lte": {
+                  "$date": "2021-12-31T00:00:00Z"
+                }
+              }
+            },
+            {
+              "orderDate": {
+                "$gte": {
+                  "$date": "2021-01-01T00:00:00Z"
+                }
+              }
+            }
+          ]
+        },
+        "indexFilterSet": false,
+        "queryHash": "C8E26732",
+        "planCacheShapeHash": "C8E26732",
+        "planCacheKey": "F747E167",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "FETCH",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "keyPattern": {
+              "orderDate": -1
+            },
+            "indexName": "ordersOrderDateIdx",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "orderDate": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "orderDate": [
+                "[new Date(1640908800000), new Date(1609459200000)]"
+              ]
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1449,
+        "executionTimeMillis": 2,
+        "totalKeysExamined": 1449,
+        "totalDocsExamined": 1449,
+        "executionStages": {
+          "isCached": false,
+          "stage": "FETCH",
+          "nReturned": 1449,
+          "executionTimeMillisEstimate": 0,
+          "works": 1450,
+          "advanced": 1449,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "docsExamined": 1449,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 1449,
+            "executionTimeMillisEstimate": 0,
+            "works": 1450,
+            "advanced": 1449,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "keyPattern": {
+              "orderDate": -1
+            },
+            "indexName": "ordersOrderDateIdx",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "orderDate": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "orderDate": [
+                "[new Date(1640908800000), new Date(1609459200000)]"
+              ]
+            },
+            "keysExamined": 1449,
+            "seeks": 1,
+            "dupsTested": 0,
+            "dupsDropped": 0
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "2DD5AD4EAA821845470D92D3818E98C00D8F460011A373F6EA62B724349E8ED5",
+      "command": {
+        "find": "orders",
+        "filter": {
+          "orderDate": {
+            "$gte": {
+              "$date": "2021-01-01T00:00:00Z"
+            },
+            "$lte": {
+              "$date": "2021-12-31T00:00:00Z"
+            }
+          }
+        },
+        "sort": {
+          "orderDate": -1
+        },
+        "hint": "ordersOrderDateIdx",
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150960,
+            "i": 93
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jLkG3yl4KyRby40rdQAlbDEQai0=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150960,
+          "i": 93
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 7,
+    "collection": "orders",
+    "mode": "withIndexes",
+    "indexHint": "ordersStatusIdx",
+    "query": {
+      "status": "Pending"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.orders",
+        "parsedQuery": {
+          "status": {
+            "$eq": "Pending"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "5D6543D9",
+        "planCacheShapeHash": "5D6543D9",
+        "planCacheKey": "39538AB7",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "FETCH",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "keyPattern": {
+              "status": 1
+            },
+            "indexName": "ordersStatusIdx",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "status": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "status": [
+                "[\"Pending\", \"Pending\"]"
+              ]
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1955,
+        "executionTimeMillis": 2,
+        "totalKeysExamined": 1955,
+        "totalDocsExamined": 1955,
+        "executionStages": {
+          "isCached": false,
+          "stage": "FETCH",
+          "nReturned": 1955,
+          "executionTimeMillisEstimate": 3,
+          "works": 1956,
+          "advanced": 1955,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "docsExamined": 1955,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 1955,
+            "executionTimeMillisEstimate": 1,
+            "works": 1956,
+            "advanced": 1955,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "keyPattern": {
+              "status": 1
+            },
+            "indexName": "ordersStatusIdx",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "status": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "status": [
+                "[\"Pending\", \"Pending\"]"
+              ]
+            },
+            "keysExamined": 1955,
+            "seeks": 1,
+            "dupsTested": 0,
+            "dupsDropped": 0
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "7CF62025D2AD246F6EEA07461A5213A082D138714B77ED943DA31235698325BD",
+      "command": {
+        "find": "orders",
+        "filter": {
+          "status": "Pending"
+        },
+        "hint": "ordersStatusIdx",
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150960,
+            "i": 113
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jLkG3yl4KyRby40rdQAlbDEQai0=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150960,
+          "i": 113
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 8,
+    "collection": "orders",
+    "mode": "withIndexes",
+    "indexHint": "ordersCustomerEmailDate",
+    "query": {
+      "customerSnapshot.email": "sebastianhawkins@outlook.com"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.orders",
+        "parsedQuery": {
+          "customerSnapshot.email": {
+            "$eq": "sebastianhawkins@outlook.com"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "31E2E18A",
+        "planCacheShapeHash": "31E2E18A",
+        "planCacheKey": "DC8B14AF",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "FETCH",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "keyPattern": {
+              "customerSnapshot.email": 1,
+              "orderDate": -1
+            },
+            "indexName": "ordersCustomerEmailDate",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "customerSnapshot.email": [],
+              "orderDate": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "customerSnapshot.email": [
+                "[\"sebastianhawkins@outlook.com\", \"sebastianhawkins@outlook.com\"]"
+              ],
+              "orderDate": [
+                "[MaxKey, MinKey]"
+              ]
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 21,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 21,
+        "totalDocsExamined": 21,
+        "executionStages": {
+          "isCached": false,
+          "stage": "FETCH",
+          "nReturned": 21,
+          "executionTimeMillisEstimate": 0,
+          "works": 22,
+          "advanced": 21,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "docsExamined": 21,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 21,
+            "executionTimeMillisEstimate": 0,
+            "works": 22,
+            "advanced": 21,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "keyPattern": {
+              "customerSnapshot.email": 1,
+              "orderDate": -1
+            },
+            "indexName": "ordersCustomerEmailDate",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "customerSnapshot.email": [],
+              "orderDate": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "customerSnapshot.email": [
+                "[\"sebastianhawkins@outlook.com\", \"sebastianhawkins@outlook.com\"]"
+              ],
+              "orderDate": [
+                "[MaxKey, MinKey]"
+              ]
+            },
+            "keysExamined": 21,
+            "seeks": 1,
+            "dupsTested": 0,
+            "dupsDropped": 0
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "3B2011F379F8AE6AFCA8902E8A85CEEF6E43C06756ABAF1DB24BEE72051C1828",
+      "command": {
+        "find": "orders",
+        "filter": {
+          "customerSnapshot.email": "sebastianhawkins@outlook.com"
+        },
+        "sort": {
+          "orderDate": -1
+        },
+        "hint": "ordersCustomerEmailDate",
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150960,
+            "i": 136
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jLkG3yl4KyRby40rdQAlbDEQai0=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150960,
+          "i": 136
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 9,
+    "collection": "orders",
+    "mode": "withIndexes",
+    "indexHint": "ordersItemsSku",
+    "query": {
+      "items.sku": "OFF-ACC-12497"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.orders",
+        "parsedQuery": {
+          "items.sku": {
+            "$eq": "OFF-ACC-12497"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "566AFF1D",
+        "planCacheShapeHash": "566AFF1D",
+        "planCacheKey": "7DFC6954",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "FETCH",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "keyPattern": {
+              "items.sku": 1
+            },
+            "indexName": "ordersItemsSku",
+            "isMultiKey": true,
+            "multiKeyPaths": {
+              "items.sku": [
+                "items"
+              ]
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "items.sku": [
+                "[\"OFF-ACC-12497\", \"OFF-ACC-12497\"]"
+              ]
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 12,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 12,
+        "totalDocsExamined": 12,
+        "executionStages": {
+          "isCached": false,
+          "stage": "FETCH",
+          "nReturned": 12,
+          "executionTimeMillisEstimate": 0,
+          "works": 13,
+          "advanced": 12,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "docsExamined": 12,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 12,
+            "executionTimeMillisEstimate": 0,
+            "works": 13,
+            "advanced": 12,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "keyPattern": {
+              "items.sku": 1
+            },
+            "indexName": "ordersItemsSku",
+            "isMultiKey": true,
+            "multiKeyPaths": {
+              "items.sku": [
+                "items"
+              ]
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "items.sku": [
+                "[\"OFF-ACC-12497\", \"OFF-ACC-12497\"]"
+              ]
+            },
+            "keysExamined": 12,
+            "seeks": 1,
+            "dupsTested": 12,
+            "dupsDropped": 0
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "42A813B002FD1B78787FF377E298B5BD2A1243DE4AEF3C5896722D165F9E641D",
+      "command": {
+        "find": "orders",
+        "filter": {
+          "items.sku": "OFF-ACC-12497"
+        },
+        "hint": "ordersItemsSku",
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150960,
+            "i": 152
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jLkG3yl4KyRby40rdQAlbDEQai0=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150960,
+          "i": 152
+        }
+      }
+    }
+  },
+  {
+    "queryNo": 10,
+    "collection": "orders",
+    "mode": "withIndexes",
+    "indexHint": "ordersPendingPartial",
+    "query": {
+      "status": "Pending"
+    },
+    "explain": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "eCommerceProjectEmbedding.orders",
+        "parsedQuery": {
+          "status": {
+            "$eq": "Pending"
+          }
+        },
+        "indexFilterSet": false,
+        "queryHash": "5D6543D9",
+        "planCacheShapeHash": "5D6543D9",
+        "planCacheKey": "39538AB7",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "prunedSimilarIndexes": false,
+        "winningPlan": {
+          "isCached": false,
+          "stage": "FETCH",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "keyPattern": {
+              "status": 1
+            },
+            "indexName": "ordersPendingPartial",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "status": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": true,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "status": [
+                "[\"Pending\", \"Pending\"]"
+              ]
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1955,
+        "executionTimeMillis": 2,
+        "totalKeysExamined": 1955,
+        "totalDocsExamined": 1955,
+        "executionStages": {
+          "isCached": false,
+          "stage": "FETCH",
+          "nReturned": 1955,
+          "executionTimeMillisEstimate": 2,
+          "works": 1956,
+          "advanced": 1955,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "docsExamined": 1955,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 1955,
+            "executionTimeMillisEstimate": 1,
+            "works": 1956,
+            "advanced": 1955,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "keyPattern": {
+              "status": 1
+            },
+            "indexName": "ordersPendingPartial",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "status": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": true,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "status": [
+                "[\"Pending\", \"Pending\"]"
+              ]
+            },
+            "keysExamined": 1955,
+            "seeks": 1,
+            "dupsTested": 0,
+            "dupsDropped": 0
+          }
+        },
+        "allPlansExecution": []
+      },
+      "queryShapeHash": "7CF62025D2AD246F6EEA07461A5213A082D138714B77ED943DA31235698325BD",
+      "command": {
+        "find": "orders",
+        "filter": {
+          "status": "Pending"
+        },
+        "hint": "ordersPendingPartial",
+        "$db": "eCommerceProjectEmbedding"
+      },
+      "serverInfo": {
+        "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768150960,
+            "i": 176
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jLkG3yl4KyRby40rdQAlbDEQai0=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7561139660882182188
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768150960,
+          "i": 176
+        }
+      }
+    }
+  }
+]

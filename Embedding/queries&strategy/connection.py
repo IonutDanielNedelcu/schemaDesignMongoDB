@@ -58,5 +58,5 @@ def testConnection():
         print("\nConnection failed")
 
 
-if '__name__' == '__main__':
+if __name__ == '__main__':
     testConnection()
