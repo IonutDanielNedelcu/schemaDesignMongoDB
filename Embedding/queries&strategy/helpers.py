@@ -67,4 +67,3 @@ def printExplainSummary(explain):
             if 'indexName' in inputStage:
                 print(f"    Using index: {inputStage['indexName']}")
 
-# Helper functions module ready. Import and call the functions from other modules.

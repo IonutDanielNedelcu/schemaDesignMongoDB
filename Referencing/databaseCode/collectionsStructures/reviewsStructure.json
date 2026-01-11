@@ -2,7 +2,6 @@
   "_id": "ObjectId",
   "productId": "ObjectId",
   "userId": "ObjectId - you need to search for the userId using the userDisplayName in the review",
-  "userDisplayName": "String",
   "rating": "Number",
   "comment": "String",
   "date": "Date"

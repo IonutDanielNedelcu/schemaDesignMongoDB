@@ -24,7 +24,7 @@ def runWithoutIndex(db, collectionName, queryFilter, projection=None, sort=None,
     
     collection = db[collectionName]
     try:
-        # hint=[('$natural', 1)] -> try to force coll-scan. Do not detect $text; if the hint causes an error, retry without it.
+        # hint=[('$natural', 1)] -> try to force coll-scan
         noIndexHint = [('$natural', 1)]
         try:
             results, elapsedMs = timeQuery(collection, queryFilter, name=f"{collectionName} noIndex", limit=limit, projection=projection, sort=sort, hint=noIndexHint)
