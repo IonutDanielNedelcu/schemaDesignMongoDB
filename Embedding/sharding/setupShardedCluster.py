@@ -151,28 +151,32 @@ def initiateReplica(container, replSetName, port):
 
 def addShardsToMongos():
     try:
-        from pymongo import MongoClient
+        from connection import connectToMongoDB, closeConnection
     except Exception as e:
-        print("pymongo not installed or import failed:", e)
+        print("Could not import connection helper (pymongo may be missing):", e)
         return
 
-    m = config["mongos"]
-    mongosUri = f"mongodb://localhost:{m['port']}"
-    print("Connecting to mongos at", mongosUri)
-    client = MongoClient(mongosUri, serverSelectionTimeoutMS=5000)
+    client, db = connectToMongoDB()  # uses MONGO_CONNECTION_STRING_SHARDING env var
+    if not client:
+        print("Connection to mongos failed")
+        return
+
     try:
-        client.admin.command("ping")
-    except Exception as e:
-        print("Could not reach mongos:", e)
-        return
-
-    for s in config["shards"]:
-        shardStr = f"{s['replSet']}/{s['name']}:{s['port']}"
-        print("Adding shard:", shardStr)
         try:
-            client.admin.command("addShard", shardStr)
+            client.admin.command("ping")
         except Exception as e:
-            print(f"addShard failed for {shardStr}: {e}")
+            print("Could not reach mongos:", e)
+            return
+
+        for s in config["shards"]:
+            shardStr = f"{s['replSet']}/{s['name']}:{s['port']}"
+            print("Adding shard:", shardStr)
+            try:
+                client.admin.command("addShard", shardStr)
+            except Exception as e:
+                print(f"addShard failed for {shardStr}: {e}")
+    finally:
+        closeConnection(client)
 
 
 def main():
@@ -194,7 +198,7 @@ def main():
         time.sleep(5)
 
         cs = config["configSvr"]
-        print("Initiating config server replica set...")
+        print("Initiating config server replica set.")
         initiateReplica(cs["name"], cs["replSet"], cs["port"])
         time.sleep(3)
 

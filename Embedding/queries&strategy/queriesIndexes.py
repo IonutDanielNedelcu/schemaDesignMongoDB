@@ -126,8 +126,7 @@ def createIndexes(db):
 
 
 # if we want it the script to be ran by itself
-if '__name__' == '__main__':
-    from connection import connectToMongoDB, closeConnection
+if __name__ == '__main__':
     client, db = connectToMongoDB()
     try:
         createIndexes(db)

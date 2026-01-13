@@ -15,7 +15,7 @@ Import logic:
 - If parsing fails, falls back to newline-delimited JSON (JSON Lines).
 - Inserts in batches to avoid excessive memory usage.
 
-Note: set `MONGO_CONNECTION_STRING` in environment or .env to point to your
+Note: set `MONGO_CONNECTION_STRING_SHARDING` in environment or .env to point to your
 mongos (e.g. mongodb://localhost:27017).
 """
 import os
@@ -29,7 +29,7 @@ load_dotenv()
 
 
 config = {
-	"mongoUri": os.getenv("MONGO_CONNECTION_STRING_SHARDING", "mongodb://localhost:27017"),
+	"mongoUri": os.getenv("MONGO_CONNECTION_STRING_SHARDING"),
 	"dbName": "eCommerceProjectEmbedding",
 	"collections": [
 		{"name": "orders", "folder": "JsonOrders", "shardKey": "user_id", "strategy": "hashed"},
@@ -37,9 +37,9 @@ config = {
 		{"name": "users", "folder": "JsonUsers", "shardKey": "_id", "strategy": "hashed"},
 	],
 	# Safety: dry-run unless confirm True
-	"confirm": False,
+	"confirm": True,
 	# batch size for inserts
-	"batchSize": 1000,
+	"batchSize": 500,
 }
 
 
