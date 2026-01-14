@@ -33,6 +33,14 @@ def explainQuery(collection, query, projection=None, sort=None, hint=None):
     explain = cursor.explain()
     return explain
 
+def explainAggregation(collection, pipeline):
+    db = collection.database
+    explain = db.command(
+        'explain',
+        {'aggregate': collection.name, 'pipeline': pipeline, 'cursor': {}}
+    )
+    return explain
+
 def printExplainSummary(explain):
     # Print a readable summary of explain output
     if 'executionStats' in explain:
