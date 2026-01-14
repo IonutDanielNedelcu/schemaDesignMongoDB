@@ -63,28 +63,16 @@ def deleteOrderById(order_id, dbName=DB_NAME_DEFAULT):
         closeConnection(client)
 
 
-def findOrdersByStatus(status, dbName=DB_NAME_DEFAULT, limit=100):
-    client, db = connectToMongoDB(dbName)
-    if not db:
-        return []
-    try:
-        cursor = db.orders.find({"status": status}).limit(limit)
-        return list(cursor)
-    finally:
-        closeConnection(client)
-
-
 def main():
     print("Orders CLI")
     print("1) Create order")
     print("2) Get order by _id")
     print("3) Find orders (enter JSON filter)")
-    print("4) Find orders by status")
-    print("5) Update order by _id")
-    print("6) Delete order by _id")
-    print("7) Exit")
+    print("4) Update order by _id")
+    print("5) Delete order by _id")
+    print("6) Exit")
 
-    choice = input("Choose action (1-7): ").strip()
+    choice = input("Choose action (1-6): ").strip()
 
     if choice == '1':
         s = input('Enter order JSON: ').strip()
@@ -111,12 +99,6 @@ def main():
         print(json.dumps(docs[:lim], indent=2, default=str))
 
     elif choice == '4':
-        status = input('Enter status to filter by (e.g. Pending, Delivered): ').strip()
-        docs = findOrdersByStatus(status)
-        print(f'Found {len(docs)} documents')
-        print(json.dumps(docs[:10], indent=2, default=str))
-
-    elif choice == '5':
         _id = input('Enter order _id to update: ').strip()
         s = input('Enter JSON with fields to set: ').strip()
         try:
@@ -125,8 +107,7 @@ def main():
             print('Modified count:', modified)
         except Exception as e:
             print('Invalid JSON or update error:', e)
-
-    elif choice == '6':
+    elif choice == '5':
         _id = input('Enter order _id to delete: ').strip()
         deleted = deleteOrderById(_id)
         print('Deleted count:', deleted)

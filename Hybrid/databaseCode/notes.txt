@@ -1,0 +1,49 @@
+Embedding vs Sharding => Hybrid
+
+# USERS
+
+Addresses:
+    E -> due to lack of data reutilisation (an address is attributed to one user only), it's an inefficient design strategy to store them separately and referenciate
+
+Shopping Cart:
+    R -> due to data coherence and volatility, referencing is preferred. Embedding would create unnecessary read/write operations on data that is very volatile, and sometimes inconsistent
+
+
+# PRODUCTS
+
+Vendor:
+    R -> data redundancy + coherence (+ a lot more products than vendors)
+
+Category:
+    R -> data redundancy
+
+Reviews:
+    E -> product dependency
+
+
+# ORDERS
+
+Customer Snapshot:
+    R + partial E -> referencing if all data is needed, partial embedding for important/relevant data (we embed the id, name, email)
+
+Shipping Details:
+    E -> important data, order-based information
+
+Items:
+    R + E
+        - R -> item id
+        - E -> productNameSnapshot, skuSnapshot, unitPriceSnapshot, vendorId
+
+
+# Collection List:
+
+1. CATEGORIES
+2. VENDORS 
+3. USERS without shopping cart (null - empty array)
+4. PRODUCTS -> then go back to USERS and update shopping cart with corresponding products
+5. ORDERS
+
+
+Additional indexes:
+    1. Categories alphabetical order
+        -> 2 partial indexes: 1 for main categories, 1 for secondary categories (main: parentCategoryId is null, otherwise secondary)

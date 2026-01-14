@@ -1,0 +1,844 @@
+[
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$reviews",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviews.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          }
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1
+        }
+      }
+    ],
+    "name": "Products Inefficient",
+    "elapsedMs": 126.79529190063477,
+    "resultCount": 261
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "shoppingCart.sku",
+          "foreignField": "sku",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": {
+              "$multiply": [
+                "$shoppingCart.quantity",
+                {
+                  "$ifNull": [
+                    "$productInfo.price",
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      }
+    ],
+    "name": "Users Inefficient",
+    "elapsedMs": 16592.442750930786,
+    "resultCount": 958
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$items",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$items.vendor.companyName",
+          "sales": {
+            "$sum": {
+              "$multiply": [
+                "$items.unitPrice",
+                "$items.quantity"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "sales": {
+            "$gt": 1000
+          }
+        }
+      },
+      {
+        "$sort": {
+          "sales": -1
+        }
+      }
+    ],
+    "name": "Orders Inefficient",
+    "elapsedMs": 132.0633888244629,
+    "resultCount": 74
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$reviews",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviews.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          }
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1
+        }
+      }
+    ],
+    "name": "Products Inefficient with Indexes",
+    "elapsedMs": 115.22865295410156,
+    "resultCount": 261
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "shoppingCart.sku",
+          "foreignField": "sku",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": {
+              "$multiply": [
+                "$shoppingCart.quantity",
+                {
+                  "$ifNull": [
+                    "$productInfo.price",
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      }
+    ],
+    "name": "Users Inefficient with Indexes",
+    "elapsedMs": 463.2229804992676,
+    "resultCount": 958
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$items",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$items.vendor.companyName",
+          "sales": {
+            "$sum": {
+              "$multiply": [
+                "$items.unitPrice",
+                "$items.quantity"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "sales": {
+            "$gt": 1000
+          }
+        }
+      },
+      {
+        "$sort": {
+          "sales": -1
+        }
+      }
+    ],
+    "name": "Orders Inefficient with Indexes",
+    "elapsedMs": 131.61802291870117,
+    "resultCount": 74
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$match": {
+          "category.main": "Electronics"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$reviews",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviews.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          }
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1
+        }
+      }
+    ],
+    "name": "Products Efficient",
+    "elapsedMs": 46.35882377624512,
+    "resultCount": 30
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$match": {
+          "addresses.zipcode": "LA3 6JG"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": {
+              "$multiply": [
+                "$shoppingCart.quantity",
+                "$shoppingCart.price"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      }
+    ],
+    "name": "Users Efficient",
+    "elapsedMs": 40.99249839782715,
+    "resultCount": 1
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$match": {
+          "status": "Pending"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$items",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$items.sku",
+          "quantitySold": {
+            "$sum": "$items.quantity"
+          },
+          "totalSales": {
+            "$sum": {
+              "$multiply": [
+                "$items.unitPrice",
+                "$items.quantity"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$sort": {
+          "totalSales": -1
+        }
+      }
+    ],
+    "name": "Orders Efficient",
+    "elapsedMs": 210.76107025146484,
+    "resultCount": 4412
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$reviews",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviews.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          }
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1
+        }
+      }
+    ],
+    "name": "Products Inefficient",
+    "elapsedMs": 133.134126663208,
+    "resultCount": 261
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "shoppingCart.sku",
+          "foreignField": "sku",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": {
+              "$multiply": [
+                "$shoppingCart.quantity",
+                {
+                  "$ifNull": [
+                    "$productInfo.price",
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      }
+    ],
+    "name": "Users Inefficient",
+    "elapsedMs": 16411.22031211853,
+    "resultCount": 958
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$items",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$items.vendor.companyName",
+          "sales": {
+            "$sum": {
+              "$multiply": [
+                "$items.unitPrice",
+                "$items.quantity"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "sales": {
+            "$gt": 1000
+          }
+        }
+      },
+      {
+        "$sort": {
+          "sales": -1
+        }
+      }
+    ],
+    "name": "Orders Inefficient",
+    "elapsedMs": 179.24904823303223,
+    "resultCount": 74
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$reviews",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviews.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          }
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1
+        }
+      }
+    ],
+    "name": "Products Inefficient with Indexes",
+    "elapsedMs": 132.19738006591797,
+    "resultCount": 261
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "shoppingCart.sku",
+          "foreignField": "sku",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": {
+              "$multiply": [
+                "$shoppingCart.quantity",
+                {
+                  "$ifNull": [
+                    "$productInfo.price",
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      }
+    ],
+    "name": "Users Inefficient with Indexes",
+    "elapsedMs": 472.851037979126,
+    "resultCount": 958
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$items",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$items.vendor.companyName",
+          "sales": {
+            "$sum": {
+              "$multiply": [
+                "$items.unitPrice",
+                "$items.quantity"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "sales": {
+            "$gt": 1000
+          }
+        }
+      },
+      {
+        "$sort": {
+          "sales": -1
+        }
+      }
+    ],
+    "name": "Orders Inefficient with Indexes",
+    "elapsedMs": 137.64595985412598,
+    "resultCount": 74
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$match": {
+          "category.main": "Electronics"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$reviews",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviews.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          }
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1
+        }
+      }
+    ],
+    "name": "Products Efficient",
+    "elapsedMs": 52.82759666442871,
+    "resultCount": 30
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$match": {
+          "addresses.zipcode": "LA3 6JG"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": {
+              "$multiply": [
+                "$shoppingCart.quantity",
+                "$shoppingCart.price"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      }
+    ],
+    "name": "Users Efficient",
+    "elapsedMs": 53.30801010131836,
+    "resultCount": 1
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$match": {
+          "status": "Pending"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$items",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$items.sku",
+          "quantitySold": {
+            "$sum": "$items.quantity"
+          },
+          "totalSales": {
+            "$sum": {
+              "$multiply": [
+                "$items.unitPrice",
+                "$items.quantity"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$sort": {
+          "totalSales": -1
+        }
+      }
+    ],
+    "name": "Orders Efficient",
+    "elapsedMs": 240.3585910797119,
+    "resultCount": 4412
+  }
+]
