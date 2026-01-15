@@ -24,9 +24,6 @@ ordersItemsSku = 'ordersItemsSku'
 ordersPendingPartial = 'ordersPendingPartial'
 
 # Additional index names (do not duplicate the ones above)
-productsPriceIdx = 'productsPriceIdx'
-productsVendorIdx = 'productsVendorIdx'
-usersCartSkuIdx = 'usersCartSkuIdx'
 ordersVendorCompanyIdx = 'ordersVendorCompanyIdx'
 ordersCustomerIdDate = 'ordersCustomerIdDate'
 
