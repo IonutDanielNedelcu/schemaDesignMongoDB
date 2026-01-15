@@ -1,6 +1,6 @@
 from connection import connectToMongoDB, closeConnection
 from helpers import timeAggregation, explainAggregation
-from queriesIndexes import createIndexes, createAdditionalIndexes
+from indexes import createIndexes
 from bson import json_util
 import os
 import json
@@ -403,11 +403,6 @@ def main():
 
         # 5. Run optimized pipelines with the query indexes
         runOptimizedPipelines(db)
-
-        # 5. Run optimized pipelines with additional indexes
-        createAdditionalIndexes(db)
-        
-        runOptimizedPipelinesAdditional(db)
 
     finally:
         closeConnection(client)

@@ -1,5 +1,7 @@
 import json
+import os
 from .connection import connectToMongoDB, closeConnection
+from .jsonLoader import loadJsonFile
 
 
 DB_NAME_DEFAULT = "eCommerceProjectEmbedding"
@@ -75,9 +77,10 @@ def main():
     choice = input("Choose action (1-6): ").strip()
 
     if choice == '1':
-        s = input('Enter user JSON: ').strip()
+        print('Using input.json in repository')
         try:
-            doc = json.loads(s)
+            path = os.path.join(os.path.dirname(__file__), 'input.json')
+            doc = loadJsonFile(path)
             _id = createUser(doc)
             print('Inserted _id:', _id)
         except Exception as e:
@@ -100,9 +103,10 @@ def main():
 
     elif choice == '4':
         _id = input('Enter user _id to update: ').strip()
-        s = input('Enter JSON with fields to set: ').strip()
+        print('Using input.json in repository for update')
         try:
-            upd = json.loads(s)
+            path = os.path.join(os.path.dirname(__file__), 'input.json')
+            upd = loadJsonFile(path)
             modified = updateUserById(_id, upd)
             print('Modified count:', modified)
         except Exception as e:

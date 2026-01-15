@@ -16,10 +16,6 @@ ordersCustomerEmailDate = 'ordersCustomerEmailDate'
 ordersItemsSku = 'ordersItemsSku'
 ordersPendingPartial = 'ordersPendingPartial'
 
-# Additional index names (do not duplicate the ones above)
-ordersVendorCompanyIdx = 'ordersVendorCompanyIdx'
-ordersCustomerIdDate = 'ordersCustomerIdDate'
-
 def createIndexes(db):
     products = db['products']
     users = db['users']
@@ -111,46 +107,6 @@ def createIndexes(db):
     for idx in ordersIndexes:
         createAndReport(orders, idx)
     print("Finished creating indexes for 'orders' collection.")
-
-
-def createAdditionalIndexes(db):
-    orders = db['orders']
-
-    ordersAdditionalIndexes = [
-        {
-            'keys': [('items.vendor.companyName', ASCENDING)],
-            'options': {'name': ordersVendorCompanyIdx},
-            'type': 'Multikey (items.vendor.companyName)'
-        },
-        {
-            'keys': [('customerSnapshot._id', ASCENDING), ('orderDate', DESCENDING)],
-            'options': {'name': ordersCustomerIdDate},
-            'type': 'Compound (customer id + date)'
-        }
-    ]
-
-    # local helper that mirrors createIndexes' reporting behavior
-    def createAndReport(collection, indexDef):
-        name = indexDef.get('options', {}).get('name')
-        try:
-            createdName = collection.create_index(indexDef['keys'], **indexDef.get('options', {}))
-            print(f"Index '{createdName}' on '{collection.name}' (type: {indexDef.get('type')}) created successfully.")
-        except Exception as e:
-            idxName = name or str(indexDef.get('keys'))
-            print(f"Error creating index '{idxName}' on '{collection.name}': {e}")
-
-    # Check existing indexes by name to avoid duplicates
-
-    existingOrders = orders.index_information()
-
-    print()
-    print("Started creating additional indexes (skipping existing)...")
-
-    for idx in ordersAdditionalIndexes:
-        if idx.get('options', {}).get('name') not in existingOrders:
-            createAndReport(orders, idx)
-
-    print("Finished creating additional indexes.")
 
 
 if __name__ == '__main__':

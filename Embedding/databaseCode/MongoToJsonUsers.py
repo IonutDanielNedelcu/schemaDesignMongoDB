@@ -35,7 +35,8 @@ def makeSerializable(value):
 
 def exportUsersToJson(batchSize=50, collectionName='users', outputDir=None, dbName=None):
 	if outputDir is None:
-		outputDir = os.path.join(os.path.dirname(__file__), 'JsonUsers')
+		repoRoot = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+		outputDir = os.path.join(repoRoot, 'sharding', 'JsonUsers')
 
 	ensureOutputDir(outputDir)
 

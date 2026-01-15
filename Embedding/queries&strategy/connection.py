@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure, ServerSelectionTimeoutError
 from dotenv import load_dotenv
 
-load_dotenv() # iau variabilele de mediu din .env
+load_dotenv()
 
 def connectToMongoDB(dbName="eCommerceProjectEmbedding"):
     try:

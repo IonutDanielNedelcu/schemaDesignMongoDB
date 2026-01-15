@@ -1,5 +1,5 @@
 from connection import connectToMongoDB, closeConnection
-from createIndexesOnDocker import (
+from indexesDocker import (
     productsSkuUnique,
     productsCategoryCompound,
     productsText,

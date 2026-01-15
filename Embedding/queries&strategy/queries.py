@@ -1,5 +1,5 @@
 from connection import connectToMongoDB, closeConnection
-from queriesIndexes import (
+from indexes import (
     productsSkuUnique,
     productsCategoryCompound,
     productsText,
