@@ -1,0 +1,2848 @@
+[
+  {
+    "_id": "6931b8b42f8aba1457bacfdf",
+    "name": "Wall Clock Modern",
+    "sku": "HOM-DEC-14000",
+    "price": 12.5,
+    "details": {
+      "description": "Silent analog clock",
+      "specs": {
+        "diameter": "30cm",
+        "color": "Black/White",
+        "battery": "1xAA"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Home",
+      "sub": "Decor"
+    },
+    "vendor": {
+      "companyName": "Innovatech Solutions",
+      "contactEmail": "sales@innovatech.com",
+      "supportPhone": "+1-888-123-4567"
+    },
+    "reviews": [
+      {
+        "username": "Julie Cruz",
+        "rating": 3,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2024-12-24T00:00:00"
+      },
+      {
+        "username": "Janice Mendoza",
+        "rating": 2,
+        "comment": "It's not compatible with my other devices, which is a shame.",
+        "date": "2023-11-21T00:00:00"
+      },
+      {
+        "username": "Benjamin Turner",
+        "rating": 2,
+        "comment": "I'm very impressed with the attention to detail.",
+        "date": "2020-06-02T00:00:00"
+      },
+      {
+        "username": "Alan Price",
+        "rating": 5,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2019-07-24T00:00:00"
+      },
+      {
+        "username": "Matthew Gonzales",
+        "rating": 2,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2024-05-02T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfe0",
+    "name": "Desk Lamp LED",
+    "sku": "HOM-LIG-14001",
+    "price": 18.0,
+    "details": {
+      "description": "Adjustable arm light",
+      "specs": {
+        "power": "USB",
+        "dimmable": "Yes",
+        "neck": "Flexible"
+      }
+    },
+    "stock": 65,
+    "category": {
+      "main": "Home",
+      "sub": "Lighting"
+    },
+    "vendor": {
+      "companyName": "Apex Gadgetry",
+      "contactEmail": "support@apexgadgetry.com",
+      "supportPhone": "+1-888-234-5678"
+    },
+    "reviews": [
+      {
+        "username": "Emma Adams",
+        "rating": 4,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2024-03-03T00:00:00"
+      },
+      {
+        "username": "Melissa Lewis",
+        "rating": 2,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2022-10-18T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfe1",
+    "name": "Extension Cord 3m",
+    "sku": "ELE-POW-14002",
+    "price": 7.5,
+    "details": {
+      "description": "Power extension lead",
+      "specs": {
+        "length": "3m",
+        "sockets": "1",
+        "rating": "10A"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Electronics",
+      "sub": "Power"
+    },
+    "vendor": {
+      "companyName": "Quantum Devices",
+      "contactEmail": "info@quantumdev.com",
+      "supportPhone": "+1-888-345-6789"
+    },
+    "reviews": [
+      {
+        "username": "Frank Mitchell",
+        "rating": 5,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2022-09-12T00:00:00"
+      },
+      {
+        "username": "Ronald Nguyen",
+        "rating": 4,
+        "comment": "It's not compatible with my other devices, which is a shame.",
+        "date": "2019-12-01T00:00:00"
+      },
+      {
+        "username": "Roger Ortiz",
+        "rating": 2,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2019-05-26T00:00:00"
+      },
+      {
+        "username": "Jonathan Green",
+        "rating": 1,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2022-04-09T00:00:00"
+      },
+      {
+        "username": "Noah Cox",
+        "rating": 3,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2020-07-02T00:00:00"
+      },
+      {
+        "username": "Linda Lopez",
+        "rating": 1,
+        "comment": "Excellent product, highly recommended! A true game changer.",
+        "date": "2019-04-16T00:00:00"
+      },
+      {
+        "username": "Frances Ward",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great addition to my collection.",
+        "date": "2018-05-24T00:00:00"
+      },
+      {
+        "username": "Sara Wood",
+        "rating": 5,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2021-04-03T00:00:00"
+      },
+      {
+        "username": "Scott Carter",
+        "rating": 3,
+        "comment": "The product arrived earlier than expected, which was a nice surprise.",
+        "date": "2025-02-06T00:00:00"
+      },
+      {
+        "username": "Paul White",
+        "rating": 4,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2022-06-04T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfe2",
+    "name": "Power Strip 6-Outlet",
+    "sku": "ELE-POW-14003",
+    "price": 14.0,
+    "details": {
+      "description": "Multi-plug surge protector",
+      "specs": {
+        "outlets": "6",
+        "cord": "1.5m",
+        "switch": "Master"
+      }
+    },
+    "stock": 70,
+    "category": {
+      "main": "Electronics",
+      "sub": "Power"
+    },
+    "vendor": {
+      "companyName": "Stellar Goods",
+      "contactEmail": "contact@stellargoods.net",
+      "supportPhone": "+1-888-456-7890"
+    },
+    "reviews": [
+      {
+        "username": "Edward Ramirez",
+        "rating": 2,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2025-02-13T00:00:00"
+      },
+      {
+        "username": "Dylan Hughes",
+        "rating": 4,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2022-03-06T00:00:00"
+      },
+      {
+        "username": "Eric King",
+        "rating": 5,
+        "comment": "Best purchase I've made this year. Absolutely fantastic!",
+        "date": "2018-10-24T00:00:00"
+      },
+      {
+        "username": "Helen Flores",
+        "rating": 2,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2018-12-11T00:00:00"
+      },
+      {
+        "username": "Tiffany Ross",
+        "rating": 4,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2020-12-26T00:00:00"
+      },
+      {
+        "username": "Noah Mendoza",
+        "rating": 1,
+        "comment": "A must-have for anyone serious about quality.",
+        "date": "2025-11-20T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfe3",
+    "name": "AA Batteries 10pk",
+    "sku": "ELE-BAT-14004",
+    "price": 6.0,
+    "details": {
+      "description": "Alkaline double-A",
+      "specs": {
+        "voltage": "1.5V",
+        "count": "10 pcs",
+        "use": "General"
+      }
+    },
+    "stock": 250,
+    "category": {
+      "main": "Electronics",
+      "sub": "Batteries"
+    },
+    "vendor": {
+      "companyName": "Fusion Homewares",
+      "contactEmail": "support@fusionhome.com",
+      "supportPhone": "+1-888-567-8901"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfe4",
+    "name": "AAA Batteries 10pk",
+    "sku": "ELE-BAT-14005",
+    "price": 6.0,
+    "details": {
+      "description": "Alkaline triple-A",
+      "specs": {
+        "voltage": "1.5V",
+        "count": "10 pcs",
+        "use": "Remotes"
+      }
+    },
+    "stock": 250,
+    "category": {
+      "main": "Electronics",
+      "sub": "Batteries"
+    },
+    "vendor": {
+      "companyName": "Ember Kitchen",
+      "contactEmail": "sales@emberkitchen.io",
+      "supportPhone": "+1-888-678-9012"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfe5",
+    "name": "9V Battery Block",
+    "sku": "ELE-BAT-14006",
+    "price": 4.0,
+    "details": {
+      "description": "Smoke alarm battery",
+      "specs": {
+        "type": "6LR61",
+        "count": "1 pc",
+        "tech": "Alkaline"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Electronics",
+      "sub": "Batteries"
+    },
+    "vendor": {
+      "companyName": "Velocity Sports Gear",
+      "contactEmail": "info@velocitysports.com",
+      "supportPhone": "+1-888-789-0123"
+    },
+    "reviews": [
+      {
+        "username": "Eugene Garcia",
+        "rating": 4,
+        "comment": "The product is a bit of a letdown. I expected better quality.",
+        "date": "2025-11-09T00:00:00"
+      },
+      {
+        "username": "Scott Carter",
+        "rating": 2,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2018-06-14T00:00:00"
+      },
+      {
+        "username": "Donna Robinson",
+        "rating": 3,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2025-04-12T00:00:00"
+      },
+      {
+        "username": "Brenda Hill",
+        "rating": 1,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2025-02-24T00:00:00"
+      },
+      {
+        "username": "Karen Lopez",
+        "rating": 5,
+        "comment": "Five stars! Does the job flawlessly.",
+        "date": "2021-10-28T00:00:00"
+      },
+      {
+        "username": "Gregory Parker",
+        "rating": 4,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2025-09-20T00:00:00"
+      },
+      {
+        "username": "Jose Reyes",
+        "rating": 4,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2020-07-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfe6",
+    "name": "Mouse Pad Black",
+    "sku": "COM-ACC-14007",
+    "price": 2.5,
+    "details": {
+      "description": "Standard cloth mat",
+      "specs": {
+        "size": "22x18cm",
+        "base": "Rubber",
+        "color": "Black"
+      }
+    },
+    "stock": 300,
+    "category": {
+      "main": "Computers",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Zenith Athletics",
+      "contactEmail": "contact@zenithathletics.com",
+      "supportPhone": "+1-888-890-1234"
+    },
+    "reviews": [
+      {
+        "username": "Susan Moore",
+        "rating": 4,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2019-02-27T00:00:00"
+      },
+      {
+        "username": "Bobby Garcia",
+        "rating": 2,
+        "comment": "The setup was a breeze, up and running in minutes.",
+        "date": "2019-08-17T00:00:00"
+      },
+      {
+        "username": "Samantha Nelson",
+        "rating": 3,
+        "comment": "Works perfectly, very satisfied with this purchase.",
+        "date": "2019-10-01T00:00:00"
+      },
+      {
+        "username": "Jordan James",
+        "rating": 1,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2024-01-16T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfe7",
+    "name": "Wrist Rest Gel",
+    "sku": "COM-ACC-14008",
+    "price": 7.0,
+    "details": {
+      "description": "Ergonomic wrist support",
+      "specs": {
+        "fill": "Gel",
+        "cover": "Fabric",
+        "base": "Non-slip"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Computers",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Bibliophile's Corner",
+      "contactEmail": "orders@bibliophilescorner.com",
+      "supportPhone": "+1-888-901-2345"
+    },
+    "reviews": [
+      {
+        "username": "Joe Ward",
+        "rating": 5,
+        "comment": "I've recommended this to all my friends and family.",
+        "date": "2022-01-20T00:00:00"
+      },
+      {
+        "username": "Kathryn Richardson",
+        "rating": 2,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2020-12-18T00:00:00"
+      },
+      {
+        "username": "Jose Morales",
+        "rating": 4,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2023-10-01T00:00:00"
+      },
+      {
+        "username": "Zachary Ortiz",
+        "rating": 4,
+        "comment": "The setup was a breeze, up and running in minutes.",
+        "date": "2018-04-26T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfe8",
+    "name": "Monitor Stand Riser",
+    "sku": "COM-ACC-14009",
+    "price": 15.0,
+    "details": {
+      "description": "Screen height booster",
+      "specs": {
+        "material": "Metal mesh",
+        "drawer": "Yes",
+        "vented": "Yes"
+      }
+    },
+    "stock": 50,
+    "category": {
+      "main": "Computers",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "The Story Weaver",
+      "contactEmail": "support@storyweaver.pub",
+      "supportPhone": "+1-888-012-3456"
+    },
+    "reviews": [
+      {
+        "username": "Nicholas Scott",
+        "rating": 3,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2025-08-09T00:00:00"
+      },
+      {
+        "username": "Cheryl Peterson",
+        "rating": 2,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2020-07-06T00:00:00"
+      },
+      {
+        "username": "Roy Myers",
+        "rating": 2,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2023-08-08T00:00:00"
+      },
+      {
+        "username": "Olivia Garcia",
+        "rating": 4,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2019-07-22T00:00:00"
+      },
+      {
+        "username": "Jeffrey Nguyen",
+        "rating": 2,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2025-08-25T00:00:00"
+      },
+      {
+        "username": "Stephen Adams",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a unique one.",
+        "date": "2021-11-20T00:00:00"
+      },
+      {
+        "username": "Eric King",
+        "rating": 2,
+        "comment": "The feature set is impressive for this price point.",
+        "date": "2022-03-13T00:00:00"
+      },
+      {
+        "username": "Michael Brown",
+        "rating": 4,
+        "comment": "I'm very satisfied with this product. It's been a great addition to my home.",
+        "date": "2018-08-25T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfe9",
+    "name": "Laptop Stand Fold",
+    "sku": "COM-ACC-14010",
+    "price": 12.0,
+    "details": {
+      "description": "Portable notebook riser",
+      "specs": {
+        "material": "Aluminum",
+        "adjust": "6 levels",
+        "pouch": "Included"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Computers",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Chic Threads Apparel",
+      "contactEmail": "sales@chicthreads.com",
+      "supportPhone": "+1-888-112-2334"
+    },
+    "reviews": [
+      {
+        "username": "Douglas Gutierrez",
+        "rating": 2,
+        "comment": "The software is a bit buggy, hoping for an update soon.",
+        "date": "2019-10-12T00:00:00"
+      },
+      {
+        "username": "Carl Kelly",
+        "rating": 1,
+        "comment": "I'm very impressed with the performance of this product.",
+        "date": "2020-06-05T00:00:00"
+      },
+      {
+        "username": "Sara Gray",
+        "rating": 1,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2023-07-27T00:00:00"
+      },
+      {
+        "username": "Steven Taylor",
+        "rating": 1,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2019-11-24T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfea",
+    "name": "USB Hub 4-Port",
+    "sku": "COM-ACC-14011",
+    "price": 8.0,
+    "details": {
+      "description": "Data splitter 3.0",
+      "specs": {
+        "ports": "4x USB-A",
+        "speed": "5Gbps",
+        "cable": "30cm"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Computers",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Urban Vogue Outfitters",
+      "contactEmail": "info@urbanvogue.com",
+      "supportPhone": "+1-888-223-3445"
+    },
+    "reviews": [
+      {
+        "username": "Ronald Wright",
+        "rating": 3,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2023-10-18T00:00:00"
+      },
+      {
+        "username": "Kenneth White",
+        "rating": 3,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2021-02-18T00:00:00"
+      },
+      {
+        "username": "Emily Thompson",
+        "rating": 3,
+        "comment": "Average quality, nothing special to write home about.",
+        "date": "2025-05-14T00:00:00"
+      },
+      {
+        "username": "Jerry Gomez",
+        "rating": 1,
+        "comment": "I'm very happy with my purchase. It's been a great investment.",
+        "date": "2023-08-14T00:00:00"
+      },
+      {
+        "username": "Joan Gutierrez",
+        "rating": 2,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2024-08-28T00:00:00"
+      },
+      {
+        "username": "Wayne Price",
+        "rating": 4,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2022-05-09T00:00:00"
+      },
+      {
+        "username": "Jennifer Jones",
+        "rating": 3,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2018-07-25T00:00:00"
+      },
+      {
+        "username": "Hannah Cooper",
+        "rating": 2,
+        "comment": "This was an impulse buy, and I have zero regrets.",
+        "date": "2018-01-24T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfeb",
+    "name": "HDMI Cable 2m",
+    "sku": "ELE-CAB-14012",
+    "price": 5.0,
+    "details": {
+      "description": "High speed video cord",
+      "specs": {
+        "length": "2m",
+        "support": "4K",
+        "connectors": "Gold plated"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Electronics",
+      "sub": "Cables"
+    },
+    "vendor": {
+      "companyName": "Digital Horizon",
+      "contactEmail": "contact@digitalhorizon.tech",
+      "supportPhone": "+1-888-334-4556"
+    },
+    "reviews": [
+      {
+        "username": "Ronald Nguyen",
+        "rating": 2,
+        "comment": "The product is a bit of a letdown. I expected more for the price.",
+        "date": "2020-03-24T00:00:00"
+      },
+      {
+        "username": "Laura King",
+        "rating": 1,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2019-10-10T00:00:00"
+      },
+      {
+        "username": "Alice Wood",
+        "rating": 5,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2022-05-01T00:00:00"
+      },
+      {
+        "username": "John Davis",
+        "rating": 3,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2022-02-14T00:00:00"
+      },
+      {
+        "username": "Eric Campbell",
+        "rating": 5,
+        "comment": "Love it! It has become an essential part of my daily routine.",
+        "date": "2022-03-05T00:00:00"
+      },
+      {
+        "username": "Thomas Anderson",
+        "rating": 4,
+        "comment": "I'm very impressed with the design of this product.",
+        "date": "2022-11-11T00:00:00"
+      },
+      {
+        "username": "Michelle Walker",
+        "rating": 5,
+        "comment": "The instructions were clear and easy to follow.",
+        "date": "2020-07-23T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfec",
+    "name": "Ethernet Cable 5m",
+    "sku": "NET-CAB-14013",
+    "price": 4.5,
+    "details": {
+      "description": "Cat6 internet patch",
+      "specs": {
+        "length": "5m",
+        "color": "Blue",
+        "boot": "Snagless"
+      }
+    },
+    "stock": 140,
+    "category": {
+      "main": "Networking",
+      "sub": "Cables"
+    },
+    "vendor": {
+      "companyName": "Pinnacle Performance",
+      "contactEmail": "info@pinnacleperf.com",
+      "supportPhone": "+1-888-445-5667"
+    },
+    "reviews": [
+      {
+        "username": "John Wilson",
+        "rating": 5,
+        "comment": "I'm very satisfied with this product. It's been a great addition to my home.",
+        "date": "2022-04-25T00:00:00"
+      },
+      {
+        "username": "Danielle Ross",
+        "rating": 1,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2021-12-10T00:00:00"
+      },
+      {
+        "username": "Teresa Ward",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2022-02-12T00:00:00"
+      },
+      {
+        "username": "Henry Collins",
+        "rating": 3,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2021-01-15T00:00:00"
+      },
+      {
+        "username": "Pamela Campbell",
+        "rating": 5,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2025-09-24T00:00:00"
+      },
+      {
+        "username": "Keith Cox",
+        "rating": 1,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2019-07-18T00:00:00"
+      },
+      {
+        "username": "Brandon Flores",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2020-06-12T00:00:00"
+      },
+      {
+        "username": "Ronald Nguyen",
+        "rating": 3,
+        "comment": "Poor quality, returning it immediately. Avoid this product.",
+        "date": "2020-06-28T00:00:00"
+      },
+      {
+        "username": "Jane Ross",
+        "rating": 3,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2023-12-21T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfed",
+    "name": "Cable Ties 100pk",
+    "sku": "ELE-ORG-14014",
+    "price": 2.5,
+    "details": {
+      "description": "Nylon zip straps",
+      "specs": {
+        "length": "150mm",
+        "count": "100",
+        "color": "Black"
+      }
+    },
+    "stock": 250,
+    "category": {
+      "main": "Electronics",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Evergreen Books",
+      "contactEmail": "support@evergreenbooks.com",
+      "supportPhone": "+1-888-556-6778"
+    },
+    "reviews": [
+      {
+        "username": "Kathy Jones",
+        "rating": 3,
+        "comment": "I wish I had bought this sooner. It's been a great help.",
+        "date": "2021-08-07T00:00:00"
+      },
+      {
+        "username": "Larry Campbell",
+        "rating": 2,
+        "comment": "I'm very impressed with the design of this product.",
+        "date": "2022-01-04T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfee",
+    "name": "Cable Clips Adhesive",
+    "sku": "ELE-ORG-14015",
+    "price": 3.5,
+    "details": {
+      "description": "Wire holder drops",
+      "specs": {
+        "pack": "10 pcs",
+        "slots": "Single",
+        "back": "3M tape"
+      }
+    },
+    "stock": 180,
+    "category": {
+      "main": "Electronics",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "StyleSphere",
+      "contactEmail": "contact@stylesphere.co",
+      "supportPhone": "+1-888-667-7889"
+    },
+    "reviews": [
+      {
+        "username": "Melissa Sanchez",
+        "rating": 2,
+        "comment": "I'm very happy with my purchase. It's been a great addition to my collection.",
+        "date": "2025-03-10T00:00:00"
+      },
+      {
+        "username": "Ethan Bailey",
+        "rating": 2,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2024-09-08T00:00:00"
+      },
+      {
+        "username": "Tina Davis",
+        "rating": 1,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2025-10-13T00:00:00"
+      },
+      {
+        "username": "Deborah Robinson",
+        "rating": 1,
+        "comment": "I would recommend this to a friend without hesitation.",
+        "date": "2020-12-22T00:00:00"
+      },
+      {
+        "username": "Lauren Bailey",
+        "rating": 5,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2019-05-28T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfef",
+    "name": "Phone Stand Desk",
+    "sku": "MOB-ACC-14016",
+    "price": 4.0,
+    "details": {
+      "description": "Adjustable mobile holder",
+      "specs": {
+        "material": "ABS plastic",
+        "fold": "Flat",
+        "pads": "Silicone"
+      }
+    },
+    "stock": 130,
+    "category": {
+      "main": "Mobile",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Gourmet Gadgets",
+      "contactEmail": "sales@gourmetgadgets.com",
+      "supportPhone": "+1-888-778-8990"
+    },
+    "reviews": [
+      {
+        "username": "Alice Watson",
+        "rating": 4,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2025-01-14T00:00:00"
+      },
+      {
+        "username": "Alan Jimenez",
+        "rating": 2,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2025-06-23T00:00:00"
+      },
+      {
+        "username": "Brian Thompson",
+        "rating": 2,
+        "comment": "The customer reviews were spot on. This is a great product.",
+        "date": "2024-09-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacff0",
+    "name": "Tablet Stand",
+    "sku": "MOB-ACC-14017",
+    "price": 8.0,
+    "details": {
+      "description": "Larger device dock",
+      "specs": {
+        "fit": "Up to 10 inch",
+        "hinge": "Dual",
+        "stable": "Weighted"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Mobile",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Celestial Tech",
+      "contactEmail": "support@celestial.tech",
+      "supportPhone": "+1-888-111-2222"
+    },
+    "reviews": [
+      {
+        "username": "Ronald Lewis",
+        "rating": 2,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2023-11-17T00:00:00"
+      },
+      {
+        "username": "Sharon Scott",
+        "rating": 5,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2019-12-27T00:00:00"
+      },
+      {
+        "username": "Shirley Green",
+        "rating": 2,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2025-05-20T00:00:00"
+      },
+      {
+        "username": "Harold Peterson",
+        "rating": 4,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2018-12-15T00:00:00"
+      },
+      {
+        "username": "Louis Johnson",
+        "rating": 3,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2025-02-07T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacff1",
+    "name": "Screen Cleaning Spray",
+    "sku": "ELE-CLN-14018",
+    "price": 5.0,
+    "details": {
+      "description": "Monitor cleaner kit",
+      "specs": {
+        "volume": "100ml",
+        "cloth": "Microfiber incl",
+        "streak": "Free"
+      }
+    },
+    "stock": 110,
+    "category": {
+      "main": "Electronics",
+      "sub": "Cleaning"
+    },
+    "vendor": {
+      "companyName": "TerraFirm Gear",
+      "contactEmail": "info@terrafirm.gear",
+      "supportPhone": "+1-888-333-4444"
+    },
+    "reviews": [
+      {
+        "username": "Danielle Smith",
+        "rating": 3,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2025-09-20T00:00:00"
+      },
+      {
+        "username": "Amber Sanders",
+        "rating": 5,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2025-05-27T00:00:00"
+      },
+      {
+        "username": "Joseph Wilson",
+        "rating": 5,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2018-02-04T00:00:00"
+      },
+      {
+        "username": "Dorothy Sanchez",
+        "rating": 4,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2022-12-07T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacff2",
+    "name": "Compressed Air Can",
+    "sku": "ELE-CLN-14019",
+    "price": 7.0,
+    "details": {
+      "description": "Dust remover spray",
+      "specs": {
+        "volume": "400ml",
+        "nozzle": "Straw",
+        "pressure": "High"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Electronics",
+      "sub": "Cleaning"
+    },
+    "vendor": {
+      "companyName": "AquaLuxe Kitchenware",
+      "contactEmail": "sales@aqualuxe.kitchen",
+      "supportPhone": "+1-888-555-6666"
+    },
+    "reviews": [
+      {
+        "username": "Walter Peterson",
+        "rating": 5,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2025-07-02T00:00:00"
+      },
+      {
+        "username": "Nathan Reyes",
+        "rating": 5,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2020-09-14T00:00:00"
+      },
+      {
+        "username": "Arthur Kelly",
+        "rating": 3,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2020-07-07T00:00:00"
+      },
+      {
+        "username": "Bruce Mendoza",
+        "rating": 1,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2025-04-02T00:00:00"
+      },
+      {
+        "username": "Shirley Nguyen",
+        "rating": 2,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2021-06-21T00:00:00"
+      },
+      {
+        "username": "Teresa Ramos",
+        "rating": 3,
+        "comment": "This is a revolutionary product. Can't imagine my life without it.",
+        "date": "2021-10-05T00:00:00"
+      },
+      {
+        "username": "Anthony Sanchez",
+        "rating": 2,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2021-11-09T00:00:00"
+      },
+      {
+        "username": "Donna White",
+        "rating": 5,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2023-02-17T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacff3",
+    "name": "Whiteboard A3",
+    "sku": "OFF-ACC-14020",
+    "price": 10.0,
+    "details": {
+      "description": "Small magnetic board",
+      "specs": {
+        "size": "30x42cm",
+        "frame": "Plastic",
+        "marker": "Included"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Office",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Momentum Active",
+      "contactEmail": "contact@momentumactive.com",
+      "supportPhone": "+1-888-777-8888"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacff4",
+    "name": "Cork Board Frame",
+    "sku": "OFF-ACC-14021",
+    "price": 9.0,
+    "details": {
+      "description": "Pin notice board",
+      "specs": {
+        "size": "30x40cm",
+        "surface": "Natural cork",
+        "frame": "Wood"
+      }
+    },
+    "stock": 55,
+    "category": {
+      "main": "Office",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "The Scholar's Press",
+      "contactEmail": "publishing@scholarspress.com",
+      "supportPhone": "+1-888-999-0000"
+    },
+    "reviews": [
+      {
+        "username": "Aaron Evans",
+        "rating": 3,
+        "comment": "Best purchase I've made this year. Absolutely fantastic!",
+        "date": "2020-03-16T00:00:00"
+      },
+      {
+        "username": "Christopher Taylor",
+        "rating": 1,
+        "comment": "Five stars! Does the job flawlessly.",
+        "date": "2024-06-11T00:00:00"
+      },
+      {
+        "username": "Keith Howard",
+        "rating": 2,
+        "comment": "Love it! It has become an essential part of my daily routine.",
+        "date": "2023-01-09T00:00:00"
+      },
+      {
+        "username": "Peter Rogers",
+        "rating": 5,
+        "comment": "I've recommended this to all my friends and family.",
+        "date": "2019-10-16T00:00:00"
+      },
+      {
+        "username": "Frances Ward",
+        "rating": 4,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2021-04-21T00:00:00"
+      },
+      {
+        "username": "Daniel White",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a cool one.",
+        "date": "2023-12-07T00:00:00"
+      },
+      {
+        "username": "Patrick Reyes",
+        "rating": 2,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2025-10-27T00:00:00"
+      },
+      {
+        "username": "Samantha Roberts",
+        "rating": 4,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it to others.",
+        "date": "2024-11-04T00:00:00"
+      },
+      {
+        "username": "Albert Ruiz",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2021-06-27T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacff5",
+    "name": "Push Pins Box",
+    "sku": "OFF-SUP-14022",
+    "price": 2.0,
+    "details": {
+      "description": "Standard map tacks",
+      "specs": {
+        "count": "100 pcs",
+        "color": "Assorted",
+        "head": "Plastic"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Office",
+      "sub": "Supplies"
+    },
+    "vendor": {
+      "companyName": "Atelier Apparel",
+      "contactEmail": "cs@atelierapparel.com",
+      "supportPhone": "+1-888-212-3232"
+    },
+    "reviews": [
+      {
+        "username": "Louis Jones",
+        "rating": 4,
+        "comment": "I had high hopes, but it didn't live up to the hype.",
+        "date": "2018-03-17T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacff6",
+    "name": "Board Magnets",
+    "sku": "OFF-ACC-14023",
+    "price": 3.0,
+    "details": {
+      "description": "Round whiteboard buttons",
+      "specs": {
+        "count": "12 pcs",
+        "diameter": "20mm",
+        "color": "Mixed"
+      }
+    },
+    "stock": 180,
+    "category": {
+      "main": "Office",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Zenith Sports Dynamics",
+      "contactEmail": "relations@zenithdynamics.sport",
+      "supportPhone": "+1-888-434-5454"
+    },
+    "reviews": [
+      {
+        "username": "David Anderson",
+        "rating": 1,
+        "comment": "The design is sleek and modern. Looks great on my desk.",
+        "date": "2025-10-08T00:00:00"
+      },
+      {
+        "username": "Matthew Thomas",
+        "rating": 5,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2024-08-15T00:00:00"
+      },
+      {
+        "username": "Sarah Martin",
+        "rating": 1,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2019-04-14T00:00:00"
+      },
+      {
+        "username": "Adam Diaz",
+        "rating": 3,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2024-08-11T00:00:00"
+      },
+      {
+        "username": "Jesse Gray",
+        "rating": 4,
+        "comment": "I'm very happy with my purchase. It's been a great addition to my collection.",
+        "date": "2022-11-22T00:00:00"
+      },
+      {
+        "username": "Steven Sanchez",
+        "rating": 5,
+        "comment": "I've recommended this to all my friends and family.",
+        "date": "2024-04-16T00:00:00"
+      },
+      {
+        "username": "Terry Cox",
+        "rating": 3,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2025-06-25T00:00:00"
+      },
+      {
+        "username": "Laura King",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a unique one.",
+        "date": "2024-03-11T00:00:00"
+      },
+      {
+        "username": "Carol Robinson",
+        "rating": 3,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2023-06-25T00:00:00"
+      },
+      {
+        "username": "Rose Castillo",
+        "rating": 4,
+        "comment": "There's a steep learning curve, but it's worth it in the end.",
+        "date": "2023-01-18T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacff7",
+    "name": "Dry Erase Markers",
+    "sku": "OFF-WRI-14024",
+    "price": 5.0,
+    "details": {
+      "description": "Whiteboard pens",
+      "specs": {
+        "pack": "4 colors",
+        "tip": "Chisel",
+        "erase": "Easy"
+      }
+    },
+    "stock": 140,
+    "category": {
+      "main": "Office",
+      "sub": "Writing"
+    },
+    "vendor": {
+      "companyName": "The Culinary Edge",
+      "contactEmail": "help@culinaryedge.co",
+      "supportPhone": "+1-888-656-7676"
+    },
+    "reviews": [
+      {
+        "username": "Justin Green",
+        "rating": 3,
+        "comment": "Average quality, nothing special to write home about.",
+        "date": "2021-04-16T00:00:00"
+      },
+      {
+        "username": "Jonathan Green",
+        "rating": 4,
+        "comment": "I'm very satisfied with this product. It's been a great experience.",
+        "date": "2022-01-15T00:00:00"
+      },
+      {
+        "username": "Timothy Clark",
+        "rating": 4,
+        "comment": "The app that comes with it is surprisingly polished and useful.",
+        "date": "2020-05-08T00:00:00"
+      },
+      {
+        "username": "Jerry Turner",
+        "rating": 1,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2023-01-04T00:00:00"
+      },
+      {
+        "username": "Julie Price",
+        "rating": 5,
+        "comment": "I'm very impressed with the quality of this product.",
+        "date": "2019-03-26T00:00:00"
+      },
+      {
+        "username": "Noah Brooks",
+        "rating": 3,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2021-09-08T00:00:00"
+      },
+      {
+        "username": "Madison Brooks",
+        "rating": 1,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2023-11-07T00:00:00"
+      },
+      {
+        "username": "Gregory Nelson",
+        "rating": 5,
+        "comment": "This product has completely streamlined my workflow.",
+        "date": "2023-07-17T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacff8",
+    "name": "Whiteboard Eraser",
+    "sku": "OFF-ACC-14025",
+    "price": 2.5,
+    "details": {
+      "description": "Magnetic board wipe",
+      "specs": {
+        "material": "Felt/Foam",
+        "shape": "Bone",
+        "magnet": "Built-in"
+      }
+    },
+    "stock": 160,
+    "category": {
+      "main": "Office",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Nexus Innovations",
+      "contactEmail": "contact@nexusinnov.com",
+      "supportPhone": "+1-888-121-2121"
+    },
+    "reviews": [
+      {
+        "username": "Johnny Hernandez",
+        "rating": 3,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2023-03-05T00:00:00"
+      },
+      {
+        "username": "Linda Garcia",
+        "rating": 5,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2019-10-17T00:00:00"
+      },
+      {
+        "username": "Timothy Clark",
+        "rating": 1,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2025-09-21T00:00:00"
+      },
+      {
+        "username": "Ashley White",
+        "rating": 5,
+        "comment": "The app that comes with it is surprisingly polished and useful.",
+        "date": "2019-05-09T00:00:00"
+      },
+      {
+        "username": "Rose Wood",
+        "rating": 4,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2018-09-11T00:00:00"
+      },
+      {
+        "username": "Martha Kelly",
+        "rating": 2,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2018-03-18T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacff9",
+    "name": "Permanent Markers",
+    "sku": "OFF-WRI-14026",
+    "price": 4.0,
+    "details": {
+      "description": "Black ink pens",
+      "specs": {
+        "count": "3 pack",
+        "tip": "Fine point",
+        "waterproof": "Yes"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Office",
+      "sub": "Writing"
+    },
+    "vendor": {
+      "companyName": "Horizon Dynamics",
+      "contactEmail": "support@horizondynamics.com",
+      "supportPhone": "+1-888-343-4343"
+    },
+    "reviews": [
+      {
+        "username": "Ann Cox",
+        "rating": 5,
+        "comment": "This is a revolutionary product. Can't imagine my life without it.",
+        "date": "2022-07-03T00:00:00"
+      },
+      {
+        "username": "Richard Thomas",
+        "rating": 2,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2019-02-18T00:00:00"
+      },
+      {
+        "username": "John Jones",
+        "rating": 2,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2025-09-01T00:00:00"
+      },
+      {
+        "username": "Donald Jackson",
+        "rating": 4,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2019-10-06T00:00:00"
+      },
+      {
+        "username": "Terry Cox",
+        "rating": 1,
+        "comment": "The feature set is impressive for this price point.",
+        "date": "2021-07-20T00:00:00"
+      },
+      {
+        "username": "Ralph Patel",
+        "rating": 2,
+        "comment": "Five stars! Does the job flawlessly.",
+        "date": "2019-04-03T00:00:00"
+      },
+      {
+        "username": "Gary Young",
+        "rating": 4,
+        "comment": "Aesthetically pleasing, but the performance is just average.",
+        "date": "2018-02-15T00:00:00"
+      },
+      {
+        "username": "Sean Brooks",
+        "rating": 5,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2018-07-02T00:00:00"
+      },
+      {
+        "username": "Kathy Foster",
+        "rating": 5,
+        "comment": "I'm very impressed with the design of this product.",
+        "date": "2025-01-22T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacffa",
+    "name": "Highlighter Set",
+    "sku": "OFF-WRI-14027",
+    "price": 3.5,
+    "details": {
+      "description": "Fluorescent markers",
+      "specs": {
+        "count": "4 pack",
+        "colors": "Y/G/P/O",
+        "tip": "Wedge"
+      }
+    },
+    "stock": 130,
+    "category": {
+      "main": "Office",
+      "sub": "Writing"
+    },
+    "vendor": {
+      "companyName": "Aurora Tech",
+      "contactEmail": "info@auroratech.io",
+      "supportPhone": "+1-888-565-6565"
+    },
+    "reviews": [
+      {
+        "username": "Lori Foster",
+        "rating": 5,
+        "comment": "I'm very happy with my purchase. It's been a great addition to my collection.",
+        "date": "2023-07-20T00:00:00"
+      },
+      {
+        "username": "Anthony Taylor",
+        "rating": 2,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2023-11-05T00:00:00"
+      },
+      {
+        "username": "Terry Bailey",
+        "rating": 3,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2020-08-15T00:00:00"
+      },
+      {
+        "username": "Douglas Edwards",
+        "rating": 4,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2024-05-01T00:00:00"
+      },
+      {
+        "username": "Sharon Robinson",
+        "rating": 5,
+        "comment": "It's a bit of a gimmick, but a fun one at that.",
+        "date": "2023-06-08T00:00:00"
+      },
+      {
+        "username": "Justin Mitchell",
+        "rating": 1,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2022-06-25T00:00:00"
+      },
+      {
+        "username": "Julie Price",
+        "rating": 5,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2018-11-28T00:00:00"
+      },
+      {
+        "username": "Eugene Jimenez",
+        "rating": 4,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2018-11-26T00:00:00"
+      },
+      {
+        "username": "Patrick Gomez",
+        "rating": 5,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2022-05-06T00:00:00"
+      },
+      {
+        "username": "Robert Garcia",
+        "rating": 1,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2020-01-12T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacffb",
+    "name": "Ballpoint Pens Black",
+    "sku": "OFF-WRI-14028",
+    "price": 2.5,
+    "details": {
+      "description": "Standard stick pens",
+      "specs": {
+        "count": "10 pack",
+        "ink": "Black",
+        "point": "1.0mm"
+      }
+    },
+    "stock": 300,
+    "category": {
+      "main": "Office",
+      "sub": "Writing"
+    },
+    "vendor": {
+      "companyName": "Silverline Goods",
+      "contactEmail": "sales@silverlinegoods.com",
+      "supportPhone": "+1-888-787-8787"
+    },
+    "reviews": [
+      {
+        "username": "Brandon Nelson",
+        "rating": 5,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2024-02-14T00:00:00"
+      },
+      {
+        "username": "Janet Cruz",
+        "rating": 5,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2019-06-14T00:00:00"
+      },
+      {
+        "username": "Austin Howard",
+        "rating": 5,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2018-08-07T00:00:00"
+      },
+      {
+        "username": "Ruth Edwards",
+        "rating": 5,
+        "comment": "This is a revolutionary product. Can't imagine my life without it.",
+        "date": "2021-07-24T00:00:00"
+      },
+      {
+        "username": "Samuel Diaz",
+        "rating": 2,
+        "comment": "I had high hopes, but it didn't live up to the hype.",
+        "date": "2025-01-25T00:00:00"
+      },
+      {
+        "username": "Katherine Mitchell",
+        "rating": 5,
+        "comment": "It broke after just a week of use. Very fragile.",
+        "date": "2024-07-13T00:00:00"
+      },
+      {
+        "username": "Douglas Murphy",
+        "rating": 4,
+        "comment": "The product is a bit of a letdown. I expected more from the description.",
+        "date": "2019-05-22T00:00:00"
+      },
+      {
+        "username": "Lauren Morales",
+        "rating": 3,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2018-10-09T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacffc",
+    "name": "Ballpoint Pens Blue",
+    "sku": "OFF-WRI-14029",
+    "price": 2.5,
+    "details": {
+      "description": "Standard stick pens",
+      "specs": {
+        "count": "10 pack",
+        "ink": "Blue",
+        "point": "1.0mm"
+      }
+    },
+    "stock": 300,
+    "category": {
+      "main": "Office",
+      "sub": "Writing"
+    },
+    "vendor": {
+      "companyName": "Phoenix United",
+      "contactEmail": "contact@phoenixunited.com",
+      "supportPhone": "+1-888-909-0909"
+    },
+    "reviews": [
+      {
+        "username": "Joan Gutierrez",
+        "rating": 5,
+        "comment": "I'm on the fence about this one. It has its pros and cons.",
+        "date": "2023-10-01T00:00:00"
+      },
+      {
+        "username": "Denise Sanders",
+        "rating": 2,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2023-11-18T00:00:00"
+      },
+      {
+        "username": "Thomas Anderson",
+        "rating": 5,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2022-02-28T00:00:00"
+      },
+      {
+        "username": "Zachary Peterson",
+        "rating": 3,
+        "comment": "The product is a bit of a novelty, but it's a unique one.",
+        "date": "2022-12-27T00:00:00"
+      },
+      {
+        "username": "Russell Rodriguez",
+        "rating": 5,
+        "comment": "Outstanding performance! It exceeded all my expectations.",
+        "date": "2018-12-10T00:00:00"
+      },
+      {
+        "username": "Dorothy Young",
+        "rating": 3,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2022-06-23T00:00:00"
+      },
+      {
+        "username": "Ethan Morales",
+        "rating": 2,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2019-12-03T00:00:00"
+      },
+      {
+        "username": "Noah Brooks",
+        "rating": 2,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2021-03-18T00:00:00"
+      },
+      {
+        "username": "Kathryn Bennett",
+        "rating": 3,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2025-12-20T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacffd",
+    "name": "HB Pencils Pack",
+    "sku": "OFF-WRI-14030",
+    "price": 2.0,
+    "details": {
+      "description": "Graphite wood pencils",
+      "specs": {
+        "count": "12 box",
+        "grade": "HB",
+        "eraser": "Tip"
+      }
+    },
+    "stock": 250,
+    "category": {
+      "main": "Office",
+      "sub": "Writing"
+    },
+    "vendor": {
+      "companyName": "Summit Supply Co.",
+      "contactEmail": "support@summitsupply.co",
+      "supportPhone": "+1-888-112-3456"
+    },
+    "reviews": [
+      {
+        "username": "William Wilson",
+        "rating": 1,
+        "comment": "Decent product but feels overpriced for what it is.",
+        "date": "2021-09-17T00:00:00"
+      },
+      {
+        "username": "Bryan Chavez",
+        "rating": 3,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2019-02-03T00:00:00"
+      },
+      {
+        "username": "Crystal Smith",
+        "rating": 5,
+        "comment": "The instructions were clear and easy to follow.",
+        "date": "2023-05-25T00:00:00"
+      },
+      {
+        "username": "Joan Cooper",
+        "rating": 4,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2022-01-12T00:00:00"
+      },
+      {
+        "username": "Kyle Reed",
+        "rating": 3,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2025-12-19T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacffe",
+    "name": "Pencil Sharpener",
+    "sku": "OFF-ACC-14031",
+    "price": 1.5,
+    "details": {
+      "description": "Manual canister sharpener",
+      "specs": {
+        "holes": "Dual",
+        "container": "Clear",
+        "blade": "Steel"
+      }
+    },
+    "stock": 180,
+    "category": {
+      "main": "Office",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Keystone Merchants",
+      "contactEmail": "info@keystonemerchants.com",
+      "supportPhone": "+1-888-223-4567"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bacfff",
+    "name": "Eraser Block White",
+    "sku": "OFF-ACC-14032",
+    "price": 1.0,
+    "details": {
+      "description": "Vinyl rubber eraser",
+      "specs": {
+        "pack": "2 pcs",
+        "dust": "Low",
+        "clean": "Non-smudge"
+      }
+    },
+    "stock": 220,
+    "category": {
+      "main": "Office",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Redwood & Oak",
+      "contactEmail": "sales@redwoodandoak.com",
+      "supportPhone": "+1-888-334-5678"
+    },
+    "reviews": [
+      {
+        "username": "Willie Ross",
+        "rating": 5,
+        "comment": "The product is a bit of a letdown. I expected better quality.",
+        "date": "2020-08-06T00:00:00"
+      },
+      {
+        "username": "Shirley Green",
+        "rating": 2,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2020-05-11T00:00:00"
+      },
+      {
+        "username": "Frances Brooks",
+        "rating": 1,
+        "comment": "The product is a bit of a disappointment. I wouldn't buy it again.",
+        "date": "2024-02-11T00:00:00"
+      },
+      {
+        "username": "Joan Reed",
+        "rating": 3,
+        "comment": "The software is a bit buggy, hoping for an update soon.",
+        "date": "2023-10-22T00:00:00"
+      },
+      {
+        "username": "Eugene Williams",
+        "rating": 4,
+        "comment": "The design is sleek and modern. Looks great on my desk.",
+        "date": "2020-03-11T00:00:00"
+      },
+      {
+        "username": "George Robinson",
+        "rating": 5,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2020-09-25T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad000",
+    "name": "Plastic Ruler 30cm",
+    "sku": "OFF-MEA-14033",
+    "price": 1.0,
+    "details": {
+      "description": "Clear straight edge",
+      "specs": {
+        "length": "30cm/12in",
+        "markings": "Black",
+        "material": "Acrylic"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Office",
+      "sub": "Measuring"
+    },
+    "vendor": {
+      "companyName": "Northstar Provisions",
+      "contactEmail": "contact@northstarprovisions.com",
+      "supportPhone": "+1-888-445-6789"
+    },
+    "reviews": [
+      {
+        "username": "Beverly Ruiz",
+        "rating": 3,
+        "comment": "I had to return the first one due to a defect, but the replacement works fine.",
+        "date": "2018-06-23T00:00:00"
+      },
+      {
+        "username": "Beverly Ruiz",
+        "rating": 1,
+        "comment": "The product is a bit heavy, making it less portable.",
+        "date": "2020-12-19T00:00:00"
+      },
+      {
+        "username": "Victoria Collins",
+        "rating": 5,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2018-05-14T00:00:00"
+      },
+      {
+        "username": "Arthur Chavez",
+        "rating": 1,
+        "comment": "It's a good entry-level option for beginners.",
+        "date": "2025-08-05T00:00:00"
+      },
+      {
+        "username": "Gary Wright",
+        "rating": 5,
+        "comment": "The product is a bit of a disappointment. I wouldn't recommend it.",
+        "date": "2020-12-05T00:00:00"
+      },
+      {
+        "username": "Keith Howard",
+        "rating": 3,
+        "comment": "The instructions were confusing, took a while to set up.",
+        "date": "2021-03-14T00:00:00"
+      },
+      {
+        "username": "Ralph Brown",
+        "rating": 5,
+        "comment": "I'm very impressed with the attention to detail.",
+        "date": "2021-04-04T00:00:00"
+      },
+      {
+        "username": "Angela Hall",
+        "rating": 2,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2022-06-03T00:00:00"
+      },
+      {
+        "username": "Emma Adams",
+        "rating": 1,
+        "comment": "The product is a bit heavy, making it less portable.",
+        "date": "2020-08-04T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad001",
+    "name": "Office Scissors",
+    "sku": "OFF-CUT-14034",
+    "price": 3.5,
+    "details": {
+      "description": "Paper cutting shears",
+      "specs": {
+        "length": "8 inch",
+        "blade": "Stainless",
+        "handle": "Plastic"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Office",
+      "sub": "Cutting"
+    },
+    "vendor": {
+      "companyName": "Tidal Wave Inc.",
+      "contactEmail": "support@tidalwaveinc.com",
+      "supportPhone": "+1-888-556-7890"
+    },
+    "reviews": [
+      {
+        "username": "Andrea Bailey",
+        "rating": 1,
+        "comment": "The performance is inconsistent. Sometimes it's great, sometimes it's not.",
+        "date": "2020-04-28T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad002",
+    "name": "Desktop Stapler",
+    "sku": "OFF-TOO-14035",
+    "price": 5.0,
+    "details": {
+      "description": "Standard office stapler",
+      "specs": {
+        "capacity": "20 sheets",
+        "load": "Top",
+        "base": "Rubber"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Office",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Ironclad Systems",
+      "contactEmail": "info@ironcladsys.com",
+      "supportPhone": "+1-888-667-8901"
+    },
+    "reviews": [
+      {
+        "username": "Lauren Rogers",
+        "rating": 4,
+        "comment": "Best purchase I've made this year. Absolutely fantastic!",
+        "date": "2020-12-16T00:00:00"
+      },
+      {
+        "username": "Robert Garcia",
+        "rating": 5,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2023-05-19T00:00:00"
+      },
+      {
+        "username": "Cheryl Kelly",
+        "rating": 3,
+        "comment": "It's a simple, no-frills product that does its job well.",
+        "date": "2022-10-05T00:00:00"
+      },
+      {
+        "username": "Juan Ross",
+        "rating": 5,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2025-03-20T00:00:00"
+      },
+      {
+        "username": "Wayne Williams",
+        "rating": 5,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2018-03-05T00:00:00"
+      },
+      {
+        "username": "Larry Nelson",
+        "rating": 3,
+        "comment": "Best purchase I've made this year. Absolutely fantastic!",
+        "date": "2023-10-08T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad003",
+    "name": "Staples Box 26/6",
+    "sku": "OFF-SUP-14036",
+    "price": 1.5,
+    "details": {
+      "description": "Stapler refill",
+      "specs": {
+        "count": "5000 pcs",
+        "size": "Standard 26/6",
+        "metal": "Zinc"
+      }
+    },
+    "stock": 300,
+    "category": {
+      "main": "Office",
+      "sub": "Supplies"
+    },
+    "vendor": {
+      "companyName": "Crimson Arrow",
+      "contactEmail": "sales@crimsonarrow.com",
+      "supportPhone": "+1-888-778-9012"
+    },
+    "reviews": [
+      {
+        "username": "Mark Clark",
+        "rating": 3,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2022-09-12T00:00:00"
+      },
+      {
+        "username": "Alexander Edwards",
+        "rating": 4,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2022-03-15T00:00:00"
+      },
+      {
+        "username": "Randy Patel",
+        "rating": 3,
+        "comment": "Good value for money. Does exactly what it promises.",
+        "date": "2025-09-28T00:00:00"
+      },
+      {
+        "username": "Kathy Davis",
+        "rating": 3,
+        "comment": "The product looks exactly like the photos online.",
+        "date": "2024-10-02T00:00:00"
+      },
+      {
+        "username": "Madison Price",
+        "rating": 1,
+        "comment": "Fantastic! I'm blown away by how good this is.",
+        "date": "2023-02-25T00:00:00"
+      },
+      {
+        "username": "Logan Foster",
+        "rating": 3,
+        "comment": "A must-have for anyone serious about quality.",
+        "date": "2020-05-02T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad004",
+    "name": "Staple Remover",
+    "sku": "OFF-TOO-14037",
+    "price": 1.0,
+    "details": {
+      "description": "Claw style extractor",
+      "specs": {
+        "jaws": "Steel",
+        "grip": "Plastic wing",
+        "lock": "No"
+      }
+    },
+    "stock": 250,
+    "category": {
+      "main": "Office",
+      "sub": "Tools"
+    },
+    "vendor": {
+      "companyName": "Blue Jay Books",
+      "contactEmail": "orders@bluejaybooks.com",
+      "supportPhone": "+1-888-889-0123"
+    },
+    "reviews": [
+      {
+        "username": "Betty Moore",
+        "rating": 1,
+        "comment": "I'm giving it four stars because there's always room for improvement.",
+        "date": "2018-11-01T00:00:00"
+      },
+      {
+        "username": "George Robinson",
+        "rating": 5,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2020-04-17T00:00:00"
+      },
+      {
+        "username": "Danielle Smith",
+        "rating": 1,
+        "comment": "The product is a bit heavy, making it less portable.",
+        "date": "2021-10-11T00:00:00"
+      },
+      {
+        "username": "Evelyn Kelly",
+        "rating": 4,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2024-02-24T00:00:00"
+      },
+      {
+        "username": "Martha Kim",
+        "rating": 4,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2019-04-06T00:00:00"
+      },
+      {
+        "username": "Emily Martin",
+        "rating": 3,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2025-09-25T00:00:00"
+      },
+      {
+        "username": "Nathan Cruz",
+        "rating": 5,
+        "comment": "Perfect for my needs. Exactly what I was looking for.",
+        "date": "2025-12-03T00:00:00"
+      },
+      {
+        "username": "Benjamin Turner",
+        "rating": 1,
+        "comment": "I've been using this for a month now and it's still going strong.",
+        "date": "2024-02-17T00:00:00"
+      },
+      {
+        "username": "Julie Price",
+        "rating": 2,
+        "comment": "Customer support was incredibly helpful with my issue.",
+        "date": "2018-05-16T00:00:00"
+      },
+      {
+        "username": "Patrick Reyes",
+        "rating": 2,
+        "comment": "Great features but the battery life is a major letdown.",
+        "date": "2022-05-16T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad005",
+    "name": "Tape Dispenser",
+    "sku": "OFF-ACC-14038",
+    "price": 4.0,
+    "details": {
+      "description": "Desk tape holder",
+      "specs": {
+        "core": "1 inch",
+        "base": "Weighted",
+        "color": "Black"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Office",
+      "sub": "Accessories"
+    },
+    "vendor": {
+      "companyName": "Golden Grain Foods",
+      "contactEmail": "support@goldengrain.com",
+      "supportPhone": "+1-888-990-1234"
+    },
+    "reviews": [
+      {
+        "username": "Louis Johnson",
+        "rating": 2,
+        "comment": "I've recommended this to all my friends and family.",
+        "date": "2021-08-18T00:00:00"
+      },
+      {
+        "username": "Gary Wright",
+        "rating": 1,
+        "comment": "The design is sleek and modern. Looks great on my desk.",
+        "date": "2020-11-01T00:00:00"
+      },
+      {
+        "username": "Deborah Clark",
+        "rating": 1,
+        "comment": "The user interface is intuitive and easy to navigate.",
+        "date": "2020-05-26T00:00:00"
+      },
+      {
+        "username": "Brandon Nelson",
+        "rating": 5,
+        "comment": "The product is a bit of a letdown. I expected better quality.",
+        "date": "2019-11-10T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad006",
+    "name": "Clear Tape Rolls",
+    "sku": "OFF-SUP-14039",
+    "price": 2.5,
+    "details": {
+      "description": "Refill tape pack",
+      "specs": {
+        "count": "3 rolls",
+        "width": "18mm",
+        "finish": "Glossy"
+      }
+    },
+    "stock": 200,
+    "category": {
+      "main": "Office",
+      "sub": "Supplies"
+    },
+    "vendor": {
+      "companyName": "Emerald City Goods",
+      "contactEmail": "contact@emeraldcitygoods.com",
+      "supportPhone": "+1-888-001-2345"
+    },
+    "reviews": [
+      {
+        "username": "Danielle Alvarez",
+        "rating": 5,
+        "comment": "I'm very happy with my purchase. It's been a great product.",
+        "date": "2020-11-18T00:00:00"
+      },
+      {
+        "username": "Walter Peterson",
+        "rating": 2,
+        "comment": "I've had this for over a year, and it's still working like new.",
+        "date": "2019-01-27T00:00:00"
+      },
+      {
+        "username": "Rose Castillo",
+        "rating": 2,
+        "comment": "A solid product that delivers on its promises.",
+        "date": "2021-04-03T00:00:00"
+      },
+      {
+        "username": "Joshua Young",
+        "rating": 5,
+        "comment": "I'm very satisfied with this product. It's been a great addition to my home.",
+        "date": "2020-02-22T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad007",
+    "name": "Packing Tape",
+    "sku": "OFF-SHI-14040",
+    "price": 2.0,
+    "details": {
+      "description": "Clear shipping tape",
+      "specs": {
+        "width": "48mm",
+        "length": "50m",
+        "noise": "Standard"
+      }
+    },
+    "stock": 180,
+    "category": {
+      "main": "Office",
+      "sub": "Shipping"
+    },
+    "vendor": {
+      "companyName": "Black Diamond Gear",
+      "contactEmail": "info@blackdiamondgear.com",
+      "supportPhone": "+1-888-111-3456"
+    },
+    "reviews": [
+      {
+        "username": "Jennifer Hernandez",
+        "rating": 3,
+        "comment": "The product is a bit flimsy. I'm worried it won't last long.",
+        "date": "2021-07-20T00:00:00"
+      },
+      {
+        "username": "Ralph Smith",
+        "rating": 3,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2019-02-02T00:00:00"
+      },
+      {
+        "username": "Martha Kim",
+        "rating": 1,
+        "comment": "It's a decent product, but the competition offers more.",
+        "date": "2021-03-14T00:00:00"
+      },
+      {
+        "username": "Philip Smith",
+        "rating": 1,
+        "comment": "Outstanding performance! It exceeded all my expectations.",
+        "date": "2024-09-12T00:00:00"
+      },
+      {
+        "username": "Nancy Thomas",
+        "rating": 1,
+        "comment": "The product is a bit of a novelty, but it's a fun one.",
+        "date": "2018-03-12T00:00:00"
+      },
+      {
+        "username": "Peter Rogers",
+        "rating": 3,
+        "comment": "It's not compatible with my other devices, which is a shame.",
+        "date": "2023-03-07T00:00:00"
+      },
+      {
+        "username": "Donald Harris",
+        "rating": 1,
+        "comment": "Could be better for the price. The features are a bit lacking.",
+        "date": "2020-04-02T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad008",
+    "name": "Glue Stick Large",
+    "sku": "OFF-ADH-14041",
+    "price": 1.5,
+    "details": {
+      "description": "Paper adhesive",
+      "specs": {
+        "weight": "20g",
+        "washable": "Yes",
+        "safe": "Non-toxic"
+      }
+    },
+    "stock": 220,
+    "category": {
+      "main": "Office",
+      "sub": "Adhesives"
+    },
+    "vendor": {
+      "companyName": "White Wolf Wares",
+      "contactEmail": "sales@whitewolfwares.com",
+      "supportPhone": "+1-888-222-4567"
+    },
+    "reviews": [
+      {
+        "username": "Kelly Stewart",
+        "rating": 5,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2024-02-26T00:00:00"
+      },
+      {
+        "username": "Virginia Cook",
+        "rating": 5,
+        "comment": "The packaging was damaged on arrival, but the product was fine.",
+        "date": "2024-09-25T00:00:00"
+      },
+      {
+        "username": "Betty Anderson",
+        "rating": 3,
+        "comment": "The product is very easy to clean and maintain.",
+        "date": "2025-04-26T00:00:00"
+      },
+      {
+        "username": "Anna Baker",
+        "rating": 2,
+        "comment": "I'm very impressed with the design of this product.",
+        "date": "2022-05-10T00:00:00"
+      },
+      {
+        "username": "Olivia Williams",
+        "rating": 2,
+        "comment": "It feels very durable and well-made. Should last a long time.",
+        "date": "2018-07-22T00:00:00"
+      },
+      {
+        "username": "Alexander Edwards",
+        "rating": 5,
+        "comment": "Love it! It has become an essential part of my daily routine.",
+        "date": "2018-09-03T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad009",
+    "name": "Liquid Glue Bottle",
+    "sku": "OFF-ADH-14042",
+    "price": 2.0,
+    "details": {
+      "description": "White craft glue",
+      "specs": {
+        "volume": "100ml",
+        "dry": "Clear",
+        "cap": "Twist"
+      }
+    },
+    "stock": 150,
+    "category": {
+      "main": "Office",
+      "sub": "Adhesives"
+    },
+    "vendor": {
+      "companyName": "Purple Finch Publishing",
+      "contactEmail": "contact@purplefinch.pub",
+      "supportPhone": "+1-888-333-5678"
+    },
+    "reviews": [
+      {
+        "username": "Christian Cooper",
+        "rating": 4,
+        "comment": "The product has a weird smell that won't go away.",
+        "date": "2025-10-07T00:00:00"
+      },
+      {
+        "username": "Logan Hughes",
+        "rating": 2,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2019-07-17T00:00:00"
+      },
+      {
+        "username": "Linda Garcia",
+        "rating": 3,
+        "comment": "I'm not sure I would buy this again, but it's been okay.",
+        "date": "2019-09-25T00:00:00"
+      },
+      {
+        "username": "Diane Murphy",
+        "rating": 5,
+        "comment": "The price is a bit high, but you get what you pay for.",
+        "date": "2022-06-22T00:00:00"
+      },
+      {
+        "username": "Brittany Myers",
+        "rating": 4,
+        "comment": "The materials used feel cheap and flimsy. I expected more.",
+        "date": "2018-06-06T00:00:00"
+      },
+      {
+        "username": "David Anderson",
+        "rating": 3,
+        "comment": "The product is a bit of a novelty, but I enjoy using it.",
+        "date": "2018-07-21T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad00a",
+    "name": "Super Glue Tube",
+    "sku": "HOM-ADH-14043",
+    "price": 1.5,
+    "details": {
+      "description": "Instant bond glue",
+      "specs": {
+        "size": "3g",
+        "type": "Gel",
+        "materials": "Multi"
+      }
+    },
+    "stock": 250,
+    "category": {
+      "main": "Home",
+      "sub": "Adhesives"
+    },
+    "vendor": {
+      "companyName": "Gray Fox Tech",
+      "contactEmail": "support@grayfoxtech.com",
+      "supportPhone": "+1-888-444-6789"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad00b",
+    "name": "Sticky Notes 3x3",
+    "sku": "OFF-SUP-14044",
+    "price": 3.0,
+    "details": {
+      "description": "Yellow memo pads",
+      "specs": {
+        "count": "4 pack",
+        "sheets": "100/pad",
+        "stick": "Standard"
+      }
+    },
+    "stock": 140,
+    "category": {
+      "main": "Office",
+      "sub": "Supplies"
+    },
+    "vendor": {
+      "companyName": "Green Turtle Gaming",
+      "contactEmail": "info@greenturtlegaming.com",
+      "supportPhone": "+1-888-555-7890"
+    },
+    "reviews": [
+      {
+        "username": "George White",
+        "rating": 5,
+        "comment": "The build quality is top-notch. Feels very premium.",
+        "date": "2019-06-24T00:00:00"
+      },
+      {
+        "username": "Joseph Martin",
+        "rating": 4,
+        "comment": "Amazing quality and lightning-fast shipping! Will buy again.",
+        "date": "2021-08-28T00:00:00"
+      },
+      {
+        "username": "Peter Morgan",
+        "rating": 1,
+        "comment": "Not worth the money. You can find better alternatives.",
+        "date": "2020-04-14T00:00:00"
+      },
+      {
+        "username": "Noah Ward",
+        "rating": 1,
+        "comment": "Outstanding performance! It exceeded all my expectations.",
+        "date": "2022-09-06T00:00:00"
+      },
+      {
+        "username": "Kathy Jones",
+        "rating": 2,
+        "comment": "The color is much nicer in person than in the pictures.",
+        "date": "2018-04-22T00:00:00"
+      },
+      {
+        "username": "Christian Gutierrez",
+        "rating": 1,
+        "comment": "The product is a bit of a letdown. I expected more from this brand.",
+        "date": "2021-01-08T00:00:00"
+      },
+      {
+        "username": "Jason Torres",
+        "rating": 1,
+        "comment": "It's a bit noisy during operation, which is a downside.",
+        "date": "2023-10-24T00:00:00"
+      },
+      {
+        "username": "Patricia Brown",
+        "rating": 4,
+        "comment": "I'm a loyal customer of this brand, and they never disappoint.",
+        "date": "2019-09-27T00:00:00"
+      },
+      {
+        "username": "Nicholas Hall",
+        "rating": 3,
+        "comment": "Not as expected, a bit disappointed with the build quality.",
+        "date": "2018-12-13T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad00c",
+    "name": "Notebook A5 Lined",
+    "sku": "OFF-PAP-14045",
+    "price": 4.0,
+    "details": {
+      "description": "Spiral journal",
+      "specs": {
+        "sheets": "80",
+        "cover": "Hard plastic",
+        "paper": "White"
+      }
+    },
+    "stock": 100,
+    "category": {
+      "main": "Office",
+      "sub": "Paper"
+    },
+    "vendor": {
+      "companyName": "Brown Bear Bistro",
+      "contactEmail": "contact@brownbearbistro.com",
+      "supportPhone": "+1-888-666-8901"
+    },
+    "reviews": [
+      {
+        "username": "Thomas Anderson",
+        "rating": 2,
+        "comment": "I'm very happy with my purchase. It's been a great value.",
+        "date": "2025-02-27T00:00:00"
+      },
+      {
+        "username": "Wayne Williams",
+        "rating": 2,
+        "comment": "Slightly smaller than I anticipated, but still works well.",
+        "date": "2018-05-11T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad00d",
+    "name": "Notebook A4 Ruled",
+    "sku": "OFF-PAP-14046",
+    "price": 5.0,
+    "details": {
+      "description": "Large writing pad",
+      "specs": {
+        "sheets": "100",
+        "holes": "4 punched",
+        "binding": "Wire"
+      }
+    },
+    "stock": 90,
+    "category": {
+      "main": "Office",
+      "sub": "Paper"
+    },
+    "vendor": {
+      "companyName": "Orange Octopus Optics",
+      "contactEmail": "sales@orangeoctopus.com",
+      "supportPhone": "+1-888-777-9012"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad00e",
+    "name": "Legal Pad Yellow",
+    "sku": "OFF-PAP-14047",
+    "price": 2.5,
+    "details": {
+      "description": "Writing tablet",
+      "specs": {
+        "size": "Letter",
+        "sheets": "50",
+        "color": "Canary"
+      }
+    },
+    "stock": 120,
+    "category": {
+      "main": "Office",
+      "sub": "Paper"
+    },
+    "vendor": {
+      "companyName": "Yellow Jacket Sports",
+      "contactEmail": "info@yellowjacketsports.com",
+      "supportPhone": "+1-888-888-0123"
+    },
+    "reviews": []
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad00f",
+    "name": "File Folders Manila",
+    "sku": "OFF-ORG-14048",
+    "price": 4.0,
+    "details": {
+      "description": "Document storage",
+      "specs": {
+        "count": "20 pack",
+        "tab": "1/3 cut",
+        "size": "Letter"
+      }
+    },
+    "stock": 80,
+    "category": {
+      "main": "Office",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Violet Vixen Vogue",
+      "contactEmail": "support@violetvixenvogue.com",
+      "supportPhone": "+1-888-999-1234"
+    },
+    "reviews": [
+      {
+        "username": "Arthur Kelly",
+        "rating": 5,
+        "comment": "I'm very satisfied with this product. It's been a great tool.",
+        "date": "2019-07-26T00:00:00"
+      },
+      {
+        "username": "Kathryn Richardson",
+        "rating": 5,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2023-08-21T00:00:00"
+      },
+      {
+        "username": "Cynthia Green",
+        "rating": 1,
+        "comment": "Impressive battery life, lasts for days on a single charge.",
+        "date": "2024-12-04T00:00:00"
+      },
+      {
+        "username": "Walter Ortiz",
+        "rating": 1,
+        "comment": "It's a bit bulky, but the performance makes up for it.",
+        "date": "2022-01-19T00:00:00"
+      },
+      {
+        "username": "Janet Reyes",
+        "rating": 4,
+        "comment": "The product is a bit heavy, making it less portable.",
+        "date": "2023-07-12T00:00:00"
+      },
+      {
+        "username": "Larry Flores",
+        "rating": 4,
+        "comment": "It's okay. Not great, not terrible. Just okay.",
+        "date": "2020-04-28T00:00:00"
+      },
+      {
+        "username": "Harold Cook",
+        "rating": 3,
+        "comment": "It gets the job done, but I wish it had more features.",
+        "date": "2022-06-13T00:00:00"
+      }
+    ]
+  },
+  {
+    "_id": "6931b8b42f8aba1457bad010",
+    "name": "Hanging File Folders",
+    "sku": "OFF-ORG-14049",
+    "price": 8.0,
+    "details": {
+      "description": "Cabinet suspension files",
+      "specs": {
+        "count": "10 pack",
+        "color": "Green",
+        "tabs": "Incl"
+      }
+    },
+    "stock": 60,
+    "category": {
+      "main": "Office",
+      "sub": "Organization"
+    },
+    "vendor": {
+      "companyName": "Ivory Elephant Imports",
+      "contactEmail": "contact@ivoryelephant.com",
+      "supportPhone": "+1-888-101-2345"
+    },
+    "reviews": []
+  }
+]

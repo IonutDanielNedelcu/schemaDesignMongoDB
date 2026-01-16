@@ -33,6 +33,14 @@ def explainQuery(collection, query, projection=None, sort=None, hint=None):
     explain = cursor.explain()
     return explain
 
+def explainAggregation(collection, pipeline):
+    db = collection.database
+    explain = db.command(
+        'explain',
+        {'aggregate': collection.name, 'pipeline': pipeline, 'cursor': {}}
+    )
+    return explain
+
 def printExplainSummary(explain):
     # Print a readable summary of explain output
     if 'executionStats' in explain:
@@ -67,4 +75,3 @@ def printExplainSummary(explain):
             if 'indexName' in inputStage:
                 print(f"    Using index: {inputStage['indexName']}")
 
-# Helper functions module ready. Import and call the functions from other modules.

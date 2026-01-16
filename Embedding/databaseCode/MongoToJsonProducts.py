@@ -33,7 +33,8 @@ def makeSerializable(value):
 
 def exportProductsToJson(batchSize=50, collectionName='products', outputDir=None, dbName=None):
 	if outputDir is None:
-		outputDir = os.path.join(os.path.dirname(__file__), 'JsonProducts')
+		repoRoot = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+		outputDir = os.path.join(repoRoot, 'sharding', 'JsonProducts')
 
 	ensureOutputDir(outputDir)
 
