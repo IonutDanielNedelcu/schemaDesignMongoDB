@@ -2,9 +2,6 @@
   "_id": "ObjectId",
   "orderId": "ObjectId",
   "productId": "ObjectId",
-  "productNameSnapshot": "String",
-  "skuSnapshot": "String",
-  "unitPriceSnapshot": "Number",
   "quantity": "Number",
-  "vendorIdSnapshot": "ObjectId"
+  "vendorId": "ObjectId"
 }
