@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def connectToMongoDB(dbName="eCommerceProjectEmbedding"):
+def connectToMongoDB(dbName="eCommerceProjectHybrid"):
     try:
         mongoUri = os.getenv("MONGO_CONNECTION_STRING")
         if not mongoUri:

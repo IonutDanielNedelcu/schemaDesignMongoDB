@@ -1,0 +1,33 @@
+{
+  "_id": "ObjectId",
+  "orderDate": "Date",
+  "total": "Number",
+  "status": "String",
+  "user": {
+    "userIdSnapshot": "ObjectId",
+    "usernameSnapshot": "String",
+    "emailSnapshot": "String"
+  },
+  "shippingDetails": {
+    "address": {
+        "street": "String",
+        "city": "String",
+        "county": "String",
+        "zipcode": "String",
+        "country": "String",
+        "fullAddress": "String"
+      },
+    "method": "String",
+    "trackingCode": "String"
+  },
+  "items": [
+    {
+      "productId": "ObjectId",
+      "productNameSnapshot": "String",
+      "quantity": "Number",
+      "unitPriceSnapshot": "Number",
+      "skuSnapshot": "String",
+      "vendorIdSnapshot": "ObjectId"
+    }
+  ]
+}

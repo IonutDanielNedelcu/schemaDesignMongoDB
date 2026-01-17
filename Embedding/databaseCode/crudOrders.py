@@ -18,12 +18,12 @@ def createOrder(order, dbName=DB_NAME_DEFAULT):
         closeConnection(client)
 
 
-def getOrderById(order_id, dbName=DB_NAME_DEFAULT):
+def getOrderById(orderId, dbName=DB_NAME_DEFAULT):
     client, db = connectToMongoDB(dbName)
     if not db:
         return None
     try:
-        return db.orders.find_one({"_id": order_id})
+        return db.orders.find_one({"_id": orderId})
     finally:
         closeConnection(client)
 
@@ -43,23 +43,23 @@ def findOrders(projection=None, skip=0, limit=100, dbName=DB_NAME_DEFAULT):
         closeConnection(client)
 
 
-def updateOrderById(order_id, update_fields, dbName=DB_NAME_DEFAULT):
+def updateOrderById(orderId, updateFields, dbName=DB_NAME_DEFAULT):
     client, db = connectToMongoDB(dbName)
     if not db:
         return 0
     try:
-        res = db.orders.update_one({"_id": order_id}, {"$set": update_fields})
+        res = db.orders.update_one({"_id": orderId}, {"$set": updateFields})
         return res.modified_count
     finally:
         closeConnection(client)
 
 
-def deleteOrderById(order_id, dbName=DB_NAME_DEFAULT):
+def deleteOrderById(orderId, dbName=DB_NAME_DEFAULT):
     client, db = connectToMongoDB(dbName)
     if not db:
         return 0
     try:
-        res = db.orders.delete_one({"_id": order_id})
+        res = db.orders.delete_one({"_id": orderId})
         return res.deleted_count
     finally:
         closeConnection(client)
@@ -81,20 +81,20 @@ def main():
         try:
             path = os.path.join(os.path.dirname(__file__), 'input.json')
             doc = loadJsonFile(path)
-            _id = createOrder(doc)
-            print('Inserted _id:', _id)
+            idInserted = createOrder(doc)
+            print('Inserted _id:', idInserted)
         except Exception as e:
             print('Invalid JSON or insert error:', e)
 
     elif choice == '2':
-        _id = input('Enter order _id: ').strip()
-        doc = getOrderById(_id)
+        idInput = input('Enter order _id: ').strip()
+        doc = getOrderById(idInput)
         print(json.dumps(doc, indent=2, default=str))
 
     elif choice == '3':
-        limit_s = input('Enter result limit (default 10): ').strip()
+        limitS = input('Enter result limit (default 10): ').strip()
         try:
-            lim = int(limit_s) if limit_s else 10
+            lim = int(limitS) if limitS else 10
         except Exception:
             lim = 10
         docs = findOrders(limit=lim)
@@ -102,18 +102,18 @@ def main():
         print(json.dumps(docs[:lim], indent=2, default=str))
 
     elif choice == '4':
-        _id = input('Enter order _id to update: ').strip()
+        idInput = input('Enter order _id to update: ').strip()
         print('Using input.json in repository for update')
         try:
             path = os.path.join(os.path.dirname(__file__), 'input.json')
             upd = loadJsonFile(path)
-            modified = updateOrderById(_id, upd)
+            modified = updateOrderById(idInput, upd)
             print('Modified count:', modified)
         except Exception as e:
             print('Invalid JSON or update error:', e)
     elif choice == '5':
-        _id = input('Enter order _id to delete: ').strip()
-        deleted = deleteOrderById(_id)
+        idInput = input('Enter order _id to delete: ').strip()
+        deleted = deleteOrderById(idInput)
         print('Deleted count:', deleted)
 
     else:

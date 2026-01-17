@@ -1,0 +1,54 @@
+{
+  "_id": "ObjectId",
+  "orderDate": "String",
+  "total": "Number",
+  "status": "String",
+  "customerSnapshot": {
+    "_id": "ObjectId",
+    "username": "String",
+    "email": "String",
+    "addresses": [
+      {
+        "street": "String",
+        "city": "String",
+        "county": "String",
+        "zipcode": "String",
+        "country": "String",
+        "fullAddress": "String"
+      }
+    ],
+    "shoppingCart": [
+      {
+        "productName": "String",
+        "sku": "String",
+        "price": "Number",
+        "quantity": "Number"
+      }
+    ]
+  },
+  "shippingDetails": {
+    "address": {
+      "street": "String",
+      "city": "String",
+      "county": "String",
+      "zipcode": "String",
+      "country": "String",
+      "fullAddress": "String"
+    },
+    "method": "String",
+    "trackingCode": "String"
+  },
+  "items": [
+    {
+      "productName": "String",
+      "sku": "String",
+      "unitPrice": "Number",
+      "quantity": "Number",
+      "vendor": {
+        "companyName": "String",
+        "contactEmail": "String",
+        "supportPhone": "String"
+      }
+    }
+  ]
+}

@@ -18,12 +18,12 @@ def createProduct(product, dbName=DB_NAME_DEFAULT):
         closeConnection(client)
 
 
-def getProductById(prod_id, dbName=DB_NAME_DEFAULT):
+def getProductById(prodId, dbName=DB_NAME_DEFAULT):
     client, db = connectToMongoDB(dbName)
     if not db:
         return None
     try:
-        return db.products.find_one({"_id": prod_id})
+        return db.products.find_one({"_id": prodId})
     finally:
         closeConnection(client)
 
@@ -43,23 +43,23 @@ def findProducts(projection=None, skip=0, limit=100, dbName=DB_NAME_DEFAULT):
         closeConnection(client)
 
 
-def updateProductById(prod_id, update_fields, dbName=DB_NAME_DEFAULT):
+def updateProductById(prodId, updateFields, dbName=DB_NAME_DEFAULT):
     client, db = connectToMongoDB(dbName)
     if not db:
         return 0
     try:
-        res = db.products.update_one({"_id": prod_id}, {"$set": update_fields})
+        res = db.products.update_one({"_id": prodId}, {"$set": updateFields})
         return res.modified_count
     finally:
         closeConnection(client)
 
 
-def deleteProductById(prod_id, dbName=DB_NAME_DEFAULT):
+def deleteProductById(prodId, dbName=DB_NAME_DEFAULT):
     client, db = connectToMongoDB(dbName)
     if not db:
         return 0
     try:
-        res = db.products.delete_one({"_id": prod_id})
+        res = db.products.delete_one({"_id": prodId})
         return res.deleted_count
     finally:
         closeConnection(client)
@@ -81,20 +81,20 @@ def main():
         try:
             path = os.path.join(os.path.dirname(__file__), 'input.json')
             doc = loadJsonFile(path)
-            _id = createProduct(doc)
-            print('Inserted _id:', _id)
+            idInserted = createProduct(doc)
+            print('Inserted _id:', idInserted)
         except Exception as e:
             print('Invalid JSON or insert error:', e)
 
     elif choice == '2':
-        _id = input('Enter product _id: ').strip()
-        doc = getProductById(_id)
+        idInput = input('Enter product _id: ').strip()
+        doc = getProductById(idInput)
         print(json.dumps(doc, indent=2, default=str))
 
     elif choice == '3':
-        limit_s = input('Enter result limit (default 10): ').strip()
+        limitS = input('Enter result limit (default 10): ').strip()
         try:
-            lim = int(limit_s) if limit_s else 10
+            lim = int(limitS) if limitS else 10
         except Exception:
             lim = 10
         docs = findProducts(limit=lim)
@@ -102,19 +102,19 @@ def main():
         print(json.dumps(docs[:lim], indent=2, default=str))
 
     elif choice == '4':
-        _id = input('Enter product _id to update: ').strip()
+        idInput = input('Enter product _id to update: ').strip()
         print('Using input.json in repository for update')
         try:
             path = os.path.join(os.path.dirname(__file__), 'input.json')
             upd = loadJsonFile(path)
-            modified = updateProductById(_id, upd)
+            modified = updateProductById(idInput, upd)
             print('Modified count:', modified)
         except Exception as e:
             print('Invalid JSON or update error:', e)
 
     elif choice == '5':
-        _id = input('Enter product _id to delete: ').strip()
-        deleted = deleteProductById(_id)
+        idInput = input('Enter product _id to delete: ').strip()
+        deleted = deleteProductById(idInput)
         print('Deleted count:', deleted)
 
     else:
