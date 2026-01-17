@@ -1,27 +1,28 @@
 # Order JSON Structure
 
-Top-level fields and types for order documents:
+Matches `collectionsStructures/ordersStructure.json`.
 
-- `_id`: string (ObjectId hex string) or ObjectId
-- `orderDate`: ISO 8601 string (e.g. `2022-06-16T20:04:22`)
-- `total`: number (float)
-- `status`: string (e.g. `Pending`, `Delivered`)
-- `customerSnapshot`: object
-  - `_id`: string/ObjectId
-  - `username`: string
-  - `email`: string
-  - `addresses`: array of address objects (see `jsonUserStructure`)
-  - `shoppingCart`: array of cart item objects
+Top-level fields and types:
+
+- `_id`: ObjectId
+- `orderDate`: Date
+- `total`: Number
+- `status`: String
+- `user`: object (user snapshot)
+  - `userIdSnapshot`: ObjectId
+  - `usernameSnapshot`: String
+  - `emailSnapshot`: String
 - `shippingDetails`: object
-  - `address`: address object
-  - `method`: string
-  - `trackingCode`: string
+  - `address`: object (street, city, county, zipcode, country, fullAddress)
+  - `method`: String
+  - `trackingCode`: String
 - `items`: array of objects
   - each item:
-    - `productName`: string
-    - `sku`: string
-    - `unitPrice`: number
-    - `quantity`: integer
-    - `vendor`: object (companyName, contactEmail, supportPhone)
+    - `productId`: ObjectId
+    - `productNameSnapshot`: String
+    - `quantity`: Number
+    - `unitPriceSnapshot`: Number
+    - `skuSnapshot`: String
+    - `vendorIdSnapshot`: ObjectId
 
-Notes: `customerSnapshot` is a denormalized snapshot of the user at order time.
+Notes: store snapshots for user and product details to preserve historical order data.

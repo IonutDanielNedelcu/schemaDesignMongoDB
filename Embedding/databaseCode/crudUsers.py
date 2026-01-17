@@ -69,7 +69,7 @@ def main():
     print("Users CLI")
     print("1) Create user")
     print("2) Get user by _id")
-    print("3) Find users (enter JSON filter)")
+    print("3) List all users")
     print("4) Update user by _id")
     print("5) Delete user by _id")
     print("6) Exit")
@@ -92,14 +92,9 @@ def main():
         print(json.dumps(doc, indent=2, default=str))
 
     elif choice == '3':
-        limitS = input('Enter result limit (default 10): ').strip()
-        try:
-            lim = int(limitS) if limitS else 10
-        except Exception:
-            lim = 10
-        docs = findUsers(limit=lim)
-        print(f'Found {len(docs)} documents (showing up to {lim})')
-        print(json.dumps(docs[:lim], indent=2, default=str))
+        docs = findUsers(limit=0)
+        print(f'Found {len(docs)} documents')
+        print(json.dumps(docs, indent=2, default=str))
 
     elif choice == '4':
         idInput = input('Enter user _id to update: ').strip()

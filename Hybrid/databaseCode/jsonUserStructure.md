@@ -21,3 +21,19 @@ Top-level fields and types:
     - `quantity`: Number
 
 Notes: adapt `shoppingCart` to store references or denormalized snapshots as needed by your application.
+# User JSON Structure
+
+Top-level fields and types for user documents:
+
+- `_id`: string (ObjectId hex string) or ObjectId
+- `username`: string
+- `email`: string
+- `fullName`: string
+- `phone`: string
+- `addresses`: array of address objects
+  - address object fields: `street`, `city`, `postalCode`, `country`, `isDefault` (boolean)
+- `createdAt`: ISO 8601 string or Date
+- `shoppingCart`: array of cart item objects
+  - cart item fields: `productId` or `sku`, `quantity`, `addedAt`
+
+

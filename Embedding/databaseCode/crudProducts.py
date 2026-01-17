@@ -69,7 +69,7 @@ def main():
     print("Products CLI")
     print("1) Create product")
     print("2) Get product by _id")
-    print("3) Find products (enter JSON filter)")
+    print("3) List all products")
     print("4) Update product by _id")
     print("5) Delete product by _id")
     print("6) Exit")
@@ -92,14 +92,9 @@ def main():
         print(json.dumps(doc, indent=2, default=str))
 
     elif choice == '3':
-        limitS = input('Enter result limit (default 10): ').strip()
-        try:
-            lim = int(limitS) if limitS else 10
-        except Exception:
-            lim = 10
-        docs = findProducts(limit=lim)
-        print(f'Found {len(docs)} documents (showing up to {lim})')
-        print(json.dumps(docs[:lim], indent=2, default=str))
+        docs = findProducts(limit=0)
+        print(f'Found {len(docs)} documents')
+        print(json.dumps(docs, indent=2, default=str))
 
     elif choice == '4':
         idInput = input('Enter product _id to update: ').strip()
