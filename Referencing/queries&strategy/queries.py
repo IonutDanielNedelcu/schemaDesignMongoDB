@@ -10,7 +10,7 @@ from indexes import (
     ordersOrderDateIdx,
     ordersStatusIdx,
     ordersCustomerEmailDate,
-    ordersItemsSku,
+    orderItemsProductId,
     ordersPendingPartial,
 )
 from datetime import datetime
@@ -133,8 +133,8 @@ if __name__ == "__main__":
         queriesIndex.append(('users', q, usersEmailUnique, {'limit': 1}))
 
         # 5. Users by zipcode (Referencing stores addresses in a separate collection)
-        addr_q = {'zipcode': 'N9F 2WT'}
-        # run the lookup on addresses collection (indexes defined on addresses.zipcode)
+        addr_q = {'zipCode': 'N9F 2WT'}
+        # run the lookup on addresses collection (indexes defined on addresses.zipCode)
         queriesNoIndex.append(('addresses', addr_q, usersAddressesZipcode, {'limit': 20}))
         queriesIndex.append(('addresses', addr_q, usersAddressesZipcode, {'limit': 20}))
 
@@ -163,9 +163,14 @@ if __name__ == "__main__":
         queriesIndex.append(('orders', q, ordersCustomerEmailDate, {'sort': sort, 'limit': 50}))
 
         # 9. Orders containing SKU (Referencing stores order items in `orderItems` collection)
-        q = {'sku': 'OFF-ACC-12497'}
-        queriesNoIndex.append(('orderItems', q, ordersItemsSku, {'limit': 50}))
-        queriesIndex.append(('orderItems', q, ordersItemsSku, {'limit': 50}))
+        skuToFind = 'OFF-ACC-12497'
+        prod = db['products'].find_one({'sku': skuToFind}, {'_id': 1})
+        if prod:
+            q = {'productId': prod.get('_id')}
+        else:
+            q = {'productId': None}
+        queriesNoIndex.append(('orderItems', q, orderItemsProductId, {'limit': 50}))
+        queriesIndex.append(('orderItems', q, orderItemsProductId, {'limit': 50}))
 
         # 10. Pending orders
         q = {'status': 'Pending'}

@@ -86,11 +86,23 @@ def ordersPipelineInefficient():
     # `items.vendor.companyName` and filter late.
     # For Referencing, order items live in `orderItems`. This pipeline
     # aggregates over `orderItems` (expecting fields: orderId, unitPriceSnapshot, quantity, vendorIdSnapshot).
+    # For Referencing, order items live in `orderItems` with fields: orderId, productId, quantity, vendorId
+    # We need to lookup product price, compute line totals, then group by vendorId.
     pipeline = [
-        {"$group": {"_id": "$vendorIdSnapshot", "totalSales": {"$sum": {"$multiply": [{"$ifNull": ["$unitPriceSnapshot", "$unitPrice"]}, {"$ifNull": ["$quantity", 0]}]}}, "orders": {"$addToSet": "$orderId"}}},
+        {"$lookup": {"from": "products", "localField": "productId", "foreignField": "_id", "as": "product"}},
+        {"$unwind": {"path": "$product", "preserveNullAndEmptyArrays": True}},
+        {"$addFields": {"lineTotal": {"$multiply": [{"$ifNull": ["$quantity", 0]}, {"$ifNull": ["$product.price", 0]}]}}},
+        {"$group": {"_id": "$vendorId", "totalSales": {"$sum": "$lineTotal"}, "orders": {"$addToSet": "$orderId"}}},
         {"$lookup": {"from": "vendors", "localField": "_id", "foreignField": "_id", "as": "vendorInfo"}},
         {"$unwind": {"path": "$vendorInfo", "preserveNullAndEmptyArrays": True}},
-        {"$project": {"vendorName": {"$ifNull": ["$vendorInfo.companyName", "(unknown)"]}, "totalSales": 1, "uniqueOrders": {"$size": {"$ifNull": ["$orders", []]}}}},
+        {"$project": {
+            "vendorId": "$_id",
+            "companyName": {"$ifNull": ["$vendorInfo.companyName", "(unknown)"]},
+            "contactEmail": {"$ifNull": ["$vendorInfo.contactEmail", None]},
+            "supportPhone": {"$ifNull": ["$vendorInfo.supportPhone", None]},
+            "totalSales": 1,
+            "uniqueOrders": {"$size": {"$ifNull": ["$orders", []]}}
+        }},
         {"$sort": {"totalSales": -1}},
         {"$match": {"totalSales": {"$gt": 1000}}},
     ]
@@ -169,11 +181,21 @@ def usersPipelineEfficient():
 def ordersPipelineEfficient():
     # Result: vendors who have generated more than 1000 in revenue
     pipeline = [
-        {"$group": {"_id": "$vendorIdSnapshot", "totalSales": {"$sum": {"$multiply": [{"$ifNull": ["$unitPriceSnapshot", "$unitPrice"]}, {"$ifNull": ["$quantity", 0]}]}}, "orders": {"$addToSet": "$orderId"}}},
+        {"$lookup": {"from": "products", "localField": "productId", "foreignField": "_id", "as": "product"}},
+        {"$unwind": {"path": "$product", "preserveNullAndEmptyArrays": True}},
+        {"$addFields": {"lineTotal": {"$multiply": [{"$ifNull": ["$quantity", 0]}, {"$ifNull": ["$product.price", 0]}]}}},
+        {"$group": {"_id": "$vendorId", "totalSales": {"$sum": "$lineTotal"}, "orders": {"$addToSet": "$orderId"}}},
         {"$match": {"totalSales": {"$gt": 1000}}},
         {"$lookup": {"from": "vendors", "localField": "_id", "foreignField": "_id", "as": "vendorInfo"}},
         {"$unwind": {"path": "$vendorInfo", "preserveNullAndEmptyArrays": True}},
-        {"$project": {"vendorName": {"$ifNull": ["$vendorInfo.companyName", "(unknown)"]}, "totalSales": 1, "uniqueOrders": {"$size": "$orders"}}},
+        {"$project": {
+            "vendorId": "$_id",
+            "companyName": {"$ifNull": ["$vendorInfo.companyName", "(unknown)"]},
+            "contactEmail": {"$ifNull": ["$vendorInfo.contactEmail", None]},
+            "supportPhone": {"$ifNull": ["$vendorInfo.supportPhone", None]},
+            "totalSales": 1,
+            "uniqueOrders": {"$size": {"$ifNull": ["$orders", []]}}
+        }},
         {"$sort": {"totalSales": -1}}
     ]
     return pipeline

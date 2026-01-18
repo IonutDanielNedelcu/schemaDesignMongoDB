@@ -20,7 +20,7 @@ ordersStatusIdx = 'ordersStatusIdx'
 ordersCustomerEmailDate = 'ordersCustomerEmailDate'
 ordersPendingPartial = 'ordersPendingPartial'
 
-ordersItemsSku = 'ordersItemsSku'
+orderItemsProductId = 'orderItemsProductId'
 
 
 def createIndexes(db):
@@ -47,14 +47,17 @@ def createIndexes(db):
     usersIndexes = [
         {
             'keys': [('email', ASCENDING)],
-            'options': {'unique': True, 'name': usersEmailUnique, 'collation': Collation('en', strength=2)},
-            'type': 'Unique & Case-insensitive'
+            # Note: cannot create a unique index on `email` when the collection is sharded
+            # on a different shard key (e.g. hashed _id). Create a non-unique, case-insensitive
+            # index here and enforce uniqueness at the application level if required.
+            'options': {'name': usersEmailUnique, 'collation': Collation('en', strength=2)},
+            'type': 'Case-insensitive (non-unique)'
         },
     ]
 
     addressesIndexes = [
         {
-            'keys': [('zipcode', ASCENDING)],
+            'keys': [('zipCode', ASCENDING)],
             'options': {'name': usersAddressesZipcode}, 
             'type': 'Single-field'
         }
@@ -109,9 +112,9 @@ def createIndexes(db):
 
     orderItemsIndexes = [
         {
-            'keys': [('sku', ASCENDING)],
-            'options': {'name': ordersItemsSku},
-            'type': 'Single-field (sku)'
+            'keys': [('productId', ASCENDING)],
+            'options': {'name': orderItemsProductId},
+            'type': 'Single-field (productId)'
         },
     ]
 

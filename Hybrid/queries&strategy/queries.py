@@ -167,7 +167,7 @@ if __name__ == "__main__":
         queriesIndex.append(('orders', q, ordersCustomerEmailDate, {'sort': sort, 'limit': 50}))
 
         # 9. Orders containing SKU (now stored as skuSnapshot in items)
-        q = {'items.skuSnapshot': 'OFF-ACC-12497'}
+        q = {'items.skuSnapshot': 'HOM-DEC-10967'}
         queriesNoIndex.append(('orders', q, ordersItemsSku, {'limit': 50}))
         queriesIndex.append(('orders', q, ordersItemsSku, {'limit': 50}))
 

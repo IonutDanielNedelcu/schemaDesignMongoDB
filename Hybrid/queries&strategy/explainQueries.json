@@ -40,7 +40,7 @@
       "executionStats": {
         "executionSuccess": true,
         "nReturned": 1,
-        "executionTimeMillis": 3,
+        "executionTimeMillis": 7,
         "totalKeysExamined": 0,
         "totalDocsExamined": 5000,
         "executionStages": {
@@ -52,7 +52,7 @@
             }
           },
           "nReturned": 1,
-          "executionTimeMillisEstimate": 3,
+          "executionTimeMillisEstimate": 6,
           "works": 5001,
           "advanced": 1,
           "needTime": 4999,
@@ -98,14 +98,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766055,
-            "i": 25
+            "t": 1768771880,
+            "i": 41
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "MvTkulQrOrQvy5Kz2nMOeCfVoN4=",
+              "base64": "bfirtCGLAjiXxj6oWNlfcqUD+Wo=",
               "subType": "00"
             }
           },
@@ -114,8 +114,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766055,
-          "i": 25
+          "t": 1768771880,
+          "i": 41
         }
       }
     }
@@ -181,7 +181,7 @@
             }
           },
           "nReturned": 656,
-          "executionTimeMillisEstimate": 2,
+          "executionTimeMillisEstimate": 4,
           "works": 5001,
           "advanced": 656,
           "needTime": 4344,
@@ -229,14 +229,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766055,
-            "i": 27
+            "t": 1768771880,
+            "i": 43
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "MvTkulQrOrQvy5Kz2nMOeCfVoN4=",
+              "base64": "bfirtCGLAjiXxj6oWNlfcqUD+Wo=",
               "subType": "00"
             }
           },
@@ -245,8 +245,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766055,
-          "i": 27
+          "t": 1768771880,
+          "i": 43
         }
       }
     }
@@ -409,14 +409,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766055,
-            "i": 27
+            "t": 1768771880,
+            "i": 44
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "MvTkulQrOrQvy5Kz2nMOeCfVoN4=",
+              "base64": "bfirtCGLAjiXxj6oWNlfcqUD+Wo=",
               "subType": "00"
             }
           },
@@ -425,8 +425,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766055,
-          "i": 27
+          "t": 1768771880,
+          "i": 44
         }
       }
     }
@@ -472,7 +472,7 @@
       "executionStats": {
         "executionSuccess": true,
         "nReturned": 1,
-        "executionTimeMillis": 0,
+        "executionTimeMillis": 1,
         "totalKeysExamined": 0,
         "totalDocsExamined": 1000,
         "executionStages": {
@@ -530,14 +530,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766056,
-            "i": 1
+            "t": 1768771880,
+            "i": 45
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
+              "base64": "bfirtCGLAjiXxj6oWNlfcqUD+Wo=",
               "subType": "00"
             }
           },
@@ -546,8 +546,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766056,
-          "i": 1
+          "t": 1768771880,
+          "i": 45
         }
       }
     }
@@ -605,7 +605,7 @@
             }
           },
           "nReturned": 1,
-          "executionTimeMillisEstimate": 1,
+          "executionTimeMillisEstimate": 0,
           "works": 1001,
           "advanced": 1,
           "needTime": 999,
@@ -651,14 +651,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766056,
-            "i": 3
+            "t": 1768771881,
+            "i": 2
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
+              "base64": "ibd811J0aKJ2xJjzg5I704dKwcs=",
               "subType": "00"
             }
           },
@@ -667,8 +667,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766056,
-          "i": 3
+          "t": 1768771881,
+          "i": 2
         }
       }
     }
@@ -800,7 +800,7 @@
               ]
             },
             "nReturned": 1449,
-            "executionTimeMillisEstimate": 5,
+            "executionTimeMillisEstimate": 4,
             "works": 10001,
             "advanced": 1449,
             "needTime": 8551,
@@ -857,14 +857,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766056,
-            "i": 7
+            "t": 1768771881,
+            "i": 9
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
+              "base64": "ibd811J0aKJ2xJjzg5I704dKwcs=",
               "subType": "00"
             }
           },
@@ -873,8 +873,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766056,
-          "i": 7
+          "t": 1768771881,
+          "i": 9
         }
       }
     }
@@ -978,14 +978,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766056,
-            "i": 10
+            "t": 1768771881,
+            "i": 13
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
+              "base64": "ibd811J0aKJ2xJjzg5I704dKwcs=",
               "subType": "00"
             }
           },
@@ -994,8 +994,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766056,
-          "i": 10
+          "t": 1768771881,
+          "i": 13
         }
       }
     }
@@ -1056,7 +1056,7 @@
           "isCached": false,
           "stage": "SORT",
           "nReturned": 21,
-          "executionTimeMillisEstimate": 6,
+          "executionTimeMillisEstimate": 7,
           "works": 10023,
           "advanced": 21,
           "needTime": 10001,
@@ -1081,7 +1081,7 @@
               }
             },
             "nReturned": 21,
-            "executionTimeMillisEstimate": 6,
+            "executionTimeMillisEstimate": 7,
             "works": 10001,
             "advanced": 21,
             "needTime": 9979,
@@ -1131,14 +1131,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766056,
-            "i": 16
+            "t": 1768771881,
+            "i": 14
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
+              "base64": "ibd811J0aKJ2xJjzg5I704dKwcs=",
               "subType": "00"
             }
           },
@@ -1147,8 +1147,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766056,
-          "i": 16
+          "t": 1768771881,
+          "i": 14
         }
       }
     }
@@ -1159,7 +1159,7 @@
     "mode": "noIndexes",
     "indexHint": "none",
     "query": {
-      "items.skuSnapshot": "OFF-ACC-12497"
+      "items.skuSnapshot": "HOM-DEC-10967"
     },
     "explain": {
       "explainVersion": "1",
@@ -1167,7 +1167,7 @@
         "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
           "items.skuSnapshot": {
-            "$eq": "OFF-ACC-12497"
+            "$eq": "HOM-DEC-10967"
           }
         },
         "indexFilterSet": false,
@@ -1184,7 +1184,7 @@
           "stage": "COLLSCAN",
           "filter": {
             "items.skuSnapshot": {
-              "$eq": "OFF-ACC-12497"
+              "$eq": "HOM-DEC-10967"
             }
           },
           "direction": "forward"
@@ -1193,8 +1193,8 @@
       },
       "executionStats": {
         "executionSuccess": true,
-        "nReturned": 12,
-        "executionTimeMillis": 21,
+        "nReturned": 9,
+        "executionTimeMillis": 20,
         "totalKeysExamined": 0,
         "totalDocsExamined": 10000,
         "executionStages": {
@@ -1202,14 +1202,14 @@
           "stage": "COLLSCAN",
           "filter": {
             "items.skuSnapshot": {
-              "$eq": "OFF-ACC-12497"
+              "$eq": "HOM-DEC-10967"
             }
           },
-          "nReturned": 12,
+          "nReturned": 9,
           "executionTimeMillisEstimate": 20,
           "works": 10001,
-          "advanced": 12,
-          "needTime": 9988,
+          "advanced": 9,
+          "needTime": 9991,
           "needYield": 0,
           "saveState": 1,
           "restoreState": 1,
@@ -1223,7 +1223,7 @@
       "command": {
         "find": "orders",
         "filter": {
-          "items.skuSnapshot": "OFF-ACC-12497"
+          "items.skuSnapshot": "HOM-DEC-10967"
         },
         "hint": {
           "$natural": 1
@@ -1252,14 +1252,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766056,
-            "i": 21
+            "t": 1768771881,
+            "i": 17
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
+              "base64": "ibd811J0aKJ2xJjzg5I704dKwcs=",
               "subType": "00"
             }
           },
@@ -1268,8 +1268,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766056,
-          "i": 21
+          "t": 1768771881,
+          "i": 17
         }
       }
     }
@@ -1327,7 +1327,7 @@
             }
           },
           "nReturned": 1955,
-          "executionTimeMillisEstimate": 6,
+          "executionTimeMillisEstimate": 7,
           "works": 10001,
           "advanced": 1955,
           "needTime": 8045,
@@ -1373,14 +1373,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766056,
-            "i": 21
+            "t": 1768771881,
+            "i": 20
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
+              "base64": "ibd811J0aKJ2xJjzg5I704dKwcs=",
               "subType": "00"
             }
           },
@@ -1389,8 +1389,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766056,
-          "i": 21
+          "t": 1768771881,
+          "i": 20
         }
       }
     }
@@ -1536,14 +1536,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766058,
+            "t": 1768771883,
             "i": 42
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "a22NzEsQUx/5To+oFZlcImnDj+I=",
+              "base64": "ON+kDKYp2v3sqR5G2b0H+2rt6J8=",
               "subType": "00"
             }
           },
@@ -1552,7 +1552,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766058,
+          "t": 1768771883,
           "i": 42
         }
       }
@@ -1705,14 +1705,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766058,
-            "i": 42
+            "t": 1768771883,
+            "i": 45
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "a22NzEsQUx/5To+oFZlcImnDj+I=",
+              "base64": "ON+kDKYp2v3sqR5G2b0H+2rt6J8=",
               "subType": "00"
             }
           },
@@ -1721,8 +1721,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766058,
-          "i": 42
+          "t": 1768771883,
+          "i": 45
         }
       }
     }
@@ -1839,7 +1839,7 @@
           "isCached": false,
           "stage": "PROJECTION_DEFAULT",
           "nReturned": 57,
-          "executionTimeMillisEstimate": 0,
+          "executionTimeMillisEstimate": 1,
           "works": 176,
           "advanced": 57,
           "needTime": 118,
@@ -1855,7 +1855,7 @@
           "inputStage": {
             "stage": "SORT",
             "nReturned": 57,
-            "executionTimeMillisEstimate": 0,
+            "executionTimeMillisEstimate": 1,
             "works": 176,
             "advanced": 57,
             "needTime": 118,
@@ -1877,7 +1877,7 @@
             "inputStage": {
               "stage": "TEXT_MATCH",
               "nReturned": 57,
-              "executionTimeMillisEstimate": 0,
+              "executionTimeMillisEstimate": 1,
               "works": 118,
               "advanced": 57,
               "needTime": 60,
@@ -1901,7 +1901,7 @@
               "inputStage": {
                 "stage": "TEXT_OR",
                 "nReturned": 57,
-                "executionTimeMillisEstimate": 0,
+                "executionTimeMillisEstimate": 1,
                 "works": 118,
                 "advanced": 57,
                 "needTime": 60,
@@ -2016,14 +2016,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766058,
-            "i": 47
+            "t": 1768771883,
+            "i": 51
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "a22NzEsQUx/5To+oFZlcImnDj+I=",
+              "base64": "ON+kDKYp2v3sqR5G2b0H+2rt6J8=",
               "subType": "00"
             }
           },
@@ -2032,8 +2032,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766058,
-          "i": 47
+          "t": 1768771883,
+          "i": 51
         }
       }
     }
@@ -2136,7 +2136,7 @@
           "inputStage": {
             "stage": "IXSCAN",
             "nReturned": 1000,
-            "executionTimeMillisEstimate": 0,
+            "executionTimeMillisEstimate": 1,
             "works": 1001,
             "advanced": 1000,
             "needTime": 0,
@@ -2213,14 +2213,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766059,
-            "i": 2
+            "t": 1768771883,
+            "i": 57
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
+              "base64": "ON+kDKYp2v3sqR5G2b0H+2rt6J8=",
               "subType": "00"
             }
           },
@@ -2229,8 +2229,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766059,
-          "i": 2
+          "t": 1768771883,
+          "i": 57
         }
       }
     }
@@ -2380,14 +2380,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766059,
-            "i": 10
+            "t": 1768771883,
+            "i": 61
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
+              "base64": "ON+kDKYp2v3sqR5G2b0H+2rt6J8=",
               "subType": "00"
             }
           },
@@ -2396,8 +2396,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766059,
-          "i": 10
+          "t": 1768771883,
+          "i": 61
         }
       }
     }
@@ -2485,7 +2485,7 @@
           "isCached": false,
           "stage": "FETCH",
           "nReturned": 1449,
-          "executionTimeMillisEstimate": 3,
+          "executionTimeMillisEstimate": 2,
           "works": 1450,
           "advanced": 1449,
           "needTime": 0,
@@ -2498,7 +2498,7 @@
           "inputStage": {
             "stage": "IXSCAN",
             "nReturned": 1449,
-            "executionTimeMillisEstimate": 2,
+            "executionTimeMillisEstimate": 0,
             "works": 1450,
             "advanced": 1449,
             "needTime": 0,
@@ -2573,14 +2573,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766059,
-            "i": 11
+            "t": 1768771883,
+            "i": 67
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
+              "base64": "ON+kDKYp2v3sqR5G2b0H+2rt6J8=",
               "subType": "00"
             }
           },
@@ -2589,8 +2589,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766059,
-          "i": 11
+          "t": 1768771883,
+          "i": 67
         }
       }
     }
@@ -2658,7 +2658,7 @@
           "isCached": false,
           "stage": "FETCH",
           "nReturned": 1997,
-          "executionTimeMillisEstimate": 0,
+          "executionTimeMillisEstimate": 3,
           "works": 1998,
           "advanced": 1997,
           "needTime": 0,
@@ -2671,7 +2671,7 @@
           "inputStage": {
             "stage": "IXSCAN",
             "nReturned": 1997,
-            "executionTimeMillisEstimate": 0,
+            "executionTimeMillisEstimate": 1,
             "works": 1998,
             "advanced": 1997,
             "needTime": 0,
@@ -2736,14 +2736,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766059,
-            "i": 15
+            "t": 1768771884,
+            "i": 3
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
+              "base64": "RqVjPp7wTo4EVRoN1tIaS+v3gj8=",
               "subType": "00"
             }
           },
@@ -2752,8 +2752,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766059,
-          "i": 15
+          "t": 1768771884,
+          "i": 3
         }
       }
     }
@@ -2912,14 +2912,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766059,
-            "i": 15
+            "t": 1768771884,
+            "i": 6
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
+              "base64": "RqVjPp7wTo4EVRoN1tIaS+v3gj8=",
               "subType": "00"
             }
           },
@@ -2928,8 +2928,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766059,
-          "i": 15
+          "t": 1768771884,
+          "i": 6
         }
       }
     }
@@ -2940,7 +2940,7 @@
     "mode": "withIndexes",
     "indexHint": "ordersItemsSku",
     "query": {
-      "items.skuSnapshot": "OFF-ACC-12497"
+      "items.skuSnapshot": "HOM-DEC-10967"
     },
     "explain": {
       "explainVersion": "1",
@@ -2948,7 +2948,7 @@
         "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
           "items.skuSnapshot": {
-            "$eq": "OFF-ACC-12497"
+            "$eq": "HOM-DEC-10967"
           }
         },
         "indexFilterSet": false,
@@ -2982,7 +2982,7 @@
             "direction": "forward",
             "indexBounds": {
               "items.skuSnapshot": [
-                "[\"OFF-ACC-12497\", \"OFF-ACC-12497\"]"
+                "[\"HOM-DEC-10967\", \"HOM-DEC-10967\"]"
               ]
             }
           }
@@ -2991,30 +2991,30 @@
       },
       "executionStats": {
         "executionSuccess": true,
-        "nReturned": 12,
+        "nReturned": 9,
         "executionTimeMillis": 0,
-        "totalKeysExamined": 12,
-        "totalDocsExamined": 12,
+        "totalKeysExamined": 9,
+        "totalDocsExamined": 9,
         "executionStages": {
           "isCached": false,
           "stage": "FETCH",
-          "nReturned": 12,
+          "nReturned": 9,
           "executionTimeMillisEstimate": 0,
-          "works": 13,
-          "advanced": 12,
+          "works": 10,
+          "advanced": 9,
           "needTime": 0,
           "needYield": 0,
           "saveState": 0,
           "restoreState": 0,
           "isEOF": 1,
-          "docsExamined": 12,
+          "docsExamined": 9,
           "alreadyHasObj": 0,
           "inputStage": {
             "stage": "IXSCAN",
-            "nReturned": 12,
+            "nReturned": 9,
             "executionTimeMillisEstimate": 0,
-            "works": 13,
-            "advanced": 12,
+            "works": 10,
+            "advanced": 9,
             "needTime": 0,
             "needYield": 0,
             "saveState": 0,
@@ -3037,12 +3037,12 @@
             "direction": "forward",
             "indexBounds": {
               "items.skuSnapshot": [
-                "[\"OFF-ACC-12497\", \"OFF-ACC-12497\"]"
+                "[\"HOM-DEC-10967\", \"HOM-DEC-10967\"]"
               ]
             },
-            "keysExamined": 12,
+            "keysExamined": 9,
             "seeks": 1,
-            "dupsTested": 12,
+            "dupsTested": 9,
             "dupsDropped": 0
           }
         },
@@ -3052,7 +3052,7 @@
       "command": {
         "find": "orders",
         "filter": {
-          "items.skuSnapshot": "OFF-ACC-12497"
+          "items.skuSnapshot": "HOM-DEC-10967"
         },
         "hint": "ordersItemsSku",
         "$db": "eCommerceProjectHybrid"
@@ -3079,14 +3079,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766059,
-            "i": 35
+            "t": 1768771884,
+            "i": 6
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
+              "base64": "RqVjPp7wTo4EVRoN1tIaS+v3gj8=",
               "subType": "00"
             }
           },
@@ -3095,8 +3095,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766059,
-          "i": 35
+          "t": 1768771884,
+          "i": 6
         }
       }
     }
@@ -3164,7 +3164,7 @@
           "isCached": false,
           "stage": "FETCH",
           "nReturned": 1955,
-          "executionTimeMillisEstimate": 3,
+          "executionTimeMillisEstimate": 0,
           "works": 1956,
           "advanced": 1955,
           "needTime": 0,
@@ -3177,7 +3177,7 @@
           "inputStage": {
             "stage": "IXSCAN",
             "nReturned": 1955,
-            "executionTimeMillisEstimate": 2,
+            "executionTimeMillisEstimate": 0,
             "works": 1956,
             "advanced": 1955,
             "needTime": 0,
@@ -3242,14 +3242,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768766059,
-            "i": 35
+            "t": 1768771884,
+            "i": 11
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
+              "base64": "RqVjPp7wTo4EVRoN1tIaS+v3gj8=",
               "subType": "00"
             }
           },
@@ -3258,8 +3258,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768766059,
-          "i": 35
+          "t": 1768771884,
+          "i": 11
         }
       }
     }

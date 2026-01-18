@@ -141,7 +141,7 @@ if __name__ == "__main__":
         queriesIndex.append(('orders', q, ordersCustomerEmailDate, {'sort': sort, 'limit': 50}))
 
         # 9. Orders containing SKU
-        q = {'items.sku': 'OFF-ACC-12497'}
+        q = {'items.sku': 'HOM-DEC-10967'}
         queriesNoIndex.append(('orders', q, ordersItemsSku, {'limit': 50}))
         queriesIndex.append(('orders', q, ordersItemsSku, {'limit': 50}))
 

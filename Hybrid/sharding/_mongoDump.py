@@ -50,14 +50,14 @@ def mongodump(mongoUri, dbName, collectionName, outDir, confirm=False):
 config = {
     # Source (sharded cluster mongos)
     "sourceUri": os.getenv("MONGO_CONNECTION_STRING"),
-    "sourceDb": "eCommerceProjectEmbedding",
-    "sourceCollection": "orders",
+    "sourceDb": "eCommerceProjectHybrid",
+    "sourceCollection": "vendors",
 
     # Dump folder
-    "outDir": "./Embedding/sharding/dumpOrders",
+    "outDir": "./Hybrid/sharding/dumpVendors",
 
     # Safety: dry-run unless confirm True
-    "confirm": False,
+    "confirm": True,
 }
 
 
