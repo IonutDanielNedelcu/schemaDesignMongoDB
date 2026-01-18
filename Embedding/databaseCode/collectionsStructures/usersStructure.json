@@ -1,0 +1,23 @@
+{
+  "_id": "ObjectId",
+  "username": "String",
+  "email": "String",
+  "addresses": [
+    {
+      "street": "String",
+      "city": "String",
+      "county": "String",
+      "zipcode": "String",
+      "country": "String",
+      "fullAddress": "String"
+    }
+  ],
+  "shoppingCart": [
+    {
+      "productName": "String",
+      "sku": "String",
+      "price": "Number",
+      "quantity": "Number"
+    }
+  ]
+}

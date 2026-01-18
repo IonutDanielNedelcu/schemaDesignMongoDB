@@ -1,10 +1,10 @@
 import json
 import os
-from .connection import connectToMongoDB, closeConnection
-from .jsonLoader import loadJsonFile
+from pathlib import Path
+from connection import connectToMongoDB, closeConnection
 
 
-DB_NAME_DEFAULT = "eCommerceProjectEmbedding"
+DB_NAME_DEFAULT = "eCommerceProjectHybrid"
 
 
 def createOrder(order, dbName=DB_NAME_DEFAULT):
@@ -28,17 +28,12 @@ def getOrderById(orderId, dbName=DB_NAME_DEFAULT):
         closeConnection(client)
 
 
-def findOrders(projection=None, skip=0, limit=100, dbName=DB_NAME_DEFAULT):
+def findOrders(dbName=DB_NAME_DEFAULT):
     client, db = connectToMongoDB(dbName)
     if not db:
         return []
     try:
-        cursor = db.orders.find({}, projection)
-        if skip:
-            cursor = cursor.skip(skip)
-        if limit:
-            cursor = cursor.limit(limit)
-        return list(cursor)
+        return list(db.orders.find({}))
     finally:
         closeConnection(client)
 
@@ -79,8 +74,9 @@ def main():
     if choice == '1':
         print('Using input.json in repository')
         try:
-            path = os.path.join(os.path.dirname(__file__), 'input.json')
-            doc = loadJsonFile(path)
+            path = Path(__file__).parent / 'input.json'
+            with open(path, 'r', encoding='utf-8') as f:
+                doc = json.load(f)
             idInserted = createOrder(doc)
             print('Inserted _id:', idInserted)
         except Exception as e:
@@ -92,7 +88,7 @@ def main():
         print(json.dumps(doc, indent=2, default=str))
 
     elif choice == '3':
-        docs = findOrders(limit=0)
+        docs = findOrders()
         print(f'Found {len(docs)} documents')
         print(json.dumps(docs, indent=2, default=str))
 
@@ -100,12 +96,14 @@ def main():
         idInput = input('Enter order _id to update: ').strip()
         print('Using input.json in repository for update')
         try:
-            path = os.path.join(os.path.dirname(__file__), 'input.json')
-            upd = loadJsonFile(path)
+            path = Path(__file__).parent / 'input.json'
+            with open(path, 'r', encoding='utf-8') as f:
+                upd = json.load(f)
             modified = updateOrderById(idInput, upd)
             print('Modified count:', modified)
         except Exception as e:
             print('Invalid JSON or update error:', e)
+
     elif choice == '5':
         idInput = input('Enter order _id to delete: ').strip()
         deleted = deleteOrderById(idInput)

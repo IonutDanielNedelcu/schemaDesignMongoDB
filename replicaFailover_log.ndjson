@@ -1,4 +1,0 @@
-{"type": "start_test", "repl": "rs1", "seeds": ["localhost:27111", "localhost:27112", "localhost:27113"], "mongoUri": "mongodb://localhost:27111,localhost:27112,localhost:27113/?replicaSet=rs1", "outputFile": "D:\\University\\An3Sem1\\BDNV\\schemaDesignMongoDB\\replicaFailover_log.ndjson", "timestamp": "2026-01-15T17:02:38.223004+00:00"}
-{"type": "initial_write", "success": false, "error": "No replica set primary detected within 30s", "timestamp": "2026-01-15T17:03:08.250148+00:00"}
-{"type": "start_test", "repl": "rs0", "seeds": ["localhost:27017", "localhost:27018", "localhost:27019"], "mongoUri": "mongodb://localhost:27017,localhost:27018,localhost:27019/?replicaSet=rs0", "outputFile": "D:\\University\\An3Sem1\\BDNV\\schemaDesignMongoDB\\replicaFailover_log.ndjson", "timestamp": "2026-01-15T17:47:30.354581+00:00"}
-{"type": "initial_write", "success": false, "error": "No replica set primary detected within 30s", "timestamp": "2026-01-15T17:48:00.411583+00:00"}

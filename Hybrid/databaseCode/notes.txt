@@ -37,10 +37,10 @@ Items:
 
 # Collection List:
 
-1. CATEGORIES
-2. VENDORS 
-3. USERS without shopping cart (null - empty array)
-4. PRODUCTS -> then go back to USERS and update shopping cart with corresponding products
+1. VENDORS 
+2. CATEGORIES
+4. PRODUCTS
+3. USERS
 5. ORDERS
 
 

@@ -1,3 +1,4 @@
+
 # Product JSON Structure
 
 Matches `collectionsStructures/productsStructure.json`.
@@ -14,13 +15,13 @@ Top-level fields and types:
 - `subCategoryId`: ObjectId
 - `details`: object
   - `description`: String
-  - `specs`: object (free-form product specifications)
+  - `specs`: object (see note in JSON: copy specs from database products)
 - `reviews`: array of objects
-  - each review:
+  - each review contains:
     - `userId`: ObjectId
     - `username`: String
     - `rating`: Number
     - `comment`: String
     - `date`: Date
 
-Notes: `specs` should mirror product specification keys from your source data; `vendorId` references `vendors`.
+Note: `specs` should reflect the product specification fields used in your product documents.
