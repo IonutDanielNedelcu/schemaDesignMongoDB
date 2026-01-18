@@ -6,7 +6,7 @@ import os
 import json
 
 
-EXPLAIN_FILE = './Embedding/queries&strategy/explainPipelines.json'
+EXPLAIN_FILE = './Hybrid/queries&strategy/explainPipelines.json'
 
 
 def saveExplain(record):
@@ -55,8 +55,8 @@ def usersPipelineInefficient():
         {"$unwind": {"path": "$shoppingCart", "preserveNullAndEmptyArrays": True}},
         {"$lookup": {
             "from": "products",
-            "localField": "shoppingCart.sku",
-            "foreignField": "sku",
+            "localField": "shoppingCart.productId",
+            "foreignField": "_id",
             "as": "productInfo"
         }},
         {"$unwind": {"path": "$productInfo", "preserveNullAndEmptyArrays": True}},
@@ -75,8 +75,12 @@ def ordersPipelineInefficient():
     # `items.vendor.companyName` and filter late.
     pipeline = [
         {"$unwind": {"path": "$items", "preserveNullAndEmptyArrays": True}},
-        {"$group": {"_id": "$items.vendor.companyName", "totalSales": {"$sum": {"$multiply": ["$items.unitPrice", "$items.quantity"]}}, "orders": {"$addToSet": "$_id"}}},
-        {"$project": {"totalSales": 1, "uniqueOrders": {"$size": {"$ifNull": ["$orders", []]}}}},
+        # Group by vendorIdSnapshot (canonical schema) and sum sales
+        {"$group": {"_id": "$items.vendorIdSnapshot", "totalSales": {"$sum": {"$multiply": [{"$ifNull": ["$items.unitPriceSnapshot", "$items.unitPrice"]}, {"$ifNull": ["$items.quantity", 0]}]}}, "orders": {"$addToSet": "$_id"}}},
+        # Lookup vendor info to get companyName
+        {"$lookup": {"from": "vendors", "localField": "_id", "foreignField": "_id", "as": "vendorInfo"}},
+        {"$unwind": {"path": "$vendorInfo", "preserveNullAndEmptyArrays": True}},
+        {"$project": {"vendorName": {"$ifNull": ["$vendorInfo.companyName", "(unknown)"]}, "totalSales": 1, "uniqueOrders": {"$size": {"$ifNull": ["$orders", []]}}}},
         {"$sort": {"totalSales": -1}},
         {"$match": {"totalSales": {"$gt": 1000}}},   # late match
     ]
@@ -129,8 +133,8 @@ def usersPipelineEfficient():
         # 3. LOOKUP
         {"$lookup": {
             "from": "products",
-            "localField": "shoppingCart.sku",
-            "foreignField": "sku",
+            "localField": "shoppingCart.productId",
+            "foreignField": "_id",
             "as": "productInfo"
         }},
 
@@ -166,36 +170,16 @@ def usersPipelineEfficient():
 def ordersPipelineEfficient():
     # Result: vendors who have generated more than 1000 in revenue
     pipeline = [
-        # 1. UNWIND
-        # Optimization: Removed "preserveNullAndEmptyArrays"
         {"$unwind": "$items"},
-
-        # 2. GROUP
-        # We aggregate the data. We must use $addToSet to handle the 
-        # "Unique Orders" logic correctly.
         {"$group": {
-            "_id": "$items.vendor.companyName",
-            "totalSales": {
-                "$sum": {"$multiply": ["$items.unitPrice", "$items.quantity"]}
-            },
-            # We collect IDs temporarily to count them in the next step
+            "_id": "$items.vendorIdSnapshot",
+            "totalSales": {"$sum": {"$multiply": [{"$ifNull": ["$items.unitPriceSnapshot", "$items.unitPrice"]}, {"$ifNull": ["$items.quantity", 0]}]}},
             "orders": {"$addToSet": "$_id"}
         }},
-
-        # 3. MATCH
-        # We apply the filter immediately after grouping
         {"$match": {"totalSales": {"$gt": 1000}}},
-
-        # 4. PROJECT
-        # Now we calculate the size of the "orders" array.
-        # Doing this after the match means we only do it for the "winners".
-        {"$project": {
-            "totalSales": 1,
-            "uniqueOrders": {"$size": "$orders"}
-        }},
-
-        # 5. SORT
-        # We sort only the filtered list
+        {"$lookup": {"from": "vendors", "localField": "_id", "foreignField": "_id", "as": "vendorInfo"}},
+        {"$unwind": {"path": "$vendorInfo", "preserveNullAndEmptyArrays": True}},
+        {"$project": {"vendorName": {"$ifNull": ["$vendorInfo.companyName", "(unknown)"]}, "totalSales": 1, "uniqueOrders": {"$size": "$orders"}}},
         {"$sort": {"totalSales": -1}}
     ]
     return pipeline
@@ -339,8 +323,6 @@ def runOptimizedPipelines(db):
         'resultCount': len(results),
         'explain': explain
     })
-
-
 
 def main():
     client, db = connectToMongoDB()

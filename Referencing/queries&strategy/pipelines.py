@@ -6,7 +6,7 @@ import os
 import json
 
 
-EXPLAIN_FILE = './Embedding/queries&strategy/explainPipelines.json'
+EXPLAIN_FILE = './Referencing/queries&strategy/explainPipelines.json'
 
 
 def saveExplain(record):
@@ -38,12 +38,15 @@ def saveExplain(record):
 
 def productsPipelineInefficient():
     # Result: ranked list of top-rated products based on customer reviews.
+    # For Referencing, reviews are stored in a separate `reviews` collection.
+    # This pipeline performs a lookup from `reviews` and aggregates ratings.
     pipeline = [
-        {"$unwind": {"path": "$reviews", "preserveNullAndEmptyArrays": True}},
-        {"$group": {"_id": "$_id", "avgRating": {"$avg": "$reviews.rating"}, "name": {"$first": "$name"}, "sku": {"$first": "$sku"}, "reviewsCount": {"$sum": 1}}},
+        {"$lookup": {"from": "reviews", "localField": "_id", "foreignField": "productId", "as": "reviewsDocs"}},
+        {"$unwind": {"path": "$reviewsDocs", "preserveNullAndEmptyArrays": True}},
+        {"$group": {"_id": "$_id", "avgRating": {"$avg": "$reviewsDocs.rating"}, "name": {"$first": "$name"}, "sku": {"$first": "$sku"}, "reviewsCount": {"$sum": {"$cond": [{"$ifNull": ["$reviewsDocs._id", False]}, 1, 0]}}}},
         {"$project": {"name": 1, "sku": 1, "avgRating": 1, "reviewsCount": 1}},
         {"$sort": {"avgRating": -1}},
-        {"$match": {"avgRating": {"$gt": 4}}}     # late filter -> forces work on all docs
+        {"$match": {"avgRating": {"$gt": 4}}}
     ]
     return pipeline
 
@@ -52,15 +55,23 @@ def productsPipelineInefficient():
 def usersPipelineInefficient():
     # Result: users whose current shopping cart value exceeds 100
     pipeline = [
+        # shoppingCart holds ObjectId references to shoppingCartItems
         {"$unwind": {"path": "$shoppingCart", "preserveNullAndEmptyArrays": True}},
         {"$lookup": {
+            "from": "shoppingCartItems",
+            "localField": "shoppingCart",
+            "foreignField": "_id",
+            "as": "cartItem"
+        }},
+        {"$unwind": {"path": "$cartItem", "preserveNullAndEmptyArrays": True}},
+        {"$lookup": {
             "from": "products",
-            "localField": "shoppingCart.sku",
-            "foreignField": "sku",
+            "localField": "cartItem.productId",
+            "foreignField": "_id",
             "as": "productInfo"
         }},
         {"$unwind": {"path": "$productInfo", "preserveNullAndEmptyArrays": True}},
-        {"$addFields": {"lineTotal": {"$multiply": ["$shoppingCart.quantity", {"$ifNull": ["$productInfo.price", "$shoppingCart.price"]}]}}},
+        {"$addFields": {"lineTotal": {"$multiply": ["$cartItem.quantity", {"$ifNull": ["$productInfo.price", "$cartItem.price"]}]}}},
         {"$group": {"_id": "$_id", "username": {"$first": "$username"}, "cartTotal": {"$sum": "$lineTotal"}}},
         {"$project": {"username": 1, "cartTotal": 1}},
         {"$sort": {"cartTotal": -1}},
@@ -73,12 +84,15 @@ def ordersPipelineInefficient():
     # Returns vendor-level summary documents with fields `totalSales` and
     # `uniqueOrders`. Inefficient variant: unwind items, group by
     # `items.vendor.companyName` and filter late.
+    # For Referencing, order items live in `orderItems`. This pipeline
+    # aggregates over `orderItems` (expecting fields: orderId, unitPriceSnapshot, quantity, vendorIdSnapshot).
     pipeline = [
-        {"$unwind": {"path": "$items", "preserveNullAndEmptyArrays": True}},
-        {"$group": {"_id": "$items.vendor.companyName", "totalSales": {"$sum": {"$multiply": ["$items.unitPrice", "$items.quantity"]}}, "orders": {"$addToSet": "$_id"}}},
-        {"$project": {"totalSales": 1, "uniqueOrders": {"$size": {"$ifNull": ["$orders", []]}}}},
+        {"$group": {"_id": "$vendorIdSnapshot", "totalSales": {"$sum": {"$multiply": [{"$ifNull": ["$unitPriceSnapshot", "$unitPrice"]}, {"$ifNull": ["$quantity", 0]}]}}, "orders": {"$addToSet": "$orderId"}}},
+        {"$lookup": {"from": "vendors", "localField": "_id", "foreignField": "_id", "as": "vendorInfo"}},
+        {"$unwind": {"path": "$vendorInfo", "preserveNullAndEmptyArrays": True}},
+        {"$project": {"vendorName": {"$ifNull": ["$vendorInfo.companyName", "(unknown)"]}, "totalSales": 1, "uniqueOrders": {"$size": {"$ifNull": ["$orders", []]}}}},
         {"$sort": {"totalSales": -1}},
-        {"$match": {"totalSales": {"$gt": 1000}}},   # late match
+        {"$match": {"totalSales": {"$gt": 1000}}},
     ]
     return pipeline
 
@@ -87,30 +101,13 @@ def ordersPipelineInefficient():
 
 def productsPipelineEfficient():
     # Result: ranked list of top-rated products based on customer reviews.
+    # Efficient variant: lookup reviews once and compute aggregates per product
     pipeline = [
-        # 1. PROJECT & CALCULATE (Replaces Unwind + Group)
-        # Instead of exploding the data with Unwind, we calculate 
-        # the average and count directly within the document.
-        # This reduces complexity from O(N*M) to O(N).
-        {"$project": {
-            "name": 1,
-            "sku": 1,
-            "avgRating": {"$avg": "$reviews.rating"},
-            "reviewsCount": {"$size": {"$ifNull": ["$reviews", []]}}
-        }},
-
-        # 2. MATCH (Moved Up)
-        # We apply the filter immediately after calculation.
-        # Very important to do this before sorting
-        {"$match": {
-            "avgRating": {"$gt": 4}
-        }},
-
-        # 3. SORT
-        # Sorting a smaller & filtered dataset
-        {"$sort": {
-            "avgRating": -1
-        }}
+        {"$lookup": {"from": "reviews", "localField": "_id", "foreignField": "productId", "as": "reviewsDocs"}},
+        {"$addFields": {"avgRating": {"$cond": [{"$gt": [{"$size": "$reviewsDocs"}, 0]}, {"$avg": "$reviewsDocs.rating"}, None]}, "reviewsCount": {"$size": "$reviewsDocs"}}},
+        {"$match": {"avgRating": {"$gt": 4}}},
+        {"$project": {"name": 1, "sku": 1, "avgRating": 1, "reviewsCount": 1}},
+        {"$sort": {"avgRating": -1}}
     ]
     return pipeline
 
@@ -122,33 +119,39 @@ def usersPipelineEfficient():
         # We skip any user who doesn't even have a cart
         {"$match": {"shoppingCart.0": {"$exists": True}}},
 
-        # 2. UNWIND
-        # decent - shopping carts are not usually very big
+        # 2. UNWIND shoppingCart references
         {"$unwind": "$shoppingCart"},
 
-        # 3. LOOKUP
+        # 3. LOOKUP shoppingCartItems by id
         {"$lookup": {
-            "from": "products",
-            "localField": "shoppingCart.sku",
-            "foreignField": "sku",
-            "as": "productInfo"
+            "from": "shoppingCartItems",
+            "localField": "shoppingCart",
+            "foreignField": "_id",
+            "as": "cartItem"
         }},
 
         # 4. FLATTEN LOOKUP
-        # We keep "preserveNull" to respect fallback logic later
+        {"$unwind": {"path": "$cartItem", "preserveNullAndEmptyArrays": True}},
+
+        # 5. LOOKUP product info
+        {"$lookup": {
+            "from": "products",
+            "localField": "cartItem.productId",
+            "foreignField": "_id",
+            "as": "productInfo"
+        }},
+
         {"$unwind": {"path": "$productInfo", "preserveNullAndEmptyArrays": True}},
 
-        # 5. GROUP & CALCULATE (Combined Step)
-        # We sum the total directly here
+        # 6. GROUP & CALCULATE (Combined Step)
         {"$group": {
             "_id": "$_id",
             "username": {"$first": "$username"},
             "cartTotal": {
                 "$sum": {
                     "$multiply": [
-                        "$shoppingCart.quantity",
-                        # The Fallback Logic: DB Price -> Cart Price
-                        {"$ifNull": ["$productInfo.price", "$shoppingCart.price"]}
+                        "$cartItem.quantity",
+                        {"$ifNull": ["$productInfo.price", "$cartItem.price"]}
                     ]
                 }
             }
@@ -166,36 +169,11 @@ def usersPipelineEfficient():
 def ordersPipelineEfficient():
     # Result: vendors who have generated more than 1000 in revenue
     pipeline = [
-        # 1. UNWIND
-        # Optimization: Removed "preserveNullAndEmptyArrays"
-        {"$unwind": "$items"},
-
-        # 2. GROUP
-        # We aggregate the data. We must use $addToSet to handle the 
-        # "Unique Orders" logic correctly.
-        {"$group": {
-            "_id": "$items.vendor.companyName",
-            "totalSales": {
-                "$sum": {"$multiply": ["$items.unitPrice", "$items.quantity"]}
-            },
-            # We collect IDs temporarily to count them in the next step
-            "orders": {"$addToSet": "$_id"}
-        }},
-
-        # 3. MATCH
-        # We apply the filter immediately after grouping
+        {"$group": {"_id": "$vendorIdSnapshot", "totalSales": {"$sum": {"$multiply": [{"$ifNull": ["$unitPriceSnapshot", "$unitPrice"]}, {"$ifNull": ["$quantity", 0]}]}}, "orders": {"$addToSet": "$orderId"}}},
         {"$match": {"totalSales": {"$gt": 1000}}},
-
-        # 4. PROJECT
-        # Now we calculate the size of the "orders" array.
-        # Doing this after the match means we only do it for the "winners".
-        {"$project": {
-            "totalSales": 1,
-            "uniqueOrders": {"$size": "$orders"}
-        }},
-
-        # 5. SORT
-        # We sort only the filtered list
+        {"$lookup": {"from": "vendors", "localField": "_id", "foreignField": "_id", "as": "vendorInfo"}},
+        {"$unwind": {"path": "$vendorInfo", "preserveNullAndEmptyArrays": True}},
+        {"$project": {"vendorName": {"$ifNull": ["$vendorInfo.companyName", "(unknown)"]}, "totalSales": 1, "uniqueOrders": {"$size": "$orders"}}},
         {"$sort": {"totalSales": -1}}
     ]
     return pipeline
@@ -203,7 +181,7 @@ def ordersPipelineEfficient():
 
 def dropAllIndexes(db):
     print('\nDropping all non-_id indexes on collections...')
-    for name in ['products', 'users', 'orders']:
+    for name in ['products', 'users', 'orders', 'categories', 'addresses', 'orderItems', 'shoppingCartItems']:
         coll = db[name]
         try:
             coll.drop_indexes()
@@ -215,7 +193,7 @@ def dropAllIndexes(db):
 def runPipelines(db):
     products = db['products']
     users = db['users']
-    orders = db['orders']
+    orderItems = db['orderItems']
 
     print('\n    Running INEFFICIENT pipelines (no indexes)')
     p1 = productsPipelineInefficient()
@@ -243,8 +221,8 @@ def runPipelines(db):
     })
 
     p3 = ordersPipelineInefficient()
-    results, elapsed = timeAggregation(orders, p3, name='Orders Inefficient')
-    explain = explainAggregation(orders, p3)
+    results, elapsed = timeAggregation(orderItems, p3, name='OrderItems Inefficient')
+    explain = explainAggregation(orderItems, p3)
     saveExplain({
         'stage': 'inefficient_no_indexes',
         'pipeline': p3,
@@ -258,7 +236,7 @@ def runPipelines(db):
 def runPipelinesWithIndexes(db):
     products = db['products']
     users = db['users']
-    orders = db['orders']
+    orderItems = db['orderItems']
 
     print('\n    Running INEFFICIENT pipelines (with indexes created)')
     p1 = productsPipelineInefficient()
@@ -286,8 +264,8 @@ def runPipelinesWithIndexes(db):
     })
 
     p3 = ordersPipelineInefficient()
-    results, elapsed = timeAggregation(orders, p3, name='Orders Inefficient with Indexes')
-    explain = explainAggregation(orders, p3)
+    results, elapsed = timeAggregation(orderItems, p3, name='OrderItems Inefficient with Indexes')
+    explain = explainAggregation(orderItems, p3)
     saveExplain({
         'stage': 'inefficient_with_indexes',
         'pipeline': p3,
@@ -301,7 +279,7 @@ def runPipelinesWithIndexes(db):
 def runOptimizedPipelines(db):
     products = db['products']
     users = db['users']
-    orders = db['orders']
+    orderItems = db['orderItems']
 
     print('\n    Running OPTIMIZED pipelines (with indexes)')
     p1 = productsPipelineEfficient()
@@ -329,8 +307,8 @@ def runOptimizedPipelines(db):
     })
 
     p3 = ordersPipelineEfficient()
-    results, elapsed = timeAggregation(orders, p3, name='Orders Efficient')
-    explain = explainAggregation(orders, p3)
+    results, elapsed = timeAggregation(orderItems, p3, name='OrderItems Efficient')
+    explain = explainAggregation(orderItems, p3)
     saveExplain({
         'stage': 'optimized_with_indexes',
         'pipeline': p3,

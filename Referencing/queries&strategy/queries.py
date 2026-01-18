@@ -1,11 +1,12 @@
 from connection import connectToMongoDB, closeConnection
 from indexes import (
     productsSkuUnique,
-    productsCategoryCompound,
     productsText,
     createIndexes,
     usersEmailUnique,
     usersAddressesZipcode,
+    categoriesMainAlphabetical,
+    categoriesSecondaryAlphabetical,
     ordersOrderDateIdx,
     ordersStatusIdx,
     ordersCustomerEmailDate,
@@ -88,10 +89,25 @@ if __name__ == "__main__":
         queriesNoIndex.append(('products', q, productsSkuUnique, {'limit': 1}))
         queriesIndex.append(('products', q, productsSkuUnique, {'limit': 1}))
 
-        # 2. Products by category
-        q = {'category.main': 'Electronics', 'category.sub': 'Laptops'}
-        queriesNoIndex.append(('products', q, productsCategoryCompound, {'limit': 20}))
-        queriesIndex.append(('products', q, productsCategoryCompound, {'limit': 20}))
+        # 2. Products by category (Referencing uses category ids as references on products)
+        mainName = 'Electronics'
+        subName = 'Laptops'
+        mainCat = db['categories'].find_one({'name': mainName, 'parentCategoryId': None})
+        mainId = mainCat.get('_id') if mainCat else None
+        subId = None
+        if mainId and subName:
+            subCat = db['categories'].find_one({'name': subName, 'parentCategoryId': mainId})
+            subId = subCat.get('_id') if subCat else None
+
+        q = {}
+        if mainId:
+            q['mainCategoryId'] = mainId
+        if subId:
+            q['subCategoryId'] = subId
+
+        # No dedicated products-by-category index in Referencing; run against products
+        queriesNoIndex.append(('products', q, None, {'limit': 20}))
+        queriesIndex.append(('products', q, None, {'limit': 20}))
 
         # 3. Text search products
         searchString = 'gaming laptop'
@@ -116,10 +132,11 @@ if __name__ == "__main__":
         queriesNoIndex.append(('users', q, usersEmailUnique, {'limit': 1}))
         queriesIndex.append(('users', q, usersEmailUnique, {'limit': 1}))
 
-        # 5. Users by zipcode
-        q = {'addresses.zipcode': 'N9F 2WT'}
-        queriesNoIndex.append(('users', q, usersAddressesZipcode, {'limit': 20}))
-        queriesIndex.append(('users', q, usersAddressesZipcode, {'limit': 20}))
+        # 5. Users by zipcode (Referencing stores addresses in a separate collection)
+        addr_q = {'zipcode': 'N9F 2WT'}
+        # run the lookup on addresses collection (indexes defined on addresses.zipcode)
+        queriesNoIndex.append(('addresses', addr_q, usersAddressesZipcode, {'limit': 20}))
+        queriesIndex.append(('addresses', addr_q, usersAddressesZipcode, {'limit': 20}))
 
         # 6. Orders by date range
         start = datetime(2021, 1, 1)
@@ -134,16 +151,21 @@ if __name__ == "__main__":
         queriesNoIndex.append(('orders', q, ordersStatusIdx, {'limit': 50}))
         queriesIndex.append(('orders', q, ordersStatusIdx, {'limit': 50}))
 
-        # 8. Orders by customer email
-        q = {'customerSnapshot.email': 'sebastianhawkins@outlook.com'}
+        # 8. Orders by customer email (Referencing stores userId on orders)
+        targetEmail = 'sebastianhawkins@outlook.com'
+        u = db['users'].find_one({'email': targetEmail}, {'_id': 1})
+        if u:
+            q = {'userId': u.get('_id')}
+        else:
+            q = {'userId': None}
         sort = [('orderDate', -1)]
         queriesNoIndex.append(('orders', q, ordersCustomerEmailDate, {'sort': sort, 'limit': 50}))
         queriesIndex.append(('orders', q, ordersCustomerEmailDate, {'sort': sort, 'limit': 50}))
 
-        # 9. Orders containing SKU
-        q = {'items.sku': 'OFF-ACC-12497'}
-        queriesNoIndex.append(('orders', q, ordersItemsSku, {'limit': 50}))
-        queriesIndex.append(('orders', q, ordersItemsSku, {'limit': 50}))
+        # 9. Orders containing SKU (Referencing stores order items in `orderItems` collection)
+        q = {'sku': 'OFF-ACC-12497'}
+        queriesNoIndex.append(('orderItems', q, ordersItemsSku, {'limit': 50}))
+        queriesIndex.append(('orderItems', q, ordersItemsSku, {'limit': 50}))
 
         # 10. Pending orders
         q = {'status': 'Pending'}
@@ -154,12 +176,14 @@ if __name__ == "__main__":
 
         # Phase 1: drop all non-_id indexes from target collections
         print()
-        print("Phase 1: Dropping existing indexes from 'products', 'users', 'orders' (keeps _id index)")
+        print("Phase 1: Dropping existing indexes from collections (keeps _id index)")
         try:
-            db['products'].drop_indexes()
-            db['users'].drop_indexes()
-            db['orders'].drop_indexes()
-            print("Indexes dropped.")
+            for name in ['products', 'users', 'orders', 'categories', 'addresses', 'orderItems', 'shoppingCartItems']:
+                try:
+                    db[name].drop_indexes()
+                    print(f"Dropped indexes on {name}")
+                except Exception as inner_e:
+                    print(f"Could not drop indexes on {name}: {inner_e}")
         except Exception as e:
             print(f"Could not drop indexes: {e}")
 
@@ -227,10 +251,10 @@ if __name__ == "__main__":
 
         # save explain records to a file (if any)
         try:
-            if explainRecords:
-                with open('./Embedding/queries&strategy/explainQueries.json', 'w', encoding='utf-8') as f:
-                    f.write(dumps(explainRecords, indent=2))
-                print("Saved explain plans to explainQueries.json")
+                if explainRecords:
+                    with open('./Referencing/queries&strategy/explainQueries.json', 'w', encoding='utf-8') as f:
+                        f.write(dumps(explainRecords, indent=2))
+                    print("Saved explain plans to Referencing/queries&strategy/explainQueries.json")
         except Exception as e:
             print(f"Failed to save explain plans: {e}")
     finally:

@@ -1,6 +1,7 @@
 import json
 import os
 from pathlib import Path
+from bson import ObjectId
 from connection import connectToMongoDB, closeConnection
 
 
@@ -79,6 +80,78 @@ def transformSkusToProductIds(obj, productMap):
             transformSkusToProductIds(item, productMap)
 
 
+def normalizeProductId(pid):
+    # convert various product id representations to ObjectId
+    try:
+        if isinstance(pid, dict) and '$oid' in pid:
+            return ObjectId(pid['$oid'])
+        if isinstance(pid, str) and len(pid) == 24:
+            return ObjectId(pid)
+        if isinstance(pid, ObjectId):
+            return pid
+    except Exception:
+        pass
+    return None
+
+
+def normalizeShoppingCart(cart, productMap):
+    # transform entries to {productId: ObjectId, quantity: Number}
+    if not isinstance(cart, list):
+        return
+    newCart = []
+    for item in cart:
+        if not isinstance(item, dict):
+            continue
+        # prefer existing productId
+        pid = item.get('productId') or None
+        if not pid and 'sku' in item:
+            pid = productMap.get(item.get('sku'))
+        pidObj = normalizeProductId(pid)
+        # try sku string if still not found
+        if not pidObj and 'sku' in item:
+            pidObj = normalizeProductId(productMap.get(item.get('sku')))
+        if not pidObj:
+            # cannot resolve productId, skip this cart item
+            continue
+        quantity = item.get('quantity') or item.get('qty') or 1
+        try:
+            quantity = int(quantity)
+        except Exception:
+            try:
+                quantity = int(float(quantity))
+            except Exception:
+                quantity = 1
+        newCart.append({'productId': pidObj, 'quantity': quantity})
+    # replace cart contents
+    cart.clear()
+    cart.extend(newCart)
+
+
+def normalizeUserDoc(doc):
+    # ensure shoppingCart items use productId field (already handled by transformSkusToProductIds)
+    # normalize addresses keys if needed (no-op if already correct)
+    if isinstance(doc, dict):
+        addresses = doc.get('addresses')
+        if isinstance(addresses, list):
+            for addr in addresses:
+                # ensure expected keys exist; skip deep validation
+                if isinstance(addr, dict):
+                    # rename postalCode -> zipcode if present
+                    if 'postalCode' in addr and 'zipcode' not in addr:
+                        addr['zipcode'] = addr.pop('postalCode')
+
+        # normalize _id if provided as string or {'$oid':...}
+        if '_id' in doc:
+            try:
+                pid = doc.get('_id')
+                if isinstance(pid, dict) and '$oid' in pid:
+                    doc['_id'] = ObjectId(pid['$oid'])
+                elif isinstance(pid, str) and len(pid) == 24:
+                    doc['_id'] = ObjectId(pid)
+            except Exception:
+                pass
+
+
 def populateUsers():
     repoRoot = Path(__file__).parent
     jsonUsersDir = repoRoot / 'JsonUsers'
@@ -103,9 +176,28 @@ def populateUsers():
 
     coll = db.get_collection('users')
 
+    # prefer product map from DB (sku -> ObjectId), fallback to JSON map
+    try:
+        dbProductMap = {}
+        for p in db['products'].find({}, {'sku': 1}):
+            sku = p.get('sku')
+            pid = p.get('_id')
+            if sku and pid:
+                dbProductMap[sku] = pid
+        if dbProductMap:
+            # prefer db IDs; overwrite productMap entries
+            for k, v in dbProductMap.items():
+                productMap[k] = v
+            print(f'Loaded {len(dbProductMap)} products from DB for sku->id mapping')
+    except Exception:
+        pass
+
     # transform user docs: replace/augment sku references with productIds
     for doc in userDocs:
         transformSkusToProductIds(doc, productMap)
+        normalizeUserDoc(doc)
+        # normalize shoppingCart to {productId:ObjectId, quantity:Number}
+        normalizeShoppingCart(doc.get('shoppingCart'), productMap)
 
     # insert in batches
     batchSize = 500

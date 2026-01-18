@@ -1,7 +1,8 @@
 from connection import connectToMongoDB, closeConnection
 from indexes import (
     productsSkuUnique,
-    productsCategoryCompound,
+    productsMainPartial,
+    productsSubPartial,
     productsText,
     createIndexes,
     usersEmailUnique,
@@ -88,10 +89,26 @@ if __name__ == "__main__":
         queriesNoIndex.append(('products', q, productsSkuUnique, {'limit': 1}))
         queriesIndex.append(('products', q, productsSkuUnique, {'limit': 1}))
 
-        # 2. Products by category
-        q = {'category.main': 'Electronics', 'category.sub': 'Laptops'}
-        queriesNoIndex.append(('products', q, productsCategoryCompound, {'limit': 20}))
-        queriesIndex.append(('products', q, productsCategoryCompound, {'limit': 20}))
+        # 2. Products by category (map category names to ids per new schema)
+        mainName = 'Electronics'
+        subName = 'Laptops'
+        mainCat = db['categories'].find_one({'name': mainName, 'parentCategoryId': None})
+        mainId = mainCat.get('_id') if mainCat else None
+        subCat = None
+        subId = None
+        if mainId and subName:
+            subCat = db['categories'].find_one({'name': subName, 'parentCategoryId': mainId})
+            subId = subCat.get('_id') if subCat else None
+        # build product query using category ids
+        q = {}
+        if mainId:
+            q['mainCategoryId'] = mainId
+        if subId:
+            q['subCategoryId'] = subId
+        # choose appropriate partial index hint
+        indexHint = productsSubPartial if subId else productsMainPartial
+        queriesNoIndex.append(('products', q, indexHint, {'limit': 20}))
+        queriesIndex.append(('products', q, indexHint, {'limit': 20}))
 
         # 3. Text search products
         searchString = 'gaming laptop'
@@ -124,7 +141,16 @@ if __name__ == "__main__":
         # 6. Orders by date range
         start = datetime(2021, 1, 1)
         end = datetime(2021, 12, 31)
-        q = {'orderDate': {'$gte': start, '$lte': end}}
+        # determine how orderDate is stored in the DB (BSON date vs ISO string)
+        sampleOrder = db['orders'].find_one({'orderDate': {'$exists': True}})
+        if sampleOrder is not None and isinstance(sampleOrder.get('orderDate'), str):
+            # stored as ISO strings -> compare using ISO string ranges
+            startIso = start.isoformat()
+            endIso = end.isoformat()
+            q = {'orderDate': {'$gte': startIso, '$lte': endIso}}
+        else:
+            # stored as BSON Date
+            q = {'orderDate': {'$gte': start, '$lte': end}}
         sort = [('orderDate', -1)]
         queriesNoIndex.append(('orders', q, ordersOrderDateIdx, {'sort': sort, 'limit': 50}))
         queriesIndex.append(('orders', q, ordersOrderDateIdx, {'sort': sort, 'limit': 50}))
@@ -134,14 +160,14 @@ if __name__ == "__main__":
         queriesNoIndex.append(('orders', q, ordersStatusIdx, {'limit': 50}))
         queriesIndex.append(('orders', q, ordersStatusIdx, {'limit': 50}))
 
-        # 8. Orders by customer email
-        q = {'customerSnapshot.email': 'sebastianhawkins@outlook.com'}
+        # 8. Orders by customer email (new structure uses `user` snapshot)
+        q = {'user.emailSnapshot': 'sebastianhawkins@outlook.com'}
         sort = [('orderDate', -1)]
         queriesNoIndex.append(('orders', q, ordersCustomerEmailDate, {'sort': sort, 'limit': 50}))
         queriesIndex.append(('orders', q, ordersCustomerEmailDate, {'sort': sort, 'limit': 50}))
 
-        # 9. Orders containing SKU
-        q = {'items.sku': 'OFF-ACC-12497'}
+        # 9. Orders containing SKU (now stored as skuSnapshot in items)
+        q = {'items.skuSnapshot': 'OFF-ACC-12497'}
         queriesNoIndex.append(('orders', q, ordersItemsSku, {'limit': 50}))
         queriesIndex.append(('orders', q, ordersItemsSku, {'limit': 50}))
 
@@ -154,11 +180,12 @@ if __name__ == "__main__":
 
         # Phase 1: drop all non-_id indexes from target collections
         print()
-        print("Phase 1: Dropping existing indexes from 'products', 'users', 'orders' (keeps _id index)")
+        print("Phase 1: Dropping existing indexes from 'products', 'users', 'orders', 'categories' (keeps _id index)")
         try:
             db['products'].drop_indexes()
             db['users'].drop_indexes()
             db['orders'].drop_indexes()
+            db['categories'].drop_indexes()
             print("Indexes dropped.")
         except Exception as e:
             print(f"Could not drop indexes: {e}")
@@ -166,10 +193,10 @@ if __name__ == "__main__":
         # Phase 2: run all queries WITHOUT indexes
         print()
         print("Phase 2: Running queries WITHOUT indexes")
-        for idx, (collectionName, qfilter, indexName, opts) in enumerate(queriesNoIndex, start=1):
+        for idx, (collectionName, queryFilter, indexName, opts) in enumerate(queriesNoIndex, start=1):
             print()
             print(f"    Query {idx}: collection={collectionName}, index={indexName}")
-            resNoIndex = runWithoutIndex(db, collectionName, qfilter, projection=opts.get('projection'), sort=opts.get('sort'), limit=opts.get('limit'))
+            resNoIndex = runWithoutIndex(db, collectionName, queryFilter, projection=opts.get('projection'), sort=opts.get('sort'), limit=opts.get('limit'))
             print(f"    Result summary:")
             if resNoIndex.get('error'):
                 print(f"        Without index: ERROR: {resNoIndex.get('error')}")
@@ -185,7 +212,7 @@ if __name__ == "__main__":
                     'collection': collectionName,
                     'mode': 'noIndexes',
                     'indexHint': 'none',
-                    'query': qfilter,
+                    'query': queryFilter,
                     'explain': resNoIndex.get('explain')
                 })
 
@@ -201,10 +228,10 @@ if __name__ == "__main__":
         # Phase 4: run all queries WITH indexes
         print()
         print("Phase 4: Running queries WITH indexes")
-        for idx, (collectionName, qfilter, indexName, opts) in enumerate(queriesIndex, start=1):
+        for idx, (collectionName, queryFilter, indexName, opts) in enumerate(queriesIndex, start=1):
             print()
             print(f"    Query {idx}: collection={collectionName}, index={indexName}")
-            resIndex = runWithIndex(db, collectionName, qfilter, indexName=indexName, projection=opts.get('projection'), sort=opts.get('sort'), limit=opts.get('limit'))
+            resIndex = runWithIndex(db, collectionName, queryFilter, indexName=indexName, projection=opts.get('projection'), sort=opts.get('sort'), limit=opts.get('limit'))
             print(f"    Result summary:")
             if resIndex.get('error'):
                 print(f"        With index: ERROR: {resIndex.get('error')}")
@@ -221,14 +248,14 @@ if __name__ == "__main__":
                     'collection': collectionName,
                     'mode': 'withIndexes',
                     'indexHint': indexName,
-                    'query': qfilter,
+                    'query': queryFilter,
                     'explain': resIndex.get('explain')
                 })
 
         # save explain records to a file (if any)
         try:
             if explainRecords:
-                with open('./Embedding/queries&strategy/explainQueries.json', 'w', encoding='utf-8') as f:
+                with open('./Hybrid/queries&strategy/explainQueries.json', 'w', encoding='utf-8') as f:
                     f.write(dumps(explainRecords, indent=2))
                 print("Saved explain plans to explainQueries.json")
         except Exception as e:

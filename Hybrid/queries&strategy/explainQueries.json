@@ -10,7 +10,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.products",
+        "namespace": "eCommerceProjectHybrid.products",
         "parsedQuery": {
           "sku": {
             "$eq": "ELE-ACC-12550"
@@ -40,7 +40,7 @@
       "executionStats": {
         "executionSuccess": true,
         "nReturned": 1,
-        "executionTimeMillis": 6,
+        "executionTimeMillis": 3,
         "totalKeysExamined": 0,
         "totalDocsExamined": 5000,
         "executionStages": {
@@ -52,7 +52,7 @@
             }
           },
           "nReturned": 1,
-          "executionTimeMillisEstimate": 4,
+          "executionTimeMillisEstimate": 3,
           "works": 5001,
           "advanced": 1,
           "needTime": 4999,
@@ -65,7 +65,7 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "E931B887DE39F4F18855915C604ED18AC19DC80C6F13749BC5A924C88892E8F4",
+      "queryShapeHash": "4025D170386056930D897AC061E45956088C40E5821DC4EE2215372AD99E5A80",
       "command": {
         "find": "products",
         "filter": {
@@ -74,7 +74,7 @@
         "hint": {
           "$natural": 1
         },
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -98,14 +98,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693633,
-            "i": 34
+            "t": 1768766055,
+            "i": 25
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "3nyQmsw2/jgkGcSSJ/MZ0DvYuZY=",
+              "base64": "MvTkulQrOrQvy5Kz2nMOeCfVoN4=",
               "subType": "00"
             }
           },
@@ -114,8 +114,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693633,
-          "i": 34
+          "t": 1768766055,
+          "i": 25
         }
       }
     }
@@ -126,31 +126,25 @@
     "mode": "noIndexes",
     "indexHint": "none",
     "query": {
-      "category.main": "Electronics",
-      "category.sub": "Laptops"
+      "mainCategoryId": {
+        "$oid": "6969308deb7b999a2d2c0226"
+      }
     },
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.products",
+        "namespace": "eCommerceProjectHybrid.products",
         "parsedQuery": {
-          "$and": [
-            {
-              "category.main": {
-                "$eq": "Electronics"
-              }
-            },
-            {
-              "category.sub": {
-                "$eq": "Laptops"
-              }
+          "mainCategoryId": {
+            "$eq": {
+              "$oid": "6969308deb7b999a2d2c0226"
             }
-          ]
+          }
         },
         "indexFilterSet": false,
-        "queryHash": "4E0A4261",
-        "planCacheShapeHash": "4E0A4261",
-        "planCacheKey": "2A7064D5",
+        "queryHash": "18F56B28",
+        "planCacheShapeHash": "18F56B28",
+        "planCacheKey": "79243C58",
         "optimizationTimeMillis": 0,
         "maxIndexedOrSolutionsReached": false,
         "maxIndexedAndSolutionsReached": false,
@@ -160,18 +154,11 @@
           "isCached": false,
           "stage": "COLLSCAN",
           "filter": {
-            "$and": [
-              {
-                "category.main": {
-                  "$eq": "Electronics"
-                }
-              },
-              {
-                "category.sub": {
-                  "$eq": "Laptops"
-                }
+            "mainCategoryId": {
+              "$eq": {
+                "$oid": "6969308deb7b999a2d2c0226"
               }
-            ]
+            }
           },
           "direction": "forward"
         },
@@ -179,7 +166,7 @@
       },
       "executionStats": {
         "executionSuccess": true,
-        "nReturned": 0,
+        "nReturned": 656,
         "executionTimeMillis": 3,
         "totalKeysExamined": 0,
         "totalDocsExamined": 5000,
@@ -187,24 +174,17 @@
           "isCached": false,
           "stage": "COLLSCAN",
           "filter": {
-            "$and": [
-              {
-                "category.main": {
-                  "$eq": "Electronics"
-                }
-              },
-              {
-                "category.sub": {
-                  "$eq": "Laptops"
-                }
+            "mainCategoryId": {
+              "$eq": {
+                "$oid": "6969308deb7b999a2d2c0226"
               }
-            ]
+            }
           },
-          "nReturned": 0,
-          "executionTimeMillisEstimate": 0,
+          "nReturned": 656,
+          "executionTimeMillisEstimate": 2,
           "works": 5001,
-          "advanced": 0,
-          "needTime": 5000,
+          "advanced": 656,
+          "needTime": 4344,
           "needYield": 0,
           "saveState": 0,
           "restoreState": 0,
@@ -214,17 +194,18 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "D2C101BB6451F655BE36970B697088492F6148F481FEB460D190AFAFC1DA8F77",
+      "queryShapeHash": "35CFEE61915F6DB872136230B36F773C106877255756C050179C092592143671",
       "command": {
         "find": "products",
         "filter": {
-          "category.main": "Electronics",
-          "category.sub": "Laptops"
+          "mainCategoryId": {
+            "$oid": "6969308deb7b999a2d2c0226"
+          }
         },
         "hint": {
           "$natural": 1
         },
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -248,14 +229,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693633,
-            "i": 36
+            "t": 1768766055,
+            "i": 27
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "3nyQmsw2/jgkGcSSJ/MZ0DvYuZY=",
+              "base64": "MvTkulQrOrQvy5Kz2nMOeCfVoN4=",
               "subType": "00"
             }
           },
@@ -264,8 +245,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693633,
-          "i": 36
+          "t": 1768766055,
+          "i": 27
         }
       }
     }
@@ -294,7 +275,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.products",
+        "namespace": "eCommerceProjectHybrid.products",
         "parsedQuery": {
           "$or": [
             {
@@ -369,7 +350,7 @@
             ]
           },
           "nReturned": 50,
-          "executionTimeMillisEstimate": 7,
+          "executionTimeMillisEstimate": 6,
           "works": 5001,
           "advanced": 50,
           "needTime": 4950,
@@ -382,7 +363,7 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "EDC78546931A61EBC76891AA99C51D0690E0BAF8F49300944C7F4A2477BAE9E5",
+      "queryShapeHash": "E1FDA2312BD6DDFEE369299346736E2EAC764FF4180C6C8124EFB378F6FAF72D",
       "command": {
         "find": "products",
         "filter": {
@@ -404,7 +385,7 @@
         "hint": {
           "$natural": 1
         },
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -428,14 +409,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693633,
-            "i": 40
+            "t": 1768766055,
+            "i": 27
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "3nyQmsw2/jgkGcSSJ/MZ0DvYuZY=",
+              "base64": "MvTkulQrOrQvy5Kz2nMOeCfVoN4=",
               "subType": "00"
             }
           },
@@ -444,8 +425,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693633,
-          "i": 40
+          "t": 1768766055,
+          "i": 27
         }
       }
     }
@@ -461,7 +442,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.users",
+        "namespace": "eCommerceProjectHybrid.users",
         "parsedQuery": {
           "email": {
             "$eq": "dennisparker@gmail.com"
@@ -491,7 +472,7 @@
       "executionStats": {
         "executionSuccess": true,
         "nReturned": 1,
-        "executionTimeMillis": 1,
+        "executionTimeMillis": 0,
         "totalKeysExamined": 0,
         "totalDocsExamined": 1000,
         "executionStages": {
@@ -503,7 +484,7 @@
             }
           },
           "nReturned": 1,
-          "executionTimeMillisEstimate": 1,
+          "executionTimeMillisEstimate": 0,
           "works": 1001,
           "advanced": 1,
           "needTime": 999,
@@ -516,7 +497,7 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "730A4C97BD3615F00CB1DD75D26A1BB061033EDA4F1575BFB9FBA844656E3799",
+      "queryShapeHash": "9C762346A635C3E165F4FA48CB83C73120FD1B4761F323506C76181F680FC009",
       "command": {
         "find": "users",
         "filter": {
@@ -525,7 +506,7 @@
         "hint": {
           "$natural": 1
         },
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -549,14 +530,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693633,
-            "i": 45
+            "t": 1768766056,
+            "i": 1
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "3nyQmsw2/jgkGcSSJ/MZ0DvYuZY=",
+              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
               "subType": "00"
             }
           },
@@ -565,8 +546,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693633,
-          "i": 45
+          "t": 1768766056,
+          "i": 1
         }
       }
     }
@@ -582,7 +563,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.users",
+        "namespace": "eCommerceProjectHybrid.users",
         "parsedQuery": {
           "addresses.zipcode": {
             "$eq": "N9F 2WT"
@@ -624,7 +605,7 @@
             }
           },
           "nReturned": 1,
-          "executionTimeMillisEstimate": 0,
+          "executionTimeMillisEstimate": 1,
           "works": 1001,
           "advanced": 1,
           "needTime": 999,
@@ -637,7 +618,7 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "78F89262A8116C75BCFCE2BB006DF7709BC319FECF3EB76D88B35A1093565338",
+      "queryShapeHash": "FFBA4B5E7FA731A49794A8E96D575A3F701493FCA2D37AA3E31222CC105B432F",
       "command": {
         "find": "users",
         "filter": {
@@ -646,7 +627,7 @@
         "hint": {
           "$natural": 1
         },
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -670,14 +651,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693633,
-            "i": 49
+            "t": 1768766056,
+            "i": 3
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "3nyQmsw2/jgkGcSSJ/MZ0DvYuZY=",
+              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
               "subType": "00"
             }
           },
@@ -686,8 +667,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693633,
-          "i": 49
+          "t": 1768766056,
+          "i": 3
         }
       }
     }
@@ -710,7 +691,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.orders",
+        "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
           "$and": [
             {
@@ -774,14 +755,14 @@
       "executionStats": {
         "executionSuccess": true,
         "nReturned": 1449,
-        "executionTimeMillis": 10,
+        "executionTimeMillis": 9,
         "totalKeysExamined": 0,
         "totalDocsExamined": 10000,
         "executionStages": {
           "isCached": false,
           "stage": "SORT",
           "nReturned": 1449,
-          "executionTimeMillisEstimate": 10,
+          "executionTimeMillisEstimate": 9,
           "works": 11451,
           "advanced": 1449,
           "needTime": 10001,
@@ -794,7 +775,7 @@
           },
           "memLimit": 33554432,
           "type": "simple",
-          "totalDataSizeSorted": 4217057,
+          "totalDataSizeSorted": 2153012,
           "usedDisk": false,
           "spills": 0,
           "spilledDataStorageSize": 0,
@@ -819,7 +800,7 @@
               ]
             },
             "nReturned": 1449,
-            "executionTimeMillisEstimate": 3,
+            "executionTimeMillisEstimate": 5,
             "works": 10001,
             "advanced": 1449,
             "needTime": 8551,
@@ -833,7 +814,7 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "2DD5AD4EAA821845470D92D3818E98C00D8F460011A373F6EA62B724349E8ED5",
+      "queryShapeHash": "F92889947D3EC39C5DFC305203BFC418E564B118B8DB5529D34791BFBCAEFCC1",
       "command": {
         "find": "orders",
         "filter": {
@@ -852,7 +833,7 @@
         "hint": {
           "$natural": 1
         },
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -876,14 +857,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693634,
+            "t": 1768766056,
             "i": 7
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "0Qam/+MxJMqi6KFmVgF5dtZo11M=",
+              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
               "subType": "00"
             }
           },
@@ -892,7 +873,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693634,
+          "t": 1768766056,
           "i": 7
         }
       }
@@ -904,15 +885,15 @@
     "mode": "noIndexes",
     "indexHint": "none",
     "query": {
-      "status": "Pending"
+      "status": "Delivered"
     },
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.orders",
+        "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
           "status": {
-            "$eq": "Pending"
+            "$eq": "Delivered"
           }
         },
         "indexFilterSet": false,
@@ -929,7 +910,7 @@
           "stage": "COLLSCAN",
           "filter": {
             "status": {
-              "$eq": "Pending"
+              "$eq": "Delivered"
             }
           },
           "direction": "forward"
@@ -938,7 +919,7 @@
       },
       "executionStats": {
         "executionSuccess": true,
-        "nReturned": 1955,
+        "nReturned": 1997,
         "executionTimeMillis": 6,
         "totalKeysExamined": 0,
         "totalDocsExamined": 10000,
@@ -947,14 +928,14 @@
           "stage": "COLLSCAN",
           "filter": {
             "status": {
-              "$eq": "Pending"
+              "$eq": "Delivered"
             }
           },
-          "nReturned": 1955,
+          "nReturned": 1997,
           "executionTimeMillisEstimate": 7,
           "works": 10001,
-          "advanced": 1955,
-          "needTime": 8045,
+          "advanced": 1997,
+          "needTime": 8003,
           "needYield": 0,
           "saveState": 0,
           "restoreState": 0,
@@ -964,16 +945,16 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "7CF62025D2AD246F6EEA07461A5213A082D138714B77ED943DA31235698325BD",
+      "queryShapeHash": "2FFEA67314D66A7A02537BCD5472ED25D6E4390305D6D6CC3A7E38937590BDBE",
       "command": {
         "find": "orders",
         "filter": {
-          "status": "Pending"
+          "status": "Delivered"
         },
         "hint": {
           "$natural": 1
         },
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -997,14 +978,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693634,
-            "i": 13
+            "t": 1768766056,
+            "i": 10
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "0Qam/+MxJMqi6KFmVgF5dtZo11M=",
+              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
               "subType": "00"
             }
           },
@@ -1013,8 +994,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693634,
-          "i": 13
+          "t": 1768766056,
+          "i": 10
         }
       }
     }
@@ -1025,21 +1006,21 @@
     "mode": "noIndexes",
     "indexHint": "none",
     "query": {
-      "customerSnapshot.email": "sebastianhawkins@outlook.com"
+      "user.emailSnapshot": "sebastianhawkins@outlook.com"
     },
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.orders",
+        "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
-          "customerSnapshot.email": {
+          "user.emailSnapshot": {
             "$eq": "sebastianhawkins@outlook.com"
           }
         },
         "indexFilterSet": false,
-        "queryHash": "31E2E18A",
-        "planCacheShapeHash": "31E2E18A",
-        "planCacheKey": "3C69A962",
+        "queryHash": "AE5508A6",
+        "planCacheShapeHash": "AE5508A6",
+        "planCacheKey": "30791F56",
         "optimizationTimeMillis": 0,
         "maxIndexedOrSolutionsReached": false,
         "maxIndexedAndSolutionsReached": false,
@@ -1056,7 +1037,7 @@
           "inputStage": {
             "stage": "COLLSCAN",
             "filter": {
-              "customerSnapshot.email": {
+              "user.emailSnapshot": {
                 "$eq": "sebastianhawkins@outlook.com"
               }
             },
@@ -1075,7 +1056,7 @@
           "isCached": false,
           "stage": "SORT",
           "nReturned": 21,
-          "executionTimeMillisEstimate": 7,
+          "executionTimeMillisEstimate": 6,
           "works": 10023,
           "advanced": 21,
           "needTime": 10001,
@@ -1088,19 +1069,19 @@
           },
           "memLimit": 33554432,
           "type": "simple",
-          "totalDataSizeSorted": 63115,
+          "totalDataSizeSorted": 32229,
           "usedDisk": false,
           "spills": 0,
           "spilledDataStorageSize": 0,
           "inputStage": {
             "stage": "COLLSCAN",
             "filter": {
-              "customerSnapshot.email": {
+              "user.emailSnapshot": {
                 "$eq": "sebastianhawkins@outlook.com"
               }
             },
             "nReturned": 21,
-            "executionTimeMillisEstimate": 5,
+            "executionTimeMillisEstimate": 6,
             "works": 10001,
             "advanced": 21,
             "needTime": 9979,
@@ -1114,11 +1095,11 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "3B2011F379F8AE6AFCA8902E8A85CEEF6E43C06756ABAF1DB24BEE72051C1828",
+      "queryShapeHash": "F58458460C5C9C851BE54CEA8C69102B2F9895DE5C2797819AEDE36E0A8AEE48",
       "command": {
         "find": "orders",
         "filter": {
-          "customerSnapshot.email": "sebastianhawkins@outlook.com"
+          "user.emailSnapshot": "sebastianhawkins@outlook.com"
         },
         "sort": {
           "orderDate": -1
@@ -1126,7 +1107,7 @@
         "hint": {
           "$natural": 1
         },
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -1150,14 +1131,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693634,
+            "t": 1768766056,
             "i": 16
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "0Qam/+MxJMqi6KFmVgF5dtZo11M=",
+              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
               "subType": "00"
             }
           },
@@ -1166,7 +1147,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693634,
+          "t": 1768766056,
           "i": 16
         }
       }
@@ -1178,21 +1159,21 @@
     "mode": "noIndexes",
     "indexHint": "none",
     "query": {
-      "items.sku": "OFF-ACC-12497"
+      "items.skuSnapshot": "OFF-ACC-12497"
     },
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.orders",
+        "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
-          "items.sku": {
+          "items.skuSnapshot": {
             "$eq": "OFF-ACC-12497"
           }
         },
         "indexFilterSet": false,
-        "queryHash": "566AFF1D",
-        "planCacheShapeHash": "566AFF1D",
-        "planCacheKey": "29286A49",
+        "queryHash": "4F0D3C6C",
+        "planCacheShapeHash": "4F0D3C6C",
+        "planCacheKey": "1F3DFE44",
         "optimizationTimeMillis": 0,
         "maxIndexedOrSolutionsReached": false,
         "maxIndexedAndSolutionsReached": false,
@@ -1202,7 +1183,7 @@
           "isCached": false,
           "stage": "COLLSCAN",
           "filter": {
-            "items.sku": {
+            "items.skuSnapshot": {
               "$eq": "OFF-ACC-12497"
             }
           },
@@ -1220,7 +1201,7 @@
           "isCached": false,
           "stage": "COLLSCAN",
           "filter": {
-            "items.sku": {
+            "items.skuSnapshot": {
               "$eq": "OFF-ACC-12497"
             }
           },
@@ -1238,16 +1219,16 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "42A813B002FD1B78787FF377E298B5BD2A1243DE4AEF3C5896722D165F9E641D",
+      "queryShapeHash": "3FCB3DA5FC31494FD2358381CCA2364833DE7AC83E2A60FE551B70DB0FC0D426",
       "command": {
         "find": "orders",
         "filter": {
-          "items.sku": "OFF-ACC-12497"
+          "items.skuSnapshot": "OFF-ACC-12497"
         },
         "hint": {
           "$natural": 1
         },
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -1271,14 +1252,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693634,
-            "i": 20
+            "t": 1768766056,
+            "i": 21
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "0Qam/+MxJMqi6KFmVgF5dtZo11M=",
+              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
               "subType": "00"
             }
           },
@@ -1287,8 +1268,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693634,
-          "i": 20
+          "t": 1768766056,
+          "i": 21
         }
       }
     }
@@ -1304,7 +1285,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.orders",
+        "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
           "status": {
             "$eq": "Pending"
@@ -1359,7 +1340,7 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "7CF62025D2AD246F6EEA07461A5213A082D138714B77ED943DA31235698325BD",
+      "queryShapeHash": "2FFEA67314D66A7A02537BCD5472ED25D6E4390305D6D6CC3A7E38937590BDBE",
       "command": {
         "find": "orders",
         "filter": {
@@ -1368,7 +1349,7 @@
         "hint": {
           "$natural": 1
         },
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -1392,14 +1373,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693634,
-            "i": 25
+            "t": 1768766056,
+            "i": 21
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "0Qam/+MxJMqi6KFmVgF5dtZo11M=",
+              "base64": "MazB7ooxFvHq8I/PSvzE59AmZSo=",
               "subType": "00"
             }
           },
@@ -1408,8 +1389,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693634,
-          "i": 25
+          "t": 1768766056,
+          "i": 21
         }
       }
     }
@@ -1425,7 +1406,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.products",
+        "namespace": "eCommerceProjectHybrid.products",
         "parsedQuery": {
           "sku": {
             "$eq": "ELE-ACC-12550"
@@ -1434,7 +1415,7 @@
         "indexFilterSet": false,
         "queryHash": "05509EF5",
         "planCacheShapeHash": "05509EF5",
-        "planCacheKey": "BF8E5727",
+        "planCacheKey": "DABA3251",
         "optimizationTimeMillis": 0,
         "maxIndexedOrSolutionsReached": false,
         "maxIndexedAndSolutionsReached": false,
@@ -1524,14 +1505,14 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "E931B887DE39F4F18855915C604ED18AC19DC80C6F13749BC5A924C88892E8F4",
+      "queryShapeHash": "4025D170386056930D897AC061E45956088C40E5821DC4EE2215372AD99E5A80",
       "command": {
         "find": "products",
         "filter": {
           "sku": "ELE-ACC-12550"
         },
         "hint": "productsSkuUnique",
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -1555,14 +1536,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693636,
-            "i": 10
+            "t": 1768766058,
+            "i": 42
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "O1gVe9EX7eiz0AkCYNF/DfeYPqc=",
+              "base64": "a22NzEsQUx/5To+oFZlcImnDj+I=",
               "subType": "00"
             }
           },
@@ -1571,8 +1552,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693636,
-          "i": 10
+          "t": 1768766058,
+          "i": 42
         }
       }
     }
@@ -1581,33 +1562,27 @@
     "queryNo": 2,
     "collection": "products",
     "mode": "withIndexes",
-    "indexHint": "productsCategoryCompound",
+    "indexHint": "productsMainPartial",
     "query": {
-      "category.main": "Electronics",
-      "category.sub": "Laptops"
+      "mainCategoryId": {
+        "$oid": "6969308deb7b999a2d2c0226"
+      }
     },
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.products",
+        "namespace": "eCommerceProjectHybrid.products",
         "parsedQuery": {
-          "$and": [
-            {
-              "category.main": {
-                "$eq": "Electronics"
-              }
-            },
-            {
-              "category.sub": {
-                "$eq": "Laptops"
-              }
+          "mainCategoryId": {
+            "$eq": {
+              "$oid": "6969308deb7b999a2d2c0226"
             }
-          ]
+          }
         },
         "indexFilterSet": false,
-        "queryHash": "4E0A4261",
-        "planCacheShapeHash": "4E0A4261",
-        "planCacheKey": "3D93B96D",
+        "queryHash": "18F56B28",
+        "planCacheShapeHash": "18F56B28",
+        "planCacheKey": "AF03DFE4",
         "optimizationTimeMillis": 0,
         "maxIndexedOrSolutionsReached": false,
         "maxIndexedAndSolutionsReached": false,
@@ -1619,14 +1594,12 @@
           "inputStage": {
             "stage": "IXSCAN",
             "keyPattern": {
-              "category.main": 1,
-              "category.sub": 1
+              "mainCategoryId": 1
             },
-            "indexName": "productsCategoryCompound",
+            "indexName": "productsMainPartial",
             "isMultiKey": false,
             "multiKeyPaths": {
-              "category.main": [],
-              "category.sub": []
+              "mainCategoryId": []
             },
             "isUnique": false,
             "isSparse": false,
@@ -1634,11 +1607,8 @@
             "indexVersion": 2,
             "direction": "forward",
             "indexBounds": {
-              "category.main": [
-                "[\"Electronics\", \"Electronics\"]"
-              ],
-              "category.sub": [
-                "[\"Laptops\", \"Laptops\"]"
+              "mainCategoryId": [
+                "[ObjectId('6969308deb7b999a2d2c0226'), ObjectId('6969308deb7b999a2d2c0226')]"
               ]
             }
           }
@@ -1647,44 +1617,42 @@
       },
       "executionStats": {
         "executionSuccess": true,
-        "nReturned": 0,
-        "executionTimeMillis": 0,
-        "totalKeysExamined": 0,
-        "totalDocsExamined": 0,
+        "nReturned": 656,
+        "executionTimeMillis": 1,
+        "totalKeysExamined": 656,
+        "totalDocsExamined": 656,
         "executionStages": {
           "isCached": false,
           "stage": "FETCH",
-          "nReturned": 0,
-          "executionTimeMillisEstimate": 0,
-          "works": 1,
-          "advanced": 0,
+          "nReturned": 656,
+          "executionTimeMillisEstimate": 1,
+          "works": 657,
+          "advanced": 656,
           "needTime": 0,
           "needYield": 0,
           "saveState": 0,
           "restoreState": 0,
           "isEOF": 1,
-          "docsExamined": 0,
+          "docsExamined": 656,
           "alreadyHasObj": 0,
           "inputStage": {
             "stage": "IXSCAN",
-            "nReturned": 0,
+            "nReturned": 656,
             "executionTimeMillisEstimate": 0,
-            "works": 1,
-            "advanced": 0,
+            "works": 657,
+            "advanced": 656,
             "needTime": 0,
             "needYield": 0,
             "saveState": 0,
             "restoreState": 0,
             "isEOF": 1,
             "keyPattern": {
-              "category.main": 1,
-              "category.sub": 1
+              "mainCategoryId": 1
             },
-            "indexName": "productsCategoryCompound",
+            "indexName": "productsMainPartial",
             "isMultiKey": false,
             "multiKeyPaths": {
-              "category.main": [],
-              "category.sub": []
+              "mainCategoryId": []
             },
             "isUnique": false,
             "isSparse": false,
@@ -1692,14 +1660,11 @@
             "indexVersion": 2,
             "direction": "forward",
             "indexBounds": {
-              "category.main": [
-                "[\"Electronics\", \"Electronics\"]"
-              ],
-              "category.sub": [
-                "[\"Laptops\", \"Laptops\"]"
+              "mainCategoryId": [
+                "[ObjectId('6969308deb7b999a2d2c0226'), ObjectId('6969308deb7b999a2d2c0226')]"
               ]
             },
-            "keysExamined": 0,
+            "keysExamined": 656,
             "seeks": 1,
             "dupsTested": 0,
             "dupsDropped": 0
@@ -1707,15 +1672,16 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "D2C101BB6451F655BE36970B697088492F6148F481FEB460D190AFAFC1DA8F77",
+      "queryShapeHash": "35CFEE61915F6DB872136230B36F773C106877255756C050179C092592143671",
       "command": {
         "find": "products",
         "filter": {
-          "category.main": "Electronics",
-          "category.sub": "Laptops"
+          "mainCategoryId": {
+            "$oid": "6969308deb7b999a2d2c0226"
+          }
         },
-        "hint": "productsCategoryCompound",
-        "$db": "eCommerceProjectEmbedding"
+        "hint": "productsMainPartial",
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -1739,14 +1705,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693636,
-            "i": 13
+            "t": 1768766058,
+            "i": 42
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "O1gVe9EX7eiz0AkCYNF/DfeYPqc=",
+              "base64": "a22NzEsQUx/5To+oFZlcImnDj+I=",
               "subType": "00"
             }
           },
@@ -1755,8 +1721,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693636,
-          "i": 13
+          "t": 1768766058,
+          "i": 42
         }
       }
     }
@@ -1774,7 +1740,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.products",
+        "namespace": "eCommerceProjectHybrid.products",
         "parsedQuery": {
           "$text": {
             "$search": "gaming laptop",
@@ -1786,7 +1752,7 @@
         "indexFilterSet": false,
         "queryHash": "977639C2",
         "planCacheShapeHash": "977639C2",
-        "planCacheKey": "51ED1990",
+        "planCacheKey": "1C106ECD",
         "optimizationTimeMillis": 0,
         "maxIndexedOrSolutionsReached": false,
         "maxIndexedAndSolutionsReached": false,
@@ -1904,7 +1870,7 @@
             },
             "memLimit": 33554432,
             "type": "default",
-            "totalDataSizeSorted": 73475,
+            "totalDataSizeSorted": 72121,
             "usedDisk": false,
             "spills": 0,
             "spilledDataStorageSize": 0,
@@ -2008,7 +1974,7 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "5BAC0ED440890F795BC2849A696C1EB831A73FDE4763E30D87AAAB8DE8FD068D",
+      "queryShapeHash": "47416BE2DFB964B5C65DA258C1579444D9C973DD8C3DC3B6D3DF82D558E18DE9",
       "command": {
         "find": "products",
         "filter": {
@@ -2026,7 +1992,7 @@
             "$meta": "textScore"
           }
         },
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -2050,14 +2016,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693636,
-            "i": 19
+            "t": 1768766058,
+            "i": 47
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "O1gVe9EX7eiz0AkCYNF/DfeYPqc=",
+              "base64": "a22NzEsQUx/5To+oFZlcImnDj+I=",
               "subType": "00"
             }
           },
@@ -2066,8 +2032,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693636,
-          "i": 19
+          "t": 1768766058,
+          "i": 47
         }
       }
     }
@@ -2083,7 +2049,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.users",
+        "namespace": "eCommerceProjectHybrid.users",
         "parsedQuery": {
           "email": {
             "$eq": "dennisparker@gmail.com"
@@ -2157,7 +2123,7 @@
             }
           },
           "nReturned": 1,
-          "executionTimeMillisEstimate": 0,
+          "executionTimeMillisEstimate": 1,
           "works": 1001,
           "advanced": 1,
           "needTime": 999,
@@ -2216,14 +2182,14 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "730A4C97BD3615F00CB1DD75D26A1BB061033EDA4F1575BFB9FBA844656E3799",
+      "queryShapeHash": "9C762346A635C3E165F4FA48CB83C73120FD1B4761F323506C76181F680FC009",
       "command": {
         "find": "users",
         "filter": {
           "email": "dennisparker@gmail.com"
         },
         "hint": "usersEmailUnique",
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -2247,14 +2213,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693636,
-            "i": 21
+            "t": 1768766059,
+            "i": 2
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "O1gVe9EX7eiz0AkCYNF/DfeYPqc=",
+              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
               "subType": "00"
             }
           },
@@ -2263,8 +2229,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693636,
-          "i": 21
+          "t": 1768766059,
+          "i": 2
         }
       }
     }
@@ -2280,7 +2246,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.users",
+        "namespace": "eCommerceProjectHybrid.users",
         "parsedQuery": {
           "addresses.zipcode": {
             "$eq": "N9F 2WT"
@@ -2383,14 +2349,14 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "78F89262A8116C75BCFCE2BB006DF7709BC319FECF3EB76D88B35A1093565338",
+      "queryShapeHash": "FFBA4B5E7FA731A49794A8E96D575A3F701493FCA2D37AA3E31222CC105B432F",
       "command": {
         "find": "users",
         "filter": {
           "addresses.zipcode": "N9F 2WT"
         },
         "hint": "usersAddressesZipcode",
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -2414,14 +2380,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693636,
-            "i": 24
+            "t": 1768766059,
+            "i": 10
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "O1gVe9EX7eiz0AkCYNF/DfeYPqc=",
+              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
               "subType": "00"
             }
           },
@@ -2430,8 +2396,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693636,
-          "i": 24
+          "t": 1768766059,
+          "i": 10
         }
       }
     }
@@ -2454,7 +2420,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.orders",
+        "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
           "$and": [
             {
@@ -2566,7 +2532,7 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "2DD5AD4EAA821845470D92D3818E98C00D8F460011A373F6EA62B724349E8ED5",
+      "queryShapeHash": "F92889947D3EC39C5DFC305203BFC418E564B118B8DB5529D34791BFBCAEFCC1",
       "command": {
         "find": "orders",
         "filter": {
@@ -2583,7 +2549,7 @@
           "orderDate": -1
         },
         "hint": "ordersOrderDateIdx",
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -2607,14 +2573,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693636,
-            "i": 26
+            "t": 1768766059,
+            "i": 11
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "O1gVe9EX7eiz0AkCYNF/DfeYPqc=",
+              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
               "subType": "00"
             }
           },
@@ -2623,8 +2589,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693636,
-          "i": 26
+          "t": 1768766059,
+          "i": 11
         }
       }
     }
@@ -2635,21 +2601,21 @@
     "mode": "withIndexes",
     "indexHint": "ordersStatusIdx",
     "query": {
-      "status": "Pending"
+      "status": "Delivered"
     },
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.orders",
+        "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
           "status": {
-            "$eq": "Pending"
+            "$eq": "Delivered"
           }
         },
         "indexFilterSet": false,
         "queryHash": "5D6543D9",
         "planCacheShapeHash": "5D6543D9",
-        "planCacheKey": "39538AB7",
+        "planCacheKey": "343D34AF",
         "optimizationTimeMillis": 0,
         "maxIndexedOrSolutionsReached": false,
         "maxIndexedAndSolutionsReached": false,
@@ -2675,7 +2641,7 @@
             "direction": "forward",
             "indexBounds": {
               "status": [
-                "[\"Pending\", \"Pending\"]"
+                "[\"Delivered\", \"Delivered\"]"
               ]
             }
           }
@@ -2684,30 +2650,30 @@
       },
       "executionStats": {
         "executionSuccess": true,
-        "nReturned": 1955,
+        "nReturned": 1997,
         "executionTimeMillis": 2,
-        "totalKeysExamined": 1955,
-        "totalDocsExamined": 1955,
+        "totalKeysExamined": 1997,
+        "totalDocsExamined": 1997,
         "executionStages": {
           "isCached": false,
           "stage": "FETCH",
-          "nReturned": 1955,
-          "executionTimeMillisEstimate": 2,
-          "works": 1956,
-          "advanced": 1955,
+          "nReturned": 1997,
+          "executionTimeMillisEstimate": 0,
+          "works": 1998,
+          "advanced": 1997,
           "needTime": 0,
           "needYield": 0,
           "saveState": 0,
           "restoreState": 0,
           "isEOF": 1,
-          "docsExamined": 1955,
+          "docsExamined": 1997,
           "alreadyHasObj": 0,
           "inputStage": {
             "stage": "IXSCAN",
-            "nReturned": 1955,
-            "executionTimeMillisEstimate": 2,
-            "works": 1956,
-            "advanced": 1955,
+            "nReturned": 1997,
+            "executionTimeMillisEstimate": 0,
+            "works": 1998,
+            "advanced": 1997,
             "needTime": 0,
             "needYield": 0,
             "saveState": 0,
@@ -2728,10 +2694,10 @@
             "direction": "forward",
             "indexBounds": {
               "status": [
-                "[\"Pending\", \"Pending\"]"
+                "[\"Delivered\", \"Delivered\"]"
               ]
             },
-            "keysExamined": 1955,
+            "keysExamined": 1997,
             "seeks": 1,
             "dupsTested": 0,
             "dupsDropped": 0
@@ -2739,14 +2705,14 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "7CF62025D2AD246F6EEA07461A5213A082D138714B77ED943DA31235698325BD",
+      "queryShapeHash": "2FFEA67314D66A7A02537BCD5472ED25D6E4390305D6D6CC3A7E38937590BDBE",
       "command": {
         "find": "orders",
         "filter": {
-          "status": "Pending"
+          "status": "Delivered"
         },
         "hint": "ordersStatusIdx",
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -2770,14 +2736,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693636,
-            "i": 29
+            "t": 1768766059,
+            "i": 15
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "O1gVe9EX7eiz0AkCYNF/DfeYPqc=",
+              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
               "subType": "00"
             }
           },
@@ -2786,8 +2752,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693636,
-          "i": 29
+          "t": 1768766059,
+          "i": 15
         }
       }
     }
@@ -2798,21 +2764,21 @@
     "mode": "withIndexes",
     "indexHint": "ordersCustomerEmailDate",
     "query": {
-      "customerSnapshot.email": "sebastianhawkins@outlook.com"
+      "user.emailSnapshot": "sebastianhawkins@outlook.com"
     },
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.orders",
+        "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
-          "customerSnapshot.email": {
+          "user.emailSnapshot": {
             "$eq": "sebastianhawkins@outlook.com"
           }
         },
         "indexFilterSet": false,
-        "queryHash": "31E2E18A",
-        "planCacheShapeHash": "31E2E18A",
-        "planCacheKey": "DC8B14AF",
+        "queryHash": "AE5508A6",
+        "planCacheShapeHash": "AE5508A6",
+        "planCacheKey": "EDC33972",
         "optimizationTimeMillis": 0,
         "maxIndexedOrSolutionsReached": false,
         "maxIndexedAndSolutionsReached": false,
@@ -2824,13 +2790,13 @@
           "inputStage": {
             "stage": "IXSCAN",
             "keyPattern": {
-              "customerSnapshot.email": 1,
+              "user.emailSnapshot": 1,
               "orderDate": -1
             },
             "indexName": "ordersCustomerEmailDate",
             "isMultiKey": false,
             "multiKeyPaths": {
-              "customerSnapshot.email": [],
+              "user.emailSnapshot": [],
               "orderDate": []
             },
             "isUnique": false,
@@ -2839,7 +2805,7 @@
             "indexVersion": 2,
             "direction": "forward",
             "indexBounds": {
-              "customerSnapshot.email": [
+              "user.emailSnapshot": [
                 "[\"sebastianhawkins@outlook.com\", \"sebastianhawkins@outlook.com\"]"
               ],
               "orderDate": [
@@ -2882,13 +2848,13 @@
             "restoreState": 0,
             "isEOF": 1,
             "keyPattern": {
-              "customerSnapshot.email": 1,
+              "user.emailSnapshot": 1,
               "orderDate": -1
             },
             "indexName": "ordersCustomerEmailDate",
             "isMultiKey": false,
             "multiKeyPaths": {
-              "customerSnapshot.email": [],
+              "user.emailSnapshot": [],
               "orderDate": []
             },
             "isUnique": false,
@@ -2897,7 +2863,7 @@
             "indexVersion": 2,
             "direction": "forward",
             "indexBounds": {
-              "customerSnapshot.email": [
+              "user.emailSnapshot": [
                 "[\"sebastianhawkins@outlook.com\", \"sebastianhawkins@outlook.com\"]"
               ],
               "orderDate": [
@@ -2912,17 +2878,17 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "3B2011F379F8AE6AFCA8902E8A85CEEF6E43C06756ABAF1DB24BEE72051C1828",
+      "queryShapeHash": "F58458460C5C9C851BE54CEA8C69102B2F9895DE5C2797819AEDE36E0A8AEE48",
       "command": {
         "find": "orders",
         "filter": {
-          "customerSnapshot.email": "sebastianhawkins@outlook.com"
+          "user.emailSnapshot": "sebastianhawkins@outlook.com"
         },
         "sort": {
           "orderDate": -1
         },
         "hint": "ordersCustomerEmailDate",
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -2946,14 +2912,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693636,
-            "i": 31
+            "t": 1768766059,
+            "i": 15
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "O1gVe9EX7eiz0AkCYNF/DfeYPqc=",
+              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
               "subType": "00"
             }
           },
@@ -2962,8 +2928,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693636,
-          "i": 31
+          "t": 1768766059,
+          "i": 15
         }
       }
     }
@@ -2974,21 +2940,21 @@
     "mode": "withIndexes",
     "indexHint": "ordersItemsSku",
     "query": {
-      "items.sku": "OFF-ACC-12497"
+      "items.skuSnapshot": "OFF-ACC-12497"
     },
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.orders",
+        "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
-          "items.sku": {
+          "items.skuSnapshot": {
             "$eq": "OFF-ACC-12497"
           }
         },
         "indexFilterSet": false,
-        "queryHash": "566AFF1D",
-        "planCacheShapeHash": "566AFF1D",
-        "planCacheKey": "7DFC6954",
+        "queryHash": "4F0D3C6C",
+        "planCacheShapeHash": "4F0D3C6C",
+        "planCacheKey": "4472AAEC",
         "optimizationTimeMillis": 0,
         "maxIndexedOrSolutionsReached": false,
         "maxIndexedAndSolutionsReached": false,
@@ -3000,12 +2966,12 @@
           "inputStage": {
             "stage": "IXSCAN",
             "keyPattern": {
-              "items.sku": 1
+              "items.skuSnapshot": 1
             },
             "indexName": "ordersItemsSku",
             "isMultiKey": true,
             "multiKeyPaths": {
-              "items.sku": [
+              "items.skuSnapshot": [
                 "items"
               ]
             },
@@ -3015,7 +2981,7 @@
             "indexVersion": 2,
             "direction": "forward",
             "indexBounds": {
-              "items.sku": [
+              "items.skuSnapshot": [
                 "[\"OFF-ACC-12497\", \"OFF-ACC-12497\"]"
               ]
             }
@@ -3055,12 +3021,12 @@
             "restoreState": 0,
             "isEOF": 1,
             "keyPattern": {
-              "items.sku": 1
+              "items.skuSnapshot": 1
             },
             "indexName": "ordersItemsSku",
             "isMultiKey": true,
             "multiKeyPaths": {
-              "items.sku": [
+              "items.skuSnapshot": [
                 "items"
               ]
             },
@@ -3070,7 +3036,7 @@
             "indexVersion": 2,
             "direction": "forward",
             "indexBounds": {
-              "items.sku": [
+              "items.skuSnapshot": [
                 "[\"OFF-ACC-12497\", \"OFF-ACC-12497\"]"
               ]
             },
@@ -3082,14 +3048,14 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "42A813B002FD1B78787FF377E298B5BD2A1243DE4AEF3C5896722D165F9E641D",
+      "queryShapeHash": "3FCB3DA5FC31494FD2358381CCA2364833DE7AC83E2A60FE551B70DB0FC0D426",
       "command": {
         "find": "orders",
         "filter": {
-          "items.sku": "OFF-ACC-12497"
+          "items.skuSnapshot": "OFF-ACC-12497"
         },
         "hint": "ordersItemsSku",
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -3113,14 +3079,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693636,
-            "i": 33
+            "t": 1768766059,
+            "i": 35
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "O1gVe9EX7eiz0AkCYNF/DfeYPqc=",
+              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
               "subType": "00"
             }
           },
@@ -3129,8 +3095,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693636,
-          "i": 33
+          "t": 1768766059,
+          "i": 35
         }
       }
     }
@@ -3146,7 +3112,7 @@
     "explain": {
       "explainVersion": "1",
       "queryPlanner": {
-        "namespace": "eCommerceProjectEmbedding.orders",
+        "namespace": "eCommerceProjectHybrid.orders",
         "parsedQuery": {
           "status": {
             "$eq": "Pending"
@@ -3198,7 +3164,7 @@
           "isCached": false,
           "stage": "FETCH",
           "nReturned": 1955,
-          "executionTimeMillisEstimate": 0,
+          "executionTimeMillisEstimate": 3,
           "works": 1956,
           "advanced": 1955,
           "needTime": 0,
@@ -3211,7 +3177,7 @@
           "inputStage": {
             "stage": "IXSCAN",
             "nReturned": 1955,
-            "executionTimeMillisEstimate": 0,
+            "executionTimeMillisEstimate": 2,
             "works": 1956,
             "advanced": 1955,
             "needTime": 0,
@@ -3245,14 +3211,14 @@
         },
         "allPlansExecution": []
       },
-      "queryShapeHash": "7CF62025D2AD246F6EEA07461A5213A082D138714B77ED943DA31235698325BD",
+      "queryShapeHash": "2FFEA67314D66A7A02537BCD5472ED25D6E4390305D6D6CC3A7E38937590BDBE",
       "command": {
         "find": "orders",
         "filter": {
           "status": "Pending"
         },
         "hint": "ordersPendingPartial",
-        "$db": "eCommerceProjectEmbedding"
+        "$db": "eCommerceProjectHybrid"
       },
       "serverInfo": {
         "host": "ac-ajgplwa-shard-00-01.twyx9wz.mongodb.net",
@@ -3276,14 +3242,14 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768693637,
-            "i": 2
+            "t": 1768766059,
+            "i": 35
           }
         },
         "signature": {
           "hash": {
             "$binary": {
-              "base64": "s5qPA7f0UFiIXLkmt4lh0PvLpVo=",
+              "base64": "JbhwQOY/Tm77ndXaJ0oLmOBsfxM=",
               "subType": "00"
             }
           },
@@ -3292,8 +3258,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768693637,
-          "i": 2
+          "t": 1768766059,
+          "i": 35
         }
       }
     }

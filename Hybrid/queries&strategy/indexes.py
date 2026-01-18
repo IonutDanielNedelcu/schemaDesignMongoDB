@@ -4,8 +4,12 @@ from pymongo.collation import Collation
 
 
 productsSkuUnique = 'productsSkuUnique'
-productsCategoryCompound = 'productsCategoryCompound'
 productsText = 'productsText'
+# productsCategoryCompound replaced by category partial indexes (main/sub)
+productsMainPartial = 'productsMainPartial'
+productsSubPartial = 'productsSubPartial'
+categoriesMainPartial = 'categoriesMainPartial'
+categoriesSubPartial = 'categoriesSubPartial'
 
 usersEmailUnique = 'usersEmailUnique'
 usersAddressesZipcode = 'usersAddressesZipcode'
@@ -27,10 +31,15 @@ def createIndexes(db):
             'options': {'unique': True, 'name': productsSkuUnique}, 
             'type': 'Single-field & Unique'
         },
-        { 
-            'keys': [('category.main', ASCENDING), ('category.sub', ASCENDING)], 
-            'options': {'name': productsCategoryCompound}, 
-            'type': 'Compound' 
+        {
+            'keys': [('mainCategoryId', ASCENDING)],
+            'options': {'name': productsMainPartial},
+            'type': 'Single-field - main category'
+        },
+        {
+            'keys': [('subCategoryId', ASCENDING)],
+            'options': {'name': productsSubPartial, 'partialFilterExpression': {'subCategoryId': {'$type': 'objectId'}}},
+            'type': 'Partial - products in sub categories'
         },
         { 
             'keys': [('name', TEXT), ('details.description', TEXT)], 
@@ -64,12 +73,12 @@ def createIndexes(db):
             'type': 'Single-field' 
         },
         { 
-            'keys': [('customerSnapshot.email', ASCENDING), ('orderDate', DESCENDING)], 
+            'keys': [('user.emailSnapshot', ASCENDING), ('orderDate', DESCENDING)], 
             'options': {'name': ordersCustomerEmailDate}, 
             'type': 'Compound' 
         },
         { 
-            'keys': [('items.sku', ASCENDING)], 
+            'keys': [('items.skuSnapshot', ASCENDING)], 
             'options': {'name': ordersItemsSku}, 
             'type': 'Multikey (array field)' 
         },
@@ -112,6 +121,27 @@ def createIndexes(db):
     for idx in ordersIndexes:
         createAndReport(orders, idx)
     print("Finished creating indexes for 'orders' collection.")
+
+    # indexes for categories (create two partial indexes: main vs subcategories)
+    categories = db['categories']
+    categoryIndexes = [
+        {
+            'keys': [('parentCategoryId', ASCENDING)],
+            'options': {'name': categoriesMainPartial},
+            'type': 'Single-field - main categories (parentCategoryId)'
+        },
+        {
+            'keys': [('parentCategoryId', ASCENDING)],
+            'options': {'name': categoriesSubPartial, 'partialFilterExpression': {'parentCategoryId': {'$type': 'objectId'}}},
+            'type': 'Partial - sub categories'
+        }
+    ]
+
+    print()
+    print("Started creating indexes for 'categories' collection.")
+    for idx in categoryIndexes:
+        createAndReport(categories, idx)
+    print("Finished creating indexes for 'categories' collection.")
 
 
 # if we want it the script to be ran by itself
