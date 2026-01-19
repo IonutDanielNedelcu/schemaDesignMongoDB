@@ -17,7 +17,7 @@
               "shardName": "rs1",
               "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
+                "host": "83ecf7059cf0",
                 "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -52,7 +52,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -87,7 +87,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -123,22 +123,22 @@
       },
       "executionStats": {
         "nReturned": 1,
-        "executionTimeMillis": 3,
+        "executionTimeMillis": 2,
         "totalKeysExamined": 0,
         "totalDocsExamined": 5000,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 1,
-          "executionTimeMillis": 3,
+          "executionTimeMillis": 2,
           "totalKeysExamined": 0,
           "totalDocsExamined": 5000,
-          "totalChildMillis": 5,
+          "totalChildMillis": 0,
           "shards": [
             {
               "shardName": "rs1",
               "executionSuccess": true,
               "nReturned": 0,
-              "executionTimeMillis": 2,
+              "executionTimeMillis": 0,
               "totalKeysExamined": 0,
               "totalDocsExamined": 1681,
               "executionStages": {
@@ -179,7 +179,7 @@
               "shardName": "rs2",
               "executionSuccess": true,
               "nReturned": 1,
-              "executionTimeMillis": 1,
+              "executionTimeMillis": 0,
               "totalKeysExamined": 0,
               "totalDocsExamined": 1623,
               "executionStages": {
@@ -220,7 +220,7 @@
               "shardName": "rs3",
               "executionSuccess": true,
               "nReturned": 0,
-              "executionTimeMillis": 2,
+              "executionTimeMillis": 0,
               "totalKeysExamined": 0,
               "totalDocsExamined": 1696,
               "executionStages": {
@@ -275,7 +275,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -301,7 +301,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -309,7 +309,7 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833684,
+              "t": 1768854680,
               "i": 7
             }
           },
@@ -329,7 +329,7 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833684,
+            "t": 1768854680,
             "i": 7
           }
         },
@@ -345,7 +345,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833684,
+          "t": 1768854680,
           "i": 7
         }
       }
@@ -368,11 +368,11 @@
           "stage": "SHARD_MERGE",
           "shards": [
             {
-              "shardName": "rs2",
-              "connectionString": "rs2/shard2:27020",
+              "shardName": "rs1",
+              "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
-                "port": 27020,
+                "host": "83ecf7059cf0",
+                "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -407,11 +407,11 @@
               "rejectedPlans": []
             },
             {
-              "shardName": "rs1",
-              "connectionString": "rs1/shard1:27018",
+              "shardName": "rs2",
+              "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
-                "port": 27018,
+                "host": "b6917fddcd63",
+                "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -449,7 +449,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -489,65 +489,22 @@
       },
       "executionStats": {
         "nReturned": 656,
-        "executionTimeMillis": 2,
+        "executionTimeMillis": 1,
         "totalKeysExamined": 0,
         "totalDocsExamined": 5000,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 656,
-          "executionTimeMillis": 2,
+          "executionTimeMillis": 1,
           "totalKeysExamined": 0,
           "totalDocsExamined": 5000,
-          "totalChildMillis": 3,
+          "totalChildMillis": 0,
           "shards": [
-            {
-              "shardName": "rs2",
-              "executionSuccess": true,
-              "nReturned": 197,
-              "executionTimeMillis": 1,
-              "totalKeysExamined": 0,
-              "totalDocsExamined": 1623,
-              "executionStages": {
-                "stage": "SHARDING_FILTER",
-                "nReturned": 197,
-                "executionTimeMillisEstimate": 0,
-                "works": 1624,
-                "advanced": 197,
-                "needTime": 1426,
-                "needYield": 0,
-                "saveState": 1,
-                "restoreState": 1,
-                "isEOF": 1,
-                "chunkSkips": 0,
-                "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "mainCategoryId": {
-                      "$eq": {
-                        "$oid": "6963ae5f44e96769ce233165"
-                      }
-                    }
-                  },
-                  "nReturned": 197,
-                  "executionTimeMillisEstimate": 0,
-                  "works": 1624,
-                  "advanced": 197,
-                  "needTime": 1426,
-                  "needYield": 0,
-                  "saveState": 1,
-                  "restoreState": 1,
-                  "isEOF": 1,
-                  "direction": "forward",
-                  "docsExamined": 1623
-                }
-              },
-              "allPlansExecution": []
-            },
             {
               "shardName": "rs1",
               "executionSuccess": true,
               "nReturned": 237,
-              "executionTimeMillis": 1,
+              "executionTimeMillis": 0,
               "totalKeysExamined": 0,
               "totalDocsExamined": 1681,
               "executionStages": {
@@ -587,10 +544,53 @@
               "allPlansExecution": []
             },
             {
+              "shardName": "rs2",
+              "executionSuccess": true,
+              "nReturned": 197,
+              "executionTimeMillis": 0,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 1623,
+              "executionStages": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 197,
+                "executionTimeMillisEstimate": 0,
+                "works": 1624,
+                "advanced": 197,
+                "needTime": 1426,
+                "needYield": 0,
+                "saveState": 1,
+                "restoreState": 1,
+                "isEOF": 1,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "mainCategoryId": {
+                      "$eq": {
+                        "$oid": "6963ae5f44e96769ce233165"
+                      }
+                    }
+                  },
+                  "nReturned": 197,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 1624,
+                  "advanced": 197,
+                  "needTime": 1426,
+                  "needYield": 0,
+                  "saveState": 1,
+                  "restoreState": 1,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 1623
+                }
+              },
+              "allPlansExecution": []
+            },
+            {
               "shardName": "rs3",
               "executionSuccess": true,
               "nReturned": 222,
-              "executionTimeMillis": 1,
+              "executionTimeMillis": 0,
               "totalKeysExamined": 0,
               "totalDocsExamined": 1696,
               "executionStages": {
@@ -633,11 +633,11 @@
         },
         "allPlansExecution": [
           {
-            "shardName": "rs2",
+            "shardName": "rs1",
             "allPlans": []
           },
           {
-            "shardName": "rs1",
+            "shardName": "rs2",
             "allPlans": []
           },
           {
@@ -647,7 +647,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -675,7 +675,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -683,7 +683,7 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833684,
+              "t": 1768854680,
               "i": 7
             }
           },
@@ -703,7 +703,7 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833684,
+            "t": 1768854680,
             "i": 7
           }
         },
@@ -719,7 +719,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833684,
+          "t": 1768854680,
           "i": 7
         }
       }
@@ -756,7 +756,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -813,7 +813,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -870,7 +870,7 @@
               "shardName": "rs1",
               "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
+                "host": "83ecf7059cf0",
                 "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -928,28 +928,28 @@
       },
       "executionStats": {
         "nReturned": 50,
-        "executionTimeMillis": 6,
+        "executionTimeMillis": 3,
         "totalKeysExamined": 0,
         "totalDocsExamined": 5000,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 50,
-          "executionTimeMillis": 6,
+          "executionTimeMillis": 3,
           "totalKeysExamined": 0,
           "totalDocsExamined": 5000,
-          "totalChildMillis": 13,
+          "totalChildMillis": 6,
           "shards": [
             {
               "shardName": "rs2",
               "executionSuccess": true,
               "nReturned": 17,
-              "executionTimeMillis": 4,
+              "executionTimeMillis": 2,
               "totalKeysExamined": 0,
               "totalDocsExamined": 1623,
               "executionStages": {
                 "stage": "SHARDING_FILTER",
                 "nReturned": 17,
-                "executionTimeMillisEstimate": 3,
+                "executionTimeMillisEstimate": 0,
                 "works": 1624,
                 "advanced": 17,
                 "needTime": 1606,
@@ -977,7 +977,7 @@
                     ]
                   },
                   "nReturned": 17,
-                  "executionTimeMillisEstimate": 3,
+                  "executionTimeMillisEstimate": 0,
                   "works": 1624,
                   "advanced": 17,
                   "needTime": 1606,
@@ -995,13 +995,13 @@
               "shardName": "rs3",
               "executionSuccess": true,
               "nReturned": 18,
-              "executionTimeMillis": 4,
+              "executionTimeMillis": 2,
               "totalKeysExamined": 0,
               "totalDocsExamined": 1696,
               "executionStages": {
                 "stage": "SHARDING_FILTER",
                 "nReturned": 18,
-                "executionTimeMillisEstimate": 3,
+                "executionTimeMillisEstimate": 0,
                 "works": 1697,
                 "advanced": 18,
                 "needTime": 1678,
@@ -1029,7 +1029,7 @@
                     ]
                   },
                   "nReturned": 18,
-                  "executionTimeMillisEstimate": 3,
+                  "executionTimeMillisEstimate": 0,
                   "works": 1697,
                   "advanced": 18,
                   "needTime": 1678,
@@ -1047,13 +1047,13 @@
               "shardName": "rs1",
               "executionSuccess": true,
               "nReturned": 15,
-              "executionTimeMillis": 5,
+              "executionTimeMillis": 2,
               "totalKeysExamined": 0,
               "totalDocsExamined": 1681,
               "executionStages": {
                 "stage": "SHARDING_FILTER",
                 "nReturned": 15,
-                "executionTimeMillisEstimate": 3,
+                "executionTimeMillisEstimate": 0,
                 "works": 1682,
                 "advanced": 15,
                 "needTime": 1666,
@@ -1081,7 +1081,7 @@
                     ]
                   },
                   "nReturned": 15,
-                  "executionTimeMillisEstimate": 3,
+                  "executionTimeMillisEstimate": 0,
                   "works": 1682,
                   "advanced": 15,
                   "needTime": 1666,
@@ -1113,7 +1113,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -1152,7 +1152,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -1160,7 +1160,7 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833684,
+              "t": 1768854680,
               "i": 7
             }
           },
@@ -1180,7 +1180,7 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833684,
+            "t": 1768854680,
             "i": 7
           }
         },
@@ -1196,7 +1196,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833684,
+          "t": 1768854680,
           "i": 7
         }
       }
@@ -1220,7 +1220,7 @@
               "shardName": "rs1",
               "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
+                "host": "83ecf7059cf0",
                 "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -1255,7 +1255,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -1290,7 +1290,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -1326,13 +1326,13 @@
       },
       "executionStats": {
         "nReturned": 1,
-        "executionTimeMillis": 1,
+        "executionTimeMillis": 0,
         "totalKeysExamined": 0,
         "totalDocsExamined": 1000,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 1,
-          "executionTimeMillis": 1,
+          "executionTimeMillis": 0,
           "totalKeysExamined": 0,
           "totalDocsExamined": 1000,
           "totalChildMillis": 0,
@@ -1478,7 +1478,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -1504,7 +1504,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -1512,7 +1512,7 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833684,
+              "t": 1768854680,
               "i": 7
             }
           },
@@ -1532,7 +1532,7 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833684,
+            "t": 1768854680,
             "i": 7
           }
         },
@@ -1548,7 +1548,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833684,
+          "t": 1768854680,
           "i": 7
         }
       }
@@ -1569,11 +1569,11 @@
           "stage": "SHARD_MERGE",
           "shards": [
             {
-              "shardName": "rs3",
-              "connectionString": "rs3/shard3:27021",
+              "shardName": "rs1",
+              "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "f1c845e11400",
-                "port": 27021,
+                "host": "83ecf7059cf0",
+                "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -1607,7 +1607,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -1639,11 +1639,11 @@
               "rejectedPlans": []
             },
             {
-              "shardName": "rs1",
-              "connectionString": "rs1/shard1:27018",
+              "shardName": "rs3",
+              "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
-                "port": 27018,
+                "host": "a68d4c6019c5",
+                "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -1678,17 +1678,99 @@
       },
       "executionStats": {
         "nReturned": 1,
-        "executionTimeMillis": 2,
+        "executionTimeMillis": 1,
         "totalKeysExamined": 0,
         "totalDocsExamined": 2486,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 1,
-          "executionTimeMillis": 2,
+          "executionTimeMillis": 1,
           "totalKeysExamined": 0,
           "totalDocsExamined": 2486,
-          "totalChildMillis": 2,
+          "totalChildMillis": 0,
           "shards": [
+            {
+              "shardName": "rs1",
+              "executionSuccess": true,
+              "nReturned": 0,
+              "executionTimeMillis": 0,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 876,
+              "executionStages": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 0,
+                "executionTimeMillisEstimate": 0,
+                "works": 877,
+                "advanced": 0,
+                "needTime": 876,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 1,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "zipCode": {
+                      "$eq": "N9F 2WT"
+                    }
+                  },
+                  "nReturned": 0,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 877,
+                  "advanced": 0,
+                  "needTime": 876,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 876
+                }
+              },
+              "allPlansExecution": []
+            },
+            {
+              "shardName": "rs2",
+              "executionSuccess": true,
+              "nReturned": 1,
+              "executionTimeMillis": 0,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 818,
+              "executionStages": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 1,
+                "executionTimeMillisEstimate": 0,
+                "works": 819,
+                "advanced": 1,
+                "needTime": 817,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 1,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "zipCode": {
+                      "$eq": "N9F 2WT"
+                    }
+                  },
+                  "nReturned": 1,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 819,
+                  "advanced": 1,
+                  "needTime": 817,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 818
+                }
+              },
+              "allPlansExecution": []
+            },
             {
               "shardName": "rs3",
               "executionSuccess": true,
@@ -1729,94 +1811,12 @@
                 }
               },
               "allPlansExecution": []
-            },
-            {
-              "shardName": "rs2",
-              "executionSuccess": true,
-              "nReturned": 1,
-              "executionTimeMillis": 1,
-              "totalKeysExamined": 0,
-              "totalDocsExamined": 818,
-              "executionStages": {
-                "stage": "SHARDING_FILTER",
-                "nReturned": 1,
-                "executionTimeMillisEstimate": 0,
-                "works": 819,
-                "advanced": 1,
-                "needTime": 817,
-                "needYield": 0,
-                "saveState": 0,
-                "restoreState": 0,
-                "isEOF": 1,
-                "chunkSkips": 0,
-                "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "zipCode": {
-                      "$eq": "N9F 2WT"
-                    }
-                  },
-                  "nReturned": 1,
-                  "executionTimeMillisEstimate": 0,
-                  "works": 819,
-                  "advanced": 1,
-                  "needTime": 817,
-                  "needYield": 0,
-                  "saveState": 0,
-                  "restoreState": 0,
-                  "isEOF": 1,
-                  "direction": "forward",
-                  "docsExamined": 818
-                }
-              },
-              "allPlansExecution": []
-            },
-            {
-              "shardName": "rs1",
-              "executionSuccess": true,
-              "nReturned": 0,
-              "executionTimeMillis": 1,
-              "totalKeysExamined": 0,
-              "totalDocsExamined": 876,
-              "executionStages": {
-                "stage": "SHARDING_FILTER",
-                "nReturned": 0,
-                "executionTimeMillisEstimate": 0,
-                "works": 877,
-                "advanced": 0,
-                "needTime": 876,
-                "needYield": 0,
-                "saveState": 0,
-                "restoreState": 0,
-                "isEOF": 1,
-                "chunkSkips": 0,
-                "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "zipCode": {
-                      "$eq": "N9F 2WT"
-                    }
-                  },
-                  "nReturned": 0,
-                  "executionTimeMillisEstimate": 0,
-                  "works": 877,
-                  "advanced": 0,
-                  "needTime": 876,
-                  "needYield": 0,
-                  "saveState": 0,
-                  "restoreState": 0,
-                  "isEOF": 1,
-                  "direction": "forward",
-                  "docsExamined": 876
-                }
-              },
-              "allPlansExecution": []
             }
           ]
         },
         "allPlansExecution": [
           {
-            "shardName": "rs3",
+            "shardName": "rs1",
             "allPlans": []
           },
           {
@@ -1824,13 +1824,13 @@
             "allPlans": []
           },
           {
-            "shardName": "rs1",
+            "shardName": "rs3",
             "allPlans": []
           }
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -1856,7 +1856,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -1864,7 +1864,7 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833684,
+              "t": 1768854680,
               "i": 7
             }
           },
@@ -1884,7 +1884,7 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833684,
+            "t": 1768854680,
             "i": 7
           }
         },
@@ -1900,7 +1900,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833684,
+          "t": 1768854680,
           "i": 7
         }
       }
@@ -1931,7 +1931,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -2000,7 +2000,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -2069,7 +2069,7 @@
               "shardName": "rs1",
               "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
+                "host": "83ecf7059cf0",
                 "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -2139,22 +2139,22 @@
       },
       "executionStats": {
         "nReturned": 1449,
-        "executionTimeMillis": 5,
+        "executionTimeMillis": 2,
         "totalKeysExamined": 0,
         "totalDocsExamined": 10000,
         "executionStages": {
           "stage": "SHARD_MERGE_SORT",
           "nReturned": 1449,
-          "executionTimeMillis": 5,
+          "executionTimeMillis": 2,
           "totalKeysExamined": 0,
           "totalDocsExamined": 10000,
-          "totalChildMillis": 12,
+          "totalChildMillis": 4,
           "shards": [
             {
               "shardName": "rs3",
               "executionSuccess": true,
               "nReturned": 457,
-              "executionTimeMillis": 4,
+              "executionTimeMillis": 1,
               "totalKeysExamined": 0,
               "totalDocsExamined": 3288,
               "executionStages": {
@@ -2228,7 +2228,7 @@
               "shardName": "rs2",
               "executionSuccess": true,
               "nReturned": 479,
-              "executionTimeMillis": 4,
+              "executionTimeMillis": 1,
               "totalKeysExamined": 0,
               "totalDocsExamined": 3204,
               "executionStages": {
@@ -2302,7 +2302,7 @@
               "shardName": "rs1",
               "executionSuccess": true,
               "nReturned": 513,
-              "executionTimeMillis": 4,
+              "executionTimeMillis": 2,
               "totalKeysExamined": 0,
               "totalDocsExamined": 3508,
               "executionStages": {
@@ -2390,7 +2390,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -2426,7 +2426,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -2434,7 +2434,7 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833684,
+              "t": 1768854680,
               "i": 7
             }
           },
@@ -2454,7 +2454,7 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833684,
+            "t": 1768854680,
             "i": 7
           }
         },
@@ -2470,7 +2470,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833684,
+          "t": 1768854680,
           "i": 7
         }
       }
@@ -2491,11 +2491,11 @@
           "stage": "SHARD_MERGE",
           "shards": [
             {
-              "shardName": "rs2",
-              "connectionString": "rs2/shard2:27020",
+              "shardName": "rs3",
+              "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
-                "port": 27020,
+                "host": "a68d4c6019c5",
+                "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -2526,11 +2526,11 @@
               "rejectedPlans": []
             },
             {
-              "shardName": "rs3",
-              "connectionString": "rs3/shard3:27021",
+              "shardName": "rs2",
+              "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "f1c845e11400",
-                "port": 27021,
+                "host": "b6917fddcd63",
+                "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -2564,7 +2564,7 @@
               "shardName": "rs1",
               "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
+                "host": "83ecf7059cf0",
                 "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -2600,69 +2600,28 @@
       },
       "executionStats": {
         "nReturned": 1997,
-        "executionTimeMillis": 5,
+        "executionTimeMillis": 2,
         "totalKeysExamined": 0,
         "totalDocsExamined": 10000,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 1997,
-          "executionTimeMillis": 5,
+          "executionTimeMillis": 2,
           "totalKeysExamined": 0,
           "totalDocsExamined": 10000,
-          "totalChildMillis": 11,
+          "totalChildMillis": 4,
           "shards": [
-            {
-              "shardName": "rs2",
-              "executionSuccess": true,
-              "nReturned": 648,
-              "executionTimeMillis": 3,
-              "totalKeysExamined": 0,
-              "totalDocsExamined": 3204,
-              "executionStages": {
-                "stage": "SHARDING_FILTER",
-                "nReturned": 648,
-                "executionTimeMillisEstimate": 1,
-                "works": 3205,
-                "advanced": 648,
-                "needTime": 2556,
-                "needYield": 0,
-                "saveState": 3,
-                "restoreState": 3,
-                "isEOF": 1,
-                "chunkSkips": 0,
-                "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "status": {
-                      "$eq": "Delivered"
-                    }
-                  },
-                  "nReturned": 648,
-                  "executionTimeMillisEstimate": 1,
-                  "works": 3205,
-                  "advanced": 648,
-                  "needTime": 2556,
-                  "needYield": 0,
-                  "saveState": 3,
-                  "restoreState": 3,
-                  "isEOF": 1,
-                  "direction": "forward",
-                  "docsExamined": 3204
-                }
-              },
-              "allPlansExecution": []
-            },
             {
               "shardName": "rs3",
               "executionSuccess": true,
               "nReturned": 649,
-              "executionTimeMillis": 4,
+              "executionTimeMillis": 1,
               "totalKeysExamined": 0,
               "totalDocsExamined": 3288,
               "executionStages": {
                 "stage": "SHARDING_FILTER",
                 "nReturned": 649,
-                "executionTimeMillisEstimate": 1,
+                "executionTimeMillisEstimate": 0,
                 "works": 3289,
                 "advanced": 649,
                 "needTime": 2639,
@@ -2679,7 +2638,7 @@
                     }
                   },
                   "nReturned": 649,
-                  "executionTimeMillisEstimate": 1,
+                  "executionTimeMillisEstimate": 0,
                   "works": 3289,
                   "advanced": 649,
                   "needTime": 2639,
@@ -2694,16 +2653,57 @@
               "allPlansExecution": []
             },
             {
+              "shardName": "rs2",
+              "executionSuccess": true,
+              "nReturned": 648,
+              "executionTimeMillis": 1,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 3204,
+              "executionStages": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 648,
+                "executionTimeMillisEstimate": 0,
+                "works": 3205,
+                "advanced": 648,
+                "needTime": 2556,
+                "needYield": 0,
+                "saveState": 3,
+                "restoreState": 3,
+                "isEOF": 1,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "status": {
+                      "$eq": "Delivered"
+                    }
+                  },
+                  "nReturned": 648,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 3205,
+                  "advanced": 648,
+                  "needTime": 2556,
+                  "needYield": 0,
+                  "saveState": 3,
+                  "restoreState": 3,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 3204
+                }
+              },
+              "allPlansExecution": []
+            },
+            {
               "shardName": "rs1",
               "executionSuccess": true,
               "nReturned": 700,
-              "executionTimeMillis": 4,
+              "executionTimeMillis": 2,
               "totalKeysExamined": 0,
               "totalDocsExamined": 3508,
               "executionStages": {
                 "stage": "SHARDING_FILTER",
                 "nReturned": 700,
-                "executionTimeMillisEstimate": 1,
+                "executionTimeMillisEstimate": 0,
                 "works": 3509,
                 "advanced": 700,
                 "needTime": 2808,
@@ -2738,11 +2738,11 @@
         },
         "allPlansExecution": [
           {
-            "shardName": "rs2",
+            "shardName": "rs3",
             "allPlans": []
           },
           {
-            "shardName": "rs3",
+            "shardName": "rs2",
             "allPlans": []
           },
           {
@@ -2752,7 +2752,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -2778,7 +2778,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -2786,7 +2786,7 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833684,
+              "t": 1768854680,
               "i": 7
             }
           },
@@ -2806,7 +2806,7 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833684,
+            "t": 1768854680,
             "i": 7
           }
         },
@@ -2822,7 +2822,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833684,
+          "t": 1768854680,
           "i": 7
         }
       }
@@ -2848,7 +2848,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -2893,22 +2893,22 @@
       },
       "executionStats": {
         "nReturned": 21,
-        "executionTimeMillis": 3,
+        "executionTimeMillis": 1,
         "totalKeysExamined": 0,
         "totalDocsExamined": 3204,
         "executionStages": {
           "stage": "SINGLE_SHARD",
           "nReturned": 21,
-          "executionTimeMillis": 3,
+          "executionTimeMillis": 1,
           "totalKeysExamined": 0,
           "totalDocsExamined": 3204,
-          "totalChildMillis": 2,
+          "totalChildMillis": 1,
           "shards": [
             {
               "shardName": "rs2",
               "executionSuccess": true,
               "nReturned": 21,
-              "executionTimeMillis": 2,
+              "executionTimeMillis": 1,
               "totalKeysExamined": 0,
               "totalDocsExamined": 3204,
               "executionStages": {
@@ -2964,7 +2964,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -2995,7 +2995,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -3003,7 +3003,7 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833684,
+              "t": 1768854680,
               "i": 7
             }
           },
@@ -3023,7 +3023,7 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833684,
+            "t": 1768854680,
             "i": 7
           }
         },
@@ -3039,7 +3039,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833684,
+          "t": 1768854680,
           "i": 7
         }
       }
@@ -3065,7 +3065,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -3104,7 +3104,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -3143,7 +3143,7 @@
               "shardName": "rs1",
               "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
+                "host": "83ecf7059cf0",
                 "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -3183,22 +3183,22 @@
       },
       "executionStats": {
         "nReturned": 9,
-        "executionTimeMillis": 18,
+        "executionTimeMillis": 8,
         "totalKeysExamined": 0,
         "totalDocsExamined": 54944,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 9,
-          "executionTimeMillis": 18,
+          "executionTimeMillis": 8,
           "totalKeysExamined": 0,
           "totalDocsExamined": 54944,
-          "totalChildMillis": 38,
+          "totalChildMillis": 23,
           "shards": [
             {
               "shardName": "rs2",
               "executionSuccess": true,
               "nReturned": 2,
-              "executionTimeMillis": 9,
+              "executionTimeMillis": 7,
               "totalKeysExamined": 0,
               "totalDocsExamined": 18047,
               "executionStages": {
@@ -3241,7 +3241,7 @@
               "shardName": "rs3",
               "executionSuccess": true,
               "nReturned": 4,
-              "executionTimeMillis": 13,
+              "executionTimeMillis": 8,
               "totalKeysExamined": 0,
               "totalDocsExamined": 18488,
               "executionStages": {
@@ -3266,7 +3266,7 @@
                     }
                   },
                   "nReturned": 4,
-                  "executionTimeMillisEstimate": 0,
+                  "executionTimeMillisEstimate": 1,
                   "works": 18489,
                   "advanced": 4,
                   "needTime": 18484,
@@ -3284,13 +3284,13 @@
               "shardName": "rs1",
               "executionSuccess": true,
               "nReturned": 3,
-              "executionTimeMillis": 16,
+              "executionTimeMillis": 8,
               "totalKeysExamined": 0,
               "totalDocsExamined": 18409,
               "executionStages": {
                 "stage": "SHARDING_FILTER",
                 "nReturned": 3,
-                "executionTimeMillisEstimate": 1,
+                "executionTimeMillisEstimate": 2,
                 "works": 18410,
                 "advanced": 3,
                 "needTime": 18406,
@@ -3309,7 +3309,7 @@
                     }
                   },
                   "nReturned": 3,
-                  "executionTimeMillisEstimate": 1,
+                  "executionTimeMillisEstimate": 2,
                   "works": 18410,
                   "advanced": 3,
                   "needTime": 18406,
@@ -3341,7 +3341,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -3369,7 +3369,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -3377,7 +3377,7 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833684,
+              "t": 1768854680,
               "i": 7
             }
           },
@@ -3397,7 +3397,7 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833684,
+            "t": 1768854680,
             "i": 7
           }
         },
@@ -3413,7 +3413,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833684,
+          "t": 1768854680,
           "i": 7
         }
       }
@@ -3434,11 +3434,11 @@
           "stage": "SHARD_MERGE",
           "shards": [
             {
-              "shardName": "rs2",
-              "connectionString": "rs2/shard2:27020",
+              "shardName": "rs1",
+              "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
-                "port": 27020,
+                "host": "83ecf7059cf0",
+                "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -3472,7 +3472,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -3504,11 +3504,11 @@
               "rejectedPlans": []
             },
             {
-              "shardName": "rs1",
-              "connectionString": "rs1/shard1:27018",
+              "shardName": "rs2",
+              "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
-                "port": 27018,
+                "host": "b6917fddcd63",
+                "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -3543,104 +3543,22 @@
       },
       "executionStats": {
         "nReturned": 1955,
-        "executionTimeMillis": 6,
+        "executionTimeMillis": 3,
         "totalKeysExamined": 0,
         "totalDocsExamined": 10000,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 1955,
-          "executionTimeMillis": 6,
+          "executionTimeMillis": 3,
           "totalKeysExamined": 0,
           "totalDocsExamined": 10000,
-          "totalChildMillis": 13,
+          "totalChildMillis": 6,
           "shards": [
-            {
-              "shardName": "rs2",
-              "executionSuccess": true,
-              "nReturned": 630,
-              "executionTimeMillis": 4,
-              "totalKeysExamined": 0,
-              "totalDocsExamined": 3204,
-              "executionStages": {
-                "stage": "SHARDING_FILTER",
-                "nReturned": 630,
-                "executionTimeMillisEstimate": 0,
-                "works": 3205,
-                "advanced": 630,
-                "needTime": 2574,
-                "needYield": 0,
-                "saveState": 3,
-                "restoreState": 3,
-                "isEOF": 1,
-                "chunkSkips": 0,
-                "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "status": {
-                      "$eq": "Pending"
-                    }
-                  },
-                  "nReturned": 630,
-                  "executionTimeMillisEstimate": 0,
-                  "works": 3205,
-                  "advanced": 630,
-                  "needTime": 2574,
-                  "needYield": 0,
-                  "saveState": 3,
-                  "restoreState": 3,
-                  "isEOF": 1,
-                  "direction": "forward",
-                  "docsExamined": 3204
-                }
-              },
-              "allPlansExecution": []
-            },
-            {
-              "shardName": "rs3",
-              "executionSuccess": true,
-              "nReturned": 670,
-              "executionTimeMillis": 4,
-              "totalKeysExamined": 0,
-              "totalDocsExamined": 3288,
-              "executionStages": {
-                "stage": "SHARDING_FILTER",
-                "nReturned": 670,
-                "executionTimeMillisEstimate": 0,
-                "works": 3289,
-                "advanced": 670,
-                "needTime": 2618,
-                "needYield": 0,
-                "saveState": 3,
-                "restoreState": 3,
-                "isEOF": 1,
-                "chunkSkips": 0,
-                "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "status": {
-                      "$eq": "Pending"
-                    }
-                  },
-                  "nReturned": 670,
-                  "executionTimeMillisEstimate": 0,
-                  "works": 3289,
-                  "advanced": 670,
-                  "needTime": 2618,
-                  "needYield": 0,
-                  "saveState": 3,
-                  "restoreState": 3,
-                  "isEOF": 1,
-                  "direction": "forward",
-                  "docsExamined": 3288
-                }
-              },
-              "allPlansExecution": []
-            },
             {
               "shardName": "rs1",
               "executionSuccess": true,
               "nReturned": 655,
-              "executionTimeMillis": 5,
+              "executionTimeMillis": 2,
               "totalKeysExamined": 0,
               "totalDocsExamined": 3508,
               "executionStages": {
@@ -3676,12 +3594,94 @@
                 }
               },
               "allPlansExecution": []
+            },
+            {
+              "shardName": "rs3",
+              "executionSuccess": true,
+              "nReturned": 670,
+              "executionTimeMillis": 2,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 3288,
+              "executionStages": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 670,
+                "executionTimeMillisEstimate": 1,
+                "works": 3289,
+                "advanced": 670,
+                "needTime": 2618,
+                "needYield": 0,
+                "saveState": 3,
+                "restoreState": 3,
+                "isEOF": 1,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "status": {
+                      "$eq": "Pending"
+                    }
+                  },
+                  "nReturned": 670,
+                  "executionTimeMillisEstimate": 1,
+                  "works": 3289,
+                  "advanced": 670,
+                  "needTime": 2618,
+                  "needYield": 0,
+                  "saveState": 3,
+                  "restoreState": 3,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 3288
+                }
+              },
+              "allPlansExecution": []
+            },
+            {
+              "shardName": "rs2",
+              "executionSuccess": true,
+              "nReturned": 630,
+              "executionTimeMillis": 2,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 3204,
+              "executionStages": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 630,
+                "executionTimeMillisEstimate": 1,
+                "works": 3205,
+                "advanced": 630,
+                "needTime": 2574,
+                "needYield": 0,
+                "saveState": 3,
+                "restoreState": 3,
+                "isEOF": 1,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "status": {
+                      "$eq": "Pending"
+                    }
+                  },
+                  "nReturned": 630,
+                  "executionTimeMillisEstimate": 1,
+                  "works": 3205,
+                  "advanced": 630,
+                  "needTime": 2574,
+                  "needYield": 0,
+                  "saveState": 3,
+                  "restoreState": 3,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 3204
+                }
+              },
+              "allPlansExecution": []
             }
           ]
         },
         "allPlansExecution": [
           {
-            "shardName": "rs2",
+            "shardName": "rs1",
             "allPlans": []
           },
           {
@@ -3689,13 +3689,13 @@
             "allPlans": []
           },
           {
-            "shardName": "rs1",
+            "shardName": "rs2",
             "allPlans": []
           }
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -3721,7 +3721,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -3729,7 +3729,7 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833684,
+              "t": 1768854680,
               "i": 7
             }
           },
@@ -3749,7 +3749,7 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833684,
+            "t": 1768854680,
             "i": 7
           }
         },
@@ -3765,7 +3765,7 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833684,
+          "t": 1768854680,
           "i": 7
         }
       }
@@ -3789,7 +3789,7 @@
               "shardName": "rs1",
               "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
+                "host": "83ecf7059cf0",
                 "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -3802,7 +3802,7 @@
                 }
               },
               "queryHash": "62F15908",
-              "planCacheKey": "62F15908",
+              "planCacheKey": "8D039B67",
               "maxIndexedOrSolutionsReached": false,
               "maxIndexedAndSolutionsReached": false,
               "maxScansToExplodeReached": false,
@@ -3824,7 +3824,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -3837,7 +3837,7 @@
                 }
               },
               "queryHash": "62F15908",
-              "planCacheKey": "62F15908",
+              "planCacheKey": "8D039B67",
               "maxIndexedOrSolutionsReached": false,
               "maxIndexedAndSolutionsReached": false,
               "maxScansToExplodeReached": false,
@@ -3859,7 +3859,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -3872,7 +3872,7 @@
                 }
               },
               "queryHash": "62F15908",
-              "planCacheKey": "62F15908",
+              "planCacheKey": "8D039B67",
               "maxIndexedOrSolutionsReached": false,
               "maxIndexedAndSolutionsReached": false,
               "maxScansToExplodeReached": false,
@@ -3895,28 +3895,28 @@
       },
       "executionStats": {
         "nReturned": 1,
-        "executionTimeMillis": 2,
+        "executionTimeMillis": 1,
         "totalKeysExamined": 0,
         "totalDocsExamined": 5000,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 1,
-          "executionTimeMillis": 2,
+          "executionTimeMillis": 1,
           "totalKeysExamined": 0,
           "totalDocsExamined": 5000,
-          "totalChildMillis": 2,
+          "totalChildMillis": 1,
           "shards": [
             {
               "shardName": "rs1",
               "executionSuccess": true,
               "nReturned": 0,
-              "executionTimeMillis": 1,
+              "executionTimeMillis": 0,
               "totalKeysExamined": 0,
               "totalDocsExamined": 1681,
               "executionStages": {
                 "stage": "SHARDING_FILTER",
                 "nReturned": 0,
-                "executionTimeMillisEstimate": 0,
+                "executionTimeMillisEstimate": 1,
                 "works": 1682,
                 "advanced": 0,
                 "needTime": 1681,
@@ -3933,7 +3933,7 @@
                     }
                   },
                   "nReturned": 0,
-                  "executionTimeMillisEstimate": 0,
+                  "executionTimeMillisEstimate": 2,
                   "works": 1682,
                   "advanced": 0,
                   "needTime": 1681,
@@ -4047,7 +4047,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -4070,7 +4070,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -4078,8 +4078,8 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833686,
-              "i": 18
+              "t": 1768854681,
+              "i": 28
             }
           },
           "signature": {
@@ -4098,8 +4098,8 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833686,
-            "i": 18
+            "t": 1768854681,
+            "i": 28
           }
         },
         "signature": {
@@ -4114,8 +4114,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833686,
-          "i": 18
+          "t": 1768854681,
+          "i": 28
         }
       }
     }
@@ -4124,7 +4124,7 @@
     "queryNo": 2,
     "collection": "products",
     "mode": "withIndexes",
-    "indexHint": null,
+    "indexHint": "productsMainPartial",
     "query": {
       "mainCategoryId": {
         "$oid": "6963ae5f44e96769ce233165"
@@ -4137,49 +4137,10 @@
           "stage": "SHARD_MERGE",
           "shards": [
             {
-              "shardName": "rs1",
-              "connectionString": "rs1/shard1:27018",
-              "serverInfo": {
-                "host": "8de94b9d6fb9",
-                "port": 27018,
-                "version": "6.0.27",
-                "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
-              },
-              "namespace": "E-Commerce_Ref.products",
-              "indexFilterSet": false,
-              "parsedQuery": {
-                "mainCategoryId": {
-                  "$eq": {
-                    "$oid": "6963ae5f44e96769ce233165"
-                  }
-                }
-              },
-              "queryHash": "8546FAFA",
-              "planCacheKey": "8546FAFA",
-              "maxIndexedOrSolutionsReached": false,
-              "maxIndexedAndSolutionsReached": false,
-              "maxScansToExplodeReached": false,
-              "winningPlan": {
-                "stage": "SHARDING_FILTER",
-                "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "mainCategoryId": {
-                      "$eq": {
-                        "$oid": "6963ae5f44e96769ce233165"
-                      }
-                    }
-                  },
-                  "direction": "forward"
-                }
-              },
-              "rejectedPlans": []
-            },
-            {
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -4194,22 +4155,87 @@
                 }
               },
               "queryHash": "8546FAFA",
-              "planCacheKey": "8546FAFA",
+              "planCacheKey": "C736714C",
               "maxIndexedOrSolutionsReached": false,
               "maxIndexedAndSolutionsReached": false,
               "maxScansToExplodeReached": false,
               "winningPlan": {
                 "stage": "SHARDING_FILTER",
                 "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "mainCategoryId": {
-                      "$eq": {
-                        "$oid": "6963ae5f44e96769ce233165"
-                      }
+                  "stage": "FETCH",
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "keyPattern": {
+                      "mainCategoryId": 1
+                    },
+                    "indexName": "productsMainPartial",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "mainCategoryId": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "mainCategoryId": [
+                        "[ObjectId('6963ae5f44e96769ce233165'), ObjectId('6963ae5f44e96769ce233165')]"
+                      ]
                     }
-                  },
-                  "direction": "forward"
+                  }
+                }
+              },
+              "rejectedPlans": []
+            },
+            {
+              "shardName": "rs1",
+              "connectionString": "rs1/shard1:27018",
+              "serverInfo": {
+                "host": "83ecf7059cf0",
+                "port": 27018,
+                "version": "6.0.27",
+                "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+              },
+              "namespace": "E-Commerce_Ref.products",
+              "indexFilterSet": false,
+              "parsedQuery": {
+                "mainCategoryId": {
+                  "$eq": {
+                    "$oid": "6963ae5f44e96769ce233165"
+                  }
+                }
+              },
+              "queryHash": "8546FAFA",
+              "planCacheKey": "C736714C",
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "winningPlan": {
+                "stage": "SHARDING_FILTER",
+                "inputStage": {
+                  "stage": "FETCH",
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "keyPattern": {
+                      "mainCategoryId": 1
+                    },
+                    "indexName": "productsMainPartial",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "mainCategoryId": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "mainCategoryId": [
+                        "[ObjectId('6963ae5f44e96769ce233165'), ObjectId('6963ae5f44e96769ce233165')]"
+                      ]
+                    }
+                  }
                 }
               },
               "rejectedPlans": []
@@ -4218,7 +4244,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -4233,22 +4259,35 @@
                 }
               },
               "queryHash": "8546FAFA",
-              "planCacheKey": "8546FAFA",
+              "planCacheKey": "C736714C",
               "maxIndexedOrSolutionsReached": false,
               "maxIndexedAndSolutionsReached": false,
               "maxScansToExplodeReached": false,
               "winningPlan": {
                 "stage": "SHARDING_FILTER",
                 "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "mainCategoryId": {
-                      "$eq": {
-                        "$oid": "6963ae5f44e96769ce233165"
-                      }
+                  "stage": "FETCH",
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "keyPattern": {
+                      "mainCategoryId": 1
+                    },
+                    "indexName": "productsMainPartial",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "mainCategoryId": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "mainCategoryId": [
+                        "[ObjectId('6963ae5f44e96769ce233165'), ObjectId('6963ae5f44e96769ce233165')]"
+                      ]
                     }
-                  },
-                  "direction": "forward"
+                  }
                 }
               },
               "rejectedPlans": []
@@ -4258,99 +4297,153 @@
       },
       "executionStats": {
         "nReturned": 656,
-        "executionTimeMillis": 3,
-        "totalKeysExamined": 0,
-        "totalDocsExamined": 5000,
+        "executionTimeMillis": 1,
+        "totalKeysExamined": 656,
+        "totalDocsExamined": 656,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 656,
-          "executionTimeMillis": 3,
-          "totalKeysExamined": 0,
-          "totalDocsExamined": 5000,
-          "totalChildMillis": 3,
+          "executionTimeMillis": 1,
+          "totalKeysExamined": 656,
+          "totalDocsExamined": 656,
+          "totalChildMillis": 0,
           "shards": [
             {
-              "shardName": "rs1",
+              "shardName": "rs2",
               "executionSuccess": true,
-              "nReturned": 237,
-              "executionTimeMillis": 1,
-              "totalKeysExamined": 0,
-              "totalDocsExamined": 1681,
+              "nReturned": 197,
+              "executionTimeMillis": 0,
+              "totalKeysExamined": 197,
+              "totalDocsExamined": 197,
               "executionStages": {
                 "stage": "SHARDING_FILTER",
-                "nReturned": 237,
+                "nReturned": 197,
                 "executionTimeMillisEstimate": 0,
-                "works": 1682,
-                "advanced": 237,
-                "needTime": 1444,
+                "works": 198,
+                "advanced": 197,
+                "needTime": 0,
                 "needYield": 0,
-                "saveState": 1,
-                "restoreState": 1,
+                "saveState": 0,
+                "restoreState": 0,
                 "isEOF": 1,
                 "chunkSkips": 0,
                 "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "mainCategoryId": {
-                      "$eq": {
-                        "$oid": "6963ae5f44e96769ce233165"
-                      }
-                    }
-                  },
-                  "nReturned": 237,
+                  "stage": "FETCH",
+                  "nReturned": 197,
                   "executionTimeMillisEstimate": 0,
-                  "works": 1682,
-                  "advanced": 237,
-                  "needTime": 1444,
+                  "works": 198,
+                  "advanced": 197,
+                  "needTime": 0,
                   "needYield": 0,
-                  "saveState": 1,
-                  "restoreState": 1,
+                  "saveState": 0,
+                  "restoreState": 0,
                   "isEOF": 1,
-                  "direction": "forward",
-                  "docsExamined": 1681
+                  "docsExamined": 197,
+                  "alreadyHasObj": 0,
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "nReturned": 197,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 198,
+                    "advanced": 197,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 0,
+                    "restoreState": 0,
+                    "isEOF": 1,
+                    "keyPattern": {
+                      "mainCategoryId": 1
+                    },
+                    "indexName": "productsMainPartial",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "mainCategoryId": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "mainCategoryId": [
+                        "[ObjectId('6963ae5f44e96769ce233165'), ObjectId('6963ae5f44e96769ce233165')]"
+                      ]
+                    },
+                    "keysExamined": 197,
+                    "seeks": 1,
+                    "dupsTested": 0,
+                    "dupsDropped": 0
+                  }
                 }
               },
               "allPlansExecution": []
             },
             {
-              "shardName": "rs2",
+              "shardName": "rs1",
               "executionSuccess": true,
-              "nReturned": 197,
-              "executionTimeMillis": 1,
-              "totalKeysExamined": 0,
-              "totalDocsExamined": 1623,
+              "nReturned": 237,
+              "executionTimeMillis": 0,
+              "totalKeysExamined": 237,
+              "totalDocsExamined": 237,
               "executionStages": {
                 "stage": "SHARDING_FILTER",
-                "nReturned": 197,
+                "nReturned": 237,
                 "executionTimeMillisEstimate": 0,
-                "works": 1624,
-                "advanced": 197,
-                "needTime": 1426,
+                "works": 238,
+                "advanced": 237,
+                "needTime": 0,
                 "needYield": 0,
-                "saveState": 1,
-                "restoreState": 1,
+                "saveState": 0,
+                "restoreState": 0,
                 "isEOF": 1,
                 "chunkSkips": 0,
                 "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "mainCategoryId": {
-                      "$eq": {
-                        "$oid": "6963ae5f44e96769ce233165"
-                      }
-                    }
-                  },
-                  "nReturned": 197,
+                  "stage": "FETCH",
+                  "nReturned": 237,
                   "executionTimeMillisEstimate": 0,
-                  "works": 1624,
-                  "advanced": 197,
-                  "needTime": 1426,
+                  "works": 238,
+                  "advanced": 237,
+                  "needTime": 0,
                   "needYield": 0,
-                  "saveState": 1,
-                  "restoreState": 1,
+                  "saveState": 0,
+                  "restoreState": 0,
                   "isEOF": 1,
-                  "direction": "forward",
-                  "docsExamined": 1623
+                  "docsExamined": 237,
+                  "alreadyHasObj": 0,
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "nReturned": 237,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 238,
+                    "advanced": 237,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 0,
+                    "restoreState": 0,
+                    "isEOF": 1,
+                    "keyPattern": {
+                      "mainCategoryId": 1
+                    },
+                    "indexName": "productsMainPartial",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "mainCategoryId": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "mainCategoryId": [
+                        "[ObjectId('6963ae5f44e96769ce233165'), ObjectId('6963ae5f44e96769ce233165')]"
+                      ]
+                    },
+                    "keysExamined": 237,
+                    "seeks": 1,
+                    "dupsTested": 0,
+                    "dupsDropped": 0
+                  }
                 }
               },
               "allPlansExecution": []
@@ -4359,41 +4452,68 @@
               "shardName": "rs3",
               "executionSuccess": true,
               "nReturned": 222,
-              "executionTimeMillis": 1,
-              "totalKeysExamined": 0,
-              "totalDocsExamined": 1696,
+              "executionTimeMillis": 0,
+              "totalKeysExamined": 222,
+              "totalDocsExamined": 222,
               "executionStages": {
                 "stage": "SHARDING_FILTER",
                 "nReturned": 222,
                 "executionTimeMillisEstimate": 0,
-                "works": 1697,
+                "works": 223,
                 "advanced": 222,
-                "needTime": 1474,
+                "needTime": 0,
                 "needYield": 0,
-                "saveState": 1,
-                "restoreState": 1,
+                "saveState": 0,
+                "restoreState": 0,
                 "isEOF": 1,
                 "chunkSkips": 0,
                 "inputStage": {
-                  "stage": "COLLSCAN",
-                  "filter": {
-                    "mainCategoryId": {
-                      "$eq": {
-                        "$oid": "6963ae5f44e96769ce233165"
-                      }
-                    }
-                  },
+                  "stage": "FETCH",
                   "nReturned": 222,
                   "executionTimeMillisEstimate": 0,
-                  "works": 1697,
+                  "works": 223,
                   "advanced": 222,
-                  "needTime": 1474,
+                  "needTime": 0,
                   "needYield": 0,
-                  "saveState": 1,
-                  "restoreState": 1,
+                  "saveState": 0,
+                  "restoreState": 0,
                   "isEOF": 1,
-                  "direction": "forward",
-                  "docsExamined": 1696
+                  "docsExamined": 222,
+                  "alreadyHasObj": 0,
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "nReturned": 222,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 223,
+                    "advanced": 222,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 0,
+                    "restoreState": 0,
+                    "isEOF": 1,
+                    "keyPattern": {
+                      "mainCategoryId": 1
+                    },
+                    "indexName": "productsMainPartial",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "mainCategoryId": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "mainCategoryId": [
+                        "[ObjectId('6963ae5f44e96769ce233165'), ObjectId('6963ae5f44e96769ce233165')]"
+                      ]
+                    },
+                    "keysExamined": 222,
+                    "seeks": 1,
+                    "dupsTested": 0,
+                    "dupsDropped": 0
+                  }
                 }
               },
               "allPlansExecution": []
@@ -4402,11 +4522,11 @@
         },
         "allPlansExecution": [
           {
-            "shardName": "rs1",
+            "shardName": "rs2",
             "allPlans": []
           },
           {
-            "shardName": "rs2",
+            "shardName": "rs1",
             "allPlans": []
           },
           {
@@ -4416,7 +4536,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -4438,10 +4558,11 @@
             "$oid": "6963ae5f44e96769ce233165"
           }
         },
+        "hint": "productsMainPartial",
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -4449,8 +4570,8 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833686,
-              "i": 18
+              "t": 1768854681,
+              "i": 28
             }
           },
           "signature": {
@@ -4469,8 +4590,8 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833686,
-            "i": 18
+            "t": 1768854681,
+            "i": 28
           }
         },
         "signature": {
@@ -4485,8 +4606,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833686,
-          "i": 18
+          "t": 1768854681,
+          "i": 28
         }
       }
     }
@@ -4511,7 +4632,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -4527,7 +4648,7 @@
                 }
               },
               "queryHash": "21CAEE04",
-              "planCacheKey": "E5AE09C2",
+              "planCacheKey": "3FC87121",
               "maxIndexedOrSolutionsReached": false,
               "maxIndexedAndSolutionsReached": false,
               "maxScansToExplodeReached": false,
@@ -4608,7 +4729,7 @@
               "shardName": "rs1",
               "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
+                "host": "83ecf7059cf0",
                 "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -4624,7 +4745,7 @@
                 }
               },
               "queryHash": "21CAEE04",
-              "planCacheKey": "E5AE09C2",
+              "planCacheKey": "3FC87121",
               "maxIndexedOrSolutionsReached": false,
               "maxIndexedAndSolutionsReached": false,
               "maxScansToExplodeReached": false,
@@ -4705,7 +4826,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -4721,7 +4842,7 @@
                 }
               },
               "queryHash": "21CAEE04",
-              "planCacheKey": "E5AE09C2",
+              "planCacheKey": "3FC87121",
               "maxIndexedOrSolutionsReached": false,
               "maxIndexedAndSolutionsReached": false,
               "maxScansToExplodeReached": false,
@@ -5303,7 +5424,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -5338,7 +5459,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -5346,8 +5467,8 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833686,
-              "i": 18
+              "t": 1768854681,
+              "i": 28
             }
           },
           "signature": {
@@ -5366,8 +5487,8 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833686,
-            "i": 18
+            "t": 1768854681,
+            "i": 28
           }
         },
         "signature": {
@@ -5382,8 +5503,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833686,
-          "i": 18
+          "t": 1768854681,
+          "i": 28
         }
       }
     }
@@ -5406,7 +5527,7 @@
               "shardName": "rs1",
               "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
+                "host": "83ecf7059cf0",
                 "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -5473,7 +5594,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -5540,7 +5661,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -5608,13 +5729,13 @@
       },
       "executionStats": {
         "nReturned": 1,
-        "executionTimeMillis": 2,
+        "executionTimeMillis": 1,
         "totalKeysExamined": 1000,
         "totalDocsExamined": 1000,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 1,
-          "executionTimeMillis": 2,
+          "executionTimeMillis": 1,
           "totalKeysExamined": 1000,
           "totalDocsExamined": 1000,
           "totalChildMillis": 0,
@@ -5898,7 +6019,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -5922,7 +6043,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -5930,8 +6051,8 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833686,
-              "i": 18
+              "t": 1768854681,
+              "i": 28
             }
           },
           "signature": {
@@ -5950,8 +6071,8 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833686,
-            "i": 18
+            "t": 1768854681,
+            "i": 28
           }
         },
         "signature": {
@@ -5966,8 +6087,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833686,
-          "i": 18
+          "t": 1768854681,
+          "i": 28
         }
       }
     }
@@ -5987,11 +6108,11 @@
           "stage": "SHARD_MERGE",
           "shards": [
             {
-              "shardName": "rs1",
-              "connectionString": "rs1/shard1:27018",
+              "shardName": "rs2",
+              "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
-                "port": 27018,
+                "host": "b6917fddcd63",
+                "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -6037,11 +6158,11 @@
               "rejectedPlans": []
             },
             {
-              "shardName": "rs2",
-              "connectionString": "rs2/shard2:27020",
+              "shardName": "rs1",
+              "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
-                "port": 27020,
+                "host": "83ecf7059cf0",
+                "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -6090,7 +6211,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -6141,87 +6262,17 @@
       },
       "executionStats": {
         "nReturned": 1,
-        "executionTimeMillis": 1,
+        "executionTimeMillis": 0,
         "totalKeysExamined": 1,
         "totalDocsExamined": 1,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 1,
-          "executionTimeMillis": 1,
+          "executionTimeMillis": 0,
           "totalKeysExamined": 1,
           "totalDocsExamined": 1,
           "totalChildMillis": 0,
           "shards": [
-            {
-              "shardName": "rs1",
-              "executionSuccess": true,
-              "nReturned": 0,
-              "executionTimeMillis": 0,
-              "totalKeysExamined": 0,
-              "totalDocsExamined": 0,
-              "executionStages": {
-                "stage": "SHARDING_FILTER",
-                "nReturned": 0,
-                "executionTimeMillisEstimate": 0,
-                "works": 1,
-                "advanced": 0,
-                "needTime": 0,
-                "needYield": 0,
-                "saveState": 0,
-                "restoreState": 0,
-                "isEOF": 1,
-                "chunkSkips": 0,
-                "inputStage": {
-                  "stage": "FETCH",
-                  "nReturned": 0,
-                  "executionTimeMillisEstimate": 0,
-                  "works": 1,
-                  "advanced": 0,
-                  "needTime": 0,
-                  "needYield": 0,
-                  "saveState": 0,
-                  "restoreState": 0,
-                  "isEOF": 1,
-                  "docsExamined": 0,
-                  "alreadyHasObj": 0,
-                  "inputStage": {
-                    "stage": "IXSCAN",
-                    "nReturned": 0,
-                    "executionTimeMillisEstimate": 0,
-                    "works": 1,
-                    "advanced": 0,
-                    "needTime": 0,
-                    "needYield": 0,
-                    "saveState": 0,
-                    "restoreState": 0,
-                    "isEOF": 1,
-                    "keyPattern": {
-                      "zipCode": 1
-                    },
-                    "indexName": "usersAddressesZipcode",
-                    "isMultiKey": false,
-                    "multiKeyPaths": {
-                      "zipCode": []
-                    },
-                    "isUnique": false,
-                    "isSparse": false,
-                    "isPartial": false,
-                    "indexVersion": 2,
-                    "direction": "forward",
-                    "indexBounds": {
-                      "zipCode": [
-                        "[\"N9F 2WT\", \"N9F 2WT\"]"
-                      ]
-                    },
-                    "keysExamined": 0,
-                    "seeks": 1,
-                    "dupsTested": 0,
-                    "dupsDropped": 0
-                  }
-                }
-              },
-              "allPlansExecution": []
-            },
             {
               "shardName": "rs2",
               "executionSuccess": true,
@@ -6293,6 +6344,76 @@
               "allPlansExecution": []
             },
             {
+              "shardName": "rs1",
+              "executionSuccess": true,
+              "nReturned": 0,
+              "executionTimeMillis": 0,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 0,
+              "executionStages": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 0,
+                "executionTimeMillisEstimate": 0,
+                "works": 1,
+                "advanced": 0,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 1,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "FETCH",
+                  "nReturned": 0,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 1,
+                  "advanced": 0,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 1,
+                  "docsExamined": 0,
+                  "alreadyHasObj": 0,
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "nReturned": 0,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 1,
+                    "advanced": 0,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 0,
+                    "restoreState": 0,
+                    "isEOF": 1,
+                    "keyPattern": {
+                      "zipCode": 1
+                    },
+                    "indexName": "usersAddressesZipcode",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "zipCode": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "zipCode": [
+                        "[\"N9F 2WT\", \"N9F 2WT\"]"
+                      ]
+                    },
+                    "keysExamined": 0,
+                    "seeks": 1,
+                    "dupsTested": 0,
+                    "dupsDropped": 0
+                  }
+                }
+              },
+              "allPlansExecution": []
+            },
+            {
               "shardName": "rs3",
               "executionSuccess": true,
               "nReturned": 0,
@@ -6366,11 +6487,11 @@
         },
         "allPlansExecution": [
           {
-            "shardName": "rs1",
+            "shardName": "rs2",
             "allPlans": []
           },
           {
-            "shardName": "rs2",
+            "shardName": "rs1",
             "allPlans": []
           },
           {
@@ -6380,7 +6501,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -6404,7 +6525,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -6412,8 +6533,8 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833686,
-              "i": 18
+              "t": 1768854681,
+              "i": 28
             }
           },
           "signature": {
@@ -6432,8 +6553,8 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833686,
-            "i": 18
+            "t": 1768854681,
+            "i": 28
           }
         },
         "signature": {
@@ -6448,8 +6569,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833686,
-          "i": 18
+          "t": 1768854681,
+          "i": 28
         }
       }
     }
@@ -6479,71 +6600,8 @@
               "shardName": "rs1",
               "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
+                "host": "83ecf7059cf0",
                 "port": 27018,
-                "version": "6.0.27",
-                "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
-              },
-              "namespace": "E-Commerce_Ref.orders",
-              "indexFilterSet": false,
-              "parsedQuery": {
-                "$and": [
-                  {
-                    "orderDate": {
-                      "$lte": {
-                        "$date": "2021-12-31T00:00:00Z"
-                      }
-                    }
-                  },
-                  {
-                    "orderDate": {
-                      "$gte": {
-                        "$date": "2021-01-01T00:00:00Z"
-                      }
-                    }
-                  }
-                ]
-              },
-              "queryHash": "FFD379D0",
-              "planCacheKey": "0C9BEC71",
-              "maxIndexedOrSolutionsReached": false,
-              "maxIndexedAndSolutionsReached": false,
-              "maxScansToExplodeReached": false,
-              "winningPlan": {
-                "stage": "SHARDING_FILTER",
-                "inputStage": {
-                  "stage": "FETCH",
-                  "inputStage": {
-                    "stage": "IXSCAN",
-                    "keyPattern": {
-                      "orderDate": -1
-                    },
-                    "indexName": "ordersOrderDateIdx",
-                    "isMultiKey": false,
-                    "multiKeyPaths": {
-                      "orderDate": []
-                    },
-                    "isUnique": false,
-                    "isSparse": false,
-                    "isPartial": false,
-                    "indexVersion": 2,
-                    "direction": "forward",
-                    "indexBounds": {
-                      "orderDate": [
-                        "[new Date(1640908800000), new Date(1609459200000)]"
-                      ]
-                    }
-                  }
-                }
-              },
-              "rejectedPlans": []
-            },
-            {
-              "shardName": "rs2",
-              "connectionString": "rs2/shard2:27020",
-              "serverInfo": {
-                "host": "0a2b9ed8c51e",
-                "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -6605,8 +6663,71 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
+                "version": "6.0.27",
+                "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+              },
+              "namespace": "E-Commerce_Ref.orders",
+              "indexFilterSet": false,
+              "parsedQuery": {
+                "$and": [
+                  {
+                    "orderDate": {
+                      "$lte": {
+                        "$date": "2021-12-31T00:00:00Z"
+                      }
+                    }
+                  },
+                  {
+                    "orderDate": {
+                      "$gte": {
+                        "$date": "2021-01-01T00:00:00Z"
+                      }
+                    }
+                  }
+                ]
+              },
+              "queryHash": "FFD379D0",
+              "planCacheKey": "0C9BEC71",
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "winningPlan": {
+                "stage": "SHARDING_FILTER",
+                "inputStage": {
+                  "stage": "FETCH",
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "keyPattern": {
+                      "orderDate": -1
+                    },
+                    "indexName": "ordersOrderDateIdx",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "orderDate": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "orderDate": [
+                        "[new Date(1640908800000), new Date(1609459200000)]"
+                      ]
+                    }
+                  }
+                }
+              },
+              "rejectedPlans": []
+            },
+            {
+              "shardName": "rs2",
+              "connectionString": "rs2/shard2:27020",
+              "serverInfo": {
+                "host": "b6917fddcd63",
+                "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -6669,22 +6790,22 @@
       },
       "executionStats": {
         "nReturned": 1449,
-        "executionTimeMillis": 3,
+        "executionTimeMillis": 1,
         "totalKeysExamined": 1449,
         "totalDocsExamined": 1449,
         "executionStages": {
           "stage": "SHARD_MERGE_SORT",
           "nReturned": 1449,
-          "executionTimeMillis": 3,
+          "executionTimeMillis": 1,
           "totalKeysExamined": 1449,
           "totalDocsExamined": 1449,
-          "totalChildMillis": 4,
+          "totalChildMillis": 0,
           "shards": [
             {
               "shardName": "rs1",
               "executionSuccess": true,
               "nReturned": 513,
-              "executionTimeMillis": 2,
+              "executionTimeMillis": 0,
               "totalKeysExamined": 513,
               "totalDocsExamined": 513,
               "executionStages": {
@@ -6751,80 +6872,10 @@
               "allPlansExecution": []
             },
             {
-              "shardName": "rs2",
-              "executionSuccess": true,
-              "nReturned": 479,
-              "executionTimeMillis": 1,
-              "totalKeysExamined": 479,
-              "totalDocsExamined": 479,
-              "executionStages": {
-                "stage": "SHARDING_FILTER",
-                "nReturned": 479,
-                "executionTimeMillisEstimate": 1,
-                "works": 480,
-                "advanced": 479,
-                "needTime": 0,
-                "needYield": 0,
-                "saveState": 0,
-                "restoreState": 0,
-                "isEOF": 1,
-                "chunkSkips": 0,
-                "inputStage": {
-                  "stage": "FETCH",
-                  "nReturned": 479,
-                  "executionTimeMillisEstimate": 0,
-                  "works": 480,
-                  "advanced": 479,
-                  "needTime": 0,
-                  "needYield": 0,
-                  "saveState": 0,
-                  "restoreState": 0,
-                  "isEOF": 1,
-                  "docsExamined": 479,
-                  "alreadyHasObj": 0,
-                  "inputStage": {
-                    "stage": "IXSCAN",
-                    "nReturned": 479,
-                    "executionTimeMillisEstimate": 0,
-                    "works": 480,
-                    "advanced": 479,
-                    "needTime": 0,
-                    "needYield": 0,
-                    "saveState": 0,
-                    "restoreState": 0,
-                    "isEOF": 1,
-                    "keyPattern": {
-                      "orderDate": -1
-                    },
-                    "indexName": "ordersOrderDateIdx",
-                    "isMultiKey": false,
-                    "multiKeyPaths": {
-                      "orderDate": []
-                    },
-                    "isUnique": false,
-                    "isSparse": false,
-                    "isPartial": false,
-                    "indexVersion": 2,
-                    "direction": "forward",
-                    "indexBounds": {
-                      "orderDate": [
-                        "[new Date(1640908800000), new Date(1609459200000)]"
-                      ]
-                    },
-                    "keysExamined": 479,
-                    "seeks": 1,
-                    "dupsTested": 0,
-                    "dupsDropped": 0
-                  }
-                }
-              },
-              "allPlansExecution": []
-            },
-            {
               "shardName": "rs3",
               "executionSuccess": true,
               "nReturned": 457,
-              "executionTimeMillis": 1,
+              "executionTimeMillis": 0,
               "totalKeysExamined": 457,
               "totalDocsExamined": 457,
               "executionStages": {
@@ -6889,6 +6940,76 @@
                 }
               },
               "allPlansExecution": []
+            },
+            {
+              "shardName": "rs2",
+              "executionSuccess": true,
+              "nReturned": 479,
+              "executionTimeMillis": 0,
+              "totalKeysExamined": 479,
+              "totalDocsExamined": 479,
+              "executionStages": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 479,
+                "executionTimeMillisEstimate": 0,
+                "works": 480,
+                "advanced": 479,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 1,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "FETCH",
+                  "nReturned": 479,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 480,
+                  "advanced": 479,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 1,
+                  "docsExamined": 479,
+                  "alreadyHasObj": 0,
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "nReturned": 479,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 480,
+                    "advanced": 479,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 0,
+                    "restoreState": 0,
+                    "isEOF": 1,
+                    "keyPattern": {
+                      "orderDate": -1
+                    },
+                    "indexName": "ordersOrderDateIdx",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "orderDate": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "orderDate": [
+                        "[new Date(1640908800000), new Date(1609459200000)]"
+                      ]
+                    },
+                    "keysExamined": 479,
+                    "seeks": 1,
+                    "dupsTested": 0,
+                    "dupsDropped": 0
+                  }
+                }
+              },
+              "allPlansExecution": []
             }
           ]
         },
@@ -6898,17 +7019,17 @@
             "allPlans": []
           },
           {
-            "shardName": "rs2",
+            "shardName": "rs3",
             "allPlans": []
           },
           {
-            "shardName": "rs3",
+            "shardName": "rs2",
             "allPlans": []
           }
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -6942,7 +7063,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -6950,8 +7071,8 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833686,
-              "i": 18
+              "t": 1768854681,
+              "i": 28
             }
           },
           "signature": {
@@ -6970,8 +7091,8 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833686,
-            "i": 18
+            "t": 1768854681,
+            "i": 28
           }
         },
         "signature": {
@@ -6986,8 +7107,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833686,
-          "i": 18
+          "t": 1768854681,
+          "i": 28
         }
       }
     }
@@ -7007,10 +7128,60 @@
           "stage": "SHARD_MERGE",
           "shards": [
             {
+              "shardName": "rs1",
+              "connectionString": "rs1/shard1:27018",
+              "serverInfo": {
+                "host": "83ecf7059cf0",
+                "port": 27018,
+                "version": "6.0.27",
+                "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+              },
+              "namespace": "E-Commerce_Ref.orders",
+              "indexFilterSet": false,
+              "parsedQuery": {
+                "status": {
+                  "$eq": "Delivered"
+                }
+              },
+              "queryHash": "6F186887",
+              "planCacheKey": "B41B7142",
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "winningPlan": {
+                "stage": "SHARDING_FILTER",
+                "inputStage": {
+                  "stage": "FETCH",
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "keyPattern": {
+                      "status": 1
+                    },
+                    "indexName": "ordersStatusIdx",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "status": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "status": [
+                        "[\"Delivered\", \"Delivered\"]"
+                      ]
+                    }
+                  }
+                }
+              },
+              "rejectedPlans": []
+            },
+            {
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -7060,58 +7231,8 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
-                "version": "6.0.27",
-                "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
-              },
-              "namespace": "E-Commerce_Ref.orders",
-              "indexFilterSet": false,
-              "parsedQuery": {
-                "status": {
-                  "$eq": "Delivered"
-                }
-              },
-              "queryHash": "6F186887",
-              "planCacheKey": "B41B7142",
-              "maxIndexedOrSolutionsReached": false,
-              "maxIndexedAndSolutionsReached": false,
-              "maxScansToExplodeReached": false,
-              "winningPlan": {
-                "stage": "SHARDING_FILTER",
-                "inputStage": {
-                  "stage": "FETCH",
-                  "inputStage": {
-                    "stage": "IXSCAN",
-                    "keyPattern": {
-                      "status": 1
-                    },
-                    "indexName": "ordersStatusIdx",
-                    "isMultiKey": false,
-                    "multiKeyPaths": {
-                      "status": []
-                    },
-                    "isUnique": false,
-                    "isSparse": false,
-                    "isPartial": false,
-                    "indexVersion": 2,
-                    "direction": "forward",
-                    "indexBounds": {
-                      "status": [
-                        "[\"Delivered\", \"Delivered\"]"
-                      ]
-                    }
-                  }
-                }
-              },
-              "rejectedPlans": []
-            },
-            {
-              "shardName": "rs1",
-              "connectionString": "rs1/shard1:27018",
-              "serverInfo": {
-                "host": "8de94b9d6fb9",
-                "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -7161,17 +7282,87 @@
       },
       "executionStats": {
         "nReturned": 1997,
-        "executionTimeMillis": 3,
+        "executionTimeMillis": 1,
         "totalKeysExamined": 1997,
         "totalDocsExamined": 1997,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 1997,
-          "executionTimeMillis": 3,
+          "executionTimeMillis": 1,
           "totalKeysExamined": 1997,
           "totalDocsExamined": 1997,
-          "totalChildMillis": 4,
+          "totalChildMillis": 3,
           "shards": [
+            {
+              "shardName": "rs1",
+              "executionSuccess": true,
+              "nReturned": 700,
+              "executionTimeMillis": 1,
+              "totalKeysExamined": 700,
+              "totalDocsExamined": 700,
+              "executionStages": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 700,
+                "executionTimeMillisEstimate": 0,
+                "works": 701,
+                "advanced": 700,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 1,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "FETCH",
+                  "nReturned": 700,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 701,
+                  "advanced": 700,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 1,
+                  "docsExamined": 700,
+                  "alreadyHasObj": 0,
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "nReturned": 700,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 701,
+                    "advanced": 700,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 0,
+                    "restoreState": 0,
+                    "isEOF": 1,
+                    "keyPattern": {
+                      "status": 1
+                    },
+                    "indexName": "ordersStatusIdx",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "status": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": false,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "status": [
+                        "[\"Delivered\", \"Delivered\"]"
+                      ]
+                    },
+                    "keysExamined": 700,
+                    "seeks": 1,
+                    "dupsTested": 0,
+                    "dupsDropped": 0
+                  }
+                }
+              },
+              "allPlansExecution": []
+            },
             {
               "shardName": "rs2",
               "executionSuccess": true,
@@ -7311,80 +7502,14 @@
                 }
               },
               "allPlansExecution": []
-            },
-            {
-              "shardName": "rs1",
-              "executionSuccess": true,
-              "nReturned": 700,
-              "executionTimeMillis": 2,
-              "totalKeysExamined": 700,
-              "totalDocsExamined": 700,
-              "executionStages": {
-                "stage": "SHARDING_FILTER",
-                "nReturned": 700,
-                "executionTimeMillisEstimate": 0,
-                "works": 701,
-                "advanced": 700,
-                "needTime": 0,
-                "needYield": 0,
-                "saveState": 0,
-                "restoreState": 0,
-                "isEOF": 1,
-                "chunkSkips": 0,
-                "inputStage": {
-                  "stage": "FETCH",
-                  "nReturned": 700,
-                  "executionTimeMillisEstimate": 0,
-                  "works": 701,
-                  "advanced": 700,
-                  "needTime": 0,
-                  "needYield": 0,
-                  "saveState": 0,
-                  "restoreState": 0,
-                  "isEOF": 1,
-                  "docsExamined": 700,
-                  "alreadyHasObj": 0,
-                  "inputStage": {
-                    "stage": "IXSCAN",
-                    "nReturned": 700,
-                    "executionTimeMillisEstimate": 0,
-                    "works": 701,
-                    "advanced": 700,
-                    "needTime": 0,
-                    "needYield": 0,
-                    "saveState": 0,
-                    "restoreState": 0,
-                    "isEOF": 1,
-                    "keyPattern": {
-                      "status": 1
-                    },
-                    "indexName": "ordersStatusIdx",
-                    "isMultiKey": false,
-                    "multiKeyPaths": {
-                      "status": []
-                    },
-                    "isUnique": false,
-                    "isSparse": false,
-                    "isPartial": false,
-                    "indexVersion": 2,
-                    "direction": "forward",
-                    "indexBounds": {
-                      "status": [
-                        "[\"Delivered\", \"Delivered\"]"
-                      ]
-                    },
-                    "keysExamined": 700,
-                    "seeks": 1,
-                    "dupsTested": 0,
-                    "dupsDropped": 0
-                  }
-                }
-              },
-              "allPlansExecution": []
             }
           ]
         },
         "allPlansExecution": [
+          {
+            "shardName": "rs1",
+            "allPlans": []
+          },
           {
             "shardName": "rs2",
             "allPlans": []
@@ -7392,15 +7517,11 @@
           {
             "shardName": "rs3",
             "allPlans": []
-          },
-          {
-            "shardName": "rs1",
-            "allPlans": []
           }
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -7424,7 +7545,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -7432,8 +7553,8 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833686,
-              "i": 18
+              "t": 1768854681,
+              "i": 28
             }
           },
           "signature": {
@@ -7452,8 +7573,8 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833686,
-            "i": 18
+            "t": 1768854681,
+            "i": 28
           }
         },
         "signature": {
@@ -7468,8 +7589,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833686,
-          "i": 18
+          "t": 1768854681,
+          "i": 28
         }
       }
     }
@@ -7494,7 +7615,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -7549,13 +7670,13 @@
       },
       "executionStats": {
         "nReturned": 21,
-        "executionTimeMillis": 1,
+        "executionTimeMillis": 0,
         "totalKeysExamined": 21,
         "totalDocsExamined": 21,
         "executionStages": {
           "stage": "SINGLE_SHARD",
           "nReturned": 21,
-          "executionTimeMillis": 1,
+          "executionTimeMillis": 0,
           "totalKeysExamined": 21,
           "totalDocsExamined": 21,
           "totalChildMillis": 0,
@@ -7632,7 +7753,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -7661,7 +7782,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -7669,8 +7790,8 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833686,
-              "i": 18
+              "t": 1768854681,
+              "i": 28
             }
           },
           "signature": {
@@ -7689,8 +7810,8 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833686,
-            "i": 18
+            "t": 1768854681,
+            "i": 28
           }
         },
         "signature": {
@@ -7705,8 +7826,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833686,
-          "i": 18
+          "t": 1768854681,
+          "i": 28
         }
       }
     }
@@ -7731,7 +7852,7 @@
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -7783,7 +7904,7 @@
               "shardName": "rs1",
               "connectionString": "rs1/shard1:27018",
               "serverInfo": {
-                "host": "8de94b9d6fb9",
+                "host": "83ecf7059cf0",
                 "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -7835,7 +7956,7 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -7888,13 +8009,13 @@
       },
       "executionStats": {
         "nReturned": 9,
-        "executionTimeMillis": 1,
+        "executionTimeMillis": 0,
         "totalKeysExamined": 9,
         "totalDocsExamined": 9,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 9,
-          "executionTimeMillis": 1,
+          "executionTimeMillis": 0,
           "totalKeysExamined": 9,
           "totalDocsExamined": 9,
           "totalChildMillis": 0,
@@ -8127,7 +8248,7 @@
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -8153,7 +8274,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -8161,8 +8282,8 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833686,
-              "i": 18
+              "t": 1768854681,
+              "i": 28
             }
           },
           "signature": {
@@ -8181,8 +8302,8 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833686,
-            "i": 18
+            "t": 1768854681,
+            "i": 28
           }
         },
         "signature": {
@@ -8197,8 +8318,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833686,
-          "i": 18
+          "t": 1768854681,
+          "i": 28
         }
       }
     }
@@ -8218,10 +8339,60 @@
           "stage": "SHARD_MERGE",
           "shards": [
             {
+              "shardName": "rs1",
+              "connectionString": "rs1/shard1:27018",
+              "serverInfo": {
+                "host": "83ecf7059cf0",
+                "port": 27018,
+                "version": "6.0.27",
+                "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+              },
+              "namespace": "E-Commerce_Ref.orders",
+              "indexFilterSet": false,
+              "parsedQuery": {
+                "status": {
+                  "$eq": "Pending"
+                }
+              },
+              "queryHash": "6F186887",
+              "planCacheKey": "A30D3933",
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "winningPlan": {
+                "stage": "SHARDING_FILTER",
+                "inputStage": {
+                  "stage": "FETCH",
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "keyPattern": {
+                      "status": 1
+                    },
+                    "indexName": "ordersPendingPartial",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "status": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": true,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "status": [
+                        "[\"Pending\", \"Pending\"]"
+                      ]
+                    }
+                  }
+                }
+              },
+              "rejectedPlans": []
+            },
+            {
               "shardName": "rs2",
               "connectionString": "rs2/shard2:27020",
               "serverInfo": {
-                "host": "0a2b9ed8c51e",
+                "host": "b6917fddcd63",
                 "port": 27020,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -8271,58 +8442,8 @@
               "shardName": "rs3",
               "connectionString": "rs3/shard3:27021",
               "serverInfo": {
-                "host": "f1c845e11400",
+                "host": "a68d4c6019c5",
                 "port": 27021,
-                "version": "6.0.27",
-                "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
-              },
-              "namespace": "E-Commerce_Ref.orders",
-              "indexFilterSet": false,
-              "parsedQuery": {
-                "status": {
-                  "$eq": "Pending"
-                }
-              },
-              "queryHash": "6F186887",
-              "planCacheKey": "A30D3933",
-              "maxIndexedOrSolutionsReached": false,
-              "maxIndexedAndSolutionsReached": false,
-              "maxScansToExplodeReached": false,
-              "winningPlan": {
-                "stage": "SHARDING_FILTER",
-                "inputStage": {
-                  "stage": "FETCH",
-                  "inputStage": {
-                    "stage": "IXSCAN",
-                    "keyPattern": {
-                      "status": 1
-                    },
-                    "indexName": "ordersPendingPartial",
-                    "isMultiKey": false,
-                    "multiKeyPaths": {
-                      "status": []
-                    },
-                    "isUnique": false,
-                    "isSparse": false,
-                    "isPartial": true,
-                    "indexVersion": 2,
-                    "direction": "forward",
-                    "indexBounds": {
-                      "status": [
-                        "[\"Pending\", \"Pending\"]"
-                      ]
-                    }
-                  }
-                }
-              },
-              "rejectedPlans": []
-            },
-            {
-              "shardName": "rs1",
-              "connectionString": "rs1/shard1:27018",
-              "serverInfo": {
-                "host": "8de94b9d6fb9",
-                "port": 27018,
                 "version": "6.0.27",
                 "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
               },
@@ -8372,17 +8493,87 @@
       },
       "executionStats": {
         "nReturned": 1955,
-        "executionTimeMillis": 3,
+        "executionTimeMillis": 1,
         "totalKeysExamined": 1955,
         "totalDocsExamined": 1955,
         "executionStages": {
           "stage": "SHARD_MERGE",
           "nReturned": 1955,
-          "executionTimeMillis": 3,
+          "executionTimeMillis": 1,
           "totalKeysExamined": 1955,
           "totalDocsExamined": 1955,
-          "totalChildMillis": 4,
+          "totalChildMillis": 3,
           "shards": [
+            {
+              "shardName": "rs1",
+              "executionSuccess": true,
+              "nReturned": 655,
+              "executionTimeMillis": 1,
+              "totalKeysExamined": 655,
+              "totalDocsExamined": 655,
+              "executionStages": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 655,
+                "executionTimeMillisEstimate": 0,
+                "works": 656,
+                "advanced": 655,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 1,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "FETCH",
+                  "nReturned": 655,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 656,
+                  "advanced": 655,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 1,
+                  "docsExamined": 655,
+                  "alreadyHasObj": 0,
+                  "inputStage": {
+                    "stage": "IXSCAN",
+                    "nReturned": 655,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 656,
+                    "advanced": 655,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 0,
+                    "restoreState": 0,
+                    "isEOF": 1,
+                    "keyPattern": {
+                      "status": 1
+                    },
+                    "indexName": "ordersPendingPartial",
+                    "isMultiKey": false,
+                    "multiKeyPaths": {
+                      "status": []
+                    },
+                    "isUnique": false,
+                    "isSparse": false,
+                    "isPartial": true,
+                    "indexVersion": 2,
+                    "direction": "forward",
+                    "indexBounds": {
+                      "status": [
+                        "[\"Pending\", \"Pending\"]"
+                      ]
+                    },
+                    "keysExamined": 655,
+                    "seeks": 1,
+                    "dupsTested": 0,
+                    "dupsDropped": 0
+                  }
+                }
+              },
+              "allPlansExecution": []
+            },
             {
               "shardName": "rs2",
               "executionSuccess": true,
@@ -8522,80 +8713,14 @@
                 }
               },
               "allPlansExecution": []
-            },
-            {
-              "shardName": "rs1",
-              "executionSuccess": true,
-              "nReturned": 655,
-              "executionTimeMillis": 2,
-              "totalKeysExamined": 655,
-              "totalDocsExamined": 655,
-              "executionStages": {
-                "stage": "SHARDING_FILTER",
-                "nReturned": 655,
-                "executionTimeMillisEstimate": 0,
-                "works": 656,
-                "advanced": 655,
-                "needTime": 0,
-                "needYield": 0,
-                "saveState": 0,
-                "restoreState": 0,
-                "isEOF": 1,
-                "chunkSkips": 0,
-                "inputStage": {
-                  "stage": "FETCH",
-                  "nReturned": 655,
-                  "executionTimeMillisEstimate": 0,
-                  "works": 656,
-                  "advanced": 655,
-                  "needTime": 0,
-                  "needYield": 0,
-                  "saveState": 0,
-                  "restoreState": 0,
-                  "isEOF": 1,
-                  "docsExamined": 655,
-                  "alreadyHasObj": 0,
-                  "inputStage": {
-                    "stage": "IXSCAN",
-                    "nReturned": 655,
-                    "executionTimeMillisEstimate": 0,
-                    "works": 656,
-                    "advanced": 655,
-                    "needTime": 0,
-                    "needYield": 0,
-                    "saveState": 0,
-                    "restoreState": 0,
-                    "isEOF": 1,
-                    "keyPattern": {
-                      "status": 1
-                    },
-                    "indexName": "ordersPendingPartial",
-                    "isMultiKey": false,
-                    "multiKeyPaths": {
-                      "status": []
-                    },
-                    "isUnique": false,
-                    "isSparse": false,
-                    "isPartial": true,
-                    "indexVersion": 2,
-                    "direction": "forward",
-                    "indexBounds": {
-                      "status": [
-                        "[\"Pending\", \"Pending\"]"
-                      ]
-                    },
-                    "keysExamined": 655,
-                    "seeks": 1,
-                    "dupsTested": 0,
-                    "dupsDropped": 0
-                  }
-                }
-              },
-              "allPlansExecution": []
             }
           ]
         },
         "allPlansExecution": [
+          {
+            "shardName": "rs1",
+            "allPlans": []
+          },
           {
             "shardName": "rs2",
             "allPlans": []
@@ -8603,15 +8728,11 @@
           {
             "shardName": "rs3",
             "allPlans": []
-          },
-          {
-            "shardName": "rs1",
-            "allPlans": []
           }
         ]
       },
       "serverInfo": {
-        "host": "b663e1a95a6d",
+        "host": "75b97d642ba2",
         "port": 27017,
         "version": "6.0.27",
         "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
@@ -8635,7 +8756,7 @@
         "lsid": {
           "id": {
             "$binary": {
-              "base64": "Vu9S98lNQ+2ppI7F+VN+9g==",
+              "base64": "3lB9iRSmS1iucWKXVjRNqg==",
               "subType": "04"
             }
           }
@@ -8643,8 +8764,8 @@
         "$clusterTime": {
           "clusterTime": {
             "$timestamp": {
-              "t": 1768833686,
-              "i": 18
+              "t": 1768854681,
+              "i": 28
             }
           },
           "signature": {
@@ -8663,8 +8784,8 @@
       "$clusterTime": {
         "clusterTime": {
           "$timestamp": {
-            "t": 1768833686,
-            "i": 18
+            "t": 1768854681,
+            "i": 28
           }
         },
         "signature": {
@@ -8679,8 +8800,8 @@
       },
       "operationTime": {
         "$timestamp": {
-          "t": 1768833686,
-          "i": 18
+          "t": 1768854681,
+          "i": 28
         }
       }
     }

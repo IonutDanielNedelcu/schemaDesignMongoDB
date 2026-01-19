@@ -7,19 +7,16 @@ from pymongo.collation import Collation
 
 productsSkuUnique = 'productsSkuUnique'
 productsText = 'productsText'
+productsMainPartial = 'productsMainPartial'
+productsSubPartial = 'productsSubPartial'
 
 usersEmailUnique = 'usersEmailUnique'
-
 usersAddressesZipcode = 'usersAddressesZipcode'
-
-categoriesMainAlphabetical = 'categoriesMainAlphabetical'
-categoriesSecondaryAlphabetical = 'categoriesSecondaryAlphabetical'
 
 ordersOrderDateIdx = 'ordersOrderDateIdx'
 ordersStatusIdx = 'ordersStatusIdx'
 ordersCustomerEmailDate = 'ordersCustomerEmailDate'
 ordersPendingPartial = 'ordersPendingPartial'
-
 orderItemsProductId = 'orderItemsProductId'
 
 
@@ -27,7 +24,6 @@ def createIndexes(db):
     products = db['products']
     users = db['users']
     addresses = db['addresses']
-    categories = db['categories']
     orders = db['orders']
     orderItems = db['orderItems']
 
@@ -41,6 +37,16 @@ def createIndexes(db):
             'keys': [('name', TEXT), ('details.description', TEXT)],
             'options': {'name': productsText},
             'type': 'Text'
+        },
+        {
+            'keys': [('mainCategoryId', ASCENDING)],
+            'options': {'name': productsMainPartial},
+            'type': 'Single-field - main category'
+        },
+        {
+            'keys': [('subCategoryId', ASCENDING)],
+            'options': {'name': productsSubPartial, 'partialFilterExpression': {'subCategoryId': {'$type': 'objectId'}}},
+            'type': 'Partial - products in sub categories'
         },
     ]
 
@@ -58,27 +64,6 @@ def createIndexes(db):
             'options': {'name': usersAddressesZipcode}, 
             'type': 'Single-field'
         }
-    ]
-
-    categoriesIndexes = [
-        {
-            'keys': [('name', ASCENDING)],
-            'options': {
-                'name': categoriesMainAlphabetical,
-                'partialFilterExpression': {'parentCategoryId': None},
-                'collation': Collation('en', strength=2)
-            },
-            'type': 'Partial & Alphabetical (main categories)'
-        },
-        {
-            'keys': [('name', ASCENDING)],
-            'options': {
-                'name': categoriesSecondaryAlphabetical,
-                'partialFilterExpression': {'parentCategoryId': {'$type': 'objectId'}},
-                'collation': Collation('en', strength=2)
-            },
-            'type': 'Partial & Alphabetical (secondary categories)'
-        },
     ]
 
     ordersIndexes = [
@@ -143,13 +128,6 @@ def createIndexes(db):
     for idx in addressesIndexes:
         createAndReport(addresses, idx)
     print("Finished creating indexes for 'addresses' collection.")
-
-    # indexes for categories
-    print()
-    print("Started creating indexes for 'categories' collection.")
-    for idx in categoriesIndexes:
-        createAndReport(categories, idx)
-    print("Finished creating indexes for 'categories' collection.")
 
     # indexes for orders
     print()

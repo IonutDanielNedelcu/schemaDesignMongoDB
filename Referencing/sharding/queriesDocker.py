@@ -5,8 +5,8 @@ from indexesDocker import (
     createIndexes,
     usersEmailUnique,
     usersAddressesZipcode,
-    categoriesMainAlphabetical,
-    categoriesSecondaryAlphabetical,
+    productsMainPartial,
+    productsSubPartial,
     ordersOrderDateIdx,
     ordersStatusIdx,
     ordersCustomerEmailDate,
@@ -75,7 +75,7 @@ def runWithIndex(db, collectionName, queryFilter, indexName=None, projection=Non
         return {'error': str(e), 'indexHint': indexName}
 
 
-#       MAIN
+# MAIN
 if __name__ == "__main__":
     client, db = connectToMongoDB()
     try:
@@ -92,6 +92,7 @@ if __name__ == "__main__":
         subName = 'Laptops'
         mainCat = db['categories'].find_one({'name': mainName, 'parentCategoryId': None})
         mainId = mainCat.get('_id') if mainCat else None
+        subCat = None
         subId = None
         if mainId and subName:
             subCat = db['categories'].find_one({'name': subName, 'parentCategoryId': mainId})
@@ -101,8 +102,10 @@ if __name__ == "__main__":
             q['mainCategoryId'] = mainId
         if subId:
             q['subCategoryId'] = subId
-        queriesNoIndex.append(('products', q, None, {'limit': 20}))
-        queriesIndex.append(('products', q, None, {'limit': 20}))
+        # choose appropriate partial index hint
+        indexHint = productsSubPartial if subId else productsMainPartial
+        queriesNoIndex.append(('products', q, indexHint, {'limit': 20}))
+        queriesIndex.append(('products', q, indexHint, {'limit': 20}))
 
         # 3. Text search products
         searchString = 'gaming laptop'
