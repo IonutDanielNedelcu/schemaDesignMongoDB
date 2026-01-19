@@ -19,5 +19,3 @@ Top-level fields and types:
   - each cart item:
     - `productId`: ObjectId
     - `quantity`: Number
-
-Notes: adapt `shoppingCart` to store references or denormalized snapshots as needed by your application.

@@ -23,4 +23,3 @@ Top-level fields and types:
     - `comment`: String
     - `date`: Date
 
-Notes: `specs` should mirror product specification keys from your source data; `vendorId` references `vendors`.
