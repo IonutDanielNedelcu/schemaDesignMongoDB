@@ -1,0 +1,6316 @@
+[
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$reviews",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviews.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          },
+          "reviewsCount": {
+            "$sum": 1
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1,
+          "reviewsCount": 1
+        }
+      },
+      {
+        "$sort": {
+          "avgRating": -1
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      }
+    ],
+    "name": "Products Inefficient",
+    "elapsedMs": 55.620670318603516,
+    "resultCount": 261,
+    "explain": {
+      "serverInfo": {
+        "host": "c9d1668d3919",
+        "port": 27017,
+        "version": "6.0.27",
+        "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600
+      },
+      "mergeType": "mongos",
+      "splitPipeline": {
+        "shardsPart": [
+          {
+            "$unwind": {
+              "path": "$reviews",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "avgRating": {
+                "$avg": "$reviews.rating"
+              },
+              "name": {
+                "$first": "$name"
+              },
+              "sku": {
+                "$first": "$sku"
+              },
+              "reviewsCount": {
+                "$sum": {
+                  "$const": 1
+                }
+              }
+            }
+          }
+        ],
+        "mergerPart": [
+          {
+            "$mergeCursors": {
+              "lsid": {
+                "id": {
+                  "$binary": {
+                    "base64": "ju4TgwLWTI2uSfvk+il1yg==",
+                    "subType": "04"
+                  }
+                },
+                "uid": {
+                  "$binary": {
+                    "base64": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+                    "subType": "00"
+                  }
+                }
+              },
+              "compareWholeSortKey": false,
+              "tailableMode": "normal",
+              "nss": "eCommerceProjectHybrid.products",
+              "allowPartialResults": false,
+              "recordRemoteOpWaitTime": false
+            }
+          },
+          {
+            "$group": {
+              "_id": "$$ROOT._id",
+              "avgRating": {
+                "$avg": "$$ROOT.avgRating"
+              },
+              "name": {
+                "$first": "$$ROOT.name"
+              },
+              "sku": {
+                "$first": "$$ROOT.sku"
+              },
+              "reviewsCount": {
+                "$sum": "$$ROOT.reviewsCount"
+              },
+              "$doingMerge": true
+            }
+          },
+          {
+            "$match": {
+              "avgRating": {
+                "$gt": 4
+              }
+            }
+          },
+          {
+            "$project": {
+              "_id": true,
+              "name": true,
+              "sku": true,
+              "avgRating": true,
+              "reviewsCount": true
+            }
+          },
+          {
+            "$sort": {
+              "sortKey": {
+                "avgRating": -1
+              }
+            }
+          }
+        ]
+      },
+      "shards": {
+        "rs2": {
+          "host": "shard2:27020",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.products",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "E23F7DE0",
+                  "planCacheKey": "E23F7DE0",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 1661,
+                  "executionTimeMillis": 11,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 1661,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 1661,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 1662,
+                    "advanced": 1661,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 2,
+                    "restoreState": 2,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 1661,
+                      "executionTimeMillisEstimate": 0,
+                      "works": 1662,
+                      "advanced": 1661,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 2,
+                      "restoreState": 2,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 1661,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 1662,
+                        "advanced": 1661,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 2,
+                        "restoreState": 2,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 1661
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 1661,
+              "executionTimeMillisEstimate": 2
+            },
+            {
+              "$unwind": {
+                "path": "$reviews",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 8542,
+              "executionTimeMillisEstimate": 2
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "avgRating": {
+                  "$avg": "$reviews.rating"
+                },
+                "name": {
+                  "$first": "$name"
+                },
+                "sku": {
+                  "$first": "$sku"
+                },
+                "reviewsCount": {
+                  "$sum": {
+                    "$const": 1
+                  }
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "avgRating": 146168,
+                "name": 145721,
+                "sku": 140766,
+                "reviewsCount": 132880
+              },
+              "totalOutputDataSizeBytes": 1472441,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 1661,
+              "executionTimeMillisEstimate": 10
+            }
+          ]
+        },
+        "rs1": {
+          "host": "shard1:27018",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.products",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "E23F7DE0",
+                  "planCacheKey": "E23F7DE0",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 1696,
+                  "executionTimeMillis": 17,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 1696,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 1696,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 1697,
+                    "advanced": 1696,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 2,
+                    "restoreState": 2,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 1696,
+                      "executionTimeMillisEstimate": 0,
+                      "works": 1697,
+                      "advanced": 1696,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 2,
+                      "restoreState": 2,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 1696,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 1697,
+                        "advanced": 1696,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 2,
+                        "restoreState": 2,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 1696
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 1696,
+              "executionTimeMillisEstimate": 4
+            },
+            {
+              "$unwind": {
+                "path": "$reviews",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 8549,
+              "executionTimeMillisEstimate": 4
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "avgRating": {
+                  "$avg": "$reviews.rating"
+                },
+                "name": {
+                  "$first": "$name"
+                },
+                "sku": {
+                  "$first": "$sku"
+                },
+                "reviewsCount": {
+                  "$sum": {
+                    "$const": 1
+                  }
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "avgRating": 149248,
+                "name": 148585,
+                "sku": 143438,
+                "reviewsCount": 135680
+              },
+              "totalOutputDataSizeBytes": 1502967,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 1696,
+              "executionTimeMillisEstimate": 10
+            }
+          ]
+        },
+        "rs3": {
+          "host": "shard3:27021",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.products",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "E23F7DE0",
+                  "planCacheKey": "E23F7DE0",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 1643,
+                  "executionTimeMillis": 19,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 1643,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 1643,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 1644,
+                    "advanced": 1643,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 2,
+                    "restoreState": 2,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 1643,
+                      "executionTimeMillisEstimate": 0,
+                      "works": 1644,
+                      "advanced": 1643,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 2,
+                      "restoreState": 2,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 1643,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 1644,
+                        "advanced": 1643,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 2,
+                        "restoreState": 2,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 1643
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 1643,
+              "executionTimeMillisEstimate": 3
+            },
+            {
+              "$unwind": {
+                "path": "$reviews",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 8428,
+              "executionTimeMillisEstimate": 10
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "avgRating": {
+                  "$avg": "$reviews.rating"
+                },
+                "name": {
+                  "$first": "$name"
+                },
+                "sku": {
+                  "$first": "$sku"
+                },
+                "reviewsCount": {
+                  "$sum": {
+                    "$const": 1
+                  }
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "avgRating": 144584,
+                "name": 143859,
+                "sku": 139093,
+                "reviewsCount": 131440
+              },
+              "totalOutputDataSizeBytes": 1456054,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 1643,
+              "executionTimeMillisEstimate": 10
+            }
+          ]
+        }
+      },
+      "command": {
+        "aggregate": "products",
+        "pipeline": [
+          {
+            "$unwind": {
+              "path": "$reviews",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "avgRating": {
+                "$avg": "$reviews.rating"
+              },
+              "name": {
+                "$first": "$name"
+              },
+              "sku": {
+                "$first": "$sku"
+              },
+              "reviewsCount": {
+                "$sum": 1
+              }
+            }
+          },
+          {
+            "$project": {
+              "name": 1,
+              "sku": 1,
+              "avgRating": 1,
+              "reviewsCount": 1
+            }
+          },
+          {
+            "$sort": {
+              "avgRating": -1
+            }
+          },
+          {
+            "$match": {
+              "avgRating": {
+                "$gt": 4
+              }
+            }
+          }
+        ],
+        "cursor": {}
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768771948,
+            "i": 11
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768771948,
+          "i": 11
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "shoppingCart.productId",
+          "foreignField": "_id",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$addFields": {
+          "lineTotal": {
+            "$multiply": [
+              "$shoppingCart.quantity",
+              {
+                "$ifNull": [
+                  "$productInfo.price",
+                  "$shoppingCart.price"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": "$lineTotal"
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      },
+      {
+        "$sort": {
+          "cartTotal": -1
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      }
+    ],
+    "name": "Users Inefficient",
+    "elapsedMs": 10605.115175247192,
+    "resultCount": 958,
+    "explain": {
+      "serverInfo": {
+        "host": "c9d1668d3919",
+        "port": 27017,
+        "version": "6.0.27",
+        "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600
+      },
+      "mergeType": "mongos",
+      "splitPipeline": {
+        "shardsPart": [
+          {
+            "$unwind": {
+              "path": "$shoppingCart",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "products",
+              "as": "productInfo",
+              "localField": "shoppingCart.productId",
+              "foreignField": "_id",
+              "unwinding": {
+                "preserveNullAndEmptyArrays": true
+              }
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  "$shoppingCart.quantity",
+                  {
+                    "$ifNull": [
+                      "$productInfo.price",
+                      "$shoppingCart.price"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "username": {
+                "$first": "$username"
+              },
+              "cartTotal": {
+                "$sum": "$lineTotal"
+              }
+            }
+          }
+        ],
+        "mergerPart": [
+          {
+            "$mergeCursors": {
+              "lsid": {
+                "id": {
+                  "$binary": {
+                    "base64": "ju4TgwLWTI2uSfvk+il1yg==",
+                    "subType": "04"
+                  }
+                },
+                "uid": {
+                  "$binary": {
+                    "base64": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+                    "subType": "00"
+                  }
+                }
+              },
+              "compareWholeSortKey": false,
+              "tailableMode": "normal",
+              "nss": "eCommerceProjectHybrid.users",
+              "allowPartialResults": false,
+              "recordRemoteOpWaitTime": false
+            }
+          },
+          {
+            "$group": {
+              "_id": "$$ROOT._id",
+              "username": {
+                "$first": "$$ROOT.username"
+              },
+              "cartTotal": {
+                "$sum": "$$ROOT.cartTotal"
+              },
+              "$doingMerge": true
+            }
+          },
+          {
+            "$match": {
+              "cartTotal": {
+                "$gt": 100
+              }
+            }
+          },
+          {
+            "$project": {
+              "_id": true,
+              "username": true,
+              "cartTotal": true
+            }
+          },
+          {
+            "$sort": {
+              "sortKey": {
+                "cartTotal": -1
+              }
+            }
+          }
+        ]
+      },
+      "shards": {
+        "rs3": {
+          "host": "shard3:27021",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.users",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "D62BC356",
+                  "planCacheKey": "D62BC356",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 326,
+                  "executionTimeMillis": 10819,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 326,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 326,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 327,
+                    "advanced": 326,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 1,
+                    "restoreState": 1,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 326,
+                      "executionTimeMillisEstimate": 0,
+                      "works": 327,
+                      "advanced": 326,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 1,
+                      "restoreState": 1,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 326,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 327,
+                        "advanced": 326,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 1,
+                        "restoreState": 1,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 326
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 326,
+              "executionTimeMillisEstimate": 3
+            },
+            {
+              "$unwind": {
+                "path": "$shoppingCart",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 1784,
+              "executionTimeMillisEstimate": 5
+            },
+            {
+              "$lookup": {
+                "from": "products",
+                "as": "productInfo",
+                "localField": "shoppingCart.productId",
+                "foreignField": "_id",
+                "unwinding": {
+                  "preserveNullAndEmptyArrays": true
+                }
+              },
+              "totalDocsExamined": 0,
+              "totalKeysExamined": 0,
+              "collectionScans": 0,
+              "indexesUsed": [],
+              "nReturned": 1784,
+              "executionTimeMillisEstimate": 10807
+            },
+            {
+              "$addFields": {
+                "lineTotal": {
+                  "$multiply": [
+                    "$shoppingCart.quantity",
+                    {
+                      "$ifNull": [
+                        "$productInfo.price",
+                        "$shoppingCart.price"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "nReturned": 1784,
+              "executionTimeMillisEstimate": 10814
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "username": {
+                  "$first": "$username"
+                },
+                "cartTotal": {
+                  "$sum": "$lineTotal"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "username": 23160,
+                "cartTotal": 26080
+              },
+              "totalOutputDataSizeBytes": 123894,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 326,
+              "executionTimeMillisEstimate": 10818
+            }
+          ]
+        },
+        "rs2": {
+          "host": "shard2:27020",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.users",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "D62BC356",
+                  "planCacheKey": "D62BC356",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 323,
+                  "executionTimeMillis": 11196,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 323,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 323,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 324,
+                    "advanced": 323,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 1,
+                    "restoreState": 1,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 323,
+                      "executionTimeMillisEstimate": 0,
+                      "works": 324,
+                      "advanced": 323,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 1,
+                      "restoreState": 1,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 323,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 324,
+                        "advanced": 323,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 1,
+                        "restoreState": 1,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 323
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 323,
+              "executionTimeMillisEstimate": 0
+            },
+            {
+              "$unwind": {
+                "path": "$shoppingCart",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 1901,
+              "executionTimeMillisEstimate": 2
+            },
+            {
+              "$lookup": {
+                "from": "products",
+                "as": "productInfo",
+                "localField": "shoppingCart.productId",
+                "foreignField": "_id",
+                "unwinding": {
+                  "preserveNullAndEmptyArrays": true
+                }
+              },
+              "totalDocsExamined": 0,
+              "totalKeysExamined": 0,
+              "collectionScans": 0,
+              "indexesUsed": [],
+              "nReturned": 1901,
+              "executionTimeMillisEstimate": 11181
+            },
+            {
+              "$addFields": {
+                "lineTotal": {
+                  "$multiply": [
+                    "$shoppingCart.quantity",
+                    {
+                      "$ifNull": [
+                        "$productInfo.price",
+                        "$shoppingCart.price"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "nReturned": 1901,
+              "executionTimeMillisEstimate": 11187
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "username": {
+                  "$first": "$username"
+                },
+                "cartTotal": {
+                  "$sum": "$lineTotal"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "username": 23120,
+                "cartTotal": 25840
+              },
+              "totalOutputDataSizeBytes": 122927,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 323,
+              "executionTimeMillisEstimate": 11196
+            }
+          ]
+        },
+        "rs1": {
+          "host": "shard1:27018",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.users",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "D62BC356",
+                  "planCacheKey": "D62BC356",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 351,
+                  "executionTimeMillis": 11397,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 351,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 351,
+                    "executionTimeMillisEstimate": 2,
+                    "works": 352,
+                    "advanced": 351,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 1,
+                    "restoreState": 1,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 351,
+                      "executionTimeMillisEstimate": 2,
+                      "works": 352,
+                      "advanced": 351,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 1,
+                      "restoreState": 1,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 351,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 352,
+                        "advanced": 351,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 1,
+                        "restoreState": 1,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 351
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 351,
+              "executionTimeMillisEstimate": 2
+            },
+            {
+              "$unwind": {
+                "path": "$shoppingCart",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 2000,
+              "executionTimeMillisEstimate": 9
+            },
+            {
+              "$lookup": {
+                "from": "products",
+                "as": "productInfo",
+                "localField": "shoppingCart.productId",
+                "foreignField": "_id",
+                "unwinding": {
+                  "preserveNullAndEmptyArrays": true
+                }
+              },
+              "totalDocsExamined": 0,
+              "totalKeysExamined": 0,
+              "collectionScans": 0,
+              "indexesUsed": [],
+              "nReturned": 2000,
+              "executionTimeMillisEstimate": 11384
+            },
+            {
+              "$addFields": {
+                "lineTotal": {
+                  "$multiply": [
+                    "$shoppingCart.quantity",
+                    {
+                      "$ifNull": [
+                        "$productInfo.price",
+                        "$shoppingCart.price"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "nReturned": 2000,
+              "executionTimeMillisEstimate": 11391
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "username": {
+                  "$first": "$username"
+                },
+                "cartTotal": {
+                  "$sum": "$lineTotal"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "username": 25764,
+                "cartTotal": 28080
+              },
+              "totalOutputDataSizeBytes": 134223,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 351,
+              "executionTimeMillisEstimate": 11395
+            }
+          ]
+        }
+      },
+      "command": {
+        "aggregate": "users",
+        "pipeline": [
+          {
+            "$unwind": {
+              "path": "$shoppingCart",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "shoppingCart.productId",
+              "foreignField": "_id",
+              "as": "productInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$productInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  "$shoppingCart.quantity",
+                  {
+                    "$ifNull": [
+                      "$productInfo.price",
+                      "$shoppingCart.price"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "username": {
+                "$first": "$username"
+              },
+              "cartTotal": {
+                "$sum": "$lineTotal"
+              }
+            }
+          },
+          {
+            "$project": {
+              "username": 1,
+              "cartTotal": 1
+            }
+          },
+          {
+            "$sort": {
+              "cartTotal": -1
+            }
+          },
+          {
+            "$match": {
+              "cartTotal": {
+                "$gt": 100
+              }
+            }
+          }
+        ],
+        "cursor": {}
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768771968,
+            "i": 2
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768771968,
+          "i": 1
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$items",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$items.vendorIdSnapshot",
+          "totalSales": {
+            "$sum": {
+              "$multiply": [
+                {
+                  "$ifNull": [
+                    "$items.unitPriceSnapshot",
+                    "$items.unitPrice"
+                  ]
+                },
+                {
+                  "$ifNull": [
+                    "$items.quantity",
+                    0
+                  ]
+                }
+              ]
+            }
+          },
+          "orders": {
+            "$addToSet": "$_id"
+          }
+        }
+      },
+      {
+        "$lookup": {
+          "from": "vendors",
+          "localField": "_id",
+          "foreignField": "_id",
+          "as": "vendorInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$vendorInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$project": {
+          "vendorName": {
+            "$ifNull": [
+              "$vendorInfo.companyName",
+              "(unknown)"
+            ]
+          },
+          "totalSales": 1,
+          "uniqueOrders": {
+            "$size": {
+              "$ifNull": [
+                "$orders",
+                []
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$sort": {
+          "totalSales": -1
+        }
+      },
+      {
+        "$match": {
+          "totalSales": {
+            "$gt": 1000
+          }
+        }
+      }
+    ],
+    "name": "Orders Inefficient",
+    "elapsedMs": 207.47685432434082,
+    "resultCount": 74,
+    "explain": {
+      "serverInfo": {
+        "host": "c9d1668d3919",
+        "port": 27017,
+        "version": "6.0.27",
+        "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600
+      },
+      "mergeType": "mongos",
+      "splitPipeline": {
+        "shardsPart": [
+          {
+            "$unwind": {
+              "path": "$items",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$items.vendorIdSnapshot",
+              "totalSales": {
+                "$sum": {
+                  "$multiply": [
+                    {
+                      "$ifNull": [
+                        "$items.unitPriceSnapshot",
+                        "$items.unitPrice"
+                      ]
+                    },
+                    {
+                      "$ifNull": [
+                        "$items.quantity",
+                        {
+                          "$const": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              "orders": {
+                "$addToSet": "$_id"
+              }
+            }
+          }
+        ],
+        "mergerPart": [
+          {
+            "$mergeCursors": {
+              "lsid": {
+                "id": {
+                  "$binary": {
+                    "base64": "ju4TgwLWTI2uSfvk+il1yg==",
+                    "subType": "04"
+                  }
+                },
+                "uid": {
+                  "$binary": {
+                    "base64": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+                    "subType": "00"
+                  }
+                }
+              },
+              "compareWholeSortKey": false,
+              "tailableMode": "normal",
+              "nss": "eCommerceProjectHybrid.orders",
+              "allowPartialResults": false,
+              "recordRemoteOpWaitTime": false
+            }
+          },
+          {
+            "$group": {
+              "_id": "$$ROOT._id",
+              "totalSales": {
+                "$sum": "$$ROOT.totalSales"
+              },
+              "orders": {
+                "$addToSet": "$$ROOT.orders"
+              },
+              "$doingMerge": true
+            }
+          },
+          {
+            "$match": {
+              "totalSales": {
+                "$gt": 1000
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "vendors",
+              "as": "vendorInfo",
+              "localField": "_id",
+              "foreignField": "_id",
+              "unwinding": {
+                "preserveNullAndEmptyArrays": true
+              }
+            }
+          },
+          {
+            "$project": {
+              "_id": true,
+              "totalSales": true,
+              "vendorName": {
+                "$ifNull": [
+                  "$vendorInfo.companyName",
+                  {
+                    "$const": "(unknown)"
+                  }
+                ]
+              },
+              "uniqueOrders": {
+                "$size": [
+                  {
+                    "$ifNull": [
+                      "$orders",
+                      {
+                        "$const": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$sort": {
+              "sortKey": {
+                "totalSales": -1
+              }
+            }
+          }
+        ]
+      },
+      "shards": {
+        "rs2": {
+          "host": "shard2:27020",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.orders",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "31631226",
+                  "planCacheKey": "31631226",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 3204,
+                  "executionTimeMillis": 78,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 3204,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 3204,
+                    "executionTimeMillisEstimate": 6,
+                    "works": 3205,
+                    "advanced": 3204,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 4,
+                    "restoreState": 4,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 3204,
+                      "executionTimeMillisEstimate": 6,
+                      "works": 3205,
+                      "advanced": 3204,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 4,
+                      "restoreState": 4,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 3204,
+                        "executionTimeMillisEstimate": 1,
+                        "works": 3205,
+                        "advanced": 3204,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 4,
+                        "restoreState": 4,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 3204
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 3204,
+              "executionTimeMillisEstimate": 12
+            },
+            {
+              "$unwind": {
+                "path": "$items",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 17624,
+              "executionTimeMillisEstimate": 22
+            },
+            {
+              "$group": {
+                "_id": "$items.vendorIdSnapshot",
+                "totalSales": {
+                  "$sum": {
+                    "$multiply": [
+                      {
+                        "$ifNull": [
+                          "$items.unitPriceSnapshot",
+                          "$items.unitPrice"
+                        ]
+                      },
+                      {
+                        "$ifNull": [
+                          "$items.quantity",
+                          {
+                            "$const": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "orders": {
+                  "$addToSet": "$_id"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "totalSales": 5920,
+                "orders": 278496
+              },
+              "totalOutputDataSizeBytes": 301362,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 74,
+              "executionTimeMillisEstimate": 71
+            }
+          ]
+        },
+        "rs3": {
+          "host": "shard3:27021",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.orders",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "31631226",
+                  "planCacheKey": "31631226",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 3288,
+                  "executionTimeMillis": 85,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 3288,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 3288,
+                    "executionTimeMillisEstimate": 8,
+                    "works": 3289,
+                    "advanced": 3288,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 4,
+                    "restoreState": 4,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 3288,
+                      "executionTimeMillisEstimate": 7,
+                      "works": 3289,
+                      "advanced": 3288,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 4,
+                      "restoreState": 4,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 3288,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 3289,
+                        "advanced": 3288,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 4,
+                        "restoreState": 4,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 3288
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 3288,
+              "executionTimeMillisEstimate": 19
+            },
+            {
+              "$unwind": {
+                "path": "$items",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 18005,
+              "executionTimeMillisEstimate": 39
+            },
+            {
+              "$group": {
+                "_id": "$items.vendorIdSnapshot",
+                "totalSales": {
+                  "$sum": {
+                    "$multiply": [
+                      {
+                        "$ifNull": [
+                          "$items.unitPriceSnapshot",
+                          "$items.unitPrice"
+                        ]
+                      },
+                      {
+                        "$ifNull": [
+                          "$items.quantity",
+                          {
+                            "$const": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "orders": {
+                  "$addToSet": "$_id"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "totalSales": 5920,
+                "orders": 283024
+              },
+              "totalOutputDataSizeBytes": 305890,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 74,
+              "executionTimeMillisEstimate": 79
+            }
+          ]
+        },
+        "rs1": {
+          "host": "shard1:27018",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.orders",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "31631226",
+                  "planCacheKey": "31631226",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 3508,
+                  "executionTimeMillis": 99,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 3508,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 3508,
+                    "executionTimeMillisEstimate": 8,
+                    "works": 3509,
+                    "advanced": 3508,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 4,
+                    "restoreState": 4,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 3508,
+                      "executionTimeMillisEstimate": 2,
+                      "works": 3509,
+                      "advanced": 3508,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 4,
+                      "restoreState": 4,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 3508,
+                        "executionTimeMillisEstimate": 2,
+                        "works": 3509,
+                        "advanced": 3508,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 4,
+                        "restoreState": 4,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 3508
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 3508,
+              "executionTimeMillisEstimate": 25
+            },
+            {
+              "$unwind": {
+                "path": "$items",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 19173,
+              "executionTimeMillisEstimate": 25
+            },
+            {
+              "$group": {
+                "_id": "$items.vendorIdSnapshot",
+                "totalSales": {
+                  "$sum": {
+                    "$multiply": [
+                      {
+                        "$ifNull": [
+                          "$items.unitPriceSnapshot",
+                          "$items.unitPrice"
+                        ]
+                      },
+                      {
+                        "$ifNull": [
+                          "$items.quantity",
+                          {
+                            "$const": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "orders": {
+                  "$addToSet": "$_id"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "totalSales": 5920,
+                "orders": 302576
+              },
+              "totalOutputDataSizeBytes": 325442,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 74,
+              "executionTimeMillisEstimate": 92
+            }
+          ]
+        }
+      },
+      "command": {
+        "aggregate": "orders",
+        "pipeline": [
+          {
+            "$unwind": {
+              "path": "$items",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$items.vendorIdSnapshot",
+              "totalSales": {
+                "$sum": {
+                  "$multiply": [
+                    {
+                      "$ifNull": [
+                        "$items.unitPriceSnapshot",
+                        "$items.unitPrice"
+                      ]
+                    },
+                    {
+                      "$ifNull": [
+                        "$items.quantity",
+                        0
+                      ]
+                    }
+                  ]
+                }
+              },
+              "orders": {
+                "$addToSet": "$_id"
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "vendors",
+              "localField": "_id",
+              "foreignField": "_id",
+              "as": "vendorInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$vendorInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$project": {
+              "vendorName": {
+                "$ifNull": [
+                  "$vendorInfo.companyName",
+                  "(unknown)"
+                ]
+              },
+              "totalSales": 1,
+              "uniqueOrders": {
+                "$size": {
+                  "$ifNull": [
+                    "$orders",
+                    []
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "totalSales": -1
+            }
+          },
+          {
+            "$match": {
+              "totalSales": {
+                "$gt": 1000
+              }
+            }
+          }
+        ],
+        "cursor": {}
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768771968,
+            "i": 2
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768771968,
+          "i": 1
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$reviews",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviews.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          },
+          "reviewsCount": {
+            "$sum": 1
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1,
+          "reviewsCount": 1
+        }
+      },
+      {
+        "$sort": {
+          "avgRating": -1
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      }
+    ],
+    "name": "Products Inefficient with Indexes",
+    "elapsedMs": 77.29673385620117,
+    "resultCount": 261,
+    "explain": {
+      "serverInfo": {
+        "host": "c9d1668d3919",
+        "port": 27017,
+        "version": "6.0.27",
+        "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600
+      },
+      "mergeType": "mongos",
+      "splitPipeline": {
+        "shardsPart": [
+          {
+            "$unwind": {
+              "path": "$reviews",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "avgRating": {
+                "$avg": "$reviews.rating"
+              },
+              "name": {
+                "$first": "$name"
+              },
+              "sku": {
+                "$first": "$sku"
+              },
+              "reviewsCount": {
+                "$sum": {
+                  "$const": 1
+                }
+              }
+            }
+          }
+        ],
+        "mergerPart": [
+          {
+            "$mergeCursors": {
+              "lsid": {
+                "id": {
+                  "$binary": {
+                    "base64": "ju4TgwLWTI2uSfvk+il1yg==",
+                    "subType": "04"
+                  }
+                },
+                "uid": {
+                  "$binary": {
+                    "base64": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+                    "subType": "00"
+                  }
+                }
+              },
+              "compareWholeSortKey": false,
+              "tailableMode": "normal",
+              "nss": "eCommerceProjectHybrid.products",
+              "allowPartialResults": false,
+              "recordRemoteOpWaitTime": false
+            }
+          },
+          {
+            "$group": {
+              "_id": "$$ROOT._id",
+              "avgRating": {
+                "$avg": "$$ROOT.avgRating"
+              },
+              "name": {
+                "$first": "$$ROOT.name"
+              },
+              "sku": {
+                "$first": "$$ROOT.sku"
+              },
+              "reviewsCount": {
+                "$sum": "$$ROOT.reviewsCount"
+              },
+              "$doingMerge": true
+            }
+          },
+          {
+            "$match": {
+              "avgRating": {
+                "$gt": 4
+              }
+            }
+          },
+          {
+            "$project": {
+              "_id": true,
+              "name": true,
+              "sku": true,
+              "avgRating": true,
+              "reviewsCount": true
+            }
+          },
+          {
+            "$sort": {
+              "sortKey": {
+                "avgRating": -1
+              }
+            }
+          }
+        ]
+      },
+      "shards": {
+        "rs1": {
+          "host": "shard1:27018",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.products",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "E23F7DE0",
+                  "planCacheKey": "20798850",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 1696,
+                  "executionTimeMillis": 62,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 1696,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 1696,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 1697,
+                    "advanced": 1696,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 2,
+                    "restoreState": 2,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 1696,
+                      "executionTimeMillisEstimate": 0,
+                      "works": 1697,
+                      "advanced": 1696,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 2,
+                      "restoreState": 2,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 1696,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 1697,
+                        "advanced": 1696,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 2,
+                        "restoreState": 2,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 1696
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 1696,
+              "executionTimeMillisEstimate": 2
+            },
+            {
+              "$unwind": {
+                "path": "$reviews",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 8549,
+              "executionTimeMillisEstimate": 9
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "avgRating": {
+                  "$avg": "$reviews.rating"
+                },
+                "name": {
+                  "$first": "$name"
+                },
+                "sku": {
+                  "$first": "$sku"
+                },
+                "reviewsCount": {
+                  "$sum": {
+                    "$const": 1
+                  }
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "avgRating": 149248,
+                "name": 148585,
+                "sku": 143438,
+                "reviewsCount": 135680
+              },
+              "totalOutputDataSizeBytes": 1502967,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 1696,
+              "executionTimeMillisEstimate": 49
+            }
+          ]
+        },
+        "rs2": {
+          "host": "shard2:27020",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.products",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "E23F7DE0",
+                  "planCacheKey": "20798850",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 1661,
+                  "executionTimeMillis": 66,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 1661,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 1661,
+                    "executionTimeMillisEstimate": 11,
+                    "works": 1662,
+                    "advanced": 1661,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 3,
+                    "restoreState": 3,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 1661,
+                      "executionTimeMillisEstimate": 2,
+                      "works": 1662,
+                      "advanced": 1661,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 3,
+                      "restoreState": 3,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 1661,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 1662,
+                        "advanced": 1661,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 3,
+                        "restoreState": 3,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 1661
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 1661,
+              "executionTimeMillisEstimate": 20
+            },
+            {
+              "$unwind": {
+                "path": "$reviews",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 8542,
+              "executionTimeMillisEstimate": 46
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "avgRating": {
+                  "$avg": "$reviews.rating"
+                },
+                "name": {
+                  "$first": "$name"
+                },
+                "sku": {
+                  "$first": "$sku"
+                },
+                "reviewsCount": {
+                  "$sum": {
+                    "$const": 1
+                  }
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "avgRating": 146168,
+                "name": 145721,
+                "sku": 140766,
+                "reviewsCount": 132880
+              },
+              "totalOutputDataSizeBytes": 1472441,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 1661,
+              "executionTimeMillisEstimate": 49
+            }
+          ]
+        },
+        "rs3": {
+          "host": "shard3:27021",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.products",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "E23F7DE0",
+                  "planCacheKey": "20798850",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 1643,
+                  "executionTimeMillis": 71,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 1643,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 1643,
+                    "executionTimeMillisEstimate": 12,
+                    "works": 1644,
+                    "advanced": 1643,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 3,
+                    "restoreState": 3,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "name": 1,
+                      "reviews": 1,
+                      "sku": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 1643,
+                      "executionTimeMillisEstimate": 12,
+                      "works": 1644,
+                      "advanced": 1643,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 3,
+                      "restoreState": 3,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 1643,
+                        "executionTimeMillisEstimate": 10,
+                        "works": 1644,
+                        "advanced": 1643,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 3,
+                        "restoreState": 3,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 1643
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 1643,
+              "executionTimeMillisEstimate": 19
+            },
+            {
+              "$unwind": {
+                "path": "$reviews",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 8428,
+              "executionTimeMillisEstimate": 29
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "avgRating": {
+                  "$avg": "$reviews.rating"
+                },
+                "name": {
+                  "$first": "$name"
+                },
+                "sku": {
+                  "$first": "$sku"
+                },
+                "reviewsCount": {
+                  "$sum": {
+                    "$const": 1
+                  }
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "avgRating": 144584,
+                "name": 143859,
+                "sku": 139093,
+                "reviewsCount": 131440
+              },
+              "totalOutputDataSizeBytes": 1456054,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 1643,
+              "executionTimeMillisEstimate": 59
+            }
+          ]
+        }
+      },
+      "command": {
+        "aggregate": "products",
+        "pipeline": [
+          {
+            "$unwind": {
+              "path": "$reviews",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "avgRating": {
+                "$avg": "$reviews.rating"
+              },
+              "name": {
+                "$first": "$name"
+              },
+              "sku": {
+                "$first": "$sku"
+              },
+              "reviewsCount": {
+                "$sum": 1
+              }
+            }
+          },
+          {
+            "$project": {
+              "name": 1,
+              "sku": 1,
+              "avgRating": 1,
+              "reviewsCount": 1
+            }
+          },
+          {
+            "$sort": {
+              "avgRating": -1
+            }
+          },
+          {
+            "$match": {
+              "avgRating": {
+                "$gt": 4
+              }
+            }
+          }
+        ],
+        "cursor": {}
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768771973,
+            "i": 3
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768771973,
+          "i": 3
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "shoppingCart.productId",
+          "foreignField": "_id",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$addFields": {
+          "lineTotal": {
+            "$multiply": [
+              "$shoppingCart.quantity",
+              {
+                "$ifNull": [
+                  "$productInfo.price",
+                  "$shoppingCart.price"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": "$lineTotal"
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      },
+      {
+        "$sort": {
+          "cartTotal": -1
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      }
+    ],
+    "name": "Users Inefficient with Indexes",
+    "elapsedMs": 10430.75704574585,
+    "resultCount": 958,
+    "explain": {
+      "serverInfo": {
+        "host": "c9d1668d3919",
+        "port": 27017,
+        "version": "6.0.27",
+        "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600
+      },
+      "mergeType": "mongos",
+      "splitPipeline": {
+        "shardsPart": [
+          {
+            "$unwind": {
+              "path": "$shoppingCart",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "products",
+              "as": "productInfo",
+              "localField": "shoppingCart.productId",
+              "foreignField": "_id",
+              "unwinding": {
+                "preserveNullAndEmptyArrays": true
+              }
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  "$shoppingCart.quantity",
+                  {
+                    "$ifNull": [
+                      "$productInfo.price",
+                      "$shoppingCart.price"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "username": {
+                "$first": "$username"
+              },
+              "cartTotal": {
+                "$sum": "$lineTotal"
+              }
+            }
+          }
+        ],
+        "mergerPart": [
+          {
+            "$mergeCursors": {
+              "lsid": {
+                "id": {
+                  "$binary": {
+                    "base64": "ju4TgwLWTI2uSfvk+il1yg==",
+                    "subType": "04"
+                  }
+                },
+                "uid": {
+                  "$binary": {
+                    "base64": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+                    "subType": "00"
+                  }
+                }
+              },
+              "compareWholeSortKey": false,
+              "tailableMode": "normal",
+              "nss": "eCommerceProjectHybrid.users",
+              "allowPartialResults": false,
+              "recordRemoteOpWaitTime": false
+            }
+          },
+          {
+            "$group": {
+              "_id": "$$ROOT._id",
+              "username": {
+                "$first": "$$ROOT.username"
+              },
+              "cartTotal": {
+                "$sum": "$$ROOT.cartTotal"
+              },
+              "$doingMerge": true
+            }
+          },
+          {
+            "$match": {
+              "cartTotal": {
+                "$gt": 100
+              }
+            }
+          },
+          {
+            "$project": {
+              "_id": true,
+              "username": true,
+              "cartTotal": true
+            }
+          },
+          {
+            "$sort": {
+              "sortKey": {
+                "cartTotal": -1
+              }
+            }
+          }
+        ]
+      },
+      "shards": {
+        "rs3": {
+          "host": "shard3:27021",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.users",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "D62BC356",
+                  "planCacheKey": "D62BC356",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 326,
+                  "executionTimeMillis": 8148,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 326,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 326,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 327,
+                    "advanced": 326,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 1,
+                    "restoreState": 1,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 326,
+                      "executionTimeMillisEstimate": 0,
+                      "works": 327,
+                      "advanced": 326,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 1,
+                      "restoreState": 1,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 326,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 327,
+                        "advanced": 326,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 1,
+                        "restoreState": 1,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 326
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 326,
+              "executionTimeMillisEstimate": 0
+            },
+            {
+              "$unwind": {
+                "path": "$shoppingCart",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 1784,
+              "executionTimeMillisEstimate": 2
+            },
+            {
+              "$lookup": {
+                "from": "products",
+                "as": "productInfo",
+                "localField": "shoppingCart.productId",
+                "foreignField": "_id",
+                "unwinding": {
+                  "preserveNullAndEmptyArrays": true
+                }
+              },
+              "totalDocsExamined": 0,
+              "totalKeysExamined": 0,
+              "collectionScans": 0,
+              "indexesUsed": [],
+              "nReturned": 1784,
+              "executionTimeMillisEstimate": 8188
+            },
+            {
+              "$addFields": {
+                "lineTotal": {
+                  "$multiply": [
+                    "$shoppingCart.quantity",
+                    {
+                      "$ifNull": [
+                        "$productInfo.price",
+                        "$shoppingCart.price"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "nReturned": 1784,
+              "executionTimeMillisEstimate": 8194
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "username": {
+                  "$first": "$username"
+                },
+                "cartTotal": {
+                  "$sum": "$lineTotal"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "username": 23160,
+                "cartTotal": 26080
+              },
+              "totalOutputDataSizeBytes": 123894,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 326,
+              "executionTimeMillisEstimate": 8197
+            }
+          ]
+        },
+        "rs2": {
+          "host": "shard2:27020",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.users",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "D62BC356",
+                  "planCacheKey": "D62BC356",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 323,
+                  "executionTimeMillis": 9346,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 323,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 323,
+                    "executionTimeMillisEstimate": 1,
+                    "works": 324,
+                    "advanced": 323,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 1,
+                    "restoreState": 1,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 323,
+                      "executionTimeMillisEstimate": 1,
+                      "works": 324,
+                      "advanced": 323,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 1,
+                      "restoreState": 1,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 323,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 324,
+                        "advanced": 323,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 1,
+                        "restoreState": 1,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 323
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 323,
+              "executionTimeMillisEstimate": 1
+            },
+            {
+              "$unwind": {
+                "path": "$shoppingCart",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 1901,
+              "executionTimeMillisEstimate": 2
+            },
+            {
+              "$lookup": {
+                "from": "products",
+                "as": "productInfo",
+                "localField": "shoppingCart.productId",
+                "foreignField": "_id",
+                "unwinding": {
+                  "preserveNullAndEmptyArrays": true
+                }
+              },
+              "totalDocsExamined": 0,
+              "totalKeysExamined": 0,
+              "collectionScans": 0,
+              "indexesUsed": [],
+              "nReturned": 1901,
+              "executionTimeMillisEstimate": 9372
+            },
+            {
+              "$addFields": {
+                "lineTotal": {
+                  "$multiply": [
+                    "$shoppingCart.quantity",
+                    {
+                      "$ifNull": [
+                        "$productInfo.price",
+                        "$shoppingCart.price"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "nReturned": 1901,
+              "executionTimeMillisEstimate": 9385
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "username": {
+                  "$first": "$username"
+                },
+                "cartTotal": {
+                  "$sum": "$lineTotal"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "username": 23120,
+                "cartTotal": 25840
+              },
+              "totalOutputDataSizeBytes": 122927,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 323,
+              "executionTimeMillisEstimate": 9395
+            }
+          ]
+        },
+        "rs1": {
+          "host": "shard1:27018",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.users",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "D62BC356",
+                  "planCacheKey": "D62BC356",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 351,
+                  "executionTimeMillis": 9912,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 351,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 351,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 352,
+                    "advanced": 351,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 1,
+                    "restoreState": 1,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "lineTotal": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 351,
+                      "executionTimeMillisEstimate": 0,
+                      "works": 352,
+                      "advanced": 351,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 1,
+                      "restoreState": 1,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 351,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 352,
+                        "advanced": 351,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 1,
+                        "restoreState": 1,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 351
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 351,
+              "executionTimeMillisEstimate": 0
+            },
+            {
+              "$unwind": {
+                "path": "$shoppingCart",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 2000,
+              "executionTimeMillisEstimate": 3
+            },
+            {
+              "$lookup": {
+                "from": "products",
+                "as": "productInfo",
+                "localField": "shoppingCart.productId",
+                "foreignField": "_id",
+                "unwinding": {
+                  "preserveNullAndEmptyArrays": true
+                }
+              },
+              "totalDocsExamined": 0,
+              "totalKeysExamined": 0,
+              "collectionScans": 0,
+              "indexesUsed": [],
+              "nReturned": 2000,
+              "executionTimeMillisEstimate": 9950
+            },
+            {
+              "$addFields": {
+                "lineTotal": {
+                  "$multiply": [
+                    "$shoppingCart.quantity",
+                    {
+                      "$ifNull": [
+                        "$productInfo.price",
+                        "$shoppingCart.price"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "nReturned": 2000,
+              "executionTimeMillisEstimate": 9955
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "username": {
+                  "$first": "$username"
+                },
+                "cartTotal": {
+                  "$sum": "$lineTotal"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "username": 25764,
+                "cartTotal": 28080
+              },
+              "totalOutputDataSizeBytes": 134223,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 351,
+              "executionTimeMillisEstimate": 9961
+            }
+          ]
+        }
+      },
+      "command": {
+        "aggregate": "users",
+        "pipeline": [
+          {
+            "$unwind": {
+              "path": "$shoppingCart",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "shoppingCart.productId",
+              "foreignField": "_id",
+              "as": "productInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$productInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  "$shoppingCart.quantity",
+                  {
+                    "$ifNull": [
+                      "$productInfo.price",
+                      "$shoppingCart.price"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "username": {
+                "$first": "$username"
+              },
+              "cartTotal": {
+                "$sum": "$lineTotal"
+              }
+            }
+          },
+          {
+            "$project": {
+              "username": 1,
+              "cartTotal": 1
+            }
+          },
+          {
+            "$sort": {
+              "cartTotal": -1
+            }
+          },
+          {
+            "$match": {
+              "cartTotal": {
+                "$gt": 100
+              }
+            }
+          }
+        ],
+        "cursor": {}
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768771991,
+            "i": 2
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768771990,
+          "i": 1
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$items",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$items.vendorIdSnapshot",
+          "totalSales": {
+            "$sum": {
+              "$multiply": [
+                {
+                  "$ifNull": [
+                    "$items.unitPriceSnapshot",
+                    "$items.unitPrice"
+                  ]
+                },
+                {
+                  "$ifNull": [
+                    "$items.quantity",
+                    0
+                  ]
+                }
+              ]
+            }
+          },
+          "orders": {
+            "$addToSet": "$_id"
+          }
+        }
+      },
+      {
+        "$lookup": {
+          "from": "vendors",
+          "localField": "_id",
+          "foreignField": "_id",
+          "as": "vendorInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$vendorInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$project": {
+          "vendorName": {
+            "$ifNull": [
+              "$vendorInfo.companyName",
+              "(unknown)"
+            ]
+          },
+          "totalSales": 1,
+          "uniqueOrders": {
+            "$size": {
+              "$ifNull": [
+                "$orders",
+                []
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$sort": {
+          "totalSales": -1
+        }
+      },
+      {
+        "$match": {
+          "totalSales": {
+            "$gt": 1000
+          }
+        }
+      }
+    ],
+    "name": "Orders Inefficient with Indexes",
+    "elapsedMs": 390.57278633117676,
+    "resultCount": 74,
+    "explain": {
+      "serverInfo": {
+        "host": "c9d1668d3919",
+        "port": 27017,
+        "version": "6.0.27",
+        "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600
+      },
+      "mergeType": "mongos",
+      "splitPipeline": {
+        "shardsPart": [
+          {
+            "$unwind": {
+              "path": "$items",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$items.vendorIdSnapshot",
+              "totalSales": {
+                "$sum": {
+                  "$multiply": [
+                    {
+                      "$ifNull": [
+                        "$items.unitPriceSnapshot",
+                        "$items.unitPrice"
+                      ]
+                    },
+                    {
+                      "$ifNull": [
+                        "$items.quantity",
+                        {
+                          "$const": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              "orders": {
+                "$addToSet": "$_id"
+              }
+            }
+          }
+        ],
+        "mergerPart": [
+          {
+            "$mergeCursors": {
+              "lsid": {
+                "id": {
+                  "$binary": {
+                    "base64": "ju4TgwLWTI2uSfvk+il1yg==",
+                    "subType": "04"
+                  }
+                },
+                "uid": {
+                  "$binary": {
+                    "base64": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+                    "subType": "00"
+                  }
+                }
+              },
+              "compareWholeSortKey": false,
+              "tailableMode": "normal",
+              "nss": "eCommerceProjectHybrid.orders",
+              "allowPartialResults": false,
+              "recordRemoteOpWaitTime": false
+            }
+          },
+          {
+            "$group": {
+              "_id": "$$ROOT._id",
+              "totalSales": {
+                "$sum": "$$ROOT.totalSales"
+              },
+              "orders": {
+                "$addToSet": "$$ROOT.orders"
+              },
+              "$doingMerge": true
+            }
+          },
+          {
+            "$match": {
+              "totalSales": {
+                "$gt": 1000
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "vendors",
+              "as": "vendorInfo",
+              "localField": "_id",
+              "foreignField": "_id",
+              "unwinding": {
+                "preserveNullAndEmptyArrays": true
+              }
+            }
+          },
+          {
+            "$project": {
+              "_id": true,
+              "totalSales": true,
+              "vendorName": {
+                "$ifNull": [
+                  "$vendorInfo.companyName",
+                  {
+                    "$const": "(unknown)"
+                  }
+                ]
+              },
+              "uniqueOrders": {
+                "$size": [
+                  {
+                    "$ifNull": [
+                      "$orders",
+                      {
+                        "$const": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$sort": {
+              "sortKey": {
+                "totalSales": -1
+              }
+            }
+          }
+        ]
+      },
+      "shards": {
+        "rs3": {
+          "host": "shard3:27021",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.orders",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "31631226",
+                  "planCacheKey": "5D71D738",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 3288,
+                  "executionTimeMillis": 83,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 3288,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 3288,
+                    "executionTimeMillisEstimate": 19,
+                    "works": 3289,
+                    "advanced": 3288,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 4,
+                    "restoreState": 4,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 3288,
+                      "executionTimeMillisEstimate": 10,
+                      "works": 3289,
+                      "advanced": 3288,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 4,
+                      "restoreState": 4,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 3288,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 3289,
+                        "advanced": 3288,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 4,
+                        "restoreState": 4,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 3288
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 3288,
+              "executionTimeMillisEstimate": 26
+            },
+            {
+              "$unwind": {
+                "path": "$items",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 18005,
+              "executionTimeMillisEstimate": 29
+            },
+            {
+              "$group": {
+                "_id": "$items.vendorIdSnapshot",
+                "totalSales": {
+                  "$sum": {
+                    "$multiply": [
+                      {
+                        "$ifNull": [
+                          "$items.unitPriceSnapshot",
+                          "$items.unitPrice"
+                        ]
+                      },
+                      {
+                        "$ifNull": [
+                          "$items.quantity",
+                          {
+                            "$const": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "orders": {
+                  "$addToSet": "$_id"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "totalSales": 5920,
+                "orders": 283024
+              },
+              "totalOutputDataSizeBytes": 305890,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 74,
+              "executionTimeMillisEstimate": 69
+            }
+          ]
+        },
+        "rs2": {
+          "host": "shard2:27020",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.orders",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "31631226",
+                  "planCacheKey": "5D71D738",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 3204,
+                  "executionTimeMillis": 102,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 3204,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 3204,
+                    "executionTimeMillisEstimate": 12,
+                    "works": 3205,
+                    "advanced": 3204,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 4,
+                    "restoreState": 4,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 3204,
+                      "executionTimeMillisEstimate": 3,
+                      "works": 3205,
+                      "advanced": 3204,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 4,
+                      "restoreState": 4,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 3204,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 3205,
+                        "advanced": 3204,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 4,
+                        "restoreState": 4,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 3204
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 3204,
+              "executionTimeMillisEstimate": 29
+            },
+            {
+              "$unwind": {
+                "path": "$items",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 17624,
+              "executionTimeMillisEstimate": 39
+            },
+            {
+              "$group": {
+                "_id": "$items.vendorIdSnapshot",
+                "totalSales": {
+                  "$sum": {
+                    "$multiply": [
+                      {
+                        "$ifNull": [
+                          "$items.unitPriceSnapshot",
+                          "$items.unitPrice"
+                        ]
+                      },
+                      {
+                        "$ifNull": [
+                          "$items.quantity",
+                          {
+                            "$const": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "orders": {
+                  "$addToSet": "$_id"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "totalSales": 5920,
+                "orders": 278496
+              },
+              "totalOutputDataSizeBytes": 301362,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 74,
+              "executionTimeMillisEstimate": 99
+            }
+          ]
+        },
+        "rs1": {
+          "host": "shard1:27018",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.orders",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "31631226",
+                  "planCacheKey": "5D71D738",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 3508,
+                  "executionTimeMillis": 103,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 3508,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 3508,
+                    "executionTimeMillisEstimate": 13,
+                    "works": 3509,
+                    "advanced": 3508,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 4,
+                    "restoreState": 4,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 3508,
+                      "executionTimeMillisEstimate": 9,
+                      "works": 3509,
+                      "advanced": 3508,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 4,
+                      "restoreState": 4,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 3508,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 3509,
+                        "advanced": 3508,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 4,
+                        "restoreState": 4,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 3508
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 3508,
+              "executionTimeMillisEstimate": 24
+            },
+            {
+              "$unwind": {
+                "path": "$items",
+                "preserveNullAndEmptyArrays": true
+              },
+              "nReturned": 19173,
+              "executionTimeMillisEstimate": 34
+            },
+            {
+              "$group": {
+                "_id": "$items.vendorIdSnapshot",
+                "totalSales": {
+                  "$sum": {
+                    "$multiply": [
+                      {
+                        "$ifNull": [
+                          "$items.unitPriceSnapshot",
+                          "$items.unitPrice"
+                        ]
+                      },
+                      {
+                        "$ifNull": [
+                          "$items.quantity",
+                          {
+                            "$const": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "orders": {
+                  "$addToSet": "$_id"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "totalSales": 5920,
+                "orders": 302576
+              },
+              "totalOutputDataSizeBytes": 325442,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 74,
+              "executionTimeMillisEstimate": 99
+            }
+          ]
+        }
+      },
+      "command": {
+        "aggregate": "orders",
+        "pipeline": [
+          {
+            "$unwind": {
+              "path": "$items",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$items.vendorIdSnapshot",
+              "totalSales": {
+                "$sum": {
+                  "$multiply": [
+                    {
+                      "$ifNull": [
+                        "$items.unitPriceSnapshot",
+                        "$items.unitPrice"
+                      ]
+                    },
+                    {
+                      "$ifNull": [
+                        "$items.quantity",
+                        0
+                      ]
+                    }
+                  ]
+                }
+              },
+              "orders": {
+                "$addToSet": "$_id"
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "vendors",
+              "localField": "_id",
+              "foreignField": "_id",
+              "as": "vendorInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$vendorInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$project": {
+              "vendorName": {
+                "$ifNull": [
+                  "$vendorInfo.companyName",
+                  "(unknown)"
+                ]
+              },
+              "totalSales": 1,
+              "uniqueOrders": {
+                "$size": {
+                  "$ifNull": [
+                    "$orders",
+                    []
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "totalSales": -1
+            }
+          },
+          {
+            "$match": {
+              "totalSales": {
+                "$gt": 1000
+              }
+            }
+          }
+        ],
+        "cursor": {}
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768771991,
+            "i": 2
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768771990,
+          "i": 1
+        }
+      }
+    }
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": {
+            "$avg": "$reviews.rating"
+          },
+          "reviewsCount": {
+            "$size": {
+              "$ifNull": [
+                "$reviews",
+                []
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      },
+      {
+        "$sort": {
+          "avgRating": -1
+        }
+      }
+    ],
+    "name": "Products Efficient",
+    "elapsedMs": 63.08126449584961,
+    "resultCount": 261,
+    "explain": {
+      "serverInfo": {
+        "host": "c9d1668d3919",
+        "port": 27017,
+        "version": "6.0.27",
+        "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600
+      },
+      "mergeType": "mongos",
+      "splitPipeline": {
+        "shardsPart": [
+          {
+            "$project": {
+              "_id": true,
+              "name": true,
+              "sku": true,
+              "avgRating": {
+                "$avg": [
+                  "$reviews.rating"
+                ]
+              },
+              "reviewsCount": {
+                "$size": [
+                  {
+                    "$ifNull": [
+                      "$reviews",
+                      {
+                        "$const": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$match": {
+              "avgRating": {
+                "$gt": 4
+              }
+            }
+          },
+          {
+            "$sort": {
+              "sortKey": {
+                "avgRating": -1
+              }
+            }
+          }
+        ],
+        "mergerPart": [
+          {
+            "$mergeCursors": {
+              "lsid": {
+                "id": {
+                  "$binary": {
+                    "base64": "ju4TgwLWTI2uSfvk+il1yg==",
+                    "subType": "04"
+                  }
+                },
+                "uid": {
+                  "$binary": {
+                    "base64": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+                    "subType": "00"
+                  }
+                }
+              },
+              "sort": {
+                "avgRating": -1
+              },
+              "compareWholeSortKey": false,
+              "tailableMode": "normal",
+              "nss": "eCommerceProjectHybrid.products",
+              "allowPartialResults": false,
+              "recordRemoteOpWaitTime": false
+            }
+          }
+        ]
+      },
+      "shards": {
+        "rs2": {
+          "host": "shard2:27020",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.products",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "FDCEAE6A",
+                  "planCacheKey": "1B1715CD",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": true,
+                      "name": true,
+                      "sku": true,
+                      "avgRating": {
+                        "$avg": [
+                          "$reviews.rating"
+                        ]
+                      },
+                      "reviewsCount": {
+                        "$size": [
+                          {
+                            "$ifNull": [
+                              "$reviews",
+                              {
+                                "$const": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 1661,
+                  "executionTimeMillis": 20,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 1661,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 1661,
+                    "executionTimeMillisEstimate": 11,
+                    "works": 1662,
+                    "advanced": 1661,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 3,
+                    "restoreState": 3,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": true,
+                      "name": true,
+                      "sku": true,
+                      "avgRating": {
+                        "$avg": [
+                          "$reviews.rating"
+                        ]
+                      },
+                      "reviewsCount": {
+                        "$size": [
+                          {
+                            "$ifNull": [
+                              "$reviews",
+                              {
+                                "$const": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 1661,
+                      "executionTimeMillisEstimate": 1,
+                      "works": 1662,
+                      "advanced": 1661,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 3,
+                      "restoreState": 3,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 1661,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 1662,
+                        "advanced": 1661,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 3,
+                        "restoreState": 3,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 1661
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 1661,
+              "executionTimeMillisEstimate": 19
+            },
+            {
+              "$match": {
+                "avgRating": {
+                  "$gt": 4
+                }
+              },
+              "nReturned": 88,
+              "executionTimeMillisEstimate": 19
+            },
+            {
+              "$sort": {
+                "sortKey": {
+                  "avgRating": -1
+                }
+              },
+              "totalDataSizeSortedBytesEstimate": 56438,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 88,
+              "executionTimeMillisEstimate": 19
+            }
+          ]
+        },
+        "rs1": {
+          "host": "shard1:27018",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.products",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "FDCEAE6A",
+                  "planCacheKey": "1B1715CD",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": true,
+                      "name": true,
+                      "sku": true,
+                      "avgRating": {
+                        "$avg": [
+                          "$reviews.rating"
+                        ]
+                      },
+                      "reviewsCount": {
+                        "$size": [
+                          {
+                            "$ifNull": [
+                              "$reviews",
+                              {
+                                "$const": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 1696,
+                  "executionTimeMillis": 23,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 1696,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 1696,
+                    "executionTimeMillisEstimate": 15,
+                    "works": 1697,
+                    "advanced": 1696,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 3,
+                    "restoreState": 3,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": true,
+                      "name": true,
+                      "sku": true,
+                      "avgRating": {
+                        "$avg": [
+                          "$reviews.rating"
+                        ]
+                      },
+                      "reviewsCount": {
+                        "$size": [
+                          {
+                            "$ifNull": [
+                              "$reviews",
+                              {
+                                "$const": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 1696,
+                      "executionTimeMillisEstimate": 10,
+                      "works": 1697,
+                      "advanced": 1696,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 3,
+                      "restoreState": 3,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 1696,
+                        "executionTimeMillisEstimate": 10,
+                        "works": 1697,
+                        "advanced": 1696,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 3,
+                        "restoreState": 3,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 1696
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 1696,
+              "executionTimeMillisEstimate": 22
+            },
+            {
+              "$match": {
+                "avgRating": {
+                  "$gt": 4
+                }
+              },
+              "nReturned": 99,
+              "executionTimeMillisEstimate": 22
+            },
+            {
+              "$sort": {
+                "sortKey": {
+                  "avgRating": -1
+                }
+              },
+              "totalDataSizeSortedBytesEstimate": 63328,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 99,
+              "executionTimeMillisEstimate": 22
+            }
+          ]
+        },
+        "rs3": {
+          "host": "shard3:27021",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.products",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "FDCEAE6A",
+                  "planCacheKey": "1B1715CD",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": true,
+                      "name": true,
+                      "sku": true,
+                      "avgRating": {
+                        "$avg": [
+                          "$reviews.rating"
+                        ]
+                      },
+                      "reviewsCount": {
+                        "$size": [
+                          {
+                            "$ifNull": [
+                              "$reviews",
+                              {
+                                "$const": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 1643,
+                  "executionTimeMillis": 26,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 1643,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 1643,
+                    "executionTimeMillisEstimate": 11,
+                    "works": 1644,
+                    "advanced": 1643,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 2,
+                    "restoreState": 2,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": true,
+                      "name": true,
+                      "sku": true,
+                      "avgRating": {
+                        "$avg": [
+                          "$reviews.rating"
+                        ]
+                      },
+                      "reviewsCount": {
+                        "$size": [
+                          {
+                            "$ifNull": [
+                              "$reviews",
+                              {
+                                "$const": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 1643,
+                      "executionTimeMillisEstimate": 0,
+                      "works": 1644,
+                      "advanced": 1643,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 2,
+                      "restoreState": 2,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 1643,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 1644,
+                        "advanced": 1643,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 2,
+                        "restoreState": 2,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 1643
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 1643,
+              "executionTimeMillisEstimate": 19
+            },
+            {
+              "$match": {
+                "avgRating": {
+                  "$gt": 4
+                }
+              },
+              "nReturned": 74,
+              "executionTimeMillisEstimate": 19
+            },
+            {
+              "$sort": {
+                "sortKey": {
+                  "avgRating": -1
+                }
+              },
+              "totalDataSizeSortedBytesEstimate": 47406,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 74,
+              "executionTimeMillisEstimate": 19
+            }
+          ]
+        }
+      },
+      "command": {
+        "aggregate": "products",
+        "pipeline": [
+          {
+            "$project": {
+              "name": 1,
+              "sku": 1,
+              "avgRating": {
+                "$avg": "$reviews.rating"
+              },
+              "reviewsCount": {
+                "$size": {
+                  "$ifNull": [
+                    "$reviews",
+                    []
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$match": {
+              "avgRating": {
+                "$gt": 4
+              }
+            }
+          },
+          {
+            "$sort": {
+              "avgRating": -1
+            }
+          }
+        ],
+        "cursor": {}
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768771991,
+            "i": 2
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768771990,
+          "i": 1
+        }
+      }
+    }
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$match": {
+          "shoppingCart.0": {
+            "$exists": true
+          }
+        }
+      },
+      {
+        "$unwind": "$shoppingCart"
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "shoppingCart.productId",
+          "foreignField": "_id",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": {
+              "$multiply": [
+                "$shoppingCart.quantity",
+                {
+                  "$ifNull": [
+                    "$productInfo.price",
+                    "$shoppingCart.price"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      },
+      {
+        "$sort": {
+          "cartTotal": -1
+        }
+      }
+    ],
+    "name": "Users Efficient",
+    "elapsedMs": 9058.181047439575,
+    "resultCount": 958,
+    "explain": {
+      "serverInfo": {
+        "host": "c9d1668d3919",
+        "port": 27017,
+        "version": "6.0.27",
+        "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600
+      },
+      "mergeType": "mongos",
+      "splitPipeline": {
+        "shardsPart": [
+          {
+            "$match": {
+              "shoppingCart.0": {
+                "$exists": true
+              }
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$shoppingCart"
+            }
+          },
+          {
+            "$lookup": {
+              "from": "products",
+              "as": "productInfo",
+              "localField": "shoppingCart.productId",
+              "foreignField": "_id",
+              "unwinding": {
+                "preserveNullAndEmptyArrays": true
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "username": {
+                "$first": "$username"
+              },
+              "cartTotal": {
+                "$sum": {
+                  "$multiply": [
+                    "$shoppingCart.quantity",
+                    {
+                      "$ifNull": [
+                        "$productInfo.price",
+                        "$shoppingCart.price"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "mergerPart": [
+          {
+            "$mergeCursors": {
+              "lsid": {
+                "id": {
+                  "$binary": {
+                    "base64": "ju4TgwLWTI2uSfvk+il1yg==",
+                    "subType": "04"
+                  }
+                },
+                "uid": {
+                  "$binary": {
+                    "base64": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+                    "subType": "00"
+                  }
+                }
+              },
+              "compareWholeSortKey": false,
+              "tailableMode": "normal",
+              "nss": "eCommerceProjectHybrid.users",
+              "allowPartialResults": false,
+              "recordRemoteOpWaitTime": false
+            }
+          },
+          {
+            "$group": {
+              "_id": "$$ROOT._id",
+              "username": {
+                "$first": "$$ROOT.username"
+              },
+              "cartTotal": {
+                "$sum": "$$ROOT.cartTotal"
+              },
+              "$doingMerge": true
+            }
+          },
+          {
+            "$match": {
+              "cartTotal": {
+                "$gt": 100
+              }
+            }
+          },
+          {
+            "$sort": {
+              "sortKey": {
+                "cartTotal": -1
+              }
+            }
+          }
+        ]
+      },
+      "shards": {
+        "rs3": {
+          "host": "shard3:27021",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.users",
+                  "indexFilterSet": false,
+                  "parsedQuery": {
+                    "shoppingCart.0": {
+                      "$exists": true
+                    }
+                  },
+                  "queryHash": "A0F2917D",
+                  "planCacheKey": "A0F2917D",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "filter": {
+                          "shoppingCart.0": {
+                            "$exists": true
+                          }
+                        },
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 326,
+                  "executionTimeMillis": 6544,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 326,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 326,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 327,
+                    "advanced": 326,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 1,
+                    "restoreState": 1,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 326,
+                      "executionTimeMillisEstimate": 0,
+                      "works": 327,
+                      "advanced": 326,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 1,
+                      "restoreState": 1,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "filter": {
+                          "shoppingCart.0": {
+                            "$exists": true
+                          }
+                        },
+                        "nReturned": 326,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 327,
+                        "advanced": 326,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 1,
+                        "restoreState": 1,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 326
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 326,
+              "executionTimeMillisEstimate": 0
+            },
+            {
+              "$unwind": {
+                "path": "$shoppingCart"
+              },
+              "nReturned": 1784,
+              "executionTimeMillisEstimate": 0
+            },
+            {
+              "$lookup": {
+                "from": "products",
+                "as": "productInfo",
+                "localField": "shoppingCart.productId",
+                "foreignField": "_id",
+                "unwinding": {
+                  "preserveNullAndEmptyArrays": true
+                }
+              },
+              "totalDocsExamined": 0,
+              "totalKeysExamined": 0,
+              "collectionScans": 0,
+              "indexesUsed": [],
+              "nReturned": 1784,
+              "executionTimeMillisEstimate": 6536
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "username": {
+                  "$first": "$username"
+                },
+                "cartTotal": {
+                  "$sum": {
+                    "$multiply": [
+                      "$shoppingCart.quantity",
+                      {
+                        "$ifNull": [
+                          "$productInfo.price",
+                          "$shoppingCart.price"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "username": 23160,
+                "cartTotal": 26080
+              },
+              "totalOutputDataSizeBytes": 123894,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 326,
+              "executionTimeMillisEstimate": 6543
+            }
+          ]
+        },
+        "rs2": {
+          "host": "shard2:27020",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.users",
+                  "indexFilterSet": false,
+                  "parsedQuery": {
+                    "shoppingCart.0": {
+                      "$exists": true
+                    }
+                  },
+                  "queryHash": "A0F2917D",
+                  "planCacheKey": "A0F2917D",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "filter": {
+                          "shoppingCart.0": {
+                            "$exists": true
+                          }
+                        },
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 323,
+                  "executionTimeMillis": 7084,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 323,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 323,
+                    "executionTimeMillisEstimate": 0,
+                    "works": 324,
+                    "advanced": 323,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 1,
+                    "restoreState": 1,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 323,
+                      "executionTimeMillisEstimate": 0,
+                      "works": 324,
+                      "advanced": 323,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 1,
+                      "restoreState": 1,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "filter": {
+                          "shoppingCart.0": {
+                            "$exists": true
+                          }
+                        },
+                        "nReturned": 323,
+                        "executionTimeMillisEstimate": 0,
+                        "works": 324,
+                        "advanced": 323,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 1,
+                        "restoreState": 1,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 323
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 323,
+              "executionTimeMillisEstimate": 0
+            },
+            {
+              "$unwind": {
+                "path": "$shoppingCart"
+              },
+              "nReturned": 1901,
+              "executionTimeMillisEstimate": 1
+            },
+            {
+              "$lookup": {
+                "from": "products",
+                "as": "productInfo",
+                "localField": "shoppingCart.productId",
+                "foreignField": "_id",
+                "unwinding": {
+                  "preserveNullAndEmptyArrays": true
+                }
+              },
+              "totalDocsExamined": 0,
+              "totalKeysExamined": 0,
+              "collectionScans": 0,
+              "indexesUsed": [],
+              "nReturned": 1901,
+              "executionTimeMillisEstimate": 7080
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "username": {
+                  "$first": "$username"
+                },
+                "cartTotal": {
+                  "$sum": {
+                    "$multiply": [
+                      "$shoppingCart.quantity",
+                      {
+                        "$ifNull": [
+                          "$productInfo.price",
+                          "$shoppingCart.price"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "username": 23120,
+                "cartTotal": 25840
+              },
+              "totalOutputDataSizeBytes": 122927,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 323,
+              "executionTimeMillisEstimate": 7085
+            }
+          ]
+        },
+        "rs1": {
+          "host": "shard1:27018",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.users",
+                  "indexFilterSet": false,
+                  "parsedQuery": {
+                    "shoppingCart.0": {
+                      "$exists": true
+                    }
+                  },
+                  "queryHash": "A0F2917D",
+                  "planCacheKey": "A0F2917D",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "transformBy": {
+                      "_id": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "filter": {
+                          "shoppingCart.0": {
+                            "$exists": true
+                          }
+                        },
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 351,
+                  "executionTimeMillis": 7531,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 351,
+                  "executionStages": {
+                    "stage": "PROJECTION_DEFAULT",
+                    "nReturned": 351,
+                    "executionTimeMillisEstimate": 2,
+                    "works": 352,
+                    "advanced": 351,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 1,
+                    "restoreState": 1,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "productInfo.price": 1,
+                      "shoppingCart": 1,
+                      "username": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 351,
+                      "executionTimeMillisEstimate": 2,
+                      "works": 352,
+                      "advanced": 351,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 1,
+                      "restoreState": 1,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "filter": {
+                          "shoppingCart.0": {
+                            "$exists": true
+                          }
+                        },
+                        "nReturned": 351,
+                        "executionTimeMillisEstimate": 2,
+                        "works": 352,
+                        "advanced": 351,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 1,
+                        "restoreState": 1,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 351
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 351,
+              "executionTimeMillisEstimate": 3
+            },
+            {
+              "$unwind": {
+                "path": "$shoppingCart"
+              },
+              "nReturned": 2000,
+              "executionTimeMillisEstimate": 4
+            },
+            {
+              "$lookup": {
+                "from": "products",
+                "as": "productInfo",
+                "localField": "shoppingCart.productId",
+                "foreignField": "_id",
+                "unwinding": {
+                  "preserveNullAndEmptyArrays": true
+                }
+              },
+              "totalDocsExamined": 0,
+              "totalKeysExamined": 0,
+              "collectionScans": 0,
+              "indexesUsed": [],
+              "nReturned": 2000,
+              "executionTimeMillisEstimate": 7523
+            },
+            {
+              "$group": {
+                "_id": "$_id",
+                "username": {
+                  "$first": "$username"
+                },
+                "cartTotal": {
+                  "$sum": {
+                    "$multiply": [
+                      "$shoppingCart.quantity",
+                      {
+                        "$ifNull": [
+                          "$productInfo.price",
+                          "$shoppingCart.price"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "username": 25764,
+                "cartTotal": 28080
+              },
+              "totalOutputDataSizeBytes": 134223,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 351,
+              "executionTimeMillisEstimate": 7529
+            }
+          ]
+        }
+      },
+      "command": {
+        "aggregate": "users",
+        "pipeline": [
+          {
+            "$match": {
+              "shoppingCart.0": {
+                "$exists": true
+              }
+            }
+          },
+          {
+            "$unwind": "$shoppingCart"
+          },
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "shoppingCart.productId",
+              "foreignField": "_id",
+              "as": "productInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$productInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "username": {
+                "$first": "$username"
+              },
+              "cartTotal": {
+                "$sum": {
+                  "$multiply": [
+                    "$shoppingCart.quantity",
+                    {
+                      "$ifNull": [
+                        "$productInfo.price",
+                        "$shoppingCart.price"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$match": {
+              "cartTotal": {
+                "$gt": 100
+              }
+            }
+          },
+          {
+            "$sort": {
+              "cartTotal": -1
+            }
+          }
+        ],
+        "cursor": {}
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768772009,
+            "i": 14
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768772009,
+          "i": 14
+        }
+      }
+    }
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": "$items"
+      },
+      {
+        "$group": {
+          "_id": "$items.vendorIdSnapshot",
+          "totalSales": {
+            "$sum": {
+              "$multiply": [
+                {
+                  "$ifNull": [
+                    "$items.unitPriceSnapshot",
+                    "$items.unitPrice"
+                  ]
+                },
+                {
+                  "$ifNull": [
+                    "$items.quantity",
+                    0
+                  ]
+                }
+              ]
+            }
+          },
+          "orders": {
+            "$addToSet": "$_id"
+          }
+        }
+      },
+      {
+        "$match": {
+          "totalSales": {
+            "$gt": 1000
+          }
+        }
+      },
+      {
+        "$lookup": {
+          "from": "vendors",
+          "localField": "_id",
+          "foreignField": "_id",
+          "as": "vendorInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$vendorInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$project": {
+          "vendorName": {
+            "$ifNull": [
+              "$vendorInfo.companyName",
+              "(unknown)"
+            ]
+          },
+          "totalSales": 1,
+          "uniqueOrders": {
+            "$size": "$orders"
+          }
+        }
+      },
+      {
+        "$sort": {
+          "totalSales": -1
+        }
+      }
+    ],
+    "name": "Orders Efficient",
+    "elapsedMs": 204.10490036010742,
+    "resultCount": 74,
+    "explain": {
+      "serverInfo": {
+        "host": "c9d1668d3919",
+        "port": 27017,
+        "version": "6.0.27",
+        "gitVersion": "fc88ca137231d7457aed6265d4f32a361ae71716"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600
+      },
+      "mergeType": "mongos",
+      "splitPipeline": {
+        "shardsPart": [
+          {
+            "$unwind": {
+              "path": "$items"
+            }
+          },
+          {
+            "$group": {
+              "_id": "$items.vendorIdSnapshot",
+              "totalSales": {
+                "$sum": {
+                  "$multiply": [
+                    {
+                      "$ifNull": [
+                        "$items.unitPriceSnapshot",
+                        "$items.unitPrice"
+                      ]
+                    },
+                    {
+                      "$ifNull": [
+                        "$items.quantity",
+                        {
+                          "$const": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              "orders": {
+                "$addToSet": "$_id"
+              }
+            }
+          }
+        ],
+        "mergerPart": [
+          {
+            "$mergeCursors": {
+              "lsid": {
+                "id": {
+                  "$binary": {
+                    "base64": "ju4TgwLWTI2uSfvk+il1yg==",
+                    "subType": "04"
+                  }
+                },
+                "uid": {
+                  "$binary": {
+                    "base64": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+                    "subType": "00"
+                  }
+                }
+              },
+              "compareWholeSortKey": false,
+              "tailableMode": "normal",
+              "nss": "eCommerceProjectHybrid.orders",
+              "allowPartialResults": false,
+              "recordRemoteOpWaitTime": false
+            }
+          },
+          {
+            "$group": {
+              "_id": "$$ROOT._id",
+              "totalSales": {
+                "$sum": "$$ROOT.totalSales"
+              },
+              "orders": {
+                "$addToSet": "$$ROOT.orders"
+              },
+              "$doingMerge": true
+            }
+          },
+          {
+            "$match": {
+              "totalSales": {
+                "$gt": 1000
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "vendors",
+              "as": "vendorInfo",
+              "localField": "_id",
+              "foreignField": "_id",
+              "unwinding": {
+                "preserveNullAndEmptyArrays": true
+              }
+            }
+          },
+          {
+            "$project": {
+              "_id": true,
+              "totalSales": true,
+              "vendorName": {
+                "$ifNull": [
+                  "$vendorInfo.companyName",
+                  {
+                    "$const": "(unknown)"
+                  }
+                ]
+              },
+              "uniqueOrders": {
+                "$size": [
+                  "$orders"
+                ]
+              }
+            }
+          },
+          {
+            "$sort": {
+              "sortKey": {
+                "totalSales": -1
+              }
+            }
+          }
+        ]
+      },
+      "shards": {
+        "rs2": {
+          "host": "shard2:27020",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.orders",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "31631226",
+                  "planCacheKey": "5D71D738",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 3204,
+                  "executionTimeMillis": 99,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 3204,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 3204,
+                    "executionTimeMillisEstimate": 10,
+                    "works": 3205,
+                    "advanced": 3204,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 4,
+                    "restoreState": 4,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 3204,
+                      "executionTimeMillisEstimate": 9,
+                      "works": 3205,
+                      "advanced": 3204,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 4,
+                      "restoreState": 4,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 3204,
+                        "executionTimeMillisEstimate": 4,
+                        "works": 3205,
+                        "advanced": 3204,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 4,
+                        "restoreState": 4,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 3204
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 3204,
+              "executionTimeMillisEstimate": 13
+            },
+            {
+              "$unwind": {
+                "path": "$items"
+              },
+              "nReturned": 17624,
+              "executionTimeMillisEstimate": 38
+            },
+            {
+              "$group": {
+                "_id": "$items.vendorIdSnapshot",
+                "totalSales": {
+                  "$sum": {
+                    "$multiply": [
+                      {
+                        "$ifNull": [
+                          "$items.unitPriceSnapshot",
+                          "$items.unitPrice"
+                        ]
+                      },
+                      {
+                        "$ifNull": [
+                          "$items.quantity",
+                          {
+                            "$const": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "orders": {
+                  "$addToSet": "$_id"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "totalSales": 5920,
+                "orders": 278496
+              },
+              "totalOutputDataSizeBytes": 301362,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 74,
+              "executionTimeMillisEstimate": 93
+            }
+          ]
+        },
+        "rs3": {
+          "host": "shard3:27021",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.orders",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "31631226",
+                  "planCacheKey": "5D71D738",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 3288,
+                  "executionTimeMillis": 102,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 3288,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 3288,
+                    "executionTimeMillisEstimate": 7,
+                    "works": 3289,
+                    "advanced": 3288,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 4,
+                    "restoreState": 4,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 3288,
+                      "executionTimeMillisEstimate": 6,
+                      "works": 3289,
+                      "advanced": 3288,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 4,
+                      "restoreState": 4,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 3288,
+                        "executionTimeMillisEstimate": 2,
+                        "works": 3289,
+                        "advanced": 3288,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 4,
+                        "restoreState": 4,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 3288
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 3288,
+              "executionTimeMillisEstimate": 13
+            },
+            {
+              "$unwind": {
+                "path": "$items"
+              },
+              "nReturned": 18005,
+              "executionTimeMillisEstimate": 28
+            },
+            {
+              "$group": {
+                "_id": "$items.vendorIdSnapshot",
+                "totalSales": {
+                  "$sum": {
+                    "$multiply": [
+                      {
+                        "$ifNull": [
+                          "$items.unitPriceSnapshot",
+                          "$items.unitPrice"
+                        ]
+                      },
+                      {
+                        "$ifNull": [
+                          "$items.quantity",
+                          {
+                            "$const": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "orders": {
+                  "$addToSet": "$_id"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "totalSales": 5920,
+                "orders": 283024
+              },
+              "totalOutputDataSizeBytes": 305890,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 74,
+              "executionTimeMillisEstimate": 87
+            }
+          ]
+        },
+        "rs1": {
+          "host": "shard1:27018",
+          "stages": [
+            {
+              "$cursor": {
+                "queryPlanner": {
+                  "namespace": "eCommerceProjectHybrid.orders",
+                  "indexFilterSet": false,
+                  "parsedQuery": {},
+                  "queryHash": "31631226",
+                  "planCacheKey": "5D71D738",
+                  "maxIndexedOrSolutionsReached": false,
+                  "maxIndexedAndSolutionsReached": false,
+                  "maxScansToExplodeReached": false,
+                  "winningPlan": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "direction": "forward"
+                      }
+                    }
+                  },
+                  "rejectedPlans": []
+                },
+                "executionStats": {
+                  "executionSuccess": true,
+                  "nReturned": 3508,
+                  "executionTimeMillis": 119,
+                  "totalKeysExamined": 0,
+                  "totalDocsExamined": 3508,
+                  "executionStages": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "nReturned": 3508,
+                    "executionTimeMillisEstimate": 11,
+                    "works": 3509,
+                    "advanced": 3508,
+                    "needTime": 0,
+                    "needYield": 0,
+                    "saveState": 4,
+                    "restoreState": 4,
+                    "isEOF": 1,
+                    "transformBy": {
+                      "_id": 1,
+                      "items": 1
+                    },
+                    "inputStage": {
+                      "stage": "SHARDING_FILTER",
+                      "nReturned": 3508,
+                      "executionTimeMillisEstimate": 11,
+                      "works": 3509,
+                      "advanced": 3508,
+                      "needTime": 0,
+                      "needYield": 0,
+                      "saveState": 4,
+                      "restoreState": 4,
+                      "isEOF": 1,
+                      "chunkSkips": 0,
+                      "inputStage": {
+                        "stage": "COLLSCAN",
+                        "nReturned": 3508,
+                        "executionTimeMillisEstimate": 6,
+                        "works": 3509,
+                        "advanced": 3508,
+                        "needTime": 0,
+                        "needYield": 0,
+                        "saveState": 4,
+                        "restoreState": 4,
+                        "isEOF": 1,
+                        "direction": "forward",
+                        "docsExamined": 3508
+                      }
+                    }
+                  },
+                  "allPlansExecution": []
+                }
+              },
+              "nReturned": 3508,
+              "executionTimeMillisEstimate": 17
+            },
+            {
+              "$unwind": {
+                "path": "$items"
+              },
+              "nReturned": 19173,
+              "executionTimeMillisEstimate": 27
+            },
+            {
+              "$group": {
+                "_id": "$items.vendorIdSnapshot",
+                "totalSales": {
+                  "$sum": {
+                    "$multiply": [
+                      {
+                        "$ifNull": [
+                          "$items.unitPriceSnapshot",
+                          "$items.unitPrice"
+                        ]
+                      },
+                      {
+                        "$ifNull": [
+                          "$items.quantity",
+                          {
+                            "$const": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "orders": {
+                  "$addToSet": "$_id"
+                }
+              },
+              "maxAccumulatorMemoryUsageBytes": {
+                "totalSales": 5920,
+                "orders": 302576
+              },
+              "totalOutputDataSizeBytes": 325442,
+              "usedDisk": false,
+              "spills": 0,
+              "nReturned": 74,
+              "executionTimeMillisEstimate": 107
+            }
+          ]
+        }
+      },
+      "command": {
+        "aggregate": "orders",
+        "pipeline": [
+          {
+            "$unwind": "$items"
+          },
+          {
+            "$group": {
+              "_id": "$items.vendorIdSnapshot",
+              "totalSales": {
+                "$sum": {
+                  "$multiply": [
+                    {
+                      "$ifNull": [
+                        "$items.unitPriceSnapshot",
+                        "$items.unitPrice"
+                      ]
+                    },
+                    {
+                      "$ifNull": [
+                        "$items.quantity",
+                        0
+                      ]
+                    }
+                  ]
+                }
+              },
+              "orders": {
+                "$addToSet": "$_id"
+              }
+            }
+          },
+          {
+            "$match": {
+              "totalSales": {
+                "$gt": 1000
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "vendors",
+              "localField": "_id",
+              "foreignField": "_id",
+              "as": "vendorInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$vendorInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$project": {
+              "vendorName": {
+                "$ifNull": [
+                  "$vendorInfo.companyName",
+                  "(unknown)"
+                ]
+              },
+              "totalSales": 1,
+              "uniqueOrders": {
+                "$size": "$orders"
+              }
+            }
+          },
+          {
+            "$sort": {
+              "totalSales": -1
+            }
+          }
+        ],
+        "cursor": {}
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768772009,
+            "i": 14
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768772009,
+          "i": 14
+        }
+      }
+    }
+  }
+]

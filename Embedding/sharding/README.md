@@ -13,7 +13,7 @@
 	9. helpers.py -> identical copy of 'helpers.py' script from the 'queries&strategy' folder. Helper functions for query analysis.
 	10. indexesDocker.py -> identical copy of 'indexes.py' script from the 'queries&strategy' folder. Why? It uses the local 'connection.py' script, which connects to the Docker Cluster instead of the Atlas Cluster.
 	11. pipelinesDocker.py -> almost identical copy of 'pipelines.py' script from the 'queries&strategy' folder. Explain file path changed.
-	12. runQueriesOnDocker.py -> almost identical copy of 'queries.py' script from the 'queries&strategy' folder. Explain file path changed.
+	12. queriesDocker.py -> almost identical copy of 'queries.py' script from the 'queries&strategy' folder. Explain file path changed.
 	13. setupShardedCluster.py -> creates the Docker network and containers, initialises replica sets, runs mongos and registers shards.
 
 

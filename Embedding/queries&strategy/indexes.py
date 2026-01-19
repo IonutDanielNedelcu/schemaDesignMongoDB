@@ -1,10 +1,3 @@
-"""Index creation helpers for the eCommerce embedding dataset.
-
-Provides PyMongo commands to create recommended indexes and
-prints mongo-shell equivalents as comments for copy-paste.
-
-Run as: python queriesIndexes.py
-"""
 from connection import connectToMongoDB, closeConnection
 from pymongo import ASCENDING, DESCENDING, TEXT, IndexModel
 from pymongo.collation import Collation

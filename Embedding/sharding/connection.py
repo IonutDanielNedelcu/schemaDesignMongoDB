@@ -9,7 +9,7 @@ def connectToMongoDB(dbName="eCommerceProjectEmbedding"):
     try:
         mongoUri = os.getenv("MONGO_CONNECTION_STRING_SHARDING") # using the Docker mongos
         if not mongoUri:
-            raise ValueError("MONGO_CONNECTION_STRING not set")
+            raise ValueError("MONGO_CONNECTION_STRING_SHARDING not set")
         
         mongoClient = MongoClient(mongoUri, serverSelectionTimeoutMS=5000)
         print("Connection successful")

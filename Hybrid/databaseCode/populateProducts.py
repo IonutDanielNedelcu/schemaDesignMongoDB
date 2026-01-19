@@ -1,6 +1,8 @@
 import json
 import os
 from pathlib import Path
+from datetime import datetime
+from bson import ObjectId
 from connection import connectToMongoDB, closeConnection
 
 
@@ -26,6 +28,14 @@ def buildUserMap(jsonUsersDir):
         for d in docs:
             username = d.get('username')
             userId = d.get('_id')
+            # normalize userId to ObjectId when possible
+            try:
+                if isinstance(userId, dict) and '$oid' in userId:
+                    userId = ObjectId(userId['$oid'])
+                elif isinstance(userId, str) and len(userId) == 24:
+                    userId = ObjectId(userId)
+            except Exception:
+                pass
             if username and userId:
                 userMap[username] = userId
 
@@ -76,16 +86,126 @@ def populateProducts():
         return
 
     coll = db.get_collection('products')
+    vendorsColl = db.get_collection('vendors')
+    categoriesColl = db.get_collection('categories')
 
-    # prepare docs: attach userId to reviews when possible
-    for doc in productDocs:
+    # build in-memory maps to avoid repeated find_one calls per product
+    print('Building vendor map from DB...')
+    vendorMap = {}
+    try:
+        for v in vendorsColl.find({}, {'companyName': 1, 'name': 1}):
+            vid = v.get('_id')
+            cname = v.get('companyName')
+            name = v.get('name')
+            if cname:
+                vendorMap[cname] = vid
+            if name:
+                vendorMap[name] = vid
+    except Exception:
+        vendorMap = {}
+
+    print('Building category maps from DB...')
+    mainCategoryMap = {}    # name -> _id for parentCategoryId == None
+    subCategoryMap = {}     # (parentId, subName) -> _id
+    try:
+        for c in categoriesColl.find({}, {'name': 1, 'parentCategoryId': 1}):
+            cid = c.get('_id')
+            cname = c.get('name')
+            parent = c.get('parentCategoryId')
+            if parent is None:
+                if cname:
+                    mainCategoryMap[cname] = cid
+            else:
+                if cname and parent:
+                    subCategoryMap[(parent, cname)] = cid
+    except Exception:
+        mainCategoryMap = {}
+        subCategoryMap = {}
+    # prepare docs: attach userId to reviews when possible; resolve vendor/category ids
+    total = len(productDocs)
+    for idx, doc in enumerate(productDocs, start=1):
+        if idx % 100 == 0:
+            print(f'Preparing product {idx}/{total}...')
+        # normalize provided _id to ObjectId if it's a 24-hex string or $oid dict
+        try:
+            if '_id' in doc:
+                pid = doc.get('_id')
+                if isinstance(pid, dict) and '$oid' in pid:
+                    doc['_id'] = ObjectId(pid['$oid'])
+                elif isinstance(pid, str) and len(pid) == 24:
+                    doc['_id'] = ObjectId(pid)
+        except Exception:
+            pass
+        # resolve vendor -> vendorId
+        vendorField = doc.get('vendor')
+        vendorId = None
+        if isinstance(vendorField, dict):
+            vname = vendorField.get('companyName') or vendorField.get('name')
+            if vname:
+                vendorId = vendorMap.get(vname)
+        elif isinstance(vendorField, str):
+            vendorId = vendorMap.get(vendorField)
+        if vendorId:
+            doc['vendorId'] = vendorId
+            # remove nested vendor object
+            if 'vendor' in doc:
+                doc.pop('vendor', None)
+
+        # resolve category.main / category.sub -> mainCategoryId / subCategoryId
+        cat = doc.get('category')
+        if isinstance(cat, dict):
+            mainName = cat.get('main')
+            subName = cat.get('sub')
+            mainId = None
+            subId = None
+            if mainName:
+                mainId = mainCategoryMap.get(mainName)
+                if mainId:
+                    doc['mainCategoryId'] = mainId
+                    # remove nested category object
+                    if 'category' in doc:
+                        doc.pop('category', None)
+                if subName and mainId:
+                    subId = subCategoryMap.get((mainId, subName))
+                    if subId:
+                        doc['subCategoryId'] = subId
+
+        # attach userId to reviews when possible and normalize review fields
         reviews = doc.get('reviews')
         if isinstance(reviews, list):
             for rev in reviews:
-                if 'userId' not in rev and 'username' in rev:
-                    uid = userMap.get(rev.get('username'))
+                # normalize username field
+                username = rev.get('username') or rev.get('userDisplayName') or rev.get('user')
+                if username and 'username' not in rev:
+                    rev['username'] = username
+                # attach/normalize userId
+                if 'userId' not in rev and username:
+                    uid = userMap.get(username)
                     if uid:
                         rev['userId'] = uid
+                else:
+                    # try to coerce existing userId to ObjectId
+                    try:
+                        uidval = rev.get('userId')
+                        if isinstance(uidval, dict) and '$oid' in uidval:
+                            rev['userId'] = ObjectId(uidval['$oid'])
+                        elif isinstance(uidval, str) and len(uidval) == 24:
+                            rev['userId'] = ObjectId(uidval)
+                    except Exception:
+                        pass
+                # normalize date to datetime
+                dateVal = rev.get('date')
+                if isinstance(dateVal, str):
+                    try:
+                        rev['date'] = datetime.fromisoformat(dateVal)
+                    except Exception:
+                        try:
+                            rev['date'] = datetime.strptime(dateVal, '%Y-%m-%dT%H:%M:%S')
+                        except Exception:
+                            pass
+                # remove legacy userDisplayName if present
+                if 'userDisplayName' in rev and 'username' in rev:
+                    rev.pop('userDisplayName', None)
 
     # insert in batches
     batchSize = 500

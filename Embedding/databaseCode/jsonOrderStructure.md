@@ -25,4 +25,3 @@ Top-level fields and types:
     - `skuSnapshot`: String
     - `vendorIdSnapshot`: ObjectId
 
-Notes: store snapshots for user and product details to preserve historical order data.

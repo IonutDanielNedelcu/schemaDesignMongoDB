@@ -341,49 +341,6 @@ def runOptimizedPipelines(db):
     })
 
 
-def runOptimizedPipelinesAdditional(db):
-    products = db['products']
-    users = db['users']
-    orders = db['orders']
-
-    print('\n    Running OPTIMIZED pipelines (with ADDITIONAL indexes)')
-    p1 = productsPipelineEfficient()
-    results, elapsed = timeAggregation(products, p1, name='Products Efficient')
-    explain = explainAggregation(products, p1)
-    saveExplain({
-        'stage': 'optimized_with_additional_indexes',
-        'pipeline': p1,
-        'name': 'Products Efficient',
-        'elapsedMs': elapsed,
-        'resultCount': len(results),
-        'explain': explain
-    })
-
-    p2 = usersPipelineEfficient()
-    results, elapsed = timeAggregation(users, p2, name='Users Efficient')
-    explain = explainAggregation(users, p2)
-    saveExplain({
-        'stage': 'optimized_with_additional_indexes',
-        'pipeline': p2,
-        'name': 'Users Efficient',
-        'elapsedMs': elapsed,
-        'resultCount': len(results),
-        'explain': explain
-    })
-
-    p3 = ordersPipelineEfficient()
-    results, elapsed = timeAggregation(orders, p3, name='Orders Efficient')
-    explain = explainAggregation(orders, p3)
-    saveExplain({
-        'stage': 'optimized_with_additional_indexes',
-        'pipeline': p3,
-        'name': 'Orders Efficient',
-        'elapsedMs': elapsed,
-        'resultCount': len(results),
-        'explain': explain
-    })
-
-
 
 def main():
     client, db = connectToMongoDB()
