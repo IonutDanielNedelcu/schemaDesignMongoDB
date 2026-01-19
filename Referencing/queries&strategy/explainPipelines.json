@@ -1,0 +1,6590 @@
+[
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$lookup": {
+          "from": "reviews",
+          "localField": "_id",
+          "foreignField": "productId",
+          "as": "reviewsDocs"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$reviewsDocs",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviewsDocs.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          },
+          "reviewsCount": {
+            "$sum": {
+              "$cond": [
+                {
+                  "$ifNull": [
+                    "$reviewsDocs._id",
+                    false
+                  ]
+                },
+                1,
+                0
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1,
+          "reviewsCount": 1
+        }
+      },
+      {
+        "$sort": {
+          "avgRating": -1
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      }
+    ],
+    "name": "Products Inefficient",
+    "elapsedMs": 63832.72457122803,
+    "resultCount": 261,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.products",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "B931B9D8",
+              "planCacheShapeHash": "B931B9D8",
+              "planCacheKey": "43F26CC8",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "_id": 1,
+                  "name": 1,
+                  "sku": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 5000,
+              "executionTimeMillis": 69940,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 5000,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 5000,
+                "executionTimeMillisEstimate": 5,
+                "works": 5001,
+                "advanced": 5000,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 15,
+                "restoreState": 15,
+                "isEOF": 1,
+                "transformBy": {
+                  "_id": 1,
+                  "name": 1,
+                  "sku": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 5000,
+                  "executionTimeMillisEstimate": 1,
+                  "works": 5001,
+                  "advanced": 5000,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 15,
+                  "restoreState": 15,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 5000
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 5000,
+          "executionTimeMillisEstimate": 5
+        },
+        {
+          "$lookup": {
+            "from": "reviews",
+            "as": "reviewsDocs",
+            "localField": "_id",
+            "foreignField": "productId",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 125260047,
+          "totalKeysExamined": 0,
+          "collectionScans": 5001,
+          "indexesUsed": [],
+          "nReturned": 25519,
+          "executionTimeMillisEstimate": 69917
+        },
+        {
+          "$group": {
+            "_id": "$_id",
+            "avgRating": {
+              "$avg": "$reviewsDocs.rating"
+            },
+            "name": {
+              "$first": "$name"
+            },
+            "sku": {
+              "$first": "$sku"
+            },
+            "reviewsCount": {
+              "$sum": {
+                "$cond": [
+                  {
+                    "$ifNull": [
+                      "$reviewsDocs._id",
+                      {
+                        "$const": false
+                      }
+                    ]
+                  },
+                  {
+                    "$const": 1
+                  },
+                  {
+                    "$const": 0
+                  }
+                ]
+              }
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "avgRating": 520000,
+            "name": 555853,
+            "sku": 542809,
+            "reviewsCount": 640000
+          },
+          "totalOutputDataSizeBytes": 2083662,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 5000,
+          "executionTimeMillisEstimate": 69934
+        },
+        {
+          "$match": {
+            "avgRating": {
+              "$gt": 4
+            }
+          },
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 69940
+        },
+        {
+          "$project": {
+            "_id": true,
+            "name": true,
+            "sku": true,
+            "avgRating": true,
+            "reviewsCount": true
+          },
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 69940
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "avgRating": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 110913,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 69940
+        }
+      ],
+      "queryShapeHash": "75F1A05ED45E685CB65355F6B03EA441ADB0AF0551F250EEADB5C8EDA760B907",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "products",
+        "pipeline": [
+          {
+            "$lookup": {
+              "from": "reviews",
+              "localField": "_id",
+              "foreignField": "productId",
+              "as": "reviewsDocs"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$reviewsDocs",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "avgRating": {
+                "$avg": "$reviewsDocs.rating"
+              },
+              "name": {
+                "$first": "$name"
+              },
+              "sku": {
+                "$first": "$sku"
+              },
+              "reviewsCount": {
+                "$sum": {
+                  "$cond": [
+                    {
+                      "$ifNull": [
+                        "$reviewsDocs._id",
+                        false
+                      ]
+                    },
+                    1,
+                    0
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$project": {
+              "name": 1,
+              "sku": 1,
+              "avgRating": 1,
+              "reviewsCount": 1
+            }
+          },
+          {
+            "$sort": {
+              "avgRating": -1
+            }
+          },
+          {
+            "$match": {
+              "avgRating": {
+                "$gt": 4
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831222,
+            "i": 12
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "qvhTpEPAK6W/XT3U3XqgOREI348=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831222,
+          "i": 12
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "shoppingCartItems",
+          "localField": "shoppingCart",
+          "foreignField": "_id",
+          "as": "cartItem"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$cartItem",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "cartItem.productId",
+          "foreignField": "_id",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$addFields": {
+          "lineTotal": {
+            "$multiply": [
+              "$cartItem.quantity",
+              {
+                "$ifNull": [
+                  "$productInfo.price",
+                  "$cartItem.price"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": "$lineTotal"
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      },
+      {
+        "$sort": {
+          "cartTotal": -1
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      }
+    ],
+    "name": "Users Inefficient",
+    "elapsedMs": 789.7095680236816,
+    "resultCount": 958,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.users",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "2EB965C2",
+              "planCacheShapeHash": "2EB965C2",
+              "planCacheKey": "B8F22F4A",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "_id": 1,
+                  "shoppingCart": 1,
+                  "username": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 1000,
+              "executionTimeMillis": 565,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 1000,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 1000,
+                "executionTimeMillisEstimate": 0,
+                "works": 1001,
+                "advanced": 1000,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 11,
+                "restoreState": 11,
+                "isEOF": 1,
+                "transformBy": {
+                  "_id": 1,
+                  "shoppingCart": 1,
+                  "username": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 1000,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 1001,
+                  "advanced": 1000,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 11,
+                  "restoreState": 11,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 1000
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 1000,
+          "executionTimeMillisEstimate": 3
+        },
+        {
+          "$unwind": {
+            "path": "$shoppingCart",
+            "preserveNullAndEmptyArrays": true
+          },
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 3
+        },
+        {
+          "$lookup": {
+            "from": "shoppingCartItems",
+            "as": "cartItem",
+            "localField": "shoppingCart",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 5686,
+          "totalKeysExamined": 5686,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 314
+        },
+        {
+          "$lookup": {
+            "from": "products",
+            "as": "productInfo",
+            "localField": "cartItem.productId",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 5686,
+          "totalKeysExamined": 5686,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 563
+        },
+        {
+          "$addFields": {
+            "lineTotal": {
+              "$multiply": [
+                "$cartItem.quantity",
+                {
+                  "$ifNull": [
+                    "$productInfo.price",
+                    "$cartItem.price"
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 563
+        },
+        {
+          "$group": {
+            "_id": "$_id",
+            "username": {
+              "$first": "$username"
+            },
+            "cartTotal": {
+              "$sum": "$lineTotal"
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "username": 92284,
+            "cartTotal": 128000
+          },
+          "totalOutputDataSizeBytes": 297284,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 1000,
+          "executionTimeMillisEstimate": 563
+        },
+        {
+          "$match": {
+            "cartTotal": {
+              "$gt": 100
+            }
+          },
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 563
+        },
+        {
+          "$project": {
+            "_id": true,
+            "username": true,
+            "cartTotal": true
+          },
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 563
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "cartTotal": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 292622,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 566
+        }
+      ],
+      "queryShapeHash": "4F06977D348562C4E71214FA25EFDB0C003E168F9D2512268C811A1BFD9526FB",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "users",
+        "pipeline": [
+          {
+            "$unwind": {
+              "path": "$shoppingCart",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "shoppingCartItems",
+              "localField": "shoppingCart",
+              "foreignField": "_id",
+              "as": "cartItem"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$cartItem",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "cartItem.productId",
+              "foreignField": "_id",
+              "as": "productInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$productInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  "$cartItem.quantity",
+                  {
+                    "$ifNull": [
+                      "$productInfo.price",
+                      "$cartItem.price"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "username": {
+                "$first": "$username"
+              },
+              "cartTotal": {
+                "$sum": "$lineTotal"
+              }
+            }
+          },
+          {
+            "$project": {
+              "username": 1,
+              "cartTotal": 1
+            }
+          },
+          {
+            "$sort": {
+              "cartTotal": -1
+            }
+          },
+          {
+            "$match": {
+              "cartTotal": {
+                "$gt": 100
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831223,
+            "i": 31
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "URlMQSPPC6Ww9mfovdBQ6HyGhYk=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831223,
+          "i": 31
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "productId",
+          "foreignField": "_id",
+          "as": "product"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$product",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$addFields": {
+          "lineTotal": {
+            "$multiply": [
+              {
+                "$ifNull": [
+                  "$quantity",
+                  0
+                ]
+              },
+              {
+                "$ifNull": [
+                  "$product.price",
+                  0
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$vendorId",
+          "totalSales": {
+            "$sum": "$lineTotal"
+          },
+          "orders": {
+            "$addToSet": "$orderId"
+          }
+        }
+      },
+      {
+        "$lookup": {
+          "from": "vendors",
+          "localField": "_id",
+          "foreignField": "_id",
+          "as": "vendorInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$vendorInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$project": {
+          "vendorId": "$_id",
+          "companyName": {
+            "$ifNull": [
+              "$vendorInfo.companyName",
+              "(unknown)"
+            ]
+          },
+          "contactEmail": {
+            "$ifNull": [
+              "$vendorInfo.contactEmail",
+              null
+            ]
+          },
+          "supportPhone": {
+            "$ifNull": [
+              "$vendorInfo.supportPhone",
+              null
+            ]
+          },
+          "totalSales": 1,
+          "uniqueOrders": {
+            "$size": {
+              "$ifNull": [
+                "$orders",
+                []
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$sort": {
+          "totalSales": -1
+        }
+      },
+      {
+        "$match": {
+          "totalSales": {
+            "$gt": 1000
+          }
+        }
+      }
+    ],
+    "name": "Orders Inefficient",
+    "elapsedMs": 3063.889741897583,
+    "resultCount": 74,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.orderItems",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "13C34C22",
+              "planCacheShapeHash": "13C34C22",
+              "planCacheKey": "2FBB0F2A",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "orderId": 1,
+                  "productId": 1,
+                  "quantity": 1,
+                  "vendorId": 1,
+                  "_id": 0
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 54944,
+              "executionTimeMillis": 2901,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 54944,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 54944,
+                "executionTimeMillisEstimate": 48,
+                "works": 54945,
+                "advanced": 54944,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 22,
+                "restoreState": 22,
+                "isEOF": 1,
+                "transformBy": {
+                  "orderId": 1,
+                  "productId": 1,
+                  "quantity": 1,
+                  "vendorId": 1,
+                  "_id": 0
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 54944,
+                  "executionTimeMillisEstimate": 32,
+                  "works": 54945,
+                  "advanced": 54944,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 22,
+                  "restoreState": 22,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 54944
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 54
+        },
+        {
+          "$lookup": {
+            "from": "products",
+            "as": "product",
+            "localField": "productId",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 54945,
+          "totalKeysExamined": 54945,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 2888
+        },
+        {
+          "$addFields": {
+            "lineTotal": {
+              "$multiply": [
+                {
+                  "$ifNull": [
+                    "$quantity",
+                    {
+                      "$const": 0
+                    }
+                  ]
+                },
+                {
+                  "$ifNull": [
+                    "$product.price",
+                    {
+                      "$const": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 2893
+        },
+        {
+          "$group": {
+            "_id": "$vendorId",
+            "totalSales": {
+              "$sum": "$lineTotal"
+            },
+            "orders": {
+              "$addToSet": "$orderId"
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "totalSales": 9472,
+            "orders": 849408
+          },
+          "totalOutputDataSizeBytes": 865762,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 2896
+        },
+        {
+          "$match": {
+            "totalSales": {
+              "$gt": 1000
+            }
+          },
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 2896
+        },
+        {
+          "$lookup": {
+            "from": "vendors",
+            "as": "vendorInfo",
+            "localField": "_id",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 74,
+          "totalKeysExamined": 74,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 2900
+        },
+        {
+          "$project": {
+            "_id": true,
+            "totalSales": true,
+            "vendorId": "$_id",
+            "companyName": {
+              "$ifNull": [
+                "$vendorInfo.companyName",
+                {
+                  "$const": "(unknown)"
+                }
+              ]
+            },
+            "contactEmail": {
+              "$ifNull": [
+                "$vendorInfo.contactEmail",
+                {
+                  "$const": null
+                }
+              ]
+            },
+            "supportPhone": {
+              "$ifNull": [
+                "$vendorInfo.supportPhone",
+                {
+                  "$const": null
+                }
+              ]
+            },
+            "uniqueOrders": {
+              "$size": [
+                {
+                  "$ifNull": [
+                    "$orders",
+                    {
+                      "$const": []
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 2900
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "totalSales": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 56607,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 2900
+        }
+      ],
+      "queryShapeHash": "D6D400383702A3A2E61A58167C2CAA98B0B71967F303693B9911F3D947D4AE23",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "orderItems",
+        "pipeline": [
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "productId",
+              "foreignField": "_id",
+              "as": "product"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$product",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  {
+                    "$ifNull": [
+                      "$quantity",
+                      0
+                    ]
+                  },
+                  {
+                    "$ifNull": [
+                      "$product.price",
+                      0
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$vendorId",
+              "totalSales": {
+                "$sum": "$lineTotal"
+              },
+              "orders": {
+                "$addToSet": "$orderId"
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "vendors",
+              "localField": "_id",
+              "foreignField": "_id",
+              "as": "vendorInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$vendorInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$project": {
+              "vendorId": "$_id",
+              "companyName": {
+                "$ifNull": [
+                  "$vendorInfo.companyName",
+                  "(unknown)"
+                ]
+              },
+              "contactEmail": {
+                "$ifNull": [
+                  "$vendorInfo.contactEmail",
+                  null
+                ]
+              },
+              "supportPhone": {
+                "$ifNull": [
+                  "$vendorInfo.supportPhone",
+                  null
+                ]
+              },
+              "totalSales": 1,
+              "uniqueOrders": {
+                "$size": {
+                  "$ifNull": [
+                    "$orders",
+                    []
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "totalSales": -1
+            }
+          },
+          {
+            "$match": {
+              "totalSales": {
+                "$gt": 1000
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831230,
+            "i": 9
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "uyDs+IdHktvVF5lpEs1UChN+jUE=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831230,
+          "i": 9
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$lookup": {
+          "from": "reviews",
+          "localField": "_id",
+          "foreignField": "productId",
+          "as": "reviewsDocs"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$reviewsDocs",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviewsDocs.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          },
+          "reviewsCount": {
+            "$sum": {
+              "$cond": [
+                {
+                  "$ifNull": [
+                    "$reviewsDocs._id",
+                    false
+                  ]
+                },
+                1,
+                0
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1,
+          "reviewsCount": 1
+        }
+      },
+      {
+        "$sort": {
+          "avgRating": -1
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      }
+    ],
+    "name": "Products Inefficient with Indexes",
+    "elapsedMs": 64139.548778533936,
+    "resultCount": 261,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.products",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "B931B9D8",
+              "planCacheShapeHash": "B931B9D8",
+              "planCacheKey": "43F26CC8",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "_id": 1,
+                  "name": 1,
+                  "sku": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 5000,
+              "executionTimeMillis": 68654,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 5000,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 5000,
+                "executionTimeMillisEstimate": 2,
+                "works": 5001,
+                "advanced": 5000,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 15,
+                "restoreState": 15,
+                "isEOF": 1,
+                "transformBy": {
+                  "_id": 1,
+                  "name": 1,
+                  "sku": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 5000,
+                  "executionTimeMillisEstimate": 1,
+                  "works": 5001,
+                  "advanced": 5000,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 15,
+                  "restoreState": 15,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 5000
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 5000,
+          "executionTimeMillisEstimate": 3
+        },
+        {
+          "$lookup": {
+            "from": "reviews",
+            "as": "reviewsDocs",
+            "localField": "_id",
+            "foreignField": "productId",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 125260047,
+          "totalKeysExamined": 0,
+          "collectionScans": 5001,
+          "indexesUsed": [],
+          "nReturned": 25519,
+          "executionTimeMillisEstimate": 68630
+        },
+        {
+          "$group": {
+            "_id": "$_id",
+            "avgRating": {
+              "$avg": "$reviewsDocs.rating"
+            },
+            "name": {
+              "$first": "$name"
+            },
+            "sku": {
+              "$first": "$sku"
+            },
+            "reviewsCount": {
+              "$sum": {
+                "$cond": [
+                  {
+                    "$ifNull": [
+                      "$reviewsDocs._id",
+                      {
+                        "$const": false
+                      }
+                    ]
+                  },
+                  {
+                    "$const": 1
+                  },
+                  {
+                    "$const": 0
+                  }
+                ]
+              }
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "avgRating": 520000,
+            "name": 555853,
+            "sku": 542809,
+            "reviewsCount": 640000
+          },
+          "totalOutputDataSizeBytes": 2083662,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 5000,
+          "executionTimeMillisEstimate": 68651
+        },
+        {
+          "$match": {
+            "avgRating": {
+              "$gt": 4
+            }
+          },
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 68653
+        },
+        {
+          "$project": {
+            "_id": true,
+            "name": true,
+            "sku": true,
+            "avgRating": true,
+            "reviewsCount": true
+          },
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 68653
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "avgRating": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 110913,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 68653
+        }
+      ],
+      "queryShapeHash": "75F1A05ED45E685CB65355F6B03EA441ADB0AF0551F250EEADB5C8EDA760B907",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "products",
+        "pipeline": [
+          {
+            "$lookup": {
+              "from": "reviews",
+              "localField": "_id",
+              "foreignField": "productId",
+              "as": "reviewsDocs"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$reviewsDocs",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "avgRating": {
+                "$avg": "$reviewsDocs.rating"
+              },
+              "name": {
+                "$first": "$name"
+              },
+              "sku": {
+                "$first": "$sku"
+              },
+              "reviewsCount": {
+                "$sum": {
+                  "$cond": [
+                    {
+                      "$ifNull": [
+                        "$reviewsDocs._id",
+                        false
+                      ]
+                    },
+                    1,
+                    0
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$project": {
+              "name": 1,
+              "sku": 1,
+              "avgRating": 1,
+              "reviewsCount": 1
+            }
+          },
+          {
+            "$sort": {
+              "avgRating": -1
+            }
+          },
+          {
+            "$match": {
+              "avgRating": {
+                "$gt": 4
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831364,
+            "i": 38
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "kQwpjxdRzdP7tITnku/lBphpSm0=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831364,
+          "i": 38
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "shoppingCartItems",
+          "localField": "shoppingCart",
+          "foreignField": "_id",
+          "as": "cartItem"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$cartItem",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "cartItem.productId",
+          "foreignField": "_id",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$addFields": {
+          "lineTotal": {
+            "$multiply": [
+              "$cartItem.quantity",
+              {
+                "$ifNull": [
+                  "$productInfo.price",
+                  "$cartItem.price"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": "$lineTotal"
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      },
+      {
+        "$sort": {
+          "cartTotal": -1
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      }
+    ],
+    "name": "Users Inefficient with Indexes",
+    "elapsedMs": 770.2257633209229,
+    "resultCount": 958,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.users",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "2EB965C2",
+              "planCacheShapeHash": "2EB965C2",
+              "planCacheKey": "B8F22F4A",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "_id": 1,
+                  "shoppingCart": 1,
+                  "username": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 1000,
+              "executionTimeMillis": 584,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 1000,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 1000,
+                "executionTimeMillisEstimate": 0,
+                "works": 1001,
+                "advanced": 1000,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 11,
+                "restoreState": 11,
+                "isEOF": 1,
+                "transformBy": {
+                  "_id": 1,
+                  "shoppingCart": 1,
+                  "username": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 1000,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 1001,
+                  "advanced": 1000,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 11,
+                  "restoreState": 11,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 1000
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 1000,
+          "executionTimeMillisEstimate": 1
+        },
+        {
+          "$unwind": {
+            "path": "$shoppingCart",
+            "preserveNullAndEmptyArrays": true
+          },
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 1
+        },
+        {
+          "$lookup": {
+            "from": "shoppingCartItems",
+            "as": "cartItem",
+            "localField": "shoppingCart",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 5686,
+          "totalKeysExamined": 5686,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 313
+        },
+        {
+          "$lookup": {
+            "from": "products",
+            "as": "productInfo",
+            "localField": "cartItem.productId",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 5686,
+          "totalKeysExamined": 5686,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 579
+        },
+        {
+          "$addFields": {
+            "lineTotal": {
+              "$multiply": [
+                "$cartItem.quantity",
+                {
+                  "$ifNull": [
+                    "$productInfo.price",
+                    "$cartItem.price"
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 581
+        },
+        {
+          "$group": {
+            "_id": "$_id",
+            "username": {
+              "$first": "$username"
+            },
+            "cartTotal": {
+              "$sum": "$lineTotal"
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "username": 92284,
+            "cartTotal": 128000
+          },
+          "totalOutputDataSizeBytes": 297284,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 1000,
+          "executionTimeMillisEstimate": 584
+        },
+        {
+          "$match": {
+            "cartTotal": {
+              "$gt": 100
+            }
+          },
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 584
+        },
+        {
+          "$project": {
+            "_id": true,
+            "username": true,
+            "cartTotal": true
+          },
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 584
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "cartTotal": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 292622,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 584
+        }
+      ],
+      "queryShapeHash": "4F06977D348562C4E71214FA25EFDB0C003E168F9D2512268C811A1BFD9526FB",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "users",
+        "pipeline": [
+          {
+            "$unwind": {
+              "path": "$shoppingCart",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "shoppingCartItems",
+              "localField": "shoppingCart",
+              "foreignField": "_id",
+              "as": "cartItem"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$cartItem",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "cartItem.productId",
+              "foreignField": "_id",
+              "as": "productInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$productInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  "$cartItem.quantity",
+                  {
+                    "$ifNull": [
+                      "$productInfo.price",
+                      "$cartItem.price"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "username": {
+                "$first": "$username"
+              },
+              "cartTotal": {
+                "$sum": "$lineTotal"
+              }
+            }
+          },
+          {
+            "$project": {
+              "username": 1,
+              "cartTotal": 1
+            }
+          },
+          {
+            "$sort": {
+              "cartTotal": -1
+            }
+          },
+          {
+            "$match": {
+              "cartTotal": {
+                "$gt": 100
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831366,
+            "i": 13
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "m5MtqcIt/TdQySHIVyJ7CFUUh44=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831366,
+          "i": 13
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "productId",
+          "foreignField": "_id",
+          "as": "product"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$product",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$addFields": {
+          "lineTotal": {
+            "$multiply": [
+              {
+                "$ifNull": [
+                  "$quantity",
+                  0
+                ]
+              },
+              {
+                "$ifNull": [
+                  "$product.price",
+                  0
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$vendorId",
+          "totalSales": {
+            "$sum": "$lineTotal"
+          },
+          "orders": {
+            "$addToSet": "$orderId"
+          }
+        }
+      },
+      {
+        "$lookup": {
+          "from": "vendors",
+          "localField": "_id",
+          "foreignField": "_id",
+          "as": "vendorInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$vendorInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$project": {
+          "vendorId": "$_id",
+          "companyName": {
+            "$ifNull": [
+              "$vendorInfo.companyName",
+              "(unknown)"
+            ]
+          },
+          "contactEmail": {
+            "$ifNull": [
+              "$vendorInfo.contactEmail",
+              null
+            ]
+          },
+          "supportPhone": {
+            "$ifNull": [
+              "$vendorInfo.supportPhone",
+              null
+            ]
+          },
+          "totalSales": 1,
+          "uniqueOrders": {
+            "$size": {
+              "$ifNull": [
+                "$orders",
+                []
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$sort": {
+          "totalSales": -1
+        }
+      },
+      {
+        "$match": {
+          "totalSales": {
+            "$gt": 1000
+          }
+        }
+      }
+    ],
+    "name": "Orders Inefficient with Indexes",
+    "elapsedMs": 3163.6459827423096,
+    "resultCount": 74,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.orderItems",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "13C34C22",
+              "planCacheShapeHash": "13C34C22",
+              "planCacheKey": "2FBB0F2A",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "orderId": 1,
+                  "productId": 1,
+                  "quantity": 1,
+                  "vendorId": 1,
+                  "_id": 0
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 54944,
+              "executionTimeMillis": 3092,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 54944,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 54944,
+                "executionTimeMillisEstimate": 41,
+                "works": 54945,
+                "advanced": 54944,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 22,
+                "restoreState": 22,
+                "isEOF": 1,
+                "transformBy": {
+                  "orderId": 1,
+                  "productId": 1,
+                  "quantity": 1,
+                  "vendorId": 1,
+                  "_id": 0
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 54944,
+                  "executionTimeMillisEstimate": 19,
+                  "works": 54945,
+                  "advanced": 54944,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 22,
+                  "restoreState": 22,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 54944
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 49
+        },
+        {
+          "$lookup": {
+            "from": "products",
+            "as": "product",
+            "localField": "productId",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 54945,
+          "totalKeysExamined": 54945,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 3042
+        },
+        {
+          "$addFields": {
+            "lineTotal": {
+              "$multiply": [
+                {
+                  "$ifNull": [
+                    "$quantity",
+                    {
+                      "$const": 0
+                    }
+                  ]
+                },
+                {
+                  "$ifNull": [
+                    "$product.price",
+                    {
+                      "$const": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 3069
+        },
+        {
+          "$group": {
+            "_id": "$vendorId",
+            "totalSales": {
+              "$sum": "$lineTotal"
+            },
+            "orders": {
+              "$addToSet": "$orderId"
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "totalSales": 9472,
+            "orders": 849408
+          },
+          "totalOutputDataSizeBytes": 865762,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3087
+        },
+        {
+          "$match": {
+            "totalSales": {
+              "$gt": 1000
+            }
+          },
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3087
+        },
+        {
+          "$lookup": {
+            "from": "vendors",
+            "as": "vendorInfo",
+            "localField": "_id",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 74,
+          "totalKeysExamined": 74,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3092
+        },
+        {
+          "$project": {
+            "_id": true,
+            "totalSales": true,
+            "vendorId": "$_id",
+            "companyName": {
+              "$ifNull": [
+                "$vendorInfo.companyName",
+                {
+                  "$const": "(unknown)"
+                }
+              ]
+            },
+            "contactEmail": {
+              "$ifNull": [
+                "$vendorInfo.contactEmail",
+                {
+                  "$const": null
+                }
+              ]
+            },
+            "supportPhone": {
+              "$ifNull": [
+                "$vendorInfo.supportPhone",
+                {
+                  "$const": null
+                }
+              ]
+            },
+            "uniqueOrders": {
+              "$size": [
+                {
+                  "$ifNull": [
+                    "$orders",
+                    {
+                      "$const": []
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3092
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "totalSales": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 56607,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3092
+        }
+      ],
+      "queryShapeHash": "D6D400383702A3A2E61A58167C2CAA98B0B71967F303693B9911F3D947D4AE23",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "orderItems",
+        "pipeline": [
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "productId",
+              "foreignField": "_id",
+              "as": "product"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$product",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  {
+                    "$ifNull": [
+                      "$quantity",
+                      0
+                    ]
+                  },
+                  {
+                    "$ifNull": [
+                      "$product.price",
+                      0
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$vendorId",
+              "totalSales": {
+                "$sum": "$lineTotal"
+              },
+              "orders": {
+                "$addToSet": "$orderId"
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "vendors",
+              "localField": "_id",
+              "foreignField": "_id",
+              "as": "vendorInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$vendorInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$project": {
+              "vendorId": "$_id",
+              "companyName": {
+                "$ifNull": [
+                  "$vendorInfo.companyName",
+                  "(unknown)"
+                ]
+              },
+              "contactEmail": {
+                "$ifNull": [
+                  "$vendorInfo.contactEmail",
+                  null
+                ]
+              },
+              "supportPhone": {
+                "$ifNull": [
+                  "$vendorInfo.supportPhone",
+                  null
+                ]
+              },
+              "totalSales": 1,
+              "uniqueOrders": {
+                "$size": {
+                  "$ifNull": [
+                    "$orders",
+                    []
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "totalSales": -1
+            }
+          },
+          {
+            "$match": {
+              "totalSales": {
+                "$gt": 1000
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831372,
+            "i": 714
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "0znrTT7+0v/eukCF/OkWAoMpKII=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831372,
+          "i": 714
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$lookup": {
+          "from": "reviews",
+          "localField": "_id",
+          "foreignField": "productId",
+          "as": "reviewsDocs"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$reviewsDocs",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviewsDocs.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          },
+          "reviewsCount": {
+            "$sum": {
+              "$cond": [
+                {
+                  "$ifNull": [
+                    "$reviewsDocs._id",
+                    false
+                  ]
+                },
+                1,
+                0
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1,
+          "reviewsCount": 1
+        }
+      },
+      {
+        "$sort": {
+          "avgRating": -1
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      }
+    ],
+    "name": "Products Inefficient",
+    "elapsedMs": 63532.2527885437,
+    "resultCount": 261,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.products",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "B931B9D8",
+              "planCacheShapeHash": "B931B9D8",
+              "planCacheKey": "43F26CC8",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "_id": 1,
+                  "name": 1,
+                  "sku": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 5000,
+              "executionTimeMillis": 69164,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 5000,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 5000,
+                "executionTimeMillisEstimate": 4,
+                "works": 5001,
+                "advanced": 5000,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 15,
+                "restoreState": 15,
+                "isEOF": 1,
+                "transformBy": {
+                  "_id": 1,
+                  "name": 1,
+                  "sku": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 5000,
+                  "executionTimeMillisEstimate": 3,
+                  "works": 5001,
+                  "advanced": 5000,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 15,
+                  "restoreState": 15,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 5000
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 5000,
+          "executionTimeMillisEstimate": 5
+        },
+        {
+          "$lookup": {
+            "from": "reviews",
+            "as": "reviewsDocs",
+            "localField": "_id",
+            "foreignField": "productId",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 125260047,
+          "totalKeysExamined": 0,
+          "collectionScans": 5001,
+          "indexesUsed": [],
+          "nReturned": 25519,
+          "executionTimeMillisEstimate": 69146
+        },
+        {
+          "$group": {
+            "_id": "$_id",
+            "avgRating": {
+              "$avg": "$reviewsDocs.rating"
+            },
+            "name": {
+              "$first": "$name"
+            },
+            "sku": {
+              "$first": "$sku"
+            },
+            "reviewsCount": {
+              "$sum": {
+                "$cond": [
+                  {
+                    "$ifNull": [
+                      "$reviewsDocs._id",
+                      {
+                        "$const": false
+                      }
+                    ]
+                  },
+                  {
+                    "$const": 1
+                  },
+                  {
+                    "$const": 0
+                  }
+                ]
+              }
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "avgRating": 520000,
+            "name": 555853,
+            "sku": 542809,
+            "reviewsCount": 640000
+          },
+          "totalOutputDataSizeBytes": 2083662,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 5000,
+          "executionTimeMillisEstimate": 69159
+        },
+        {
+          "$match": {
+            "avgRating": {
+              "$gt": 4
+            }
+          },
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 69162
+        },
+        {
+          "$project": {
+            "_id": true,
+            "name": true,
+            "sku": true,
+            "avgRating": true,
+            "reviewsCount": true
+          },
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 69162
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "avgRating": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 110913,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 69162
+        }
+      ],
+      "queryShapeHash": "75F1A05ED45E685CB65355F6B03EA441ADB0AF0551F250EEADB5C8EDA760B907",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "products",
+        "pipeline": [
+          {
+            "$lookup": {
+              "from": "reviews",
+              "localField": "_id",
+              "foreignField": "productId",
+              "as": "reviewsDocs"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$reviewsDocs",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "avgRating": {
+                "$avg": "$reviewsDocs.rating"
+              },
+              "name": {
+                "$first": "$name"
+              },
+              "sku": {
+                "$first": "$sku"
+              },
+              "reviewsCount": {
+                "$sum": {
+                  "$cond": [
+                    {
+                      "$ifNull": [
+                        "$reviewsDocs._id",
+                        false
+                      ]
+                    },
+                    1,
+                    0
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$project": {
+              "name": 1,
+              "sku": 1,
+              "avgRating": 1,
+              "reviewsCount": 1
+            }
+          },
+          {
+            "$sort": {
+              "avgRating": -1
+            }
+          },
+          {
+            "$match": {
+              "avgRating": {
+                "$gt": 4
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831729,
+            "i": 35
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "A0kBXYtdhnTgVtZfvZWhEfsLSFk=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831729,
+          "i": 35
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "shoppingCartItems",
+          "localField": "shoppingCart",
+          "foreignField": "_id",
+          "as": "cartItem"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$cartItem",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "cartItem.productId",
+          "foreignField": "_id",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$addFields": {
+          "lineTotal": {
+            "$multiply": [
+              "$cartItem.quantity",
+              {
+                "$ifNull": [
+                  "$productInfo.price",
+                  "$cartItem.price"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": "$lineTotal"
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      },
+      {
+        "$sort": {
+          "cartTotal": -1
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      }
+    ],
+    "name": "Users Inefficient",
+    "elapsedMs": 748.3713626861572,
+    "resultCount": 958,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.users",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "2EB965C2",
+              "planCacheShapeHash": "2EB965C2",
+              "planCacheKey": "B8F22F4A",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "_id": 1,
+                  "shoppingCart": 1,
+                  "username": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 1000,
+              "executionTimeMillis": 585,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 1000,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 1000,
+                "executionTimeMillisEstimate": 0,
+                "works": 1001,
+                "advanced": 1000,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 11,
+                "restoreState": 11,
+                "isEOF": 1,
+                "transformBy": {
+                  "_id": 1,
+                  "shoppingCart": 1,
+                  "username": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 1000,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 1001,
+                  "advanced": 1000,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 11,
+                  "restoreState": 11,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 1000
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 1000,
+          "executionTimeMillisEstimate": 0
+        },
+        {
+          "$unwind": {
+            "path": "$shoppingCart",
+            "preserveNullAndEmptyArrays": true
+          },
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 0
+        },
+        {
+          "$lookup": {
+            "from": "shoppingCartItems",
+            "as": "cartItem",
+            "localField": "shoppingCart",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 5686,
+          "totalKeysExamined": 5686,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 296
+        },
+        {
+          "$lookup": {
+            "from": "products",
+            "as": "productInfo",
+            "localField": "cartItem.productId",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 5686,
+          "totalKeysExamined": 5686,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 576
+        },
+        {
+          "$addFields": {
+            "lineTotal": {
+              "$multiply": [
+                "$cartItem.quantity",
+                {
+                  "$ifNull": [
+                    "$productInfo.price",
+                    "$cartItem.price"
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 581
+        },
+        {
+          "$group": {
+            "_id": "$_id",
+            "username": {
+              "$first": "$username"
+            },
+            "cartTotal": {
+              "$sum": "$lineTotal"
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "username": 92284,
+            "cartTotal": 128000
+          },
+          "totalOutputDataSizeBytes": 297284,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 1000,
+          "executionTimeMillisEstimate": 583
+        },
+        {
+          "$match": {
+            "cartTotal": {
+              "$gt": 100
+            }
+          },
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 584
+        },
+        {
+          "$project": {
+            "_id": true,
+            "username": true,
+            "cartTotal": true
+          },
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 584
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "cartTotal": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 292622,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 585
+        }
+      ],
+      "queryShapeHash": "4F06977D348562C4E71214FA25EFDB0C003E168F9D2512268C811A1BFD9526FB",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "users",
+        "pipeline": [
+          {
+            "$unwind": {
+              "path": "$shoppingCart",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "shoppingCartItems",
+              "localField": "shoppingCart",
+              "foreignField": "_id",
+              "as": "cartItem"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$cartItem",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "cartItem.productId",
+              "foreignField": "_id",
+              "as": "productInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$productInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  "$cartItem.quantity",
+                  {
+                    "$ifNull": [
+                      "$productInfo.price",
+                      "$cartItem.price"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "username": {
+                "$first": "$username"
+              },
+              "cartTotal": {
+                "$sum": "$lineTotal"
+              }
+            }
+          },
+          {
+            "$project": {
+              "username": 1,
+              "cartTotal": 1
+            }
+          },
+          {
+            "$sort": {
+              "cartTotal": -1
+            }
+          },
+          {
+            "$match": {
+              "cartTotal": {
+                "$gt": 100
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831731,
+            "i": 526
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "+55jFdIjedGBY7aY7O95BW/pElQ=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831731,
+          "i": 526
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_no_indexes",
+    "pipeline": [
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "productId",
+          "foreignField": "_id",
+          "as": "product"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$product",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$addFields": {
+          "lineTotal": {
+            "$multiply": [
+              {
+                "$ifNull": [
+                  "$quantity",
+                  0
+                ]
+              },
+              {
+                "$ifNull": [
+                  "$product.price",
+                  0
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$vendorId",
+          "totalSales": {
+            "$sum": "$lineTotal"
+          },
+          "orders": {
+            "$addToSet": "$orderId"
+          }
+        }
+      },
+      {
+        "$lookup": {
+          "from": "vendors",
+          "localField": "_id",
+          "foreignField": "_id",
+          "as": "vendorInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$vendorInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$project": {
+          "vendorId": "$_id",
+          "companyName": {
+            "$ifNull": [
+              "$vendorInfo.companyName",
+              "(unknown)"
+            ]
+          },
+          "contactEmail": {
+            "$ifNull": [
+              "$vendorInfo.contactEmail",
+              null
+            ]
+          },
+          "supportPhone": {
+            "$ifNull": [
+              "$vendorInfo.supportPhone",
+              null
+            ]
+          },
+          "totalSales": 1,
+          "uniqueOrders": {
+            "$size": {
+              "$ifNull": [
+                "$orders",
+                []
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$sort": {
+          "totalSales": -1
+        }
+      },
+      {
+        "$match": {
+          "totalSales": {
+            "$gt": 1000
+          }
+        }
+      }
+    ],
+    "name": "Orders Inefficient",
+    "elapsedMs": 3117.5100803375244,
+    "resultCount": 74,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.orderItems",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "13C34C22",
+              "planCacheShapeHash": "13C34C22",
+              "planCacheKey": "2FBB0F2A",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "orderId": 1,
+                  "productId": 1,
+                  "quantity": 1,
+                  "vendorId": 1,
+                  "_id": 0
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 54944,
+              "executionTimeMillis": 2954,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 54944,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 54944,
+                "executionTimeMillisEstimate": 44,
+                "works": 54945,
+                "advanced": 54944,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 22,
+                "restoreState": 22,
+                "isEOF": 1,
+                "transformBy": {
+                  "orderId": 1,
+                  "productId": 1,
+                  "quantity": 1,
+                  "vendorId": 1,
+                  "_id": 0
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 54944,
+                  "executionTimeMillisEstimate": 25,
+                  "works": 54945,
+                  "advanced": 54944,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 22,
+                  "restoreState": 22,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 54944
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 50
+        },
+        {
+          "$lookup": {
+            "from": "products",
+            "as": "product",
+            "localField": "productId",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 54945,
+          "totalKeysExamined": 54945,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 2922
+        },
+        {
+          "$addFields": {
+            "lineTotal": {
+              "$multiply": [
+                {
+                  "$ifNull": [
+                    "$quantity",
+                    {
+                      "$const": 0
+                    }
+                  ]
+                },
+                {
+                  "$ifNull": [
+                    "$product.price",
+                    {
+                      "$const": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 2935
+        },
+        {
+          "$group": {
+            "_id": "$vendorId",
+            "totalSales": {
+              "$sum": "$lineTotal"
+            },
+            "orders": {
+              "$addToSet": "$orderId"
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "totalSales": 9472,
+            "orders": 849408
+          },
+          "totalOutputDataSizeBytes": 865762,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 2948
+        },
+        {
+          "$match": {
+            "totalSales": {
+              "$gt": 1000
+            }
+          },
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 2948
+        },
+        {
+          "$lookup": {
+            "from": "vendors",
+            "as": "vendorInfo",
+            "localField": "_id",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 74,
+          "totalKeysExamined": 74,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 2953
+        },
+        {
+          "$project": {
+            "_id": true,
+            "totalSales": true,
+            "vendorId": "$_id",
+            "companyName": {
+              "$ifNull": [
+                "$vendorInfo.companyName",
+                {
+                  "$const": "(unknown)"
+                }
+              ]
+            },
+            "contactEmail": {
+              "$ifNull": [
+                "$vendorInfo.contactEmail",
+                {
+                  "$const": null
+                }
+              ]
+            },
+            "supportPhone": {
+              "$ifNull": [
+                "$vendorInfo.supportPhone",
+                {
+                  "$const": null
+                }
+              ]
+            },
+            "uniqueOrders": {
+              "$size": [
+                {
+                  "$ifNull": [
+                    "$orders",
+                    {
+                      "$const": []
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 2953
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "totalSales": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 56607,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 2953
+        }
+      ],
+      "queryShapeHash": "D6D400383702A3A2E61A58167C2CAA98B0B71967F303693B9911F3D947D4AE23",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "orderItems",
+        "pipeline": [
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "productId",
+              "foreignField": "_id",
+              "as": "product"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$product",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  {
+                    "$ifNull": [
+                      "$quantity",
+                      0
+                    ]
+                  },
+                  {
+                    "$ifNull": [
+                      "$product.price",
+                      0
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$vendorId",
+              "totalSales": {
+                "$sum": "$lineTotal"
+              },
+              "orders": {
+                "$addToSet": "$orderId"
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "vendors",
+              "localField": "_id",
+              "foreignField": "_id",
+              "as": "vendorInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$vendorInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$project": {
+              "vendorId": "$_id",
+              "companyName": {
+                "$ifNull": [
+                  "$vendorInfo.companyName",
+                  "(unknown)"
+                ]
+              },
+              "contactEmail": {
+                "$ifNull": [
+                  "$vendorInfo.contactEmail",
+                  null
+                ]
+              },
+              "supportPhone": {
+                "$ifNull": [
+                  "$vendorInfo.supportPhone",
+                  null
+                ]
+              },
+              "totalSales": 1,
+              "uniqueOrders": {
+                "$size": {
+                  "$ifNull": [
+                    "$orders",
+                    []
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "totalSales": -1
+            }
+          },
+          {
+            "$match": {
+              "totalSales": {
+                "$gt": 1000
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831737,
+            "i": 7
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "48Q+WfcR87CJxfnB3WAdkPGZMWA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831737,
+          "i": 7
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$lookup": {
+          "from": "reviews",
+          "localField": "_id",
+          "foreignField": "productId",
+          "as": "reviewsDocs"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$reviewsDocs",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "avgRating": {
+            "$avg": "$reviewsDocs.rating"
+          },
+          "name": {
+            "$first": "$name"
+          },
+          "sku": {
+            "$first": "$sku"
+          },
+          "reviewsCount": {
+            "$sum": {
+              "$cond": [
+                {
+                  "$ifNull": [
+                    "$reviewsDocs._id",
+                    false
+                  ]
+                },
+                1,
+                0
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1,
+          "reviewsCount": 1
+        }
+      },
+      {
+        "$sort": {
+          "avgRating": -1
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      }
+    ],
+    "name": "Products Inefficient with Indexes",
+    "elapsedMs": 64018.8422203064,
+    "resultCount": 261,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.products",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "B931B9D8",
+              "planCacheShapeHash": "B931B9D8",
+              "planCacheKey": "43F26CC8",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "_id": 1,
+                  "name": 1,
+                  "sku": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 5000,
+              "executionTimeMillis": 69225,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 5000,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 5000,
+                "executionTimeMillisEstimate": 3,
+                "works": 5001,
+                "advanced": 5000,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 15,
+                "restoreState": 15,
+                "isEOF": 1,
+                "transformBy": {
+                  "_id": 1,
+                  "name": 1,
+                  "sku": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 5000,
+                  "executionTimeMillisEstimate": 1,
+                  "works": 5001,
+                  "advanced": 5000,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 15,
+                  "restoreState": 15,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 5000
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 5000,
+          "executionTimeMillisEstimate": 5
+        },
+        {
+          "$lookup": {
+            "from": "reviews",
+            "as": "reviewsDocs",
+            "localField": "_id",
+            "foreignField": "productId",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 125260047,
+          "totalKeysExamined": 0,
+          "collectionScans": 5001,
+          "indexesUsed": [],
+          "nReturned": 25519,
+          "executionTimeMillisEstimate": 69200
+        },
+        {
+          "$group": {
+            "_id": "$_id",
+            "avgRating": {
+              "$avg": "$reviewsDocs.rating"
+            },
+            "name": {
+              "$first": "$name"
+            },
+            "sku": {
+              "$first": "$sku"
+            },
+            "reviewsCount": {
+              "$sum": {
+                "$cond": [
+                  {
+                    "$ifNull": [
+                      "$reviewsDocs._id",
+                      {
+                        "$const": false
+                      }
+                    ]
+                  },
+                  {
+                    "$const": 1
+                  },
+                  {
+                    "$const": 0
+                  }
+                ]
+              }
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "avgRating": 520000,
+            "name": 555853,
+            "sku": 542809,
+            "reviewsCount": 640000
+          },
+          "totalOutputDataSizeBytes": 2083662,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 5000,
+          "executionTimeMillisEstimate": 69222
+        },
+        {
+          "$match": {
+            "avgRating": {
+              "$gt": 4
+            }
+          },
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 69225
+        },
+        {
+          "$project": {
+            "_id": true,
+            "name": true,
+            "sku": true,
+            "avgRating": true,
+            "reviewsCount": true
+          },
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 69225
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "avgRating": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 110913,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 69225
+        }
+      ],
+      "queryShapeHash": "75F1A05ED45E685CB65355F6B03EA441ADB0AF0551F250EEADB5C8EDA760B907",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "products",
+        "pipeline": [
+          {
+            "$lookup": {
+              "from": "reviews",
+              "localField": "_id",
+              "foreignField": "productId",
+              "as": "reviewsDocs"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$reviewsDocs",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "avgRating": {
+                "$avg": "$reviewsDocs.rating"
+              },
+              "name": {
+                "$first": "$name"
+              },
+              "sku": {
+                "$first": "$sku"
+              },
+              "reviewsCount": {
+                "$sum": {
+                  "$cond": [
+                    {
+                      "$ifNull": [
+                        "$reviewsDocs._id",
+                        false
+                      ]
+                    },
+                    1,
+                    0
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$project": {
+              "name": 1,
+              "sku": 1,
+              "avgRating": 1,
+              "reviewsCount": 1
+            }
+          },
+          {
+            "$sort": {
+              "avgRating": -1
+            }
+          },
+          {
+            "$match": {
+              "avgRating": {
+                "$gt": 4
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831872,
+            "i": 34
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "wNIu4L/+OHY1OMXNnmgOQLlD/8s=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831872,
+          "i": 34
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$unwind": {
+          "path": "$shoppingCart",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "shoppingCartItems",
+          "localField": "shoppingCart",
+          "foreignField": "_id",
+          "as": "cartItem"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$cartItem",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "cartItem.productId",
+          "foreignField": "_id",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$addFields": {
+          "lineTotal": {
+            "$multiply": [
+              "$cartItem.quantity",
+              {
+                "$ifNull": [
+                  "$productInfo.price",
+                  "$cartItem.price"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": "$lineTotal"
+          }
+        }
+      },
+      {
+        "$project": {
+          "username": 1,
+          "cartTotal": 1
+        }
+      },
+      {
+        "$sort": {
+          "cartTotal": -1
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      }
+    ],
+    "name": "Users Inefficient with Indexes",
+    "elapsedMs": 709.1758251190186,
+    "resultCount": 958,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.users",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "2EB965C2",
+              "planCacheShapeHash": "2EB965C2",
+              "planCacheKey": "B8F22F4A",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "_id": 1,
+                  "shoppingCart": 1,
+                  "username": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 1000,
+              "executionTimeMillis": 591,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 1000,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 1000,
+                "executionTimeMillisEstimate": 0,
+                "works": 1001,
+                "advanced": 1000,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 11,
+                "restoreState": 11,
+                "isEOF": 1,
+                "transformBy": {
+                  "_id": 1,
+                  "shoppingCart": 1,
+                  "username": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 1000,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 1001,
+                  "advanced": 1000,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 11,
+                  "restoreState": 11,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 1000
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 1000,
+          "executionTimeMillisEstimate": 0
+        },
+        {
+          "$unwind": {
+            "path": "$shoppingCart",
+            "preserveNullAndEmptyArrays": true
+          },
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 0
+        },
+        {
+          "$lookup": {
+            "from": "shoppingCartItems",
+            "as": "cartItem",
+            "localField": "shoppingCart",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 5686,
+          "totalKeysExamined": 5686,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 295
+        },
+        {
+          "$lookup": {
+            "from": "products",
+            "as": "productInfo",
+            "localField": "cartItem.productId",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 5686,
+          "totalKeysExamined": 5686,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 587
+        },
+        {
+          "$addFields": {
+            "lineTotal": {
+              "$multiply": [
+                "$cartItem.quantity",
+                {
+                  "$ifNull": [
+                    "$productInfo.price",
+                    "$cartItem.price"
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 588
+        },
+        {
+          "$group": {
+            "_id": "$_id",
+            "username": {
+              "$first": "$username"
+            },
+            "cartTotal": {
+              "$sum": "$lineTotal"
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "username": 92284,
+            "cartTotal": 128000
+          },
+          "totalOutputDataSizeBytes": 297284,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 1000,
+          "executionTimeMillisEstimate": 588
+        },
+        {
+          "$match": {
+            "cartTotal": {
+              "$gt": 100
+            }
+          },
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 588
+        },
+        {
+          "$project": {
+            "_id": true,
+            "username": true,
+            "cartTotal": true
+          },
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 588
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "cartTotal": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 292622,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 588
+        }
+      ],
+      "queryShapeHash": "4F06977D348562C4E71214FA25EFDB0C003E168F9D2512268C811A1BFD9526FB",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "users",
+        "pipeline": [
+          {
+            "$unwind": {
+              "path": "$shoppingCart",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "shoppingCartItems",
+              "localField": "shoppingCart",
+              "foreignField": "_id",
+              "as": "cartItem"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$cartItem",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "cartItem.productId",
+              "foreignField": "_id",
+              "as": "productInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$productInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  "$cartItem.quantity",
+                  {
+                    "$ifNull": [
+                      "$productInfo.price",
+                      "$cartItem.price"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "username": {
+                "$first": "$username"
+              },
+              "cartTotal": {
+                "$sum": "$lineTotal"
+              }
+            }
+          },
+          {
+            "$project": {
+              "username": 1,
+              "cartTotal": 1
+            }
+          },
+          {
+            "$sort": {
+              "cartTotal": -1
+            }
+          },
+          {
+            "$match": {
+              "cartTotal": {
+                "$gt": 100
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831874,
+            "i": 19
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "MFZKmmDjNv7ZF7nPnNogeUi28ZY=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831874,
+          "i": 19
+        }
+      }
+    }
+  },
+  {
+    "stage": "inefficient_with_indexes",
+    "pipeline": [
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "productId",
+          "foreignField": "_id",
+          "as": "product"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$product",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$addFields": {
+          "lineTotal": {
+            "$multiply": [
+              {
+                "$ifNull": [
+                  "$quantity",
+                  0
+                ]
+              },
+              {
+                "$ifNull": [
+                  "$product.price",
+                  0
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$vendorId",
+          "totalSales": {
+            "$sum": "$lineTotal"
+          },
+          "orders": {
+            "$addToSet": "$orderId"
+          }
+        }
+      },
+      {
+        "$lookup": {
+          "from": "vendors",
+          "localField": "_id",
+          "foreignField": "_id",
+          "as": "vendorInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$vendorInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$project": {
+          "vendorId": "$_id",
+          "companyName": {
+            "$ifNull": [
+              "$vendorInfo.companyName",
+              "(unknown)"
+            ]
+          },
+          "contactEmail": {
+            "$ifNull": [
+              "$vendorInfo.contactEmail",
+              null
+            ]
+          },
+          "supportPhone": {
+            "$ifNull": [
+              "$vendorInfo.supportPhone",
+              null
+            ]
+          },
+          "totalSales": 1,
+          "uniqueOrders": {
+            "$size": {
+              "$ifNull": [
+                "$orders",
+                []
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$sort": {
+          "totalSales": -1
+        }
+      },
+      {
+        "$match": {
+          "totalSales": {
+            "$gt": 1000
+          }
+        }
+      }
+    ],
+    "name": "Orders Inefficient with Indexes",
+    "elapsedMs": 3183.248519897461,
+    "resultCount": 74,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.orderItems",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "13C34C22",
+              "planCacheShapeHash": "13C34C22",
+              "planCacheKey": "2FBB0F2A",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "orderId": 1,
+                  "productId": 1,
+                  "quantity": 1,
+                  "vendorId": 1,
+                  "_id": 0
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 54944,
+              "executionTimeMillis": 3128,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 54944,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 54944,
+                "executionTimeMillisEstimate": 48,
+                "works": 54945,
+                "advanced": 54944,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 22,
+                "restoreState": 22,
+                "isEOF": 1,
+                "transformBy": {
+                  "orderId": 1,
+                  "productId": 1,
+                  "quantity": 1,
+                  "vendorId": 1,
+                  "_id": 0
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 54944,
+                  "executionTimeMillisEstimate": 19,
+                  "works": 54945,
+                  "advanced": 54944,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 22,
+                  "restoreState": 22,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 54944
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 53
+        },
+        {
+          "$lookup": {
+            "from": "products",
+            "as": "product",
+            "localField": "productId",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 54945,
+          "totalKeysExamined": 54945,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 3096
+        },
+        {
+          "$addFields": {
+            "lineTotal": {
+              "$multiply": [
+                {
+                  "$ifNull": [
+                    "$quantity",
+                    {
+                      "$const": 0
+                    }
+                  ]
+                },
+                {
+                  "$ifNull": [
+                    "$product.price",
+                    {
+                      "$const": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 3115
+        },
+        {
+          "$group": {
+            "_id": "$vendorId",
+            "totalSales": {
+              "$sum": "$lineTotal"
+            },
+            "orders": {
+              "$addToSet": "$orderId"
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "totalSales": 9472,
+            "orders": 849408
+          },
+          "totalOutputDataSizeBytes": 865762,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3123
+        },
+        {
+          "$match": {
+            "totalSales": {
+              "$gt": 1000
+            }
+          },
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3123
+        },
+        {
+          "$lookup": {
+            "from": "vendors",
+            "as": "vendorInfo",
+            "localField": "_id",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 74,
+          "totalKeysExamined": 74,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3128
+        },
+        {
+          "$project": {
+            "_id": true,
+            "totalSales": true,
+            "vendorId": "$_id",
+            "companyName": {
+              "$ifNull": [
+                "$vendorInfo.companyName",
+                {
+                  "$const": "(unknown)"
+                }
+              ]
+            },
+            "contactEmail": {
+              "$ifNull": [
+                "$vendorInfo.contactEmail",
+                {
+                  "$const": null
+                }
+              ]
+            },
+            "supportPhone": {
+              "$ifNull": [
+                "$vendorInfo.supportPhone",
+                {
+                  "$const": null
+                }
+              ]
+            },
+            "uniqueOrders": {
+              "$size": [
+                {
+                  "$ifNull": [
+                    "$orders",
+                    {
+                      "$const": []
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3128
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "totalSales": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 56607,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3128
+        }
+      ],
+      "queryShapeHash": "D6D400383702A3A2E61A58167C2CAA98B0B71967F303693B9911F3D947D4AE23",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "orderItems",
+        "pipeline": [
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "productId",
+              "foreignField": "_id",
+              "as": "product"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$product",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  {
+                    "$ifNull": [
+                      "$quantity",
+                      0
+                    ]
+                  },
+                  {
+                    "$ifNull": [
+                      "$product.price",
+                      0
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$vendorId",
+              "totalSales": {
+                "$sum": "$lineTotal"
+              },
+              "orders": {
+                "$addToSet": "$orderId"
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "vendors",
+              "localField": "_id",
+              "foreignField": "_id",
+              "as": "vendorInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$vendorInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$project": {
+              "vendorId": "$_id",
+              "companyName": {
+                "$ifNull": [
+                  "$vendorInfo.companyName",
+                  "(unknown)"
+                ]
+              },
+              "contactEmail": {
+                "$ifNull": [
+                  "$vendorInfo.contactEmail",
+                  null
+                ]
+              },
+              "supportPhone": {
+                "$ifNull": [
+                  "$vendorInfo.supportPhone",
+                  null
+                ]
+              },
+              "totalSales": 1,
+              "uniqueOrders": {
+                "$size": {
+                  "$ifNull": [
+                    "$orders",
+                    []
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "totalSales": -1
+            }
+          },
+          {
+            "$match": {
+              "totalSales": {
+                "$gt": 1000
+              }
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831880,
+            "i": 48
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "cQDAEZjE8aB7OPap/FB95mh519M=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831880,
+          "i": 48
+        }
+      }
+    }
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$lookup": {
+          "from": "reviews",
+          "localField": "_id",
+          "foreignField": "productId",
+          "as": "reviewsDocs"
+        }
+      },
+      {
+        "$addFields": {
+          "avgRating": {
+            "$cond": [
+              {
+                "$gt": [
+                  {
+                    "$size": "$reviewsDocs"
+                  },
+                  0
+                ]
+              },
+              {
+                "$avg": "$reviewsDocs.rating"
+              },
+              null
+            ]
+          },
+          "reviewsCount": {
+            "$size": "$reviewsDocs"
+          }
+        }
+      },
+      {
+        "$match": {
+          "avgRating": {
+            "$gt": 4
+          }
+        }
+      },
+      {
+        "$project": {
+          "name": 1,
+          "sku": 1,
+          "avgRating": 1,
+          "reviewsCount": 1
+        }
+      },
+      {
+        "$sort": {
+          "avgRating": -1
+        }
+      }
+    ],
+    "name": "Products Efficient",
+    "elapsedMs": 45900.877237319946,
+    "resultCount": 261,
+    "explain": {
+      "explainVersion": "2",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.products",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "9BB57D84",
+              "planCacheShapeHash": "9BB57D84",
+              "planCacheKey": "7443A88C",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "queryPlan": {
+                  "stage": "EQ_LOOKUP",
+                  "planNodeId": 3,
+                  "foreignCollection": "68f9dead5c841679fc1fd068_E-Commerce_Ref.reviews",
+                  "localField": "_id",
+                  "foreignField": "productId",
+                  "asField": "reviewsDocs",
+                  "strategy": "NestedLoopJoin",
+                  "scanDirection": "forward",
+                  "inputStage": {
+                    "stage": "PROJECTION_SIMPLE",
+                    "planNodeId": 2,
+                    "transformBy": {
+                      "_id": true,
+                      "name": true,
+                      "sku": true
+                    },
+                    "inputStage": {
+                      "stage": "COLLSCAN",
+                      "planNodeId": 1,
+                      "filter": {},
+                      "direction": "forward"
+                    }
+                  }
+                },
+                "slotBasedPlan": {
+                  "slots": "$$RESULT=s17 env: {  }",
+                  "stages": "[3] mkobj s17 s3 [] drop [reviewsDocs = s16] true false \n[3] nlj inner [s3] [s11] \n    left \n        [3] nlj inner [s3] [s3] \n            left \n                [2] project [s3 = makeBsonObj(MakeObjSpec([_id, name, sku], Closed, RetNothing), s1, false)] \n                [1] scan s1 s2 none none none none none none lowPriority [] @\"f85ac16c-1333-48ac-a909-59a34ecf6896\" true false \n            right \n                [3] project [s11 = \n                    if isArrayEmpty(s9) \n                    then [null] \n                    else s9 \n               ] \n                [3] group [] [s9 = addToSet(s7)] spillSlots[s10] mergingExprs[aggSetUnion(s10)] \n                [3] unwind s7 s8 s6 true \n                [3] project [s6 = getField(s3, \"_id\")] \n                [3] limit 1ll \n                [3] coscan \n    right \n        [3] limit 1ll \n        [3] union [s16] \n            branch0 [s14] \n                [3] project [s14 = getElement(s12, 0)] \n                [3] group [] [s12 = addToArrayCapped(s4, 16793600)] spillSlots[s13] mergingExprs[aggConcatArraysCapped(s13, 16793600)] \n                [3] filter {traverseF((getField(s4, \"productId\") ?: null), lambda(l1.0) { isMember(l1.0, s11) }, true)} \n                [3] scan s4 s5 none none none none none none [] @\"5e469823-500e-4327-9f33-ffe2133209d7\" true false \n            branch1 [s15] \n                [3] project [s15 = []] \n                [3] limit 1ll \n                [3] coscan \n"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 5000,
+              "executionTimeMillis": 47411,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 125240000,
+              "executionStages": {
+                "stage": "mkobj",
+                "planNodeId": 3,
+                "nReturned": 5000,
+                "executionTimeMillisEstimate": 47349,
+                "opens": 1,
+                "closes": 1,
+                "saveState": 3568,
+                "restoreState": 3568,
+                "isEOF": 1,
+                "objSlot": 17,
+                "rootSlot": 3,
+                "fieldBehavior": "drop",
+                "fields": [],
+                "projectFields": [
+                  "reviewsDocs"
+                ],
+                "projectSlots": [
+                  16
+                ],
+                "forceNewObject": true,
+                "returnOldObject": false,
+                "inputStage": {
+                  "stage": "nlj",
+                  "planNodeId": 3,
+                  "nReturned": 5000,
+                  "executionTimeMillisEstimate": 47321,
+                  "opens": 1,
+                  "closes": 1,
+                  "saveState": 3568,
+                  "restoreState": 3568,
+                  "isEOF": 1,
+                  "totalDocsExamined": 125240000,
+                  "totalKeysExamined": 0,
+                  "collectionScans": 5001,
+                  "collectionSeeks": 0,
+                  "indexScans": 0,
+                  "indexSeeks": 0,
+                  "indexesUsed": [],
+                  "innerOpens": 5000,
+                  "innerCloses": 1,
+                  "outerProjects": [
+                    3
+                  ],
+                  "outerCorrelated": [
+                    11
+                  ],
+                  "outerStage": {
+                    "stage": "nlj",
+                    "planNodeId": 3,
+                    "nReturned": 5000,
+                    "executionTimeMillisEstimate": 43,
+                    "opens": 1,
+                    "closes": 1,
+                    "saveState": 3568,
+                    "restoreState": 3568,
+                    "isEOF": 1,
+                    "totalDocsExamined": 5000,
+                    "totalKeysExamined": 0,
+                    "collectionScans": 1,
+                    "collectionSeeks": 0,
+                    "indexScans": 0,
+                    "indexSeeks": 0,
+                    "indexesUsed": [],
+                    "innerOpens": 5000,
+                    "innerCloses": 1,
+                    "outerProjects": [
+                      3
+                    ],
+                    "outerCorrelated": [
+                      3
+                    ],
+                    "outerStage": {
+                      "stage": "project",
+                      "planNodeId": 2,
+                      "nReturned": 5000,
+                      "executionTimeMillisEstimate": 13,
+                      "opens": 1,
+                      "closes": 1,
+                      "saveState": 3568,
+                      "restoreState": 3568,
+                      "isEOF": 1,
+                      "projections": {
+                        "3": "makeBsonObj(MakeObjSpec([_id, name, sku], Closed, RetNothing), s1, false) "
+                      },
+                      "inputStage": {
+                        "stage": "scan",
+                        "planNodeId": 1,
+                        "nReturned": 5000,
+                        "executionTimeMillisEstimate": 2,
+                        "opens": 1,
+                        "closes": 1,
+                        "saveState": 3568,
+                        "restoreState": 3568,
+                        "isEOF": 1,
+                        "numReads": 5000,
+                        "recordSlot": 1,
+                        "recordIdSlot": 2,
+                        "scanFieldNames": [],
+                        "scanFieldSlots": []
+                      }
+                    },
+                    "innerStage": {
+                      "stage": "project",
+                      "planNodeId": 3,
+                      "nReturned": 5000,
+                      "executionTimeMillisEstimate": 29,
+                      "opens": 5000,
+                      "closes": 1,
+                      "saveState": 3568,
+                      "restoreState": 3568,
+                      "isEOF": 1,
+                      "projections": {
+                        "11": "\n    if isArrayEmpty(s9) \n    then [null] \n    else s9 \n"
+                      },
+                      "inputStage": {
+                        "stage": "group",
+                        "planNodeId": 3,
+                        "nReturned": 5000,
+                        "executionTimeMillisEstimate": 22,
+                        "opens": 5000,
+                        "closes": 1,
+                        "saveState": 3568,
+                        "restoreState": 3568,
+                        "isEOF": 1,
+                        "groupBySlots": [],
+                        "expressions": {
+                          "9": "addToSet(s7) ",
+                          "initExprs": {
+                            "9": null
+                          }
+                        },
+                        "mergingExprs": {
+                          "10": "aggSetUnion(s10) "
+                        },
+                        "usedDisk": false,
+                        "spills": 0,
+                        "spilledBytes": 0,
+                        "spilledRecords": 0,
+                        "spilledDataStorageSize": 0,
+                        "inputStage": {
+                          "stage": "unwind",
+                          "planNodeId": 3,
+                          "nReturned": 5000,
+                          "executionTimeMillisEstimate": 3,
+                          "opens": 5000,
+                          "closes": 5000,
+                          "saveState": 3568,
+                          "restoreState": 3568,
+                          "isEOF": 1,
+                          "inputSlot": 6,
+                          "outSlot": 7,
+                          "outIndexSlot": 8,
+                          "preserveNullAndEmptyArrays": 1,
+                          "inputStage": {
+                            "stage": "project",
+                            "planNodeId": 3,
+                            "nReturned": 5000,
+                            "executionTimeMillisEstimate": 3,
+                            "opens": 5000,
+                            "closes": 5000,
+                            "saveState": 3568,
+                            "restoreState": 3568,
+                            "isEOF": 1,
+                            "projections": {
+                              "6": "getField(s3, \"_id\") "
+                            },
+                            "inputStage": {
+                              "stage": "limit",
+                              "planNodeId": 3,
+                              "nReturned": 5000,
+                              "executionTimeMillisEstimate": 1,
+                              "opens": 5000,
+                              "closes": 5000,
+                              "saveState": 3568,
+                              "restoreState": 3568,
+                              "isEOF": 1,
+                              "limit": 1,
+                              "inputStage": {
+                                "stage": "coscan",
+                                "planNodeId": 3,
+                                "nReturned": 5000,
+                                "executionTimeMillisEstimate": 0,
+                                "opens": 5000,
+                                "closes": 5000,
+                                "saveState": 3568,
+                                "restoreState": 3568,
+                                "isEOF": 0
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "innerStage": {
+                    "stage": "limit",
+                    "planNodeId": 3,
+                    "nReturned": 5000,
+                    "executionTimeMillisEstimate": 47275,
+                    "opens": 5000,
+                    "closes": 1,
+                    "saveState": 3568,
+                    "restoreState": 3568,
+                    "isEOF": 1,
+                    "limit": 1,
+                    "inputStage": {
+                      "stage": "union",
+                      "planNodeId": 3,
+                      "nReturned": 5000,
+                      "executionTimeMillisEstimate": 47270,
+                      "opens": 5000,
+                      "closes": 1,
+                      "saveState": 3568,
+                      "restoreState": 3568,
+                      "isEOF": 0,
+                      "inputSlots": [
+                        14,
+                        15
+                      ],
+                      "outputSlots": [
+                        16
+                      ],
+                      "inputStages": [
+                        {
+                          "stage": "project",
+                          "planNodeId": 3,
+                          "nReturned": 4528,
+                          "executionTimeMillisEstimate": 47268,
+                          "opens": 5000,
+                          "closes": 5000,
+                          "saveState": 3568,
+                          "restoreState": 3568,
+                          "isEOF": 1,
+                          "projections": {
+                            "14": "getElement(s12, 0) "
+                          },
+                          "inputStage": {
+                            "stage": "group",
+                            "planNodeId": 3,
+                            "nReturned": 4528,
+                            "executionTimeMillisEstimate": 47260,
+                            "opens": 5000,
+                            "closes": 5000,
+                            "saveState": 3568,
+                            "restoreState": 3568,
+                            "isEOF": 1,
+                            "groupBySlots": [],
+                            "expressions": {
+                              "12": "addToArrayCapped(s4, 16793600) ",
+                              "initExprs": {
+                                "12": null
+                              }
+                            },
+                            "mergingExprs": {
+                              "13": "aggConcatArraysCapped(s13, 16793600) "
+                            },
+                            "usedDisk": false,
+                            "spills": 0,
+                            "spilledBytes": 0,
+                            "spilledRecords": 0,
+                            "spilledDataStorageSize": 0,
+                            "inputStage": {
+                              "stage": "filter",
+                              "planNodeId": 3,
+                              "nReturned": 25047,
+                              "executionTimeMillisEstimate": 47226,
+                              "opens": 5000,
+                              "closes": 5000,
+                              "saveState": 3568,
+                              "restoreState": 3568,
+                              "isEOF": 1,
+                              "numTested": 125235000,
+                              "filter": "traverseF((getField(s4, \"productId\") ?: null), lambda(l1.0) { isMember(l1.0, s11) }, true) ",
+                              "inputStage": {
+                                "stage": "scan",
+                                "planNodeId": 3,
+                                "nReturned": 125235000,
+                                "executionTimeMillisEstimate": 28843,
+                                "opens": 5000,
+                                "closes": 5000,
+                                "saveState": 3568,
+                                "restoreState": 3568,
+                                "isEOF": 1,
+                                "numReads": 125235000,
+                                "recordSlot": 4,
+                                "recordIdSlot": 5,
+                                "scanFieldNames": [],
+                                "scanFieldSlots": []
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "stage": "project",
+                          "planNodeId": 3,
+                          "nReturned": 472,
+                          "executionTimeMillisEstimate": 0,
+                          "opens": 472,
+                          "closes": 472,
+                          "saveState": 3568,
+                          "restoreState": 3568,
+                          "isEOF": 0,
+                          "projections": {
+                            "15": "[] "
+                          },
+                          "inputStage": {
+                            "stage": "limit",
+                            "planNodeId": 3,
+                            "nReturned": 472,
+                            "executionTimeMillisEstimate": 0,
+                            "opens": 472,
+                            "closes": 472,
+                            "saveState": 3568,
+                            "restoreState": 3568,
+                            "isEOF": 0,
+                            "limit": 1,
+                            "inputStage": {
+                              "stage": "coscan",
+                              "planNodeId": 3,
+                              "nReturned": 472,
+                              "executionTimeMillisEstimate": 0,
+                              "opens": 472,
+                              "closes": 472,
+                              "saveState": 3568,
+                              "restoreState": 3568,
+                              "isEOF": 0
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 5000,
+          "executionTimeMillisEstimate": 47392
+        },
+        {
+          "$addFields": {
+            "avgRating": {
+              "$cond": [
+                {
+                  "$gt": [
+                    {
+                      "$size": [
+                        "$reviewsDocs"
+                      ]
+                    },
+                    {
+                      "$const": 0
+                    }
+                  ]
+                },
+                {
+                  "$avg": [
+                    "$reviewsDocs.rating"
+                  ]
+                },
+                {
+                  "$const": null
+                }
+              ]
+            },
+            "reviewsCount": {
+              "$size": [
+                "$reviewsDocs"
+              ]
+            }
+          },
+          "nReturned": 5000,
+          "executionTimeMillisEstimate": 47406
+        },
+        {
+          "$match": {
+            "avgRating": {
+              "$gt": 4
+            }
+          },
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 47408
+        },
+        {
+          "$project": {
+            "_id": true,
+            "name": true,
+            "sku": true,
+            "avgRating": true,
+            "reviewsCount": true
+          },
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 47408
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "avgRating": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 110913,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 261,
+          "executionTimeMillisEstimate": 47408
+        }
+      ],
+      "queryShapeHash": "F1D1E77E4A46DEBB2C6C3F9D84E6CD268599A5A1FE10F97E7B3C53D0BBA2EC8D",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "products",
+        "pipeline": [
+          {
+            "$lookup": {
+              "from": "reviews",
+              "localField": "_id",
+              "foreignField": "productId",
+              "as": "reviewsDocs"
+            }
+          },
+          {
+            "$addFields": {
+              "avgRating": {
+                "$cond": [
+                  {
+                    "$gt": [
+                      {
+                        "$size": "$reviewsDocs"
+                      },
+                      0
+                    ]
+                  },
+                  {
+                    "$avg": "$reviewsDocs.rating"
+                  },
+                  null
+                ]
+              },
+              "reviewsCount": {
+                "$size": "$reviewsDocs"
+              }
+            }
+          },
+          {
+            "$match": {
+              "avgRating": {
+                "$gt": 4
+              }
+            }
+          },
+          {
+            "$project": {
+              "name": 1,
+              "sku": 1,
+              "avgRating": 1,
+              "reviewsCount": 1
+            }
+          },
+          {
+            "$sort": {
+              "avgRating": -1
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831974,
+            "i": 3
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "Xo9SYseTuFcRNMnKF8o7FQCrflE=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831974,
+          "i": 3
+        }
+      }
+    }
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$match": {
+          "shoppingCart.0": {
+            "$exists": true
+          }
+        }
+      },
+      {
+        "$unwind": "$shoppingCart"
+      },
+      {
+        "$lookup": {
+          "from": "shoppingCartItems",
+          "localField": "shoppingCart",
+          "foreignField": "_id",
+          "as": "cartItem"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$cartItem",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "cartItem.productId",
+          "foreignField": "_id",
+          "as": "productInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$productInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$_id",
+          "username": {
+            "$first": "$username"
+          },
+          "cartTotal": {
+            "$sum": {
+              "$multiply": [
+                "$cartItem.quantity",
+                {
+                  "$ifNull": [
+                    "$productInfo.price",
+                    "$cartItem.price"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$match": {
+          "cartTotal": {
+            "$gt": 100
+          }
+        }
+      },
+      {
+        "$sort": {
+          "cartTotal": -1
+        }
+      }
+    ],
+    "name": "Users Efficient",
+    "elapsedMs": 748.8970756530762,
+    "resultCount": 958,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.users",
+              "parsedQuery": {
+                "shoppingCart.0": {
+                  "$exists": true
+                }
+              },
+              "indexFilterSet": false,
+              "queryHash": "7B6C7837",
+              "planCacheShapeHash": "7B6C7837",
+              "planCacheKey": "9A66A7BB",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "_id": 1,
+                  "shoppingCart": 1,
+                  "username": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "shoppingCart.0": {
+                      "$exists": true
+                    }
+                  },
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 1000,
+              "executionTimeMillis": 581,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 1000,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 1000,
+                "executionTimeMillisEstimate": 0,
+                "works": 1001,
+                "advanced": 1000,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 11,
+                "restoreState": 11,
+                "isEOF": 1,
+                "transformBy": {
+                  "_id": 1,
+                  "shoppingCart": 1,
+                  "username": 1
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "shoppingCart.0": {
+                      "$exists": true
+                    }
+                  },
+                  "nReturned": 1000,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 1001,
+                  "advanced": 1000,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 11,
+                  "restoreState": 11,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 1000
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 1000,
+          "executionTimeMillisEstimate": 0
+        },
+        {
+          "$unwind": {
+            "path": "$shoppingCart"
+          },
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 0
+        },
+        {
+          "$lookup": {
+            "from": "shoppingCartItems",
+            "as": "cartItem",
+            "localField": "shoppingCart",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 5686,
+          "totalKeysExamined": 5686,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 305
+        },
+        {
+          "$lookup": {
+            "from": "products",
+            "as": "productInfo",
+            "localField": "cartItem.productId",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 5686,
+          "totalKeysExamined": 5686,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 5685,
+          "executionTimeMillisEstimate": 578
+        },
+        {
+          "$group": {
+            "_id": "$_id",
+            "username": {
+              "$first": "$username"
+            },
+            "cartTotal": {
+              "$sum": {
+                "$multiply": [
+                  "$cartItem.quantity",
+                  {
+                    "$ifNull": [
+                      "$productInfo.price",
+                      "$cartItem.price"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "username": 92284,
+            "cartTotal": 128000
+          },
+          "totalOutputDataSizeBytes": 297284,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 1000,
+          "executionTimeMillisEstimate": 580
+        },
+        {
+          "$match": {
+            "cartTotal": {
+              "$gt": 100
+            }
+          },
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 580
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "cartTotal": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 292622,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 958,
+          "executionTimeMillisEstimate": 581
+        }
+      ],
+      "queryShapeHash": "D9B7EEF4F145525C3F4932D1F0632810157A490A0B0E6F50A27BCED6C9B004F3",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "users",
+        "pipeline": [
+          {
+            "$match": {
+              "shoppingCart.0": {
+                "$exists": true
+              }
+            }
+          },
+          {
+            "$unwind": "$shoppingCart"
+          },
+          {
+            "$lookup": {
+              "from": "shoppingCartItems",
+              "localField": "shoppingCart",
+              "foreignField": "_id",
+              "as": "cartItem"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$cartItem",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "cartItem.productId",
+              "foreignField": "_id",
+              "as": "productInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$productInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$group": {
+              "_id": "$_id",
+              "username": {
+                "$first": "$username"
+              },
+              "cartTotal": {
+                "$sum": {
+                  "$multiply": [
+                    "$cartItem.quantity",
+                    {
+                      "$ifNull": [
+                        "$productInfo.price",
+                        "$cartItem.price"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$match": {
+              "cartTotal": {
+                "$gt": 100
+              }
+            }
+          },
+          {
+            "$sort": {
+              "cartTotal": -1
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831975,
+            "i": 17
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "PqgJj0QnQABethbqDh7dsh9IUhs=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831975,
+          "i": 17
+        }
+      }
+    }
+  },
+  {
+    "stage": "optimized_with_indexes",
+    "pipeline": [
+      {
+        "$lookup": {
+          "from": "products",
+          "localField": "productId",
+          "foreignField": "_id",
+          "as": "product"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$product",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$addFields": {
+          "lineTotal": {
+            "$multiply": [
+              {
+                "$ifNull": [
+                  "$quantity",
+                  0
+                ]
+              },
+              {
+                "$ifNull": [
+                  "$product.price",
+                  0
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$vendorId",
+          "totalSales": {
+            "$sum": "$lineTotal"
+          },
+          "orders": {
+            "$addToSet": "$orderId"
+          }
+        }
+      },
+      {
+        "$match": {
+          "totalSales": {
+            "$gt": 1000
+          }
+        }
+      },
+      {
+        "$lookup": {
+          "from": "vendors",
+          "localField": "_id",
+          "foreignField": "_id",
+          "as": "vendorInfo"
+        }
+      },
+      {
+        "$unwind": {
+          "path": "$vendorInfo",
+          "preserveNullAndEmptyArrays": true
+        }
+      },
+      {
+        "$project": {
+          "vendorId": "$_id",
+          "companyName": {
+            "$ifNull": [
+              "$vendorInfo.companyName",
+              "(unknown)"
+            ]
+          },
+          "contactEmail": {
+            "$ifNull": [
+              "$vendorInfo.contactEmail",
+              null
+            ]
+          },
+          "supportPhone": {
+            "$ifNull": [
+              "$vendorInfo.supportPhone",
+              null
+            ]
+          },
+          "totalSales": 1,
+          "uniqueOrders": {
+            "$size": {
+              "$ifNull": [
+                "$orders",
+                []
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$sort": {
+          "totalSales": -1
+        }
+      }
+    ],
+    "name": "Orders Efficient",
+    "elapsedMs": 3113.319158554077,
+    "resultCount": 74,
+    "explain": {
+      "explainVersion": "1",
+      "stages": [
+        {
+          "$cursor": {
+            "queryPlanner": {
+              "namespace": "E-Commerce_Ref.orderItems",
+              "parsedQuery": {},
+              "indexFilterSet": false,
+              "queryHash": "13C34C22",
+              "planCacheShapeHash": "13C34C22",
+              "planCacheKey": "2FBB0F2A",
+              "optimizationTimeMillis": 0,
+              "maxIndexedOrSolutionsReached": false,
+              "maxIndexedAndSolutionsReached": false,
+              "maxScansToExplodeReached": false,
+              "prunedSimilarIndexes": false,
+              "winningPlan": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "transformBy": {
+                  "orderId": 1,
+                  "productId": 1,
+                  "quantity": 1,
+                  "vendorId": 1,
+                  "_id": 0
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "direction": "forward"
+                }
+              },
+              "rejectedPlans": []
+            },
+            "executionStats": {
+              "executionSuccess": true,
+              "nReturned": 54944,
+              "executionTimeMillis": 3046,
+              "totalKeysExamined": 0,
+              "totalDocsExamined": 54944,
+              "executionStages": {
+                "isCached": false,
+                "stage": "PROJECTION_SIMPLE",
+                "nReturned": 54944,
+                "executionTimeMillisEstimate": 51,
+                "works": 54945,
+                "advanced": 54944,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 22,
+                "restoreState": 22,
+                "isEOF": 1,
+                "transformBy": {
+                  "orderId": 1,
+                  "productId": 1,
+                  "quantity": 1,
+                  "vendorId": 1,
+                  "_id": 0
+                },
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "nReturned": 54944,
+                  "executionTimeMillisEstimate": 23,
+                  "works": 54945,
+                  "advanced": 54944,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 22,
+                  "restoreState": 22,
+                  "isEOF": 1,
+                  "direction": "forward",
+                  "docsExamined": 54944
+                }
+              },
+              "allPlansExecution": []
+            }
+          },
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 55
+        },
+        {
+          "$lookup": {
+            "from": "products",
+            "as": "product",
+            "localField": "productId",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 54945,
+          "totalKeysExamined": 54945,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 3033
+        },
+        {
+          "$addFields": {
+            "lineTotal": {
+              "$multiply": [
+                {
+                  "$ifNull": [
+                    "$quantity",
+                    {
+                      "$const": 0
+                    }
+                  ]
+                },
+                {
+                  "$ifNull": [
+                    "$product.price",
+                    {
+                      "$const": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 54944,
+          "executionTimeMillisEstimate": 3037
+        },
+        {
+          "$group": {
+            "_id": "$vendorId",
+            "totalSales": {
+              "$sum": "$lineTotal"
+            },
+            "orders": {
+              "$addToSet": "$orderId"
+            }
+          },
+          "maxAccumulatorMemoryUsageBytes": {
+            "totalSales": 9472,
+            "orders": 849408
+          },
+          "totalOutputDataSizeBytes": 865762,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "numBytesSpilledEstimate": 0,
+          "spilledRecords": 0,
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3041
+        },
+        {
+          "$match": {
+            "totalSales": {
+              "$gt": 1000
+            }
+          },
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3041
+        },
+        {
+          "$lookup": {
+            "from": "vendors",
+            "as": "vendorInfo",
+            "localField": "_id",
+            "foreignField": "_id",
+            "unwinding": {
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          "totalDocsExamined": 74,
+          "totalKeysExamined": 74,
+          "collectionScans": 0,
+          "indexesUsed": [
+            "_id_"
+          ],
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3046
+        },
+        {
+          "$project": {
+            "_id": true,
+            "totalSales": true,
+            "vendorId": "$_id",
+            "companyName": {
+              "$ifNull": [
+                "$vendorInfo.companyName",
+                {
+                  "$const": "(unknown)"
+                }
+              ]
+            },
+            "contactEmail": {
+              "$ifNull": [
+                "$vendorInfo.contactEmail",
+                {
+                  "$const": null
+                }
+              ]
+            },
+            "supportPhone": {
+              "$ifNull": [
+                "$vendorInfo.supportPhone",
+                {
+                  "$const": null
+                }
+              ]
+            },
+            "uniqueOrders": {
+              "$size": [
+                {
+                  "$ifNull": [
+                    "$orders",
+                    {
+                      "$const": []
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3046
+        },
+        {
+          "$sort": {
+            "sortKey": {
+              "totalSales": -1
+            }
+          },
+          "totalDataSizeSortedBytesEstimate": 56607,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "nReturned": 74,
+          "executionTimeMillisEstimate": 3046
+        }
+      ],
+      "queryShapeHash": "C991C85B69881BF852A740DE7D5BB8BDEFE3123FCAE79F63E6957CB4B05B7BD2",
+      "serverInfo": {
+        "host": "ac-fwt2nw2-shard-00-02.2d2kobp.mongodb.net",
+        "port": 27017,
+        "version": "8.0.17",
+        "gitVersion": "b20e43625b72f4bb43cc15107f80ac966ae13b6d"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "trySbeRestricted",
+        "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+      },
+      "command": {
+        "aggregate": "orderItems",
+        "pipeline": [
+          {
+            "$lookup": {
+              "from": "products",
+              "localField": "productId",
+              "foreignField": "_id",
+              "as": "product"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$product",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$addFields": {
+              "lineTotal": {
+                "$multiply": [
+                  {
+                    "$ifNull": [
+                      "$quantity",
+                      0
+                    ]
+                  },
+                  {
+                    "$ifNull": [
+                      "$product.price",
+                      0
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$group": {
+              "_id": "$vendorId",
+              "totalSales": {
+                "$sum": "$lineTotal"
+              },
+              "orders": {
+                "$addToSet": "$orderId"
+              }
+            }
+          },
+          {
+            "$match": {
+              "totalSales": {
+                "$gt": 1000
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "vendors",
+              "localField": "_id",
+              "foreignField": "_id",
+              "as": "vendorInfo"
+            }
+          },
+          {
+            "$unwind": {
+              "path": "$vendorInfo",
+              "preserveNullAndEmptyArrays": true
+            }
+          },
+          {
+            "$project": {
+              "vendorId": "$_id",
+              "companyName": {
+                "$ifNull": [
+                  "$vendorInfo.companyName",
+                  "(unknown)"
+                ]
+              },
+              "contactEmail": {
+                "$ifNull": [
+                  "$vendorInfo.contactEmail",
+                  null
+                ]
+              },
+              "supportPhone": {
+                "$ifNull": [
+                  "$vendorInfo.supportPhone",
+                  null
+                ]
+              },
+              "totalSales": 1,
+              "uniqueOrders": {
+                "$size": {
+                  "$ifNull": [
+                    "$orders",
+                    []
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "totalSales": -1
+            }
+          }
+        ],
+        "cursor": {},
+        "$db": "E-Commerce_Ref"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1768831981,
+            "i": 23
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "jLXwWxjZB/AJo6i8EiPIgRPDU6o=",
+              "subType": "00"
+            }
+          },
+          "keyId": 7553352219454603266
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1768831981,
+          "i": 23
+        }
+      }
+    }
+  }
+]
