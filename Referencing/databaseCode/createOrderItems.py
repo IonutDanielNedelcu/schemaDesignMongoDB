@@ -5,7 +5,6 @@ import argparse
 from datetime import datetime
 from bson.objectid import ObjectId
 from pymongo.errors import BulkWriteError
-
 from connection import connectToMongoDB, closeConnection
 
 
@@ -57,14 +56,14 @@ def resolveProductId(item, db):
     if pid and isValidObjectId(pid):
         return ObjectId(pid)
 
-    # maybe sku
+    # Maybe sku
     sku = item.get("sku") or item.get("productSku") or None
     if sku:
         prod = db.products.find_one({"sku": sku}, {"_id": 1, "vendorId": 1})
         if prod:
             return prod.get("_id")
 
-    # nested product
+    # Nested product
     prodObj = item.get("product")
     if isinstance(prodObj, dict):
         if prodObj.get("_id") and isValidObjectId(prodObj.get("_id")):
@@ -95,7 +94,7 @@ def resolveOrderId(order, db):
         objId = ObjectId(oid)
         if db.orders.find_one({"_id": objId}, {"_id": 1}):
             return objId
-    # fallback: try to find order by orderDate + total + status (parse date to match DB)
+    # Fallback: try to find order by orderDate + total + status (parse date to match DB)
     query = {}
     orderDateRaw = order.get("orderDate")
     if orderDateRaw:
@@ -115,7 +114,7 @@ def resolveOrderId(order, db):
         if found:
             return found.get("_id")
 
-    # if not found, return None (don't fabricate order id)
+    # If not found, return None (don't fabricate order id)
     return None
 
 
@@ -125,7 +124,7 @@ def buildOrderItemDocsFromOrder(order, db, allowMissingOrder=False):
     docs = []
 
     if orderId is None and not allowMissingOrder:
-        # skip entire order if we cannot find matching order
+        # Skip entire order if we cannot find matching order
         print(f"Skipping order (no matching order found): {order.get('_id')}")
         return docs
 
@@ -145,7 +144,7 @@ def buildOrderItemDocsFromOrder(order, db, allowMissingOrder=False):
             continue
         doc["productId"] = productId
 
-        # quantity
+        # Quantity
         try:
             qty = int(it.get("quantity", 1))
             if qty < 0:
@@ -154,14 +153,14 @@ def buildOrderItemDocsFromOrder(order, db, allowMissingOrder=False):
             qty = 1
         doc["quantity"] = qty
 
-        # vendorId: prefer explicit, else from product
+        # VendorId: prefer explicit, else from product
         vId = it.get("vendorId") or it.get("vendor_id") or None
         vendorId = None
         if vId:
             if isValidObjectId(vId):
                 vendorId = ObjectId(vId)
             else:
-                # if vendor id stored as ObjectId in DB already, resolve safely
+                # If vendor id stored as ObjectId in DB already, resolve safely
                 try:
                     vendorId = ObjectId(str(vId))
                 except Exception:
@@ -233,6 +232,7 @@ def main():
     current_order = -1
     for fileIndex, orderIndex, order, fp in loadOrdersJsonFiles_indexed(jsonDir):
         # skip until resume point
+        # Skip until resume point
         if fileIndex < start_file_index:
             continue
         if fileIndex == start_file_index and orderIndex < start_order_index:
@@ -245,7 +245,7 @@ def main():
         docs = buildOrderItemDocsFromOrder(order, db, allowMissingOrder=allowMissing)
         if not docs:
             skippedOrders += 1
-            # update progress for skipped order (we processed it)
+            # Update progress for skipped order (we processed it)
             write_progress(fileIndex, orderIndex + 1)
             continue
 
@@ -256,7 +256,7 @@ def main():
                     res = db.orderItems.insert_many(buffer, ordered=False)
                     inserted += len(res.inserted_ids)
                     print(f"Inserted batch (running): {len(res.inserted_ids)} items (total inserted: {inserted})")
-                    # persist progress after successful batch
+                    # Persist progress after successful batch
                     write_progress(fileIndex, orderIndex + 1)
                 except BulkWriteError as bwe:
                     print(f"BulkWriteError during streaming insert: {getattr(bwe, 'details', bwe)}")
@@ -267,14 +267,14 @@ def main():
             if maxItems and inserted >= maxItems:
                 break
 
-        # after processing an order, persist progress if buffer is empty (i.e., we've flushed recent changes)
+        # After processing an order, persist progress if buffer is empty (i.e., we've flushed recent changes)
         if not buffer:
             write_progress(fileIndex, orderIndex + 1)
 
         if maxItems and inserted >= maxItems:
             break
 
-    # flush remaining buffer
+    # Flush remaining buffer
     if buffer:
         try:
             res = db.orderItems.insert_many(buffer, ordered=False)
