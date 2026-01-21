@@ -114,9 +114,9 @@ def main():
     elif choice == '4':
         _id = input('Enter category _id to update: ').strip()
         print('Using input.json in repository for update')
-                try:
-                    upd = loadJsonFile('input.json')
-                    modified = updateCategoryById(_id, upd)
+        try:
+            upd = loadJsonFile('input.json')
+            modified = updateCategoryById(_id, upd)
             print('Modified count:', modified)
         except Exception as e:
             print('Invalid JSON or update error:', e)
