@@ -8,8 +8,6 @@ productsText = 'productsText'
 # productsCategoryCompound replaced by category partial indexes (main/sub)
 productsMainPartial = 'productsMainPartial'
 productsSubPartial = 'productsSubPartial'
-categoriesMainPartial = 'categoriesMainPartial'
-categoriesSubPartial = 'categoriesSubPartial'
 
 usersEmailUnique = 'usersEmailUnique'
 usersAddressesZipcode = 'usersAddressesZipcode'
@@ -121,27 +119,6 @@ def createIndexes(db):
     for idx in ordersIndexes:
         createAndReport(orders, idx)
     print("Finished creating indexes for 'orders' collection.")
-
-    # indexes for categories (create two partial indexes: main vs subcategories)
-    categories = db['categories']
-    categoryIndexes = [
-        {
-            'keys': [('parentCategoryId', ASCENDING)],
-            'options': {'name': categoriesMainPartial},
-            'type': 'Single-field - main categories (parentCategoryId)'
-        },
-        {
-            'keys': [('parentCategoryId', ASCENDING)],
-            'options': {'name': categoriesSubPartial, 'partialFilterExpression': {'parentCategoryId': {'$type': 'objectId'}}},
-            'type': 'Partial - sub categories'
-        }
-    ]
-
-    print()
-    print("Started creating indexes for 'categories' collection.")
-    for idx in categoryIndexes:
-        createAndReport(categories, idx)
-    print("Finished creating indexes for 'categories' collection.")
 
 
 # if we want it the script to be ran by itself
