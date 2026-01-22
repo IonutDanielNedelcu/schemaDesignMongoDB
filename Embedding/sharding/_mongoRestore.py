@@ -1,12 +1,3 @@
-"""
-Simple mongorestore helper script.
-
-This script performs `mongorestore` from a previously created dump (.bson)
-and restores the collection to the target cluster/DB. By default it performs a
-dry-run and prints the command; set `confirm=True` in `config` to actually run.
-
-Ensure `mongorestore` (MongoDB Database Tools) is installed and on PATH.
-"""
 import os
 import subprocess
 from pathlib import Path
@@ -50,7 +41,6 @@ def mongorestore(mongoUri, dbName, collectionName, bsonPath, confirm=False):
     return str(bsonPath)
 
 
-# Default config: edit as needed
 config = {
     # Target (where to restore)
     "targetUri": os.getenv("MONGO_CONNECTION_STRING"),
@@ -71,10 +61,10 @@ def main():
         print("Set MONGO_CONNECTION_STRING environment variable or edit config['targetUri']")
         return
 
-    bson_path = Path(config["bsonPath"]).resolve()
+    bsonPath = Path(config["bsonPath"]).resolve()
 
     try:
-        restored = mongorestore(tgtUri, config["targetDb"], config["targetCollection"], bson_path, confirm=config["confirm"])
+        restored = mongorestore(tgtUri, config["targetDb"], config["targetCollection"], bsonPath, confirm=config["confirm"])
     except Exception as e:
         print("Restore failed:", e)
         return

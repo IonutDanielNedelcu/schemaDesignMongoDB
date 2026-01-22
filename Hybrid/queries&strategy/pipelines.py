@@ -70,12 +70,12 @@ def usersPipelineInefficient():
 
 
 def ordersPipelineInefficient():
-    # Returns vendor-level summary documents with fields `totalSales` and
-    # `uniqueOrders`. Inefficient variant: unwind items, group by
-    # `items.vendor.companyName` and filter late.
+    # Returns vendor-level summary documents with fields "totalSales" and
+    # "uniqueOrders". Inefficient variant: unwind items, group by
+    # "items.vendor.companyName" and filter late.
     pipeline = [
         {"$unwind": {"path": "$items", "preserveNullAndEmptyArrays": True}},
-        # Group by vendorIdSnapshot (canonical schema) and sum sales
+        # Group by vendorIdSnapshot and sum sales
         {"$group": {"_id": "$items.vendorIdSnapshot", "totalSales": {"$sum": {"$multiply": [{"$ifNull": ["$items.unitPriceSnapshot", "$items.unitPrice"]}, {"$ifNull": ["$items.quantity", 0]}]}}, "orders": {"$addToSet": "$_id"}}},
         # Lookup vendor info to get companyName
         {"$lookup": {"from": "vendors", "localField": "_id", "foreignField": "_id", "as": "vendorInfo"}},
@@ -92,10 +92,7 @@ def ordersPipelineInefficient():
 def productsPipelineEfficient():
     # Result: ranked list of top-rated products based on customer reviews.
     pipeline = [
-        # 1. PROJECT & CALCULATE (Replaces Unwind + Group)
-        # Instead of exploding the data with Unwind, we calculate 
-        # the average and count directly within the document.
-        # This reduces complexity from O(N*M) to O(N).
+        # 1. Project & Calculate (Replaces Unwind + Group)
         {"$project": {
             "name": 1,
             "sku": 1,
@@ -103,15 +100,12 @@ def productsPipelineEfficient():
             "reviewsCount": {"$size": {"$ifNull": ["$reviews", []]}}
         }},
 
-        # 2. MATCH (Moved Up)
-        # We apply the filter immediately after calculation.
-        # Very important to do this before sorting
+        # 2. Match (Moved Up)
         {"$match": {
             "avgRating": {"$gt": 4}
         }},
 
-        # 3. SORT
-        # Sorting a smaller & filtered dataset
+        # 3. Sort
         {"$sort": {
             "avgRating": -1
         }}
@@ -122,15 +116,13 @@ def productsPipelineEfficient():
 def usersPipelineEfficient():
     # Result: users whose current shopping cart value exceeds 100
     pipeline = [
-        # 1. EARLY FILTER
-        # We skip any user who doesn't even have a cart
+        # 1. Early Filter
         {"$match": {"shoppingCart.0": {"$exists": True}}},
 
-        # 2. UNWIND
-        # decent - shopping carts are not usually very big
+        # 2. Unwind
         {"$unwind": "$shoppingCart"},
 
-        # 3. LOOKUP
+        # 3. Lookup
         {"$lookup": {
             "from": "products",
             "localField": "shoppingCart.productId",
@@ -138,12 +130,10 @@ def usersPipelineEfficient():
             "as": "productInfo"
         }},
 
-        # 4. FLATTEN LOOKUP
-        # We keep "preserveNull" to respect fallback logic later
+        # 4. Flatten Lookup
         {"$unwind": {"path": "$productInfo", "preserveNullAndEmptyArrays": True}},
 
-        # 5. GROUP & CALCULATE (Combined Step)
-        # We sum the total directly here
+        # 5. Group & Calculate (Combined Step)
         {"$group": {
             "_id": "$_id",
             "username": {"$first": "$username"},
@@ -158,10 +148,10 @@ def usersPipelineEfficient():
             }
         }},
 
-        # 6. FILTER FINAL RESULTS
+        # 6. Filter Final Results
         {"$match": {"cartTotal": {"$gt": 100}}},
 
-        # 7. SORT
+        # 7. Sort
         {"$sort": {"cartTotal": -1}}
     ]
     return pipeline

@@ -1,23 +1,3 @@
-"""
-Enable sharding for the target database and populate collections from JSON folders.
-
-This script uses camelCase for functions and variables. Configuration below
-controls the target `mongoUri`, `dbName`, collection definitions (folder,
-shardKey, strategy) and a `confirm` flag which is False by default (dry-run).
-
-Behaviour:
-- If `confirm` is False the script prints the operations it would perform.
-- If `confirm` is True it will call `enableSharding`, `shardCollection` and
-  then import JSON files from the configured folders into each collection.
-
-Import logic:
-- Tries to parse each .json file as a single JSON document or list.
-- If parsing fails, falls back to newline-delimited JSON (JSON Lines).
-- Inserts in batches to avoid excessive memory usage.
-
-Note: set `MONGO_CONNECTION_STRING_SHARDING` in environment or .env to point to your
-mongos (e.g. mongodb://localhost:27017).
-"""
 import os
 import json
 from pathlib import Path
@@ -44,8 +24,10 @@ config = {
 		{"name": "users", "folder": "dumpUsers", "shardKey": "_id", "strategy": "hashed"},
 		{"name": "vendors", "folder": "dumpVendors", "shardKey": "_id", "strategy": "hashed"},
 	],
+ 
 	# Safety: dry-run by default; set env POPULATE_SHARDING_CONFIRM=1 to enable
 	"confirm": True,
+ 
 	# batch size for inserts
 	"batchSize": 500,
 }

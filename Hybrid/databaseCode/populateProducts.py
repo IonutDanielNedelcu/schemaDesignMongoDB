@@ -28,7 +28,7 @@ def buildUserMap(jsonUsersDir):
         for d in docs:
             username = d.get('username')
             userId = d.get('_id')
-            # normalize userId to ObjectId when possible
+            
             try:
                 if isinstance(userId, dict) and '$oid' in userId:
                     userId = ObjectId(userId['$oid'])
@@ -89,8 +89,6 @@ def populateProducts():
     vendorsColl = db.get_collection('vendors')
     categoriesColl = db.get_collection('categories')
 
-    # build in-memory maps to avoid repeated find_one calls per product
-    print('Building vendor map from DB...')
     vendorMap = {}
     try:
         for v in vendorsColl.find({}, {'companyName': 1, 'name': 1}):
@@ -121,12 +119,12 @@ def populateProducts():
     except Exception:
         mainCategoryMap = {}
         subCategoryMap = {}
-    # prepare docs: attach userId to reviews when possible; resolve vendor/category ids
+    
     total = len(productDocs)
     for idx, doc in enumerate(productDocs, start=1):
         if idx % 100 == 0:
             print(f'Preparing product {idx}/{total}...')
-        # normalize provided _id to ObjectId if it's a 24-hex string or $oid dict
+        
         try:
             if '_id' in doc:
                 pid = doc.get('_id')
@@ -136,6 +134,7 @@ def populateProducts():
                     doc['_id'] = ObjectId(pid)
         except Exception:
             pass
+        
         # resolve vendor -> vendorId
         vendorField = doc.get('vendor')
         vendorId = None
@@ -178,13 +177,13 @@ def populateProducts():
                 username = rev.get('username') or rev.get('userDisplayName') or rev.get('user')
                 if username and 'username' not in rev:
                     rev['username'] = username
-                # attach/normalize userId
+                
                 if 'userId' not in rev and username:
                     uid = userMap.get(username)
                     if uid:
                         rev['userId'] = uid
                 else:
-                    # try to coerce existing userId to ObjectId
+                    
                     try:
                         uidval = rev.get('userId')
                         if isinstance(uidval, dict) and '$oid' in uidval:
@@ -193,7 +192,7 @@ def populateProducts():
                             rev['userId'] = ObjectId(uidval)
                     except Exception:
                         pass
-                # normalize date to datetime
+                
                 dateVal = rev.get('date')
                 if isinstance(dateVal, str):
                     try:
@@ -203,9 +202,10 @@ def populateProducts():
                             rev['date'] = datetime.strptime(dateVal, '%Y-%m-%dT%H:%M:%S')
                         except Exception:
                             pass
-                # remove legacy userDisplayName if present
+                
                 if 'userDisplayName' in rev and 'username' in rev:
                     rev.pop('userDisplayName', None)
+
 
     # insert in batches
     batchSize = 500

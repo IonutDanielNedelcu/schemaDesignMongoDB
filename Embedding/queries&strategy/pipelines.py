@@ -70,9 +70,9 @@ def usersPipelineInefficient():
 
 
 def ordersPipelineInefficient():
-    # Returns vendor-level summary documents with fields `totalSales` and
-    # `uniqueOrders`. Inefficient variant: unwind items, group by
-    # `items.vendor.companyName` and filter late.
+    # Returns vendor-level summary documents with fields "totalSales" and
+    # "uniqueOrders". Inefficient variant: unwind items, group by
+    # "items.vendor.companyName" and filter late.
     pipeline = [
         {"$unwind": {"path": "$items", "preserveNullAndEmptyArrays": True}},
         {"$group": {"_id": "$items.vendor.companyName", "totalSales": {"$sum": {"$multiply": ["$items.unitPrice", "$items.quantity"]}}, "orders": {"$addToSet": "$_id"}}},
@@ -86,12 +86,9 @@ def ordersPipelineInefficient():
 # Efficient pipelines
 
 def productsPipelineEfficient():
-    # Result: ranked list of top-rated products based on customer reviews.
+    # Result: ranked list of top-rated products based on customer reviews
     pipeline = [
-        # 1. PROJECT & CALCULATE (Replaces Unwind + Group)
-        # Instead of exploding the data with Unwind, we calculate 
-        # the average and count directly within the document.
-        # This reduces complexity from O(N*M) to O(N).
+        # 1. Project & Calculate (Replaces Unwind + Group)
         {"$project": {
             "name": 1,
             "sku": 1,
@@ -99,15 +96,12 @@ def productsPipelineEfficient():
             "reviewsCount": {"$size": {"$ifNull": ["$reviews", []]}}
         }},
 
-        # 2. MATCH (Moved Up)
-        # We apply the filter immediately after calculation.
-        # Very important to do this before sorting
+        # 2. Match (Moved Up)
         {"$match": {
             "avgRating": {"$gt": 4}
         }},
 
-        # 3. SORT
-        # Sorting a smaller & filtered dataset
+        # 3. Sort
         {"$sort": {
             "avgRating": -1
         }}
@@ -118,15 +112,13 @@ def productsPipelineEfficient():
 def usersPipelineEfficient():
     # Result: users whose current shopping cart value exceeds 100
     pipeline = [
-        # 1. EARLY FILTER
-        # We skip any user who doesn't even have a cart
+        # 1. Early Filter
         {"$match": {"shoppingCart.0": {"$exists": True}}},
 
-        # 2. UNWIND
-        # decent - shopping carts are not usually very big
+        # 2. Unwind
         {"$unwind": "$shoppingCart"},
 
-        # 3. LOOKUP
+        # 3. Lookup
         {"$lookup": {
             "from": "products",
             "localField": "shoppingCart.sku",
@@ -134,12 +126,10 @@ def usersPipelineEfficient():
             "as": "productInfo"
         }},
 
-        # 4. FLATTEN LOOKUP
-        # We keep "preserveNull" to respect fallback logic later
+        # 4. Flatten lookup
         {"$unwind": {"path": "$productInfo", "preserveNullAndEmptyArrays": True}},
 
-        # 5. GROUP & CALCULATE (Combined Step)
-        # We sum the total directly here
+        # 5. Group & Calculate
         {"$group": {
             "_id": "$_id",
             "username": {"$first": "$username"},
@@ -154,10 +144,10 @@ def usersPipelineEfficient():
             }
         }},
 
-        # 6. FILTER FINAL RESULTS
+        # 6. Filter
         {"$match": {"cartTotal": {"$gt": 100}}},
 
-        # 7. SORT
+        # 7. Sort
         {"$sort": {"cartTotal": -1}}
     ]
     return pipeline
@@ -166,13 +156,10 @@ def usersPipelineEfficient():
 def ordersPipelineEfficient():
     # Result: vendors who have generated more than 1000 in revenue
     pipeline = [
-        # 1. UNWIND
-        # Optimization: Removed "preserveNullAndEmptyArrays"
+        # 1. Unwind
         {"$unwind": "$items"},
 
-        # 2. GROUP
-        # We aggregate the data. We must use $addToSet to handle the 
-        # "Unique Orders" logic correctly.
+        # 2. Group
         {"$group": {
             "_id": "$items.vendor.companyName",
             "totalSales": {
@@ -182,20 +169,16 @@ def ordersPipelineEfficient():
             "orders": {"$addToSet": "$_id"}
         }},
 
-        # 3. MATCH
-        # We apply the filter immediately after grouping
+        # 3. Match
         {"$match": {"totalSales": {"$gt": 1000}}},
 
-        # 4. PROJECT
-        # Now we calculate the size of the "orders" array.
-        # Doing this after the match means we only do it for the "winners".
+        # 4. Project
         {"$project": {
             "totalSales": 1,
             "uniqueOrders": {"$size": "$orders"}
         }},
 
-        # 5. SORT
-        # We sort only the filtered list
+        # 5. Sort
         {"$sort": {"totalSales": -1}}
     ]
     return pipeline

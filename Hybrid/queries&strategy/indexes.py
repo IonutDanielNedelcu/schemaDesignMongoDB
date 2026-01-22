@@ -5,6 +5,7 @@ from pymongo.collation import Collation
 
 productsSkuUnique = 'productsSkuUnique'
 productsText = 'productsText'
+
 # productsCategoryCompound replaced by category partial indexes (main/sub)
 productsMainPartial = 'productsMainPartial'
 productsSubPartial = 'productsSubPartial'
@@ -120,7 +121,8 @@ def createIndexes(db):
         createAndReport(orders, idx)
     print("Finished creating indexes for 'orders' collection.")
 
-# if we want it the script to be ran by itself
+
+# if we want the script to be ran by itself
 if __name__ == '__main__':
     client, db = connectToMongoDB()
     try:

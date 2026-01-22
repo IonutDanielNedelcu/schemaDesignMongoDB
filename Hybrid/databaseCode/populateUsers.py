@@ -63,9 +63,9 @@ def transformSkusToProductIds(obj, productMap):
             if isinstance(v, (dict, list)):
                 transformSkusToProductIds(v, productMap)
 
-            # key is sku-like
+            
             if isinstance(k, str) and k.lower().endswith('sku') and isinstance(v, str):
-                # build new key: replace suffix 'Sku' with 'Id' or fallback to 'productId'
+                
                 newKey = k[:-3] + 'Id' if len(k) > 3 else 'productId'
                 pid = productMap.get(v)
                 if pid:
@@ -81,7 +81,7 @@ def transformSkusToProductIds(obj, productMap):
 
 
 def normalizeProductId(pid):
-    # convert various product id representations to ObjectId
+    
     try:
         if isinstance(pid, dict) and '$oid' in pid:
             return ObjectId(pid['$oid'])
@@ -128,8 +128,7 @@ def normalizeShoppingCart(cart, productMap):
 
 
 def normalizeUserDoc(doc):
-    # ensure shoppingCart items use productId field (already handled by transformSkusToProductIds)
-    # normalize addresses keys if needed (no-op if already correct)
+    
     if isinstance(doc, dict):
         addresses = doc.get('addresses')
         if isinstance(addresses, list):
@@ -140,7 +139,7 @@ def normalizeUserDoc(doc):
                     if 'postalCode' in addr and 'zipcode' not in addr:
                         addr['zipcode'] = addr.pop('postalCode')
 
-        # normalize _id if provided as string or {'$oid':...}
+        
         if '_id' in doc:
             try:
                 pid = doc.get('_id')
@@ -198,6 +197,7 @@ def populateUsers():
         normalizeUserDoc(doc)
         # normalize shoppingCart to {productId:ObjectId, quantity:Number}
         normalizeShoppingCart(doc.get('shoppingCart'), productMap)
+
 
     # insert in batches
     batchSize = 500

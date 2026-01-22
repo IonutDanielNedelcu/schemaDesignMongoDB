@@ -1,23 +1,3 @@
-"""
-Enable sharding for the target database and populate collections from JSON folders.
-
-This script uses camelCase for functions and variables. Configuration below
-controls the target `mongoUri`, `dbName`, collection definitions (folder,
-shardKey, strategy) and a `confirm` flag which is False by default (dry-run).
-
-Behaviour:
-- If `confirm` is False the script prints the operations it would perform.
-- If `confirm` is True it will call `enableSharding`, `shardCollection` and
-  then import JSON files from the configured folders into each collection.
-
-Import logic:
-- Tries to parse each .json file as a single JSON document or list.
-- If parsing fails, falls back to newline-delimited JSON (JSON Lines).
-- Inserts in batches to avoid excessive memory usage.
-
-Note: set `MONGO_CONNECTION_STRING_SHARDING` in environment or .env to point to your
-mongos (e.g. mongodb://localhost:27017).
-"""
 import os
 import json
 from pathlib import Path
@@ -36,9 +16,11 @@ config = {
 		{"name": "products", "folder": "JsonProducts", "shardKey": "sku", "strategy": "hashed"},
 		{"name": "users", "folder": "JsonUsers", "shardKey": "_id", "strategy": "hashed"},
 	],
+ 
 	# Safety: dry-run unless confirm True
 	"confirm": True,
-	# batch size for inserts
+ 
+	# batch size for inserts - change depending on user CPU capacity
 	"batchSize": 500,
 }
 
@@ -50,7 +32,7 @@ def getClient(mongoUri=None):
 
 def enableShardingForDb(client, dbName):
 	admin = client.admin
-	print(f"Enabling sharding for database '{dbName}'...")
+	print(f"Enabling sharding for database '{dbName}'")
 	try:
 		admin.command("enableSharding", dbName)
 		print("enableSharding OK")
@@ -62,7 +44,7 @@ def shardCollection(client, dbName, collName, shardKey, strategy="hashed"):
 	admin = client.admin
 	ns = f"{dbName}.{collName}"
 	key = {shardKey: "hashed"} if strategy == "hashed" else {shardKey: 1}
-	print(f"Sharding collection {ns} with key {key}...")
+	print(f"Sharding collection {ns} with key {key}")
 	try:
 		admin.command("shardCollection", ns, key=key)
 		print("shardCollection OK")
@@ -130,14 +112,6 @@ def runPopulateSharding():
 		c["folderPath"] = base / c["folder"]
 
 	if not config["confirm"]:
-		print("Dry-run mode. The script would perform the following:")
-		print(f"- Connect to mongos: {config['mongoUri']}")
-		print(f"- enableSharding on database: {config['dbName']}")
-		for c in config["collections"]:
-			key = c.get("shardKey")
-			strat = c.get("strategy", "hashed")
-			print(f"- shardCollection: {config['dbName']}.{c['name']} with key {{'{key}': '{'hashed' if strat=='hashed' else 1}'}} and import files from {c['folderPath']}")
-		print("To actually run, set config['confirm'] = True or set env var POPULATE_SHARDING_CONFIRM=1 and re-run.")
 		return
 
 	client = None

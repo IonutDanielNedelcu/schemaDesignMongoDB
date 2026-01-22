@@ -5,6 +5,7 @@ from pymongo.collation import Collation
 
 productsSkuUnique = 'productsSkuUnique'
 productsText = 'productsText'
+
 # productsCategoryCompound replaced by category partial indexes (main/sub)
 productsMainPartial = 'productsMainPartial'
 productsSubPartial = 'productsSubPartial'

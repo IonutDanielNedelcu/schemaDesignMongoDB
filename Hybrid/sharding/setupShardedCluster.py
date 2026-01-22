@@ -1,16 +1,3 @@
-"""
-Create a minimal sharded MongoDB cluster using Docker (camelCase names).
-
-This script will (by default as dry-run) print the docker commands required
-to create a network, start a single-node config server replica set, start
-three shard single-node replica sets, start a mongos, initiate replica sets
-and add the shards to mongos.
-
-Requirements: Docker installed and running, `docker` on PATH, Python with
-`pymongo` installed if you let the script perform the final `addShard` step.
-
-CAUTION: This script is intended for local development/testing only.
-"""
 import os
 import subprocess
 import time
@@ -60,6 +47,7 @@ config = {
         {"name": "shard3", "port": 27021, "replSet": "rs3"},
     ],
     "mongos": {"name": "mongos", "port": 27017},
+    
     # confirm=False => dry-run only (print commands); set True to execute
     "confirm": False,
 }
@@ -213,26 +201,6 @@ def main():
         addShardsToMongos()
 
         print("Cluster setup attempted. Check container logs for details.")
-    else:
-        # show cleanup commands in dry-run
-        print("Cleanup commands to run (dry-run):")
-        names = [config["configSvr"]["name"]] + [s["name"] for s in config["shards"]] + [config["mongos"]["name"]]
-        for n in names:
-            print("docker rm -f", n)
-        print("docker network rm", config["network"])
-
-        print("Commands to run (dry-run):")
-        print("1) docker network create", config["network"])
-        cs = config["configSvr"]
-        print(
-            "2) docker run -d --name", cs["name"], "--net", config["network"], "-p", f"{cs['port']}:{cs['port']}", config["image"], "mongod --configsvr --replSet", cs["replSet"], "--bind_ip_all --port", cs["port"]
-        )
-        i = 3
-        for s in config["shards"]:
-            print(i, ") docker run -d --name", s["name"], "--net", config["network"], "-p", f"{s['port']}:{s['port']}", config["image"], "mongod --shardsvr --replSet", s["replSet"], "--bind_ip_all --port", s["port"])
-            i += 1
-        print(i, ") docker run -d --name mongos --net", config["network"], "-p", f"{config['mongos']['port']}:{config['mongos']['port']}", config["image"], "mongos --configdb", f"{cs['replSet']}/{cs['name']}:{cs['port']}")
-        print("Then use mongosh or pymongo to run rs.initiate on each replset and sh.addShard for each shard.")
 
 
 if __name__ == "__main__":

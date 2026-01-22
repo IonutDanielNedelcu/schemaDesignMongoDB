@@ -1,12 +1,3 @@
-"""
-Simple mongodump helper script.
-
-This script only performs `mongodump` from a source (typically a mongos) and
-writes the dump to `outDir`. By default it performs a dry-run and prints the
-command; set `confirm=True` in `config` to actually run.
-
-Ensure `mongodump` (MongoDB Database Tools) is installed and on PATH.
-"""
 import os
 import subprocess
 from pathlib import Path
@@ -46,7 +37,6 @@ def mongodump(mongoUri, dbName, collectionName, outDir, confirm=False):
     return str(outPath / dbName / f"{collectionName}.bson")
 
 
-# Default config: edit as needed
 config = {
     # Source (sharded cluster mongos)
     "sourceUri": os.getenv("MONGO_CONNECTION_STRING"),

@@ -37,7 +37,7 @@ def saveExplain(record):
 # Inefficient pipelines
 def productsPipelineInefficient():
     # Result: ranked list of top-rated products based on customer reviews
-    # This pipeline performs a lookup from `reviews` and aggregates ratings
+    # This pipeline performs a lookup from "reviews" and aggregates ratings
     pipeline = [
         {"$lookup": {"from": "reviews", "localField": "_id", "foreignField": "productId", "as": "reviewsDocs"}},
         {"$unwind": {"path": "$reviewsDocs", "preserveNullAndEmptyArrays": True}},
@@ -79,10 +79,10 @@ def usersPipelineInefficient():
 
 
 def ordersPipelineInefficient():
-    # Returns vendor-level summary documents with fields `totalSales` and
-    # `uniqueOrders`. Inefficient variant: unwind items, group by
-    # `items.vendor.companyName` and filter late
-    # This pipeline aggregates over `orderItems` (expecting fields: orderId, unitPriceSnapshot, quantity)
+    # Returns vendor-level summary documents with fields "totalSales" and
+    # "uniqueOrders". Inefficient variant: unwind items, group by
+    # "items.vendor.companyName" and filter late
+    # This pipeline aggregates over "orderItems" (expecting fields: orderId, unitPriceSnapshot, quantity)
     # We need to lookup product price, compute line totals, then group by vendorId
     pipeline = [
         {"$lookup": {"from": "products", "localField": "productId", "foreignField": "_id", "as": "product"}},
@@ -122,14 +122,14 @@ def productsPipelineEfficient():
 def usersPipelineEfficient():
     # Result: users whose current shopping cart value exceeds 100
     pipeline = [
-        # 1. EARLY FILTER
+        # 1. Early Filter
         # We skip any user who doesn't even have a cart
         {"$match": {"shoppingCart.0": {"$exists": True}}},
 
-        # 2. UNWIND shoppingCart references
+        # 2. Unwind shoppingCart references
         {"$unwind": "$shoppingCart"},
 
-        # 3. LOOKUP shoppingCartItems by id
+        # 3. Lookup shoppingCartItems by id
         {"$lookup": {
             "from": "shoppingCartItems",
             "localField": "shoppingCart",
@@ -137,10 +137,10 @@ def usersPipelineEfficient():
             "as": "cartItem"
         }},
 
-        # 4. FLATTEN LOOKUP
+        # 4. Flatten Lookup
         {"$unwind": {"path": "$cartItem", "preserveNullAndEmptyArrays": True}},
 
-        # 5. LOOKUP product info
+        # 5. Lookup product info
         {"$lookup": {
             "from": "products",
             "localField": "cartItem.productId",
@@ -150,7 +150,7 @@ def usersPipelineEfficient():
 
         {"$unwind": {"path": "$productInfo", "preserveNullAndEmptyArrays": True}},
 
-        # 6. GROUP & CALCULATE (Combined Step)
+        # 6. Group & Calculate (Combined Step)
         {"$group": {
             "_id": "$_id",
             "username": {"$first": "$username"},
@@ -164,10 +164,10 @@ def usersPipelineEfficient():
             }
         }},
 
-        # 6. FILTER FINAL RESULTS
+        # 6. Filter Final Results
         {"$match": {"cartTotal": {"$gt": 100}}},
 
-        # 7. SORT
+        # 7. Sort
         {"$sort": {"cartTotal": -1}}
     ]
     return pipeline

@@ -1,23 +1,3 @@
-"""
-Enable sharding for the target database and populate collections from JSON folders.
-
-This script uses camelCase for functions and variables. Configuration below
-controls the target `mongoUri`, `dbName`, collection definitions (folder,
-shardKey, strategy) and a `confirm` flag which is False by default (dry-run).
-
-Behaviour:
-- If `confirm` is False the script prints the operations it would perform.
-- If `confirm` is True it will call `enableSharding`, `shardCollection` and
-  then import JSON files from the configured folders into each collection.
-
-Import logic:
-- Tries to parse each .json file as a single JSON document or list.
-- If parsing fails, falls back to newline-delimited JSON (JSON Lines).
-- Inserts in batches to avoid excessive memory usage.
-
-Note: set `MONGO_CONNECTION_STRING_SHARDING` in environment or .env to point to your
-mongos (e.g. mongodb://localhost:27017).
-"""
 import os
 import json
 from pathlib import Path
@@ -34,15 +14,16 @@ config = {
 	"mongoUri": os.getenv("MONGO_CONNECTION_STRING_SHARDING"),
 	"dbName": "eCommerceProjectHybrid",
 	"collections": [
-		# orders in Hybrid embed a `user` snapshot: shard on the embedded user id
 		{"name": "orders", "folder": "dumpOrders", "shardKey": "user.userIdSnapshot", "strategy": "hashed"},
 		{"name": "products", "folder": "dumpProducts", "shardKey": "sku", "strategy": "hashed"},
 		{"name": "users", "folder": "dumpUsers", "shardKey": "_id", "strategy": "hashed"},
 		{"name": "vendors", "folder": "dumpVendors", "shardKey": "_id", "strategy": "hashed"},
 		{"name": "categories", "folder": "dumpCategories", "shardKey": "_id", "strategy": "hashed"},
 	],
+ 
 	# Safety: dry-run by default; set env POPULATE_SHARDING_CONFIRM=1 to enable
 	"confirm": True,
+ 
 	# batch size for inserts
 	"batchSize": 500,
 }
@@ -80,8 +61,7 @@ def importJsonFolder(client, dbName, collName, folderPath, batchSize=1000):
 	if not folder.exists():
 		print(f"Folder not found: {folder}")
 		return
-	# Prefer mongorestore from BSON dumps when available (common dump layout: dump<Collection>/DB/<collection>.bson)
-	# Search recursively for .bson files under the folder
+ 
 	bsonFiles = list(folder.rglob('*.bson'))
 	if bsonFiles:
 		mongorestorePath = shutil.which('mongorestore')
@@ -89,15 +69,12 @@ def importJsonFolder(client, dbName, collName, folderPath, batchSize=1000):
 			print("mongorestore not found in PATH; cannot restore BSON dumps. Skipping BSON restore.")
 		else:
 			for bsonFile in sorted(bsonFiles):
-				# infer collection name from filename
+    
 				collFileName = bsonFile.name
 				collNameFromFile = collFileName.rsplit('.', 1)[0]
 				print(f"Restoring BSON {bsonFile} into {dbName}.{collName} (file collection: {collNameFromFile}) ...")
-				# If the filename matches the target collection, restore directly into that collection
+    
 				targetCollection = collName if collNameFromFile == collName else collNameFromFile
-				# Avoid restoring indexes from metadata because some indexes (e.g. unique on email)
-				# cannot be created after sharding on a different shard key. We'll restore data only
-				# and recreate supported indexes later via the project's `createIndexes` tooling.
 				cmd = [mongorestorePath, '--uri', config.get('mongoUri') or '', '--db', dbName, '--collection', targetCollection, '--noIndexRestore', str(bsonFile)]
 				try:
 					subprocess.run(cmd, check=True)
@@ -161,14 +138,6 @@ def runPopulateSharding():
 		c["folderPath"] = base / c["folder"]
 
 	if not config["confirm"]:
-		print("Dry-run mode. The script would perform the following:")
-		print(f"- Connect to mongos: {config['mongoUri']}")
-		print(f"- enableSharding on database: {config['dbName']}")
-		for c in config["collections"]:
-			key = c.get("shardKey")
-			strat = c.get("strategy", "hashed")
-			print(f"- shardCollection: {config['dbName']}.{c['name']} with key {{'{key}': '{'hashed' if strat=='hashed' else 1}'}} and import files from {c['folderPath']}")
-		print("To actually run, set config['confirm'] = True or set env var POPULATE_SHARDING_CONFIRM=1 and re-run.")
 		return
 
 	client = None

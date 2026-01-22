@@ -7,7 +7,6 @@ from connection import connectToMongoDB, closeConnection
 
 
 def buildUserMap():
-    """Build username -> _id map from DB users collection only."""
     userMap = {}
     client, db = connectToMongoDB('eCommerceProjectHybrid')
     if db is None:
@@ -28,7 +27,6 @@ def buildUserMap():
 
 
 def buildProductMap():
-    """Build sku -> _id map from DB products collection only."""
     productMap = {}
     client, db = connectToMongoDB('eCommerceProjectHybrid')
     if db is None:
@@ -116,8 +114,6 @@ def resolveVendorId(order, vendorsColl):
 
 def populateOrders():
     repoRoot = Path(__file__).parent
-    jsonUsersDir = repoRoot / 'JsonUsers'
-    jsonProductsDir = repoRoot / 'JsonProducts'
     jsonOrdersDir = repoRoot / 'JsonOrders'
 
     print('Building maps from database users and products...')
@@ -143,9 +139,6 @@ def populateOrders():
     productsColl = db.get_collection('products')
     usersColl = db.get_collection('users')
 
-    # Prefetch product/user/vendor snapshots to avoid per-item DB queries
-    print('Prefetching referenced products, users and vendors to speed up enrichment...')
-    # First, transform SKUs to productIds in all docs so we can collect productIds
     for d in orderDocs:
         transformSkusToProductIds(d, productMap)
 
@@ -154,9 +147,9 @@ def populateOrders():
     vendorNames = set()
     for d in orderDocs:
         # collect productIds from items
-        items_d = d.get('items') or []
-        if isinstance(items_d, list):
-            for it in items_d:
+        itemsData = d.get('items') or []
+        if isinstance(itemsData, list):
+            for it in itemsData:
                 pid = it.get('productId')
                 if pid:
                     try:
@@ -292,7 +285,7 @@ def populateOrders():
                     if pid:
                         item['productId'] = pid
 
-                # coerce productId to normalized key for lookup
+                # productId to normalized key for lookup
                 try:
                     if 'productId' in item:
                         pval = item.get('productId')
@@ -346,8 +339,7 @@ def populateOrders():
                 if 'postalCode' in addr and 'zipcode' not in addr:
                     addr['zipcode'] = addr.pop('postalCode')
 
-        # Canonicalize legacy customerSnapshot -> user snapshot
-        # If a legacy 'customerSnapshot' exists, map to `user` with the canonical keys
+
         if 'customerSnapshot' in doc and not doc.get('user'):
             cs = doc.pop('customerSnapshot')
             if isinstance(cs, dict):
@@ -365,7 +357,6 @@ def populateOrders():
                     'emailSnapshot': cs.get('email')
                 }
 
-        # If `user` is present but contains more fields, reduce to canonical snapshot
         if 'user' in doc and isinstance(doc.get('user'), dict):
             u = doc.get('user')
             # if nested user contains full profile, extract minimal snapshot
@@ -393,7 +384,7 @@ def populateOrders():
                 pass
 
         # Ensure items match canonical shape and remove legacy vendor/product fields
-        normalized_items = []
+        normalizedItems = []
         for it in items:
             if not isinstance(it, dict):
                 continue
@@ -456,10 +447,10 @@ def populateOrders():
 
             # only include items that have productId or skuSnapshot
             if 'productId' in norm or 'skuSnapshot' in norm:
-                normalized_items.append(norm)
+                normalizedItems.append(norm)
 
         # replace items with normalized items
-        doc['items'] = normalized_items
+        doc['items'] = normalizedItems
 
         # Final enforcement: ensure top-level keys exist per canonical schema
         if '_id' in doc and isinstance(doc.get('_id'), dict) and '$oid' in doc.get('_id'):
@@ -469,6 +460,7 @@ def populateOrders():
                 pass
 
         # if order has no items product snapshots, leave as-is
+
 
     # insert in batches
     batchSize = 500
@@ -487,6 +479,7 @@ def populateOrders():
 
     finally:
         closeConnection(client)
+
 
 
 if __name__ == '__main__':

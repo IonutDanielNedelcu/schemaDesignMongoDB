@@ -24,12 +24,12 @@ def runWithoutIndex(db, collectionName, queryFilter, projection=None, sort=None,
     
     collection = db[collectionName]
     try:
-        # hint=[('$natural', 1)] -> try to force coll-scan
+        # hint=[('$natural', 1)] -> try to force COLLSCAN
         noIndexHint = [('$natural', 1)]
         try:
             results, elapsedMs = timeQuery(collection, queryFilter, name=f"{collectionName} noIndex", limit=limit, projection=projection, sort=sort, hint=noIndexHint)
         except Exception:
-            # fallback: retry without hint (useful if hint not allowed for this query)
+            # fallback: retry without hint (useful if hint not allowed for this query) - ex for text search
             try:
                 results, elapsedMs = timeQuery(collection, queryFilter, name=f"{collectionName} noIndex", limit=limit, projection=projection, sort=sort, hint=None)
             except Exception as e:
@@ -76,7 +76,7 @@ def runWithIndex(db, collectionName, queryFilter, indexName=None, projection=Non
         return {'error': str(e), 'indexHint': indexName}
 
 
-#       MAIN
+
 if __name__ == "__main__":
     client, db = connectToMongoDB()
     try:
@@ -152,7 +152,7 @@ if __name__ == "__main__":
 
         explainRecords = [] # saved in a JSON for future analysis
 
-        # Phase 1: drop all non-_id indexes from target collections
+        # 1. Drop all non-_id indexes from target collections
         print()
         print("Phase 1: Dropping existing indexes from 'products', 'users', 'orders' (keeps _id index)")
         try:
@@ -163,7 +163,7 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"Could not drop indexes: {e}")
 
-        # Phase 2: run all queries WITHOUT indexes
+        # 2. Run all queries WITHOUT indexes
         print()
         print("Phase 2: Running queries WITHOUT indexes")
         for idx, (collectionName, qfilter, indexName, opts) in enumerate(queriesNoIndex, start=1):
@@ -189,7 +189,7 @@ if __name__ == "__main__":
                     'explain': resNoIndex.get('explain')
                 })
 
-        # Phase 3: recreate indexes using createIndexes
+        # 3. Recreate indexes using createIndexes
         print()
         print("Phase 3: Creating indexes using queriesIndexes.createIndexes")
         try:
@@ -198,7 +198,7 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"Could not create indexes: {e}")
 
-        # Phase 4: run all queries WITH indexes
+        # 4. Run all queries WITH indexes
         print()
         print("Phase 4: Running queries WITH indexes")
         for idx, (collectionName, qfilter, indexName, opts) in enumerate(queriesIndex, start=1):
@@ -225,7 +225,7 @@ if __name__ == "__main__":
                     'explain': resIndex.get('explain')
                 })
 
-        # save explain records to a file (if any)
+        # save explain records to a file
         try:
             if explainRecords:
                 with open('./Embedding/queries&strategy/explainQueries.json', 'w', encoding='utf-8') as f:

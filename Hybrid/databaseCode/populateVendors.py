@@ -77,11 +77,6 @@ vendors = [
 
 
 def populateVendors(db=None, confirm=True):
-    """Connect using connection.connectToMongoDB and populate the 'vendors' collection.
-
-    If `db` is provided (a pymongo Database), it will be used. Otherwise this function
-    will call `connectToMongoDB()` from connection.py to obtain a client and database.
-    """
     closeClient = False
     client = None
     try:
@@ -115,6 +110,5 @@ def populateVendors(db=None, confirm=True):
 
 
 if __name__ == "__main__":
-    # run with confirmation by default; set environment or modify call if needed
     populateVendors()
 

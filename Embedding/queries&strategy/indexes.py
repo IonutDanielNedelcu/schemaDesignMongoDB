@@ -114,7 +114,7 @@ def createIndexes(db):
     print("Finished creating indexes for 'orders' collection.")
 
 
-# if we want it the script to be ran by itself
+# if we want the script to be ran by itself
 if __name__ == '__main__':
     client, db = connectToMongoDB()
     try:
