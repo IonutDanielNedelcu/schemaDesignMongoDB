@@ -2,6 +2,7 @@
 
 ## Data Modeling & Collection Organization
 &nbsp;&nbsp;&nbsp;&nbsp;This section outlines the main schema-design approaches for e-commerce data in MongoDB and explains how to choose between embedding, referencing, or a hybrid model based on access patterns, update frequency, and document size.
+&nbsp;&nbsp;&nbsp;&nbsp;The dataset (in total in all 3 databases) contains 140k+ data entries coherently generated using Microsoft Copilot (Copilot, https://copilot.microsoft.com, Date(s) generated: November, 2025) and Python Faker package (Faker, https://faker.readthedocs.io/en/master/, Date(s) generated: November, 2025). After the dataset was created for the initial Embedding-centered Dataset (around 16k entries), it was "translated" to fit the other 2 database approaches (Referencing-centered and Hybrid).
 
 - #### MongoDB versus SQL Approaches
 
@@ -269,4 +270,38 @@ Note: even though common indexes have different database implementations (i.e co
 | P3 | 99, 78, 85 | 103, 102, 83 | 119, 99, 102 |
 
 
-## References
+
+
+## Bibliography
+
+&nbsp;&nbsp;&nbsp;&nbsp;This project relies on foundational concepts of database architecture and distributed systems. The research and design patterns were heavily influenced by the following authoritative sources:
+
+* Predut, Sorina Nicoleta, & Banu Demergian, Iulia Teodora, Databases, from NoSQL to Vector DBs (Baze de date, de la NoSql la Vector DBs), 2025-2026 Course Presentations.
+* MongoDB Documentation, https://www.mongodb.com/docs/, Last accessed: January 22, 2026.
+* MongoDB University, https://learn.mongodb.com, Last accessed: January 21, 2026.
+* C. Győrödi, R. Győrödi, G. Pecherle and A. Olah, "A comparative study: MongoDB vs. MySQL," 2015 13th International Conference on Engineering of Modern Electric Systems (EMES), Oradea, Romania, 2015, pp. 1-6, doi: 10.1109/EMES.2015.7158433.
+* A. Kanade, A. Gopal and S. Kanade, "A study of normalization and embedding in MongoDB," 2014 IEEE International Advance Computing Conference (IACC), Gurgaon, India, 2014, pp. 416-421, doi: 10.1109/IAdCC.2014.6779360.
+* Avrilia Floratou, Nikhil Teletia, David J. Dewitt, Jignesh M. Patel, Donghui Zhang, "Can the Elephants Handle the NoSQL Onslaught?", https://arxiv.org/abs/1208.4166, 2012.
+
+&nbsp;&nbsp;&nbsp;&nbsp;The source code was partially generated using the next tools:
+* Copilot, https://copilot.microsoft.com, Date(s) generated: November, 2025 - January, 2026.
+* OpenAI, ChatGPT, https://chatgpt.com/, Date(s) generated: November, 2025 - January, 2026.
+* Anthropic, Claude 3.5 Sonnet, https://www.anthropic.com, Date(s) generated: November, 2025 - January, 2026.
+
+
+## Hardware & Software Configuration
+
+### Hardware Used
+
+- CPU: 13th Gen Intel(R) Core(TM) i5-1335U
+- RAM: 16 GB DDR4
+- Network: Gigabit LAN for multi-node / sharded tests
+
+### Software
+
+- OS: Windows 11
+- MongoDB: 8.0.17
+- Python: 3.12.7
+- Tools: "mongodump", "mongorestore", Docker, MongoDB Atlass, MongoDB Compass (optional)
+
+
